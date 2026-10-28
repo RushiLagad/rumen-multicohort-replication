@@ -1,0 +1,16 @@
+# never commit sequence data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.sam
+*.sra
+fastq/
+*/fastq/
+# large intermediates
+*.zip
+*.XLSX
+*.xlsx
+samples_full.xml
+samples.xml
