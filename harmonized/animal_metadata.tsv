@@ -1,0 +1,83 @@
+cohort	animal_id	breed	sex	diet	batch	weight_class	sampling_method	rfi_value	rfi_within_diet	rfi_class	methane_value	methane_within_diet	run_accession	sample_accession	n_reads_published	n_reads_ena
+Nelore_PRJNA987743	238	Nelore	steer	Conventional	batch_1116	Heavy	slaughter	0.757	1.65327		-2.371	-13.006	SRR25030131	SAMN35991287	65830874	32271572
+Nelore_PRJNA987743	239	Nelore	steer	By-products	batch_1116	Light	slaughter	1.817	1.56683		10.465	14.522	SRR25030130	SAMN35991288	67605442	33264429
+Nelore_PRJNA987743	240	Nelore	steer	By-products	batch_1116	Light	slaughter	0.091	0.04759		-22.234	-15.123	SRR25030115	SAMN35991289	58716962	28801031
+Nelore_PRJNA987743	242	Nelore	steer	Conventional	batch_1017	Light	slaughter	0.071	-0.20934		-7.87	-12.662	SRR25030104	SAMN35991290	67602440	33058197
+Nelore_PRJNA987743	244	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	-1.101	-1.02866		14.102	4.278	SRR25030093	SAMN35991291	58459564	28664482
+Nelore_PRJNA987743	246	Nelore	steer	By-products	batch_1116	Heavy	slaughter	0.176	-0.66516		-16.897	1.833	SRR25030082	SAMN35991292	66961134	32920823
+Nelore_PRJNA987743	464	Nelore	steer	By-products	batch_1116	Light	slaughter	-2.413	-2.7105		-13.759	-3.268	SRR25030071	SAMN35991293	66130266	32460637
+Nelore_PRJNA987743	466	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	0.461	0.36624		-16.21	-24.216	SRR25030060	SAMN35991294	67557596	33166236
+Nelore_PRJNA987743	468	Nelore	steer	By-products	batch_1116	Light	slaughter	0.479	-0.22145		-18.101	-8.575	SRR25030049	SAMN35991295	55868820	27179200
+Nelore_PRJNA987743	470	Nelore	steer	By-products	batch_1017	Heavy	slaughter	0.574	0.41081		5.079	11.342	SRR25030038	SAMN35991296	52237766	25658617
+Nelore_PRJNA987743	474	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	0.062	-0.10279		59.324	51.48	SRR25030129	SAMN35991297	54216570	26638597
+Nelore_PRJNA987743	479	Nelore	steer	By-products	batch_1017	Heavy	slaughter	-0.328	0.13642		-15.424	-6.436	SRR25030124	SAMN35991298	60492054	29656441
+Nelore_PRJNA987743	482	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	-2.231	-2.31681		45.01	33.978	SRR25030123	SAMN35991299	20104992	9685210
+Nelore_PRJNA987743	483	Nelore	steer	Conventional	batch_1017	Light	slaughter	1.259	0.5741		15.034	11.512	SRR25030122	SAMN35991300	24830022	11956850
+Nelore_PRJNA987743	490	Nelore	steer	By-products	batch_1017	Heavy	slaughter	0.201	-0.00399		11.353	17.943	SRR25030121	SAMN35991301	24391728	11782220
+Nelore_PRJNA987743	491	Nelore	steer	By-products	batch_1116	Light	slaughter	0.11	-0.25063		-15.99	-10.138	SRR25030120	SAMN35991302	23997388	11535005
+Nelore_PRJNA987743	492	Nelore	steer	Conventional	batch_1116	Light	slaughter	0.137	0.42105		23.339	17.562	SRR25030119	SAMN35991303	23576430	11311734
+Nelore_PRJNA987743	494	Nelore	steer	By-products	batch_1017	Light	slaughter	0.164	0.55474		8.76	12.515	SRR25030118	SAMN35991304	24482814	11848317
+Nelore_PRJNA987743	499	Nelore	steer	By-products	batch_1116	Heavy	slaughter	-1.106	-1.75642		-21.638	0.266	SRR25030117	SAMN35991305	24020780	11508320
+Nelore_PRJNA987743	500	Nelore	steer	Conventional	batch_1116	Heavy	slaughter	-0.521	0.17304		31.592	19.176	SRR25030116	SAMN35991306	25527350	12363295
+Nelore_PRJNA987743	502	Nelore	steer	Conventional	batch_1116	Light	slaughter	-1.11	-0.69685		-33.072	-41.127	SRR25030114	SAMN35991307	21968810	10607468
+Nelore_PRJNA987743	505	Nelore	steer	Conventional	batch_1116	Light	slaughter	-0.844	-0.45624		-15.819	-23.041	SRR25030113	SAMN35991308	21402774	10332692
+Nelore_PRJNA987743	506	Nelore	steer	Conventional	batch_1017	Light	slaughter	0.191	-0.08941		-8.886	-13.143	SRR25030112	SAMN35991309	26271722	12696098
+Nelore_PRJNA987743	507	Nelore	steer	By-products	batch_1116	Light	slaughter	2.691	1.95934		43.762	45.353	SRR25030111	SAMN35991310	25571472	12286240
+Nelore_PRJNA987743	510	Nelore	steer	Conventional	batch_1116	Light	slaughter	-0.673	-0.2925		1.669	-5.241	SRR25030110	SAMN35991311	48835908	23993999
+Nelore_PRJNA987743	511	Nelore	steer	Conventional	batch_1116	Heavy	slaughter	-1.075	-0.37009		30.205	16.794	SRR25030109	SAMN35991312	56427224	27713987
+Nelore_PRJNA987743	514	Nelore	steer	Conventional	batch_1116	Light	slaughter	-0.539	-0.19871		9.535	1.355	SRR25030108	SAMN35991313	56899710	27988584
+Nelore_PRJNA987743	515	Nelore	steer	Conventional	batch_1017	Light	slaughter	0.139	-0.27535		19.285	14.293	SRR25030107	SAMN35991314	52374094	25768956
+Nelore_PRJNA987743	516	Nelore	steer	By-products	batch_1116	Light	slaughter	-0.614	-1.00279		-29.813	-22.237	SRR25030106	SAMN35991315	60310062	29601234
+Nelore_PRJNA987743	517	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	0.252	0.51058		6.444	-1.052	SRR25030105	SAMN35991316	69946290	34427981
+Nelore_PRJNA987743	520	Nelore	steer	By-products	batch_1017	Light	slaughter	-2.266	-1.56717		9.092	17.936	SRR25030103	SAMN35991317	66662682	32718611
+Nelore_PRJNA987743	521	Nelore	steer	By-products	batch_1017	Heavy	slaughter	-3.153	-2.98575		-6.013	7.632	SRR25030102	SAMN35991318	60576802	29762088
+Nelore_PRJNA987743	523	Nelore	steer	Conventional	batch_1116	Light	slaughter	0.275	0.82924		-3.233	-9.844	SRR25030101	SAMN35991319	63587488	31203311
+Nelore_PRJNA987743	1460	Nelore	steer	Conventional	batch_1116	Light	slaughter	-1.102	-0.82727		19.929	12.272	SRR25030100	SAMN35991320	50188626	24615566
+Nelore_PRJNA987743	1462	Nelore	steer	By-products	batch_1017	Heavy	slaughter	-0.285	-0.70829		-30.559	-22.864	SRR25030099	SAMN35991321	58161672	28594857
+Nelore_PRJNA987743	1464	Nelore	steer	By-products	batch_1017	Heavy	slaughter	1.389	1.94971		11.354	16.306	SRR25030098	SAMN35991322	72721862	35714852
+Nelore_PRJNA987743	1468	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	1.98	2.04195		-1.812	-7.652	SRR25030097	SAMN35991323	55032454	27032988
+Nelore_PRJNA987743	1476	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	2.221	2.10066		-18.611	-24.388	SRR25030096	SAMN35991324	56573888	27757686
+Nelore_PRJNA987743	1479	Nelore	steer	By-products	batch_1017	Heavy	slaughter	-1.495	-1.36123		14.929	25.332	SRR25030095	SAMN35991325	58710478	28844087
+Nelore_PRJNA987743	1480	Nelore	steer	Conventional	batch_1116	Light	slaughter	0.31	0.8251		15.489	8.94	SRR25030094	SAMN35991326	57162714	28026380
+Nelore_PRJNA987743	1481	Nelore	steer	Conventional	batch_1116	Heavy	slaughter	-2.078	-1.45623		-7.548	-22.964	SRR25030092	SAMN35991327	62217076	30625393
+Nelore_PRJNA987743	1485	Nelore	steer	By-products	batch_1017	Heavy	slaughter	4.341	4.29429		-8.572	-8.502	SRR25030091	SAMN35991328	57396256	28097012
+Nelore_PRJNA987743	1493	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	0.047	0.01283		-10.864	-19.393	SRR25030090	SAMN35991329	63223000	31036668
+Nelore_PRJNA987743	1494	Nelore	steer	By-products	batch_1017	Light	slaughter	0.44	1.01242		-35.414	-30.451	SRR25030089	SAMN35991330	67313578	32875342
+Nelore_PRJNA987743	1495	Nelore	steer	By-products	batch_1116	Light	slaughter	0.862	0.56956		16.356	21.363	SRR25030088	SAMN35991331	47825226	23350888
+Nelore_PRJNA987743	1496	Nelore	steer	By-products	batch_1017	Heavy	slaughter	0.203	0.19908		-62.475	-54.954	SRR25030087	SAMN35991332	56796630	27881958
+Nelore_PRJNA987743	1498	Nelore	steer	By-products	batch_1116	Light	slaughter	-2.282	-2.68711		0.978	10.573	SRR25030086	SAMN35991333	55745990	27306658
+Nelore_PRJNA987743	1500	Nelore	steer	Conventional	batch_1017	Heavy	slaughter	-2.022	-1.58401		-2.975	-13.035	SRR25030085	SAMN35991334	58447638	28585356
+Nelore_PRJNA987743	1501	Nelore	steer	By-products	batch_1116	Heavy	slaughter	3.847	2.42158		-13.343	-2.099	SRR25030084	SAMN35991335	65515468	32118623
+Nelore_PRJNA987743	1502	Nelore	steer	Conventional	batch_1116	Light	slaughter	-0.132	0.39619		45.026	39.124	SRR25030083	SAMN35991336	33086336	16222942
+Nelore_PRJNA987743	1503	Nelore	steer	By-products	batch_1017	Heavy	slaughter	-1.116	-1.93105		5.92	14.201	SRR25030081	SAMN35991337	65058600	31788618
+Nelore_PRJNA987743	1504	Nelore	steer	By-products	batch_1116	Light	slaughter	2.938	2.72915		-34.527	-32.47	SRR25030080	SAMN35991338	62220120	30410086
+Charolais_PRJEB70895	8916	Charolais	bull	CS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	8443	Charolais	bull	GS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	8852	Charolais	bull	CS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	8365	Charolais	bull	GS	batch_2019		slaughter			high_RFI						
+Charolais_PRJEB70895	8912	Charolais	bull	CS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	8368	Charolais	bull	GS	batch_2019		slaughter			high_RFI						
+Charolais_PRJEB70895	8945	Charolais	bull	CS	batch_2019		slaughter			high_RFI						
+Charolais_PRJEB70895	8997	Charolais	bull	GS	batch_2019		slaughter			high_RFI						
+Charolais_PRJEB70895	8574	Charolais	bull	GS	batch_2019		slaughter			high_RFI						
+Charolais_PRJEB70895	8507	Charolais	bull	CS	batch_2019		slaughter			high_RFI						
+Charolais_PRJEB70895	8921	Charolais	bull	GS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	8506	Charolais	bull	CS	batch_2019		slaughter			high_RFI						
+Charolais_PRJEB70895	8919	Charolais	bull	GS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	8716	Charolais	bull	GS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	8513	Charolais	bull	CS	batch_2019		slaughter			low_RFI						
+Charolais_PRJEB70895	9334	Charolais	bull	GS	batch_2020		slaughter			high_RFI						
+Charolais_PRJEB70895	9302	Charolais	bull	CS	batch_2020		slaughter			high_RFI						
+Charolais_PRJEB70895	9022	Charolais	bull	CS	batch_2020		slaughter			low_RFI						
+Charolais_PRJEB70895	9842	Charolais	bull	GS	batch_2020		slaughter			low_RFI						
+Charolais_PRJEB70895	9621	Charolais	bull	CS	batch_2020		slaughter			high_RFI						
+Charolais_PRJEB70895	9815	Charolais	bull	GS	batch_2020		slaughter			high_RFI						
+Charolais_PRJEB70895	9601	Charolais	bull	CS	batch_2020		slaughter			low_RFI						
+Charolais_PRJEB70895	9563	Charolais	bull	GS	batch_2020		slaughter			low_RFI						
+Charolais_PRJEB70895	9026	Charolais	bull	GS	batch_2020		slaughter			low_RFI						
+Charolais_PRJEB70895	9609	Charolais	bull	GS	batch_2020		slaughter			high_RFI						
+Charolais_PRJEB70895	9597	Charolais	bull	CS	batch_2020		slaughter			high_RFI						
+Charolais_PRJEB70895	9920	Charolais	bull	CS	batch_2020		slaughter			high_RFI						
+Charolais_PRJEB70895	190827	Charolais	bull	CS	batch_2020		slaughter			low_RFI						
+Charolais_PRJEB70895	9840	Charolais	bull	CS	batch_2020		slaughter			low_RFI						
+Charolais_PRJEB70895	9808	Charolais	bull	GS	batch_2020		slaughter			low_RFI						
