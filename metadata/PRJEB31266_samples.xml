@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAMPLE_SET>
+<SAMPLE accession="SAMEA104153971" alias="10572_0012" center_name="THE ROSLIN INSTITUTE">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SAMEA104153971</PRIMARY_ID>
+          <SECONDARY_ID>ERS1812989</SECONDARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMEA104153971</EXTERNAL_ID>
+          <SUBMITTER_ID namespace="THE ROSLIN INSTITUTE">10572_0012</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>2013E Charolais High Concentration Diet Low Emitter Low Feed Conversion Ratio</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>256318</TAXON_ID>
+          <SCIENTIFIC_NAME>metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <DESCRIPTION>2013E Charolais High Concentration Diet Low Emitter Low Feed Conversion Ratio</DESCRIPTION>
+     <SAMPLE_LINKS>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-FASTQ-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS1812989&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-SUBMITTED-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS1812989&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+</SAMPLE_LINKS>
+<SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-CHECKLIST</TAG>
+               <VALUE>ERC000011</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2017-07-11T17:02:04Z</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>organism</TAG>
+               <VALUE>metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2017-07-06T17:16:05Z</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>scientific_name</TAG>
+               <VALUE>metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>common name</TAG>
+               <VALUE>metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2017-07-11</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2017-07-06</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE accession="SAMEA104567052" alias="10572_0099" center_name="THE ROSLIN INSTITUTE">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SAMEA104567052</PRIMARY_ID>
+          <SECONDARY_ID>ERS2178336</SECONDARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMEA104567052</EXTERNAL_ID>
+          <SUBMITTER_ID namespace="THE ROSLIN INSTITUTE">10572_0099</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>10572_0099</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>256318</TAXON_ID>
+          <SCIENTIFIC_NAME>metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <DESCRIPTION>Rumen metagenome collected from beef cow at a Scottish abattoir</DESCRIPTION>
+     <SAMPLE_LINKS>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-FASTQ-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS2178336&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-SUBMITTED-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS2178336&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+</SAMPLE_LINKS>
+<SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-CHECKLIST</TAG>
+               <VALUE>ERC000011</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2018-02-06T17:03:16Z</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>organism</TAG>
+               <VALUE>metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2018-02-06T09:09:22Z</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>scientific_name</TAG>
+               <VALUE>metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2018-02-06</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2018-02-06</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+<SAMPLE accession="SAMEA5383789" alias="10674_0001" center_name="THE ROSLIN INSTITUTE">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SAMEA5383789</PRIMARY_ID>
+          <SECONDARY_ID>ERS3190161</SECONDARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMEA5383789</EXTERNAL_ID>
+          <SUBMITTER_ID namespace="THE ROSLIN INSTITUTE">10674_0001</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>10674_0001</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>506599</TAXON_ID>
+          <SCIENTIFIC_NAME>bovine gut metagenome</SCIENTIFIC_NAME>
+     </SAMPLE_NAME>
+     <DESCRIPTION>Cattle rumen microbiome. breed:LIMx; sex:M; age:531</DESCRIPTION>
+     <SAMPLE_LINKS>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-FASTQ-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS3190161&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-SUBMITTED-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS3190161&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+</SAMPLE_LINKS>
+<SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-CHECKLIST</TAG>
+               <VALUE>ERC000013</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment (material)</TAG>
+               <VALUE>bodily fluid</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>organism</TAG>
+               <VALUE>bovine gut metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection date</TAG>
+               <VALUE>not collected</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>geographic location (longitude)</TAG>
+               <VALUE>-3.206493</VALUE>
+               <UNITS>DD</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host taxid</TAG>
+               <VALUE>9913</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>geographic location (latitude)</TAG>
+               <VALUE>55.861398</VALUE>
+               <UNITS>DD</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>scientific_name</TAG>
+               <VALUE>bovine gut metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>investigation type</TAG>
+               <VALUE>metagenome</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host body habitat</TAG>
+               <VALUE>gut</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host common name</TAG>
+               <VALUE>cow</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host body product</TAG>
+               <VALUE>rumen fluid</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host body site</TAG>
+               <VALUE>rumen</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host sex</TAG>
+               <VALUE>male</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>subspecific genetic lineage</TAG>
+               <VALUE>LIMx</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host-associated environmental package</TAG>
+               <VALUE>host-associated</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2019-03-11T17:03:43Z</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>project name</TAG>
+               <VALUE>Metagenomic sequencing of the rumen of 240 cattle from Scotland</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>sequencing method</TAG>
+               <VALUE>Illumina HiSeq 4000</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2019-05-31T10:58:56Z</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>host age</TAG>
+               <VALUE>531 days</VALUE>
+               <UNITS>days</UNITS>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment (biome)</TAG>
+               <VALUE>Bos taurus</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>environment (feature)</TAG>
+               <VALUE>stomach</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>geographic location (country and/or sea)</TAG>
+               <VALUE>United Kingdom</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2019-03-11</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2019-05-31</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+</SAMPLE_SET>

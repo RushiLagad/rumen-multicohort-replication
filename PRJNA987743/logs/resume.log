@@ -1,0 +1,15 @@
+=== PRJNA987743 resume Wed Oct 28 05:07:04 PM CDT 2026 ===
+  files : 100 of 104
+  size  : 29 GB of ~143 GB
+
+=== resuming, 14 streams, no total-time limit ===
+parallel: curl -sS -C - --ssl-allow-beast --tlsv1.2 \
+        --speed-limit 10000 --speed-time 120 \
+        --retry 5 --retry-delay 15 --retry-all-errors \
+        -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR250/003/SRR25030103/SRR25030103_2.fastq.gz
+curl: (18) transfer closed with 1408137729 bytes remaining to read
+curl: (18) transfer closed with 1401842177 bytes remaining to read
+curl: (18) transfer closed with 1297054209 bytes remaining to read
+curl: (18) transfer closed with 1388608001 bytes remaining to read
+curl: (18) transfer closed with 1369143809 bytes remaining to read
+curl: (18) transfer closed with 1408465409 bytes remaining to read

@@ -1,0 +1,119 @@
+=== Cohort gate Wed Oct 28 02:59:32 PM CDT 2026 ===
+
+----------------------------------------------------------------
+[PRJNA448333]
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+TypeError: unsupported operand type(s) for -: 'list' and 'set'
+  --- sample attributes (first 3 samples) ---
+    BioSampleModel: ['Metagenome or environmental']
+    ENA-FIRST-PUBLIC: ['2019-09-26']
+    ENA-LAST-UPDATE: ['2020-04-26']
+    INSDC secondary accession: ['SRS4211838', 'SRS4211839', 'SRS4211840']
+    NCBI submission package: ['Metagenome.environmental.1.0']  <== PHENOTYPE
+    collection_date: ['2014-07-18']
+    geo_loc_name: ['Canada:Alberta,Lacombe']
+    host: ['Bos taurus']
+    lat_lon: ['52.4540267 N 113.751739 W']
+    organism: ['bovine gut metagenome']
+    source_material_id: ['101', '104', '105']
+
+----------------------------------------------------------------
+[PRJEB10338]
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+TypeError: unsupported operand type(s) for -: 'list' and 'set'
+  --- sample attributes (first 3 samples) ---
+    ENA-CHECKLIST: ['ERC000011']
+    ENA-FIRST-PUBLIC: ['2015-10-17', '2015-10-17T17:02:39Z']
+    ENA-LAST-UPDATE: ['2015-08-17', '2015-08-17T12:56:42Z', '2015-08-17T12:56:43Z']
+    organism: ['metagenome']
+    scientific_name: ['metagenome']
+
+----------------------------------------------------------------
+[PRJEB31266]
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+TypeError: unsupported operand type(s) for -: 'list' and 'set'
+  --- sample attributes (first 3 samples) ---
+    ENA-CHECKLIST: ['ERC000011', 'ERC000013']
+    ENA-FIRST-PUBLIC: ['2017-07-11', '2017-07-11T17:02:04Z', '2018-02-06']
+    ENA-LAST-UPDATE: ['2017-07-06', '2017-07-06T17:16:05Z', '2018-02-06']
+    collection date: ['not collected']
+    common name: ['metagenome']
+    environment (biome): ['Bos taurus']
+    environment (feature): ['stomach']
+    environment (material): ['bodily fluid']
+    geographic location (country and/or sea): ['United Kingdom']
+    geographic location (latitude): ['55.861398']
+    geographic location (longitude): ['-3.206493']
+    host age: ['531 days']  <== PHENOTYPE
+    host body habitat: ['gut']
+    host body product: ['rumen fluid']
+    host body site: ['rumen']
+    host common name: ['cow']
+    host sex: ['male']  <== PHENOTYPE
+    host taxid: ['9913']
+    host-associated environmental package: ['host-associated']  <== PHENOTYPE
+    investigation type: ['metagenome']
+    organism: ['bovine gut metagenome', 'metagenome']
+    project name: ['Metagenomic sequencing of the rumen of 2']
+    scientific_name: ['bovine gut metagenome', 'metagenome']
+    sequencing method: ['Illumina HiSeq 4000']
+    subspecific genetic lineage: ['LIMx']  <== PHENOTYPE
+
+----------------------------------------------------------------
+[PRJNA987743]
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+TypeError: unsupported operand type(s) for -: 'list' and 'set'
+  --- sample attributes (first 3 samples) ---
+    BioSampleModel: ['Metagenome or environmental']
+    ENA-FIRST-PUBLIC: ['2023-11-30']
+    ENA-LAST-UPDATE: ['2024-08-14']
+    INSDC secondary accession: ['SRS18070638', 'SRS18070643', 'SRS18070656']
+    NCBI submission package: ['Metagenome.environmental.1.0']  <== PHENOTYPE
+    collection_date: ['2016-11-16']
+    geo_loc_name: ['Brazil']
+    host: ['Bos indicus']
+    isolation_source: ['Rumen of Animal 238', 'Rumen of Animal 239', 'Rumen of Animal 240']
+    lat_lon: ['22.02 S 47.89 W']
+    organism: ['gut metagenome']
+
+----------------------------------------------------------------
+[PRJNA1151032]
+  NOT FOUND or empty on ENA
+----------------------------------------------------------------
+[PRJEB70895]
+Traceback (most recent call last):
+  File "<stdin>", line 6, in <module>
+TypeError: unsupported operand type(s) for -: 'list' and 'set'
+  --- sample attributes (first 3 samples) ---
+    ENA-CHECKLIST: ['ERC000013']
+    ENA-FIRST-PUBLIC: ['2023-12-08', '2023-12-08T04:32:00Z']
+    ENA-LAST-UPDATE: ['2023-12-08', '2023-12-08T04:32:00Z']
+    broad-scale environmental context: ['Montane biome']
+    collection date: ['2019']
+    environmental medium: ['Rumen']
+    geographic location (country and/or sea): ['France']
+    geographic location (latitude): ['45.710837']
+    geographic location (longitude): ['3.014246']
+    host sex: ['male']  <== PHENOTYPE
+    local environmental context: ['UBERON_0001041']
+    organism: ['bovine gut metagenome']
+    project name: ['RFI and microbiota in fattening bulls']
+    scientific_name: ['bovine gut metagenome']
+
+================================================================
+accession     exists  runs  strategy  source  platform  GB  species
+PRJNA1151032  NO      0     -         -       -         -   -
+
+VERDICT GUIDE
+  A cohort is usable only if per-animal RFI (or methane) is recorded
+  somewhere: in the BioSample attributes above, in the sample alias, or
+  in a supplementary table from the paper that can be joined by animal ID.
+  Group labels alone (high/low) mean continuous RFI modelling is out and
+  the cohort drops to a binary contrast at best.
+
+Next: for any cohort with no phenotype in BioSample, check the paper's
+supplementary tables before committing to the download.

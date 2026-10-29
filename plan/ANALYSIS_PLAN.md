@@ -377,3 +377,31 @@ threshold is fixed here, before any profiling output exists.
   rather than all 52. The quantity estimated is a per-genome mapping rate,
   which 8 samples resolve well inside the 2% decision boundary.
 
+
+## Amendment 3, 2026-10-29: host reference and the as-deposited state of PRJNA987743
+
+**Reference decision.** ARS-UCD2.0 (Bos taurus) is used for every cohort.
+Comparison on 8 Nelore samples, 400,000 read pairs each: mean retained-read
+difference between ARS-UCD2.0 and UOA_Brahman_1 was 0.005%, maximum 0.018%,
+far below the 2% threshold set in Section 5. A single reference across cohorts
+also removes a between-cohort technical factor.
+
+**PRJNA987743 was deposited already host-depleted.** The ENA read count equals
+Supplementary Table S2's `#Non-host reads` divided by two for all 52 rumen
+samples, mean ratio 1.0000 with standard deviation 0.0000, while the ratio to
+`#Raw_reads` is 0.9771. The authors report 2.08% host removal, and our pipeline
+finds a further 0.4% median residual. The submitters deposited filtered reads.
+
+Consequences, recorded before analysis:
+1. Host depletion is close to a no-op for Nelore. The step is still run, so the
+   procedure stays uniform across cohorts, but the cohorts differ in their
+   as-deposited state. Li et al. and Charolais deposits have not been checked
+   and may contain raw reads.
+2. Non-host read yield is therefore NOT a comparable QC metric across cohorts
+   and will be reported per cohort, never pooled or compared between them.
+3. The reference comparison above is uninformative about whether ARS-UCD2.0 and
+   UOA_Brahman_1 differ on raw Bos indicus rumen data, because only ~0.3% host
+   DNA remained for them to differentiate. The decision stands, but it rests on
+   there being nothing left to separate rather than on demonstrated equivalence.
+   If a future cohort supplies raw Bos indicus reads, the comparison is rerun.
+

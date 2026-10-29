@@ -1,0 +1,184 @@
+=== Nelore supplementary tables ===
+curl: (3) URL rejected: Bad hostname
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (3) URL rejected: Bad hostname
+
+
+
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing to download ...</title>
+    <style type="text/css">
+      body{font-size:1rem;line-height:1.5;}
+      #main{width:100%;max-width:60em;max-height:100%;left:50%;top:50%;transform:translate(-50%,-50%);position:absolute;font-family:helvetica,san-serif;line-height:1.5;padding:2rem;box-sizing:border-box;overflow-wrap:break-word;}
+      h1,#discl{text-align:center;}
+      h1{font-size:6rem;font-size:6vh;color:#205493;}
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Preparing to download ...</h1>
+      <p id="discl"><a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS Vulnerability Disclosure</a></p>
+    </div>
+  </body>
+
+  <script type="module" crossorigin="" src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/pow-o51sQKbL.js"></script>
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/vendor-Co8Vdmw2.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/secure-cookie-Br6x5jtB.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+
+  <script type="module">
+    const POW_CHALLENGE = "VwR3BGZlZwHlAQVhAQRjAGV1ZlV:uXIOPCh3DOFzXnRrwd5jGvBJFPRtG7b5-gwpJ9eKFED"
+    const POW_DIFFICULTY = "4"
+    const POW_COOKIE_NAME = "cloudpmc-viewer-pow"
+    const POW_COOKIE_PATH = "/"
+    const POW_COOKIE_EXPIRATION = "0.208333"
+
+    window.ncbi.pmc.pow.init(POW_CHALLENGE, POW_DIFFICULTY, POW_COOKIE_NAME, POW_COOKIE_EXPIRATION, POW_COOKIE_PATH);
+  </script>
+</html>  S1: 0 bytes  cannot open `/data/rumen_multicohort/PRJ
+curl: (3) URL rejected: Bad hostname
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (3) URL rejected: Bad hostname
+
+
+
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preparing to download ...</title>
+    <style type="text/css">
+      body{font-size:1rem;line-height:1.5;}
+      #main{width:100%;max-width:60em;max-height:100%;left:50%;top:50%;transform:translate(-50%,-50%);position:absolute;font-family:helvetica,san-serif;line-height:1.5;padding:2rem;box-sizing:border-box;overflow-wrap:break-word;}
+      h1,#discl{text-align:center;}
+      h1{font-size:6rem;font-size:6vh;color:#205493;}
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Preparing to download ...</h1>
+      <p id="discl"><a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html">HHS Vulnerability Disclosure</a></p>
+    </div>
+  </body>
+
+  <script type="module" crossorigin="" src="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/pow-o51sQKbL.js"></script>
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/vendor-Co8Vdmw2.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+<link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/9b1d9d87/var/data/static/assets/secure-cookie-Br6x5jtB.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
+
+  <script type="module">
+    const POW_CHALLENGE = "VwR3BGZlZwHlAwVhAGpjAGZmAFV:Y5rdQGw5e6khwnppLteJ9AdajDuG32LkmNfGZI4JnkN"
+    const POW_DIFFICULTY = "4"
+    const POW_COOKIE_NAME = "cloudpmc-viewer-pow"
+    const POW_COOKIE_PATH = "/"
+    const POW_COOKIE_EXPIRATION = "0.208333"
+
+    window.ncbi.pmc.pow.init(POW_CHALLENGE, POW_DIFFICULTY, POW_COOKIE_NAME, POW_COOKIE_EXPIRATION, POW_COOKIE_PATH);
+  </script>
+</html>  S2: 0 bytes  cannot open `/data/rumen_multicohort/PRJ
+
+=== Charolais mapping.tab ===
+curl: (3) URL rejected: Bad hostname
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (6) Could not resolve host: Linux
+curl: (3) URL rejected: Bad hostname
+id	Name	N Animal	RFI_1	RFI	Diet_1	Diet	Year_1	Year	Sampling	Feature Count	Year_Cat	Depth	Depth_cat	RFI_Diet	RFI_Diet_Year	CMJR_Annee
+"20BAR-01256"	"8997-P-H-1-S"	8997	"POSITIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	15046	1	35334	35334	"POSITIF_Herbe"	"POSITIF_Herbe_A"	""
+"20BAR-01257"	"8443-N-H-1-S"	8443	"NEGATIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	7782	1	20677	20677	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	""
+"20BAR-01258"	"8826-0-H-1-S"	8826	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	3885	1	9549	9549	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01259"	"8818-0-H-1-S"	8818	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	6710	1	17258	17258	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01260"	"8910-0-H-1-S"	8910	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	9423	1	23508	23508	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01261"	"8437-0-M-1-S"	8437	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	10286	1	27852	27852	"0_Mais"	"0_Mais_A"	""
+"20BAR-01262"	"8414-0-H-1-S"	8414	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	10632	1	24410	24410	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01263"	"8419-0-H-1-S"	8419	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	11749	1	29473	29473	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01264"	"8919-N-H-1-S"	8919	"NEGATIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	12243	1	33998	33998	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	""
+"20BAR-01265"	"8574-P-H-1-S"	8574	"POSITIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	8615	1	21202	21202	"POSITIF_Herbe"	"POSITIF_Herbe_A"	""
+"20BAR-01266"	"8838-0-M-1-S"	8838	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	8824	1	21498	21498	"0_Mais"	"0_Mais_A"	""
+"20BAR-01267"	"8871-0-M-1-S"	8871	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	9255	1	20566	20566	"0_Mais"	"0_Mais_A"	""
+"20BAR-01268"	"8001-0-H-1-S"	8001	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	33624	1	83469	83469	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01269"	"8829-0-H-1-S"	8829	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	13686	1	34819	34819	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01270"	"8551-0-H-1-S"	8551	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	10988	1	31046	31046	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01271"	"8562-0-H-1-S"	8562	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	5395	1	13084	13084	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01272"	"8716-N-H-1-S"	8716	"NEGATIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	9449	1	27655	27655	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	""
+"20BAR-01273"	"8314-0-H-1-S"	8314	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	10632	1	23680	23680	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01274"	"8365-P-H-1-S"	8365	"POSITIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	3387	1	9969	9969	"POSITIF_Herbe"	"POSITIF_Herbe_A"	""
+"20BAR-01275"	"8702-0-H-1-S"	8702	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	12864	1	33552	33552	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01276"	"8368-P-H-1-S"	8368	"POSITIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	10864	1	25459	25459	"POSITIF_Herbe"	"POSITIF_Herbe_A"	""
+"20BAR-01277"	"8824-0-H-1-S"	8824	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	23913	1	58379	58379	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01278"	"8418-0-M-1-S"	8418	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	7003	1	14932	14932	"0_Mais"	"0_Mais_A"	""
+"20BAR-01279"	"8507-P-M-1-S"	8507	"POSITIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	6256	1	14142	14142	"POSITIF_Mais"	"POSITIF_Mais_A"	""
+"20BAR-01280"	"8837-0-M-1-S"	8837	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	19780	1	49009	49009	"0_Mais"	"0_Mais_A"	""
+"20BAR-01281"	"838-0-M-1-S"	838	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	28177	1	63006	63006	"0_Mais"	"0_Mais_A"	""
+"20BAR-01282"	"8840-0-M-1-S"	8840	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	7268	1	16071	16071	"0_Mais"	"0_Mais_A"	""
+"20BAR-01283"	"8000-0-M-1-S"	8000	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	32988	1	84107	84107	"0_Mais"	"0_Mais_A"	""
+"20BAR-01284"	"8506-P-M-1-S"	8506	"POSITIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	32292	1	74790	74790	"POSITIF_Mais"	"POSITIF_Mais_A"	""
+"20BAR-01285"	"8912-N-M-1-S"	8912	"NEGATIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	16910	1	43672	43672	"NEGATIF_Mais"	"NEGATIF_Mais_A"	""
+"20BAR-01286"	"8852-N-M-1-S"	8852	"NEGATIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	30662	1	81051	81051	"NEGATIF_Mais"	"NEGATIF_Mais_A"	""
+"20BAR-01287"	"8706-0-M-1-S"	8706	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	15013	1	36299	36299	"0_Mais"	"0_Mais_A"	""
+"20BAR-01288"	"8916-N-M-1-S"	8916	"NEGATIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	8198	1	21019	21019	"NEGATIF_Mais"	"NEGATIF_Mais_A"	""
+"20BAR-01289"	"8554-0-M-1-S"	8554	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	5092	1	12827	12827	"0_Mais"	"0_Mais_A"	""
+"20BAR-01290"	"8513-N-M-1-S"	8513	"NEGATIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	6309	1	14297	14297	"NEGATIF_Mais"	"NEGATIF_Mais_A"	""
+"20BAR-01291"	"437-0-M-1-S"	437	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	1211	1	2708	2708	"0_Mais"	"0_Mais_A"	""
+"20BAR-01292"	"8413-0-M-1-S"	8413	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	16918	1	40867	40867	"0_Mais"	"0_Mais_A"	""
+"20BAR-01293"	"8992-0-M-1-S"	8992	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	13195	1	38124	38124	"0_Mais"	"0_Mais_A"	""
+"20BAR-01294"	"837-0-M-1-S"	837	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	28680	1	67823	67823	"0_Mais"	"0_Mais_A"	""
+"20BAR-01295"	"8844-0-M-1-S"	8844	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	18612	1	46334	46334	"0_Mais"	"0_Mais_A"	""
+"20BAR-01296"	"8064-0-M-1-S"	8064	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	20508	1	45833	45833	"0_Mais"	"0_Mais_A"	""
+"20BAR-01297"	"8363-0-M-1-S"	8363	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	22984	1	64438	64438	"0_Mais"	"0_Mais_A"	""
+"20BAR-01298"	"8265-0-M-1-S"	8265	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	20756	1	49355	49355	"0_Mais"	"0_Mais_A"	""
+"20BAR-01299"	"8821-0-M-1-S"	8821	"0"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	15601	1	36581	36581	"0_Mais"	"0_Mais_A"	""
+"20BAR-01300"	"8508-P-M-1-S"	8508	"POSITIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	13562	1	33387	33387	"POSITIF_Mais"	"POSITIF_Mais_A"	""
+"20BAR-01301"	"8830-0-H-1-S"	8830	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	22207	1	52318	52318	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01302"	"8253-0-H-1-S"	8253	"0"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	4692	1	11212	11212	"0_Herbe"	"0_Herbe_A"	""
+"20BAR-01303"	"8921-N-H-1-S"	8921	"NEGATIF"	""	"Herbe"	"GS"	"A"	"Year_2019"	"Sonde"	32663	1	81762	81762	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	""
+"20BAR-01304"	"8945-P-M-1-S"	8945	"POSITIF"	""	"Mais"	"CS"	"A"	"Year_2019"	"Sonde"	27486	1	68130	68130	"POSITIF_Mais"	"POSITIF_Mais_A"	""
+"20BAR-01305"	"8916-N-M-1-A19"	8916	"NEGATIF"	"Negative"	"Mais"	"CS"	"A"	"Year_2019"	"Abattoir"	16204	1	38425	38425	"NEGATIF_Mais"	"NEGATIF_Mais_A"	"NEGATIF_2019"
+"20BAR-01306"	"8443-N-H-1-A19"	8443	"NEGATIF"	"Negative"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	31323	1	72761	72761	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	"NEGATIF_2019"
+"20BAR-01307"	"8852-N-M-1-A19"	8852	"NEGATIF"	"Negative"	"Mais"	"CS"	"A"	"Year_2019"	"Abattoir"	24900	1	56158	56158	"NEGATIF_Mais"	"NEGATIF_Mais_A"	"NEGATIF_2019"
+"20BAR-01308"	"8365-P-H-1-A19"	8365	"POSITIF"	"Positive"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	29342	1	60237	60237	"POSITIF_Herbe"	"POSITIF_Herbe_A"	"POSITIF_2019"
+"20BAR-01309"	"8912-N-M-1-A19"	8912	"NEGATIF"	"Negative"	"Mais"	"CS"	"A"	"Year_2019"	"Abattoir"	16983	1	41848	41848	"NEGATIF_Mais"	"NEGATIF_Mais_A"	"NEGATIF_2019"
+"20BAR-01310"	"8368-P-H-1-A19"	8368	"POSITIF"	"Positive"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	30094	1	66566	66566	"POSITIF_Herbe"	"POSITIF_Herbe_A"	"POSITIF_2019"
+"20BAR-01311"	"8945-P-M-1-A19"	8945	"POSITIF"	"Positive"	"Mais"	"CS"	"A"	"Year_2019"	"Abattoir"	17604	1	38222	38222	"POSITIF_Mais"	"POSITIF_Mais_A"	"POSITIF_2019"
+"20BAR-01312"	"8997-P-H-1-A19"	8997	"POSITIF"	"Positive"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	11696	1	26567	26567	"POSITIF_Herbe"	"POSITIF_Herbe_A"	"POSITIF_2019"
+"20BAR-01313"	"8574-P-H-1-A19"	8574	"POSITIF"	"Positive"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	31632	1	71235	71235	"POSITIF_Herbe"	"POSITIF_Herbe_A"	"POSITIF_2019"
+"20BAR-01314"	"8507-P-M-1-A19"	8507	"POSITIF"	"Positive"	"Mais"	"CS"	"A"	"Year_2019"	"Abattoir"	10052	1	25372	25372	"POSITIF_Mais"	"POSITIF_Mais_A"	"POSITIF_2019"
+"20BAR-01315"	"8921-N-H-1-A19"	8921	"NEGATIF"	"Negative"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	1175	1	2263	2263	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	"NEGATIF_2019"
+"20BAR-01316"	"8506-P-M-1-A19"	8506	"POSITIF"	"Positive"	"Mais"	"CS"	"A"	"Year_2019"	"Abattoir"	28488	1	72501	72501	"POSITIF_Mais"	"POSITIF_Mais_A"	"POSITIF_2019"
+"20BAR-01317"	"8919-N-H-1-A19"	8919	"NEGATIF"	"Negative"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	12069	1	26399	26399	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	"NEGATIF_2019"
+"20BAR-01318"	"8716-N-H-1-A19"	8716	"NEGATIF"	"Negative"	"Herbe"	"GS"	"A"	"Year_2019"	"Abattoir"	25140	1	54192	54192	"NEGATIF_Herbe"	"NEGATIF_Herbe_A"	"NEGATIF_2019"
+"20BAR-01319"	"8513-N-M-1-A19"	8513	"NEGATIF"	"Negative"	"Mais"	"CS"	"A"	"Year_2019"	"Abattoir"	14935	1	39040	39040	"NEGATIF_Mais"	"NEGATIF_Mais_A"	"NEGATIF_2019"
+"20BAR-01320"	"9334-P-H-2-A20"	9334	"POSITIF"	"Positive"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	18009	2	40815	40815	"POSITIF_Herbe"	"POSITIF_Herbe_B"	"POSITIF_2020"
+"20BAR-01321"	"9302-P-M-2-A20"	9302	"POSITIF"	"Positive"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	22849	2	52481	52481	"POSITIF_Mais"	"POSITIF_Mais_B"	"POSITIF_2020"
+"20BAR-01322"	"9022-N-M-2-A20"	9022	"NEGATIF"	"Negative"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	19649	2	46385	46385	"NEGATIF_Mais"	"NEGATIF_Mais_B"	"NEGATIF_2020"
+"20BAR-01323"	"9842-N-H-2-A20"	9842	"NEGATIF"	"Negative"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	20359	2	47433	47433	"NEGATIF_Herbe"	"NEGATIF_Herbe_B"	"NEGATIF_2020"
+"20BAR-01324"	"9621-P-M-2-A20"	9621	"POSITIF"	"Positive"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	5795	2	15470	15470	"POSITIF_Mais"	"POSITIF_Mais_B"	"POSITIF_2020"
+"20BAR-01325"	"9815-P-H-2-A20"	9815	"POSITIF"	"Positive"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	16486	2	38319	38319	"POSITIF_Herbe"	"POSITIF_Herbe_B"	"POSITIF_2020"
+"20BAR-01326"	"8513-N-M-2-A20"	8513	"POSITIF"	"Positive"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	5160	2	10227	10227	"POSITIF_Herbe"	"POSITIF_Herbe_B"	"POSITIF_2020"
+"20BAR-01327"	"9601-N-M-2-A20"	9601	"NEGATIF"	"Negative"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	30332	2	69587	69587	"NEGATIF_Mais"	"NEGATIF_Mais_B"	"NEGATIF_2020"
+"20BAR-01328"	"9563-N-H-2-A20"	9563	"NEGATIF"	"Negative"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	15573	2	34588	34588	"NEGATIF_Herbe"	"NEGATIF_Herbe_B"	"NEGATIF_2020"
+"20BAR-01329"	"9026-N-H-2-A20"	9026	"NEGATIF"	"Negative"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	9946	2	22677	22677	"NEGATIF_Herbe"	"NEGATIF_Herbe_B"	"NEGATIF_2020"
+"20BAR-01330"	"9609-P-H-2-A20"	9609	"POSITIF"	"Positive"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	25655	2	55342	55342	"POSITIF_Herbe"	"POSITIF_Herbe_B"	"POSITIF_2020"
+"20BAR-01331"	"9597-P-M-2-A20"	9597	"POSITIF"	"Positive"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	10692	2	25927	25927	"POSITIF_Mais"	"POSITIF_Mais_B"	"POSITIF_2020"
+"20BAR-01332"	"9920-P-M-2-A20"	9920	"POSITIF"	"Positive"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	25049	2	59615	59615	"POSITIF_Mais"	"POSITIF_Mais_B"	"POSITIF_2020"
+"20BAR-01333"	"190827-N-M-2-A20"	190827	"NEGATIF"	"Negative"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	29714	2	68004	68004	"NEGATIF_Mais"	"NEGATIF_Mais_B"	"NEGATIF_2020"
+"20BAR-01334"	"9840-N-M-2-A20"	9840	"NEGATIF"	"Negative"	"Mais"	"CS"	"B"	"Year_2020"	"Abattoir"	19212	2	43440	43440	"NEGATIF_Mais"	"NEGATIF_Mais_B"	"NEGATIF_2020"
+"20BAR-01335"	"9808-N-H-2-A20"	9808	"NEGATIF"	"Negative"	"Herbe"	"GS"	"B"	"Year_2020"	"Abattoir"	17469	2	40805	40805	"NEGATIF_Herbe"	"NEGATIF_Herbe_B"	"NEGATIF_2020"
+  0 bytes  cannot open `/data/rumen_multicohort/PRJ
+
+================================================================
+STRUCTURE
+================================================================
+
+Paste the block above. That is what the harmonization script joins on.

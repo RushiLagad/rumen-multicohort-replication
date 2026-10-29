@@ -1,0 +1,40 @@
+
+======================================================================
+NELORE  PRJNA987743
+======================================================================
+  S2 rumen rows 52, ENA runs 52, joined 52, unmatched 0
+  read-count ratio (S2 raw/2 over ENA): min 1.0158  max 1.0436  spread 2.79%
+  every pair inside [0.95, 1.10]: alias join confirmed
+
+  Diet x batch:
+_day          batch_1017  batch_1116
+    Diet                                
+    By-products           13          13
+    Conventional          13          13
+
+  emitted 52 animals
+
+======================================================================
+CHAROLAIS  PRJEB70895  binary arm, ENA crosswalk still unverified
+======================================================================
+  extreme-RFI samples 46 from 31 animals; mid-RFI controls 33
+  ENA: 64 runs, strategies ['AMPLICON', 'RNA-Seq']
+  ENA alias examples: ['8507-P-M-1-A19', '8716-N-H-1-A19', '9334-P-H-2-A20', '9302-P-M-2-A20', '9621-P-M-2-A20']
+  ENA title examples: ['Bovine rumen sample']
+  mapping ids found in ENA alias: 30, title: 0
+  -> if both are 0, this arm needs the ENA sample XML before any reads are touched
+  emitted 46 samples (run accessions blank until crosswalk)
+
+======================================================================
+HARMONIZED
+======================================================================
+  /data/rumen_multicohort/harmonized/animal_metadata.tsv
+  md5 6a04251f7378f3e4dc068a794045682e
+
+                      rows  animals  continuous_rfi  binary_rfi  methane  with_runs
+cohort                                                                             
+Charolais_PRJEB70895    46       31               0          46        0          0
+Nelore_PRJNA987743      52       52              52           0       52         52
+
+  Li et al. PRJNA448333 not yet included. Give me the path to your
+  existing per-animal RFI table and it becomes a third block.

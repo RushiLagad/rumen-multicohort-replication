@@ -1,0 +1,23 @@
+=== PRJNA987743 resume Wed Oct 28 05:58:51 PM CDT 2026 ===
+  files : 104 of 104
+  size  : 33 GB of ~143 GB
+
+=== resuming, 6 streams, no total-time limit ===
+curl: (18) transfer closed with 1119984062 bytes remaining to read
+curl: (18) transfer closed with 1093310910 bytes remaining to read
+curl: (18) transfer closed with 1163958718 bytes remaining to read
+curl: (18) transfer closed with 1168480702 bytes remaining to read
+curl: (18) transfer closed with 1056474878 bytes remaining to read
+curl: (18) transfer closed with 1092585214 bytes remaining to read
+curl: (18) transfer closed with 1024231166 bytes remaining to read
+curl: (18) transfer closed with 1015187198 bytes remaining to read
+curl: (18) transfer closed with 1001490174 bytes remaining to read
+curl: (18) transfer closed with 1051625214 bytes remaining to read
+
+  files : 104 of 104
+  size  : 34 GB of ~143 GB
+
+=== integrity check ===
+  incomplete: 103  (partial, not corrupt - they resume next run)
+
+Still incomplete? Run again. Every file resumes from its last byte.

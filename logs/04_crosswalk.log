@@ -1,0 +1,82 @@
+fetching BioSample XML for 52 samples
+samples_full.xml: 151741 bytes
+
+======================================================================
+A  S2 SampleID structure, rumen rows
+======================================================================
+  suffixes: {'cr': 52}
+  numeric part: 238 .. 1504, 52 unique
+  all 52 rumen SampleIDs:
+    1460cr 1462cr 1464cr 1468cr 1476cr 1479cr 1480cr 1481cr 1485cr 1493cr 1494cr 1495cr 1496cr 1498cr 1500cr 1501cr 1502cr 1503cr 1504cr 238cr 239cr 240cr 242cr 244cr 246cr 464cr 466cr 468cr 470cr 474cr 479cr 482cr 483cr 490cr 491cr 492cr 494cr 499cr 500cr 502cr 505cr 506cr 507cr 510cr 511cr 514cr 515cr 516cr 517cr 520cr 521cr 523cr
+
+  SampleID x Diet:
+col_0   By-products  Conventional
+    suffix                           
+    cr               26            26
+
+======================================================================
+   ENA alias / title structure
+======================================================================
+  all 52 aliases:
+    1460cr 1462cr 1464cr 1468cr 1476cr 1479cr 1480cr 1481cr 1485cr 1493cr 1494cr 1495cr 1496cr 1498cr 1500cr 1501cr 1502cr 1503cr 1504cr 238cr 239cr 240cr 242cr 244cr 246cr 464cr 466cr 468cr 470cr 474cr 479cr 482cr 483cr 490cr 491cr 492cr 494cr 499cr 500cr 502cr 505cr 506cr 507cr 510cr 511cr 514cr 515cr 516cr 517cr 520cr 521cr 523cr
+  all 52 titles:
+    1460_Rumen 1462_Rumen 1464_Rumen 1468_Rumen 1476_Rumen 1479_Rumen 1480_Rumen 1481_Rumen 1485_Rumen 1493_Rumen 1494_Rumen 1495_Rumen 1496_Rumen 1498_Rumen 1500_Rumen 1501_Rumen 1502_Rumen 1503_Rumen 1504_Rumen 238_Rumen 239_Rumen 240_Rumen 242_Rumen 244_Rumen 246_Rumen 464_Rumen 466_Rumen 468_Rumen 470_Rumen 474_Rumen 479_Rumen 482_Rumen 483_Rumen 490_Rumen 491_Rumen 492_Rumen 494_Rumen 499_Rumen 500_Rumen 502_Rumen 505_Rumen 506_Rumen 507_Rumen 510_Rumen 511_Rumen 514_Rumen 515_Rumen 516_Rumen 517_Rumen 520_Rumen 521_Rumen 523_Rumen
+
+======================================================================
+B  BioSample attributes, searching for S2 SampleIDs
+======================================================================
+  parsed 52 samples, 15 fields
+
+  every field, with cardinality and examples:
+    sample_accession                               n= 52 uniq= 52 ['SAMN35991287', 'SAMN35991288', 'SAMN35991289']
+    xml_alias                                      n= 52 uniq= 52 ['238cr', '239cr', '240cr']
+    xml_title                                      n= 52 uniq= 52 ['238_Rumen', '239_Rumen', '240_Rumen']
+    external_BioSample                             n= 52 uniq= 52 ['SAMN35991287', 'SAMN35991288', 'SAMN35991289']
+    attr:collection_date                           n= 52 uniq=  2 ['2016-11-16', '2016-10-17']
+    attr:INSDC secondary accession                 n= 52 uniq= 52 ['SRS18070638', 'SRS18070643', 'SRS18070656']
+    attr:NCBI submission package                   n= 52 uniq=  1 ['Metagenome.environment']
+    attr:organism                                  n= 52 uniq=  1 ['gut metagenome']
+    attr:host                                      n= 52 uniq=  1 ['Bos indicus']
+    attr:geo_loc_name                              n= 52 uniq=  1 ['Brazil']
+    attr:lat_lon                                   n= 52 uniq=  1 ['22.02 S 47.89 W']
+    attr:isolation_source                          n= 52 uniq= 52 ['Rumen of Animal 238', 'Rumen of Animal 239', 'Rumen of Animal 240']
+    attr:BioSampleModel                            n= 52 uniq=  1 ['Metagenome or environm']
+    attr:ENA-FIRST-PUBLIC                          n= 52 uniq=  1 ['2023-11-30']
+    attr:ENA-LAST-UPDATE                           n= 52 uniq=  1 ['2024-08-14']
+
+  --- does any field contain the S2 SampleIDs ---
+    xml_alias                                      exact  52  substring  52  <== CROSSWALK
+        238cr
+        239cr
+        240cr
+        242cr
+
+======================================================================
+C  scaled read-count assignment, with safety margin
+======================================================================
+  median scale factor (S2/2 over ENA): 1.01973
+  best-match relative error : median 0.131%  max 1.784%
+  margin (2nd best / best)  : min 1.14x  median 4.1x
+  samples where 2nd best is within 3x of best: 22
+  assignment is 1:1 and consistent: False
+
+  NOT SAFE on its own. 22 ambiguous samples. Worst cases:
+       500cr  best SRR25030116 err 1.241%   runner-up SRR25030112 err 1.413%  margin 1.14x
+       507cr  best SRR25030112 err 1.242%   runner-up SRR25030116 err 1.416%  margin 1.14x
+      1462cr  best SRR25030085 err 0.235%   runner-up SRR25030099 err 0.268%  margin 1.14x
+      1504cr  best SRR25030080 err 0.322%   runner-up SRR25030092 err 0.383%  margin 1.19x
+      1481cr  best SRR25030080 err 0.317%   runner-up SRR25030092 err 0.388%  margin 1.22x
+       521cr  best SRR25030124 err 0.155%   runner-up SRR25030102 err 0.201%  margin 1.30x
+
+  wrote /data/rumen_multicohort/PRJNA987743/metadata/proposed_crosswalk.tsv  (sorted worst margin first)
+
+  head:
+SampleID         Diet Weight  s2_raw_reads proposed_run proposed_alias  ena_read_count  rel_err_pct  margin_x
+   507cr  By-products  Light      25571472  SRR25030112          506cr        12696098       1.2425      1.14
+   500cr Conventional  Heavy      25527350  SRR25030116          500cr        12363295       1.2410      1.14
+  1462cr  By-products  Heavy      58161672  SRR25030085         1500cr        28585356       0.2350      1.14
+  1504cr  By-products  Light      62220120  SRR25030080         1504cr        30410086       0.3224      1.19
+  1481cr Conventional  Heavy      62217076  SRR25030080         1504cr        30410086       0.3175      1.22
+   521cr  By-products  Heavy      60576802  SRR25030124          479cr        29656441       0.1549      1.30
+  1476cr Conventional  Heavy      56573888  SRR25030096         1476cr        27757686       0.0650      1.42
+   505cr Conventional  Light      21402774  SRR25030114          502cr        10607468       1.0666      1.47

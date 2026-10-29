@@ -1,0 +1,398 @@
+=== Nelore supplements, PMC10754987 ===
+  source 1: Europe PMC
+  got zip: 4961785 bytes
+  extracted:
+    Table_3.XLSX
+    Table_5.XLSX
+    Table_9.XLSX
+    Table_8.XLSX
+    Table_2.XLSX
+    Table_1.XLSX
+    Table_7.XLSX
+    Table_4.XLSX
+    Table_6.XLSX
+
+=== Charolais mapping.tab, doi:10.57745/ACNRVQ ===
+  saved: 11436 bytes, 80 rows
+  md5 3e87555a73920feb3648f19a25f706c7  /data/rumen_multicohort/PRJEB70895/metadata/mapping.tab
+
+================================================================
+STRUCTURE
+================================================================
+
+================================================================
+Table_6.XLSX 7830 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=1  44 rows x 6 cols
+      Level1                                   TXT  n= 44  uniq=  7  ['Carbohydrates', 'Amino Acids, Nuc', 'Proteins, Cell W', 'Cofactors_Vitami']
+      Level2                                   TXT  n= 44  uniq= 23  ['-', 'Di-_and_oligosac', 'Fermentation', 'Monosaccharides']
+      Level3                                   TXT  n= 44  uniq= 44  ['Lacto N Biose I ', 'Beta Glucoside M', 'Lactose utilizat', 'Fructooligosacch']
+      Site                                     TXT  n= 44  uniq=  2  ['Feces', 'Rumen']
+      Group                                    TXT  n= 44  uniq=  2  ['Conventional', 'By-products']
+      LDAScore                                 NUM  n= 44  -3.091 .. 2.489  mean -0.176  sd 2.268
+
+================================================================
+Table_4.XLSX 8920 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=1  89 rows x 6 cols
+      Kingdom                                  TXT  n= 89  uniq=  2  ['Bacteria', 'Archaea']
+      Phylum                                   TXT  n= 89  uniq= 10  ['Proteobacteria', 'Actinobacteria', 'Firmicutes', 'Bacteroidetes']
+      Genera                                   TXT  n= 89  uniq= 81  ['Acinetobacter', 'Actinomyces', 'Acutalibacter', 'Aliarcobacter']
+      Site                                     TXT  n= 89  uniq=  2  ['Rumen', 'Feces']
+      Group                                    TXT  n= 89  uniq=  2  ['By-products', 'Conventional']
+      LDAScore                                 NUM  n= 89  -4.169 .. 3.822  mean 1.091  sd 2.334
+
+================================================================
+Table_7.XLSX 10462 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=1  64 rows x 8 cols
+      Site                                     TXT  n= 64  uniq=  2  ['Rumen', 'Feces']
+      Feature                                  TXT  n= 64  uniq= 63  ['Anaeromyxobacter', 'Actinomadura', 'Sorangium', 'Acidaminococcus']
+      Metadata                                 TXT  n= 64  uniq=  2  ['RFI_GC', 'RME_GC']
+      value                                    TXT  n= 64  uniq=  2  ['RFI_GC', 'RME_GC']
+      coef                                     NUM  n= 64  -0.113 .. 0.015  mean -0.002  sd 0.014
+      stderr                                   NUM  n= 64  0.000 .. 0.031  mean 0.001  sd 0.004
+      pval                                     NUM  n= 64  0.000 .. 0.013  mean 0.006  sd 0.003
+      qval                                     NUM  n= 64  0.003 .. 0.050  mean 0.032  sd 0.012
+
+================================================================
+Table_1.XLSX 17528 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=2  40 rows x 4 cols
+      Composition (%DM)                        TXT  n=  1  uniq=  1  ['Nutritional Leve']
+      Corn Grain                               TXT  n= 40  uniq= 40  ['Corn Silage', 'Soybean Meal', 'Protect Fat', 'Peanut Meal']
+      41,62                                    TXT  n= 40  uniq= 36  ['46,57', '6,01', '2,50', '-']
+      -                                        TXT  n= 40  uniq= 39  ['30,0', '-', '7,5', '35,9']
+
+================================================================
+Table_2.XLSX 19712 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=1  104 rows x 11 cols
+      SampleID                                 TXT  n=104  uniq=104  ['238cr', '239cr', '240cr', '242cr']
+      Site                                     TXT  n=104  uniq=  2  ['Rumen', 'Feces']
+      Diet                                     TXT  n=104  uniq=  2  ['Conventional', 'By-products']
+      Slaughter_day                            NUM  n=104  1602892800000000.000 .. 1605484800000000.000  mean 1604188800000000.000  sd 1302276065761.907
+      Weight                                   TXT  n=104  uniq=  2  ['Heavy', 'Light']
+      #Raw_reads                               NUM  n=104  20104992.000 .. 74583106.000  mean 51552671.712  sd 12862437.876
+      #Non-host reads                          NUM  n=104  19370420.000 .. 73046586.000  mean 50207470.692  sd 12769718.292
+      RFI_GC                                   NUM  n=104  -3.153 .. 4.341  mean -0.000  sd 1.522
+      RME_GC                                   NUM  n=104  -62.475 .. 59.324  mean 0.000  sd 23.153
+      RFI_by_dieta                             NUM  n=104  -2.986 .. 4.294  mean -0.000  sd 1.441
+      RME_by_dieta                             NUM  n=104  -54.954 .. 51.480  mean -0.000  sd 21.376
+
+================================================================
+Table_8.XLSX 190919 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=1  1019 rows x 30 cols
+      Functions                                TXT  n=1019  uniq=1019  ['Fimbriae', '(GlcNAc)2 Catabo', '2-Ketogluconate ', '2-O-alpha-mannos']
+      Acidaminococcus                          NUM  n=1019  0.000 .. 2.666  mean 0.098  sd 0.273
+      Actinomadura                             NUM  n=1019  0.000 .. 2.518  mean 0.098  sd 0.227
+      Actinoplanes                             NUM  n=1019  0.000 .. 3.418  mean 0.098  sd 0.253
+      Anaeromyxobacter                         NUM  n=1019  0.000 .. 3.071  mean 0.098  sd 0.275
+      Arabia                                   NUM  n=1019  0.000 .. 4.945  mean 0.098  sd 0.309
+      Bosea                                    NUM  n=1019  0.000 .. 3.210  mean 0.098  sd 0.250
+      Brevibacterium                           NUM  n=1019  0.000 .. 3.049  mean 0.098  sd 0.283
+      Burkholderia                             NUM  n=1019  0.000 .. 1.816  mean 0.098  sd 0.215
+      Caulobacter                              NUM  n=1019  0.000 .. 2.379  mean 0.098  sd 0.245
+      Cellulomonas                             NUM  n=1019  0.000 .. 6.580  mean 0.098  sd 0.320
+      Comamonas                                NUM  n=1019  0.000 .. 2.191  mean 0.098  sd 0.235
+      Eubacterium                              NUM  n=1019  0.000 .. 2.133  mean 0.098  sd 0.245
+      Gordonia                                 NUM  n=1019  0.000 .. 2.980  mean 0.098  sd 0.249
+      Lysobacter                               NUM  n=1019  0.000 .. 1.611  mean 0.098  sd 0.221
+      Nonomuraea                               NUM  n=1019  0.000 .. 2.414  mean 0.098  sd 0.254
+      Phascolarctobacterium                    NUM  n=1019  0.000 .. 4.090  mean 0.098  sd 0.320
+      Pseudonocardia                           NUM  n=1019  0.000 .. 2.493  mean 0.098  sd 0.231
+      Rubrobacter                              NUM  n=1019  0.000 .. 2.146  mean 0.098  sd 0.248
+      Selenomonas                              NUM  n=1019  0.000 .. 1.719  mean 0.098  sd 0.229
+      Sinorhizobium                            NUM  n=1019  0.000 .. 2.570  mean 0.098  sd 0.242
+      Sorangium                                NUM  n=1019  0.000 .. 2.847  mean 0.098  sd 0.245
+      Sphingobium                              NUM  n=1019  0.000 .. 1.516  mean 0.098  sd 0.224
+      Aliivibrio                               NUM  n=1019  0.000 .. 4.545  mean 0.098  sd 0.375
+      Glaesserella                             NUM  n=1019  0.000 .. 5.007  mean 0.098  sd 0.431
+      Idiomarina                               NUM  n=1019  0.000 .. 4.464  mean 0.098  sd 0.378
+      Marinomonas                              NUM  n=1019  0.000 .. 4.443  mean 0.098  sd 0.297
+      Photobacterium                           NUM  n=1019  0.000 .. 3.459  mean 0.098  sd 0.315
+      Psychromonas                             NUM  n=1019  0.000 .. 9.317  mean 0.098  sd 0.520
+      Succinivibrio                            NUM  n=1019  0.000 .. 5.262  mean 0.098  sd 0.358
+
+================================================================
+Table_9.XLSX 197710 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=2  895 rows x 37 cols
+      (GlcNAc)2 Catabolic Operon               TXT  n=895  uniq=895  ['2-O-alpha-mannos', '2-phosphoglycola', '4-Hydroxyphenyla', '5-FCL-like prote']
+      0                                        NUM  n=895  0.000 .. 2.584  mean 0.112  sd 0.285
+      0.000113684                              NUM  n=895  0.000 .. 2.646  mean 0.112  sd 0.269
+      0.1                                      NUM  n=895  0.000 .. 2.229  mean 0.112  sd 0.273
+      0.0806365                                NUM  n=895  0.000 .. 2.101  mean 0.112  sd 0.261
+      0.2                                      NUM  n=895  0.000 .. 2.133  mean 0.112  sd 0.258
+      0.00180958                               NUM  n=895  0.000 .. 3.348  mean 0.112  sd 0.298
+      0.00274627                               NUM  n=895  0.000 .. 2.605  mean 0.112  sd 0.277
+      0.3                                      NUM  n=895  0.000 .. 13.984  mean 0.112  sd 0.714
+      0.000861594                              NUM  n=895  0.000 .. 4.110  mean 0.112  sd 0.327
+      0.0161429                                NUM  n=895  0.000 .. 1.659  mean 0.112  sd 0.250
+      0.4                                      NUM  n=895  0.000 .. 5.346  mean 0.112  sd 0.337
+      0.0223641                                NUM  n=895  0.000 .. 3.043  mean 0.112  sd 0.292
+      0.5                                      NUM  n=895  0.000 .. 3.273  mean 0.112  sd 0.286
+      0.6                                      NUM  n=895  0.000 .. 3.513  mean 0.112  sd 0.296
+      0.7                                      NUM  n=895  0.000 .. 3.910  mean 0.112  sd 0.390
+      0.8                                      NUM  n=895  0.000 .. 3.806  mean 0.112  sd 0.387
+      0.9                                      NUM  n=895  0.000 .. 3.507  mean 0.112  sd 0.309
+      0.10                                     NUM  n=895  0.000 .. 2.810  mean 0.112  sd 0.308
+      0.11                                     NUM  n=895  0.000 .. 3.548  mean 0.112  sd 0.342
+      0.12                                     NUM  n=895  0.000 .. 5.779  mean 0.112  sd 0.384
+      0.13                                     NUM  n=895  0.000 .. 4.078  mean 0.112  sd 0.343
+      0.14                                     NUM  n=895  0.000 .. 4.401  mean 0.112  sd 0.377
+      0.15                                     NUM  n=895  0.000 .. 8.668  mean 0.112  sd 0.424
+      0.16                                     NUM  n=895  0.000 .. 5.923  mean 0.112  sd 0.382
+      0.17                                     NUM  n=895  0.000 .. 3.158  mean 0.112  sd 0.345
+      0.18                                     NUM  n=895  0.000 .. 5.792  mean 0.112  sd 0.355
+      0.19                                     NUM  n=895  0.000 .. 5.528  mean 0.112  sd 0.425
+      0.20                                     NUM  n=895  0.000 .. 7.671  mean 0.112  sd 0.496
+      0.21                                     NUM  n=895  0.000 .. 3.869  mean 0.112  sd 0.388
+      0.22                                     NUM  n=895  0.000 .. 12.700  mean 0.112  sd 0.685
+      0.23                                     NUM  n=895  0.000 .. 3.845  mean 0.112  sd 0.350
+      0.00790088                               NUM  n=895  0.000 .. 4.691  mean 0.112  sd 0.331
+      0.24                                     NUM  n=895  0.000 .. 6.478  mean 0.112  sd 0.392
+      0.0216787                                NUM  n=895  0.000 .. 4.635  mean 0.112  sd 0.382
+      0.25                                     NUM  n=895  0.000 .. 4.834  mean 0.112  sd 0.389
+      0.26                                     NUM  n=895  0.000 .. 4.671  mean 0.112  sd 0.434
+
+================================================================
+Table_5.XLSX 873917 bytes
+================================================================
+  sheets: ['supp_table_level1']
+
+  --- 'supp_table_level1'  header_row=1  1258 rows x 105 cols
+      Site                                     TXT  n=1258  uniq=1258  ['SampleID', 'Percentage of re', '&#945;-Fimbriae', '&#946;-Fimbriae']
+      Rumen                                    NUM  n=1257  0.000 .. 13.144  mean 0.090  sd 0.406
+      Rumen.1                                  NUM  n=1257  0.000 .. 14.846  mean 0.091  sd 0.452
+      Rumen.2                                  NUM  n=1257  0.000 .. 13.657  mean 0.090  sd 0.419
+      Rumen.3                                  NUM  n=1257  0.000 .. 14.514  mean 0.091  sd 0.442
+      Rumen.4                                  NUM  n=1257  0.000 .. 13.812  mean 0.091  sd 0.423
+      Rumen.5                                  NUM  n=1257  0.000 .. 14.685  mean 0.091  sd 0.447
+      Rumen.6                                  NUM  n=1257  0.000 .. 14.315  mean 0.091  sd 0.437
+      Rumen.7                                  NUM  n=1257  0.000 .. 14.282  mean 0.091  sd 0.436
+      Rumen.8                                  NUM  n=1257  0.000 .. 12.182  mean 0.089  sd 0.380
+      Rumen.9                                  NUM  n=1257  0.000 .. 13.541  mean 0.090  sd 0.416
+      Rumen.10                                 NUM  n=1257  0.000 .. 13.711  mean 0.090  sd 0.424
+      Rumen.11                                 NUM  n=1257  0.000 .. 12.000  mean 0.089  sd 0.380
+      Rumen.12                                 NUM  n=1257  0.000 .. 12.755  mean 0.090  sd 0.396
+      Rumen.13                                 NUM  n=1257  0.000 .. 12.282  mean 0.089  sd 0.386
+      Rumen.14                                 NUM  n=1257  0.000 .. 13.705  mean 0.090  sd 0.421
+      Rumen.15                                 NUM  n=1257  0.000 .. 13.331  mean 0.090  sd 0.412
+      Rumen.16                                 NUM  n=1257  0.000 .. 13.961  mean 0.091  sd 0.427
+      Rumen.17                                 NUM  n=1257  0.000 .. 11.603  mean 0.089  sd 0.367
+      Rumen.18                                 NUM  n=1257  0.000 .. 11.759  mean 0.089  sd 0.371
+      Rumen.19                                 NUM  n=1257  0.000 .. 14.114  mean 0.091  sd 0.434
+      Rumen.20                                 NUM  n=1257  0.000 .. 15.370  mean 0.092  sd 0.466
+      Rumen.21                                 NUM  n=1257  0.000 .. 12.561  mean 0.090  sd 0.392
+      Rumen.22                                 NUM  n=1257  0.000 .. 15.419  mean 0.092  sd 0.467
+      Rumen.23                                 NUM  n=1257  0.000 .. 12.593  mean 0.090  sd 0.391
+      Rumen.24                                 NUM  n=1257  0.000 .. 15.772  mean 0.092  sd 0.477
+      Rumen.25                                 NUM  n=1257  0.000 .. 12.147  mean 0.089  sd 0.381
+      Rumen.26                                 NUM  n=1257  0.000 .. 13.219  mean 0.090  sd 0.407
+      Rumen.27                                 NUM  n=1257  0.000 .. 10.789  mean 0.088  sd 0.350
+      Rumen.28                                 NUM  n=1257  0.000 .. 14.339  mean 0.091  sd 0.437
+      Rumen.29                                 NUM  n=1257  0.000 .. 14.874  mean 0.091  sd 0.451
+      Rumen.30                                 NUM  n=1257  0.000 .. 14.010  mean 0.091  sd 0.430
+      Rumen.31                                 NUM  n=1257  0.000 .. 14.190  mean 0.091  sd 0.433
+      Rumen.32                                 NUM  n=1257  0.000 .. 11.766  mean 0.089  sd 0.370
+      Rumen.33                                 NUM  n=1257  0.000 .. 12.905  mean 0.090  sd 0.400
+      Rumen.34                                 NUM  n=1257  0.000 .. 11.213  mean 0.088  sd 0.357
+      Rumen.35                                 NUM  n=1257  0.000 .. 13.247  mean 0.090  sd 0.409
+      Rumen.36                                 NUM  n=1257  0.000 .. 14.122  mean 0.091  sd 0.430
+      Rumen.37                                 NUM  n=1257  0.000 .. 14.189  mean 0.091  sd 0.434
+      Rumen.38                                 NUM  n=1257  0.000 .. 14.143  mean 0.091  sd 0.432
+      Rumen.39                                 NUM  n=1257  0.000 .. 12.571  mean 0.090  sd 0.392
+      Rumen.40                                 NUM  n=1257  0.000 .. 12.809  mean 0.090  sd 0.399
+      Rumen.41                                 NUM  n=1257  0.000 .. 16.913  mean 0.093  sd 0.507
+      Rumen.42                                 NUM  n=1257  0.000 .. 13.765  mean 0.091  sd 0.422
+      Rumen.43                                 NUM  n=1257  0.000 .. 13.893  mean 0.091  sd 0.426
+      Rumen.44                                 NUM  n=1257  0.000 .. 13.816  mean 0.091  sd 0.423
+      Rumen.45                                 NUM  n=1257  0.000 .. 14.170  mean 0.091  sd 0.432
+      Rumen.46                                 NUM  n=1257  0.000 .. 14.996  mean 0.091  sd 0.453
+      Rumen.47                                 NUM  n=1257  0.000 .. 13.015  mean 0.090  sd 0.404
+      Rumen.48                                 NUM  n=1257  0.000 .. 14.808  mean 0.091  sd 0.448
+      Rumen.49                                 NUM  n=1257  0.000 .. 13.125  mean 0.090  sd 0.406
+      Rumen.50                                 NUM  n=1257  0.000 .. 13.630  mean 0.090  sd 0.418
+      Rumen.51                                 NUM  n=1257  0.000 .. 13.894  mean 0.091  sd 0.425
+      Feces                                    NUM  n=1257  0.000 .. 35.559  mean 0.108  sd 1.016
+      Feces.1                                  NUM  n=1257  0.000 .. 38.053  mean 0.110  sd 1.085
+      Feces.2                                  NUM  n=1257  0.000 .. 33.918  mean 0.107  sd 0.970
+      Feces.3                                  NUM  n=1257  0.000 .. 39.212  mean 0.111  sd 1.118
+      Feces.4                                  NUM  n=1257  0.000 .. 40.898  mean 0.112  sd 1.164
+      Feces.5                                  NUM  n=1257  0.000 .. 40.687  mean 0.112  sd 1.160
+      Feces.6                                  NUM  n=1257  0.000 .. 36.852  mean 0.109  sd 1.052
+      Feces.7                                  NUM  n=1257  0.000 .. 37.277  mean 0.109  sd 1.063
+      Feces.8                                  NUM  n=1257  0.000 .. 36.043  mean 0.108  sd 1.030
+      Feces.9                                  NUM  n=1257  0.000 .. 37.836  mean 0.110  sd 1.079
+      Feces.10                                 NUM  n=1257  0.000 .. 36.651  mean 0.109  sd 1.046
+      Feces.11                                 NUM  n=1257  0.000 .. 40.578  mean 0.112  sd 1.155
+      Feces.12                                 NUM  n=1257  0.000 .. 37.849  mean 0.110  sd 1.079
+      Feces.13                                 NUM  n=1257  0.000 .. 39.732  mean 0.111  sd 1.132
+      Feces.14                                 NUM  n=1257  0.000 .. 35.560  mean 0.108  sd 1.016
+      Feces.15                                 NUM  n=1257  0.000 .. 39.192  mean 0.111  sd 1.117
+      Feces.16                                 NUM  n=1257  0.000 .. 39.185  mean 0.111  sd 1.117
+      Feces.17                                 NUM  n=1257  0.000 .. 37.629  mean 0.109  sd 1.073
+      Feces.18                                 NUM  n=1257  0.000 .. 37.934  mean 0.110  sd 1.082
+      Feces.19                                 NUM  n=1257  0.000 .. 39.868  mean 0.111  sd 1.136
+      Feces.20                                 NUM  n=1257  0.000 .. 37.180  mean 0.109  sd 1.061
+      Feces.21                                 NUM  n=1257  0.000 .. 37.735  mean 0.110  sd 1.077
+      Feces.22                                 NUM  n=1257  0.000 .. 37.794  mean 0.110  sd 1.078
+      Feces.23                                 NUM  n=1257  0.000 .. 37.889  mean 0.110  sd 1.080
+      Feces.24                                 NUM  n=1257  0.000 .. 35.531  mean 0.108  sd 1.015
+      Feces.25                                 NUM  n=1257  0.000 .. 33.950  mean 0.107  sd 0.971
+      Feces.26                                 NUM  n=1257  0.000 .. 37.350  mean 0.109  sd 1.066
+      Feces.27                                 NUM  n=1257  0.000 .. 37.323  mean 0.109  sd 1.065
+      Feces.28                                 NUM  n=1257  0.000 .. 40.339  mean 0.112  sd 1.149
+      Feces.29                                 NUM  n=1257  0.000 .. 36.620  mean 0.109  sd 1.045
+      Feces.30                                 NUM  n=1257  0.000 .. 38.879  mean 0.110  sd 1.108
+      Feces.31                                 NUM  n=1257  0.000 .. 35.665  mean 0.108  sd 1.019
+      Feces.32                                 NUM  n=1257  0.000 .. 38.236  mean 0.110  sd 1.090
+      Feces.33                                 NUM  n=1257  0.000 .. 39.474  mean 0.111  sd 1.125
+      Feces.34                                 NUM  n=1257  0.000 .. 36.991  mean 0.109  sd 1.056
+      Feces.35                                 NUM  n=1257  0.000 .. 37.034  mean 0.109  sd 1.057
+      Feces.36                                 NUM  n=1257  0.000 .. 36.493  mean 0.109  sd 1.042
+      Feces.37                                 NUM  n=1257  0.000 .. 37.966  mean 0.110  sd 1.083
+      Feces.38                                 NUM  n=1257  0.000 .. 38.399  mean 0.110  sd 1.095
+      Feces.39                                 NUM  n=1257  0.000 .. 36.115  mean 0.108  sd 1.031
+      Feces.40                                 NUM  n=1257  0.000 .. 33.964  mean 0.107  sd 0.972
+      Feces.41                                 NUM  n=1257  0.000 .. 36.908  mean 0.109  sd 1.053
+      Feces.42                                 NUM  n=1257  0.000 .. 39.494  mean 0.111  sd 1.125
+      Feces.43                                 NUM  n=1257  0.000 .. 35.840  mean 0.108  sd 1.024
+      Feces.44                                 NUM  n=1257  0.000 .. 37.530  mean 0.109  sd 1.071
+      Feces.45                                 NUM  n=1257  0.000 .. 35.747  mean 0.108  sd 1.021
+      Feces.46                                 NUM  n=1257  0.000 .. 37.405  mean 0.109  sd 1.067
+      Feces.47                                 NUM  n=1257  0.000 .. 36.166  mean 0.108  sd 1.033
+      Feces.48                                 NUM  n=1257  0.000 .. 38.557  mean 0.110  sd 1.099
+      Feces.49                                 NUM  n=1257  0.000 .. 42.732  mean 0.114  sd 1.215
+      Feces.50                                 NUM  n=1257  0.000 .. 39.518  mean 0.111  sd 1.126
+      Feces.51                                 NUM  n=1257  0.000 .. 36.814  mean 0.109  sd 1.050
+
+================================================================
+Table_3.XLSX 2218096 bytes
+================================================================
+  sheets: ['Sheet1']
+
+  --- 'Sheet1'  header_row=1  1787 rows x 105 cols
+      Site                                     TXT  n=1787  uniq=1787  ['SampleID', 'Candidatus Korar', 'Candidatus Prome', 'Candidatus Micra']
+      Rumen                                    NUM  n=1786  0.000 .. 18.196  mean 0.056  sd 0.465
+      Rumen.1                                  NUM  n=1786  0.000 .. 25.171  mean 0.056  sd 0.621
+      Rumen.2                                  NUM  n=1786  0.000 .. 13.660  mean 0.056  sd 0.389
+      Rumen.3                                  NUM  n=1786  0.000 .. 18.362  mean 0.056  sd 0.485
+      Rumen.4                                  NUM  n=1786  0.000 .. 16.696  mean 0.056  sd 0.437
+      Rumen.5                                  NUM  n=1786  0.000 .. 19.350  mean 0.056  sd 0.621
+      Rumen.6                                  NUM  n=1786  0.000 .. 18.973  mean 0.056  sd 0.488
+      Rumen.7                                  NUM  n=1786  0.000 .. 19.804  mean 0.056  sd 0.509
+      Rumen.8                                  NUM  n=1786  0.000 .. 11.739  mean 0.056  sd 0.353
+      Rumen.9                                  NUM  n=1786  0.000 .. 11.178  mean 0.056  sd 0.340
+      Rumen.10                                 NUM  n=1786  0.000 .. 21.681  mean 0.056  sd 0.548
+      Rumen.11                                 NUM  n=1786  0.000 .. 21.836  mean 0.056  sd 0.562
+      Rumen.12                                 NUM  n=1786  0.000 .. 13.680  mean 0.056  sd 0.380
+      Rumen.13                                 NUM  n=1786  0.000 .. 20.504  mean 0.056  sd 0.545
+      Rumen.14                                 NUM  n=1786  0.000 .. 16.962  mean 0.056  sd 0.442
+      Rumen.15                                 NUM  n=1786  0.000 .. 18.575  mean 0.056  sd 0.475
+      Rumen.16                                 NUM  n=1786  0.000 .. 17.334  mean 0.056  sd 0.456
+      Rumen.17                                 NUM  n=1786  0.000 .. 12.272  mean 0.056  sd 0.405
+      Rumen.18                                 NUM  n=1786  0.000 .. 13.855  mean 0.056  sd 0.388
+      Rumen.19                                 NUM  n=1786  0.000 .. 26.908  mean 0.056  sd 0.660
+      Rumen.20                                 NUM  n=1786  0.000 .. 21.941  mean 0.056  sd 0.553
+      Rumen.21                                 NUM  n=1786  0.000 .. 13.658  mean 0.056  sd 0.375
+      Rumen.22                                 NUM  n=1786  0.000 .. 20.398  mean 0.056  sd 0.526
+      Rumen.23                                 NUM  n=1786  0.000 .. 9.441  mean 0.056  sd 0.290
+      Rumen.24                                 NUM  n=1786  0.000 .. 24.884  mean 0.056  sd 0.634
+      Rumen.25                                 NUM  n=1786  0.000 .. 15.390  mean 0.056  sd 0.414
+      Rumen.26                                 NUM  n=1786  0.000 .. 11.785  mean 0.056  sd 0.346
+      Rumen.27                                 NUM  n=1786  0.000 .. 25.067  mean 0.056  sd 0.616
+      Rumen.28                                 NUM  n=1786  0.000 .. 15.814  mean 0.056  sd 0.423
+      Rumen.29                                 NUM  n=1786  0.000 .. 17.963  mean 0.056  sd 0.465
+      Rumen.30                                 NUM  n=1786  0.000 .. 20.697  mean 0.056  sd 0.522
+      Rumen.31                                 NUM  n=1786  0.000 .. 18.542  mean 0.056  sd 0.486
+      Rumen.32                                 NUM  n=1786  0.000 .. 11.987  mean 0.056  sd 0.391
+      Rumen.33                                 NUM  n=1786  0.000 .. 13.063  mean 0.056  sd 0.378
+      Rumen.34                                 NUM  n=1786  0.000 .. 13.279  mean 0.056  sd 0.467
+      Rumen.35                                 NUM  n=1786  0.000 .. 18.198  mean 0.056  sd 0.470
+      Rumen.36                                 NUM  n=1786  0.000 .. 13.384  mean 0.056  sd 0.395
+      Rumen.37                                 NUM  n=1786  0.000 .. 21.546  mean 0.056  sd 0.549
+      Rumen.38                                 NUM  n=1786  0.000 .. 17.651  mean 0.056  sd 0.473
+      Rumen.39                                 NUM  n=1786  0.000 .. 15.109  mean 0.056  sd 0.451
+      Rumen.40                                 NUM  n=1786  0.000 .. 21.668  mean 0.056  sd 0.555
+      Rumen.41                                 NUM  n=1786  0.000 .. 23.713  mean 0.056  sd 0.643
+      Rumen.42                                 NUM  n=1786  0.000 .. 16.867  mean 0.056  sd 0.506
+      Rumen.43                                 NUM  n=1786  0.000 .. 19.241  mean 0.056  sd 0.487
+      Rumen.44                                 NUM  n=1786  0.000 .. 17.127  mean 0.056  sd 0.446
+      Rumen.45                                 NUM  n=1786  0.000 .. 13.887  mean 0.056  sd 0.392
+      Rumen.46                                 NUM  n=1786  0.000 .. 13.825  mean 0.056  sd 0.392
+      Rumen.47                                 NUM  n=1786  0.000 .. 18.496  mean 0.056  sd 0.497
+      Rumen.48                                 NUM  n=1786  0.000 .. 12.936  mean 0.056  sd 0.381
+      Rumen.49                                 NUM  n=1786  0.000 .. 10.869  mean 0.056  sd 0.315
+      Rumen.50                                 NUM  n=1786  0.000 .. 12.144  mean 0.056  sd 0.344
+      Rumen.51                                 NUM  n=1786  0.000 .. 16.871  mean 0.056  sd 0.440
+      Feces                                    NUM  n=1786  0.000 .. 5.028  mean 0.056  sd 0.298
+      Feces.1                                  NUM  n=1786  0.000 .. 4.530  mean 0.056  sd 0.272
+      Feces.2                                  NUM  n=1786  0.000 .. 5.467  mean 0.056  sd 0.278
+      Feces.3                                  NUM  n=1786  0.000 .. 5.691  mean 0.056  sd 0.305
+      Feces.4                                  NUM  n=1786  0.000 .. 19.638  mean 0.056  sd 0.538
+      Feces.5                                  NUM  n=1786  0.000 .. 39.653  mean 0.056  sd 0.966
+      Feces.6                                  NUM  n=1786  0.000 .. 5.485  mean 0.056  sd 0.289
+      Feces.7                                  NUM  n=1786  0.000 .. 5.343  mean 0.056  sd 0.306
+      Feces.8                                  NUM  n=1786  0.000 .. 12.687  mean 0.056  sd 0.428
+      Feces.9                                  NUM  n=1786  0.000 .. 10.348  mean 0.056  sd 0.362
+      Feces.10                                 NUM  n=1786  0.000 .. 7.226  mean 0.056  sd 0.289
+      Feces.11                                 NUM  n=1786  0.000 .. 18.732  mean 0.056  sd 0.512
+      Feces.12                                 NUM  n=1786  0.000 .. 17.122  mean 0.056  sd 0.470
+      Feces.13                                 NUM  n=1786  0.000 .. 32.274  mean 0.056  sd 0.795
+      Feces.14                                 NUM  n=1786  0.000 .. 4.142  mean 0.056  sd 0.259
+      Feces.15                                 NUM  n=1786  0.000 .. 8.272  mean 0.056  sd 0.344
+      Feces.16                                 NUM  n=1786  0.000 .. 15.180  mean 0.056  sd 0.464
+      Feces.17                                 NUM  n=1786  0.000 .. 13.502  mean 0.056  sd 0.450
+      Feces.18                                 NUM  n=1786  0.000 .. 12.999  mean 0.056  sd 0.397
+      Feces.19                                 NUM  n=1786  0.000 .. 7.670  mean 0.056  sd 0.350
+      Feces.20                                 NUM  n=1786  0.000 .. 7.025  mean 0.056  sd 0.299
+      Feces.21                                 NUM  n=1786  0.000 .. 6.794  mean 0.056  sd 0.308
+      Feces.22                                 NUM  n=1786  0.000 .. 7.448  mean 0.056  sd 0.303
+      Feces.23                                 NUM  n=1786  0.000 .. 4.844  mean 0.056  sd 0.298
+      Feces.24                                 NUM  n=1786  0.000 .. 7.243  mean 0.056  sd 0.295
+      Feces.25                                 NUM  n=1786  0.000 .. 6.334  mean 0.056  sd 0.295
+      Feces.26                                 NUM  n=1786  0.000 .. 5.164  mean 0.056  sd 0.306
+      Feces.27                                 NUM  n=1786  0.000 .. 5.083  mean 0.056  sd 0.265
+      Feces.28                                 NUM  n=1786  0.000 .. 7.602  mean 0.056  sd 0.321
+      Feces.29                                 NUM  n=1786  0.000 .. 5.923  mean 0.056  sd 0.293
+      Feces.30                                 NUM  n=1786  0.000 .. 24.833  mean 0.056  sd 0.634
+      Feces.31                                 NUM  n=1786  0.000 .. 5.276  mean 0.056  sd 0.285
+      Feces.32                                 NUM  n=1786  0.000 .. 6.708  mean 0.056  sd 0.338
+      Feces.33                                 NUM  n=1786  0.000 .. 35.880  mean 0.056  sd 0.870
+      Feces.34                                 NUM  n=1786  0.000 .. 5.664  mean 0.056  sd 0.279
+      Feces.35                                 NUM  n=1786  0.000 .. 6.835  mean 0.056  sd 0.298
+      Feces.36                                 NUM  n=1786  0.000 .. 5.087  mean 0.056  sd 0.265
+      Feces.37                                 NUM  n=1786  0.000 .. 10.256  mean 0.056  sd 0.397
+      Feces.38                                 NUM  n=1786  0.000 .. 6.010  mean 0.056  sd 0.317
+      Feces.39                                 NUM  n=1786  0.000 .. 6.957  mean 0.056  sd 0.320
+      Feces.40                                 NUM  n=1786  0.000 .. 6.620  mean 0.056  sd 0.290
+      Feces.41                                 NUM  n=1786  0.000 .. 6.624  mean 0.056  sd 0.296
+      Feces.42                                 NUM  n=1786  0.000 .. 19.227  mean 0.056  sd 0.623
+      Feces.43                                 NUM  n=1786  0.000 .. 6.787  mean 0.056  sd 0.293
+      Feces.44                                 NUM  n=1786  0.000 .. 13.142  mean 0.056  sd 0.425
+      Feces.45                                 NUM  n=1786  0.000 .. 5.876  mean 0.056  sd 0.285
+      Feces.46                                 NUM  n=1786  0.000 .. 5.384  mean 0.056  sd 0.280
+      Feces.47                                 NUM  n=1786  0.000 .. 7.231  mean 0.056  sd 0.295
+      Feces.48                                 NUM  n=1786  0.000 .. 10.660  mean 0.056  sd 0.381
+      Feces.49                                 NUM  n=1786  0.000 .. 14.089  mean 0.056  sd 0.559
+      Feces.50                                 NUM  n=1786  0.000 .. 24.529  mean 0.056  sd 0.626
+      Feces.51                                 NUM  n=1786  0.000 .. 8.574  mean 0.056  sd 0.318
+
+Paste the Nelore block. The Charolais side is already resolved.

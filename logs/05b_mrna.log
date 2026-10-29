@@ -1,0 +1,16 @@
+=== BioSample SAMEA114804964 (the 2020 '8513') ===
+  (no attributes)
+  alias="8513-N-M-2-A20"
+  <TITLE>Bovine rumen sample
+
+Charolais animals: 30   mRNA runs attached: 31   animals lacking mRNA: none
+RNA-Seq aliases not attached to any animal: ['8508', '8513-2020']
+
+runs.tsv:
+cohort                layer       
+Charolais_PRJEB70895  16S_amplicon    30
+                      mRNA            31
+Nelore_PRJNA987743    DNA_shotgun     52
+161c8bbc5cd31a10f6183b82fe105935  animal_metadata.tsv
+516c56677ed4c6fd5f71651cf39dd72c  runs.tsv
+

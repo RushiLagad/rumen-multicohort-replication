@@ -1,0 +1,67 @@
+=== Cohort gate, fixed Wed Oct 28 03:01:10 PM CDT 2026 ===
+
+----------------------------------------------------------------
+[PRJNA448333]
+  runs: 144   unique samples: 48   runs/sample: 3.0
+  strategy: RNA-Seq,WGS   source: METAGENOMIC,METATRANSCRIPTOMIC
+  platform: ILLUMINA   species: bovine gut metagenome
+  download: 524.9 GB
+  reads per run: median 33,335,698  min 17,131,898
+  --- animal ID candidates ---
+    sample_alias: ['Rumen microbiome of beef cattle 207', 'Rumen microbiome of beef cattle 206', 'Rumen microbiome of beef cattle 303', 'Rumen microbiome of beef cattle 608', 'Rumen microbiome of beef cattle 205']
+    sample_title: ['Rumen microbiome of beef cattle']
+
+----------------------------------------------------------------
+[PRJEB10338]
+  runs: 8   unique samples: 8   runs/sample: 1.0
+  strategy: WGS   source: METAGENOMIC
+  platform: ILLUMINA   species: metagenome
+  download: 72.3 GB
+  reads per run: median 54,142,063  min 43,428,535
+  --- animal ID candidates ---
+    sample_alias: ['2019N0003', '2019N0004', '2019N0007', '2019N0002', '2019N0005']
+    sample_title: ['L.Conc.Low', 'L.Conc.High', 'L.Med.Low', 'AA.Conc.High', 'AA.Med.Low']
+
+----------------------------------------------------------------
+[PRJEB31266]
+  runs: 244   unique samples: 242   runs/sample: 1.0
+  strategy: WGS   source: METAGENOMIC
+  platform: ILLUMINA,OXFORD_NANOPORE   species: bovine gut metagenome,metagenome
+  download: 3964.0 GB
+  reads per run: median 83,899,925  min 0
+  --- animal ID candidates ---
+    sample_alias: ['10678_0002', '10678_0005', '10678_0011', '10678_0015', '10678_0022']
+    sample_title: ['10678_0002', '10678_0005', '10678_0011', '10678_0015', '10678_0022']
+
+----------------------------------------------------------------
+[PRJNA987743]
+  runs: 104   unique samples: 104   runs/sample: 1.0
+  strategy: WGS   source: METAGENOMIC
+  platform: ILLUMINA   species: gut metagenome
+  download: 285.6 GB
+  reads per run: median 25,467,663  min 9,685,210
+  --- animal ID candidates ---
+    sample_alias: ['1494fz', '1485fz', '1476fz', '516fz', '514fz']
+    sample_title: ['1494_Feces', '1485_Feces', '1476_Feces', '516_Feces', '514_Feces']
+
+----------------------------------------------------------------
+[PRJEB70895]
+  runs: 64   unique samples: 63   runs/sample: 1.0
+  strategy: AMPLICON,RNA-Seq   source: METAGENOMIC,METATRANSCRIPTOMIC
+  platform: ILLUMINA   species: bovine gut metagenome
+  download: 198.8 GB
+  reads per run: median 57,028,924  min 15,652
+  --- animal ID candidates ---
+    sample_alias: ['8507-P-M-1-A19', '8716-N-H-1-A19', '9334-P-H-2-A20', '9302-P-M-2-A20', '9621-P-M-2-A20']
+    sample_title: ['Bovine rumen sample']
+
+================================================================
+accession    runs  samples  strategy          source                          platform                  GB      species
+PRJNA448333  144   48       RNA-Seq,WGS       METAGENOMIC,METATRANSCRIPTOMIC  ILLUMINA                  524.9   bovine gut metagenome
+PRJEB10338   8     8        WGS               METAGENOMIC                     ILLUMINA                  72.3    metagenome
+PRJEB31266   244   242      WGS               METAGENOMIC                     ILLUMINA,OXFORD_NANOPORE  3964.0  bovine gut metagenome,metagenome
+PRJNA987743  104   104      WGS               METAGENOMIC                     ILLUMINA                  285.6   gut metagenome
+PRJEB70895   64    63       AMPLICON,RNA-Seq  METAGENOMIC,METATRANSCRIPTOMIC  ILLUMINA                  198.8   bovine gut metagenome
+
+Total download across cohorts:
+  5045.6 GB

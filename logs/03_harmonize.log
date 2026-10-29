@@ -1,0 +1,25 @@
+
+======================================================================
+NELORE  PRJNA987743  Bos indicus, n=52
+======================================================================
+  S2: 104 rows, header row 1
+  rumen rows: 52
+  ENA rumen runs: 52
+
+  --- read-count join test ---
+    S2  #Raw_reads  : 20,104,992 .. 72,721,862
+    ENA read_count  : 9,685,210 .. 35,714,852
+    1x (spots = reads)   matched   0/52   dup keys in S2: 0  in ENA: 0
+    2x (spots = pairs)   matched   0/52   dup keys in S2: 0  in ENA: 0
+
+  JOIN REJECTED. best was 1x (spots = reads): 0/52 matched, 0 duplicate S2 keys, 0 duplicate ENA keys.
+  Not emitting a table on an unverified join. Fallback options,
+  in order of how much I would trust them:
+    1 join on fastq_bytes instead (also incidental, also unique)
+    2 email the corresponding author for the SampleID to BioSample map
+    3 match on (Diet, Weight) cells only, which is group-level and
+      destroys the per-animal pairing the whole study depends on
+
+  Diagnostics to send me:
+    S2  head : [20104992, 21402774, 21968810, 23576430, 23997388, 24020780]
+    ENA head : [9685210, 10332692, 10607468, 11311734, 11508320, 11535005]

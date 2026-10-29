@@ -1,0 +1,71 @@
+Nelore: 52 animals -> 52 DNA runs
+
+Charolais ENA: 64 runs, 63 samples
+library_strategy
+AMPLICON    31
+RNA-Seq     33
+
+  ENA aliases: 63   in mapping.tab: 31   NOT in mapping.tab: 32
+    unmapped ENA alias: 190827
+    unmapped ENA alias: 8365
+    unmapped ENA alias: 8368
+    unmapped ENA alias: 8443
+    unmapped ENA alias: 8506
+    unmapped ENA alias: 8507
+    unmapped ENA alias: 8508
+    unmapped ENA alias: 8513-2019
+    unmapped ENA alias: 8513-2020
+    unmapped ENA alias: 8574
+    unmapped ENA alias: 8716
+    unmapped ENA alias: 8852
+    unmapped ENA alias: 8912
+    unmapped ENA alias: 8916
+    unmapped ENA alias: 8919
+    unmapped ENA alias: 8921
+    unmapped ENA alias: 8945
+    unmapped ENA alias: 8997
+    unmapped ENA alias: 9022
+    unmapped ENA alias: 9026
+    unmapped ENA alias: 9302
+    unmapped ENA alias: 9334
+    unmapped ENA alias: 9563
+    unmapped ENA alias: 9597
+    unmapped ENA alias: 9601
+    unmapped ENA alias: 9609
+    unmapped ENA alias: 9621
+    unmapped ENA alias: 9808
+    unmapped ENA alias: 9815
+    unmapped ENA alias: 9840
+    unmapped ENA alias: 9842
+    unmapped ENA alias: 9920
+  mapping Names with reads: 31 of 80
+  mapping rows WITHOUT reads, by Sampling x RFI_1:
+RFI_1      0  NEGATIF  POSITIF
+    Sampling                      
+    Sonde     33        8        8
+
+  contradictory row 8513-N-M-2-A20 deposited on ENA: True
+    run_accession sample_accession library_strategy
+      ERR12350000   SAMEA114804964         AMPLICON
+    -> its ENA sample XML may hold the true RFI class. Check before dropping.
+
+  usable Charolais animals: 30  (extreme RFI, abattoir, reads on ENA, contradictory row excluded)
+RFI_1           NEGATIF  POSITIF
+    Year      Diet                  
+    Year_2019 CS          4        3
+              GS          4        4
+    Year_2020 CS          4        4
+              GS          4        3
+
+animal_metadata.tsv: 82 animals
+cohort
+Charolais_PRJEB70895    30
+Nelore_PRJNA987743      52
+
+runs.tsv: 82 runs
+cohort                layer       
+Charolais_PRJEB70895  16S_amplicon    30
+Nelore_PRJNA987743    DNA_shotgun     52
+161c8bbc5cd31a10f6183b82fe105935  animal_metadata.tsv
+2713eb8c3454df3db0acca84f1ccd180  runs.tsv
+
