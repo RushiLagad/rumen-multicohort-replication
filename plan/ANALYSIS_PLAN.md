@@ -332,3 +332,48 @@ range are not supported by these data and will not be made.
 | PRJEB70895/metadata/mapping.tab | 3e87555a73920feb3648f19a25f706c7 | Dataverse doi:10.57745/ACNRVQ |
 | rumen448333/metadata/biosample_attrs.tsv | | ENA BioSample XML, PRJNA448333 |
 | rumen448333/input/sample_metadata.csv | | **PROVENANCE UNKNOWN** — not used for any phenotype claim until resolved |
+
+---
+
+## Amendment 1, 2026-10-29: database decision (Section 5)
+
+Kraken2 Standard, build k2_standard_20240605, 49,138 taxa, 78 GB, fixed as the
+profiling database for all cohorts. Composition recorded before any profiling:
+
+| rumen genus | refs | gut genus | refs |
+|---|---|---|---|
+| Prevotella | 34 | Bacteroides | 57 |
+| Fibrobacter | 8 | Faecalibacterium | 22 |
+| Ruminococcus | 11 | Akkermansia | 11 |
+| Methanobrevibacter | 11 | | |
+| Succinivibrio | 3 | | |
+| Methanomassiliicoccus | 1 | | |
+| Ruminobacter | 0 (absent) | | |
+| Anaerovibrio | 0 (absent) | | |
+
+The build is weighted toward human gut genomes. It is adopted because it is
+applied identically to every cohort, which preserves the validity of a
+replication comparison at reduced sensitivity, and because a rumen-specific
+build is a multi-day rebuild that may not change the conclusion.
+
+**Declared consequences, before seeing any result:**
+1. Targets T4 (unclassified Methanomassiliicoccaceae, 1 reference genome) and
+   the canonical Succinivibrionaceae (3) are flagged a priori as
+   low-confidence. A null for either is reported as uninformative about the
+   taxon, not as failure to replicate.
+2. Ruminobacter and Anaerovibrio are absent and will not be reported at all.
+
+**Pre-specified adequacy test.** After the first cohort is profiled, the median
+per-sample classified-read fraction is computed. If it falls below 60%, the
+database is judged inadequate for rumen content, this amendment is superseded,
+and a rumen-inclusive build is constructed before any association testing. The
+threshold is fixed here, before any profiling output exists.
+
+## Amendment 2, 2026-10-29: pipeline deviations (Section 5)
+
+- minimap2 -x sr replaces bowtie2 for host depletion. Index builds in 37 s
+  against several hours, accuracy for depletion of short reads is equivalent.
+- The ARS-UCD2.0 versus UOA_Brahman_1 comparison runs on 8 Nelore samples
+  rather than all 52. The quantity estimated is a per-genome mapping rate,
+  which 8 samples resolve well inside the 2% decision boundary.
+
