@@ -519,3 +519,11 @@ GTDB r207, same samples, same pipeline otherwise. A median reduction exceeding
 50% in the environmental genera, with the Lachnospiraceae set stable, supports
 misassignment.
 
+
+### Amendment 8 (2026-10-30): GTDB r207 database build — defects found and corrected
+1. The Struo2-distributed `seqid2taxid.map` did not match the Struo2 `library.tar.gz` headers (0 of 7.7M contigs assigned; the 15:13 build produced an 80 GB table containing 0 sequences). Map regenerated from the 62,444 `prelim_map*.txt` files shipped inside the library; deduplicated to 7,745,746 contigs.
+2. kraken2 (conda build reported as 2.17.2) silently dropped every sequence whose leaf taxid exceeded 2^31 (3-genome test: 362/519 counted; 31,330 of 62,443 genomes affected). All taxids renumbered to sequential integers (root = 1, max 401,815) in nodes.dmp, names.dmp and the map; `scripts/10b_renumber_taxids.py`; old-to-new table at `taxonomy/taxid_remap.tsv`; originals in `taxonomy/orig/`. Verified 519/519 on the 3-genome test and 62,443/62,443 on a one-stub-per-genome build.
+3. Library used as shipped (`*.fna`, unmasked); the `.fna.masked` twins carry different headers and no masking characters and were not usable. The Standard DB is masked; noted as a difference in the Standard-vs-GTDB comparison.
+4. Capacity: estimate_capacity 7.70e10 distinct minimizers; cap 85 GB = 2.125e10 cells. The DB therefore retains a hash-subsampled minority of minimizers; adequacy is judged by the pre-registered 60% test (Amendment 1), not assumed.
+5. systemd-oomd killed the 11:48 build (pressure-based kill of the user session); disabled on the build host.
+6. Acceptance gate added (`scripts/11_verify_db.sh`): processed sequences must equal map lines; hash.k2d > 80 GB; kraken2-inspect and a smoke classification before the 5-sample adequacy test. Final build launched 15:56, build_db from 16:05:42.
