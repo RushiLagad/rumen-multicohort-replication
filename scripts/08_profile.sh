@@ -42,7 +42,7 @@ import sys, os, glob, csv, collections, statistics as st
 out, cohort = sys.argv[1], sys.argv[2]
 
 frac=[]
-for f in sorted(glob.glob(f"{out}/kraken/*.report")):
+for f in sorted(x for x in glob.glob(f"{out}/kraken/*.report") if "bracken" not in x):
     lines=[l.split("\t") for l in open(f)]
     unc=next((float(l[0]) for l in lines if len(l)>5 and l[5].strip()=="unclassified"), 0.0)
     frac.append(100-unc)

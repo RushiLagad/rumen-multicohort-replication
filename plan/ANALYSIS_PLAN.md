@@ -405,3 +405,45 @@ Consequences, recorded before analysis:
    there being nothing left to separate rather than on demonstrated equivalence.
    If a future cohort supplies raw Bos indicus reads, the comparison is rerun.
 
+
+## Amendment 5, 2026-10-30: adequacy test, corrected and complete
+
+Amendment 4 reported 17.0, 19.4 and 16.0 percent from the first three samples.
+The full 52-sample Nelore profile with Kraken2 Standard gives a classified-read
+fraction of **median 16.9%, range 15.3 to 19.4%**. The Amendment 1 threshold of
+60% FAILS.
+
+A reporting bug in 08_profile.sh initially printed this as "median 100.0%, PASS".
+The adequacy calculation globbed kraken/*.report, which also matched the Bracken
+reports; those carry no `unclassified` line, so the code recorded them as 100%
+classified and the median fell on the Bracken files rather than the Kraken2 ones.
+The script has been corrected to exclude Bracken outputs. The erroneous PASS was
+never acted on.
+
+**The failure is depth, not misassignment.** Genus composition of the classified
+fraction is characteristically ruminal:
+
+| taxon | % of classified | taxon | % of classified |
+|---|---|---|---|
+| Prevotella | 11.04 | Bacteroides | 2.18 |
+| Fibrobacter | 2.24 | Faecalibacterium | 0.98 |
+| Methanobrevibacter | 2.49 | Ruminococcus | 0.96 |
+| Butyrivibrio | 1.17 | | |
+
+Prevotella exceeds Bacteroides fivefold and Fibrobacter exceeds Faecalibacterium
+by 2.3x, the opposite of what database-driven misassignment to human gut taxa
+would produce. The classified minority is real rumen signal; the database simply
+lacks the uncultured majority of the community.
+
+Consequences:
+1. A rumen-inclusive database is still required before association testing, per
+   Amendment 1. The threshold is not revised.
+2. The Standard-database profile (2,725 genera, 11,605 species across 52 samples)
+   is retained as a pre-specified sensitivity analysis rather than discarded. The
+   classified fraction varies by only 4 percentage points across samples, so the
+   loss is approximately non-differential and between-sample CLR comparisons on
+   that subset remain interpretable.
+3. Database route selected: GTDB release 207 (62,443 genomes) from the Struo2
+   distribution, built locally with a size cap, since the pre-built hash.k2d is
+   287 GB against 122 GB of available RAM.
+
