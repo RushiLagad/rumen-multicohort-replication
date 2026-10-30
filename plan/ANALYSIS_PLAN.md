@@ -447,3 +447,37 @@ Consequences:
    distribution, built locally with a size cap, since the pre-built hash.k2d is
    287 GB against 122 GB of available RAM.
 
+
+## Amendment 6, 2026-10-30: contamination screen, pre-specified
+
+Supplementary Table 7 of the Nelore source paper (Front Microbiol 2023,
+PMC10754987) reports 64 features associated with RFI or residual methane. Their
+habitat distribution is asymmetric:
+
+- Rumen / RFI_GC, 22 genera: 17 are soil or environmental organisms
+  (Actinomadura, Actinoplanes, Anaeromyxobacter, Bosea, Caulobacter,
+  Cellulomonas, Comamonas, Gordonia, Lysobacter, Nonomuraea, Pseudonocardia,
+  Rubrobacter, Sinorhizobium, Sorangium, Sphingobium, Brevibacterium,
+  Burkholderia); 4 are genuine rumen taxa.
+- Feces / RFI_GC, 7 genera: 5 are marine (Aliivibrio, Idiomarina, Marinomonas,
+  Photobacterium, Psychromonas).
+- Feces / RME_GC, 22 genera: include deep-sea, hot-spring, freshwater bloom and
+  insect-endosymbiont organisms.
+- Rumen / RME_GC, 13 genera: biologically coherent, 12 of 13 Lachnospiraceae or
+  related anaerobes.
+
+Several rumen RFI genera (Bosea, Burkholderia, Caulobacter, Comamonas,
+Sphingobium, Brevibacterium, Gordonia, Pseudonocardia) are documented reagent
+and extraction-kit contaminants (Salter et al. 2014, BMC Biology 12:87).
+
+**Screen, criteria fixed before examination.** For each Table 7 feature, in our
+harmonized Nelore profile: (a) median relative abundance across 52 samples;
+(b) Spearman correlation of CLR abundance with total non-host depth;
+(c) association with slaughter batch. A feature is flagged
+contamination-consistent if median relative abundance < 0.01% AND it shows a
+negative depth correlation or a batch association at BH q < 0.05 across these
+64 tests.
+
+Applied to the published feature list only. It does not alter the replication
+targets fixed in Section 3, and is reported as a property of the source study.
+
