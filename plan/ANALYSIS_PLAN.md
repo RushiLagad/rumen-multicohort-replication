@@ -481,3 +481,41 @@ negative depth correlation or a batch association at BH q < 0.05 across these
 Applied to the published feature list only. It does not alter the replication
 targets fixed in Section 3, and is reported as a property of the source study.
 
+
+## Amendment 7, 2026-10-30: contamination screen result, NEGATIVE
+
+The Amendment 6 screen was run against the Nelore Standard-database genus
+profile (2,725 genera x 52 samples, 26 animals per slaughter batch).
+
+**The pre-specified criterion is not met. No Table 7 feature is flagged
+contamination-consistent.**
+
+- Relative abundance: rumen RFI genera median 0.065%, rumen RME genera median
+  0.150%. **Zero of 21 RFI genera fall below the 0.01% threshold.** Burkholderia
+  0.189%, Selenomonas 0.241%, Comamonas 0.116%. These are not the trace levels
+  characteristic of reagent contamination in low-biomass samples.
+- Depth correlation: the implementation correlated log raw counts with total
+  depth rather than CLR-transformed abundance, so all 34 genera returned rho
+  0.54 to 0.82 at p < 1e-4 as an arithmetic consequence. **This test was invalid
+  and is reported as uninformative, not as evidence either way.**
+- Batch association: 12 of 21 rumen RFI genera versus 2 of 13 rumen RME genera
+  reach nominal p < 0.05 (Fisher exact OR 7.3, p = 0.030). **No individual
+  genus survives BH correction across the 34 tests (minimum q = 0.099).**
+
+**Conclusion recorded as specified.** The hypothesis that the source study's RFI
+associations reflect reagent contamination is not supported. The habitat-based
+observation in Amendment 6 stands as an observation about the published feature
+list, and the group-level batch asymmetry is reported with its effect size and
+its failure to survive correction. Neither is claimed as a contamination finding.
+
+**Alternative hypothesis, to be tested with the GTDB database.** The soil and
+marine genera may instead reflect misassignment: with Kraken2 Standard
+classifying only 16.9% of rumen reads, unclassifiable sequences from uncultured
+rumen organisms can be assigned to the nearest represented relative. If so,
+their apparent abundance should fall substantially when profiled against a
+database with genuine rumen coverage. This is a pre-specified comparison:
+for the 64 Table 7 features, relative abundance under Kraken2 Standard versus
+GTDB r207, same samples, same pipeline otherwise. A median reduction exceeding
+50% in the environmental genera, with the Lachnospiraceae set stable, supports
+misassignment.
+
