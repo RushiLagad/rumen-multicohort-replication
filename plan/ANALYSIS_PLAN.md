@@ -527,3 +527,18 @@ misassignment.
 4. Capacity: estimate_capacity 7.70e10 distinct minimizers; cap 85 GB = 2.125e10 cells. The DB therefore retains a hash-subsampled minority of minimizers; adequacy is judged by the pre-registered 60% test (Amendment 1), not assumed.
 5. systemd-oomd killed the 11:48 build (pressure-based kill of the user session); disabled on the build host.
 6. Acceptance gate added (`scripts/11_verify_db.sh`): processed sequences must equal map lines; hash.k2d > 80 GB; kraken2-inspect and a smoke classification before the 5-sample adequacy test. Final build launched 15:56, build_db from 16:05:42.
+
+### Amendment 9 (2026-11-01, written with 3 of 52 Nelore samples profiled: 54.1, 47.1, 51.3% classified): adequacy branch and genus match keys
+**Context.** The capped GTDB r207 database (Amendment 8) retains roughly a quarter of library minimizers. A 136 bp read carries ~40 minimizers, so reads from genomes present in the library are still classified; the unclassified fraction is dominated by reads from lineages absent from GTDB r207 representatives or too divergent for exact 35-mer matches. A full-minimizer table recovers part of the latter (Smith et al. 2022). The pre-registered test (Amendment 1: median classified fraction across Nelore samples ≥ 60%) is evaluated on all 52 Nelore samples from the run started 2026-11-01 16:39.
+
+**Branch, fixed before the result is known.**
+- If median ≥ 60%: the capped database is the primary database. No further build.
+- If median < 60%: two-pass, full-resolution database.
+  1. Screen = the completed capped run over all 131 samples (3 cohorts).
+  2. Genome set = every library genome whose species has ≥ 10 clade-level reads in the Kraken2 report of at least one sample, any cohort. Threshold fixed here; not tuned.
+  3. Rebuild from that genome set with no `--max-db-size` cap (full minimizers), same k/l/taxonomy (renumbered, Amendment 8), Bracken distributions at 136, 150 and 100 bp.
+  4. Acceptance: all selected genomes counted (processed sequences = contigs of the set); the Amendment 1 test re-run on the new database and reported whether it passes or not. If it also fails, the full-resolution database is still primary (it dominates the capped one on sensitivity) and the shortfall is reported as a limitation; no third build.
+  5. The capped-database profiles are retained as a sensitivity analysis (database-choice comparison alongside Standard vs GTDB).
+  Rationale for the subset: reads from excluded genomes cannot contribute meaningfully, since the screen saw all 62,443 genomes with enough minimizers to detect presence at the 10-read level; exclusion removes capacity, not signal. Option rejected: memory-mapping the 287 GB Struo2 table (download time, random-access throughput, and an unverified build).
+
+**Genus match keys (GTDB suffixes).** GTDB splits NCBI genera into suffixed genera (e.g. Ruminococcus_B/_E/_G, Methanobrevibacter_A/_C, Treponema_D/_F). Rules: (a) the primary feature space keeps GTDB genera as named; (b) a published target genus named in NCBI nomenclature matches the set of GTDB genera whose name equals the target or the target followed by `_` and a suffix, with counts summed across that set for the replication test; (c) phylum-level targets use current names (Bacillota for Firmicutes, Chloroflexota for Chloroflexi) and their GTDB equivalents where GTDB names differ (Bacillota = Firmicutes + Firmicutes_A/_B/_C… in GTDB r207, summed). The target-to-key table is written to `plan/target_keys.tsv` before association testing and committed.
