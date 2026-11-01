@@ -1,0 +1,77 @@
+set	id	target	target_rank	site	phenotype	direction	coef	stderr	qval	match_rank	gtdb_keys	n_keys	status	note
+Li	T1	unnamed RF19 (text: RF16)	16S clade	rumen	RFI	higher in L-RFI (ANG)			0.045			0	untestable_by_design	Greengenes clade label; no genome-based counterpart
+Li	T2	Firmicutes	phylum	rumen	RFI	higher in L-RFI (CHAR)			0.042	P	Firmicutes;Firmicutes_A;Firmicutes_B;Firmicutes_C;Firmicutes_D;Firmicutes_E;Firmicutes_F;Firmicutes_G;Firmicutes_H	9	mapped	NCBI name now Bacillota; GTDB splits into Firmicutes + suffixed phyla, summed
+Li	T3	Chloroflexi	phylum	rumen	RFI	not stated (CHAR)			0.046	P	Chloroflexota	1	mapped	NCBI/GTDB name Chloroflexota
+Li	T4	unclassified Methanomassiliicoccaceae	family	rumen	RFI	higher in H-RFI (CHAR)			0.014	F	Methanomassiliicoccaceae	1	mapped	tested as the whole family; flagged a priori (few reference genomes)
+Li	T5	Blautia	genus	rumen	RFI	higher in L-RFI (HYB)			0.035	G	Blautia;Blautia_A	2	mapped	
+Li	T6	Methanobrevibacter smithii	species	rumen	RFI	higher in L-RFI (HYB)			0.04	S	Methanobrevibacter_A smithii;Methanobrevibacter_A smithii_A	2	mapped	species-level sensitivity space
+Nelore	N01	Anaeromyxobacter	genus	rumen	RFI_GC	lower with higher RFI	-0.00275909160752174	0.000649315873450774	0.00263898864911416	G	Anaeromyxobacter	1	mapped	
+Nelore	N02	Actinomadura	genus	rumen	RFI_GC	lower with higher RFI	-0.00239408826853457	0.000630562716336869	0.00498392611489363	G	Actinomadura_B;Actinomadura_C;Actinomadura_D	3	mapped	
+Nelore	N03	Sorangium	genus	rumen	RFI_GC	lower with higher RFI	-0.00320764741051676	0.000887354678556747	0.00650738844228421	G		0	unmapped	
+Nelore	N04	Acidaminococcus	genus	rumen	RFI_GC	higher with higher RFI	0.00428287906303132	0.00123576702525439	0.00844369976250611	G	Acidaminococcus	1	mapped	
+Nelore	N05	Rubrobacter	genus	rumen	RFI_GC	lower with higher RFI	-0.00191044009555231	0.000585959420795973	0.0123396674541575	G	Rubrobacter;Rubrobacter_A;Rubrobacter_B;Rubrobacter_C	4	mapped	
+Nelore	N06	Actinoplanes	genus	rumen	RFI_GC	lower with higher RFI	-0.00280768330865626	0.000887514387538043	0.0149648850159621	G	Actinoplanes	1	mapped	
+Nelore	N07	Cellulomonas	genus	rumen	RFI_GC	lower with higher RFI	-0.00298888486813484	0.000948137639989354	0.0152738866449478	G	Cellulomonas	1	mapped	
+Nelore	N08	Gordonia	genus	rumen	RFI_GC	lower with higher RFI	-0.00248788353926874	0.000804479204972434	0.0175751565112581	G	Gordonia;Gordonia_B	2	mapped	
+Nelore	N09	Bosea	genus	rumen	RFI_GC	lower with higher RFI	-0.00200104086351335	0.000652324984162208	0.0176502821603432	G	Bosea	1	mapped	
+Nelore	N10	Phascolarctobacterium	genus	rumen	RFI_GC	higher with higher RFI	0.00581148194695805	0.001976866822407	0.0241167256128685	G	Phascolarctobacterium;Phascolarctobacterium_A	2	mapped	
+Nelore	N11	Comamonas	genus	rumen	RFI_GC	lower with higher RFI	-0.0019167574960599	0.000671726489668979	0.0287858990807367	G	Comamonas;Comamonas_C;Comamonas_E;Comamonas_F	4	mapped	
+Nelore	N12	Caulobacter	genus	rumen	RFI_GC	lower with higher RFI	-0.00237617600838196	0.00083425079179394	0.0288401679295186	G	Caulobacter	1	mapped	
+Nelore	N13	Eubacterium	genus	rumen	RFI_GC	higher with higher RFI	0.00389475249151714	0.00138164622553991	0.0305098179418022	G	Eubacterium;Eubacterium_B;Eubacterium_C;Eubacterium_F;Eubacterium_G;Eubacterium_I;Eubacterium_J;Eubacterium_M;Eubacterium_N;Eubacterium_O;Eubacterium_Q;Eubacterium_R;Eubacterium_S;Eubacterium_T	14	mapped	
+Nelore	N14	Arabia	genus	rumen	RFI_GC	lower with higher RFI	-0.00195442184433224	0.000697472453746214	0.0306968411846851	G	Arabia	1	mapped	
+Nelore	N15	Selenomonas	genus	rumen	RFI_GC	higher with higher RFI	0.0152349618623695	0.00552554254641841	0.0326735687193594	G	Selenomonas;Selenomonas_A;Selenomonas_B;Selenomonas_C	4	mapped	
+Nelore	N16	Sphingobium	genus	rumen	RFI_GC	lower with higher RFI	-0.00228154532874736	0.000844896250268179	0.0361633753827926	G	Sphingobium;Sphingobium_A	2	mapped	
+Nelore	N17	Burkholderia	genus	rumen	RFI_GC	lower with higher RFI	-0.00647608098465757	0.00241784251910747	0.0379936730442983	G	Burkholderia	1	mapped	
+Nelore	N18	Sinorhizobium	genus	rumen	RFI_GC	lower with higher RFI	-0.00172969463134173	0.000650265075598323	0.03924901277481	G	Sinorhizobium	1	mapped	
+Nelore	N19	Lysobacter	genus	rumen	RFI_GC	lower with higher RFI	-0.00272616711314004	0.0010259908817173	0.03924901277481	G	Lysobacter;Lysobacter_A;Lysobacter_B	3	mapped	
+Nelore	N20	Pseudonocardia	genus	rumen	RFI_GC	lower with higher RFI	-0.00198802132531266	0.000760744972057461	0.0429680753168365	G	Pseudonocardia	1	mapped	
+Nelore	N21	Brevibacterium	genus	rumen	RFI_GC	lower with higher RFI	-0.00177402034845889	0.000684934787193325	0.0449304329996012	G	Brevibacterium	1	mapped	
+Nelore	N22	Nonomuraea	genus	rumen	RFI_GC	lower with higher RFI	-0.00167099538861747	0.000649332098292645	0.0462041611061711	G	Nonomuraea	1	mapped	
+Nelore	N23	Succinivibrio	genus	feces	RFI_GC	lower with higher RFI	-0.112862993140659	0.0310144126107408	0.0173725694153463	G	Succinivibrio	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N24	Marinomonas	genus	feces	RFI_GC	lower with higher RFI	-0.0027732754249014	0.000768408602996037	0.0178378571057615	G	Marinomonas	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N25	Idiomarina	genus	feces	RFI_GC	lower with higher RFI	-0.00196763682982543	0.000613008079815483	0.0326060496882417	G	Idiomarina	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N26	Glaesserella	genus	feces	RFI_GC	lower with higher RFI	-0.00255190090400388	0.000794934810008577	0.0326060496882417	G	Glaesserella	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N27	Aliivibrio	genus	feces	RFI_GC	lower with higher RFI	-0.0038458997405109	0.00122613733344042	0.0342308766638484	G	Aliivibrio	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N28	Photobacterium	genus	feces	RFI_GC	lower with higher RFI	-0.00472428582974979	0.00152551915374996	0.0362071947185585	G	Photobacterium	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N29	Psychromonas	genus	feces	RFI_GC	lower with higher RFI	-0.00226482775557187	0.000766290454050965	0.0446838314667262	G	Psychromonas	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N30	Pseudobutyrivibrio	genus	rumen	RME_GC	higher with higher RME	0.00352698307412696	0.000961613808415555	0.0100599709636388	G	Pseudobutyrivibrio	1	mapped	
+Nelore	N31	Anaerobutyricum	genus	rumen	RME_GC	higher with higher RME	0.000430728065018536	0.000128141054377188	0.0158131775318147	G	Anaerobutyricum	1	mapped	
+Nelore	N32	Roseburia	genus	rumen	RME_GC	higher with higher RME	0.000777559145501024	0.000243561656638941	0.0199887137494743	G	Roseburia	1	mapped	
+Nelore	N33	Novisyntrophococcus	genus	rumen	RME_GC	higher with higher RME	0.000148011551546633	4.79283852356766e-05	0.0241210973266506	G		0	unmapped	
+Nelore	N34	Enterocloster	genus	rumen	RME_GC	higher with higher RME	0.000319787910081316	0.000104135020531627	0.0242222750614095	G	Enterocloster	1	mapped	
+Nelore	N35	Lacrimispora	genus	rumen	RME_GC	higher with higher RME	0.0004352455117454	0.000143659431223002	0.0259077700082227	G	Lacrimispora	1	mapped	
+Nelore	N36	Mediterraneibacter	genus	rumen	RME_GC	higher with higher RME	0.000354427879983087	0.000121503425012088	0.0311592713873951	G	Mediterraneibacter;Mediterraneibacter_A	2	mapped	
+Nelore	N37	Coprococcus	genus	rumen	RME_GC	higher with higher RME	0.000569125871350137	0.000197398269704374	0.0329849670394591	G	Coprococcus;Coprococcus_A	2	mapped	
+Nelore	N38	Eubacterium	genus	rumen	RME_GC	higher with higher RME	0.000274579620963054	9.56387842263688e-05	0.033697329087287	G	Eubacterium;Eubacterium_B;Eubacterium_C;Eubacterium_F;Eubacterium_G;Eubacterium_I;Eubacterium_J;Eubacterium_M;Eubacterium_N;Eubacterium_O;Eubacterium_Q;Eubacterium_R;Eubacterium_S;Eubacterium_T	14	mapped	
+Nelore	N39	Anaerostipes	genus	rumen	RME_GC	higher with higher RME	0.000333986194456074	0.000117174960195923	0.0348379289457226	G	Anaerostipes	1	mapped	
+Nelore	N40	Blautia	genus	rumen	RME_GC	higher with higher RME	0.00100936848251122	0.000356902449793008	0.0361717463812272	G	Blautia;Blautia_A	2	mapped	
+Nelore	N41	Winogradskyella	genus	rumen	RME_GC	lower with higher RME	-0.000204939364197582	7.31822966245829e-05	0.0373129622270984	G	Winogradskyella	1	mapped	
+Nelore	N42	Lachnospira	genus	rumen	RME_GC	higher with higher RME	0.000200904316480244	7.2031966560113e-05	0.037684514584002	G	Lachnospira	1	mapped	
+Nelore	N43	Wolbachia	genus	feces	RME_GC	higher with higher RME	8.79715453497545e-05	2.83954661096852e-05	0.0245111560357388	G	Wolbachia	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N44	Microcystis	genus	feces	RME_GC	higher with higher RME	0.000103311605302904	3.44387830745403e-05	0.0301142909197982	G	Microcystis	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N45	Sporomusa	genus	feces	RME_GC	higher with higher RME	9.84564998326563e-05	3.31371199861393e-05	0.0308605471461471	G	Sporomusa	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N46	Terribacillus	genus	feces	RME_GC	higher with higher RME	0.000100838911569574	3.43452953414392e-05	0.0324080403155258	G	Terribacillus	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N47	Saccharothrix	genus	feces	RME_GC	higher with higher RME	0.000113828886440135	3.92237574126736e-05	0.0347877665123048	G		0	unmapped	faecal association; cross-site test in rumen data
+Nelore	N48	Thermococcus	genus	feces	RME_GC	higher with higher RME	6.96271679119236e-05	2.40678866567739e-05	0.0351836013408967	G	Thermococcus;Thermococcus_A;Thermococcus_B;Thermococcus_C	4	mapped	faecal association; cross-site test in rumen data
+Nelore	N49	Sebaldella	genus	feces	RME_GC	higher with higher RME	0.000100353480273623	3.49005316453069e-05	0.0362528001157851	G	Sebaldella	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N50	Thermincola	genus	feces	RME_GC	higher with higher RME	9.90027316078116e-05	3.47090293309418e-05	0.0380816549317227	G	Thermincola	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N51	Salicibibacter	genus	feces	RME_GC	higher with higher RME	7.86569756906667e-05	2.75921378753624e-05	0.038088658042714	G	Salicibibacter	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N52	Frateuria	genus	feces	RME_GC	higher with higher RME	9.62863887234872e-05	3.41164568691105e-05	0.0407576247343009	G	Frateuria;Frateuria_A;Frateuria_B	3	mapped	faecal association; cross-site test in rumen data
+Nelore	N53	Hypericibacter	genus	feces	RME_GC	higher with higher RME	0.000103078245588536	3.71309299773312e-05	0.0431682436435536	G	Hypericibacter	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N54	Carboxydocella	genus	feces	RME_GC	higher with higher RME	7.71817633286064e-05	2.80547660203461e-05	0.0448673250972796	G	Carboxydocella	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N55	Fictibacillus	genus	feces	RME_GC	higher with higher RME	8.75598595695185e-05	3.19028373496392e-05	0.0452965344261819	G	Fictibacillus;Fictibacillus_A;Fictibacillus_C	3	mapped	faecal association; cross-site test in rumen data
+Nelore	N56	Methanococcus	genus	feces	RME_GC	higher with higher RME	0.000106030671451662	3.87876155465314e-05	0.0460914039481046	G	Methanococcus	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N57	Heliorestis	genus	feces	RME_GC	higher with higher RME	9.4317726499528e-05	3.47355566749497e-05	0.0469591349490722	G	Heliorestis	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N58	Dehalogenimonas	genus	feces	RME_GC	higher with higher RME	8.51169847654072e-05	3.15687832084962e-05	0.0481854362179344	G	Dehalogenimonas	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N59	Dictyoglomus	genus	feces	RME_GC	higher with higher RME	0.000101574635288447	3.76826079506834e-05	0.0481854362179344	G	Dictyoglomus	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N60	Nitrosomonas	genus	feces	RME_GC	higher with higher RME	7.8244358387322e-05	2.90214295658069e-05	0.0481854362179344	G	Nitrosomonas	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N61	Cedecea	genus	feces	RME_GC	higher with higher RME	8.27633771636049e-05	3.07303845583228e-05	0.0483046504913056	G	Cedecea	1	mapped	faecal association; cross-site test in rumen data
+Nelore	N62	Desulfosediminicola	genus	feces	RME_GC	higher with higher RME	9.07704719475565e-05	3.37235341492338e-05	0.048334265792939	G		0	unmapped	faecal association; cross-site test in rumen data
+Nelore	N63	Fervidobacterium	genus	feces	RME_GC	higher with higher RME	8.22855879250792e-05	3.07310015080782e-05	0.0494227536140968	G	Fervidobacterium;Fervidobacterium_A	2	mapped	faecal association; cross-site test in rumen data
+Nelore	N64	Ferrimonas	genus	feces	RME_GC	higher with higher RME	9.03999548772359e-05	3.38502619622074e-05	0.0498076447426424	G	Ferrimonas	1	mapped	faecal association; cross-site test in rumen data
+Canonical	C1	Methanobrevibacter	genus	rumen	RFI	literature candidate				G	Methanobrevibacter;Methanobrevibacter_A;Methanobrevibacter_B;Methanobrevibacter_C;Methanobrevibacter_D	5	mapped	
+Canonical	C2	Succinivibrionaceae	family	rumen	RFI	literature candidate				F	Succinivibrionaceae	1	mapped	
+Canonical	C3	Fibrobacter	genus	rumen	RFI	literature candidate				G	Fibrobacter	1	mapped	
+Canonical	C4	Ruminococcus	genus	rumen	RFI	literature candidate				G	Ruminococcus;Ruminococcus_B;Ruminococcus_C;Ruminococcus_D;Ruminococcus_E;Ruminococcus_F;Ruminococcus_G	7	mapped	
+Canonical	C5	Prevotella	genus	rumen	RFI	literature candidate				G	Prevotella	1	mapped	
+Canonical	C6	Butyrivibrio	genus	rumen	RFI	literature candidate				G	Butyrivibrio;Butyrivibrio_A	2	mapped	
