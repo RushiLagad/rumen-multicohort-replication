@@ -584,3 +584,8 @@ misassignment.
 5. Large-effect flag. A not-replicated target whose 95% CI includes both 0 and |r|=0.3 in the published direction is flagged, so absence of replication is not read as absence of effect.
 6. Assay. Nelore is DNA shotgun and Charolais is mRNA. Heterogeneity is not attributed to breed or diet alone.
 7. Few-feature ranks. If the phylum or family ANCOM-BC2 logs show convergence problems or implausible estimates, those targets are reported as exploratory and a CLR-based check is added by amendment before interpretation.
+
+**Amendment 14d (2026-11-02), committed before any target was classified.**
+1. Targets without a stated direction (T3 and canonical C1 to C6) follow the T3 rule of Amendment 14: criterion 1 is not applied. Concordance is replaced by agreement of sign: the pooled estimate and every leave-one-out estimate must share one sign. Labels carry "(direction not stated)". "Opposite sign" cannot occur for them.
+2. Disclosure. The Nelore phylum fit log, printed to check that ANCOM-BC2 ran, showed T2 (W 0.24) and T3 (W -0.31), both null. No other target estimate had been viewed before this amendment.
+3. Report columns. coverage is the minimum over cohorts of keys present divided by keys listed; partial_coverage flags values below 1. Hedges' g for Charolais uses the adjusted t with group sizes 14 and 16.
