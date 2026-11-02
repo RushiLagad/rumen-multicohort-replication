@@ -32,7 +32,7 @@ for (st in unique(tk$set)) {
   res$g_charolais <- xc$W[jc] * sqrt(1/14 + 1/16) * (1 - 3/(4*xc$df[jc] - 1))
   res$p_ancom_disagree <- d$id %in% e$id[e$p_flag]
   ref <- ifelse(is.na(res$published_dir), NA, 0.3 * res$published_dir)
-  res$large_effect_not_excluded <- res$label == "not replicated" & res$ci_lo <= 0 & res$ci_hi >= 0 &
+  res$large_effect_not_excluded <- startsWith(res$label, "not replicated") & res$ci_lo <= 0 & res$ci_hi >= 0 &
     ifelse(is.na(ref), res$ci_hi >= 0.3 | res$ci_lo <= -0.3, ref >= res$ci_lo & ref <= res$ci_hi)
   res$reason <- ifelse(res$label == "untestable", ifelse(tg$testable, "below detection, filtered or no estimate", d$stratum), "")
   all[[st]] <- res
