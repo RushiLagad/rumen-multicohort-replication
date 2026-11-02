@@ -18,7 +18,9 @@ OUT="$ROOT/processed/$COHORT"; TMP="$OUT/tmp"; LOG="$OUT/logs"
 mkdir -p "$OUT" "$TMP" "$LOG"
 JOBS="${JOBS:-3}"; TPJ="${TPJ:-8}"
 
-mapfile -t RUNS < <(awk -F'\t' -v k="$KEY" '$1==k{print $4}' "$ROOT/harmonized/runs.tsv" | sort -u)
+ACCF="$ROOT/processed/${COHORT}.acc"
+if [ -s "$ACCF" ]; then mapfile -t RUNS < "$ACCF"
+else mapfile -t RUNS < <(awk -F'\t' -v k="$KEY" '$1==k{print $4}' "$ROOT/harmonized/runs.tsv" | sort -u); fi
 echo "=== $COHORT ==="
 echo "  manifest : ${#RUNS[@]} runs"
 echo "  done     : $(ls -1 "$OUT"/*_clean_1.fq.gz 2>/dev/null | wc -l)"
@@ -66,6 +68,6 @@ kept=[int(r[3]) for r in rows]; aft=[int(r[2]) for r in rows]
 host=[100*(1-k/max(a,1)) for a,k in zip(aft,kept)]
 print(f"  samples {len(rows)}  non-host median {st.median(kept):,.0f}")
 print(f"  host fraction median {st.median(host):.1f}%  range {min(host):.1f}-{max(host):.1f}%")
-o=[r[0] for r,h in zip(rows,host) if h>60 or h<1]
+o=[r[0] for r,h in zip(rows,host) if h>60]
 if o: print(f"  OUTLIERS to inspect: {o}")
 PY

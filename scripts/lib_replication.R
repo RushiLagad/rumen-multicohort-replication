@@ -40,7 +40,7 @@ classify_set <- function(tg, est, alpha = ALPHA) {
   loo_r <- sapply(cohorts, function(cc) sapply(seq_len(N), function(i) {
     if (P[[i]]$k >= 2 && cc %in% est$cohort[est$id == tg$id[i]]) get(i, cc)$r else NA }))
   out <- lapply(seq_len(N), function(i) {
-    x <- P[[i]]; k <- x$k; s <- tg$dir[i]
+    x <- P[[i]]; k <- x$k; nodir <- is.na(tg$dir[i]); s <- if (nodir) sign(x$r) else tg$dir[i]
     conc <- !is.na(x$r) && sign(x$r) == s; sig <- q[i] < alpha
     loo_ok <- NA; loo_nom <- NA
     if (k >= 2) {
@@ -54,6 +54,7 @@ classify_set <- function(tg, est, alpha = ALPHA) {
       else if (k == 1) { if (sig && conc) "single-cohort support" else "not replicated" }
       else if (sig && conc && isTRUE(loo_ok)) "replicated"
       else if (sig && conc) "single-cohort support" else "not replicated"
+    if (nodir && lab != "untestable") lab <- paste(lab, "(direction not stated)")
     data.frame(id=tg$id[i], k=k, r=x$r, ci_lo=x$lo, ci_hi=x$hi, p=p[i], q_bh=q[i],
       family_size=N, tau2=x$tau2, p_hk=x$p_hk, p_fe=x$p_fe, concordant=conc,
       loo_all_sig=loo_ok, loo_nominal=loo_nom, label=lab)

@@ -27,4 +27,10 @@ r64 <- classify_set(tg64, e64); stopifnot(all(r64$family_size==64), sum(r64$labe
 print(table(r64$label))
 # BH adjustment uses family size 64 not 35: q for N1 = p*64/rank
 p <- r64$p; stopifnot(all.equal(r64$q_bh, p.adjust(p,"BH")))
+# direction not stated (T3 and canonical): signs must agree across cohorts
+tg2 <- data.frame(id=paste0("D",1:4), dir=NA_real_, testable=TRUE)
+e2 <- rbind(mk("D1", .70, .75), mk("D2", .70, -.75), mk("D3", -.70, -.75), mk("D4", .70, NA))
+r2 <- classify_set(tg2, e2); print(r2[, c("id","k","r","q_bh","label")], digits=3)
+stopifnot(identical(r2$label[c(1,3,4)], c("replicated (direction not stated)","replicated (direction not stated)","single-cohort support (direction not stated)")),
+          r2$label[2] != "replicated (direction not stated)")
 cat("ALL TESTS PASSED\n")

@@ -8,7 +8,7 @@ FQ="$ROOT/fastq"; SRA="$ROOT/sra"; TMP="$ROOT/sra_tmp"; LOG="$ROOT/logs"
 mkdir -p "$FQ" "$SRA" "$TMP" "$LOG"
 JOBS="${JOBS:-4}"; TPJ="${TPJ:-6}"
 
-mapfile -t RUNS < <(grep -oE 'SRR[0-9]+' "$ROOT/metadata/rumen_urls.txt" | sort -u)
+mapfile -t RUNS < <(grep -oE 'SRR[0-9]{7,}' "$ROOT/metadata/rumen_urls.txt" | sort -u)
 echo "=== PRJNA987743 via AWS Open Data ==="
 echo "  runs: ${#RUNS[@]}   already complete: $(ls -1 "$FQ"/*_1.fastq.gz 2>/dev/null | wc -l)"
 echo "  parallel: $JOBS x $TPJ   free: $(df -h /data | awk 'NR==2{print $4}')"
