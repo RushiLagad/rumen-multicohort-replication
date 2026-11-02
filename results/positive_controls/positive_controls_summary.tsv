@@ -1,0 +1,7 @@
+profile	cohort	term	n_genera	n_q05	min_q	permanova_R2	permanova_p	betadisper_p
+profiles_gtdb	charolais_mrna	diet	5515	545	1.69e-08	0.093	1e-04	0.5071
+profiles_gtdb	charolais_mrna	year	5515	135	0.000395	0.061	3e-04	0.0061
+profiles_gtdb_full	charolais_mrna	diet	2761	456	1.77e-08	0.106	1e-04	0.8231
+profiles_gtdb_full	charolais_mrna	year	2761	113	3.66e-06	0.067	1e-04	0.4973
+profiles_gtdb_full	nelore	diet	2887	637	0.000166	0.04	0.001	0.3548
+profiles_gtdb	nelore	diet	10812	3649	0.00017	0.037	7e-04	0.7862
