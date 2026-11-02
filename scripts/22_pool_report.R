@@ -5,6 +5,7 @@ root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); od <- file.path(roo
 sdir <- dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=TRUE)[1])); source(file.path(sdir, "lib_replication.R"))
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote="")
 tk <- rd(file.path(root, "plan", "target_keys.tsv"))
+stopifnot("expected 8 target files (4 ranks x 2 cohorts); a fit is still running" = length(list.files(od, "_targets[.]tsv$")) == 8)
 est <- do.call(rbind, lapply(list.files(od, "_targets\\.tsv$", full.names=TRUE), rd)); est <- est[est$status == "ok", ]
 est$r <- partial_r(est$W, est$df); z <- atanh(est$r); s <- sqrt(1/(est$n - 3 - Q))
 est$lo <- tanh(z - 1.96*s); est$hi <- tanh(z + 1.96*s); est$p_t <- 2*pt(-abs(est$W), est$df)
