@@ -575,3 +575,12 @@ misassignment.
 - untestable: k=0, unmapped, or no phenotype.
 5. Criterion 3. For k>=2 each cohort is left out in turn and the target re-estimated from the rest. Concordance and BH q<0.05 (same family size) must hold in every leave-one-out estimate. At k=2 each cohort alone must be significant. A nominal variant (p<0.05, uncorrected) is a sensitivity column and sets no label. k=1 targets have no criterion 3 and cannot exceed single-cohort support.
 6. Pooling as Amendment 14. Hartung-Knapp and fixed-effect p-values at k=2 are sensitivities and set no label.
+
+**Amendment 14c (2026-11-02): reporting additions, committed before any target estimate. Labels of Amendment 14b are unchanged.**
+1. Scale. Nelore uses a continuous contrast (rfi_z), Charolais a high vs low RFI class contrast. Partial r from the two designs is not on one scale. Cohort-specific estimates are primary; the pooled r is labelled approximate. Labels rest on direction and BH significance only.
+2. BH sensitivity. q-values are also computed within testable targets only, and reported beside the pre-registered q. Labels use the pre-registered q.
+3. Cross-site. Faeces-site targets carry a cross_site flag and are not described as replications of the faecal association.
+4. p-value check. ANCOM-BC2 p-values are reported beside the t-based p. A tenfold disagreement is flagged.
+5. Large-effect flag. A not-replicated target whose 95% CI includes both 0 and |r|=0.3 in the published direction is flagged, so absence of replication is not read as absence of effect.
+6. Assay. Nelore is DNA shotgun and Charolais is mRNA. Heterogeneity is not attributed to breed or diet alone.
+7. Few-feature ranks. If the phylum or family ANCOM-BC2 logs show convergence problems or implausible estimates, those targets are reported as exploratory and a CLR-based check is added by amendment before interpretation.
