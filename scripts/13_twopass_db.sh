@@ -17,13 +17,13 @@ sp=set()
 for f in files:
     for l in open(f):
         p=l.rstrip("\n").split("\t")
-        if len(p)>=6 and p[3].strip()=="S" and int(p[1])>=10: sp.add(p[4].strip())
+        if len(p)>=6 and p[3].strip()=="S" and int(p[1])>=100: sp.add(p[4].strip())
 par={}
 for l in open("$OLD/taxonomy/nodes.dmp"):
     p=l.split("\t|\t"); par[p[0].strip()]=p[1].strip()
 lv=set(l.rstrip("\n").split("\t")[1] for l in open("$OLD/seqid2taxid.map"))
 sel=sorted((g for g in lv if g in sp or par.get(g) in sp),key=int)
-print(f"species with >=10 clade reads: {len(sp)}; genomes under them: {len(sel)} of {len(lv)}")
+print(f"species with >=100 clade reads: {len(sp)}; genomes under them: {len(sel)} of {len(lv)}")
 if not sel: raise SystemExit("empty selection")
 open("$NEW/selected_genomes.tsv","w").write("\n".join(sel)+"\n")
 PY
