@@ -1,0 +1,77 @@
+id	target	rank	n_keys	genomes_library	genomes_selected
+T1	unnamed RF19 (text: RF16)	untestable_by_design			
+T2	Firmicutes	phylum	9	12934	6096
+T3	Chloroflexi	phylum	1	1193	41
+T4	unclassified Methanomassiliicoccaceae	family	1	15	2
+T5	Blautia	genus	2	83	61
+T6	Methanobrevibacter smithii	species	2	2	2
+N01	Anaeromyxobacter	genus	1	4	1
+N02	Actinomadura	genus	3	4	1
+N03	Sorangium	unmapped			
+N04	Acidaminococcus	genus	1	14	12
+N05	Rubrobacter	genus	4	7	0
+N06	Actinoplanes	genus	1	53	6
+N07	Cellulomonas	genus	1	72	0
+N08	Gordonia	genus	2	50	5
+N09	Bosea	genus	1	46	0
+N10	Phascolarctobacterium	genus	2	24	3
+N11	Comamonas	genus	4	43	1
+N12	Caulobacter	genus	1	45	0
+N13	Eubacterium	genus	14	215	150
+N14	Arabia	genus	1	1	0
+N15	Selenomonas	genus	4	35	33
+N16	Sphingobium	genus	2	72	0
+N17	Burkholderia	genus	1	63	1
+N18	Sinorhizobium	genus	1	24	0
+N19	Lysobacter	genus	3	73	4
+N20	Pseudonocardia	genus	1	42	1
+N21	Brevibacterium	genus	1	42	5
+N22	Nonomuraea	genus	1	41	1
+N23	Succinivibrio	genus	1	27	25
+N24	Marinomonas	genus	1	41	0
+N25	Idiomarina	genus	1	16	0
+N26	Glaesserella	genus	1	4	0
+N27	Aliivibrio	genus	1	10	0
+N28	Photobacterium	genus	1	39	2
+N29	Psychromonas	genus	1	16	0
+N30	Pseudobutyrivibrio	genus	1	23	23
+N31	Anaerobutyricum	genus	1	16	16
+N32	Roseburia	genus	1	20	14
+N33	Novisyntrophococcus	unmapped			
+N34	Enterocloster	genus	1	26	26
+N35	Lacrimispora	genus	1	30	14
+N36	Mediterraneibacter	genus	2	45	28
+N37	Coprococcus	genus	2	17	10
+N38	Eubacterium	genus	14	215	150
+N39	Anaerostipes	genus	1	15	4
+N40	Blautia	genus	2	83	61
+N41	Winogradskyella	genus	1	51	5
+N42	Lachnospira	genus	1	24	19
+N43	Wolbachia	genus	1	25	0
+N44	Microcystis	genus	1	14	0
+N45	Sporomusa	genus	1	7	1
+N46	Terribacillus	genus	1	9	0
+N47	Saccharothrix	unmapped			
+N48	Thermococcus	genus	4	55	0
+N49	Sebaldella	genus	1	2	2
+N50	Thermincola	genus	1	1	0
+N51	Salicibibacter	genus	1	4	0
+N52	Frateuria	genus	3	6	0
+N53	Hypericibacter	genus	1	2	0
+N54	Carboxydocella	genus	1	1	0
+N55	Fictibacillus	genus	3	18	3
+N56	Methanococcus	genus	1	6	0
+N57	Heliorestis	genus	1	2	0
+N58	Dehalogenimonas	genus	1	5	0
+N59	Dictyoglomus	genus	1	2	0
+N60	Nitrosomonas	genus	1	52	0
+N61	Cedecea	genus	1	10	0
+N62	Desulfosediminicola	unmapped			
+N63	Fervidobacterium	genus	2	9	0
+N64	Ferrimonas	genus	1	9	0
+C1	Methanobrevibacter	genus	5	87	87
+C2	Succinivibrionaceae	family	1	57	44
+C3	Fibrobacter	genus	1	54	54
+C4	Ruminococcus	genus	7	292	272
+C5	Prevotella	genus	1	535	535
+C6	Butyrivibrio	genus	2	68	64
