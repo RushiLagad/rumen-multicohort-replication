@@ -4,10 +4,10 @@ suppressMessages({library(ANCOMBC); library(TreeSummarizedExperiment)})
 a <- commandArgs(TRUE); coh <- a[1]; rk <- a[2]; dry <- length(a) > 2 && a[3] == "dry"
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); prof <- Sys.getenv("PROFILE", "profiles_gtdb_full")
 tax <- Sys.getenv("TAXDIR", "/data/refs/k2_gtdb207_full/taxonomy"); set.seed(20261102)
-out <- file.path(root, "results", "replication"); dir.create(out, recursive=TRUE, showWarnings=FALSE)
+out <- file.path(root, "results", if (coh == "charolais_16s") "charolais16s" else "replication"); dir.create(out, recursive=TRUE, showWarnings=FALSE)
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote="")
 meta <- rd(file.path(root, "harmonized", "animal_metadata.tsv")); runs <- rd(file.path(root, "harmonized", "runs.tsv"))
-cfg <- list(nelore=list(c="Nelore_PRJNA987743", l="DNA_shotgun"), charolais_mrna=list(c="Charolais_PRJEB70895", l="mRNA"))[[coh]]
+cfg <- list(nelore=list(c="Nelore_PRJNA987743", l="DNA_shotgun"), charolais_mrna=list(c="Charolais_PRJEB70895", l="mRNA"), charolais_16s=list(c="Charolais_PRJEB70895", l="16S_amplicon"))[[coh]]
 lev <- if (rk == "species") "species" else "genus"
 X <- rd(file.path(root, prof, coh, paste0(coh, "_", lev, "_counts.tsv"))); rownames(X) <- X[[1]]; X <- X[, -1]
 colnames(X) <- sub("_clean$", "", colnames(X))
@@ -26,7 +26,7 @@ if (coh == "nelore") {
 n <- ncol(X); df <- n - ncol(model.matrix(reformulate(terms), md))
 # --- aggregate to rank (genus->family/phylum via taxonomy)
 if (rk %in% c("family", "phylum")) {
-  lf <- file.path(out, "genus_lineage.tsv")
+  lf <- file.path(root, "results", "replication", "genus_lineage.tsv")
   if (!file.exists(lf)) {
     sp <- function(l) strsplit(l, "\t|\t", fixed=TRUE); col <- function(v, i) vapply(v, `[`, "", i)
     nd <- sp(readLines(file.path(tax, "nodes.dmp"))); id <- col(nd, 1)
