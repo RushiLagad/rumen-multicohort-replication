@@ -55,7 +55,7 @@ for (s in u) { k <- strsplit(s, ";")[[1]]; f <- paste0("TGT_", tk$id[match(s, ps
   A <- rbind(A[!rownames(A) %in% k, , drop=FALSE], colSums(A[k, , drop=FALSE])); rownames(A)[nrow(A)] <- f }
 m <- A[match(feat, rownames(A)), , drop=FALSE]; prev <- rowMeans(m > 0)
 cov <- data.frame(id=tk$id, target=tk$target, set=tk$set, n_keys=tk$n_keys, n_present=lengths(pres), feature=feat,
-  reads=rowSums(m), prevalence=round(prev, 3), pass10=prev >= 0.10)
+  reads=unname(rowSums(m)), prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 print(cov, row.names=FALSE)
 if (dry) quit(save="no")
 # --- fit ANCOM-BC2 (package defaults; Amendment 14b item 2). Features get safe IDs so no package renames them.
