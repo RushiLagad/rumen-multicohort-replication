@@ -4,18 +4,20 @@ a <- commandArgs(TRUE); rk <- a[1]; dry <- length(a) > 1 && a[2] == "dry"; stopi
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); set.seed(20261103)
 out <- file.path(root, "results", "alberta"); dir.create(out, recursive=TRUE, showWarnings=FALSE)
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote="")
-stopifnot("commit Amendment 23 first" = any(grepl("^\\*\\*Amendment 23 \\(", readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")))))
+stopifnot("commit Amendment 24 first" = any(grepl("^\\*\\*Amendment 24 \\(", readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")))))
 X <- rd(file.path(root, "profiles_16s/alberta/alberta_genus_counts.tsv")); rownames(X) <- X[[1]]; X <- as.matrix(X[, -1, drop=FALSE])
 runs <- rd(file.path(root, "harmonized/alberta_runs.tsv")); an <- rd(file.path(root, "harmonized/alberta_animals.tsv"))
 aid <- runs$animal_id[match(colnames(X), runs$run_accession)]; stopifnot(!anyNA(aid), !anyDuplicated(aid)); colnames(X) <- aid
 an <- an[an$has_rfi %in% c(TRUE, "True") & an$animal_id %in% colnames(X), ]
+allA <- Sys.getenv("ALBERTA_ALL") == "1"; tag <- if (allA) "_all" else ""; ovf <- file.path(root, "harmonized", "alberta_overlap_448333.txt")
+stopifnot("overlap list missing (Amendment 24)" = file.exists(ovf)); ov <- readLines(ovf); nov <- sum(an$animal_id %in% ov); if (!allA) an <- an[!an$animal_id %in% ov, ]
 an$group <- paste(an$diet, an$sex, an$collection_date, sep="|"); gs <- table(an$group); small <- names(gs)[gs < 5]
-write.table(data.frame(group=names(gs), n=as.integer(gs), excluded=names(gs) %in% small), file.path(out, "management_groups.tsv"), sep="\t", quote=FALSE, row.names=FALSE)
+write.table(data.frame(group=names(gs), n=as.integer(gs), excluded=names(gs) %in% small), file.path(out, paste0("management_groups", tag, ".tsv")), sep="\t", quote=FALSE, row.names=FALSE)
 an <- an[!an$group %in% small, ]; X <- X[, an$animal_id, drop=FALSE]
 md <- data.frame(group=factor(an$group), breed=factor(an$breed), RFI_z=as.numeric(scale(as.numeric(an$rfi))), row.names=an$animal_id)
 terms <- c("group", "breed", "RFI_z"); mm <- model.matrix(reformulate(terms), md)
 stopifnot("Alberta design not of full rank" = qr(mm)$rank == ncol(mm)); n <- ncol(X); df <- n - ncol(mm)
-cat("alberta", rk, ": animals", n, "| groups", nlevels(md$group), "(excluded", length(small), "with <5 animals:", sum(gs[small]), "animals) | df", df, "\n")
+cat("alberta", rk, if (allA) "(sensitivity: all animals)" else "(primary: PRJNA448333 ID numbers excluded)", "| overlap IDs in analysis set", nov, ": animals", n, "| groups", nlevels(md$group), "(excluded", length(small), "with <5 animals:", sum(gs[small]), "animals) | df", df, "\n")
 if (rk == "family") {
   lin <- rd(file.path(root, "results", "replication", "genus_lineage.tsv")); grp <- lin$family[match(rownames(X), lin$genus)]
   grp[is.na(grp)] <- "unassigned_family"; A <- rowsum(X, grp)
@@ -40,11 +42,11 @@ tse <- TreeSummarizedExperiment(assays=list(counts=as.matrix(A)), colData=md[, t
 fit <- ancombc2(data=tse, assay_name="counts", fix_formula=paste(terms, collapse=" + "), p_adj_method="BH",
                 prv_cut=0.10, group=NULL, struc_zero=FALSE, verbose=FALSE)
 res <- fit$res; stopifnot(nrow(res) > 0, all(res$taxon %in% rownames(A))); cat("ANCOM-BC2 kept", nrow(res), "of", nrow(A), "features\n"); i <- match(sf, res$taxon)
-res$taxon_name <- orig[match(res$taxon, rownames(A))]; write.csv(res, file.path(out, paste0("alberta_", rk, "_ancombc2.csv")), row.names=FALSE)
+res$taxon_name <- orig[match(res$taxon, rownames(A))]; write.csv(res, file.path(out, paste0("alberta_", rk, tag, "_ancombc2.csv")), row.names=FALSE)
 tc <- grep("^lfc_RFI", names(res), value=TRUE); stopifnot(length(tc) == 1); sfx <- sub("^lfc_", "", tc)
-est <- data.frame(id=tk$id, set=tk$set, site=tk$site, cohort="alberta", rank=rk, feature=feat, n=n, df=df,
+est <- data.frame(id=tk$id, set=tk$set, site=tk$site, cohort=paste0("alberta", tag), rank=rk, feature=feat, n=n, df=df,
   lfc=res[[tc]][i], se=res[[paste0("se_", sfx)]][i], p_ancom=res[[paste0("p_", sfx)]][i])
 est$W <- est$lfc / est$se
 est$status <- ifelse(is.na(feat), "no_feature", ifelse(is.na(i), "filtered", ifelse(is.finite(est$W), "ok", "no_estimate")))
-write.table(est, file.path(out, paste0("alberta_", rk, "_targets.tsv")), sep="\t", quote=FALSE, row.names=FALSE)
+write.table(est, file.path(out, paste0("alberta_", rk, tag, "_targets.tsv")), sep="\t", quote=FALSE, row.names=FALSE)
 print(est[, c("id", "feature", "status", "lfc", "se", "W", "p_ancom")], row.names=FALSE)
