@@ -8,7 +8,7 @@ dir_sign <- function(x) {
 }
 partial_r <- function(W, df) W / sqrt(W^2 + df)
 pool_one <- function(W, df, n) {
-  k <- length(W); r <- partial_r(W, df); z <- atanh(r); v <- 1/(n - 3 - Q)
+  k <- length(W); r <- partial_r(W, df); z <- atanh(r); v <- 1/(df - 1)  # = 1/(n - 3 - q), q = covariate columns (Amendment 25)
   if (k == 0) return(list(k=0, r=NA, lo=NA, hi=NA, p=NA, tau2=NA, p_hk=NA, p_fe=NA))
   if (k == 1) {
     p <- 2 * pt(-abs(W), df); s <- sqrt(v)
