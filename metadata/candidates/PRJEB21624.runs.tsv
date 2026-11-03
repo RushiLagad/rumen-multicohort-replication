@@ -1,0 +1,47 @@
+run_accession	sample_accession	sample_alias	sample_title	library_strategy	instrument_model	read_count	base_count
+ERR2027891	SAMEA104153963	10572_0003	2013E Charolais Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	50499839	15149951700
+ERR2027896	SAMEA104153968	10572_0009	2013E Luing High Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	95750975	28725292500
+ERR2027898	SAMEA104153970	10572_0011	2013E Charolais Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	80340274	24102082200
+ERR2027913	SAMEA104153985	10572_0026	2014E Limousin Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	60190508	18057152400
+ERR2027914	SAMEA104153986	10572_0027	2014E Limousin Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	69531400	20859420000
+ERR2027927	SAMEA104153999	10572_0040	2014E Limousin Medium Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	69559898	20867969400
+ERR2027929	SAMEA104154001	10572_0042	2014E Limousin Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	56099265	16829779500
+ERR2530127	SAMEA104567052	10572_0099	10572_0099	Hi-C	HiSeq X Ten	59315661	17913329622
+ERR2027892	SAMEA104153964	10572_0005	2013E Charolais Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	57877032	17363109600
+ERR2027897	SAMEA104153969	10572_0010	2013E Luing Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	79311279	23793383700
+ERR2027899	SAMEA104153971	10572_0012	2013E Charolais High Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	67805960	20341788000
+ERR2027900	SAMEA104153972	10572_0013	2013E Charolais High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	53188546	15956563800
+ERR2027904	SAMEA104153976	10572_0017	2013E Charolais Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	65083157	19524947100
+ERR2027907	SAMEA104153979	10572_0020	2013E Charolais High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	57957065	17387119500
+ERR2027910	SAMEA104153982	10572_0023	2013E Charolais Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	54401350	16320405000
+ERR2027911	SAMEA104153983	10572_0024	2013E Luing Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	56924438	17077331400
+ERR2027912	SAMEA104153984	10572_0025	2014E Luing Medium Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	72064476	21619342800
+ERR2027916	SAMEA104153988	10572_0029	2014E Aberdeen Angus Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	71124867	21337460100
+ERR2027918	SAMEA104153990	10572_0031	2014E Limousin Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	53042102	15912630600
+ERR2027922	SAMEA104153994	10572_0035	2014E Aberdeen Angus Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	54240948	16272284400
+ERR2027923	SAMEA104153995	10572_0036	2014E Limousin Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	56845980	17053794000
+ERR2027926	SAMEA104153998	10572_0039	2014E Aberdeen Angus Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	53834447	16150334100
+ERR2027928	SAMEA104154000	10572_0041	2014E Aberdeen Angus Medium Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	65714492	19714347600
+ERR2027889	SAMEA104153961	10572_0001	2013E Luing Medium Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	67182091	20154627300
+ERR2027895	SAMEA104153967	10572_0008	2013E Charolais High Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	53182667	15954800100
+ERR2027902	SAMEA104153974	10572_0015	2013E Luing High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	65744339	19723301700
+ERR2027905	SAMEA104153977	10572_0018	2013E Luing High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	58797637	17639291100
+ERR2027917	SAMEA104153989	10572_0030	2014E Aberdeen Angus Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	53565818	16069745400
+ERR2027920	SAMEA104153992	10572_0033	2014E Aberdeen Angus Medium Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	78361330	23508399000
+ERR2027925	SAMEA104153997	10572_0038	2014E Limousin Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	53839435	16151830500
+ERR2027901	SAMEA104153973	10572_0014	2013E Luing High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	56982546	17094763800
+ERR2027903	SAMEA104153975	10572_0016	2013E Luing Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	62275121	18682536300
+ERR2027906	SAMEA104153978	10572_0019	2013E Charolais High Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	54755074	16426522200
+ERR2027908	SAMEA104153980	10572_0021	2013E Luing High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	67498306	20249491800
+ERR2027919	SAMEA104153991	10572_0032	2014E Aberdeen Angus Medium Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	60180364	18054109200
+ERR2530126	SAMEA104567052	10572_0099	10572_0099	Hi-C	HiSeq X Ten	86198026	26031803852
+ERR2027890	SAMEA104153962	10572_0002	2013E Luing Medium Concentration Diet Low Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	61959109	18587732700
+ERR2027893	SAMEA104153965	10572_0006	2013E Luing High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	60973628	18292088400
+ERR2027894	SAMEA104153966	10572_0007	2013E Charolais High Concentration Diet Low Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	55149526	16544857800
+ERR2027909	SAMEA104153981	10572_0022	2013E Charolais Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	54951593	16485477900
+ERR2027915	SAMEA104153987	10572_0028	2014E Limousin Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	52663028	15798908400
+ERR2027921	SAMEA104153993	10572_0034	2014E Aberdeen Angus Medium Concentration Diet High Emitter Low Feed Conversion Ratio	WGS	Illumina HiSeq 4000	66317295	19895188500
+ERR2027924	SAMEA104153996	10572_0037	2014E Aberdeen Angus Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	75193441	22558032300
+ERR2027930	SAMEA104154002	10572_0043	2013E Limousin Medium Concentration Diet High Emitter High Feed Conversion Ratio	WGS	Illumina HiSeq 4000	57372908	17211872400
+ERR2282092	SAMEA104567052	10572_0099	10572_0099	WGS	Illumina HiSeq 4000	159524720	48176465440
+ERR7997010	SAMEA104567052	10572_0099	10572_0099	WGS	PromethION	0	0
