@@ -1,0 +1,9 @@
+group	n	excluded
+Diet_1|Heifer|2014-02-19	39	FALSE
+Diet_1|Steer|2014-01-29	173	FALSE
+Diet_1|Steer|2014-02-10	3	TRUE
+Diet_2|Steer|2014-02-10	2	TRUE
+Diet_2|Steer|2014-02-19	68	FALSE
+Diet_3|Bull|2014-02-10	43	FALSE
+Diet_4|Heifer|2014-02-05	113	FALSE
+Diet_4|Heifer|2014-02-13	93	FALSE

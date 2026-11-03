@@ -1,0 +1,65 @@
+== PRIMARY (Alberta without the 35 PRJNA448333 ID numbers)
+           
+            not replicated not replicated (direction not stated) untestable
+  Canonical              0                                     6          0
+  Li                     4                                     1          1
+  Nelore                16                                     0         48
+== testable targets by number of cohorts (primary): k=1: 14; k=2: 8; k=3: 5 
+  id                                target       set k       r   ci_lo  ci_hi
+  C2                   Succinivibrionaceae Canonical 3  0.2053 -0.0243  0.414
+  C1                    Methanobrevibacter Canonical 2  0.1203 -0.1096  0.338
+  C3                           Fibrobacter Canonical 3 -0.0405 -0.1206  0.040
+  C4                          Ruminococcus Canonical 3  0.1236 -0.1415  0.372
+  C5                            Prevotella Canonical 3  0.0254 -0.0552  0.106
+  C6                          Butyrivibrio Canonical 3  0.0056 -0.0749  0.086
+  T4 unclassified Methanomassiliicoccaceae        Li 2 -0.2790 -0.4758 -0.056
+  T2                            Firmicutes        Li 2  0.0361 -0.1924  0.261
+  T3                           Chloroflexi        Li 2 -0.0167 -0.2428  0.211
+  T5                               Blautia        Li 2  0.0657 -0.1637  0.288
+  T6            Methanobrevibacter smithii        Li 2  0.0968 -0.3848  0.537
+ N01                      Anaeromyxobacter    Nelore 1  0.2570 -0.1284  0.575
+ N02                          Actinomadura    Nelore 1  0.1225 -0.2626  0.474
+ N04                       Acidaminococcus    Nelore 1 -0.1618 -0.5045  0.225
+ N06                          Actinoplanes    Nelore 1 -0.1164 -0.4691  0.268
+ N08                              Gordonia    Nelore 1 -0.1624 -0.5049  0.224
+ N10                 Phascolarctobacterium    Nelore 1  0.2115 -0.1754  0.542
+ N11                             Comamonas    Nelore 1  0.1541 -0.2323  0.499
+ N13                           Eubacterium    Nelore 1 -0.1179 -0.4703  0.267
+ N15                           Selenomonas    Nelore 2  0.1018  0.0181  0.184
+ N17                          Burkholderia    Nelore 1 -0.0350 -0.4028  0.343
+ N19                            Lysobacter    Nelore 1 -0.1341 -0.4830  0.252
+ N20                        Pseudonocardia    Nelore 1 -0.1460 -0.4923  0.240
+ N21                        Brevibacterium    Nelore 1  0.1657 -0.2210  0.507
+ N22                            Nonomuraea    Nelore 1  0.1826 -0.2044  0.520
+ N23                         Succinivibrio    Nelore 2  0.0794 -0.0045  0.162
+ N28                        Photobacterium    Nelore 1  0.2226 -0.1641  0.550
+ q_bh loo_all_sig                                 label
+ 0.48       FALSE not replicated (direction not stated)
+ 0.54       FALSE not replicated (direction not stated)
+ 0.54       FALSE not replicated (direction not stated)
+ 0.54       FALSE not replicated (direction not stated)
+ 0.64       FALSE not replicated (direction not stated)
+ 0.89       FALSE not replicated (direction not stated)
+ 0.09       FALSE                        not replicated
+ 1.00       FALSE                        not replicated
+ 1.00       FALSE not replicated (direction not stated)
+ 1.00       FALSE                        not replicated
+ 1.00       FALSE                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00       FALSE                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00          NA                        not replicated
+ 1.00       FALSE                        not replicated
+ 1.00          NA                        not replicated
+== targets whose label differs between primary and sensitivity (all 567): 0 
+== not-replicated targets whose CI still includes the published r = 0.3 (primary): 10 of 27 
