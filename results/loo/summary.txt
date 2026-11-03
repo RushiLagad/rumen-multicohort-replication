@@ -1,0 +1,12 @@
+genus : fits found 30 of 30
+family : fits found 30 of 30
+phylum : fits found 30 of 30
+targets 26 | any sign flip 7 | median max change in r 0.089 | max 0.207 
+   rank  id      r_full sign_flips max_abs_change most_influential share_p05
+  genus  T5 -0.02708644          5     0.08909255             8916        NA
+  genus N17 -0.03500112          4     0.18913560             8919        NA
+  genus N23  0.05471253          2     0.10125866             8912        NA
+  genus  C1 -0.01479710          4     0.05105626             9840        NA
+  genus  C5  0.04110233          3     0.06758346             9597        NA
+ phylum  T2  0.03814704          4     0.07076652             9815        NA
+ phylum  T3  0.03717313          3     0.05192360             9621        NA
