@@ -1,0 +1,4 @@
+run	rule	value
+SRR9056754	1 wrong marker	0.0027
+SRR9056234	1 wrong marker	0.0781
+SRR9056431	2 under 1000 non-chimeric reads	950
