@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# Amendments 22, 28 (items 6-8): DADA2 for one Wallace marker -> genus counts per cow. Reads are pre-merged and primer-free; length window =
+# Amendments 22, 28 (items 6-8): DADA2 for one Wallace marker -> genus counts per cow. Reads are pre-merged and primer-free (Amendment 33: real merged qualities, maxEE 2); length window =
 # census median +/- 10 bp; error models per sequencing round; abundance-only error model if qualities are flat; runs denoised one at a time;
 # SR1 + SR2 summed per cow before chimera removal. Usage: 79_dada2_wallace.R <Prokaryotes|Bacteria|Archaea> (env NT, LIMIT). No phenotype data.
 suppressMessages({library(dada2); library(ShortRead)})
@@ -14,7 +14,7 @@ qv <- qv[!is.na(qv)]; flat <- length(qv) <= 2; ef <- if (flat) noqualErrfun else
 cat("marker", M, "| runs", nrow(map), "| cows", length(unique(map$cow)), "| length window", lo, "-", hi, "| distinct quality values", length(qv),
     if (flat) "-> abundance-only error model (noqualErrfun)" else "-> standard error model (loessErrfun)", "\n")
 g <- file.path(O, "filtered", paste0(map$run, ".fastq.gz"))
-out <- filterAndTrim(map$file, g, minLen = lo, maxLen = hi, maxN = 0, maxEE = Inf, truncQ = 0, rm.phix = TRUE, compress = TRUE, multithread = 8)
+out <- filterAndTrim(map$file, g, minLen = lo, maxLen = hi, maxN = 0, maxEE = 2, truncQ = 2, rm.phix = TRUE, compress = TRUE, multithread = 8)
 keep <- out[, 2] > 0 & file.exists(g); map <- map[keep, ]; g <- g[keep]; out <- out[keep, , drop = FALSE]
 res <- vector("list", nrow(map))
 for (rd in unique(map$round)) { i <- which(map$round == rd)
