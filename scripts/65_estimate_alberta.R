@@ -1,5 +1,5 @@
 #!/usr/bin/env Rscript
-# Amendments 19 and 23: Alberta (PRJNA393057, 16S) target estimates. Usage: 65_estimate_alberta.R <genus|family> [dry]
+# Amendments 19, 23 and 35 (SILVA families): Alberta (PRJNA393057, 16S) target estimates. Usage: 65_estimate_alberta.R <genus|family> [dry]
 a <- commandArgs(TRUE); rk <- a[1]; dry <- length(a) > 1 && a[2] == "dry"; stopifnot(rk %in% c("genus", "family"))
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); set.seed(20261103)
 out <- file.path(root, "results", "alberta"); dir.create(out, recursive=TRUE, showWarnings=FALSE)
@@ -19,7 +19,7 @@ terms <- c("group", "breed", "RFI_z"); mm <- model.matrix(reformulate(terms), md
 stopifnot("Alberta design not of full rank" = qr(mm)$rank == ncol(mm)); n <- ncol(X); df <- n - ncol(mm)
 cat("alberta", rk, if (allA) "(sensitivity: all animals)" else "(primary: PRJNA448333 ID numbers excluded)", "| overlap IDs in analysis set", nov, ": animals", n, "| groups", nlevels(md$group), "(excluded", length(small), "with <5 animals:", sum(gs[small]), "animals) | df", df, "\n")
 if (rk == "family") {
-  lin <- rd(file.path(root, "results", "16s", "alberta", "genus_lineage_silva.tsv"))   # Amendment 35: SILVA families for 16S; grp <- lin$family[match(rownames(X), lin$genus)]
+  lin <- rd(file.path(root, "results", "16s", "alberta", "genus_lineage_silva.tsv")); grp <- lin$family[match(rownames(X), lin$genus)]
   grp[is.na(grp)] <- "unassigned_family"; A <- rowsum(X, grp)
 } else A <- X
 tk <- rd(file.path(root, "plan", "target_keys.tsv"))
