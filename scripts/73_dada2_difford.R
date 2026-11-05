@@ -6,11 +6,11 @@ a <- commandArgs(TRUE); M <- a[1]; INSERT <- as.numeric(a[2]); coh <- paste0("di
 setwd(Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort")); set.seed(20261104); nt <- as.integer(Sys.getenv("NT", "16"))
 O <- file.path("work/16s", coh); R <- file.path("results/16s", coh); dir.create(R, recursive=TRUE, showWarnings=FALSE)
 map <- read.delim("harmonized/difford_runs.tsv", colClasses="character"); map <- map[map$in_s4 == "True" & map$marker == M, ]
-runs <- readLines(file.path(O, "runs.txt")); f1 <- file.path(O, "trimmed_sub", paste0(runs, "_1.fastq.gz")); f2 <- sub("_1\\.fastq\\.gz$", "_2.fastq.gz", f1)
+runs <- readLines(file.path(O, "runs.txt")); if (nzchar(Sys.getenv("LIMIT"))) runs <- head(runs, as.integer(Sys.getenv("LIMIT"))); f1 <- file.path(O, "trimmed_sub", paste0(runs, "_1.fastq.gz")); f2 <- sub("_1\\.fastq\\.gz$", "_2.fastq.gz", f1)
 ok <- file.exists(f1) & file.exists(f2) & file.size(f1) > 0; runs <- runs[ok]; f1 <- f1[ok]; f2 <- f2[ok]
 fc <- map$flowcell[match(runs, map$run)]; cow <- map$cow[match(runs, map$run)]; stopifnot(!anyNA(fc), !anyNA(cow))
 cat("runs with trimmed pairs:", length(runs), "| cows:", length(unique(cow)), "| flowcells:", length(unique(fc)), "\n")
-medq <- function(fs, W = 320, k = 5000) apply(do.call(rbind, lapply(fs, function(f) { s <- FastqSampler(f, k); q <- as(quality(yield(s)), "matrix"); close(s)
+medq <- function(fs, W = 320, k = 1000) apply(do.call(rbind, lapply(fs, function(f) { s <- FastqSampler(f, k); q <- as(quality(yield(s)), "matrix"); close(s)
   q <- q[, seq_len(min(ncol(q), W)), drop=FALSE]; if (ncol(q) < W) q <- cbind(q, matrix(NA_real_, nrow(q), W - ncol(q))); q })), 2, median, na.rm=TRUE)
 last <- function(q, cap, thr) { i <- which(q[seq_len(cap)] >= thr); if (length(i)) max(i) else NA }
 q1 <- medq(f1); q2 <- medq(f2); t1 <- last(q1, 280, 30); t2 <- last(q2, 260, 25)
@@ -19,13 +19,17 @@ write.table(data.frame(pos=seq_along(q1), R1=q1, R2=q2), file.path(R, "median_qu
 cat("truncLen R1", t1, "R2", t2, "expected overlap", t1 + t2 - INSERT, "\n"); stopifnot(!is.na(t1), !is.na(t2), t1 >= 150, t2 >= 100)
 den <- function(a1, a2, fcs, rn) { res <- vector("list", length(a1))
   for (f in unique(fcs)) { i <- which(fcs == f)
-    e1 <- learnErrors(a1[i], multithread=nt, randomize=TRUE, verbose=0); d1 <- dada(a1[i], err=e1, multithread=nt, verbose=0); if (length(i) == 1) d1 <- list(d1)
-    if (is.null(a2)) x <- d1 else {
-      e2 <- learnErrors(a2[i], multithread=nt, randomize=TRUE, verbose=0); d2 <- dada(a2[i], err=e2, multithread=nt, verbose=0); if (length(i) == 1) d2 <- list(d2)
-      x <- mergePairs(d1, a1[i], d2, a2[i], minOverlap=20, maxMismatch=0); if (is.data.frame(x)) x <- list(x) }
-    res[i] <- x; cat("flowcell", f, "| runs", length(i), "\n") }
+    e1 <- learnErrors(a1[i], multithread=nt, randomize=TRUE, verbose=0)
+    if (!is.null(a2)) e2 <- learnErrors(a2[i], multithread=nt, randomize=TRUE, verbose=0)
+    for (j in i) {
+      d1 <- dada(a1[j], err=e1, multithread=nt, verbose=0)
+      if (is.null(a2)) res[[j]] <- getUniques(d1) else {
+        d2 <- dada(a2[j], err=e2, multithread=nt, verbose=0)
+        res[[j]] <- mergePairs(d1, a1[j], d2, a2[j], minOverlap=20, maxMismatch=0); rm(d2) }
+      rm(d1) }
+    invisible(gc()); cat("flowcell", f, "| runs", length(i), "|", format(Sys.time(), "%H:%M"), "\n") }
   names(res) <- rn; res }
-fwd <- function() { tf <- last(q1, 220, 30); cat("forward reads: truncLen", tf, "\n"); stopifnot(!is.na(tf), tf >= 150)
+fwd <- function() { invisible(gc()); tf <- last(q1, 220, 30); cat("forward reads: truncLen", tf, "\n"); stopifnot(!is.na(tf), tf >= 150)
   dir.create(file.path(O, "filtered_fwd"), showWarnings=FALSE); h1 <- file.path(O, "filtered_fwd", basename(f1))
   o <- filterAndTrim(f1, h1, truncLen=tf, maxN=0, maxEE=2, truncQ=2, rm.phix=TRUE, compress=TRUE, multithread=nt)
   k <- o[, 2] > 0 & file.exists(h1)
@@ -54,7 +58,7 @@ finish <- function(mg, rn, cw, fcs, out, tl, mode, tag, mr) {
   cat("table", if (tag == "") "primary" else tag, "| mode", mode, "| cows", nrow(stc), "| excluded", length(lo), "| ASVs", ncol(stc), "| genera", nrow(G),
       "| median classified share", round(median(cg / pmax(nc, 1)), 3), "\n") }
 dir.create(file.path(O, "filtered"), showWarnings=FALSE); g1 <- file.path(O, "filtered", basename(f1)); g2 <- file.path(O, "filtered", basename(f2))
-out <- filterAndTrim(f1, g1, f2, g2, truncLen=c(t1, t2), maxN=0, maxEE=c(2, 2), truncQ=2, rm.phix=TRUE, compress=TRUE, multithread=nt)
+invisible(gc()); out <- filterAndTrim(f1, g1, f2, g2, truncLen=c(t1, t2), maxN=0, maxEE=c(2, 2), truncQ=2, rm.phix=TRUE, compress=TRUE, multithread=nt)
 keep <- out[, 2] > 0 & file.exists(g1)
 mg <- den(g1[keep], g2[keep], fc[keep], runs[keep]); mr <- vapply(mg, function(x) sum(x$abundance), 0) / out[keep, 2]
 cat("median merge rate", round(median(mr), 3), "\n")
