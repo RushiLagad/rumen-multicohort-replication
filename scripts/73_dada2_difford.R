@@ -10,8 +10,10 @@ runs <- readLines(file.path(O, "runs.txt")); if (nzchar(Sys.getenv("LIMIT"))) ru
 ok <- file.exists(f1) & file.exists(f2) & file.size(f1) > 0; runs <- runs[ok]; f1 <- f1[ok]; f2 <- f2[ok]
 fc <- map$flowcell[match(runs, map$run)]; cow <- map$cow[match(runs, map$run)]; stopifnot(!anyNA(fc), !anyNA(cow))
 cat("runs with trimmed pairs:", length(runs), "| cows:", length(unique(cow)), "| flowcells:", length(unique(fc)), "\n")
-medq <- function(fs, W = 320, k = 1000) apply(do.call(rbind, lapply(fs, function(f) { s <- FastqSampler(f, k); q <- as(quality(yield(s)), "matrix"); close(s)
-  q <- q[, seq_len(min(ncol(q), W)), drop=FALSE]; if (ncol(q) < W) q <- cbind(q, matrix(NA_real_, nrow(q), W - ncol(q))); q })), 2, median, na.rm=TRUE)
+medq <- function(fs, W = 320, k = 1000) { H <- matrix(0, W, 64)   # exact per-position median from quality histograms; same sampled reads as before
+  for (f in fs) { s <- FastqSampler(f, k); q <- as(quality(yield(s)), "matrix"); close(s); q <- q[, seq_len(min(ncol(q), W)), drop=FALSE]
+    for (p in seq_len(ncol(q))) { v <- q[, p]; v <- v[!is.na(v)]; if (length(v)) H[p, ] <- H[p, ] + tabulate(v + 1, 64) } }
+  apply(H, 1, function(h) { n <- sum(h); if (n == 0) return(NA_real_); cs <- cumsum(h); (which(cs >= ceiling(n / 2))[1] + which(cs >= floor(n / 2) + 1)[1]) / 2 - 1 }) }
 last <- function(q, cap, thr) { i <- which(q[seq_len(cap)] >= thr); if (length(i)) max(i) else NA }
 q1 <- medq(f1); q2 <- medq(f2); t1 <- last(q1, 280, 30); t2 <- last(q2, 260, 25)
 while (!is.na(t1) && !is.na(t2) && t1 + t2 - INSERT < 40 && t2 < 260) t2 <- t2 + 1
@@ -31,7 +33,7 @@ den <- function(a1, a2, fcs, rn) { res <- vector("list", length(a1))
   names(res) <- rn; res }
 fwd <- function() { invisible(gc()); tf <- last(q1, 220, 30); cat("forward reads: truncLen", tf, "\n"); stopifnot(!is.na(tf), tf >= 150)
   dir.create(file.path(O, "filtered_fwd"), showWarnings=FALSE); h1 <- file.path(O, "filtered_fwd", basename(f1))
-  o <- filterAndTrim(f1, h1, truncLen=tf, maxN=0, maxEE=2, truncQ=2, rm.phix=TRUE, compress=TRUE, multithread=nt)
+  o <- filterAndTrim(f1, h1, truncLen=tf, maxN=0, maxEE=2, truncQ=2, rm.phix=TRUE, compress=TRUE, multithread=8)
   k <- o[, 2] > 0 & file.exists(h1)
   list(mg=den(h1[k], NULL, fc[k], runs[k]), runs=runs[k], cow=cow[k], fc=fc[k], out=o[k, , drop=FALSE], tl=tf) }
 finish <- function(mg, rn, cw, fcs, out, tl, mode, tag, mr) {
@@ -58,7 +60,7 @@ finish <- function(mg, rn, cw, fcs, out, tl, mode, tag, mr) {
   cat("table", if (tag == "") "primary" else tag, "| mode", mode, "| cows", nrow(stc), "| excluded", length(lo), "| ASVs", ncol(stc), "| genera", nrow(G),
       "| median classified share", round(median(cg / pmax(nc, 1)), 3), "\n") }
 dir.create(file.path(O, "filtered"), showWarnings=FALSE); g1 <- file.path(O, "filtered", basename(f1)); g2 <- file.path(O, "filtered", basename(f2))
-invisible(gc()); out <- filterAndTrim(f1, g1, f2, g2, truncLen=c(t1, t2), maxN=0, maxEE=c(2, 2), truncQ=2, rm.phix=TRUE, compress=TRUE, multithread=nt)
+invisible(gc()); out <- filterAndTrim(f1, g1, f2, g2, truncLen=c(t1, t2), maxN=0, maxEE=c(2, 2), truncQ=2, rm.phix=TRUE, compress=TRUE, multithread=8)
 keep <- out[, 2] > 0 & file.exists(g1)
 mg <- den(g1[keep], g2[keep], fc[keep], runs[keep]); mr <- vapply(mg, function(x) sum(x$abundance), 0) / out[keep, 2]
 cat("median merge rate", round(median(mr), 3), "\n")
