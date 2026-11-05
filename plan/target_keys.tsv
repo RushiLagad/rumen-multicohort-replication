@@ -75,3 +75,9 @@ Canonical	C3	Fibrobacter	genus	rumen	RFI	literature candidate				G	Fibrobacter	1
 Canonical	C4	Ruminococcus	genus	rumen	RFI	literature candidate				G	Ruminococcus;Ruminococcus_B;Ruminococcus_C;Ruminococcus_D;Ruminococcus_E;Ruminococcus_F;Ruminococcus_G	7	mapped	
 Canonical	C5	Prevotella	genus	rumen	RFI	literature candidate				G	Prevotella	1	mapped	
 Canonical	C6	Butyrivibrio	genus	rumen	RFI	literature candidate				G	Butyrivibrio;Butyrivibrio_A	2	mapped	
+Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	clade_ratio	rumen	CH4	higher with higher methane				S		0	special	log-ratio from M1 clade counts (Amendments 32, 36)
+Methane	M2	Succinivibrionaceae	family	rumen	CH4	lower with higher methane				F	Succinivibrionaceae	1	mapped	re-analysis only in Wallace (Amendment 32)
+Methane	M3	total archaea	kingdom	rumen	CH4	two-sided				K	Archaea	1	mapped	sum of archaeal genera; untestable in Difford
+MethaneSecondary	S1	Sharpea	genus	rumen	CH4	lower with higher methane				G	Sharpea	1	mapped	
+MethaneSecondary	S2	Kandleria	genus	rumen	CH4	lower with higher methane				G	Kandleria	1	mapped	
+MethaneSecondary	S3	Megasphaera	genus	rumen	CH4	lower with higher methane				G	Megasphaera	1	mapped	
