@@ -8,7 +8,8 @@ regions <- list(difford_arch_V4V6 = c("CAGCMGCCGCGGTAA", "GGCCATGCACCWCCTCTC"), 
 ext <- function(s, f, r) { fm <- matchPattern(DNAString(f), s, max.mismatch = 2, fixed = FALSE)
   rm <- matchPattern(reverseComplement(DNAString(r)), s, max.mismatch = 2, fixed = FALSE)
   if (!length(fm) || !length(rm)) return(NA_character_); as.character(subseq(s, end(fm)[1] + 1, start(rm)[1] - 1)) }
-dif <- function(a, b) { al <- pairwiseAlignment(a, b); nmismatch(al) + sum(unlist(width(indel(pattern(al))))) + sum(unlist(width(indel(subject(al))))) }
+dif <- function(a, b) if (nchar(a) == nchar(b)) sum(strsplit(a, "")[[1]] != strsplit(b, "")[[1]]) else {   # equal length: exact base-by-base count
+  al <- pwalign::pairwiseAlignment(a, b); pwalign::nmismatch(al) + sum(unlist(width(pwalign::indel(pwalign::pattern(al))))) + sum(unlist(width(pwalign::indel(pwalign::subject(al))))) }
 for (rg in names(regions)) {
   x <- vapply(seq_along(ref), function(i) ext(ref[[i]], regions[[rg]][1], regions[[rg]][2]), "")
   cat("\n==", rg, "\n  insert lengths:", paste0(names(ref), "=", nchar(x), collapse = "; "), "\n")
