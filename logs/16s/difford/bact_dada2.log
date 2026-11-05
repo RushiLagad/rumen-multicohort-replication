@@ -1,0 +1,32 @@
+runs with trimmed pairs: 894 | cows: 750 | flowcells: 13 
+truncLen R1 251 R2 260 expected overlap 40 
+flowcell H73LTBCXX | runs 54 | 10:13 
+flowcell HC5YKBCXX | runs 92 | 10:24 
+flowcell H7CNFBCXX | runs 60 | 10:33 
+flowcell HF2J5BCXX | runs 81 | 10:42 
+flowcell HF2HMBCXX | runs 15 | 10:49 
+flowcell 000000000-ACUG6 | runs 48 | 10:53 
+flowcell 000000000-ACUVY | runs 96 | 10:57 
+flowcell 000000000-A8TLD | runs 96 | 10:59 
+flowcell 000000000-ABFTD | runs 66 | 11:29 
+flowcell 000000000-AA242 | runs 96 | 11:49 
+flowcell 000000000-ABA3K | runs 94 | 12:01 
+flowcell 000000000-ABF9T | runs 1 | 12:01 
+flowcell 000000000-AACN8 | runs 95 | 12:16 
+median merge rate 0.424 
+FALLBACK to forward reads (Amendment 21 item 4)
+forward reads: truncLen 220 
+flowcell H73LTBCXX | runs 54 | 12:31 
+flowcell HC5YKBCXX | runs 92 | 12:43 
+flowcell H7CNFBCXX | runs 60 | 12:57 
+flowcell HF2J5BCXX | runs 81 | 13:11 
+flowcell HF2HMBCXX | runs 15 | 13:19 
+flowcell 000000000-ACUG6 | runs 48 | 13:33 
+flowcell 000000000-ACUVY | runs 96 | 13:49 
+flowcell 000000000-A8TLD | runs 96 | 14:03 
+flowcell 000000000-ABFTD | runs 66 | 14:17 
+flowcell 000000000-AA242 | runs 96 | 14:33 
+flowcell 000000000-ABA3K | runs 94 | 14:51 
+flowcell 000000000-ABF9T | runs 1 | 14:52 
+flowcell 000000000-AACN8 | runs 95 | 15:08 
+table primary | mode forward | cows 750 | excluded 1 | ASVs 55420 | genera 357 | median classified share 0.77 

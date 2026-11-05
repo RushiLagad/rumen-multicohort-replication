@@ -1,0 +1,17 @@
+2026-11-04_13:26:14 bact trim
+2026-11-04_13:26:14 arch trim
+pairs in 4383511, kept 4348952 (0.992)
+ERR2724082	606819	601177	0.990702
+ERR2724095	768898	763348	0.992782
+2026-11-04_13:26:28 bact dada2
+pairs in 5196363, kept 5143043 (0.990)
+ERR2724091	516272	509564	0.987007
+ERR2724086	538278	534033	0.992114
+2026-11-04_13:26:29 arch dada2
+runs with trimmed pairs: 8 | cows: 8 | flowcells: 1 
+truncLen R1 250 R2 260 expected overlap 39 
+median merge rate 0.541 
+mode merged | cows 8 | excluded 0 | ASVs 2047 | genera 56 | median classified share 0.8036856 
+2026-11-04_13:30:53 bact DONE
+2026-11-04_13:30:53 arch FAILED
+2026-11-04_13:30:53 NOT DONE, see logs

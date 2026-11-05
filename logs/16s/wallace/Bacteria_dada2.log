@@ -1,0 +1,46 @@
+marker Bacteria | runs 1920 | cows 1012 | length window 246 - 266 | distinct quality values 68 -> standard error model (loessErrfun) 
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8531461.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8600982.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8802335.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8802252.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8802615.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8802638.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8802634.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8802633.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8802784.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8803046.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8803066.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8803049.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8804918.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8804923.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8804919.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805031.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805024.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805030.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805482.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805755.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805894.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805889.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8805962.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806204.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806179.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806584.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806273.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806230.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806730.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806880.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8806702.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8807147.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8807200.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8807350.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8807351.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8807719.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8807581.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8808391.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8808742.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8808478.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8809070.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8809426.fastq.gz not written.
+The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8808715.fastq.gz not written.
+Some input samples had no reads pass the filter.
+round SR1 | runs 996 | 16:19 

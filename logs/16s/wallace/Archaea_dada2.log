@@ -1,0 +1,7 @@
+marker Archaea | runs 2019 | cows 1012 | length window 78 - 98 | distinct quality values 75 -> standard error model (loessErrfun) 
+The filter removed all reads: work/16s/wallace_archaea/filtered/SRR8803095.fastq.gz not written.
+Some input samples had no reads pass the filter.
+round SR2 | runs 1006 | 12:00 
+round SR1 | runs 1012 | 12:05 
+off-target (non-archaeal) read share 0.006 
+table | marker Archaea | cows 1012 | excluded 0 | ASVs 726 | genera 27 | median classified share 0.952 

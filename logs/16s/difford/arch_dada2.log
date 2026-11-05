@@ -1,0 +1,18 @@
+runs with trimmed pairs: 782 | cows: 735 | flowcells: 11 
+truncLen R1 277 R2 260 expected overlap 28 
+flowcell H73LTBCXX | runs 54 | 09:47 
+flowcell H7CN7BCXX | runs 92 | 09:50 
+flowcell H77YYBCXX | runs 60 | 09:53 
+flowcell HF2VWBCXX | runs 81 | 09:57 
+flowcell 000000000-A8TMP | runs 96 | 09:58 
+flowcell 000000000-ABA1M | runs 95 | 10:00 
+flowcell 000000000-ABF6C | runs 94 | 10:03 
+flowcell 000000000-ACUG6 | runs 47 | 10:05 
+flowcell 000000000-ABF9T | runs 89 | 10:07 
+flowcell 000000000-ACVBK | runs 72 | 10:09 
+flowcell 000000000-ACVCG | runs 2 | 10:09 
+median merge rate 0.989 
+off-target (non-archaeal) read share 0.002 
+table primary | mode merged | cows 735 | excluded 7 | ASVs 565 | genera 7 | median classified share 0.757 
+Error: unexpected string constant in "rged", ""
+Execution halted

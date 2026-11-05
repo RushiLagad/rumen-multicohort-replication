@@ -1,0 +1,6 @@
+runs with trimmed pairs: 8 | cows: 8 | flowcells: 1 
+truncLen R1 280 R2 260 expected overlap 31 
+flowcell H73LTBCXX | runs 8 | 09:30 
+median merge rate 0.98 
+off-target (non-archaeal) read share 0.002 
+table primary | mode merged | cows 8 | excluded 0 | ASVs 83 | genera 3 | median classified share 0.924 
