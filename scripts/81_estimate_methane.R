@@ -3,13 +3,13 @@
 # Usage: 81_estimate_methane.R <difford_bact|difford_arch|wallace_prokaryotes|wallace_bacteria|wallace_archaea> <shuffle|real>
 # Env: NO_SE1=1 (Wallace without farm SE1, Amendment 32 item 2); TRAIT=ch4_dmi (Wallace sensitivity trait, Amendment 34). No phenotype value is printed.
 a <- commandArgs(TRUE); coh <- a[1]; mode <- a[2]; stopifnot(length(a) == 2, mode %in% c("shuffle", "real"))
-root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); set.seed(20261105)
+root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); SEED <- as.integer(Sys.getenv("SEED", "20261105")); set.seed(SEED)
 plan <- readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")); stopifnot("commit Amendment 36 first" = any(grepl("^\\*\\*Amendment 36 \\(", plan)))
 if (mode == "real") stopifnot("real mode is locked until the dry-run result is recorded in the plan (Amendment 36 item 6)" = any(grepl("^\\*\\*Amendment 36 dry-run result", plan)))
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote="")
 src <- if (startsWith(coh, "difford")) "difford" else "wallace"; trait <- Sys.getenv("TRAIT", "ch4_gd"); noSE1 <- Sys.getenv("NO_SE1") == "1"
 if (src == "difford") stopifnot(trait == "ch4_gd", !noSE1)
-tag <- paste0(if (trait != "ch4_gd") paste0("_", trait) else "", if (noSE1) "_noSE1" else "")
+tag <- paste0(if (trait != "ch4_gd") paste0("_", trait) else "", if (noSE1) "_noSE1" else "", if (mode == "shuffle" && SEED != 20261105) paste0("_seed", SEED) else "")
 out <- file.path(root, "results", if (mode == "shuffle") "methane_dryrun" else "methane"); dir.create(out, recursive=TRUE, showWarnings=FALSE)
 X <- rd(file.path(root, "profiles_16s", coh, paste0(coh, "_genus_counts.tsv"))); rownames(X) <- X[[1]]; X <- as.matrix(X[, -1, drop=FALSE])
 lin <- rd(file.path(root, "results", "16s", coh, "genus_lineage_silva.tsv"))
