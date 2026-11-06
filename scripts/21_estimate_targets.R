@@ -23,6 +23,8 @@ if (coh == "nelore") {
   md$diet <- factor(md$diet, levels=c("CS", "GS")); md$year <- factor(sub("batch_", "", md$batch))
   md$RFI_class <- factor(md$rfi_class, levels=c("low_RFI", "high_RFI")); terms <- c("diet", "year", "RFI_class")
 }
+SS <- Sys.getenv("SHUFFLE_SEED"); if (nzchar(SS)) { set.seed(as.integer(SS)); g <- if (coh == "nelore") md$diet else interaction(md$diet, md$year); v <- terms[length(terms)]
+  for (lv in unique(g)) { i <- which(g == lv); md[[v]][i] <- md[[v]][sample(i)] }; out <- file.path(root, "results", "rfi_null"); dir.create(out, showWarnings=FALSE); cat("NULL SHUFFLE (Amendment 37) seed", SS, "within", if (coh == "nelore") "diet" else "diet x year", "\n") }
 n <- ncol(X); df <- n - ncol(model.matrix(reformulate(terms), md))
 # --- aggregate to rank (genus->family/phylum via taxonomy)
 if (rk %in% c("family", "phylum")) {
@@ -65,11 +67,11 @@ fit <- ancombc2(data=tse, assay_name="counts", fix_formula=paste(terms, collapse
                 prv_cut=0.10, group=NULL, struc_zero=FALSE, verbose=FALSE)
 res <- fit$res; stopifnot(nrow(res) > 0, all(res$taxon %in% rownames(A)))
 cat("ANCOM-BC2 kept", nrow(res), "of", nrow(A), "features\n"); i <- match(sf, res$taxon)
-res$taxon_name <- orig[match(res$taxon, rownames(A))]; write.csv(res, file.path(out, paste0(coh, "_", rk, "_ancombc2.csv")), row.names=FALSE)
+res$taxon_name <- orig[match(res$taxon, rownames(A))]; if (!nzchar(SS)) write.csv(res, file.path(out, paste0(coh, "_", rk, "_ancombc2.csv")), row.names=FALSE)
 tc <- grep("^lfc_RFI", names(res), value=TRUE); stopifnot(length(tc) == 1); sfx <- sub("^lfc_", "", tc)
 est <- data.frame(id=tk$id, set=tk$set, site=tk$site, cohort=coh, rank=rk, feature=feat, n=n, df=df,
   lfc=res[[tc]][i], se=res[[paste0("se_", sfx)]][i], p_ancom=res[[paste0("p_", sfx)]][i])
 est$W <- est$lfc / est$se
 est$status <- ifelse(is.na(feat), "no_feature", ifelse(is.na(i), "filtered", ifelse(is.finite(est$W), "ok", "no_estimate")))
-write.table(est, file.path(out, paste0(coh, "_", rk, "_targets.tsv")), sep="\t", quote=FALSE, row.names=FALSE)
+write.table(est, file.path(out, paste0(coh, "_", rk, if (nzchar(SS)) paste0("_seed", SS) else "", "_targets.tsv")), sep="\t", quote=FALSE, row.names=FALSE)
 print(est[, c("id", "feature", "status", "lfc", "se", "W", "p_ancom")], row.names=FALSE)
