@@ -7,7 +7,7 @@ sdir <- dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=T
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote="")
 stopifnot("commit Amendment 37 first" = any(grepl("^\\*\\*Amendment 37 \\(", readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")))))
 nulldir <- file.path(root, "results", "rfi_null"); stopifnot("RFI nulls not finished" = file.exists(file.path(root, "logs", "rfi_null", "DONE")))
-tk <- rd(file.path(root, "plan", "target_keys.tsv"))
+tk <- rd(file.path(root, "plan", "target_keys.tsv")); tk <- tk[!tk$set %in% c("Methane", "MethaneSecondary"), ]  # RFI sets only
 base <- list.files(file.path(root, "results", "replication"), "_targets\\.tsv$", full.names=TRUE); stopifnot(length(base) == 8)
 pdir <- function(x) ifelse(grepl("higher in L-RFI|lower with higher", x), -1, ifelse(grepl("higher in H-RFI|higher with higher", x), 1, NA))
 tk$stratum <- ifelse(!grepl("^RFI", tk$phenotype), "untestable: phenotype not available",
@@ -49,9 +49,13 @@ cat("== PRIMARY, calibrated\n"); print(table(P$cls$set, P$cls$label))
 x <- P$cls[!startsWith(P$cls$label, "untestable"), ]
 print(x[order(x$set, x$q_bh), c("id", "target", "set", "k", "r", "ci_lo", "ci_hi", "q_bh", "p_perm_nelore", "p_perm_charolais_mrna", "p_perm_alberta", "label")], digits=2, row.names=FALSE)
 old <- rd(file.path(root, "results", "replication_rfi3", "classification_primary.tsv")); j <- match(P$cls$id, old$id)
-cat("== labels that change, uncalibrated (66) -> calibrated (89), primary:", sum(old$label[j] != P$cls$label), "\n")
-if (any(old$label[j] != P$cls$label)) print(data.frame(id=P$cls$id, target=P$cls$target, uncalibrated=old$label[j], calibrated=P$cls$label)[old$label[j] != P$cls$label, ], row.names=FALSE)
-cat("== pooled r, uncalibrated -> calibrated, for testable targets whose |r| changed by > 0.01:\n")
-dr <- data.frame(id=P$cls$id, target=P$cls$target, r_old=old$r[j], r_new=P$cls$r, q_old=old$q_bh[j], q_new=P$cls$q_bh); dr <- dr[is.finite(dr$r_new) & abs(dr$r_old - dr$r_new) > 0.01, ]; print(dr, digits=2, row.names=FALSE)
+old <- rd(file.path(root, "results", "replication_rfi3", "classification_primary.tsv")); j <- match(P$cls$id, old$id); ok <- !is.na(j)
+chg <- ok & old$label[j] != P$cls$label
+cat("== labels that change, uncalibrated (66) -> calibrated (89), primary:", sum(chg, na.rm=TRUE), "of", sum(ok), "\n")
+if (any(chg, na.rm=TRUE)) print(data.frame(id=P$cls$id, target=P$cls$target, uncalibrated=old$label[j], calibrated=P$cls$label)[which(chg), ], row.names=FALSE)
+cat("== pooled r and q, uncalibrated -> calibrated, testable targets:\n")
+dr <- data.frame(id=P$cls$id, target=P$cls$target, k=P$cls$k, r_old=old$r[j], r_new=P$cls$r, lo_new=P$cls$ci_lo, hi_new=P$cls$ci_hi, q_old=old$q_bh[j], q_new=P$cls$q_bh)[ok & is.finite(P$cls$r), ]
+print(dr[order(dr$q_new), ], digits=2, row.names=FALSE)
 cat("== primary vs sensitivity (all 567) label differences:", sum(P$cls$label != S$cls$label), "\n")
 cat("== not-replicated targets whose CI still includes the published r = 0.3 (calibrated primary):", sum(P$cls$large_effect_not_excluded, na.rm=TRUE), "of", sum(startsWith(P$cls$label, "not replicated")), "\n")
+cat("   same count, uncalibrated (66):", sum(old$large_effect_not_excluded, na.rm=TRUE), "of", sum(startsWith(old$label, "not replicated")), "\n")
