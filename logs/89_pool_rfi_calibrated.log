@@ -1,0 +1,182 @@
+== null SD of W by table (median over targets; >1 means ANCOM-BC2 was anti-conservative there)
+                  table sd_null.median sd_null.max sd_null.n
+         alberta_family           1.12        1.12      1.00
+          alberta_genus           0.92        1.66      6.00
+  charolais_mrna_family           0.99        1.11      2.00
+   charolais_mrna_genus           0.81        1.40     22.00
+  charolais_mrna_phylum           0.75        0.78      2.00
+ charolais_mrna_species           0.90        0.90      1.00
+          nelore_family           1.16        1.19      2.00
+           nelore_genus           1.05        1.10      6.00
+          nelore_phylum           1.01        1.17      2.00
+         nelore_species           0.86        0.86      1.00
+== calibration factors applied (sd_null > 1):
+  id                 table sd_null  W_raw      W p_perm
+  C3         alberta_genus     1.7 -0.961 -0.577  0.535
+ N23         alberta_genus     1.4  1.843  1.279  0.190
+ N17  charolais_mrna_genus     1.4 -0.179 -0.128  0.920
+ N01  charolais_mrna_genus     1.3  1.356  1.016  0.315
+  T4         nelore_family     1.2 -1.621 -1.357  0.190
+  T3         nelore_phylum     1.2 -0.315 -0.269  0.740
+  C2         nelore_family     1.1  2.515  2.215  0.030
+ N21  charolais_mrna_genus     1.1  0.857  0.766  0.440
+  C2        alberta_family     1.1 -0.854 -0.764  0.395
+  C2 charolais_mrna_family     1.1  1.898  1.709  0.085
+  T5          nelore_genus     1.1  0.800  0.727  0.510
+  C1          nelore_genus     1.1  1.346  1.250  0.190
+  C6          nelore_genus     1.1 -0.052 -0.049  0.970
+  C4          nelore_genus     1.0  2.755  2.649  0.015
+  C6  charolais_mrna_genus     1.0  0.725  0.707  0.455
+  C5          nelore_genus     1.0  0.368  0.360  0.735
+  C3          nelore_genus     1.0  0.291  0.286  0.760
+== PRIMARY, calibrated
+           
+            not replicated not replicated (direction not stated) untestable
+  Canonical              0                                     6          0
+  Li                     4                                     1          1
+  Nelore                16                                     0         48
+  id                                target       set k       r  ci_lo  ci_hi
+  C1                    Methanobrevibacter Canonical 2  0.1116 -0.118  0.330
+  C2                   Succinivibrionaceae Canonical 3  0.1572 -0.105  0.399
+  C3                           Fibrobacter Canonical 3 -0.0258 -0.106  0.055
+  C4                          Ruminococcus Canonical 3  0.1175 -0.140  0.360
+  C5                            Prevotella Canonical 3  0.0253 -0.055  0.106
+  C6                          Butyrivibrio Canonical 3  0.0055 -0.075  0.086
+  T4 unclassified Methanomassiliicoccaceae        Li 2 -0.2564 -0.457 -0.031
+  T2                            Firmicutes        Li 2  0.0361 -0.192  0.261
+  T3                           Chloroflexi        Li 2 -0.0124 -0.239  0.215
+  T5                               Blautia        Li 2  0.0589 -0.170  0.282
+  T6            Methanobrevibacter smithii        Li 2  0.0968 -0.385  0.537
+ N01                      Anaeromyxobacter    Nelore 1  0.1953 -0.192  0.530
+ N02                          Actinomadura    Nelore 1  0.1225 -0.263  0.474
+ N04                       Acidaminococcus    Nelore 1 -0.1618 -0.504  0.225
+ N06                          Actinoplanes    Nelore 1 -0.1164 -0.469  0.268
+ N08                              Gordonia    Nelore 1 -0.1624 -0.505  0.224
+ N10                 Phascolarctobacterium    Nelore 1  0.2115 -0.175  0.542
+ N11                             Comamonas    Nelore 1  0.1541 -0.232  0.499
+ N13                           Eubacterium    Nelore 1 -0.1179 -0.470  0.267
+ N15                           Selenomonas    Nelore 2  0.1018  0.018  0.184
+ N17                          Burkholderia    Nelore 1 -0.0250 -0.394  0.351
+ N19                            Lysobacter    Nelore 1 -0.1341 -0.483  0.252
+ N20                        Pseudonocardia    Nelore 1 -0.1460 -0.492  0.240
+ N21                        Brevibacterium    Nelore 1  0.1486 -0.238  0.494
+ N22                            Nonomuraea    Nelore 1  0.1826 -0.204  0.520
+ N23                         Succinivibrio    Nelore 2  0.0560 -0.028  0.139
+ N28                        Photobacterium    Nelore 1  0.2226 -0.164  0.550
+ q_bh p_perm_nelore p_perm_charolais_mrna p_perm_alberta
+ 0.65         0.190                 0.895             NA
+ 0.65         0.030                 0.085          0.395
+ 0.65         0.760                 0.220          0.535
+ 0.65         0.015                 0.685          0.395
+ 0.65         0.735                 0.740          0.510
+ 0.89         0.970                 0.455          0.995
+ 0.16         0.190                 0.015             NA
+ 1.00         0.745                 0.745             NA
+ 1.00         0.740                 0.805             NA
+ 1.00         0.510                 0.875             NA
+ 1.00         0.220                 0.025             NA
+ 1.00            NA                 0.315             NA
+ 1.00            NA                 0.485             NA
+ 1.00            NA                 0.375             NA
+ 1.00            NA                 0.400             NA
+ 1.00            NA                 0.270             NA
+ 1.00            NA                 0.260             NA
+ 1.00            NA                 0.414             NA
+ 1.00            NA                 0.285             NA
+ 1.00            NA                 0.260          0.015
+ 1.00            NA                 0.920             NA
+ 1.00            NA                 0.380             NA
+ 1.00            NA                 0.315             NA
+ 1.00            NA                 0.440             NA
+ 1.00            NA                 0.140             NA
+ 1.00            NA                 0.745          0.190
+ 1.00            NA                 0.130             NA
+                                 label
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+                        not replicated
+                        not replicated
+ not replicated (direction not stated)
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+== labels that change, uncalibrated (66) -> calibrated (89), primary: 0 of 76 
+== pooled r and q, uncalibrated -> calibrated, testable targets:
+  id                                target k   r_old   r_new lo_new hi_new
+  T4 unclassified Methanomassiliicoccaceae 2 -0.2790 -0.2564 -0.457 -0.031
+  C1                    Methanobrevibacter 2  0.1203  0.1116 -0.118  0.330
+  C2                   Succinivibrionaceae 3  0.1842  0.1572 -0.105  0.399
+  C3                           Fibrobacter 3 -0.0405 -0.0258 -0.106  0.055
+  C4                          Ruminococcus 3  0.1236  0.1175 -0.140  0.360
+  C5                            Prevotella 3  0.0254  0.0253 -0.055  0.106
+  C6                          Butyrivibrio 3  0.0056  0.0055 -0.075  0.086
+  T2                            Firmicutes 2  0.0361  0.0361 -0.192  0.261
+  T3                           Chloroflexi 2 -0.0167 -0.0124 -0.239  0.215
+  T5                               Blautia 2  0.0657  0.0589 -0.170  0.282
+  T6            Methanobrevibacter smithii 2  0.0968  0.0968 -0.385  0.537
+ N01                      Anaeromyxobacter 1  0.2570  0.1953 -0.192  0.530
+ N02                          Actinomadura 1  0.1225  0.1225 -0.263  0.474
+ N04                       Acidaminococcus 1 -0.1618 -0.1618 -0.504  0.225
+ N06                          Actinoplanes 1 -0.1164 -0.1164 -0.469  0.268
+ N08                              Gordonia 1 -0.1624 -0.1624 -0.505  0.224
+ N10                 Phascolarctobacterium 1  0.2115  0.2115 -0.175  0.542
+ N11                             Comamonas 1  0.1541  0.1541 -0.232  0.499
+ N13                           Eubacterium 1 -0.1179 -0.1179 -0.470  0.267
+ N15                           Selenomonas 2  0.1018  0.1018  0.018  0.184
+ N17                          Burkholderia 1 -0.0350 -0.0250 -0.394  0.351
+ N19                            Lysobacter 1 -0.1341 -0.1341 -0.483  0.252
+ N20                        Pseudonocardia 1 -0.1460 -0.1460 -0.492  0.240
+ N21                        Brevibacterium 1  0.1657  0.1486 -0.238  0.494
+ N22                            Nonomuraea 1  0.1826  0.1826 -0.204  0.520
+ N23                         Succinivibrio 2  0.0794  0.0560 -0.028  0.139
+ N28                        Photobacterium 1  0.2226  0.2226 -0.164  0.550
+ q_old q_new
+  0.09  0.16
+  0.54  0.65
+  0.54  0.65
+  0.54  0.65
+  0.54  0.65
+  0.64  0.65
+  0.89  0.89
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+  1.00  1.00
+== primary vs sensitivity (all 567) label differences: 0 
+== not-replicated targets whose CI still includes the published r = 0.3 (calibrated primary): 10 of 27 
+   same count, uncalibrated (66): 10 of 27 
