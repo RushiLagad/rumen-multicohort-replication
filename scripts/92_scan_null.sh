@@ -9,5 +9,5 @@ job() { set -- $1; k=$1; s=$2
       [ -s $o ] || SHUFFLE_SEED=$s KEEP_CSV=1 $RR scripts/65_estimate_alberta.R genus > logs/scan_null/${k}_seed${s}.log 2>&1 || echo "$k $s FAILED";;
   esac; }
 export -f job; export RR
-for s in $(seq 2001 2020); do for k in nelore_genus charolais_mrna_genus alberta_genus; do echo "$k $s"; done; done | xargs -P 12 -I{} bash -c 'job "{}"'
+for s in $(seq 2001 2200); do for k in nelore_genus charolais_mrna_genus alberta_genus; do echo "$k $s"; done; done | xargs -P 12 -I{} bash -c 'job "{}"'
 touch logs/scan_null/DONE; echo "$(date +%F_%T) scan nulls done: $(ls results/scan_null/*_ancombc2.csv | wc -l) tables"
