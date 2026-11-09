@@ -1,0 +1,145 @@
+run_accession	sample_accession	sample_alias	sample_title	library_strategy	collection_date	host_sex	host_body_site	tissue_type	dev_stage	description
+SRR8397885	SAMN10690914	Rumen microbiome of beef cattle 209	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397894	SAMN10690931	Rumen microbiome of beef cattle 506	Rumen microbiome of beef cattle	WGS	2014-09-19					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397881	SAMN10690920	Rumen microbiome of beef cattle 305	Rumen microbiome of beef cattle	WGS	2014-08-15					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397895	SAMN10690938	Rumen microbiome of beef cattle 702	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397882	SAMN10690919	Rumen microbiome of beef cattle 304	Rumen microbiome of beef cattle	WGS	2014-08-15					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397888	SAMN10690915	Rumen microbiome of beef cattle 210	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397897	SAMN10690936	Rumen microbiome of beef cattle 612	Rumen microbiome of beef cattle	WGS	2014-09-26					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397886	SAMN10690913	Rumen microbiome of beef cattle 208	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397900	SAMN10690939	Rumen microbiome of beef cattle 703	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397902	SAMN10690909	Rumen microbiome of beef cattle 203	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397890	SAMN10690917	Rumen microbiome of beef cattle 302	Rumen microbiome of beef cattle	WGS	2014-08-15					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397896	SAMN10690937	Rumen microbiome of beef cattle 701	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397904	SAMN10690903	Rumen microbiome of beef cattle 105	Rumen microbiome of beef cattle	WGS	2014-07-18					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397915	SAMN10690927	Rumen microbiome of beef cattle 407	Rumen microbiome of beef cattle	WGS	2014-08-22					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397906	SAMN10690901	Rumen microbiome of beef cattle 101	Rumen microbiome of beef cattle	WGS	2014-07-18					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397913	SAMN10690925	Rumen microbiome of beef cattle 403	Rumen microbiome of beef cattle	WGS	2014-08-22					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397919	SAMN10690923	Rumen microbiome of beef cattle 401	Rumen microbiome of beef cattle	WGS	2014-08-22					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397909	SAMN10690906	Rumen microbiome of beef cattle 112	Rumen microbiome of beef cattle	WGS	2014-07-18					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397922	SAMN10690945	Rumen microbiome of beef cattle 709	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397910	SAMN10690905	Rumen microbiome of beef cattle 107	Rumen microbiome of beef cattle	WGS	2014-07-18					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8399403	SAMN10690908	Rumen microbiome of beef cattle 202	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399388	SAMN10690946	Rumen microbiome of beef cattle 710	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8397914	SAMN10690926	Rumen microbiome of beef cattle 404	Rumen microbiome of beef cattle	WGS	2014-08-22					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8399405	SAMN10690942	Rumen microbiome of beef cattle 706	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399389	SAMN10690939	Rumen microbiome of beef cattle 703	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8397920	SAMN10690924	Rumen microbiome of beef cattle 402	Rumen microbiome of beef cattle	WGS	2014-08-22					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8399416	SAMN10690911	Rumen microbiome of beef cattle 206	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399394	SAMN10690927	Rumen microbiome of beef cattle 407	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8397923	SAMN10690946	Rumen microbiome of beef cattle 710	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8399425	SAMN10690909	Rumen microbiome of beef cattle 203	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399395	SAMN10690922	Rumen microbiome of beef cattle 308	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399391	SAMN10690926	Rumen microbiome of beef cattle 404	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399426	SAMN10690910	Rumen microbiome of beef cattle 205	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399396	SAMN10690921	Rumen microbiome of beef cattle 307	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399392	SAMN10690925	Rumen microbiome of beef cattle 403	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399427	SAMN10690905	Rumen microbiome of beef cattle 107	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399393	SAMN10690928	Rumen microbiome of beef cattle 501	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399397	SAMN10690924	Rumen microbiome of beef cattle 402	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416057	SAMN10690901	Rumen microbiome of beef cattle 101	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399402	SAMN10690937	Rumen microbiome of beef cattle 701	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399399	SAMN10690930	Rumen microbiome of beef cattle 505	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416062	SAMN10690905	Rumen microbiome of beef cattle 107	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399400	SAMN10690929	Rumen microbiome of beef cattle 503	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399407	SAMN10690944	Rumen microbiome of beef cattle 708	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416064	SAMN10690908	Rumen microbiome of beef cattle 202	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399401	SAMN10690945	Rumen microbiome of beef cattle 709	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399409	SAMN10690920	Rumen microbiome of beef cattle 305	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399411	SAMN10690936	Rumen microbiome of beef cattle 612	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416076	SAMN10690919	Rumen microbiome of beef cattle 304	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399410	SAMN10690935	Rumen microbiome of beef cattle 611	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399414	SAMN10690931	Rumen microbiome of beef cattle 506	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416079	SAMN10690947	Rumen microbiome of beef cattle 712	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399415	SAMN10690932	Rumen microbiome of beef cattle 601	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416067	SAMN10690912	Rumen microbiome of beef cattle 207	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416083	SAMN10690931	Rumen microbiome of beef cattle 506	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416071	SAMN10690916	Rumen microbiome of beef cattle 301	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399417	SAMN10690912	Rumen microbiome of beef cattle 207	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416073	SAMN10690914	Rumen microbiome of beef cattle 209	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416084	SAMN10690943	Rumen microbiome of beef cattle 707	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399422	SAMN10690917	Rumen microbiome of beef cattle 302	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416078	SAMN10690939	Rumen microbiome of beef cattle 703	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416087	SAMN10690929	Rumen microbiome of beef cattle 503	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416082	SAMN10690940	Rumen microbiome of beef cattle 704	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416095	SAMN10690925	Rumen microbiome of beef cattle 403	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399429	SAMN10690907	Rumen microbiome of beef cattle 201	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416090	SAMN10690922	Rumen microbiome of beef cattle 308	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416097	SAMN10690934	Rumen microbiome of beef cattle 608	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8399432	SAMN10690902	Rumen microbiome of beef cattle 104	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416093	SAMN10690927	Rumen microbiome of beef cattle 407	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416058	SAMN10701647	Rumen microbiome of beef cattle 103	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416100	SAMN10690937	Rumen microbiome of beef cattle 701	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416066	SAMN10690933	Rumen microbiome of beef cattle 604	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416101	SAMN10690944	Rumen microbiome of beef cattle 708	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416069	SAMN10690910	Rumen microbiome of beef cattle 205	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416102	SAMN10690930	Rumen microbiome of beef cattle 505	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416072	SAMN10690917	Rumen microbiome of beef cattle 302	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416077	SAMN10690938	Rumen microbiome of beef cattle 702	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8420492	SAMN10701647	Rumen microbiome of beef cattle 103	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416081	SAMN10690941	Rumen microbiome of beef cattle 705	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416085	SAMN10690945	Rumen microbiome of beef cattle 709	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416094	SAMN10690926	Rumen microbiome of beef cattle 404	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416096	SAMN10690924	Rumen microbiome of beef cattle 402	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8397887	SAMN10690916	Rumen microbiome of beef cattle 301	Rumen microbiome of beef cattle	WGS	2014-08-15					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397892	SAMN10690933	Rumen microbiome of beef cattle 604	Rumen microbiome of beef cattle	WGS	2014-09-26					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397893	SAMN10690932	Rumen microbiome of beef cattle 601	Rumen microbiome of beef cattle	WGS	2014-09-26					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397898	SAMN10690935	Rumen microbiome of beef cattle 611	Rumen microbiome of beef cattle	WGS	2014-09-26					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397899	SAMN10690940	Rumen microbiome of beef cattle 704	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397903	SAMN10690904	Rumen microbiome of beef cattle 106	Rumen microbiome of beef cattle	WGS	2014-07-18					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397907	SAMN10690908	Rumen microbiome of beef cattle 202	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397908	SAMN10690907	Rumen microbiome of beef cattle 201	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397912	SAMN10690930	Rumen microbiome of beef cattle 505	Rumen microbiome of beef cattle	WGS	2014-09-19					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397916	SAMN10690928	Rumen microbiome of beef cattle 501	Rumen microbiome of beef cattle	WGS	2014-09-19					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397917	SAMN10690921	Rumen microbiome of beef cattle 307	Rumen microbiome of beef cattle	WGS	2014-08-15					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397924	SAMN10690943	Rumen microbiome of beef cattle 707	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397926	SAMN10690941	Rumen microbiome of beef cattle 705	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8399398	SAMN10690923	Rumen microbiome of beef cattle 401	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399408	SAMN10690919	Rumen microbiome of beef cattle 304	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399412	SAMN10690933	Rumen microbiome of beef cattle 604	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399413	SAMN10690934	Rumen microbiome of beef cattle 608	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399418	SAMN10690913	Rumen microbiome of beef cattle 208	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399423	SAMN10690918	Rumen microbiome of beef cattle 303	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399428	SAMN10690906	Rumen microbiome of beef cattle 112	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399434	SAMN10690904	Rumen microbiome of beef cattle 106	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8416060	SAMN10690907	Rumen microbiome of beef cattle 201	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416063	SAMN10690932	Rumen microbiome of beef cattle 601	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416070	SAMN10690911	Rumen microbiome of beef cattle 206	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416075	SAMN10690918	Rumen microbiome of beef cattle 303	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416088	SAMN10690928	Rumen microbiome of beef cattle 501	Rumen microbiome of beef cattle	RNA-Seq	2014-09-19					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416092	SAMN10690920	Rumen microbiome of beef cattle 305	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8397883	SAMN10690912	Rumen microbiome of beef cattle 207	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397884	SAMN10690911	Rumen microbiome of beef cattle 206	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397889	SAMN10690918	Rumen microbiome of beef cattle 303	Rumen microbiome of beef cattle	WGS	2014-08-15					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397891	SAMN10690934	Rumen microbiome of beef cattle 608	Rumen microbiome of beef cattle	WGS	2014-09-26					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397901	SAMN10690910	Rumen microbiome of beef cattle 205	Rumen microbiome of beef cattle	WGS	2014-07-25					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397905	SAMN10690902	Rumen microbiome of beef cattle 104	Rumen microbiome of beef cattle	WGS	2014-07-18					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397911	SAMN10690929	Rumen microbiome of beef cattle 503	Rumen microbiome of beef cattle	WGS	2014-09-19					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397918	SAMN10690922	Rumen microbiome of beef cattle 308	Rumen microbiome of beef cattle	WGS	2014-08-15					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397921	SAMN10690947	Rumen microbiome of beef cattle 712	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397925	SAMN10690944	Rumen microbiome of beef cattle 708	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8397927	SAMN10690942	Rumen microbiome of beef cattle 706	Rumen microbiome of beef cattle	WGS	2014-10-03					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8399390	SAMN10690940	Rumen microbiome of beef cattle 704	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399404	SAMN10690938	Rumen microbiome of beef cattle 702	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399406	SAMN10690941	Rumen microbiome of beef cattle 705	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399419	SAMN10690914	Rumen microbiome of beef cattle 209	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399420	SAMN10690915	Rumen microbiome of beef cattle 210	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399421	SAMN10690916	Rumen microbiome of beef cattle 301	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399424	SAMN10690947	Rumen microbiome of beef cattle 712	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399430	SAMN10690943	Rumen microbiome of beef cattle 707	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399431	SAMN10690901	Rumen microbiome of beef cattle 101	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8399433	SAMN10690903	Rumen microbiome of beef cattle 105	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2000 sequencing: Total-RNA-based rumen metatranscriptome of beef cattle
+SRR8404214	SAMN10701647	Rumen microbiome of beef cattle 103	Rumen microbiome of beef cattle	WGS	2014-07-18					Illumina HiSeq 2000 sequencing: Rumen metagenome of beef cattle
+SRR8416055	SAMN10690902	Rumen microbiome of beef cattle 104	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416056	SAMN10690903	Rumen microbiome of beef cattle 105	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416059	SAMN10690906	Rumen microbiome of beef cattle 112	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416061	SAMN10690904	Rumen microbiome of beef cattle 106	Rumen microbiome of beef cattle	RNA-Seq	2014-07-18					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416065	SAMN10690909	Rumen microbiome of beef cattle 203	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416068	SAMN10690913	Rumen microbiome of beef cattle 208	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416074	SAMN10690915	Rumen microbiome of beef cattle 210	Rumen microbiome of beef cattle	RNA-Seq	2014-07-25					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416080	SAMN10690946	Rumen microbiome of beef cattle 710	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416086	SAMN10690942	Rumen microbiome of beef cattle 706	Rumen microbiome of beef cattle	RNA-Seq	2014-10-03					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416089	SAMN10690923	Rumen microbiome of beef cattle 401	Rumen microbiome of beef cattle	RNA-Seq	2014-08-22					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416091	SAMN10690921	Rumen microbiome of beef cattle 307	Rumen microbiome of beef cattle	RNA-Seq	2014-08-15					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416098	SAMN10690935	Rumen microbiome of beef cattle 611	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
+SRR8416099	SAMN10690936	Rumen microbiome of beef cattle 612	Rumen microbiome of beef cattle	RNA-Seq	2014-09-26					Illumina HiSeq 2500 sequencing: mRNA-enriched rumen metatranscriptome of beef cattle
