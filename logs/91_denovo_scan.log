@@ -1,0 +1,81 @@
+== DE NOVO SCAN (exploratory; statistic W = lfc/se; null = within-design permutations)
+                table trait n_genera n_p05 n_q05 n_perm null_fpr_p05
+         nelore_genus   RFI     2869   225     1     20        0.089
+ charolais_mrna_genus   RFI     2658   165     4     20        0.058
+        alberta_genus   RFI       91    25    20     20        0.225
+         difford_bact   CH4      104     5     0    200        0.105
+  wallace_prokaryotes   CH4      104    58    56    200        0.258
+ null_max_n_q05 null_W_sd null_W_q99 null_frac_W_gt5 n_q05_emp n_q05_perm
+            678      1.31        3.6          0.0027         0         NA
+              1      1.40        4.6          0.0076         0         NA
+             24      1.96        6.8          0.0270         0         NA
+             21      1.31        4.6          0.0075         0          0
+             45      2.37        8.5          0.0520         6         28
+    top_genus  top_W top_q_emp
+       VMEW01 -14.22     0.750
+ Alkaliflexus -27.73     0.350
+ Ruminobacter   8.72     0.410
+   horsej-a03  -2.38     0.980
+    Dialister -23.25     0.005
+   n_p05/n_q05: ANCOM-BC2 p-values, nominal and BH across genera. null_fpr_p05: fraction of genera at p<0.05 in permuted data (0.05 if calibrated); null_max_n_q05: most q<0.05 genera in one permutation.
+   null_W_sd / q99 / frac>5: spread and tail of W under the null (1 / 2.6 / 1e-6 if standard normal). n_q05_emp: genera at BH q<0.05 against the pooled null W; n_q05_perm: same with per-genus null (200-permutation tables only).
+== CROSS-COHORT OVERLAP of empirical-null hits (p_emp<0.05), shared genus names only; Spearman over all shared genera
+       table_a              table_b               comparison shared_genera
+  nelore_genus charolais_mrna_genus          same trait: RFI          2654
+  difford_bact  wallace_prokaryotes          same trait: CH4            80
+ alberta_genus         difford_bact cross-trait (RFI vs CH4)            71
+ alberta_genus  wallace_prokaryotes cross-trait (RFI vs CH4)            67
+ hits_a hits_b both both_same_sign expected_both p_hyper spearman_W p_spearman
+     79    146   10              5          4.35    0.01      0.026     0.1800
+      0     24    0              0          0.00    1.00     -0.298     0.0073
+      6      0    0              0          0.00    1.00     -0.145     0.2300
+      5     19    0              0          1.42    1.00      0.107     0.3900
+   nelore_genus x charolais_mrna_genus same-sign: Sulfurifustis;Rudanella;Fen-1039;JAGLBA01;Erythrobacter 
+== top 6 genera per table by empirical p
+-- nelore_genus 
+           genus    lfc      W        p       q    p_emp q_emp sd_null q_perm
+          VMEW01 -0.746 -14.22 2.02e-06 0.00579 0.000314 0.750      NA     NA
+ 2-01-FULL-50-28 -0.545 -11.32 7.71e-03 0.33012 0.000523 0.750      NA     NA
+ 2011-GWC2-44-17  0.372   8.63 1.32e-02 0.41723 0.000802 0.767      NA     NA
+         UBA9145 -0.247  -5.74 2.78e-04 0.08872 0.001812 0.877      NA     NA
+         Jonesia  0.229   5.40 5.70e-03 0.28683 0.002126 0.877      NA     NA
+       Halohasta  0.223   5.34 1.34e-04 0.07455 0.002178 0.877      NA     NA
+-- charolais_mrna_genus 
+        genus   lfc      W        p      q    p_emp q_emp sd_null q_perm
+ Alkaliflexus -3.99 -27.73 1.01e-05 0.0134 0.000131 0.349      NA     NA
+      UBA4179  2.47  10.34 9.23e-03 0.5161 0.001332 0.659      NA     NA
+       CYSP01 -1.44  -9.20 2.72e-03 0.3285 0.001745 0.659      NA     NA
+     RGIG3394 -1.40  -9.06 8.23e-04 0.2186 0.001857 0.659      NA     NA
+     RGIG3770  5.69   8.99 1.87e-05 0.0166 0.001932 0.659      NA     NA
+       SFEB01 -2.24  -8.72 3.18e-03 0.3380 0.002026 0.659      NA     NA
+-- alberta_genus 
+                       genus    lfc     W        p        q   p_emp q_emp
+                Ruminobacter  0.203  8.72 2.02e-12 1.83e-10 0.00549 0.406
+                    DNF00809 -0.171 -7.04 1.18e-09 5.39e-08 0.00934 0.406
+   Defluviitaleaceae_UCG-011 -0.134 -5.60 1.09e-07 3.29e-06 0.01977 0.406
+ Erysipelotrichaceae_UCG-009  0.156  5.33 4.45e-07 1.01e-05 0.02471 0.406
+                     UCG-001  0.197  4.78 2.71e-06 4.93e-05 0.03185 0.406
+                  Monoglobus  0.119  4.72 1.52e-05 2.31e-04 0.03460 0.406
+ sd_null q_perm
+      NA     NA
+      NA     NA
+      NA     NA
+      NA     NA
+      NA     NA
+      NA     NA
+-- difford_bact 
+                   genus     lfc     W      p     q  p_emp q_emp sd_null q_perm
+              horsej-a03 -0.1590 -2.38 0.0192 0.821 0.0670  0.98   2.643  0.987
+           Papillibacter -0.1040 -2.35 0.0189 0.821 0.0684  0.98   0.861  0.517
+               T2WK15B57 -0.1578 -2.31 0.0237 0.821 0.0712  0.98   2.671  0.987
+               Dialister  0.1482  2.10 0.0372 0.946 0.0908  0.98   3.184  0.987
+ Lachnospiraceae_UCG-008 -0.0927 -1.98 0.0477 0.946 0.1025  0.98   0.925  0.987
+ Lachnospiraceae_UCG-010  0.0811  1.87 0.0622 0.946 0.1181  0.98   0.813  0.987
+-- wallace_prokaryotes 
+          genus    lfc     W        p        q    p_emp  q_emp sd_null q_perm
+      Dialister -0.612 -23.3 1.17e-68 1.21e-66 4.81e-05 0.0050    2.82 0.0216
+         FD2005 -0.194 -13.7 1.67e-25 4.34e-24 1.39e-03 0.0475    3.16 0.0216
+  Sphaerochaeta -0.193 -13.4 1.99e-24 2.96e-23 1.63e-03 0.0475    4.13 0.0216
+  Lactobacillus  0.199  12.6 1.62e-24 2.81e-23 2.26e-03 0.0475    3.86 0.0370
+ Elusimicrobium -0.253 -12.2 8.31e-28 4.32e-26 2.69e-03 0.0475    2.45 0.0216
+         NED5E9 -0.168 -12.1 2.07e-23 2.69e-22 2.74e-03 0.0475    3.19 0.0216

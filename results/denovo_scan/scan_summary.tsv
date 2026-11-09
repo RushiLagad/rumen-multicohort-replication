@@ -1,0 +1,6 @@
+table	trait	n_genera	n_p05	n_q05	n_perm	null_fpr_p05	null_max_n_q05	null_W_sd	null_W_q99	null_frac_W_gt5	n_q05_emp	n_q05_perm	top_genus	top_W	top_q_emp
+nelore_genus	RFI	2869	225	1	20	0.089	678	1.31	3.6	0.0027	0	NA	VMEW01	-14.22	0.75
+charolais_mrna_genus	RFI	2658	165	4	20	0.058	1	1.4	4.6	0.0076	0	NA	Alkaliflexus	-27.73	0.35
+alberta_genus	RFI	91	25	20	20	0.225	24	1.96	6.8	0.027	0	NA	Ruminobacter	8.72	0.41
+difford_bact	CH4	104	5	0	200	0.105	21	1.31	4.6	0.0075	0	0	horsej-a03	-2.38	0.98
+wallace_prokaryotes	CH4	104	58	56	200	0.258	45	2.37	8.5	0.052	6	28	Dialister	-23.25	0.005
