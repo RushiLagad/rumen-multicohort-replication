@@ -1,0 +1,2 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	status
+T6	Li	rumen	charolais_mrna	species	TGT_T6	30	26	-0.271025734146725	0.138140973152384	0.0605564097476077	-1.96195037548893	ok

@@ -1,0 +1,2 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	status
+T6	Li	rumen	nelore	species	TGT_T6	52	48	-0.00561923892689356	0.0628247712588416	0.929101984197373	-0.0894430463382347	ok

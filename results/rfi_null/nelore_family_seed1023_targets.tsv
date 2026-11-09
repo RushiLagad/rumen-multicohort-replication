@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	status
+T4	Li	rumen	nelore	family	TGT_T4	52	48	-0.0228668045930148	0.0428757821381215	0.5962683613564	-0.533326821172636	ok
+C2	Canonical	rumen	nelore	family	TGT_C2	52	48	-0.169485852216904	0.10915190351127	0.127051595989587	-1.55275214416582	ok

@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	status
+T2	Li	rumen	charolais_mrna	phylum	TGT_T2	30	26	-0.318828791970824	0.144840144243719	0.036795660994917	-2.20124602633879	ok
+T3	Li	rumen	charolais_mrna	phylum	TGT_T3	30	26	-0.148339226102411	0.13997651653956	0.299007365170941	-1.0597436610768	ok

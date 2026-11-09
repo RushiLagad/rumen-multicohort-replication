@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	status
+T4	Li	rumen	alberta_all	family	NA	567	557	NA	NA	NA	NA	no_feature
+C2	Canonical	rumen	alberta_all	family	TGT_C2	567	557	0.0656275445106476	0.0863093622518583	0.447403352492059	0.760375732115141	ok

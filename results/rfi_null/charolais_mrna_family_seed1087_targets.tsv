@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	status
+T4	Li	rumen	charolais_mrna	family	TGT_T4	30	26	-0.002189917538008	0.190418398141996	0.990911879151764	-0.011500556455553	ok
+C2	Canonical	rumen	charolais_mrna	family	TGT_C2	30	26	0.575832316866758	0.310579829857691	0.0751092120164666	1.85405574190251	ok
