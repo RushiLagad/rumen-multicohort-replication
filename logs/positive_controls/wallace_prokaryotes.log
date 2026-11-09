@@ -1,0 +1,8 @@
+wallace_prokaryotes : animals 1009 | genera (>=10% prevalence) 104 | control farm ( 7 levels ) | model farm + parity + dim + CH4_z 
+Loading required package: foreach
+Loading required package: rngtools
+               table control         label n_animals n_genera n_levels n_q05
+ wallace_prokaryotes    farm farm-or-breed      1009      104        7    48
+    min_q permanova_R2 permanova_p betadisper_p pass
+ 9.05e-61        0.215       5e-04        5e-04 TRUE
+POSITIVE CONTROL PASS 

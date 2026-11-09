@@ -1,0 +1,2 @@
+table	control	label	n_animals	n_genera	n_levels	n_q05	min_q	permanova_R2	permanova_p	betadisper_p	pass
+difford_arch	herd	herd-or-batch	728	3	6	3	8.38e-29	0.14	5e-04	5e-04	TRUE

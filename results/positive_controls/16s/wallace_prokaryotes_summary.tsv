@@ -1,0 +1,2 @@
+table	control	label	n_animals	n_genera	n_levels	n_q05	min_q	permanova_R2	permanova_p	betadisper_p	pass
+wallace_prokaryotes	farm	farm-or-breed	1009	104	7	48	9.05e-61	0.215	5e-04	5e-04	TRUE
