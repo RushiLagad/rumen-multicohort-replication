@@ -67,7 +67,7 @@ fit <- ancombc2(data=tse, assay_name="counts", fix_formula=paste(terms, collapse
                 prv_cut=0.10, group=NULL, struc_zero=FALSE, verbose=FALSE)
 res <- fit$res; stopifnot(nrow(res) > 0, all(res$taxon %in% rownames(A)))
 cat("ANCOM-BC2 kept", nrow(res), "of", nrow(A), "features\n"); i <- match(sf, res$taxon)
-res$taxon_name <- orig[match(res$taxon, rownames(A))]; if (!nzchar(SS)) write.csv(res, file.path(out, paste0(coh, "_", rk, "_ancombc2.csv")), row.names=FALSE)
+res$taxon_name <- orig[match(res$taxon, rownames(A))]; if (!nzchar(SS)) write.csv(res, file.path(out, paste0(coh, "_", rk, "_ancombc2.csv")), row.names=FALSE) else if (Sys.getenv("KEEP_CSV") == "1") { dir.create(file.path(root, "results", "scan_null"), showWarnings=FALSE); write.csv(res, file.path(root, "results", "scan_null", paste0(coh, "_", rk, "_seed", SS, "_ancombc2.csv")), row.names=FALSE) }
 tc <- grep("^lfc_RFI", names(res), value=TRUE); stopifnot(length(tc) == 1); sfx <- sub("^lfc_", "", tc)
 est <- data.frame(id=tk$id, set=tk$set, site=tk$site, cohort=coh, rank=rk, feature=feat, n=n, df=df,
   lfc=res[[tc]][i], se=res[[paste0("se_", sfx)]][i], p_ancom=res[[paste0("p_", sfx)]][i])
