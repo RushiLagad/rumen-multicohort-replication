@@ -1,0 +1,3 @@
+genus : targets 34 | matched to a 16S feature 11 | estimable 16S 9 | estimable mRNA 22 | both 9 
+  same sign 4 of 9 | Spearman r 0.25 | 16S p<0.05: 0 
+family : targets 2 | matched to a 16S feature 1 | estimable 16S 1 | estimable mRNA 2 | both 1 
