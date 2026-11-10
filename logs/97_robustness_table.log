@@ -1,38 +1,50 @@
 == versions found
-                                      
-                                       Methane RFI
-  clr_pooled:methane_clr                    11   0
-  clr_pooled:rfi_clr                         0  27
-  methane_pooled_depth:primary              11   0
-  methane_pooled_depth:with_reanalysis      11   0
-  methane_pooled:primary                    11   0
-  methane_pooled:with_reanalysis            11   0
-  replication_rfi3_calibrated:all            0  27
-  replication_rfi3_calibrated:primary        0  27
-  replication_rfi3:all                       0  27
-  replication_rfi3:primary                   0  27
+                                        
+                                         Methane RFI
+  clr_pooled:methane_clr                      11   0
+  clr_pooled:rfi_clr                           0  27
+  methane_pooled_ch4_dmi:primary              11   0
+  methane_pooled_ch4_dmi:with_reanalysis      11   0
+  methane_pooled_depth:primary                11   0
+  methane_pooled_depth:with_reanalysis        11   0
+  methane_pooled_noSE1:primary                11   0
+  methane_pooled_noSE1:with_reanalysis        11   0
+  methane_pooled:primary                      11   0
+  methane_pooled:with_reanalysis              11   0
+  replication_rfi3_calibrated:all              0  27
+  replication_rfi3_calibrated:primary          0  27
+  replication_rfi3:all                         0  27
+  replication_rfi3:primary                     0  27
 
 == label counts per version (testable targets)
-                                               not replicated opposite sign
-Methane | clr_pooled:methane_clr                           10             1
-Methane | methane_pooled_depth:primary                     11             0
-Methane | methane_pooled_depth:with_reanalysis             11             0
-Methane | methane_pooled:primary                           11             0
-Methane | methane_pooled:with_reanalysis                   11             0
-RFI | clr_pooled:rfi_clr                                   27             0
-RFI | replication_rfi3_calibrated:all                      27             0
-RFI | replication_rfi3_calibrated:primary                  27             0
-RFI | replication_rfi3:all                                 27             0
-RFI | replication_rfi3:primary                             27             0
+                                                 not replicated opposite sign
+Methane | clr_pooled:methane_clr                             10             1
+Methane | methane_pooled_ch4_dmi:primary                     11             0
+Methane | methane_pooled_ch4_dmi:with_reanalysis             11             0
+Methane | methane_pooled_depth:primary                       11             0
+Methane | methane_pooled_depth:with_reanalysis               11             0
+Methane | methane_pooled_noSE1:primary                       11             0
+Methane | methane_pooled_noSE1:with_reanalysis               11             0
+Methane | methane_pooled:primary                             11             0
+Methane | methane_pooled:with_reanalysis                     11             0
+RFI | clr_pooled:rfi_clr                                     27             0
+RFI | replication_rfi3_calibrated:all                        27             0
+RFI | replication_rfi3_calibrated:primary                    27             0
+RFI | replication_rfi3:all                                   27             0
+RFI | replication_rfi3:primary                               27             0
 
 == RFI : targets 27 | versions 5 | targets whose label differs in any version: 0 
    targets whose pooled r changes sign across versions: 6 of 27 (T5, T6, N01, N20, N28, C1) 
 
-== Methane : targets 11 | versions 5 | targets whose label differs in any version: 1 
-  id      target methane_pooled:primary methane_pooled:with_reanalysis
- N38 Eubacterium         not replicated                 not replicated
- methane_pooled_depth:primary methane_pooled_depth:with_reanalysis
-               not replicated                       not replicated
- clr_pooled:methane_clr
-          opposite sign
-   targets whose pooled r changes sign across versions: 2 of 11 (N37, M2) 
+== Methane : targets 11 | versions 9 | targets whose label differs in any version: 1 
+  id      target methane_pooled_ch4_dmi:primary
+ N38 Eubacterium                 not replicated
+ methane_pooled_ch4_dmi:with_reanalysis methane_pooled:primary
+                         not replicated         not replicated
+ methane_pooled:with_reanalysis methane_pooled_depth:primary
+                 not replicated               not replicated
+ methane_pooled_depth:with_reanalysis methane_pooled_noSE1:primary
+                       not replicated               not replicated
+ methane_pooled_noSE1:with_reanalysis clr_pooled:methane_clr
+                       not replicated          opposite sign
+   targets whose pooled r changes sign across versions: 3 of 11 (N37, N40, M2) 

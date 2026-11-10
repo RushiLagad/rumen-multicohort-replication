@@ -1,0 +1,61 @@
+==  REAL : primary pooling (Wallace M2 excluded as re-analysis)
+                  
+                   not replicated not replicated (direction not stated)
+  Methane                       2                                     1
+  MethaneSecondary              1                                     0
+  Nelore                        7                                     0
+                  
+                   untestable
+  Methane                   0
+  MethaneSecondary          2
+  Nelore                   28
+  id                                                     target
+  M3                                              total archaea
+  M1 Methanobrevibacter gottschalkii clade vs ruminantium clade
+  M2                                        Succinivibrionaceae
+  S1                                                    Sharpea
+ N30                                         Pseudobutyrivibrio
+ N32                                                  Roseburia
+ N37                                                Coprococcus
+ N38                                                Eubacterium
+ N39                                               Anaerostipes
+ N40                                                    Blautia
+ N42                                                Lachnospira
+              set k       r  ci_lo  ci_hi  q_bh r_difford r_wallace
+          Methane 1  0.0753  0.013 0.1367 0.052        NA    0.0753
+          Methane 2  0.0804 -0.013 0.1721 0.136    0.0318    0.1263
+          Methane 1  0.0055 -0.067 0.0779 0.882    0.0055        NA
+ MethaneSecondary 2 -0.0124 -0.060 0.0348 1.000   -0.0046   -0.0181
+           Nelore 2  0.0151 -0.032 0.0622 1.000    0.0098    0.0189
+           Nelore 1 -0.0605 -0.132 0.0120 1.000   -0.0605        NA
+           Nelore 2 -0.0527 -0.114 0.0093 1.000   -0.0181   -0.0814
+           Nelore 1 -0.0067 -0.069 0.0554 1.000        NA   -0.0067
+           Nelore 1 -0.0063 -0.079 0.0662 1.000   -0.0063        NA
+           Nelore 1  0.0262 -0.036 0.0881 1.000        NA    0.0262
+           Nelore 2 -0.0647 -0.189 0.0619 1.000    0.0014   -0.1273
+ p_perm_difford p_perm_wallace                                 label
+             NA          0.010 not replicated (direction not stated)
+           0.38          0.000                        not replicated
+           0.89             NA                        not replicated
+           0.89          0.540                        not replicated
+           0.73          0.550                        not replicated
+           0.10             NA                        not replicated
+           0.61          0.015                        not replicated
+             NA          0.775                        not replicated
+           0.87             NA                        not replicated
+             NA          0.410                        not replicated
+           0.98          0.000                        not replicated
+== calibration factors applied (sd_null > 1):
+  id                       table sd_null  W_raw      W
+ N32                difford_bact     1.0 -1.704 -1.638
+ N37                difford_bact     2.0 -0.956 -0.488
+ N39                difford_bact     1.5 -0.252 -0.171
+ N42                difford_bact     1.0  0.038  0.037
+  M2                difford_bact     1.1  0.162  0.149
+  S1                difford_bact     1.6 -0.199 -0.126
+ N37 wallace_prokaryotes_ch4_dmi     1.4 -3.594 -2.579
+ N38 wallace_prokaryotes_ch4_dmi     2.6 -0.548 -0.210
+ N40 wallace_prokaryotes_ch4_dmi     2.3  1.939  0.826
+ N42 wallace_prokaryotes_ch4_dmi     1.7 -6.892 -4.051
+  M1 wallace_prokaryotes_ch4_dmi     1.1  3.910  3.692
+  S1 wallace_prokaryotes_ch4_dmi     5.3 -3.032 -0.571

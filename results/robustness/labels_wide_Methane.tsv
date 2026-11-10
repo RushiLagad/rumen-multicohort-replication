@@ -1,12 +1,12 @@
-id	target	methane_pooled:primary	methane_pooled:with_reanalysis	methane_pooled_depth:primary	methane_pooled_depth:with_reanalysis	clr_pooled:methane_clr
-N30	Pseudobutyrivibrio	not replicated	not replicated	not replicated	not replicated	not replicated
-N32	Roseburia	not replicated	not replicated	not replicated	not replicated	not replicated
-N37	Coprococcus	not replicated	not replicated	not replicated	not replicated	not replicated
-N38	Eubacterium	not replicated	not replicated	not replicated	not replicated	opposite sign
-N39	Anaerostipes	not replicated	not replicated	not replicated	not replicated	not replicated
-N40	Blautia	not replicated	not replicated	not replicated	not replicated	not replicated
-N42	Lachnospira	not replicated	not replicated	not replicated	not replicated	not replicated
-M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	not replicated	not replicated	not replicated	not replicated	not replicated
-M2	Succinivibrionaceae	not replicated	not replicated	not replicated	not replicated	not replicated
-M3	total archaea	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)
-S1	Sharpea	not replicated	not replicated	not replicated	not replicated	not replicated
+id	target	methane_pooled_ch4_dmi:primary	methane_pooled_ch4_dmi:with_reanalysis	methane_pooled:primary	methane_pooled:with_reanalysis	methane_pooled_depth:primary	methane_pooled_depth:with_reanalysis	methane_pooled_noSE1:primary	methane_pooled_noSE1:with_reanalysis	clr_pooled:methane_clr
+N30	Pseudobutyrivibrio	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+N32	Roseburia	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+N37	Coprococcus	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+N38	Eubacterium	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	opposite sign
+N39	Anaerostipes	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+N40	Blautia	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+N42	Lachnospira	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+M2	Succinivibrionaceae	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated
+M3	total archaea	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)	not replicated (direction not stated)
+S1	Sharpea	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated	not replicated

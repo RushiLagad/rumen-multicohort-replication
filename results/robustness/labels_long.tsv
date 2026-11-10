@@ -107,6 +107,28 @@ RFI	replication_rfi3:primary	Canonical	C3	Fibrobacter	3	-0.041	0.542	not replica
 RFI	replication_rfi3:primary	Canonical	C4	Ruminococcus	3	0.124	0.542	not replicated (direction not stated)
 RFI	replication_rfi3:primary	Canonical	C5	Prevotella	3	0.025	0.644	not replicated (direction not stated)
 RFI	replication_rfi3:primary	Canonical	C6	Butyrivibrio	3	0.006	0.892	not replicated (direction not stated)
+Methane	methane_pooled_ch4_dmi:primary	Nelore	N30	Pseudobutyrivibrio	2	0.015	1	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Nelore	N37	Coprococcus	2	-0.053	1	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Nelore	N38	Eubacterium	1	-0.007	1	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Nelore	N40	Blautia	1	0.026	1	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Nelore	N42	Lachnospira	2	-0.065	1	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.08	0.136	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Methane	M2	Succinivibrionaceae	1	0.006	0.882	not replicated
+Methane	methane_pooled_ch4_dmi:primary	Methane	M3	total archaea	1	0.075	0.052	not replicated (direction not stated)
+Methane	methane_pooled_ch4_dmi:primary	MethaneSecondary	S1	Sharpea	2	-0.012	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Nelore	N30	Pseudobutyrivibrio	2	0.015	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Nelore	N37	Coprococcus	2	-0.053	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Nelore	N38	Eubacterium	1	-0.007	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Nelore	N40	Blautia	1	0.026	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Nelore	N42	Lachnospira	2	-0.065	1	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.08	0.136	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Methane	M2	Succinivibrionaceae	2	-0.065	0.347	not replicated
+Methane	methane_pooled_ch4_dmi:with_reanalysis	Methane	M3	total archaea	1	0.075	0.052	not replicated (direction not stated)
+Methane	methane_pooled_ch4_dmi:with_reanalysis	MethaneSecondary	S1	Sharpea	2	-0.012	1	not replicated
 Methane	methane_pooled:primary	Nelore	N30	Pseudobutyrivibrio	2	0.033	1	not replicated
 Methane	methane_pooled:primary	Nelore	N32	Roseburia	1	-0.061	1	not replicated
 Methane	methane_pooled:primary	Nelore	N37	Coprococcus	2	-0.045	1	not replicated
@@ -151,6 +173,28 @@ Methane	methane_pooled_depth:with_reanalysis	Methane	M1	Methanobrevibacter gotts
 Methane	methane_pooled_depth:with_reanalysis	Methane	M2	Succinivibrionaceae	2	-0.061	0.349	not replicated
 Methane	methane_pooled_depth:with_reanalysis	Methane	M3	total archaea	1	0.034	0.349	not replicated (direction not stated)
 Methane	methane_pooled_depth:with_reanalysis	MethaneSecondary	S1	Sharpea	2	-0.002	1	not replicated
+Methane	methane_pooled_noSE1:primary	Nelore	N30	Pseudobutyrivibrio	2	0.033	1	not replicated
+Methane	methane_pooled_noSE1:primary	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled_noSE1:primary	Nelore	N37	Coprococcus	2	-0.043	1	not replicated
+Methane	methane_pooled_noSE1:primary	Nelore	N38	Eubacterium	1	-0.039	1	not replicated
+Methane	methane_pooled_noSE1:primary	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled_noSE1:primary	Nelore	N40	Blautia	1	-0.025	1	not replicated
+Methane	methane_pooled_noSE1:primary	Nelore	N42	Lachnospira	2	-0.062	1	not replicated
+Methane	methane_pooled_noSE1:primary	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.026	0.882	not replicated
+Methane	methane_pooled_noSE1:primary	Methane	M2	Succinivibrionaceae	1	0.006	0.882	not replicated
+Methane	methane_pooled_noSE1:primary	Methane	M3	total archaea	1	0.014	0.882	not replicated (direction not stated)
+Methane	methane_pooled_noSE1:primary	MethaneSecondary	S1	Sharpea	2	-0.027	0.83	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Nelore	N30	Pseudobutyrivibrio	2	0.033	1	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Nelore	N37	Coprococcus	2	-0.043	1	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Nelore	N38	Eubacterium	1	-0.039	1	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Nelore	N40	Blautia	1	-0.025	1	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Nelore	N42	Lachnospira	2	-0.062	1	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.026	0.524	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Methane	M2	Succinivibrionaceae	2	-0.067	0.524	not replicated
+Methane	methane_pooled_noSE1:with_reanalysis	Methane	M3	total archaea	1	0.014	0.676	not replicated (direction not stated)
+Methane	methane_pooled_noSE1:with_reanalysis	MethaneSecondary	S1	Sharpea	2	-0.027	0.83	not replicated
 Methane	clr_pooled:methane_clr	Nelore	N30	Pseudobutyrivibrio	2	0.072	1	not replicated
 Methane	clr_pooled:methane_clr	Nelore	N32	Roseburia	1	-0.063	1	not replicated
 Methane	clr_pooled:methane_clr	Nelore	N37	Coprococcus	2	0.033	1	not replicated

@@ -1,7 +1,11 @@
 version	not replicated	opposite sign
 Methane | clr_pooled:methane_clr	10	1
+Methane | methane_pooled_ch4_dmi:primary	11	0
+Methane | methane_pooled_ch4_dmi:with_reanalysis	11	0
 Methane | methane_pooled_depth:primary	11	0
 Methane | methane_pooled_depth:with_reanalysis	11	0
+Methane | methane_pooled_noSE1:primary	11	0
+Methane | methane_pooled_noSE1:with_reanalysis	11	0
 Methane | methane_pooled:primary	11	0
 Methane | methane_pooled:with_reanalysis	11	0
 RFI | clr_pooled:rfi_clr	27	0
