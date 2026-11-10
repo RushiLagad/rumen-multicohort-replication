@@ -31,7 +31,7 @@ if (qr(mm)$rank < ncol(mm)) { stopifnot(src == "difford"); cat("herd + batch not
 stopifnot("design not of full rank" = qr(mm)$rank == ncol(mm))
 X <- X[, rownames(md), drop=FALSE]; n <- ncol(X); df <- n - ncol(mm)
 cat(coh, mode, if (nzchar(tag)) tag else "", "| cows", n, "| df", df, "| terms:", paste(terms, collapse=" + "), "\n")
-tk <- rd(file.path(root, "plan", "target_keys.tsv")); tk <- tk[(tk$set %in% c("Methane", "MethaneSecondary") | (tk$set == "Nelore" & tk$phenotype == "RME_GC")) & tk$status %in% c("mapped", "special"), ]
+tk <- rd(file.path(root, "plan", "target_keys.tsv")); tk <- if (trait == "rfi_nrc") tk[grepl("^RFI", tk$phenotype) & tk$status == "mapped" & tk$n_keys > 0 & tk$target_rank %in% c("genus", "family"), ] else tk[(tk$set %in% c("Methane", "MethaneSecondary") | (tk$set == "Nelore" & tk$phenotype == "RME_GC")) & tk$status %in% c("mapped", "special"), ]   # Amendment 43
 fam <- lin$family[match(rownames(X), lin$genus)]; fam[is.na(fam)] <- "unassigned_family"; kng <- lin$kingdom[match(rownames(X), lin$genus)]
 A <- X; feat <- rep(NA_character_, nrow(tk)); npres <- integer(nrow(tk))
 for (j in seq_len(nrow(tk))) { rk <- tk$target_rank[j]; if (rk == "clade_ratio") next
