@@ -22,7 +22,7 @@ coh <- c(nelore = sprintf("Nelore, shotgun (n = %d)", n_of("nelore")),
          charolais_mrna = sprintf("Charolais, metatranscriptome (n = %d)", n_of("charolais_mrna")),
          alberta_all = sprintf("Alberta, 16S (n = %d)", n_of("alberta_all")))
 col <- setNames(c("#2a78d6", "#eb6834", "#1baf7a"), coh); shp <- setNames(c(16, 15, 17), coh)  # shape = secondary encoding (aqua is < 3:1)
-set_lab <- c(Canonical = "Canonical rumen taxa", Li = "Li et al. 2019 (Alberta discovery)", Nelore = "Nelore discovery taxa")
+set_lab <- c(Canonical = "Canonical rumen taxa", Li = "Li et al. 2019, Microbiome 7:6", Nelore = "Nelore discovery taxa")
 theme_r <- theme_minimal(base_size=8.5) + theme(
   text = element_text(colour=ink), axis.text = element_text(colour=ink2), axis.title = element_text(colour=ink2, size=8),
   panel.grid.major.y = element_blank(), panel.grid.minor = element_blank(), panel.grid.major.x = element_line(colour=grid, linewidth=0.3),
