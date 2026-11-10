@@ -15,7 +15,7 @@ for x in R:
     hd = f[1] if len(f) > 1 else ""; p = hd.split(":")
     inst = p[0] if len(p) > 2 else "NA"; fc = p[2] if len(p) > 2 else "NA"
     plat = "MiSeq" if inst.startswith("M") else ("HiSeq" if inst.startswith(("HWI-D", "D")) else "NA")
-    cow = re.sub(r"_lib\d+$", "", re.sub(r"^NG-8305_", "", x["sample_alias"]))
+    cow = re.sub(r"_(lib\d+|Bact|Arch|V\d+)$", "", re.sub(r"^(IC|NG)-\d+_", "", x["sample_alias"]))
     rows.append(dict(run=r, sample=x["sample_accession"], alias=x["sample_alias"], cow=cow, in_s4=cow in S4.index,
                      marker=marker(cen.get(r, "")), platform=plat, instrument=inst, flowcell=fc, reads=x["read_count"]))
 d = pd.DataFrame(rows); d.to_csv("harmonized/difford_runs.tsv", sep="\t", index=False)
