@@ -1,0 +1,6 @@
+charolais_mrna species : targets 1  features 12017  n 30  df 26 
+ id                     target set n_keys n_present feature reads prevalence
+ T6 Methanobrevibacter smithii  Li      2         2  TGT_T6  7619          1
+ pass10
+   TRUE
+CLR (Amendment 42): charolais_mrna_species | animals 30 | features 11827 of 12016 | df 26 | targets ok 1 
