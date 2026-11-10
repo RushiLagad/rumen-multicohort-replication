@@ -9,7 +9,7 @@ if (mode == "real") stopifnot("real mode is locked until the dry-run result is r
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote="")
 src <- if (startsWith(coh, "difford")) "difford" else "wallace"; trait <- Sys.getenv("TRAIT", "ch4_gd"); noSE1 <- Sys.getenv("NO_SE1") == "1"
 if (src == "difford") stopifnot(trait == "ch4_gd", !noSE1)
-tag <- paste0(if (trait != "ch4_gd") paste0("_", trait) else "", if (noSE1) "_noSE1" else "", if (mode == "shuffle" && SEED != 20261105) paste0("_seed", SEED) else "")
+tag <- paste0(if (trait != "ch4_gd") paste0("_", trait) else "", if (noSE1) "_noSE1" else "", if (Sys.getenv("DEPTH") == "1") "_depth" else "", if (mode == "shuffle" && SEED != 20261105) paste0("_seed", SEED) else "")
 out <- file.path(root, "results", if (mode == "shuffle") "methane_dryrun" else "methane"); dir.create(out, recursive=TRUE, showWarnings=FALSE)
 X <- rd(file.path(root, "profiles_16s", coh, paste0(coh, "_genus_counts.tsv"))); rownames(X) <- X[[1]]; X <- as.matrix(X[, -1, drop=FALSE])
 lin <- rd(file.path(root, "results", "16s", coh, "genus_lineage_silva.tsv"))
@@ -22,6 +22,7 @@ if (mode == "shuffle") { for (g in unique(grp)) { i <- which(grp == g); an$y[i] 
 if (src == "difford") an$CH4_z <- as.numeric(scale(an$y)) else { an$CH4_z <- NA_real_; for (g in unique(grp)) { i <- which(grp == g); an$CH4_z[i] <- as.numeric(scale(an$y[i])) } }
 md <- if (src == "difford") data.frame(herd=factor(an$herd), parity=factor(an$parity), dim=an$dim, batch=factor(an$batch), CH4_z=an$CH4_z, row.names=an$cow) else
   data.frame(farm=factor(an$farm), parity=factor(an$parity), dim=an$dim, CH4_z=an$CH4_z, row.names=an$cow)
+if (Sys.getenv("DEPTH") == "1") { stopifnot("DEPTH=1 is for Wallace only (Amendment 41)" = src == "wallace"); md$log_depth <- log10(colSums(X[, rownames(md), drop=FALSE])); md <- md[, c("farm", "parity", "dim", "log_depth", "CH4_z")] }
 terms <- c(setdiff(names(md), "CH4_z"), "CH4_z"); mm <- model.matrix(reformulate(terms), md); small <- character(0)
 if (qr(mm)$rank < ncol(mm)) { stopifnot(src == "difford"); cat("herd + batch not of full rank: management group = herd x batch (Amendments 23, 28)\n")
   md$group <- factor(paste(an$herd, an$batch, sep="|")); gs <- table(md$group); small <- names(gs)[gs < 5]; keep <- !md$group %in% small
