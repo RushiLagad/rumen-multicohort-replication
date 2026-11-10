@@ -60,6 +60,7 @@ cov <- data.frame(id=tk$id, target=tk$target, set=tk$set, n_keys=tk$n_keys, n_pr
   reads=unname(rowSums(m)), prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 print(cov, row.names=FALSE)
 if (dry) quit(save="no")
+if (Sys.getenv("CLR") == "1") { source(file.path(root, "scripts", "lib_clr.R")); clr_write(A, feat, tk, md, terms, n, df, cohort=coh, rank=rk, prefix=paste0(coh, "_", rk), root=root); quit(save="no") }
 # --- fit ANCOM-BC2 (package defaults; Amendment 14b item 2). Features get safe IDs so no package renames them.
 orig <- rownames(A); rownames(A) <- sprintf("F%05d", seq_along(orig)); sf <- rownames(A)[match(feat, orig)]
 tse <- TreeSummarizedExperiment(assays=list(counts=as.matrix(A)), colData=md[, terms, drop=FALSE])
