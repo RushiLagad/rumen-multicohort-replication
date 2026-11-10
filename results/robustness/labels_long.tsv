@@ -1,0 +1,191 @@
+arm	version	set	id	target	k	r	q	label
+RFI	replication_rfi3_calibrated:all	Li	T2	Firmicutes	2	0.036	1	not replicated
+RFI	replication_rfi3_calibrated:all	Li	T3	Chloroflexi	2	-0.012	1	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:all	Li	T4	unclassified Methanomassiliicoccaceae	2	-0.256	0.156	not replicated
+RFI	replication_rfi3_calibrated:all	Li	T5	Blautia	2	0.059	1	not replicated
+RFI	replication_rfi3_calibrated:all	Li	T6	Methanobrevibacter smithii	2	0.097	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N01	Anaeromyxobacter	1	0.195	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N02	Actinomadura	1	0.122	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N04	Acidaminococcus	1	-0.162	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N06	Actinoplanes	1	-0.116	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N08	Gordonia	1	-0.162	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N10	Phascolarctobacterium	1	0.211	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N11	Comamonas	1	0.154	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N13	Eubacterium	1	-0.118	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N15	Selenomonas	2	0.118	0.273	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N17	Burkholderia	1	-0.025	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N19	Lysobacter	1	-0.134	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N20	Pseudonocardia	1	-0.146	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N21	Brevibacterium	1	0.149	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N22	Nonomuraea	1	0.183	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N23	Succinivibrio	2	0.059	1	not replicated
+RFI	replication_rfi3_calibrated:all	Nelore	N28	Photobacterium	1	0.223	1	not replicated
+RFI	replication_rfi3_calibrated:all	Canonical	C1	Methanobrevibacter	2	0.112	0.531	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:all	Canonical	C2	Succinivibrionaceae	3	0.159	0.531	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:all	Canonical	C3	Fibrobacter	3	-0.024	0.658	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:all	Canonical	C4	Ruminococcus	3	0.12	0.531	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:all	Canonical	C5	Prevotella	3	0.04	0.531	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:all	Canonical	C6	Butyrivibrio	3	0.003	0.94	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:primary	Li	T2	Firmicutes	2	0.036	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Li	T3	Chloroflexi	2	-0.012	1	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:primary	Li	T4	unclassified Methanomassiliicoccaceae	2	-0.256	0.156	not replicated
+RFI	replication_rfi3_calibrated:primary	Li	T5	Blautia	2	0.059	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Li	T6	Methanobrevibacter smithii	2	0.097	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N01	Anaeromyxobacter	1	0.195	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N02	Actinomadura	1	0.122	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N04	Acidaminococcus	1	-0.162	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N06	Actinoplanes	1	-0.116	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N08	Gordonia	1	-0.162	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N10	Phascolarctobacterium	1	0.211	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N11	Comamonas	1	0.154	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N13	Eubacterium	1	-0.118	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N15	Selenomonas	2	0.102	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N17	Burkholderia	1	-0.025	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N19	Lysobacter	1	-0.134	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N20	Pseudonocardia	1	-0.146	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N21	Brevibacterium	1	0.149	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N22	Nonomuraea	1	0.183	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N23	Succinivibrio	2	0.056	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Nelore	N28	Photobacterium	1	0.223	1	not replicated
+RFI	replication_rfi3_calibrated:primary	Canonical	C1	Methanobrevibacter	2	0.112	0.646	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:primary	Canonical	C2	Succinivibrionaceae	3	0.157	0.646	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:primary	Canonical	C3	Fibrobacter	3	-0.026	0.646	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:primary	Canonical	C4	Ruminococcus	3	0.118	0.646	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:primary	Canonical	C5	Prevotella	3	0.025	0.646	not replicated (direction not stated)
+RFI	replication_rfi3_calibrated:primary	Canonical	C6	Butyrivibrio	3	0.005	0.894	not replicated (direction not stated)
+RFI	replication_rfi3:all	Li	T2	Firmicutes	2	0.036	1	not replicated
+RFI	replication_rfi3:all	Li	T3	Chloroflexi	2	-0.017	1	not replicated (direction not stated)
+RFI	replication_rfi3:all	Li	T4	unclassified Methanomassiliicoccaceae	2	-0.279	0.09	not replicated
+RFI	replication_rfi3:all	Li	T5	Blautia	2	0.066	1	not replicated
+RFI	replication_rfi3:all	Li	T6	Methanobrevibacter smithii	2	0.097	1	not replicated
+RFI	replication_rfi3:all	Nelore	N01	Anaeromyxobacter	1	0.257	1	not replicated
+RFI	replication_rfi3:all	Nelore	N02	Actinomadura	1	0.122	1	not replicated
+RFI	replication_rfi3:all	Nelore	N04	Acidaminococcus	1	-0.162	1	not replicated
+RFI	replication_rfi3:all	Nelore	N06	Actinoplanes	1	-0.116	1	not replicated
+RFI	replication_rfi3:all	Nelore	N08	Gordonia	1	-0.162	1	not replicated
+RFI	replication_rfi3:all	Nelore	N10	Phascolarctobacterium	1	0.211	1	not replicated
+RFI	replication_rfi3:all	Nelore	N11	Comamonas	1	0.154	1	not replicated
+RFI	replication_rfi3:all	Nelore	N13	Eubacterium	1	-0.118	1	not replicated
+RFI	replication_rfi3:all	Nelore	N15	Selenomonas	2	0.119	0.258	not replicated
+RFI	replication_rfi3:all	Nelore	N17	Burkholderia	1	-0.035	1	not replicated
+RFI	replication_rfi3:all	Nelore	N19	Lysobacter	1	-0.134	1	not replicated
+RFI	replication_rfi3:all	Nelore	N20	Pseudonocardia	1	-0.146	1	not replicated
+RFI	replication_rfi3:all	Nelore	N21	Brevibacterium	1	0.166	1	not replicated
+RFI	replication_rfi3:all	Nelore	N22	Nonomuraea	1	0.183	1	not replicated
+RFI	replication_rfi3:all	Nelore	N23	Succinivibrio	2	0.086	1	not replicated
+RFI	replication_rfi3:all	Nelore	N28	Photobacterium	1	0.223	1	not replicated
+RFI	replication_rfi3:all	Canonical	C1	Methanobrevibacter	2	0.12	0.414	not replicated (direction not stated)
+RFI	replication_rfi3:all	Canonical	C2	Succinivibrionaceae	3	0.187	0.414	not replicated (direction not stated)
+RFI	replication_rfi3:all	Canonical	C3	Fibrobacter	3	-0.038	0.414	not replicated (direction not stated)
+RFI	replication_rfi3:all	Canonical	C4	Ruminococcus	3	0.126	0.414	not replicated (direction not stated)
+RFI	replication_rfi3:all	Canonical	C5	Prevotella	3	0.04	0.414	not replicated (direction not stated)
+RFI	replication_rfi3:all	Canonical	C6	Butyrivibrio	3	0.003	0.938	not replicated (direction not stated)
+RFI	replication_rfi3:primary	Li	T2	Firmicutes	2	0.036	1	not replicated
+RFI	replication_rfi3:primary	Li	T3	Chloroflexi	2	-0.017	1	not replicated (direction not stated)
+RFI	replication_rfi3:primary	Li	T4	unclassified Methanomassiliicoccaceae	2	-0.279	0.09	not replicated
+RFI	replication_rfi3:primary	Li	T5	Blautia	2	0.066	1	not replicated
+RFI	replication_rfi3:primary	Li	T6	Methanobrevibacter smithii	2	0.097	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N01	Anaeromyxobacter	1	0.257	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N02	Actinomadura	1	0.122	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N04	Acidaminococcus	1	-0.162	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N06	Actinoplanes	1	-0.116	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N08	Gordonia	1	-0.162	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N10	Phascolarctobacterium	1	0.211	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N11	Comamonas	1	0.154	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N13	Eubacterium	1	-0.118	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N15	Selenomonas	2	0.102	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N17	Burkholderia	1	-0.035	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N19	Lysobacter	1	-0.134	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N20	Pseudonocardia	1	-0.146	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N21	Brevibacterium	1	0.166	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N22	Nonomuraea	1	0.183	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N23	Succinivibrio	2	0.079	1	not replicated
+RFI	replication_rfi3:primary	Nelore	N28	Photobacterium	1	0.223	1	not replicated
+RFI	replication_rfi3:primary	Canonical	C1	Methanobrevibacter	2	0.12	0.542	not replicated (direction not stated)
+RFI	replication_rfi3:primary	Canonical	C2	Succinivibrionaceae	3	0.184	0.542	not replicated (direction not stated)
+RFI	replication_rfi3:primary	Canonical	C3	Fibrobacter	3	-0.041	0.542	not replicated (direction not stated)
+RFI	replication_rfi3:primary	Canonical	C4	Ruminococcus	3	0.124	0.542	not replicated (direction not stated)
+RFI	replication_rfi3:primary	Canonical	C5	Prevotella	3	0.025	0.644	not replicated (direction not stated)
+RFI	replication_rfi3:primary	Canonical	C6	Butyrivibrio	3	0.006	0.892	not replicated (direction not stated)
+Methane	methane_pooled:primary	Nelore	N30	Pseudobutyrivibrio	2	0.033	1	not replicated
+Methane	methane_pooled:primary	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled:primary	Nelore	N37	Coprococcus	2	-0.045	1	not replicated
+Methane	methane_pooled:primary	Nelore	N38	Eubacterium	1	-0.039	1	not replicated
+Methane	methane_pooled:primary	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled:primary	Nelore	N40	Blautia	1	-0.005	1	not replicated
+Methane	methane_pooled:primary	Nelore	N42	Lachnospira	2	-0.071	1	not replicated
+Methane	methane_pooled:primary	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.03	0.474	not replicated
+Methane	methane_pooled:primary	Methane	M2	Succinivibrionaceae	1	0.006	0.882	not replicated
+Methane	methane_pooled:primary	Methane	M3	total archaea	1	0.032	0.474	not replicated (direction not stated)
+Methane	methane_pooled:primary	MethaneSecondary	S1	Sharpea	2	-0.034	0.551	not replicated
+Methane	methane_pooled:with_reanalysis	Nelore	N30	Pseudobutyrivibrio	2	0.033	1	not replicated
+Methane	methane_pooled:with_reanalysis	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled:with_reanalysis	Nelore	N37	Coprococcus	2	-0.045	1	not replicated
+Methane	methane_pooled:with_reanalysis	Nelore	N38	Eubacterium	1	-0.039	1	not replicated
+Methane	methane_pooled:with_reanalysis	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled:with_reanalysis	Nelore	N40	Blautia	1	-0.005	1	not replicated
+Methane	methane_pooled:with_reanalysis	Nelore	N42	Lachnospira	2	-0.071	1	not replicated
+Methane	methane_pooled:with_reanalysis	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.03	0.349	not replicated
+Methane	methane_pooled:with_reanalysis	Methane	M2	Succinivibrionaceae	2	-0.061	0.349	not replicated
+Methane	methane_pooled:with_reanalysis	Methane	M3	total archaea	1	0.032	0.349	not replicated (direction not stated)
+Methane	methane_pooled:with_reanalysis	MethaneSecondary	S1	Sharpea	2	-0.034	0.551	not replicated
+Methane	methane_pooled_depth:primary	Nelore	N30	Pseudobutyrivibrio	2	0.014	1	not replicated
+Methane	methane_pooled_depth:primary	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled_depth:primary	Nelore	N37	Coprococcus	2	-0.029	1	not replicated
+Methane	methane_pooled_depth:primary	Nelore	N38	Eubacterium	1	-0.015	1	not replicated
+Methane	methane_pooled_depth:primary	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled_depth:primary	Nelore	N40	Blautia	1	-0.007	1	not replicated
+Methane	methane_pooled_depth:primary	Nelore	N42	Lachnospira	2	-0.041	1	not replicated
+Methane	methane_pooled_depth:primary	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.042	0.301	not replicated
+Methane	methane_pooled_depth:primary	Methane	M2	Succinivibrionaceae	1	0.006	0.882	not replicated
+Methane	methane_pooled_depth:primary	Methane	M3	total archaea	1	0.034	0.418	not replicated (direction not stated)
+Methane	methane_pooled_depth:primary	MethaneSecondary	S1	Sharpea	2	-0.002	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Nelore	N30	Pseudobutyrivibrio	2	0.014	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Nelore	N32	Roseburia	1	-0.061	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Nelore	N37	Coprococcus	2	-0.029	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Nelore	N38	Eubacterium	1	-0.015	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Nelore	N39	Anaerostipes	1	-0.006	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Nelore	N40	Blautia	1	-0.007	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Nelore	N42	Lachnospira	2	-0.041	1	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.042	0.301	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Methane	M2	Succinivibrionaceae	2	-0.061	0.349	not replicated
+Methane	methane_pooled_depth:with_reanalysis	Methane	M3	total archaea	1	0.034	0.349	not replicated (direction not stated)
+Methane	methane_pooled_depth:with_reanalysis	MethaneSecondary	S1	Sharpea	2	-0.002	1	not replicated
+Methane	clr_pooled:methane_clr	Nelore	N30	Pseudobutyrivibrio	2	0.072	1	not replicated
+Methane	clr_pooled:methane_clr	Nelore	N32	Roseburia	1	-0.063	1	not replicated
+Methane	clr_pooled:methane_clr	Nelore	N37	Coprococcus	2	0.033	1	not replicated
+Methane	clr_pooled:methane_clr	Nelore	N38	Eubacterium	1	-0.121	0.004	opposite sign
+Methane	clr_pooled:methane_clr	Nelore	N39	Anaerostipes	1	-0.001	1	not replicated
+Methane	clr_pooled:methane_clr	Nelore	N40	Blautia	1	-0.062	0.846	not replicated
+Methane	clr_pooled:methane_clr	Nelore	N42	Lachnospira	2	-0.053	1	not replicated
+Methane	clr_pooled:methane_clr	Methane	M1	Methanobrevibacter gottschalkii clade vs ruminantium clade	2	0.03	0.399	not replicated
+Methane	clr_pooled:methane_clr	Methane	M2	Succinivibrionaceae	1	0.041	0.399	not replicated
+Methane	clr_pooled:methane_clr	Methane	M3	total archaea	1	0	0.995	not replicated (direction not stated)
+Methane	clr_pooled:methane_clr	MethaneSecondary	S1	Sharpea	2	-0.073	1	not replicated
+RFI	clr_pooled:rfi_clr	Li	T2	Firmicutes	2	0.021	1	not replicated
+RFI	clr_pooled:rfi_clr	Li	T3	Chloroflexi	2	-0.076	1	not replicated (direction not stated)
+RFI	clr_pooled:rfi_clr	Li	T4	unclassified Methanomassiliicoccaceae	2	-0.347	0.74	not replicated
+RFI	clr_pooled:rfi_clr	Li	T5	Blautia	2	-0.07	1	not replicated
+RFI	clr_pooled:rfi_clr	Li	T6	Methanobrevibacter smithii	2	-0.104	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N01	Anaeromyxobacter	1	-0.042	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N02	Actinomadura	1	0.176	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N04	Acidaminococcus	1	-0.318	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N06	Actinoplanes	1	-0.42	0.838	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N08	Gordonia	1	-0.372	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N10	Phascolarctobacterium	1	0.097	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N11	Comamonas	1	0.237	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N13	Eubacterium	1	-0.425	0.838	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N15	Selenomonas	2	0.03	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N17	Burkholderia	1	-0.001	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N19	Lysobacter	1	-0.281	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N20	Pseudonocardia	1	0.244	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N21	Brevibacterium	1	0.071	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N22	Nonomuraea	1	0.239	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N23	Succinivibrio	2	0.042	1	not replicated
+RFI	clr_pooled:rfi_clr	Nelore	N28	Photobacterium	1	-0.038	1	not replicated
+RFI	clr_pooled:rfi_clr	Canonical	C1	Methanobrevibacter	2	-0.059	0.857	not replicated (direction not stated)
+RFI	clr_pooled:rfi_clr	Canonical	C2	Succinivibrionaceae	3	0.138	0.707	not replicated (direction not stated)
+RFI	clr_pooled:rfi_clr	Canonical	C3	Fibrobacter	3	-0.064	0.857	not replicated (direction not stated)
+RFI	clr_pooled:rfi_clr	Canonical	C4	Ruminococcus	3	0.068	0.857	not replicated (direction not stated)
+RFI	clr_pooled:rfi_clr	Canonical	C5	Prevotella	3	0.007	0.857	not replicated (direction not stated)
+RFI	clr_pooled:rfi_clr	Canonical	C6	Butyrivibrio	3	0.051	0.707	not replicated (direction not stated)
