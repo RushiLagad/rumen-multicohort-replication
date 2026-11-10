@@ -1,0 +1,148 @@
+== RFI, CLR vs calibrated ANCOM-BC2 (Alberta all-animal)
+  id                                target k r_ancom  r_clr         ci_clr
+  C2                   Succinivibrionaceae 3   0.159  0.138  -0.09 to 0.35
+  C6                          Butyrivibrio 3   0.003  0.051  -0.03 to 0.13
+  T4 unclassified Methanomassiliicoccaceae 2  -0.256 -0.347   -0.68 to 0.1
+ N06                          Actinoplanes 1  -0.116 -0.420 -0.69 to -0.06
+ N13                           Eubacterium 1  -0.118 -0.425 -0.69 to -0.06
+  C1                    Methanobrevibacter 2   0.112 -0.059  -0.51 to 0.42
+  C3                           Fibrobacter 3  -0.024 -0.064  -0.23 to 0.11
+  C4                          Ruminococcus 3   0.120  0.068  -0.19 to 0.32
+  C5                            Prevotella 3   0.040  0.007  -0.07 to 0.09
+  T2                            Firmicutes 2   0.036  0.021  -0.31 to 0.35
+  T3                           Chloroflexi 2  -0.012 -0.076   -0.3 to 0.16
+  T5                               Blautia 2   0.059 -0.070  -0.46 to 0.34
+  T6            Methanobrevibacter smithii 2   0.097 -0.104  -0.32 to 0.13
+ N01                      Anaeromyxobacter 1   0.195 -0.042  -0.41 to 0.34
+ N02                          Actinomadura 1   0.122  0.176  -0.21 to 0.52
+ N04                       Acidaminococcus 1  -0.162 -0.318  -0.62 to 0.06
+ N08                              Gordonia 1  -0.162 -0.372     -0.65 to 0
+ N10                 Phascolarctobacterium 1   0.211  0.097  -0.29 to 0.45
+ N11                             Comamonas 1   0.154  0.237  -0.15 to 0.56
+ N15                           Selenomonas 2   0.118  0.030  -0.05 to 0.11
+ N17                          Burkholderia 1  -0.025 -0.001  -0.37 to 0.37
+ N19                            Lysobacter 1  -0.134 -0.281   -0.59 to 0.1
+ N20                        Pseudonocardia 1  -0.146  0.244  -0.14 to 0.57
+ N21                        Brevibacterium 1   0.149  0.071  -0.31 to 0.43
+ N22                            Nonomuraea 1   0.183  0.239  -0.15 to 0.56
+ N23                         Succinivibrio 2   0.059  0.042  -0.04 to 0.12
+ N28                        Photobacterium 1   0.223 -0.038  -0.41 to 0.34
+ q_ancom q_clr                           label_ancom
+    0.53  0.71 not replicated (direction not stated)
+    0.94  0.71 not replicated (direction not stated)
+    0.16  0.74                        not replicated
+    1.00  0.84                        not replicated
+    1.00  0.84                        not replicated
+    0.53  0.86 not replicated (direction not stated)
+    0.66  0.86 not replicated (direction not stated)
+    0.53  0.86 not replicated (direction not stated)
+    0.53  0.86 not replicated (direction not stated)
+    1.00  1.00                        not replicated
+    1.00  1.00 not replicated (direction not stated)
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    0.27  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+    1.00  1.00                        not replicated
+                             label_clr
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+                        not replicated
+                        not replicated
+                        not replicated
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+ not replicated (direction not stated)
+                        not replicated
+ not replicated (direction not stated)
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+label changes: 0 | same sign of pooled r: 21 of 27 | Spearman pooled r: 0.61 
+RFI target x cohort pairs: 45 | same sign: 31 | Spearman W: 0.66 
+
+== METHANE, CLR vs calibrated ANCOM-BC2
+  id                                                     target k r_ancom
+ N30                                         Pseudobutyrivibrio 2   0.033
+ N32                                                  Roseburia 1  -0.061
+ N37                                                Coprococcus 2  -0.045
+ N38                                                Eubacterium 1  -0.039
+ N39                                               Anaerostipes 1  -0.006
+ N40                                                    Blautia 1  -0.005
+ N42                                                Lachnospira 2  -0.071
+  M1 Methanobrevibacter gottschalkii clade vs ruminantium clade 2   0.030
+  M2                                        Succinivibrionaceae 1   0.006
+  M3                                              total archaea 1   0.032
+  S1                                                    Sharpea 2  -0.034
+  r_clr q_ancom q_clr                           label_ancom
+  0.072    1.00  1.00                        not replicated
+ -0.063    1.00  1.00                        not replicated
+  0.033    1.00  1.00                        not replicated
+ -0.121    1.00  0.00                        not replicated
+ -0.001    1.00  1.00                        not replicated
+ -0.062    1.00  0.85                        not replicated
+ -0.053    1.00  1.00                        not replicated
+  0.030    0.47  0.40                        not replicated
+  0.041    0.88  0.40                        not replicated
+  0.000    0.47  1.00 not replicated (direction not stated)
+ -0.073    0.55  1.00                        not replicated
+                             label_clr
+                        not replicated
+                        not replicated
+                        not replicated
+                         opposite sign
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+                        not replicated
+ not replicated (direction not stated)
+                        not replicated
+label changes: 1 | same sign of pooled r: 9 of 11 
+
+== WALLACE FARM-ROBUST GENERA UNDER CLR
+                         genus W_ancom_wallace W_clr_wallace W_clr_difford
+                        FD2005          -13.56         -1.89          0.30
+                        NED5E9          -12.23         -5.15         -1.05
+                Elusimicrobium          -12.22         -4.00          0.63
+                  Prevotella_7          -11.10         -6.29          1.51
+                  Oribacterium          -10.68         -6.21         -0.18
+                Shuttleworthia           -8.07         -4.91          1.35
+                      Moryella            7.51          6.26         -0.62
+                  Prevotella_9           -7.42         -5.78          1.94
+        Prevotellaceae_UCG-001            7.29          7.07          0.18
+        Prevotellaceae_UCG-003            6.33          6.44          0.47
+                 NK4A214_group            6.08          6.19         -1.63
+   Prevotellaceae_NK3B31_group            5.98          6.48          0.44
+ Christensenellaceae_R-7_group            5.73          6.45         -1.18
+        Prevotellaceae_UCG-004            5.55          4.30          0.39
+                  Butyrivibrio            5.48          7.05         -0.47
+                  Ruminococcus            2.74          1.67          0.32
+same sign ANCOM vs CLR in Wallace: 16 of 16 | CLR |W| > 2 in Wallace: 14 | same sign Wallace vs Difford (CLR): 7 of 16 | CLR |W| > 2 in Difford: 0 
+all Wallace genera, Spearman ANCOM vs CLR W: 0.74 
+Difford vs Wallace, CLR W over 80 shared genera: Spearman -0.23 
