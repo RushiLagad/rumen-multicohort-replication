@@ -28,7 +28,8 @@ SS <- Sys.getenv("SHUFFLE_SEED"); if (nzchar(SS)) { set.seed(as.integer(SS)); g 
 n <- ncol(X); df <- n - ncol(model.matrix(reformulate(terms), md))
 # --- aggregate to rank (genus->family/phylum via taxonomy)
 if (rk %in% c("family", "phylum")) {
-  lf <- file.path(root, "results", "replication", "genus_lineage.tsv")
+  lf <- if (coh == "charolais_16s") file.path(root, "results", "16s", "charolais_16s", "genus_lineage_silva.tsv") else file.path(root, "results", "replication", "genus_lineage.tsv")   # Amendment 35 item 3
+  if (coh == "charolais_16s") stopifnot("SILVA lineage missing (Amendment 35)" = file.exists(lf))
   if (!file.exists(lf)) {
     sp <- function(l) strsplit(l, "\t|\t", fixed=TRUE); col <- function(v, i) vapply(v, `[`, "", i)
     nd <- sp(readLines(file.path(tax, "nodes.dmp"))); id <- col(nd, 1)
