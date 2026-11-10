@@ -1,0 +1,37 @@
+== Wallace RFI NRC, calibrated (sensitivity; Amendment 43)
+  id              target    n   W_raw sd_null       W p_perm        r
+  T5             Blautia 1004 -2.1608   2.430 -0.8893 0.3881 -0.02821
+ N13         Eubacterium 1004 -0.2996   2.430 -0.1233 0.8458 -0.00391
+ N15         Selenomonas 1004  0.2619   0.934  0.2619 0.7562  0.00831
+ N23       Succinivibrio 1004 -1.4630   1.072 -1.3650 0.1891 -0.04328
+  C1  Methanobrevibacter 1004 -0.4106   0.890 -0.4106 0.6468 -0.01303
+  C2 Succinivibrionaceae 1004  1.8419   0.833  1.8419 0.0398  0.05835
+  C3         Fibrobacter 1004 -0.0407   0.754 -0.0407 0.9552 -0.00129
+  C4        Ruminococcus 1004  1.0462   0.676  1.0462 0.1194  0.03318
+  C5          Prevotella 1004  1.2117   0.475  1.2117 0.0597  0.03842
+  C6        Butyrivibrio 1004 -0.5268   0.899 -0.5268 0.5522 -0.01672
+
+== targets gaining Wallace as a cohort: 3-cohort primary vs 4-cohort sensitivity
+  id              target k3 k4     r3     r4           ci4   q3   q4
+  T5             Blautia  2  3  0.059 -0.022 -0.08 to 0.04 1.00 1.00
+ N13         Eubacterium  1  2 -0.118 -0.007 -0.07 to 0.05 1.00 1.00
+ N15         Selenomonas  2  3  0.118  0.064 -0.03 to 0.16 0.27 1.00
+ N23       Succinivibrio  2  3  0.059  0.006  -0.09 to 0.1 1.00 1.00
+  C1  Methanobrevibacter  2  3  0.112  0.000 -0.07 to 0.07 0.53 0.99
+  C2 Succinivibrionaceae  3  4  0.159  0.098 -0.05 to 0.24 0.53 0.57
+  C3         Fibrobacter  3  4 -0.024 -0.010 -0.06 to 0.04 0.66 0.86
+  C4        Ruminococcus  3  4  0.120  0.069 -0.07 to 0.21 0.53 0.68
+  C5          Prevotella  3  4  0.040  0.039 -0.01 to 0.09 0.53 0.57
+  C6        Butyrivibrio  3  4  0.003 -0.009 -0.06 to 0.04 0.94 0.86
+                                label3                                label4
+                        not replicated                        not replicated
+                        not replicated                        not replicated
+                        not replicated                        not replicated
+                        not replicated                        not replicated
+ not replicated (direction not stated) not replicated (direction not stated)
+ not replicated (direction not stated) not replicated (direction not stated)
+ not replicated (direction not stated) not replicated (direction not stated)
+ not replicated (direction not stated) not replicated (direction not stated)
+ not replicated (direction not stated) not replicated (direction not stated)
+ not replicated (direction not stated) not replicated (direction not stated)
+label changes (all targets): 0 | replicated with Wallace: 0 
