@@ -1,0 +1,80 @@
+genera under test: 29 | cows 1009 | farms 7 
+Loading required package: foreach
+Loading required package: rngtools
+leave out FI1 : cows 909 
+within FI1 : cows 100 | terms parity + dim + CH4_z 
+leave out IT1 : cows 824 
+within IT1 : cows 185 | terms parity + dim + CH4_z 
+leave out IT2 : cows 833 
+within IT2 : cows 176 | terms parity + dim + CH4_z 
+leave out IT3 : cows 961 
+within IT3 : cows 48 | terms parity + dim + CH4_z 
+leave out SE1 : cows 916 
+within SE1 : cows 93 | terms parity + dim + CH4_z 
+leave out UK1 : cows 766 
+within UK1 : cows 243 | terms parity + dim + CH4_z 
+leave out UK2 : cows 845 
+within UK2 : cows 164 | terms parity + dim + CH4_z 
+== WALLACE FARM CONSISTENCY (Amendment 40)
+                         genus W_full null_q95 W_lofo_min W_lofo_max
+                     Dialister -23.31     5.75     -26.25      -2.27
+                        FD2005 -13.56     6.24     -15.01      -8.74
+                 Sphaerochaeta -13.21     8.28     -13.98      -8.06
+                 Lactobacillus  12.52     7.58       4.72      11.65
+                        NED5E9 -12.23     5.90     -14.75      -7.44
+                Elusimicrobium -12.22     5.10     -13.66      -8.67
+                  Prevotella_7 -11.10     2.66     -12.61      -7.03
+                  Oribacterium -10.68     2.43     -12.32      -5.69
+                Shuttleworthia  -8.07     2.66      -9.99      -3.73
+                      Moryella   7.51     1.73       4.67       7.25
+                  Prevotella_9  -7.42     3.01      -9.32      -5.02
+                   Lachnospira  -7.31     3.38     -13.04      -3.06
+        Prevotellaceae_UCG-001   7.29     1.42       3.31       6.86
+        Prevotellaceae_UCG-003   6.33     1.64       2.08       6.37
+                 NK4A214_group   6.08     1.36       2.56       5.79
+   Prevotellaceae_NK3B31_group   5.98     1.79       3.43       5.99
+                    Tyzzerella  -5.91     4.91      -7.28      -3.68
+ Christensenellaceae_R-7_group   5.73     1.42       2.95       5.57
+   Rikenellaceae_RC9_gut_group   5.65     1.61       1.14       5.47
+        Prevotellaceae_UCG-004   5.55     1.62       2.15       5.33
+                  Butyrivibrio   5.48     1.83       3.37       5.09
+                   Anaerovorax   4.79     2.00       1.99       5.01
+                        TGT_M2  -4.14     2.06      -5.01      -2.75
+   Succinivibrionaceae_UCG-001  -4.01     2.17      -5.60      -1.42
+                       CAG-352   3.52     1.97       1.59       3.67
+ Lachnospiraceae_NK4A136_group  -3.01     2.11      -4.26      -1.68
+                     Olsenella  -2.93     2.30      -3.64      -1.25
+                       UCG-005   2.87     1.77       0.82       3.11
+                  Ruminococcus   2.74     1.47       1.67       2.29
+ lofo_sign_kept farm_robust farms_fit farms_same_sign I2 weakest_without
+           TRUE       FALSE         4               3 98             IT1
+           TRUE        TRUE         5               2 83             FI1
+           TRUE       FALSE         2               1 NA             FI1
+           TRUE       FALSE         3               2 98             UK1
+           TRUE        TRUE         3               3 71             FI1
+           TRUE        TRUE         6               6 86             FI1
+           TRUE        TRUE         6               6 92             IT1
+           TRUE        TRUE         7               7 95             IT1
+           TRUE        TRUE         7               6 93             IT1
+           TRUE        TRUE         7               5 83             IT1
+           TRUE        TRUE         5               5 95             IT1
+           TRUE       FALSE         5               4 94             IT1
+           TRUE        TRUE         7               6 83             IT1
+           TRUE        TRUE         7               4 88             IT1
+           TRUE        TRUE         7               5 81             IT1
+           TRUE        TRUE         7               5 64             IT1
+           TRUE       FALSE         5               5  0             SE1
+           TRUE        TRUE         7               7 59             IT1
+           TRUE       FALSE         7               6 87             IT1
+           TRUE        TRUE         7               4 81             IT1
+           TRUE        TRUE         7               7 42             IT1
+           TRUE       FALSE         7               6 56             IT1
+           TRUE        TRUE         7               7 69             IT1
+           TRUE       FALSE         6               5 80             IT1
+           TRUE       FALSE         7               5 69             IT1
+           TRUE       FALSE         7               6 86             IT1
+           TRUE       FALSE         6               4 88             IT1
+           TRUE       FALSE         7               5 62             IT1
+           TRUE        TRUE         7               4 67             IT2
+== farm-robust (sign kept in all 7 leave-one-farm-out refits and |W| stays above the per-genus null 95th percentile): 17 of 29 
+== sign agreement in per-farm fits, genera with >= 5 of 7 farms agreeing: 19 of 29 
