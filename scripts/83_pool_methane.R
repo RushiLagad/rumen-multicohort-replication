@@ -5,13 +5,13 @@ suppressMessages(library(metafor)); a <- commandArgs(TRUE); mode <- a[1]; stopif
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); sdir <- dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=TRUE)[1])); source(file.path(sdir, "lib_replication.R"))
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote="")
 plan <- readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")); stopifnot("commit Amendment 37 first" = any(grepl("^\\*\\*Amendment 37 \\(", plan)))
-ind <- file.path(root, "results", if (mode == "dryrun") "methane_dryrun" else "methane"); od <- file.path(root, "results", if (mode == "dryrun") "methane_pooled_dryrun" else "methane_pooled"); dir.create(od, showWarnings=FALSE)
+ind <- file.path(root, "results", if (mode == "dryrun") "methane_dryrun" else "methane"); od <- file.path(root, "results", if (mode == "dryrun") "methane_pooled_dryrun" else paste0("methane_pooled", Sys.getenv("WTAG"))); dir.create(od, showWarnings=FALSE)
 nulldir <- file.path(root, "results", "methane_dryrun")
 # ---- null SD of W per table and target from the seed-1001+ permutations
 nullsd <- function(tab) { fs <- list.files(nulldir, paste0("^", tab, "_seed1[0-9]{3}_targets\\.tsv$"), full.names=TRUE)
   if (!length(fs)) return(NULL); x <- do.call(rbind, lapply(fs, function(f) { d <- rd(f); d <- d[d$status == "ok", c("id", "W")]; d$seed <- f; d }))
   s <- aggregate(W ~ id, x, function(w) c(sd=sd(w), k=length(w))); data.frame(id=s$id, sd_null=s$W[, "sd"], k_null=s$W[, "k"], W_null=I(split(x$W, x$id)[s$id])) }
-tables <- c(difford_arch="difford", difford_bact="difford", wallace_prokaryotes="wallace")
+tables <- c(difford_arch="difford", difford_bact="difford", setNames("wallace", paste0("wallace_prokaryotes", Sys.getenv("WTAG"))))
 est <- list()
 for (tab in names(tables)) { f <- file.path(ind, paste0(tab, "_targets.tsv")); if (!file.exists(f)) { cat("missing", f, "\n"); next }
   e <- rd(f); e <- e[e$status == "ok", ]; if (tab == "difford_bact") e <- e[e$id != "M1", ]; if (tab == "difford_arch") e <- e[e$id == "M1", ]

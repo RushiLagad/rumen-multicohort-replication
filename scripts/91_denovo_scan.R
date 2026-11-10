@@ -11,7 +11,8 @@ tabs <- list(
   charolais_mrna_genus=list(real="results/replication/charolais_mrna_genus_ancombc2.csv", null="results/scan_null", pat="^charolais_mrna_genus_seed2[0-9]{3}_ancombc2\\.csv$", trait="RFI"),
   alberta_genus=list(real="results/alberta/alberta_genus_ancombc2.csv", null="results/scan_null", pat="^alberta_genus_seed2[0-9]{3}_ancombc2\\.csv$", trait="RFI"),
   difford_bact=list(real="results/methane/difford_bact_ancombc2.csv", null="results/methane_dryrun", pat="^difford_bact_seed1[0-9]{3}_ancombc2\\.csv$", trait="CH4"),
-  wallace_prokaryotes=list(real="results/methane/wallace_prokaryotes_ancombc2.csv", null="results/methane_dryrun", pat="^wallace_prokaryotes_seed1[0-9]{3}_ancombc2\\.csv$", trait="CH4"))
+  wallace_prokaryotes=list(real="results/methane/wallace_prokaryotes_ancombc2.csv", null="results/methane_dryrun", pat="^wallace_prokaryotes_seed1[0-9]{3}_ancombc2\\.csv$", trait="CH4"),
+  wallace_prokaryotes_depth=list(real="results/methane/wallace_prokaryotes_depth_ancombc2.csv", null="results/methane_dryrun", pat="^wallace_prokaryotes_depth_seed1[0-9]{3}_ancombc2\\.csv$", trait="CH4"))
 pull <- function(f, trait) { r <- rc(f); nm <- if ("taxon_name" %in% names(r)) r$taxon_name else r$taxon
   lc <- grep(if (trait == "RFI") "^lfc_RFI" else "^lfc_CH4_z", names(r), value=TRUE); stopifnot(length(lc) == 1); sfx <- sub("^lfc_", "", lc)
   d <- data.frame(genus=nm, lfc=r[[lc]], se=r[[paste0("se_", sfx)]], p=r[[paste0("p_", sfx)]], stringsAsFactors=FALSE); d$W <- d$lfc / d$se
@@ -34,7 +35,7 @@ S <- do.call(rbind, summ); write.table(S, file.path(od, "scan_summary.tsv"), sep
 cat("== DE NOVO SCAN (exploratory; statistic W = lfc/se; null = within-design permutations)\n"); print(S, row.names=FALSE)
 cat("   n_p05/n_q05: ANCOM-BC2 p-values, nominal and BH across genera. null_fpr_p05: fraction of genera at p<0.05 in permuted data (0.05 if calibrated); null_max_n_q05: most q<0.05 genera in one permutation.\n",
     "  null_W_sd / q99 / frac>5: spread and tail of W under the null (1 / 2.6 / 1e-6 if standard normal). n_q05_emp: genera at BH q<0.05 against the pooled null W; n_q05_perm: same with per-genus null (200-permutation tables only).\n")
-pairs <- list(c("nelore_genus", "charolais_mrna_genus"), c("difford_bact", "wallace_prokaryotes"), c("alberta_genus", "difford_bact"), c("alberta_genus", "wallace_prokaryotes"))
+pairs <- list(c("nelore_genus", "charolais_mrna_genus"), c("difford_bact", "wallace_prokaryotes"), c("difford_bact", "wallace_prokaryotes_depth"), c("alberta_genus", "difford_bact"), c("alberta_genus", "wallace_prokaryotes"))
 ov <- do.call(rbind, lapply(pairs, function(p) { a <- scans[[p[1]]]; b <- scans[[p[2]]]; g <- intersect(a$genus, b$genus); a <- a[match(g, a$genus), ]; b <- b[match(g, b$genus), ]
   ha <- a$p_emp < 0.05; hb <- b$p_emp < 0.05; both <- ha & hb; same <- both & sign(a$W) == sign(b$W); N <- length(g)
   exp_both <- sum(ha) * sum(hb) / N; p_hyper <- phyper(sum(both) - 1, sum(ha), N - sum(ha), sum(hb), lower.tail=FALSE)
