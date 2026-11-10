@@ -1,0 +1,11 @@
+NULL SHUFFLE (Amendment 37) seed 1105 within diet 
+nelore species : targets 1  features 12108  n 52  df 48 
+ id                     target set n_keys n_present feature reads prevalence
+ T6 Methanobrevibacter smithii  Li      2         2  TGT_T6 48359          1
+ pass10
+   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 12099 of 12107 features
+ id feature status         lfc         se          W  p_ancom
+ T6  TGT_T6     ok -0.02439196 0.05116278 -0.4767521 0.635702

@@ -1,0 +1,113 @@
+error    libmamba Could not set lock (Resource temporarily unavailable)
+warning  libmamba Cannot lock '/home/rlagad/.cache/mamba/proc'
+    Waiting for other mamba process to finish
+charolais_mrna genus : targets 34  features 2859  n 29  df 25 
+  id                target       set n_keys n_present feature     reads
+  T5               Blautia        Li      2         2  TGT_T5    678938
+ N01      Anaeromyxobacter    Nelore      1         1 TGT_N01       957
+ N02          Actinomadura    Nelore      3         1 TGT_N02       345
+ N04       Acidaminococcus    Nelore      1         1 TGT_N04      4507
+ N05           Rubrobacter    Nelore      4         0    <NA>        NA
+ N06          Actinoplanes    Nelore      1         1 TGT_N06     16998
+ N07          Cellulomonas    Nelore      1         0    <NA>        NA
+ N08              Gordonia    Nelore      2         1 TGT_N08    126552
+ N09                 Bosea    Nelore      1         0    <NA>        NA
+ N10 Phascolarctobacterium    Nelore      2         2 TGT_N10     11962
+ N11             Comamonas    Nelore      4         1 TGT_N11       136
+ N12           Caulobacter    Nelore      1         0    <NA>        NA
+ N13           Eubacterium    Nelore     14        12 TGT_N13    566648
+ N14                Arabia    Nelore      1         0    <NA>        NA
+ N15           Selenomonas    Nelore      4         4 TGT_N15     42764
+ N16           Sphingobium    Nelore      2         0    <NA>        NA
+ N17          Burkholderia    Nelore      1         1 TGT_N17       214
+ N18         Sinorhizobium    Nelore      1         0    <NA>        NA
+ N19            Lysobacter    Nelore      3         1 TGT_N19     60261
+ N20        Pseudonocardia    Nelore      1         1 TGT_N20       365
+ N21        Brevibacterium    Nelore      1         1 TGT_N21      1280
+ N22            Nonomuraea    Nelore      1         1 TGT_N22       478
+ N23         Succinivibrio    Nelore      1         1 TGT_N23     29121
+ N24           Marinomonas    Nelore      1         0    <NA>        NA
+ N25            Idiomarina    Nelore      1         0    <NA>        NA
+ N26          Glaesserella    Nelore      1         0    <NA>        NA
+ N27            Aliivibrio    Nelore      1         0    <NA>        NA
+ N28        Photobacterium    Nelore      1         1 TGT_N28      2574
+ N29          Psychromonas    Nelore      1         0    <NA>        NA
+  C1    Methanobrevibacter Canonical      5         5  TGT_C1   7050034
+  C3           Fibrobacter Canonical      1         1  TGT_C3   4899276
+  C4          Ruminococcus Canonical      7         7  TGT_C4   7702400
+  C5            Prevotella Canonical      1         1  TGT_C5 673250864
+  C6          Butyrivibrio Canonical      2         2  TGT_C6   1203321
+ prevalence pass10
+      1.000   TRUE
+      0.724   TRUE
+      0.586   TRUE
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+      0.276   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      0.414   TRUE
+         NA     NA
+      1.000   TRUE
+      0.552   TRUE
+      0.897   TRUE
+      0.828   TRUE
+      1.000   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 2767 of 2832 features
+  id feature     status           lfc        se            W   p_ancom
+  T5  TGT_T5         ok -0.0227606239 0.1356955 -0.167733018 0.8681428
+ N01 TGT_N01         ok  0.3189437320 0.2409374  1.323761889 0.2031082
+ N02 TGT_N02         ok  0.0882964172 0.1453969  0.607278696 0.5541256
+ N04 TGT_N04         ok -0.1747918405 0.1642582 -1.064128230 0.2974413
+ N05    <NA> no_feature            NA        NA           NA        NA
+ N06 TGT_N06         ok -0.0589932835 0.1284685 -0.459204299 0.6500554
+ N07    <NA> no_feature            NA        NA           NA        NA
+ N08 TGT_N08         ok -0.0908907030 0.1435542 -0.633145645 0.5323882
+ N09    <NA> no_feature            NA        NA           NA        NA
+ N10 TGT_N10         ok  0.3301247209 0.3034748  1.087816023 0.2870529
+ N11 TGT_N11         ok  0.1166621409 0.1513933  0.770589697 0.4839400
+ N12    <NA> no_feature            NA        NA           NA        NA
+ N13 TGT_N13         ok -0.0642199186 0.1213252 -0.529320314 0.6012524
+ N14    <NA> no_feature            NA        NA           NA        NA
+ N15 TGT_N15         ok  0.1729110770 0.1859587  0.929836079 0.3613481
+ N16    <NA> no_feature            NA        NA           NA        NA
+ N17 TGT_N17         ok -0.0466279664 0.1595521 -0.292242867 0.7775366
+ N18    <NA> no_feature            NA        NA           NA        NA
+ N19 TGT_N19         ok -0.1063297311 0.1801827 -0.590121594 0.5604059
+ N20 TGT_N20         ok -0.0773384250 0.1432373 -0.539932123 0.5991209
+ N21 TGT_N21         ok  0.2105113108 0.2721069  0.773634543 0.4473809
+ N22 TGT_N22         ok  0.1056684036 0.1328370  0.795474241 0.4356775
+ N23 TGT_N23         ok  0.0910515236 0.2074824  0.438839678 0.6645471
+ N24    <NA> no_feature            NA        NA           NA        NA
+ N25    <NA> no_feature            NA        NA           NA        NA
+ N26    <NA> no_feature            NA        NA           NA        NA
+ N27    <NA> no_feature            NA        NA           NA        NA
+ N28 TGT_N28         ok  0.2063998026 0.1346350  1.533032302 0.1378265
+ N29    <NA> no_feature            NA        NA           NA        NA
+  C1  TGT_C1         ok  0.0009510297 0.1094366  0.008690236 0.9931353
+  C3  TGT_C3         ok -0.1087774999 0.1273713 -0.854018659 0.4012042
+  C4  TGT_C4         ok  0.1681988871 0.1783884  0.942880156 0.3547655
+  C5  TGT_C5         ok  0.0349613822 0.1309587  0.266964957 0.7916860
+  C6  TGT_C6         ok  0.0719104388 0.2393852  0.300396354 0.7663587

@@ -1,0 +1,76 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CCTAYGGGRBGCASCAG -G GGACTACHVGGGTWTCTAAT -e 0.12 -O 12 --discard-untrimmed -m 100 -o work/charolais16s/trimmed/ERR12349979_1.fastq.gz -p work/charolais16s/trimmed/ERR12349979_2.fastq.gz PRJEB70895/fastq/ERR12349979_1.fastq.gz PRJEB70895/fastq/ERR12349979_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:             64,147
+  Read 1 with adapter:                  64,002 (99.8%)
+  Read 2 with adapter:                  63,391 (98.8%)
+
+== Read fate breakdown ==
+Pairs that were too short:                 108 (0.2%)
+Pairs discarded as untrimmed:              734 (1.1%)
+Pairs written (passing filters):        63,305 (98.7%)
+
+Total basepairs processed:    32,133,623 bp
+  Read 1:    16,056,747 bp
+  Read 2:    16,076,876 bp
+Total written (filtered):     28,714,999 bp (89.4%)
+  Read 1:    14,474,291 bp
+  Read 2:    14,240,708 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CCTAYGGGRBGCASCAG; Type: regular 5'; Length: 17; Trimmed: 64002 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-17 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	1	0.0	1	0 1
+13	1	0.0	1	1
+14	2	0.0	1	2
+15	5	0.0	1	2 3
+16	4	0.0	1	2 2
+17	9	0.0	2	6 3
+18	15	0.0	2	6 3 6
+19	18	0.0	2	9 1 8
+20	108	0.0	2	38 54 16
+21	21651	0.0	2	21252 380 19
+22	21336	0.0	2	20947 381 8
+23	20830	0.0	2	20536 287 7
+24	22	0.0	2	7 11 4
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGACTACHVGGGTWTCTAAT; Type: regular 5'; Length: 20; Trimmed: 63391 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+14	2	0.0	1	0 2
+16	2	0.0	1	1 1
+17	5	0.0	2	0 3 2
+18	7	0.0	2	3 3 1
+19	9	0.0	2	2 7
+20	8	0.0	2	2 3 3
+21	22	0.0	2	5 9 8
+22	13	0.0	2	7 2 4
+23	27	0.0	2	6 15 6
+24	58	0.0	2	12 22 24
+25	336	0.0	2	68 173 95
+26	62838	0.0	2	33367 25123 4348
+27	58	0.0	2	20 29 9
+60	1	0.0	2	0 0 1
+62	1	0.0	2	0 0 1
+64	1	0.0	2	0 0 1
+65	1	0.0	2	0 0 1
+66	1	0.0	2	0 0 1
+67	1	0.0	2	0 0 1

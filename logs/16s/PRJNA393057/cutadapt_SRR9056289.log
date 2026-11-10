@@ -1,0 +1,59 @@
+error    libmamba Could not set lock (Resource temporarily unavailable)
+warning  libmamba Cannot lock '/home/rlagad/.cache/mamba/proc'
+    Waiting for other mamba process to finish
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g GAGTTTGATCMTGGCTCAG -G CCGCGGCKGCTGGCAC -e 0.12 -O 12 --discard-untrimmed -m 100 -j 1 -o work/16s/PRJNA393057/trimmed/SRR9056289_1.fastq.gz -p work/16s/PRJNA393057/trimmed/SRR9056289_2.fastq.gz raw/PRJNA393057/SRR9056289_1.fastq.gz raw/PRJNA393057/SRR9056289_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:             35,286
+  Read 1 with adapter:                  19,084 (54.1%)
+  Read 2 with adapter:                  18,995 (53.8%)
+
+== Read fate breakdown ==
+Pairs that were too short:                   0 (0.0%)
+Pairs discarded as untrimmed:           16,300 (46.2%)
+Pairs written (passing filters):        18,986 (53.8%)
+
+Total basepairs processed:    21,171,600 bp
+  Read 1:    10,585,800 bp
+  Read 2:    10,585,800 bp
+Total written (filtered):     10,727,465 bp (50.7%)
+  Read 1:     5,335,320 bp
+  Read 2:     5,392,145 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: GAGTTTGATCMTGGCTCAG; Type: regular 5'; Length: 19; Trimmed: 19084 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-19 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	1	0.0	1	0 1
+14	3	0.0	1	1 2
+17	19	0.0	2	2 3 14
+18	227	0.0	2	12 209 6
+19	18805	0.0	2	18378 423 4
+20	28	0.0	2	4 24
+23	1	0.0	2	1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: CCGCGGCKGCTGGCAC; Type: regular 5'; Length: 16; Trimmed: 18995 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-16 bp: 1
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+13	4	0.0	1	1 3
+14	11	0.0	1	6 5
+15	106	0.0	1	15 91
+16	18855	0.0	1	18385 470
+17	19	0.0	1	2 17

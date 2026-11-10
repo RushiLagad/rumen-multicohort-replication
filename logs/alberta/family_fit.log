@@ -1,0 +1,15 @@
+alberta family : animals 567 | groups 7 (excluded 1 with <5 animals: 2 animals) | df 557 
+targets 2 | matched a 16S feature 1 | pass 10% prevalence 1 | features 118 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         0    <NA>
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+ reads prevalence pass10
+    NA         NA     NA
+ 83806       0.73   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 30 of 118 features
+ id feature     status        lfc         se         W   p_ancom
+ T4    <NA> no_feature         NA         NA        NA        NA
+ C2  TGT_C2         ok 0.03790582 0.05994027 0.6323932 0.5274868

@@ -1,0 +1,70 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CAGCMGCCGCGGTAA -G GGCCATGCACCWCCTCTC -e 0.12 -O 12 --discard-untrimmed -m 100 -j 1 -o work/16s/difford_arch/trimmed/ERR2724539_1.fastq.gz -p work/16s/difford_arch/trimmed/ERR2724539_2.fastq.gz raw/PRJEB28065/ERR2724539_1.fastq.gz raw/PRJEB28065/ERR2724539_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:            707,780
+  Read 1 with adapter:                 706,991 (99.9%)
+  Read 2 with adapter:                 701,060 (99.1%)
+
+== Read fate breakdown ==
+Pairs that were too short:                   2 (0.0%)
+Pairs discarded as untrimmed:            7,487 (1.1%)
+Pairs written (passing filters):       700,291 (98.9%)
+
+Total basepairs processed:   426,083,560 bp
+  Read 1:   213,041,780 bp
+  Read 2:   213,041,780 bp
+Total written (filtered):    398,486,957 bp (93.5%)
+  Read 1:   200,294,212 bp
+  Read 2:   198,192,745 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CAGCMGCCGCGGTAA; Type: regular 5'; Length: 15; Trimmed: 706991 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+11	15	0.2	1	0 15
+12	177	0.0	1	153 24
+13	611	0.0	1	196 415
+14	9631	0.0	1	1714 7917
+15	696218	0.0	1	678259 17959
+16	333	0.0	1	18 315
+17	4	0.0	1	0 4
+21	2	0.0	1	2
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGCCATGCACCWCCTCTC; Type: regular 5'; Length: 18; Trimmed: 701060 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-18 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	1	0.0	1	0 1
+13	7	0.0	1	5 2
+14	29	0.0	1	16 13
+15	55	0.0	1	23 24 8
+16	791	0.0	1	103 130 558
+17	12618	0.0	2	2219 8413 1986
+18	686861	0.0	2	596177 85451 5233
+19	608	0.0	2	116 442 50
+20	1	0.0	2	0 0 1
+24	2	0.0	2	0 0 2
+56	1	0.0	2	0 0 1
+57	6	0.0	2	1 0 5
+58	8	0.0	2	0 2 6
+59	37	0.0	2	0 11 26
+60	32	0.0	2	1 5 26
+61	1	0.0	2	0 0 1
+277	1	0.0	2	0 0 1
+278	1	0.0	2	0 0 1

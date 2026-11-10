@@ -1,0 +1,111 @@
+NULL SHUFFLE (Amendment 37) seed 2089 within diet x year 
+charolais_mrna genus : targets 34  features 2859  n 30  df 26 
+  id                target       set n_keys n_present feature     reads
+  T5               Blautia        Li      2         2  TGT_T5    782012
+ N01      Anaeromyxobacter    Nelore      1         1 TGT_N01      1067
+ N02          Actinomadura    Nelore      3         1 TGT_N02       409
+ N04       Acidaminococcus    Nelore      1         1 TGT_N04      5405
+ N05           Rubrobacter    Nelore      4         0    <NA>        NA
+ N06          Actinoplanes    Nelore      1         1 TGT_N06     19022
+ N07          Cellulomonas    Nelore      1         0    <NA>        NA
+ N08              Gordonia    Nelore      2         1 TGT_N08    138896
+ N09                 Bosea    Nelore      1         0    <NA>        NA
+ N10 Phascolarctobacterium    Nelore      2         2 TGT_N10     13078
+ N11             Comamonas    Nelore      4         1 TGT_N11       136
+ N12           Caulobacter    Nelore      1         0    <NA>        NA
+ N13           Eubacterium    Nelore     14        12 TGT_N13    639188
+ N14                Arabia    Nelore      1         0    <NA>        NA
+ N15           Selenomonas    Nelore      4         4 TGT_N15     44338
+ N16           Sphingobium    Nelore      2         0    <NA>        NA
+ N17          Burkholderia    Nelore      1         1 TGT_N17       270
+ N18         Sinorhizobium    Nelore      1         0    <NA>        NA
+ N19            Lysobacter    Nelore      3         1 TGT_N19     68373
+ N20        Pseudonocardia    Nelore      1         1 TGT_N20       417
+ N21        Brevibacterium    Nelore      1         1 TGT_N21      1418
+ N22            Nonomuraea    Nelore      1         1 TGT_N22       584
+ N23         Succinivibrio    Nelore      1         1 TGT_N23     30751
+ N24           Marinomonas    Nelore      1         0    <NA>        NA
+ N25            Idiomarina    Nelore      1         0    <NA>        NA
+ N26          Glaesserella    Nelore      1         0    <NA>        NA
+ N27            Aliivibrio    Nelore      1         0    <NA>        NA
+ N28        Photobacterium    Nelore      1         1 TGT_N28      2796
+ N29          Psychromonas    Nelore      1         0    <NA>        NA
+  C1    Methanobrevibacter Canonical      5         5  TGT_C1   7882986
+  C3           Fibrobacter Canonical      1         1  TGT_C3   5706458
+  C4          Ruminococcus Canonical      7         7  TGT_C4   7955694
+  C5            Prevotella Canonical      1         1  TGT_C5 751433820
+  C6          Butyrivibrio Canonical      2         2  TGT_C6   1986643
+ prevalence pass10
+      1.000   TRUE
+      0.733   TRUE
+      0.600   TRUE
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+      0.267   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      0.433   TRUE
+         NA     NA
+      1.000   TRUE
+      0.567   TRUE
+      0.900   TRUE
+      0.833   TRUE
+      1.000   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 2780 of 2832 features
+  id feature     status          lfc        se           W    p_ancom
+  T5  TGT_T5         ok -0.216339323 0.1265548 -1.70945115 0.09927861
+ N01 TGT_N01         ok  0.247419991 0.2311639  1.07032272 0.29861699
+ N02 TGT_N02         ok  0.198923390 0.1374660  1.44707346 0.16989539
+ N04 TGT_N04         ok -0.166306056 0.1665026 -0.99881976 0.32708771
+ N05    <NA> no_feature           NA        NA          NA         NA
+ N06 TGT_N06         ok  0.078580880 0.1256967  0.62516244 0.53731326
+ N07    <NA> no_feature           NA        NA          NA         NA
+ N08 TGT_N08         ok  0.032296499 0.1443667  0.22371157 0.82473026
+ N09    <NA> no_feature           NA        NA          NA         NA
+ N10 TGT_N10         ok  0.030427804 0.3061268  0.09939610 0.92158620
+ N11 TGT_N11         ok -0.098207285 0.1456734 -0.67416069 0.53716290
+ N12    <NA> no_feature           NA        NA          NA         NA
+ N13 TGT_N13         ok -0.103768652 0.1145874 -0.90558500 0.37347148
+ N14    <NA> no_feature           NA        NA          NA         NA
+ N15 TGT_N15         ok -0.036752271 0.1798424 -0.20435822 0.83966486
+ N16    <NA> no_feature           NA        NA          NA         NA
+ N17 TGT_N17         ok  0.176763378 0.1523160  1.16050432 0.27570031
+ N18    <NA> no_feature           NA        NA          NA         NA
+ N19 TGT_N19         ok -0.173300157 0.1793651 -0.96618656 0.34285264
+ N20 TGT_N20         ok  0.221954371 0.1332931  1.66516029 0.11978232
+ N21 TGT_N21         ok -0.302133377 0.2525409 -1.19637382 0.24373844
+ N22 TGT_N22         ok  0.008170672 0.1315995  0.06208738 0.95108039
+ N23 TGT_N23         ok  0.336008173 0.2057626  1.63298942 0.11452477
+ N24    <NA> no_feature           NA        NA          NA         NA
+ N25    <NA> no_feature           NA        NA          NA         NA
+ N26    <NA> no_feature           NA        NA          NA         NA
+ N27    <NA> no_feature           NA        NA          NA         NA
+ N28 TGT_N28         ok  0.025799187 0.1415244  0.18229500 0.85676514
+ N29    <NA> no_feature           NA        NA          NA         NA
+  C1  TGT_C1         ok -0.039660834 0.1070993 -0.37031833 0.71414509
+  C3  TGT_C3         ok -0.083731801 0.1251414 -0.66909774 0.50933130
+  C4  TGT_C4         ok -0.129404265 0.1844520 -0.70156066 0.48918585
+  C5  TGT_C5         ok -0.029603874 0.1300744 -0.22759183 0.82174381
+  C6  TGT_C6         ok  0.148649512 0.2448988  0.60698352 0.54912629

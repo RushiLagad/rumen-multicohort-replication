@@ -1,0 +1,87 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CCTAYGGGRBGCASCAG -G GGACTACHVGGGTWTCTAAT -e 0.12 -O 12 --discard-untrimmed -m 100 -o work/charolais16s/trimmed/ERR12349994_1.fastq.gz -p work/charolais16s/trimmed/ERR12349994_2.fastq.gz PRJEB70895/fastq/ERR12349994_1.fastq.gz PRJEB70895/fastq/ERR12349994_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:             75,582
+  Read 1 with adapter:                  75,347 (99.7%)
+  Read 2 with adapter:                  74,667 (98.8%)
+
+== Read fate breakdown ==
+Pairs that were too short:                 198 (0.3%)
+Pairs discarded as untrimmed:              822 (1.1%)
+Pairs written (passing filters):        74,562 (98.7%)
+
+Total basepairs processed:    37,839,239 bp
+  Read 1:    18,909,634 bp
+  Read 2:    18,929,605 bp
+Total written (filtered):     33,824,330 bp (89.4%)
+  Read 1:    17,052,176 bp
+  Read 2:    16,772,154 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CCTAYGGGRBGCASCAG; Type: regular 5'; Length: 17; Trimmed: 75347 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-17 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	2	0.0	1	0 2
+13	5	0.0	1	2 3
+14	3	0.0	1	1 2
+15	1	0.0	1	0 1
+16	4	0.0	1	2 2
+17	4	0.0	2	2 2
+18	14	0.0	2	9 3 2
+19	28	0.0	2	14 4 10
+20	125	0.0	2	46 54 25
+21	25634	0.0	2	25165 441 28
+22	25297	0.0	2	24849 436 12
+23	24195	0.0	2	23826 360 9
+24	33	0.0	2	18 15
+26	1	0.0	2	1
+28	1	0.0	2	1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGACTACHVGGGTWTCTAAT; Type: regular 5'; Length: 20; Trimmed: 74667 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	1	0.0	1	1
+15	2	0.0	1	1 1
+16	1	0.0	1	0 1
+17	2	0.0	2	1 1
+18	5	0.0	2	2 3
+19	16	0.0	2	2 11 3
+20	5	0.0	2	1 2 2
+21	16	0.0	2	5 7 4
+22	24	0.0	2	10 9 5
+23	32	0.0	2	15 14 3
+24	71	0.0	2	8 26 37
+25	400	0.0	2	78 227 95
+26	73985	0.0	2	39323 29718 4944
+27	88	0.0	2	32 52 4
+28	1	0.0	2	1
+29	1	0.0	2	0 1
+30	2	0.0	2	1 0 1
+35	1	0.0	2	0 1
+52	1	0.0	2	0 1
+53	1	0.0	2	0 0 1
+60	1	0.0	2	0 0 1
+61	1	0.0	2	0 0 1
+64	2	0.0	2	0 1 1
+65	2	0.0	2	0 0 2
+66	3	0.0	2	0 1 2
+67	1	0.0	2	0 0 1
+144	1	0.0	2	1
+146	1	0.0	2	0 1

@@ -1,0 +1,26 @@
+NULL SHUFFLE (Amendment 37) seed 1087 within diet 
+nelore genus : targets 6  features 2893  n 52  df 48 
+ id             target       set n_keys n_present feature     reads prevalence
+ T5            Blautia        Li      2         2  TGT_T5   1676685          1
+ C1 Methanobrevibacter Canonical      5         5  TGT_C1  19469306          1
+ C3        Fibrobacter Canonical      1         1  TGT_C3  18868374          1
+ C4       Ruminococcus Canonical      7         7  TGT_C4  20811790          1
+ C5         Prevotella Canonical      1         1  TGT_C5 145903785          1
+ C6       Butyrivibrio Canonical      2         2  TGT_C6   5823502          1
+ pass10
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 2875 of 2881 features
+ id feature status        lfc         se         W    p_ancom
+ T5  TGT_T5     ok 0.03787391 0.05597890 0.6765747 0.50192327
+ C1  TGT_C1     ok 0.06722077 0.04026802 1.6693341 0.10156150
+ C3  TGT_C3     ok 0.10032562 0.11026733 0.9098400 0.36745314
+ C4  TGT_C4     ok 0.03407440 0.07501475 0.4542361 0.65170636
+ C5  TGT_C5     ok 0.11131867 0.06115855 1.8201651 0.07497213
+ C6  TGT_C6     ok 0.01136720 0.05200644 0.2185729 0.82790948

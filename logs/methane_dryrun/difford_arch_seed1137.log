@@ -1,0 +1,36 @@
+DRY RUN: methane permuted within herd 
+difford_arch shuffle _seed1137 | cows 728 | df 710 | terms: herd + parity + dim + batch + CH4_z 
+targets 38 | matched 1 | pass 10% prevalence 1 | features 8 
+ id              set                                                     target
+ M1          Methane Methanobrevibacter gottschalkii clade vs ruminantium clade
+ M2          Methane                                        Succinivibrionaceae
+ M3          Methane                                              total archaea
+ S1 MethaneSecondary                                                    Sharpea
+ S2 MethaneSecondary                                                  Kandleria
+ S3 MethaneSecondary                                                Megasphaera
+        rank n_present feature prevalence pass10
+ clade_ratio         0    <NA>        NaN     NA
+      family         0    <NA>        NaN     NA
+     kingdom         7  TGT_M3          1   TRUE
+       genus         0    <NA>        NaN     NA
+       genus         0    <NA>        NaN     NA
+       genus         0    <NA>        NaN     NA
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 4 of 8 features
+M1: cows with >= 100 clade-assigned reads 728 of 728 
+ id              set      feature          status   n      lfc     se       W
+ M1          Methane M1_log_ratio              ok 728 -0.01954 0.0535 -0.3651
+ M2          Methane         <NA>      no_feature 728       NA     NA      NA
+ M3          Methane       TGT_M3 untestable_here 728 -0.00065 0.0154 -0.0422
+ S1 MethaneSecondary         <NA>      no_feature 728       NA     NA      NA
+ S2 MethaneSecondary         <NA>      no_feature 728       NA     NA      NA
+ S3 MethaneSecondary         <NA>      no_feature 728       NA     NA      NA
+ p_ancom
+   0.715
+      NA
+   0.966
+      NA
+      NA
+      NA

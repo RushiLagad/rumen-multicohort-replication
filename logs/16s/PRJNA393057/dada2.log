@@ -1,0 +1,8 @@
+runs with trimmed pairs: 706 
+truncLen R1 220 R2 260 expected overlap -11 
+100538020 total bases in 456991 reads from 90 samples will be used for learning the error rates.
+100236760 total bases in 385526 reads from 83 samples will be used for learning the error rates.
+median merge rate 0.005 
+FALLBACK to forward reads (Amendment 21 item 4); truncLen 220 
+102686980 total bases in 466759 reads from 21 samples will be used for learning the error rates.
+mode forward | samples 706 | ASVs 37969 | genera 361 | median classified share 0.826 

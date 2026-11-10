@@ -1,0 +1,11 @@
+NULL SHUFFLE (Amendment 37) seed 1023 within diet 
+nelore phylum : targets 2  features 71  n 52  df 48 
+ id      target set n_keys n_present feature     reads prevalence pass10
+ T2  Firmicutes  Li      9         9  TGT_T2 313372462          1   TRUE
+ T3 Chloroflexi  Li      1         1  TGT_T3   2770114          1   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 63 of 63 features
+ id feature status          lfc         se           W   p_ancom
+ T2  TGT_T2     ok  0.004826529 0.05752363  0.08390514 0.9334808
+ T3  TGT_T3     ok -0.077981935 0.12621937 -0.61782859 0.5396087

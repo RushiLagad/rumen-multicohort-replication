@@ -1,0 +1,56 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g AGAGTTTGATCCTGGCTCAG -G ATTACCGCGGCTGCTGG -e 0.12 -O 12 --discard-untrimmed -m 100 -j 1 -o work/16s/difford_bact/trimmed/ERR2725548_1.fastq.gz -p work/16s/difford_bact/trimmed/ERR2725548_2.fastq.gz raw/PRJEB28065/ERR2725548_1.fastq.gz raw/PRJEB28065/ERR2725548_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:            250,780
+  Read 1 with adapter:                 250,422 (99.9%)
+  Read 2 with adapter:                 249,248 (99.4%)
+
+== Read fate breakdown ==
+Pairs that were too short:                   0 (0.0%)
+Pairs discarded as untrimmed:            1,858 (0.7%)
+Pairs written (passing filters):       248,922 (99.3%)
+
+Total basepairs processed:   150,969,560 bp
+  Read 1:    75,484,780 bp
+  Read 2:    75,484,780 bp
+Total written (filtered):    140,645,431 bp (93.2%)
+  Read 1:    69,949,173 bp
+  Read 2:    70,696,258 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: AGAGTTTGATCCTGGCTCAG; Type: regular 5'; Length: 20; Trimmed: 250422 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+16	1	0.0	1	1
+17	2	0.0	2	0 2
+18	81	0.0	2	17 12 52
+19	2179	0.0	2	127 1983 69
+20	247903	0.0	2	242230 5597 76
+21	256	0.0	2	17 227 12
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: ATTACCGCGGCTGCTGG; Type: regular 5'; Length: 17; Trimmed: 249248 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-17 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+14	13	0.0	1	7 6
+15	133	0.0	1	21 19 93
+16	2398	0.0	1	151 1899 348
+17	246418	0.0	2	218718 26403 1297
+18	283	0.0	2	15 239 29
+19	3	0.0	2	0 0 3

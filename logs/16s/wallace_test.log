@@ -1,0 +1,4 @@
+marker Prokaryotes | runs 12 | cows 12 | length window 242 - 262 | distinct quality values 70 -> standard error model (loessErrfun) 
+round SR1 | runs 8 | 10:28 
+round SR2 | runs 4 | 10:28 
+table | marker Prokaryotes | cows 12 | excluded 0 | ASVs 1057 | genera 94 | median classified share 0.758 

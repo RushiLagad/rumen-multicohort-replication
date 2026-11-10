@@ -1,0 +1,69 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CAGCMGCCGCGGTAA -G GGCCATGCACCWCCTCTC -e 0.12 -O 12 --discard-untrimmed -m 100 -j 1 -o work/16s/difford_arch/trimmed/ERR2724723_1.fastq.gz -p work/16s/difford_arch/trimmed/ERR2724723_2.fastq.gz raw/PRJEB28065/ERR2724723_1.fastq.gz raw/PRJEB28065/ERR2724723_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:          1,024,033
+  Read 1 with adapter:               1,022,961 (99.9%)
+  Read 2 with adapter:               1,015,557 (99.2%)
+
+== Read fate breakdown ==
+Pairs that were too short:                   2 (0.0%)
+Pairs discarded as untrimmed:            9,504 (0.9%)
+Pairs written (passing filters):     1,014,527 (99.1%)
+
+Total basepairs processed:   616,467,866 bp
+  Read 1:   308,233,933 bp
+  Read 2:   308,233,933 bp
+Total written (filtered):    577,299,894 bp (93.6%)
+  Read 1:   290,171,755 bp
+  Read 2:   287,128,139 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CAGCMGCCGCGGTAA; Type: regular 5'; Length: 15; Trimmed: 1022961 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+11	30	0.2	1	0 30
+12	274	0.1	1	237 37
+13	974	0.0	1	289 685
+14	14812	0.0	1	2903 11909
+15	1006359	0.0	1	982523 23836
+16	510	0.0	1	33 477
+17	1	0.0	1	0 1
+20	1	0.0	1	0 1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGCCATGCACCWCCTCTC; Type: regular 5'; Length: 18; Trimmed: 1015557 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-18 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	1	0.1	1	0 1
+13	5	0.0	1	1 4
+14	19	0.0	1	6 13
+15	74	0.0	1	25 42 7
+16	814	0.0	1	68 204 542
+17	18821	0.0	2	1418 8438 8965
+18	995149	0.0	2	358800 617141 19208
+19	595	0.0	2	74 304 217
+23	1	0.0	2	1
+56	1	0.0	2	0 1
+57	1	0.0	2	0 0 1
+58	6	0.0	2	0 0 6
+59	25	0.0	2	1 4 20
+60	42	0.0	2	1 13 28
+61	1	0.0	2	0 1
+239	1	0.0	2	0 0 1
+240	1	0.0	2	0 0 1

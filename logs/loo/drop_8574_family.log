@@ -1,0 +1,14 @@
+charolais_mrna family : targets 2  features 631  n 29  df 25 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+   reads prevalence pass10
+   17455          1   TRUE
+ 1043508          1   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 611 of 631 features
+ id feature status        lfc        se         W    p_ancom
+ T4  TGT_T4     ok -0.3747137 0.1891495 -1.981046 0.05868775
+ C2  TGT_C2     ok  0.6562749 0.3095447  2.120130 0.04409578

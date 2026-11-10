@@ -3,3 +3,6 @@ curl: (56) OpenSSL SSL_read: OpenSSL/3.6.5: error:0A000126:SSL routines::unexpec
 curl: (56) OpenSSL SSL_read: OpenSSL/3.6.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0
 curl: (56) OpenSSL SSL_read: OpenSSL/3.6.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0
 [08:36:26] pass 2  36 GB  incomplete 103/104
+curl: (56) OpenSSL SSL_read: OpenSSL/3.6.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0
+curl: (56) OpenSSL SSL_read: OpenSSL/3.6.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0
+curl: (56) OpenSSL SSL_read: OpenSSL/3.6.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0

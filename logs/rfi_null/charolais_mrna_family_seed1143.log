@@ -1,0 +1,15 @@
+NULL SHUFFLE (Amendment 37) seed 1143 within diet x year 
+charolais_mrna family : targets 2  features 631  n 30  df 26 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+   reads prevalence pass10
+   20489          1   TRUE
+ 1061600          1   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 615 of 631 features
+ id feature status          lfc        se           W   p_ancom
+ T4  TGT_T4     ok  0.004198885 0.1947023  0.02156566 0.9829591
+ C2  TGT_C2     ok -0.371876391 0.3146142 -1.18200756 0.2479007

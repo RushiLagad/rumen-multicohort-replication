@@ -1,0 +1,16 @@
+error    libmamba Could not set lock (Resource temporarily unavailable)
+warning  libmamba Cannot lock '/home/rlagad/.cache/mamba/proc'
+    Waiting for other mamba process to finish
+nelore family : targets 2  features 642  n 52  df 48 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+    reads prevalence pass10
+     3656          1   TRUE
+ 19105558          1   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 638 of 642 features
+ id feature status         lfc         se         W    p_ancom
+ T4  TGT_T4     ok -0.06228243 0.03842103 -1.621050 0.11155845
+ C2  TGT_C2     ok  0.22052397 0.08769084  2.514789 0.01531425

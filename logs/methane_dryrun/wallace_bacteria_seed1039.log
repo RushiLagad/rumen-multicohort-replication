@@ -1,0 +1,74 @@
+DRY RUN: methane permuted within farm 
+wallace_bacteria shuffle _seed1039 | cows 1009 | df 998 | terms: farm + parity + dim + CH4_z 
+targets 38 | matched 11 | pass 10% prevalence 9 | features 541 
+  id              set
+ N30           Nelore
+ N32           Nelore
+ N37           Nelore
+ N39           Nelore
+ N40           Nelore
+ N42           Nelore
+ N61           Nelore
+  M1          Methane
+  M2          Methane
+  M3          Methane
+  S1 MethaneSecondary
+  S2 MethaneSecondary
+  S3 MethaneSecondary
+                                                     target        rank
+                                         Pseudobutyrivibrio       genus
+                                                  Roseburia       genus
+                                                Coprococcus       genus
+                                               Anaerostipes       genus
+                                                    Blautia       genus
+                                                Lachnospira       genus
+                                                    Cedecea       genus
+ Methanobrevibacter gottschalkii clade vs ruminantium clade clade_ratio
+                                        Succinivibrionaceae      family
+                                              total archaea     kingdom
+                                                    Sharpea       genus
+                                                  Kandleria       genus
+                                                Megasphaera       genus
+ n_present            feature prevalence pass10
+         1 Pseudobutyrivibrio      0.733   TRUE
+         1          Roseburia      0.352   TRUE
+         1        Coprococcus      0.620   TRUE
+         1       Anaerostipes      0.216   TRUE
+         1            Blautia      0.144   TRUE
+         1        Lachnospira      0.255   TRUE
+         1            Cedecea      0.008  FALSE
+         0               <NA>        NaN     NA
+         6             TGT_M2      0.980   TRUE
+         3             TGT_M3      0.335   TRUE
+         1            Sharpea      0.185   TRUE
+         0               <NA>        NaN     NA
+         1        Megasphaera      0.058  FALSE
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 117 of 541 features
+  id              set            feature          status    n      lfc     se
+ N30           Nelore Pseudobutyrivibrio              ok 1009 -0.03708 0.0255
+ N32           Nelore          Roseburia              ok 1009 -0.04438 0.0280
+ N37           Nelore        Coprococcus              ok 1009 -0.05654 0.0276
+ N39           Nelore       Anaerostipes              ok 1009 -0.00518 0.0227
+ N40           Nelore            Blautia              ok 1009  0.09778 0.0226
+ N42           Nelore        Lachnospira              ok 1009  0.04648 0.0235
+  M1          Methane               <NA> untestable_here 1009       NA     NA
+  M2          Methane             TGT_M2              ok 1009 -0.07475 0.0367
+  M3          Methane             TGT_M3              ok 1009 -0.05599 0.0337
+  S1 MethaneSecondary            Sharpea              ok 1009 -0.15224 0.0262
+  S2 MethaneSecondary               <NA>      no_feature 1009       NA     NA
+  S3 MethaneSecondary        Megasphaera        filtered 1009       NA     NA
+      W  p_ancom
+ -1.453 1.47e-01
+ -1.588 1.13e-01
+ -2.050 4.08e-02
+ -0.228 8.20e-01
+  4.330 2.89e-05
+  1.977 4.91e-02
+     NA       NA
+ -2.035 4.22e-02
+ -1.664 9.71e-02
+ -5.819 2.72e-08
+     NA       NA
+     NA       NA

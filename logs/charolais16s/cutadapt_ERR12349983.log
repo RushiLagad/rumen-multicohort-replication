@@ -1,0 +1,83 @@
+error    libmamba Could not set lock (Resource temporarily unavailable)
+warning  libmamba Cannot lock '/home/rlagad/.cache/mamba/proc'
+    Waiting for other mamba process to finish
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CCTAYGGGRBGCASCAG -G GGACTACHVGGGTWTCTAAT -e 0.12 -O 12 --discard-untrimmed -m 100 -o work/charolais16s/trimmed/ERR12349983_1.fastq.gz -p work/charolais16s/trimmed/ERR12349983_2.fastq.gz PRJEB70895/fastq/ERR12349983_1.fastq.gz PRJEB70895/fastq/ERR12349983_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:             74,059
+  Read 1 with adapter:                  73,873 (99.7%)
+  Read 2 with adapter:                  73,054 (98.6%)
+
+== Read fate breakdown ==
+Pairs that were too short:                 135 (0.2%)
+Pairs discarded as untrimmed:              970 (1.3%)
+Pairs written (passing filters):        72,954 (98.5%)
+
+Total basepairs processed:    37,092,757 bp
+  Read 1:    18,534,048 bp
+  Read 2:    18,558,709 bp
+Total written (filtered):     33,091,601 bp (89.2%)
+  Read 1:    16,680,640 bp
+  Read 2:    16,410,961 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CCTAYGGGRBGCASCAG; Type: regular 5'; Length: 17; Trimmed: 73873 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-17 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+13	3	0.0	1	2 1
+14	1	0.0	1	0 1
+15	3	0.0	1	2 1
+16	3	0.0	1	1 2
+17	7	0.0	2	6 0 1
+18	17	0.0	2	14 1 2
+19	28	0.0	2	15 3 10
+20	152	0.0	2	49 85 18
+21	25327	0.0	2	24848 464 15
+22	24791	0.0	2	24325 458 8
+23	23521	0.0	2	23128 388 5
+24	19	0.0	2	6 13
+26	1	0.0	2	1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGACTACHVGGGTWTCTAAT; Type: regular 5'; Length: 20; Trimmed: 73054 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+15	1	0.0	1	1
+16	1	0.0	1	1
+17	5	0.0	2	0 3 2
+18	11	0.0	2	7 3 1
+19	14	0.0	2	1 8 5
+20	16	0.0	2	6 5 5
+21	17	0.0	2	4 6 7
+22	21	0.0	2	5 12 4
+23	26	0.0	2	12 6 8
+24	79	0.0	2	23 16 40
+25	389	0.0	2	68 206 115
+26	72374	0.0	2	37967 29336 5071
+27	88	0.0	2	22 56 10
+30	1	0.0	2	0 1
+33	1	0.0	2	0 1
+39	1	0.0	2	1
+51	1	0.0	2	0 1
+58	1	0.0	2	0 0 1
+60	1	0.0	2	0 0 1
+63	3	0.0	2	0 2 1
+64	1	0.0	2	0 0 1
+65	1	0.0	2	0 0 1
+143	1	0.0	2	1

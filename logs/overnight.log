@@ -1,0 +1,158 @@
+[10-29 18:26:41] waiting for profiling and charolais conversion to finish
+[10-29 21:10:45] prerequisites done
+[10-29 21:10:45] === preprocess charolais mRNA (31 runs) ===
+=== charolais_mrna ===
+  manifest : 31 runs
+  done     : 0
+  host ref : ARS-UCD2.0
+  parallel : 3 x 8 threads
+  done ERR12765860  raw 97654036 -> trimmed 96870842 -> nonhost 83104170
+  done ERR12765859  raw 80905108 -> trimmed 80193770 -> nonhost 66069410
+  done ERR12765858  raw 64985456 -> trimmed 64217612 -> nonhost 51250854
+  done ERR12765861  raw 104274948 -> trimmed 103548372 -> nonhost 83626974
+  done ERR12765865  raw 118408738 -> trimmed 117569222 -> nonhost 99209834
+  done ERR12765862  raw 121203834 -> trimmed 120047822 -> nonhost 100089342
+  done ERR12765863  raw 137371844 -> trimmed 135980566 -> nonhost 109592030
+  done ERR12765866  raw 172859982 -> trimmed 171157276 -> nonhost 142889294
+  done ERR12765867  raw 201416726 -> trimmed 199346246 -> nonhost 163168302
+  done ERR12765868  raw 88671058 -> trimmed 87641486 -> nonhost 71911206
+  done ERR12765869  raw 186513226 -> trimmed 184700270 -> nonhost 150327680
+  done ERR12765872  raw 94922516 -> trimmed 94106888 -> nonhost 79521110
+  done ERR12765870  raw 112539270 -> trimmed 111317268 -> nonhost 94410918
+  done ERR12765873  raw 102597286 -> trimmed 101883312 -> nonhost 86632468
+  done ERR12765874  raw 85465606 -> trimmed 84919046 -> nonhost 71194076
+  done ERR12765876  raw 82944312 -> trimmed 82194766 -> nonhost 68319850
+  done ERR12765877  raw 63839884 -> trimmed 63173260 -> nonhost 53532970
+  done ERR12765875  raw 126125828 -> trimmed 124997880 -> nonhost 105737030
+  done ERR12765879  raw 50217964 -> trimmed 49735854 -> nonhost 39660650
+  done ERR12765878  raw 84784158 -> trimmed 84101610 -> nonhost 69663396
+  done ERR12765881  raw 87017200 -> trimmed 86444254 -> nonhost 73252572
+  done ERR12765880  raw 99283188 -> trimmed 98341450 -> nonhost 79936586
+  done ERR12765883  raw 92669724 -> trimmed 92032726 -> nonhost 76319508
+  done ERR12765882  raw 85713762 -> trimmed 85017272 -> nonhost 69232996
+  done ERR12765884  raw 116090654 -> trimmed 115139526 -> nonhost 92850036
+  done ERR12765886  raw 88439870 -> trimmed 87467920 -> nonhost 71717830
+  done ERR12765885  raw 97042904 -> trimmed 96086108 -> nonhost 80006016
+  done ERR12862853  raw 100207662 -> trimmed 99071220 -> nonhost 81057110
+  done ERR12953408  raw 187776002 -> trimmed 186525694 -> nonhost 153131864
+  done ERR13602035  raw 218365544 -> trimmed 216247952 -> nonhost 177489258
+  done ERR13602036  raw 187776002 -> trimmed 186525694 -> nonhost 153131866
+
+=== charolais_mrna: 31 of 31 ===
+  samples 31  non-host median 81,057,110
+  host fraction median 17.6%  range 14.2-20.3%
+[10-30 05:27:04] === convert li metagenomes (48 runs) ===
+=== li_metagenome: 48 sra -> /data/rumen448333/fastq ===
+  already converted: 0
+  free: 1.5T
+  done SRR8397881 paired
+  done SRR8397883 paired
+  done SRR8397884 paired
+  done SRR8397882 paired
+  done SRR8397886 paired
+  done SRR8397885 paired
+  done SRR8397888 paired
+  done SRR8397887 paired
+  done SRR8397889 paired
+  done SRR8397891 paired
+  done SRR8397890 paired
+  done SRR8397892 paired
+  done SRR8397893 paired
+  done SRR8397894 paired
+  done SRR8397895 paired
+  done SRR8397896 paired
+  done SRR8397897 paired
+  done SRR8397898 paired
+  done SRR8397901 paired
+  done SRR8397900 paired
+  done SRR8397899 paired
+  done SRR8397902 paired
+  done SRR8397903 paired
+  done SRR8397904 paired
+  done SRR8397905 paired
+  done SRR8397907 paired
+  done SRR8397906 paired
+  done SRR8397908 paired
+  done SRR8397909 paired
+  done SRR8397912 paired
+  done SRR8397911 paired
+  done SRR8397910 paired
+  done SRR8397913 paired
+  done SRR8397916 paired
+  done SRR8397915 paired
+  done SRR8397914 paired
+  done SRR8397917 paired
+  done SRR8397921 paired
+  done SRR8397919 paired
+  done SRR8397918 paired
+  done SRR8397920 paired
+  done SRR8397922 paired
+  done SRR8397923 paired
+  done SRR8397924 paired
+  done SRR8397925 paired
+  done SRR8397927 paired
+  done SRR8397926 paired
+  done SRR8404214 paired
+=== 48 of 48, 201 GB ===
+  single-end runs: 0
+see_log
+[10-30 06:26:02] === preprocess li metagenomes (48 runs) ===
+=== li ===
+  manifest : 48 runs
+  done     : 0
+  host ref : ARS-UCD2.0
+  parallel : 3 x 8 threads
+  done SRR8397883  raw 61244068 -> trimmed 58689072 -> nonhost 58663408
+  done SRR8397881  raw 60205324 -> trimmed 56761146 -> nonhost 56662088
+  done SRR8397882  raw 70150886 -> trimmed 66200750 -> nonhost 66136964
+  done SRR8397886  raw 59597658 -> trimmed 54422852 -> nonhost 54360752
+  done SRR8397884  raw 71335192 -> trimmed 68524996 -> nonhost 68461144
+  done SRR8397885  raw 72039788 -> trimmed 67181458 -> nonhost 67152692
+  done SRR8397888  raw 65626570 -> trimmed 60264582 -> nonhost 60240608
+  done SRR8397889  raw 57138914 -> trimmed 53728376 -> nonhost 53696306
+  done SRR8397887  raw 74142316 -> trimmed 71384908 -> nonhost 71298462
+  done SRR8397891  raw 50780818 -> trimmed 43491254 -> nonhost 43420992
+  done SRR8397890  raw 66630806 -> trimmed 63721940 -> nonhost 63253288
+  done SRR8397892  raw 64259742 -> trimmed 59243766 -> nonhost 59143160
+  done SRR8397893  raw 45834266 -> trimmed 42235754 -> nonhost 42128842
+  done SRR8397894  raw 55685172 -> trimmed 49723494 -> nonhost 49650668
+  done SRR8397895  raw 61367926 -> trimmed 54418076 -> nonhost 54252816
+  done SRR8397897  raw 43521252 -> trimmed 38325786 -> nonhost 38291994
+  done SRR8397896  raw 56642498 -> trimmed 48211936 -> nonhost 48142354
+  done SRR8397898  raw 60737912 -> trimmed 53644096 -> nonhost 53536624
+  done SRR8397900  raw 62426290 -> trimmed 55825710 -> nonhost 55792160
+  done SRR8397899  raw 78990976 -> trimmed 72299556 -> nonhost 72257682
+  done SRR8397901  raw 52663208 -> trimmed 50662378 -> nonhost 50605778
+  done SRR8397903  raw 66241688 -> trimmed 59368658 -> nonhost 59322494
+  done SRR8397902  raw 68461888 -> trimmed 65693562 -> nonhost 65545244
+  done SRR8397904  raw 80396890 -> trimmed 73383156 -> nonhost 73350372
+  done SRR8397905  raw 69694030 -> trimmed 66271454 -> nonhost 66127686
+  done SRR8397906  raw 82855324 -> trimmed 78736822 -> nonhost 78688240
+  done SRR8397907  raw 57993148 -> trimmed 52684178 -> nonhost 52638334
+  done SRR8397908  raw 56088874 -> trimmed 51546686 -> nonhost 51477942
+  done SRR8397909  raw 63492908 -> trimmed 59322924 -> nonhost 59240154
+  done SRR8397911  raw 63686610 -> trimmed 56587384 -> nonhost 56476290
+  done SRR8397910  raw 84516150 -> trimmed 80338920 -> nonhost 80245616
+  done SRR8397912  raw 64271294 -> trimmed 60260254 -> nonhost 60169446
+  done SRR8397913  raw 60255470 -> trimmed 56195204 -> nonhost 54663424
+  done SRR8397914  raw 73330646 -> trimmed 65138766 -> nonhost 64892284
+  done SRR8397915  raw 66877934 -> trimmed 60713746 -> nonhost 60689480
+  done SRR8397916  raw 56670270 -> trimmed 51090006 -> nonhost 51037670
+  done SRR8397917  raw 67436156 -> trimmed 63167328 -> nonhost 63041766
+  done SRR8397918  raw 69663294 -> trimmed 64978708 -> nonhost 64920136
+  done SRR8397919  raw 58181072 -> trimmed 53092496 -> nonhost 53035516
+  done SRR8397921  raw 43914314 -> trimmed 41800648 -> nonhost 41765508
+  done SRR8397920  raw 61582060 -> trimmed 54975078 -> nonhost 54940072
+  done SRR8397922  raw 46835028 -> trimmed 41722780 -> nonhost 41683726
+  done SRR8397923  raw 69743108 -> trimmed 66539920 -> nonhost 66493710
+  done SRR8397924  raw 72036006 -> trimmed 69648840 -> nonhost 69380280
+  done SRR8397925  raw 68157094 -> trimmed 65713856 -> nonhost 65628466
+  done SRR8397927  raw 38963746 -> trimmed 33976556 -> nonhost 33956608
+  done SRR8397926  raw 70592288 -> trimmed 66276608 -> nonhost 66244346
+  done SRR8404214  raw 79298734 -> trimmed 74952076 -> nonhost 74861582
+
+=== li: 48 of 48 ===
+  samples 48  non-host median 59,191,657
+  host fraction median 0.1%  range 0.0-2.7%
+[10-30 07:38:44] ALL OVERNIGHT WORK COMPLETE
+/dev/nvme0n1p1  3.6T  2.2T  1.3T  64% /data

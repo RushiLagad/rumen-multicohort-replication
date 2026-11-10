@@ -1,0 +1,91 @@
+           
+            not replicated not replicated (direction not stated)
+  Canonical              0                                     5
+  Li                     4                                     1
+  Nelore                16                                     0
+           
+            single-cohort support (direction not stated) untestable
+  Canonical                                            1          0
+  Li                                                   0          1
+  Nelore                                               0         48
+                                         
+                                          not replicated
+  cross-site                                           2
+  replication                                         18
+  untestable: no genome-based counterpart              0
+  untestable: phenotype not available                  0
+                                         
+                                          not replicated (direction not stated)
+  cross-site                                                                  0
+  replication                                                                 6
+  untestable: no genome-based counterpart                                     0
+  untestable: phenotype not available                                         0
+                                         
+                                          single-cohort support (direction not stated)
+  cross-site                                                                         0
+  replication                                                                        1
+  untestable: no genome-based counterpart                                            0
+  untestable: phenotype not available                                                0
+                                         
+                                          untestable
+  cross-site                                       5
+  replication                                      7
+  untestable: no genome-based counterpart          2
+  untestable: phenotype not available             35
+  id                                target     stratum k       r   q_bh
+  T2                            Firmicutes replication 2  0.0361 1.0000
+  T3                           Chloroflexi replication 2 -0.0167 1.0000
+  T4 unclassified Methanomassiliicoccaceae replication 2 -0.2790 0.0902
+  T5                               Blautia replication 2  0.0657 1.0000
+  T6            Methanobrevibacter smithii replication 2  0.0968 1.0000
+ N01                      Anaeromyxobacter replication 1  0.2570 1.0000
+ N02                          Actinomadura replication 1  0.1225 1.0000
+ N04                       Acidaminococcus replication 1 -0.1618 1.0000
+ N06                          Actinoplanes replication 1 -0.1164 1.0000
+ N08                              Gordonia replication 1 -0.1624 1.0000
+ N10                 Phascolarctobacterium replication 1  0.2115 1.0000
+ N11                             Comamonas replication 1  0.1541 1.0000
+ N13                           Eubacterium replication 1 -0.1179 1.0000
+ N15                           Selenomonas replication 1  0.1590 1.0000
+ N17                          Burkholderia replication 1 -0.0350 1.0000
+ N19                            Lysobacter replication 1 -0.1341 1.0000
+ N20                        Pseudonocardia replication 1 -0.1460 1.0000
+ N21                        Brevibacterium replication 1  0.1657 1.0000
+ N22                            Nonomuraea replication 1  0.1826 1.0000
+ N23                         Succinivibrio  cross-site 1  0.0547 1.0000
+ N28                        Photobacterium  cross-site 1  0.2226 1.0000
+  C1                    Methanobrevibacter replication 2  0.1203 0.6098
+  C2                   Succinivibrionaceae replication 2  0.3439 0.0141
+  C3                           Fibrobacter replication 2 -0.0292 0.8045
+  C4                          Ruminococcus replication 2  0.2602 0.2222
+  C5                            Prevotella replication 2  0.0489 0.8045
+  C6                          Butyrivibrio replication 2  0.0443 0.8045
+ q_testable                                        label
+     0.8871                               not replicated
+     0.8871        not replicated (direction not stated)
+     0.0751                               not replicated
+     0.8871                               not replicated
+     0.8871                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     1.0000                               not replicated
+     0.6098        not replicated (direction not stated)
+     0.0141 single-cohort support (direction not stated)
+     0.8045        not replicated (direction not stated)
+     0.2222        not replicated (direction not stated)
+     0.8045        not replicated (direction not stated)
+     0.8045        not replicated (direction not stated)
+wrote /data/rumen_multicohort/results/replication/classification_all.tsv and forest_replication.pdf

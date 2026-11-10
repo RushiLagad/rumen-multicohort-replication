@@ -1,0 +1,112 @@
+NULL SHUFFLE (Amendment 37) seed 1092 within management group
+alberta genus (primary: PRJNA448333 ID numbers excluded) | overlap IDs in analysis set 35 : animals 529 | groups 6 (excluded 2 with <5 animals: 5 animals) | df 520 
+targets 34 | matched a 16S feature 13 | pass 10% prevalence 6 | features 361 
+  id                target       set n_keys n_present feature   reads
+  T5               Blautia        Li      2         1  TGT_T5     305
+ N01      Anaeromyxobacter    Nelore      1         0    <NA>      NA
+ N02          Actinomadura    Nelore      3         0    <NA>      NA
+ N04       Acidaminococcus    Nelore      1         1 TGT_N04    1108
+ N05           Rubrobacter    Nelore      4         0    <NA>      NA
+ N06          Actinoplanes    Nelore      1         0    <NA>      NA
+ N07          Cellulomonas    Nelore      1         0    <NA>      NA
+ N08              Gordonia    Nelore      2         1 TGT_N08       0
+ N09                 Bosea    Nelore      1         1 TGT_N09       4
+ N10 Phascolarctobacterium    Nelore      2         0    <NA>      NA
+ N11             Comamonas    Nelore      4         1 TGT_N11      88
+ N12           Caulobacter    Nelore      1         0    <NA>      NA
+ N13           Eubacterium    Nelore     14         0    <NA>      NA
+ N14                Arabia    Nelore      1         0    <NA>      NA
+ N15           Selenomonas    Nelore      4         1 TGT_N15   47994
+ N16           Sphingobium    Nelore      2         0    <NA>      NA
+ N17          Burkholderia    Nelore      1         0    <NA>      NA
+ N18         Sinorhizobium    Nelore      1         0    <NA>      NA
+ N19            Lysobacter    Nelore      3         1 TGT_N19       9
+ N20        Pseudonocardia    Nelore      1         0    <NA>      NA
+ N21        Brevibacterium    Nelore      1         1 TGT_N21       2
+ N22            Nonomuraea    Nelore      1         0    <NA>      NA
+ N23         Succinivibrio    Nelore      1         1 TGT_N23   78247
+ N24           Marinomonas    Nelore      1         0    <NA>      NA
+ N25            Idiomarina    Nelore      1         0    <NA>      NA
+ N26          Glaesserella    Nelore      1         0    <NA>      NA
+ N27            Aliivibrio    Nelore      1         0    <NA>      NA
+ N28        Photobacterium    Nelore      1         0    <NA>      NA
+ N29          Psychromonas    Nelore      1         0    <NA>      NA
+  C1    Methanobrevibacter Canonical      5         0    <NA>      NA
+  C3           Fibrobacter Canonical      1         1  TGT_C3   15876
+  C4          Ruminococcus Canonical      7         1  TGT_C4  557846
+  C5            Prevotella Canonical      1         1  TGT_C5 3602176
+  C6          Butyrivibrio Canonical      2         1  TGT_C6   37831
+ prevalence pass10
+      0.036  FALSE
+         NA     NA
+         NA     NA
+      0.078  FALSE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.000  FALSE
+      0.002  FALSE
+         NA     NA
+      0.049  FALSE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.871   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.004  FALSE
+         NA     NA
+      0.002  FALSE
+         NA     NA
+      0.645   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+      0.435   TRUE
+      1.000   TRUE
+      0.998   TRUE
+      0.900   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 97 of 361 features
+  id feature     status          lfc         se           W   p_ancom
+  T5  TGT_T5   filtered           NA         NA          NA        NA
+ N01    <NA> no_feature           NA         NA          NA        NA
+ N02    <NA> no_feature           NA         NA          NA        NA
+ N04 TGT_N04   filtered           NA         NA          NA        NA
+ N05    <NA> no_feature           NA         NA          NA        NA
+ N06    <NA> no_feature           NA         NA          NA        NA
+ N07    <NA> no_feature           NA         NA          NA        NA
+ N08 TGT_N08   filtered           NA         NA          NA        NA
+ N09 TGT_N09   filtered           NA         NA          NA        NA
+ N10    <NA> no_feature           NA         NA          NA        NA
+ N11 TGT_N11   filtered           NA         NA          NA        NA
+ N12    <NA> no_feature           NA         NA          NA        NA
+ N13    <NA> no_feature           NA         NA          NA        NA
+ N14    <NA> no_feature           NA         NA          NA        NA
+ N15 TGT_N15         ok -0.020342552 0.04449634 -0.45717359 0.6477659
+ N16    <NA> no_feature           NA         NA          NA        NA
+ N17    <NA> no_feature           NA         NA          NA        NA
+ N18    <NA> no_feature           NA         NA          NA        NA
+ N19 TGT_N19   filtered           NA         NA          NA        NA
+ N20    <NA> no_feature           NA         NA          NA        NA
+ N21 TGT_N21   filtered           NA         NA          NA        NA
+ N22    <NA> no_feature           NA         NA          NA        NA
+ N23 TGT_N23         ok -0.075419497 0.05454018 -1.38282442 0.1676481
+ N24    <NA> no_feature           NA         NA          NA        NA
+ N25    <NA> no_feature           NA         NA          NA        NA
+ N26    <NA> no_feature           NA         NA          NA        NA
+ N27    <NA> no_feature           NA         NA          NA        NA
+ N28    <NA> no_feature           NA         NA          NA        NA
+ N29    <NA> no_feature           NA         NA          NA        NA
+  C1    <NA> no_feature           NA         NA          NA        NA
+  C3  TGT_C3         ok -0.015416441 0.03629282 -0.42477932 0.6714108
+  C4  TGT_C4         ok -0.019095809 0.05343113 -0.35739106 0.7209441
+  C5  TGT_C5         ok -0.004087863 0.04217884 -0.09691738 0.9228294
+  C6  TGT_C6         ok  0.014719898 0.03438967  0.42803261 0.6688247

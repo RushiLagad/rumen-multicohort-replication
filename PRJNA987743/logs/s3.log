@@ -41,3 +41,23 @@
   done SRR25030113  10332692 pairs  1568 MB
   done SRR25030109  27713987 pairs  4094 MB
   done SRR25030116  12363295 pairs  1875 MB
+  done SRR25030117  11508320 pairs  1760 MB
+  done SRR25030114  10607468 pairs  1617 MB
+  done SRR25030118  11848317 pairs  1804 MB
+  done SRR25030119  11311734 pairs  1726 MB
+  done SRR25030115  28801031 pairs  4255 MB
+parallel: SIGHUP received. No new jobs will be started.
+parallel: Waiting for these 4 jobs to finish. Send SIGTERM to stop now.
+parallel: fetch_one SRR25030123
+parallel: fetch_one SRR25030121
+parallel: fetch_one SRR25030122
+parallel: fetch_one SRR25030120
+  done SRR25030120  11535005 pairs  1747 MB
+  done SRR25030121  11782220 pairs  1794 MB
+  done SRR25030122  11956850 pairs  1815 MB
+  done SRR25030123  9685210 pairs  1479 MB
+
+=== complete: 48 of 53 ===
+  size: 174 GB
+  read-count check vs ENA: 46 compared, 0 differ by >1%
+  all runs match ENA's recorded read counts

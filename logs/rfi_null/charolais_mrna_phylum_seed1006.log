@@ -1,0 +1,12 @@
+NULL SHUFFLE (Amendment 37) seed 1006 within diet x year 
+charolais_mrna phylum : targets 2  features 69  n 30  df 26 
+ id      target set n_keys n_present feature     reads prevalence pass10
+ T2  Firmicutes  Li      9         9  TGT_T2 415645211          1   TRUE
+ T3 Chloroflexi  Li      1         1  TGT_T3    761174          1   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 61 of 61 features
+ id feature status         lfc        se          W   p_ancom
+ T2  TGT_T2     ok -0.04928357 0.1522996 -0.3235961 0.7488324
+ T3  TGT_T3     ok -0.03449812 0.1367244 -0.2523187 0.8027788

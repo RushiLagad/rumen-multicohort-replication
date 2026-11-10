@@ -1,0 +1,60 @@
+=== PRJNA987743 via AWS Open Data ===
+  runs: 52   already complete: 49
+  parallel: 4 x 6   free: 2.1T
+  skip SRR25030038
+  skip SRR25030049
+  skip SRR25030071
+  skip SRR25030060
+  skip SRR25030083
+  skip SRR25030080
+  skip SRR25030081
+  skip SRR25030082
+  skip SRR25030084
+  skip SRR25030085
+  skip SRR25030086
+  skip SRR25030087
+  skip SRR25030088
+  skip SRR25030090
+  skip SRR25030089
+  skip SRR25030091
+  skip SRR25030092
+  skip SRR25030094
+  skip SRR25030093
+  skip SRR25030095
+  skip SRR25030096
+  skip SRR25030097
+  skip SRR25030099
+  skip SRR25030098
+  skip SRR25030100
+  skip SRR25030101
+  skip SRR25030102
+  skip SRR25030103
+  skip SRR25030104
+  skip SRR25030106
+  skip SRR25030105
+  skip SRR25030107
+  skip SRR25030108
+  skip SRR25030111
+  skip SRR25030110
+  skip SRR25030113
+  skip SRR25030109
+  skip SRR25030114
+  skip SRR25030117
+  skip SRR25030116
+  skip SRR25030118
+  skip SRR25030119
+  skip SRR25030115
+  skip SRR25030120
+  skip SRR25030121
+  skip SRR25030122
+  skip SRR25030123
+  done SRR25030112  12696098 pairs  1926 MB
+  done SRR25030129  26638597 pairs  3955 MB
+  done SRR25030124  29656441 pairs  4360 MB
+  done SRR25030130  33264429 pairs  4921 MB
+  done SRR25030131  32271572 pairs  4758 MB
+
+=== complete: 52 of 52 ===
+  size: 192 GB
+  read-count check vs ENA: 51 compared, 0 differ by >1%
+  all runs match ENA's recorded read counts

@@ -1,0 +1,12 @@
+NULL SHUFFLE (Amendment 37) seed 1101 within diet x year 
+charolais_mrna species : targets 1  features 12017  n 30  df 26 
+ id                     target set n_keys n_present feature reads prevalence
+ T6 Methanobrevibacter smithii  Li      2         2  TGT_T6  7619          1
+ pass10
+   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+ANCOM-BC2 kept 11827 of 12016 features
+ id feature status        lfc        se          W p_ancom
+ T6  TGT_T6     ok 0.01297911 0.1442389 0.08998346 0.92899

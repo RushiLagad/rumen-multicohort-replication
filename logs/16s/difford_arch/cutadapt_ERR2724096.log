@@ -1,0 +1,70 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CAGCMGCCGCGGTAA -G GGCCATGCACCWCCTCTC -e 0.12 -O 12 --discard-untrimmed -m 100 -j 1 -o work/16s/difford_arch/trimmed/ERR2724096_1.fastq.gz -p work/16s/difford_arch/trimmed/ERR2724096_2.fastq.gz raw/PRJEB28065/ERR2724096_1.fastq.gz raw/PRJEB28065/ERR2724096_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:            634,428
+  Read 1 with adapter:                 632,096 (99.6%)
+  Read 2 with adapter:                 629,134 (99.2%)
+
+== Read fate breakdown ==
+Pairs that were too short:                   0 (0.0%)
+Pairs discarded as untrimmed:            7,515 (1.2%)
+Pairs written (passing filters):       626,913 (98.8%)
+
+Total basepairs processed:   381,925,656 bp
+  Read 1:   190,962,828 bp
+  Read 2:   190,962,828 bp
+Total written (filtered):    356,727,670 bp (93.4%)
+  Read 1:   179,303,062 bp
+  Read 2:   177,424,608 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CAGCMGCCGCGGTAA; Type: regular 5'; Length: 15; Trimmed: 632096 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+11	9	0.2	1	0 9
+12	123	0.0	1	94 29
+13	302	0.0	1	110 192
+14	6380	0.0	1	1120 5260
+15	623973	0.0	1	587013 36960
+16	1303	0.0	1	104 1199
+17	3	0.0	1	0 3
+26	1	0.0	1	1
+46	1	0.0	1	1
+52	1	0.0	1	1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGCCATGCACCWCCTCTC; Type: regular 5'; Length: 18; Trimmed: 629134 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-18 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	36	0.0	1	22 14
+13	56	0.0	1	16 40
+14	31	0.0	1	18 13
+15	49	0.0	1	19 22 8
+16	400	0.0	1	40 61 299
+17	9334	0.0	2	1880 6474 980
+18	617856	0.0	2	547633 65259 4964
+19	1333	0.0	2	361 825 147
+20	8	0.0	2	3 3 2
+46	1	0.0	2	1
+52	1	0.0	2	0 0 1
+57	1	0.0	2	0 0 1
+58	4	0.0	2	0 2 2
+59	15	0.0	2	0 2 13
+60	8	0.0	2	1 0 7
+93	1	0.0	2	0 0 1

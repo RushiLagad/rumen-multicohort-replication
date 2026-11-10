@@ -1,0 +1,14 @@
+NULL SHUFFLE (Amendment 37) seed 1186 within diet 
+nelore family : targets 2  features 642  n 52  df 48 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+    reads prevalence pass10
+     3656          1   TRUE
+ 19105558          1   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 638 of 642 features
+ id feature status        lfc         se         W   p_ancom
+ T4  TGT_T4     ok 0.05083792 0.05143060 0.9884760 0.3278764
+ C2  TGT_C2     ok 0.08528920 0.09430824 0.9043663 0.3703180

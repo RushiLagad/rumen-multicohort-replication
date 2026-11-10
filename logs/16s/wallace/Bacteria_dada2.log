@@ -44,3 +44,5 @@ The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8809426.fast
 The filter removed all reads: work/16s/wallace_bacteria/filtered/SRR8808715.fastq.gz not written.
 Some input samples had no reads pass the filter.
 round SR1 | runs 996 | 16:19 
+round SR2 | runs 881 | 17:44 
+table | marker Bacteria | cows 1012 | excluded 0 | ASVs 40349 | genera 539 | median classified share 0.762 

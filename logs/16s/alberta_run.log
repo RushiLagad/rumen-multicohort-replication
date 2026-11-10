@@ -1,0 +1,12 @@
+2026-11-03_15:16:40 PRJNA393057: 8 runs to fetch from NCBI
+2026-11-03_15:16:57 PRJNA393057: ok 8 FAIL 0
+2026-11-03_15:16:57 trim
+pairs in 30271611, kept 22767468 (0.752)
+SRR9056754	18478	50	0.00270592
+SRR9056487	38796	36984	0.953294
+2026-11-03_15:17:26 dada2
+truncLen R1 220 R2 260 expected overlap -11 
+median merge rate 0.005 
+FALLBACK to forward reads (Amendment 21 item 4); truncLen 220 
+mode forward | samples 706 | ASVs 37969 | genera 361 | median classified share 0.826 
+2026-11-03_15:54:42 DONE

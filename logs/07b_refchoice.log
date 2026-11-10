@@ -1,0 +1,17 @@
+=== reference choice on 8 samples ===
+run                 pairs  taurus_kept brahman_kept  diff_pct
+SRR25030038        400000       398772       398764     0.002
+SRR25030049        400000       396883       396955     0.018
+SRR25030060        400000       398481       398476     0.001
+SRR25030071        400000       397932       397919     0.003
+SRR25030080        400000       397305       397303     0.001
+SRR25030081        400000       397451       397483     0.008
+SRR25030082        400000       399214       399240     0.006
+SRR25030083        400000       398483       398490     0.002
+
+  retained-read difference: mean 0.005%  max 0.018%  n=8
+  host fraction (ARS-UCD2.0): median 0.4%
+
+  DECISION: <2%. Use ARS-UCD2.0 for all cohorts.
+  One reference across cohorts removes a between-cohort technical factor.
+  Record in ANALYSIS_PLAN.md Section 13.

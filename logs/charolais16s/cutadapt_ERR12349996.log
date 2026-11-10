@@ -1,0 +1,82 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CCTAYGGGRBGCASCAG -G GGACTACHVGGGTWTCTAAT -e 0.12 -O 12 --discard-untrimmed -m 100 -o work/charolais16s/trimmed/ERR12349996_1.fastq.gz -p work/charolais16s/trimmed/ERR12349996_2.fastq.gz PRJEB70895/fastq/ERR12349996_1.fastq.gz PRJEB70895/fastq/ERR12349996_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:             84,209
+  Read 1 with adapter:                  83,936 (99.7%)
+  Read 2 with adapter:                  83,106 (98.7%)
+
+== Read fate breakdown ==
+Pairs that were too short:                 260 (0.3%)
+Pairs discarded as untrimmed:              970 (1.2%)
+Pairs written (passing filters):        82,979 (98.5%)
+
+Total basepairs processed:    42,143,999 bp
+  Read 1:    21,059,539 bp
+  Read 2:    21,084,460 bp
+Total written (filtered):     37,640,617 bp (89.3%)
+  Read 1:    18,974,947 bp
+  Read 2:    18,665,670 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CCTAYGGGRBGCASCAG; Type: regular 5'; Length: 17; Trimmed: 83936 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-17 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	2	0.0	1	1 1
+13	1	0.0	1	0 1
+15	1	0.0	1	0 1
+16	3	0.0	1	1 2
+17	5	0.0	2	2 2 1
+18	16	0.0	2	10 4 2
+19	45	0.0	2	25 5 15
+20	150	0.0	2	48 81 21
+21	28595	0.0	2	28117 460 18
+22	28045	0.0	2	27557 478 10
+23	27042	0.0	2	26685 353 4
+24	30	0.0	2	15 15
+25	1	0.0	2	1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGACTACHVGGGTWTCTAAT; Type: regular 5'; Length: 20; Trimmed: 83106 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+13	2	0.0	1	0 2
+14	2	0.0	1	1 1
+16	1	0.0	1	0 1
+17	6	0.0	2	3 2 1
+18	4	0.0	2	2 0 2
+19	8	0.0	2	1 6 1
+20	19	0.0	2	7 8 4
+21	23	0.0	2	9 13 1
+22	36	0.0	2	12 23 1
+23	38	0.0	2	14 17 7
+24	63	0.0	2	19 18 26
+25	464	0.0	2	88 255 121
+26	82321	0.0	2	43714 33116 5491
+27	105	0.0	2	22 75 8
+28	1	0.0	2	1
+32	1	0.0	2	0 0 1
+39	1	0.0	2	1
+62	3	0.0	2	0 0 3
+63	1	0.0	2	0 0 1
+64	1	0.0	2	0 0 1
+65	1	0.0	2	0 0 1
+66	1	0.0	2	0 0 1
+143	2	0.0	2	2
+145	1	0.0	2	1
+146	1	0.0	2	0 1

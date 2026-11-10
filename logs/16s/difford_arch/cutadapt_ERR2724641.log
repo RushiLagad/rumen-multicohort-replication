@@ -1,0 +1,69 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CAGCMGCCGCGGTAA -G GGCCATGCACCWCCTCTC -e 0.12 -O 12 --discard-untrimmed -m 100 -j 1 -o work/16s/difford_arch/trimmed/ERR2724641_1.fastq.gz -p work/16s/difford_arch/trimmed/ERR2724641_2.fastq.gz raw/PRJEB28065/ERR2724641_1.fastq.gz raw/PRJEB28065/ERR2724641_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:            989,151
+  Read 1 with adapter:                 987,935 (99.9%)
+  Read 2 with adapter:                 979,386 (99.0%)
+
+== Read fate breakdown ==
+Pairs that were too short:                   1 (0.0%)
+Pairs discarded as untrimmed:           10,951 (1.1%)
+Pairs written (passing filters):       978,199 (98.9%)
+
+Total basepairs processed:   595,468,902 bp
+  Read 1:   297,734,451 bp
+  Read 2:   297,734,451 bp
+Total written (filtered):    556,628,826 bp (93.5%)
+  Read 1:   279,780,714 bp
+  Read 2:   276,848,112 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CAGCMGCCGCGGTAA; Type: regular 5'; Length: 15; Trimmed: 987935 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+11	22	0.2	1	0 22
+12	259	0.1	1	218 41
+13	877	0.0	1	256 621
+14	13805	0.0	1	2506 11299
+15	972494	0.0	1	946579 25915
+16	474	0.0	1	32 442
+17	4	0.0	1	3 1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGCCATGCACCWCCTCTC; Type: regular 5'; Length: 18; Trimmed: 979386 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-18 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	1	0.1	1	1
+13	9	0.0	1	3 6
+14	20	0.0	1	14 6
+15	84	0.0	1	49 29 6
+16	1197	0.0	1	132 221 844
+17	18674	0.0	2	3361 12126 3187
+18	958477	0.0	2	814689 135608 8180
+19	853	0.0	2	173 609 71
+20	1	0.0	2	0 0 1
+22	1	0.0	2	1
+46	1	0.0	2	0 1
+56	1	0.0	2	0 1
+57	3	0.0	2	0 0 3
+58	14	0.0	2	0 0 14
+59	26	0.0	2	0 2 24
+60	22	0.0	2	1 3 18
+61	1	0.0	2	0 0 1
+268	1	0.0	2	0 0 1

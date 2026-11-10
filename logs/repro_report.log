@@ -1,0 +1,41 @@
+family size 64 
+                
+                 not reproduced reproduced untestable
+  cross-site RFI              2          0          5
+  cross-site RME              3          0         19
+  rumen RFI                  13          1          8
+  rumen RME                   9          3          1
+same sign as published: 24 of 31 (77%, exact 95% CI 59-90%)
+Spearman published coef vs this estimate: rho 0.51 (p 0.00411), scales differ
+  id             target        stratum pub_dir     lfc      r   q_bh q_testable
+ N40            Blautia      rumen RME       1  0.1584  0.506 0.0115    0.00558
+ N15        Selenomonas      rumen RFI       1  0.2719  0.482 0.0127    0.00617
+ N31    Anaerobutyricum      rumen RME       1  0.1578  0.438 0.0314    0.01520
+ N30 Pseudobutyrivibrio      rumen RME       1  0.2386  0.417 0.0416    0.02017
+ N20     Pseudonocardia      rumen RFI      -1 -0.1199 -0.364 0.0819    0.03965
+ N23      Succinivibrio cross-site RFI      -1  0.2367  0.355 0.0819    0.03965
+ N32          Roseburia      rumen RME       1  0.0842  0.357 0.0819    0.03965
+ N36 Mediterraneibacter      rumen RME       1  0.0834  0.359 0.0819    0.03965
+ N38        Eubacterium      rumen RME       1  0.1102  0.366 0.0819    0.03965
+ N34      Enterocloster      rumen RME       1  0.0815  0.349 0.0831    0.04024
+ N11          Comamonas      rumen RFI      -1  0.1227  0.318 0.1422    0.06886
+ N35       Lacrimispora      rumen RME       1  0.0628  0.309 0.1549    0.07501
+ N39       Anaerostipes      rumen RME       1  0.0618  0.303 0.1607    0.07785
+ N37        Coprococcus      rumen RME       1  0.0602  0.286 0.2015    0.09761
+ N42        Lachnospira      rumen RME       1  0.0528  0.251 0.3376    0.16350
+          label
+     reproduced
+     reproduced
+     reproduced
+     reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced
+ not reproduced

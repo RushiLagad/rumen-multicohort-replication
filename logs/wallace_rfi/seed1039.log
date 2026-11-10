@@ -1,0 +1,67 @@
+DRY RUN: methane permuted within farm 
+wallace_prokaryotes shuffle _rfi_nrc_seed1039 | cows 1004 | df 993 | terms: farm + parity + dim + CH4_z 
+targets 36 | matched 16 | pass 10% prevalence 10 | features 452 
+  id       set                                target   rank n_present
+  T4        Li unclassified Methanomassiliicoccaceae family         0
+  T5        Li                               Blautia  genus         1
+ N04    Nelore                       Acidaminococcus  genus         1
+ N09    Nelore                                 Bosea  genus         1
+ N11    Nelore                             Comamonas  genus         1
+ N12    Nelore                           Caulobacter  genus         1
+ N13    Nelore                           Eubacterium  genus         1
+ N15    Nelore                           Selenomonas  genus         1
+ N20    Nelore                        Pseudonocardia  genus         1
+ N21    Nelore                        Brevibacterium  genus         1
+ N23    Nelore                         Succinivibrio  genus         1
+  C1 Canonical                    Methanobrevibacter  genus         1
+  C2 Canonical                   Succinivibrionaceae family         6
+  C3 Canonical                           Fibrobacter  genus         1
+  C4 Canonical                          Ruminococcus  genus         1
+  C5 Canonical                            Prevotella  genus         1
+  C6 Canonical                          Butyrivibrio  genus         1
+            feature prevalence pass10
+               <NA>        NaN     NA
+            Blautia      0.206   TRUE
+    Acidaminococcus      0.057  FALSE
+              Bosea      0.001  FALSE
+          Comamonas      0.093  FALSE
+        Caulobacter      0.001  FALSE
+        Eubacterium      0.168   TRUE
+        Selenomonas      0.844   TRUE
+     Pseudonocardia      0.001  FALSE
+     Brevibacterium      0.006  FALSE
+      Succinivibrio      0.812   TRUE
+ Methanobrevibacter      1.000   TRUE
+             TGT_C2      0.992   TRUE
+        Fibrobacter      0.979   TRUE
+       Ruminococcus      0.999   TRUE
+         Prevotella      1.000   TRUE
+       Butyrivibrio      0.894   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 105 of 452 features
+M1: cows with >= 100 clade-assigned reads 849 of 1004 
+  id       set            feature     status    n       lfc     se       W
+  T4        Li               <NA> no_feature 1004        NA     NA      NA
+  T5        Li            Blautia         ok 1004  0.074980 0.0199  3.7590
+ N13    Nelore        Eubacterium         ok 1004 -0.009824 0.0195 -0.5026
+ N15    Nelore        Selenomonas         ok 1004 -0.000669 0.0312 -0.0214
+ N23    Nelore      Succinivibrio         ok 1004  0.018921 0.0321  0.5887
+  C1 Canonical Methanobrevibacter         ok 1004  0.041317 0.0354  1.1665
+  C2 Canonical             TGT_C2         ok 1004 -0.048362 0.0296 -1.6358
+  C3 Canonical        Fibrobacter         ok 1004 -0.001196 0.0250 -0.0478
+  C4 Canonical       Ruminococcus         ok 1004 -0.002298 0.0208 -0.1103
+  C5 Canonical         Prevotella         ok 1004 -0.023500 0.0171 -1.3783
+  C6 Canonical       Butyrivibrio         ok 1004 -0.001408 0.0244 -0.0578
+  p_ancom
+       NA
+ 0.000225
+ 0.615959
+ 0.982913
+ 0.556216
+ 0.243697
+ 0.102203
+ 0.961909
+ 0.912199
+ 0.168434
+ 0.953902

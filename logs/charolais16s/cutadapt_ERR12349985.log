@@ -1,0 +1,84 @@
+This is cutadapt 5.2 with Python 3.13.18
+Command line parameters: -g CCTAYGGGRBGCASCAG -G GGACTACHVGGGTWTCTAAT -e 0.12 -O 12 --discard-untrimmed -m 100 -o work/charolais16s/trimmed/ERR12349985_1.fastq.gz -p work/charolais16s/trimmed/ERR12349985_2.fastq.gz PRJEB70895/fastq/ERR12349985_1.fastq.gz PRJEB70895/fastq/ERR12349985_2.fastq.gz
+Processing paired-end reads on 1 core ...
+
+=== Summary ===
+
+Total read pairs processed:             62,802
+  Read 1 with adapter:                  62,666 (99.8%)
+  Read 2 with adapter:                  61,958 (98.7%)
+
+== Read fate breakdown ==
+Pairs that were too short:                  88 (0.1%)
+Pairs discarded as untrimmed:              833 (1.3%)
+Pairs written (passing filters):        61,881 (98.5%)
+
+Total basepairs processed:    31,466,550 bp
+  Read 1:    15,723,619 bp
+  Read 2:    15,742,931 bp
+Total written (filtered):     28,070,414 bp (89.2%)
+  Read 1:    14,150,028 bp
+  Read 2:    13,920,386 bp
+
+=== First read: Adapter 1 ===
+
+Sequence: CCTAYGGGRBGCASCAG; Type: regular 5'; Length: 17; Trimmed: 62666 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-17 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+12	2	0.0	1	0 2
+14	1	0.0	1	0 1
+15	2	0.0	1	0 2
+16	4	0.0	1	3 1
+17	2	0.0	2	2
+18	15	0.0	2	9 1 5
+19	25	0.0	2	13 3 9
+20	118	0.0	2	46 55 17
+21	21215	0.0	2	20796 399 20
+22	20980	0.0	2	20572 404 4
+23	20279	0.0	2	19960 318 1
+24	19	0.0	2	6 12 1
+25	2	0.0	2	2
+27	1	0.0	2	1
+33	1	0.0	2	1
+
+
+=== Second read: Adapter 2 ===
+
+Sequence: GGACTACHVGGGTWTCTAAT; Type: regular 5'; Length: 20; Trimmed: 61958 times
+
+Minimum overlap: 12
+No. of allowed errors:
+1-7 bp: 0; 8-15 bp: 1; 16-20 bp: 2
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+14	1	0.0	1	0 1
+15	1	0.0	1	0 1
+16	1	0.0	1	0 1
+17	5	0.0	2	0 4 1
+18	1	0.0	2	0 1
+19	6	0.0	2	2 3 1
+20	9	0.0	2	4 3 2
+21	14	0.0	2	0 12 2
+22	20	0.0	2	9 9 2
+23	25	0.0	2	7 12 6
+24	67	0.0	2	16 16 35
+25	338	0.0	2	63 174 101
+26	61361	0.0	2	32446 24572 4343
+27	93	0.0	2	19 54 20
+28	1	0.0	2	0 0 1
+30	1	0.0	2	0 1
+33	1	0.0	2	1
+56	1	0.0	2	0 1
+58	1	0.0	2	0 0 1
+59	1	0.0	2	0 1
+62	1	0.0	2	0 1
+63	3	0.0	2	0 0 3
+64	3	0.0	2	0 1 2
+65	1	0.0	2	0 1
+66	2	0.0	2	0 0 2

@@ -1,0 +1,8 @@
+alberta family : animals 567 | groups 7 (excluded 1 with <5 animals: 2 animals) | df 557 
+targets 2 | matched a 16S feature 1 | pass 10% prevalence 1 | features 118 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         0    <NA>
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+ reads prevalence pass10
+    NA         NA     NA
+ 83806       0.73   TRUE
