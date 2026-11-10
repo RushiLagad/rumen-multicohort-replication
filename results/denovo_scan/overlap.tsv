@@ -1,5 +1,6 @@
 table_a	table_b	comparison	shared_genera	hits_a	hits_b	both	both_same_sign	expected_both	p_hyper	spearman_W	p_spearman	same_sign_genera
-nelore_genus	charolais_mrna_genus	same trait: RFI	2654	79	146	10	5	4.35	0.01	0.026	0.18	Sulfurifustis;Rudanella;Fen-1039;JAGLBA01;Erythrobacter
+nelore_genus	charolais_mrna_genus	same trait: RFI	2654	122	141	14	8	6.48	0.0044	0.026	0.18	Sulfurifustis;Rudanella;Fen-1039;JAGLBA01;Erythrobacter;Alkalimonas;RGIG1927;PFMI01
 difford_bact	wallace_prokaryotes	same trait: CH4	80	0	24	0	0	0	1	-0.298	0.0073	
-alberta_genus	difford_bact	cross-trait (RFI vs CH4)	71	6	0	0	0	0	1	-0.145	0.23	
-alberta_genus	wallace_prokaryotes	cross-trait (RFI vs CH4)	67	5	19	0	0	1.42	1	0.107	0.39	
+difford_bact	wallace_prokaryotes_depth	same trait: CH4	80	0	5	0	0	0	1	-0.313	0.0048	
+alberta_genus	difford_bact	cross-trait (RFI vs CH4)	71	4	0	0	0	0	1	-0.145	0.23	
+alberta_genus	wallace_prokaryotes	cross-trait (RFI vs CH4)	67	4	19	0	0	1.13	1	0.107	0.39	
