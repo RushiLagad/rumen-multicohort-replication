@@ -1,7 +1,7 @@
 Fontconfig warning: using without calling FcInit()
 wrote fig2_calibration 
-wrote fig3_wallace_vs_difford 
-wrote fig4_clade_ratio_trait 
+wrote fig3_clade_ratio_trait 
+wrote fig4_wallace_vs_difford 
 
 == Figure 2a: per-table false positive rate across shuffles
                   lab    med   mean   top maxq   n
@@ -11,8 +11,8 @@ wrote fig4_clade_ratio_trait
     Difford\n16S, CH4 0.0962 0.1047 0.269   21 200
     Wallace\n16S, CH4 0.2500 0.2581 0.529   45 200
 == Figure 2b: null SD range, ANCOM-BC2 0.85 to 5.26 | CLR 0.94 to 1.08 | targets 15 
-== Figure 3: 80 genera; Spearman on calibrated W -0.301 p 0.0067 | on raw W -0.298 p 0.0073 | robust plotted 16 | M2 W Wallace -3.94 Difford 0.15 
-== Figure 4
+== Figure 4: 80 genera; Spearman on calibrated W -0.301 p 0.0067 | on raw W -0.298 p 0.0073 | robust plotted 16 | M2 W Wallace -3.94 Difford 0.15 
+== Figure 3
                                                row      r      lo     hi   n
                                 Difford, g per day 0.0318 -0.0418 0.1050 728
                                 Wallace, g per day 0.0281 -0.0394 0.0954 853

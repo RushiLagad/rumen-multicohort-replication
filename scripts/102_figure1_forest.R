@@ -2,6 +2,8 @@
 # 102: Manuscript Figure 1. Pooled r and 95% CI for the 27 feed efficiency and 11 methane targets, oriented to the published
 # direction, with r = 0.15 and r = 0.30 bands shaded. Reads results/power/power_equivalence.tsv (from 93); refits nothing.
 # Run: Rscript scripts/102_figure1_forest.R      (rumen-r env; writes results/figures_manuscript/fig1_forest_pooled.{pdf,png})
+# Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the
+# manuscript figure legend). Panel headers a and b are kept.
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); od <- file.path(root, "results", "figures_manuscript"); dir.create(od, showWarnings=FALSE)
 p <- read.delim(file.path(root, "results", "power", "power_equivalence.tsv"), check.names=FALSE, stringsAsFactors=FALSE, quote="")
@@ -49,26 +51,20 @@ panel <- function(a, title, first, last) {
                           size=2.35, fontface="bold", colour=ink2) } +
     { if (first) annotate("text", x=c(0.225, 0.50), y=Inf, label=c("0.15–0.30", "≥ 0.30, typical\npublished size"),
                           vjust=-0.25, size=2.3, colour=ink2, lineheight=0.9) } +
-    scale_colour_manual(values=vcol, limits=cat_lv, drop=FALSE) +
+    scale_colour_manual(values=vcol, limits=cat_lv, drop=FALSE, labels=sub("in the published", "in\nthe published", cat_lv)) +   # wrapped to fit 170 mm
     scale_shape_manual(values=c(`TRUE`=16, `FALSE`=21), guide="none") +
     scale_x_continuous(breaks=seq(-0.6, 0.6, 0.3), expand=expansion(0)) + scale_y_discrete(expand=expansion(add=c(0.7, if (first) 1.3 else 0.7))) +
     coord_cartesian(xlim=XL, clip="off") +
     labs(title=title, y=NULL, x=if (last) "Pooled partial r, oriented so positive = the published direction" else NULL) +
-    theme_f + theme(plot.margin=margin(if (first) 22 else 10, 112, 4, 4), legend.box.spacing=unit(16, "pt"), axis.text.x=if (last) element_text() else element_blank(),
+    theme_f + theme(plot.margin=margin(if (first) 6 else 10, 112, 4, 4), legend.box.spacing=unit(16, "pt"), axis.text.x=if (last) element_text() else element_blank(),
                     plot.title=element_text(size=8.5, face="bold"), legend.position=if (first) "top" else "none") +
     guides(colour=guide_legend(ncol=2, byrow=FALSE))
 }
 f1 <- panel("RFI", "a  Feed efficiency (RFI): 27 targets, three beef cohorts, 649 animals", TRUE, FALSE) /
       panel("Methane", "b  Methane (g per day): 11 targets, two dairy cohorts, 1,758 cows", FALSE, TRUE) +
   plot_layout(heights=c(27, 11)) +
-  plot_annotation(
-    title="No published association replicated; most published-size effects are excluded",
-    subtitle=paste0("Calibrated pooled partial correlation and 95% CI per target (REML random effects; single-cohort targets show that cohort).\n",
-                    "Shaded: effects of r = 0.15 to 0.30 and of r ≥ 0.30 in the published direction. Hollow points: no published direction,\n",
-                    "shown on the estimated scale. Eff. n: effective sample size implied by the pooled interval."),
-    caption=paste0("Feed efficiency: Nelore (52), Charolais (30), Alberta (567, all animals). Methane: Difford (749) and Wallace (1,009); Wallace is\n",
-                   "re-analysis for Succinivibrionaceae (M2) and enters it only in a sensitivity pooling. Source: results/power/power_equivalence.tsv."),
-    theme=theme_f)
-ggsave(file.path(od, "fig1_forest_pooled.pdf"), f1, width=7.2, height=8.6, device=cairo_pdf)
-ggsave(file.path(od, "fig1_forest_pooled.png"), f1, width=7.2, height=8.6, dpi=300, bg=bg)
+  plot_annotation(theme=theme_f)   # title, subtitle and source moved to the manuscript legend
+W <- 170 / 25.4; H <- 7.9
+ggsave(file.path(od, "fig1_forest_pooled.pdf"), f1, width=W, height=H, device=cairo_pdf)
+ggsave(file.path(od, "fig1_forest_pooled.png"), f1, width=W, height=H, dpi=300, bg=bg)
 cat("wrote", file.path(od, "fig1_forest_pooled.{pdf,png}"), "\n")

@@ -1,6 +1,9 @@
 #!/usr/bin/env Rscript
 # 103: Manuscript Figures 2 to 4, same style as 102. Reads existing outputs only; refits nothing.
-# Run: Rscript scripts/103_figures_2to4.R   (rumen-r env; writes results/figures_manuscript/fig{2,3,4}_*.{pdf,png})
+# Run: Rscript scripts/103_figures_2to4.R   (rumen-r env; writes results/figures_manuscript/fig2_calibration,
+# fig3_clade_ratio_trait and fig4_wallace_vs_difford, each .pdf and .png). Figure numbers follow the order the manuscript cites them.
+# Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the
+# manuscript figure legends). Panel headers a and b in Figure 2 are kept.
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); od <- file.path(root, "results", "figures_manuscript"); dir.create(od, showWarnings=FALSE)
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote=""); rc <- function(f) read.csv(f, check.names=FALSE, stringsAsFactors=FALSE)
@@ -11,6 +14,7 @@ theme_f <- theme_minimal(base_size=8.5) + theme(
   legend.position = "top", legend.justification = "left", legend.title = element_blank(), legend.text = element_text(colour=ink2, size=7.5),
   plot.title = element_text(face="bold", size=8.5), plot.subtitle = element_text(colour=ink2, size=8), plot.caption = element_text(colour=muted, size=6.5, hjust=0),
   plot.title.position = "plot", plot.caption.position = "plot", plot.background = element_rect(fill=bg, colour=NA))
+W170 <- 170 / 25.4
 save2 <- function(p, name, w, h) { ggsave(file.path(od, paste0(name, ".pdf")), p, width=w, height=h, device=cairo_pdf); ggsave(file.path(od, paste0(name, ".png")), p, width=w, height=h, dpi=300, bg=bg); cat("wrote", name, "\n") }
 tk <- rd(file.path(root, "plan", "target_keys.tsv"))
 repel <- requireNamespace("ggrepel", quietly=TRUE)
@@ -35,7 +39,7 @@ pA <- ggplot(N, aes(lab, fpr)) +
   annotate("text", x=5.45, y=0.05, label="expected 5%", hjust=1, vjust=-0.6, size=2.25, colour=ink2) +
   scale_y_continuous(labels=function(v) paste0(round(100 * v), "%"), expand=expansion(mult=c(0.02, 0.18))) +
   labs(title="a  False positives across 200 shuffles", x=NULL, y="Genera at nominal p < 0.05") +
-  theme_f + theme(panel.grid.major.x=element_blank(), axis.text.x=element_text(size=6.6, lineheight=0.9))
+  theme_f + theme(panel.grid.major.x=element_blank(), axis.text.x=element_text(size=6.2, lineheight=0.9))
 nsd <- function(dir, fmt, tab, method) { fs <- file.path(root, "results", dir, sprintf(fmt, tab, 1001:1200)); fs <- fs[file.exists(fs)]; stopifnot(length(fs) == 200)
   x <- do.call(rbind, lapply(fs, function(f) { d <- rd(f); d[d$status == "ok", c("id", "W")] })); a <- aggregate(W ~ id, x, sd); names(a)[2] <- "sd"; a$table <- tab; a$method <- method; a }
 B <- rbind(nsd("methane_dryrun", "%s_seed%d_targets.tsv", "difford_bact", "ANCOM-BC2"), nsd("methane_dryrun", "%s_seed%d_targets.tsv", "wallace_prokaryotes", "ANCOM-BC2"),
@@ -49,42 +53,16 @@ pB <- ggplot(B, aes(sd, lab)) +
   geom_segment(data=seg, aes(x=lo, xend=hi, y=lab, yend=lab), colour=grid, linewidth=1.3, inherit.aes=FALSE) +
   geom_point(aes(colour=method), size=1.9) +
   scale_colour_manual(values=c("ANCOM-BC2"=blue, "CLR linear model"=orange)) +
-  labs(title="b  Null spread per methane target", x="SD of W across 200 shuffles (1 = calibrated)", y=NULL) +
-  theme_f + theme(panel.grid.major.y=element_blank())
-f2 <- (pA | pB) + plot_layout(widths=c(1.15, 1)) + plot_annotation(
-  title="ANCOM-BC2 is miscalibrated on these tables; a CLR linear model is not",
-  subtitle="The phenotype was permuted 200 times within diet, farm, herd or management group and the full model refitted each time.",
-  caption=paste0("a: each point is one shuffle; boxes show the median and quartiles. b: per target, the standard deviation of W = estimate / SE under permutation.\n",
-                 "Every estimate in this study is divided by its own null SD when above 1. Sources: results/scan_null/, results/methane_dryrun/, results/clr/."), theme=theme_f)
-save2(f2, "fig2_calibration", 7.2, 4.4)
+  labs(title="b  Null spread per methane target", x="SD of W across 200 shuffles\n(1 = calibrated)", y=NULL) +
+  theme_f + theme(panel.grid.major.y=element_blank(), legend.justification=c(1, 0), legend.direction="vertical",
+                  legend.background=element_rect(fill=NA, colour=NA)) +
+  # legend in the panel's lower right so the 170 mm width fits: rows are sorted by ANCOM-BC2 null SD, so the bottom rows sit near
+  # x = 1 (all CLR SDs are 0.94 to 1.08) while the axis runs to about 5. legend.position.inside needs ggplot2 >= 3.5.
+  if (packageVersion("ggplot2") >= "3.5.0") theme(legend.position="inside", legend.position.inside=c(0.99, 0.02)) else theme(legend.position=c(0.99, 0.02))
+f2 <- (pA | pB) + plot_layout(widths=c(1.35, 1)) + plot_annotation(theme=theme_f)   # title, subtitle and sources moved to the manuscript legend
+save2(f2, "fig2_calibration", W170, 3.6)
 
-# ---------------- Figure 3
-w <- rd(file.path(root, "results", "denovo_scan", "wallace_prokaryotes_scan.tsv")); d <- rd(file.path(root, "results", "denovo_scan", "difford_bact_scan.tsv"))
-g <- intersect(w$genus, d$genus); S <- data.frame(genus=g, x=w$W_cal[match(g, w$genus)], y=d$W_cal[match(g, d$genus)], xr=w$W[match(g, w$genus)], yr=d$W[match(g, d$genus)])
-S <- S[is.finite(S$x) & is.finite(S$y), ]
-fc <- rd(file.path(root, "results", "wallace_farms", "farm_consistency.tsv")); rob <- fc$genus[fc$farm_robust & fc$genus != "TGT_M2"]
-S$robust <- S$genus %in% rob
-e <- rd(file.path(root, "results", "methane_pooled", "estimates_calibrated.tsv"))
-m2 <- data.frame(genus="Succinivibrionaceae (M2)", x=e$W[e$id == "M2" & e$cohort == "wallace"], y=e$W[e$id == "M2" & e$cohort == "difford"]); stopifnot(nrow(m2) == 1)
-ct <- cor.test(S$x, S$y, method="spearman", exact=FALSE); ctr <- cor.test(S$xr, S$yr, method="spearman", exact=FALSE)
-p3 <- ggplot(S, aes(x, y)) +
-  annotate("rect", xmin=-Inf, xmax=Inf, ymin=-1.96, ymax=1.96, fill="#f0efec") +
-  geom_hline(yintercept=0, colour=ink2, linewidth=0.3) + geom_vline(xintercept=0, colour=ink2, linewidth=0.3) +
-  geom_point(data=S[!S$robust, ], colour=grey, size=1.4) +
-  geom_point(data=S[S$robust, ], colour=blue, size=1.9) +
-  geom_point(data=m2, shape=23, fill=orange, colour=ink, size=2.8) +
-  lab_layer(data=S[S$robust, ], aes(label=genus)) + lab_layer(data=m2, aes(label=genus)) +
-  annotate("text", x=-Inf, y=Inf, hjust=-0.05, vjust=1.5, size=2.5, colour=ink2,
-           label=sprintf("%d shared genera\nSpearman rho = %.2f (p = %.3f)", nrow(S), ct$estimate, ct$p.value)) +
-  annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
-  labs(title="Genera associated with methane in Wallace show no association in Difford",
-       subtitle="Calibrated W per genus in the two dairy cohorts (methane in g per day). Blue: the 16 genera that kept their sign and\nstrength when each Wallace farm was left out.\nDiamond: Succinivibrionaceae, reported by Wallace et al. (re-analysis in that cohort).",
-       caption="Sources: results/denovo_scan/*_scan.tsv (per-genus permutation calibration),
-results/wallace_farms/farm_consistency.tsv, results/methane_pooled/estimates_calibrated.tsv.",
-       x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) + theme_f
-save2(p3, "fig3_wallace_vs_difford", 7.2, 6.0)
-
-# ---------------- Figure 4
+# ---------------- Figure 3 (clade ratio)
 coh <- function(dirn, lab, cohort, trait) { x <- rd(file.path(root, "results", dirn, "estimates_calibrated.tsv")); x <- x[x$id == "M1" & x$cohort == cohort, ]; stopifnot(nrow(x) == 1)
   data.frame(row=lab, r=x$r, lo=x$lo, hi=x$hi, n=x$n, p=x$p_perm, kind="Single cohort", trait=trait) }
 pool <- function(dirn, lab, trait) { x <- rd(file.path(root, "results", dirn, "classification_primary.tsv")); x <- x[x$id == "M1", ]; stopifnot(nrow(x) == 1)
@@ -97,21 +75,45 @@ M <- rbind(coh("methane_pooled", "Difford, g per day", "difford", "g per day"),
            pool("methane_pooled", "Pooled, g per day (primary)", "g per day"),
            pool("methane_pooled_ch4_dmi", "Pooled, Difford g per day + Wallace per kg intake", "per kg intake"))
 M$row <- factor(M$row, rev(M$row)); M$plab <- ifelse(M$kind == "Pooled", "", ifelse(M$p < 0.005, "p < 0.005", sprintf("p = %.2f", M$p)))
-p4 <- ggplot(M, aes(r, row)) +
+p_ratio <- ggplot(M, aes(r, row)) +
   geom_vline(xintercept=0, colour=ink2, linetype="22", linewidth=0.35) +
   geom_errorbarh(aes(xmin=lo, xmax=hi, colour=trait), height=0, linewidth=1.1) +
   geom_point(aes(colour=trait, shape=kind), size=2.4, fill=bg, stroke=0.8) +
   geom_text(aes(label=plab), x=max(M$hi) + 0.03, hjust=0, size=2.35, colour=ink2) +
   scale_colour_manual(values=c("g per day"=blue, "per kg intake"=orange)) + scale_shape_manual(values=c("Single cohort"=16, "Pooled"=23)) +
   scale_x_continuous(expand=expansion(mult=c(0.05, 0.25))) +
-  labs(title="The archaeal clade ratio tracks methane per kg intake, not daily output, in one cohort",
-       subtitle="Partial r and 95% CI for log(M. gottschalkii clade / M. ruminantium clade) against methane, calibrated; published direction = positive.\nPermutation p shown for single cohorts.",
-       caption="Per kg intake is a pre-registered Wallace-only sensitivity trait (intake partly marker-estimated). SE1 is the Swedish farm that may overlap with Danielsson et al. (2017).\nSources: results/methane_pooled*/estimates_calibrated.tsv and classification_primary.tsv.",
-       x="Partial r with methane", y=NULL) + theme_f + theme(panel.grid.major.y=element_blank())
-save2(p4, "fig4_clade_ratio_trait", 7.2, 3.6)
+  labs(x="Partial r with methane", y=NULL) + theme_f + theme(panel.grid.major.y=element_blank())
+save2(p_ratio, "fig3_clade_ratio_trait", W170, 2.7)
+
+# ---------------- Figure 4 (Wallace vs Difford)
+w <- rd(file.path(root, "results", "denovo_scan", "wallace_prokaryotes_scan.tsv")); d <- rd(file.path(root, "results", "denovo_scan", "difford_bact_scan.tsv"))
+g <- intersect(w$genus, d$genus); S <- data.frame(genus=g, x=w$W_cal[match(g, w$genus)], y=d$W_cal[match(g, d$genus)], xr=w$W[match(g, w$genus)], yr=d$W[match(g, d$genus)])
+S <- S[is.finite(S$x) & is.finite(S$y), ]
+fc <- rd(file.path(root, "results", "wallace_farms", "farm_consistency.tsv")); rob <- fc$genus[fc$farm_robust & fc$genus != "TGT_M2"]
+S$robust <- S$genus %in% rob
+e <- rd(file.path(root, "results", "methane_pooled", "estimates_calibrated.tsv"))
+m2 <- data.frame(genus="Succinivibrionaceae (M2)", x=e$W[e$id == "M2" & e$cohort == "wallace"], y=e$W[e$id == "M2" & e$cohort == "difford"]); stopifnot(nrow(m2) == 1)
+ct <- cor.test(S$x, S$y, method="spearman", exact=FALSE); ctr <- cor.test(S$xr, S$yr, method="spearman", exact=FALSE)
+p_scatter <- ggplot(S, aes(x, y)) +
+  annotate("rect", xmin=-Inf, xmax=Inf, ymin=-1.96, ymax=1.96, fill="#f0efec") +
+  geom_hline(yintercept=0, colour=ink2, linewidth=0.3) + geom_vline(xintercept=0, colour=ink2, linewidth=0.3) +
+  geom_point(data=S[!S$robust, ], colour=grey, size=1.4) +
+  geom_point(data=S[S$robust, ], colour=blue, size=1.9) +
+  geom_point(data=m2, shape=23, fill=orange, colour=ink, size=2.8) +
+  # Robust-genus labels repel from every plotted point (blank labels for the grey points and for the M2 diamond and its
+  # label area), not only from each other. The M2 label sits at a fixed spot centred just below the diamond: repelled
+  # placement had put it on the grey point at about (-4.5, 0).
+  lab_layer(data=rbind(data.frame(x=S$x, y=S$y, genus=ifelse(S$robust, S$genus, "")),
+                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus="")), aes(label=genus)) +
+  geom_text(data=m2, aes(label=genus), vjust=1, nudge_y=-0.2, size=2.3, colour=ink2) +
+  annotate("text", x=-Inf, y=Inf, hjust=-0.05, vjust=1.5, size=2.5, colour=ink2,
+           label=sprintf("%d shared genera\nSpearman rho = %.2f (p = %.3f)", nrow(S), ct$estimate, ct$p.value)) +
+  annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
+  labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) + theme_f
+save2(p_scatter, "fig4_wallace_vs_difford", W170, 5.0)
 
 # ---------------- numbers for the manuscript text
 cat("\n== Figure 2a: per-table false positive rate across shuffles\n"); print(as.data.frame(sN), digits=3, row.names=FALSE)
 cat("== Figure 2b: null SD range, ANCOM-BC2", paste(round(range(B$sd[B$method == "ANCOM-BC2"]), 2), collapse=" to "), "| CLR", paste(round(range(B$sd[B$method == "CLR linear model"]), 2), collapse=" to "), "| targets", nlevels(B$lab), "\n")
-cat("== Figure 3:", nrow(S), "genera; Spearman on calibrated W", round(ct$estimate, 3), "p", signif(ct$p.value, 2), "| on raw W", round(ctr$estimate, 3), "p", signif(ctr$p.value, 2), "| robust plotted", sum(S$robust), "| M2 W Wallace", round(m2$x, 2), "Difford", round(m2$y, 2), "\n")
-cat("== Figure 4\n"); print(M[, c("row", "r", "lo", "hi", "n", "p")], digits=3, row.names=FALSE)
+cat("== Figure 4:", nrow(S), "genera; Spearman on calibrated W", round(ct$estimate, 3), "p", signif(ct$p.value, 2), "| on raw W", round(ctr$estimate, 3), "p", signif(ctr$p.value, 2), "| robust plotted", sum(S$robust), "| M2 W Wallace", round(m2$x, 2), "Difford", round(m2$y, 2), "\n")
+cat("== Figure 3\n"); print(M[, c("row", "r", "lo", "hi", "n", "p")], digits=3, row.names=FALSE)
