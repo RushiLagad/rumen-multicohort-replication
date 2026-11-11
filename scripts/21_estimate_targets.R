@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 # Target estimates (Amendment 14b). Usage: 21_estimate_targets.R <nelore|charolais_mrna> <genus|family|phylum|species> [dry]
-suppressMessages({library(ANCOMBC); library(TreeSummarizedExperiment)})
+if (!nzchar(Sys.getenv("LATE"))) suppressMessages({library(ANCOMBC); library(TreeSummarizedExperiment)})   # not needed by the Amendment 44 late analyses
 a <- commandArgs(TRUE); coh <- a[1]; rk <- a[2]; dry <- length(a) > 2 && a[3] == "dry"
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); prof <- Sys.getenv("PROFILE", "profiles_gtdb_full")
 tax <- Sys.getenv("TAXDIR", "/data/refs/k2_gtdb207_full/taxonomy"); set.seed(20261102)
@@ -62,6 +62,8 @@ cov <- data.frame(id=tk$id, target=tk$target, set=tk$set, n_keys=tk$n_keys, n_pr
 print(cov, row.names=FALSE)
 if (dry) quit(save="no")
 if (Sys.getenv("CLR") == "1") { source(file.path(root, "scripts", "lib_clr.R")); clr_write(A, feat, tk, md, terms, n, df, cohort=coh, rank=rk, prefix=paste0(coh, "_", rk), root=root); quit(save="no") }
+if (nzchar(Sys.getenv("LATE"))) { source(file.path(root, "scripts", "lib_late.R")); late_main(A, feat, tk, md, terms, n, df, cohort=coh, rank=rk, prefix=paste0(coh, "_", rk), root=root,   # Amendment 44
+  perm_by=if (coh == "nelore") "diet" else c("diet", "year"), X=X, tax=tax); quit(save="no") }
 # --- fit ANCOM-BC2 (package defaults; Amendment 14b item 2). Features get safe IDs so no package renames them.
 orig <- rownames(A); rownames(A) <- sprintf("F%05d", seq_along(orig)); sf <- rownames(A)[match(feat, orig)]
 tse <- TreeSummarizedExperiment(assays=list(counts=as.matrix(A)), colData=md[, terms, drop=FALSE])

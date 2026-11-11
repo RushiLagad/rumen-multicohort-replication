@@ -173,6 +173,17 @@ VERSIONS = [  # (version, arm, role, description, pooled file, per-cohort file o
     ("Methane CLR", "Methane", "sensitivity", "Second estimator: CLR linear model (Amendment 42); M1 is a linear model in both. Pooled file (script 96) uses uncalibrated CLR W; per-cohort rows here are calibrated (addendum; null SD 0.95 to 1.08), which leaves every label unchanged.",
      "results/clr_pooled/classification_methane_clr.tsv", "CLR_CH4"),
 ]
+# Amendment 44: late analyses, run after all primary results were seen (pre-specified in plan Section 6, not run at the time). Added when their outputs exist.
+def _kperm(m):
+    f = P(f"results/late_{m}/pooled/n_permutations.txt"); return open(f).read().strip() if os.path.exists(f) else "?"
+LATE = "Late analysis, run after all primary results were seen (Amendment 44; pre-specified in plan Section 6, not run at the time). "
+for m, nm in (("linda", "LinDA (MicrobiomeStat, feature.dat.type = count, other settings default)"), ("aldex2", "ALDEx2 1.34.0 (aldex.clr, 128 Monte Carlo instances, denom all; aldex.glm)")):
+    if os.path.exists(P(f"results/late_{m}/pooled/classification_rfi.tsv")):
+        k = _kperm(m); cal = f"same tables, animals, covariates and targets as the primary; calibrated by {k} within-design permutations as in Amendment 37"
+        VERSIONS += [(f"RFI {nm.split(' ')[0]} (late)", "RFI", "late", LATE + nm + "; " + cal + "; Alberta all animals.",
+                      f"results/late_{m}/pooled/classification_rfi.tsv", f"results/late_{m}/pooled/estimates_calibrated_rfi.tsv"),
+                     (f"Methane {nm.split(' ')[0]} (late)", "Methane", "late", LATE + nm + "; " + cal + "; M1 is the primary calibrated linear model; Wallace M2 excluded as re-analysis.",
+                      f"results/late_{m}/pooled/classification_methane_primary.tsv", f"results/late_{m}/pooled/estimates_calibrated_methane.tsv")]
 POOLED_COLS = ["set", "id", "target", "rank", "stratum", "published_dir", "k", "r", "ci_lo", "ci_hi", "p", "q_bh", "family_size",
                "tau2", "p_hk", "p_fe", "concordant", "loo_all_sig", "loo_nominal", "label"]
 COH_COLS = ["id", "set", "cohort", "table", "rank", "feature", "n", "df", "lfc", "se", "W_raw", "sd_null", "k_null", "W", "p_perm", "r", "lo", "hi", "reanalysis"]
@@ -205,6 +216,11 @@ def clr_cohort(arm):
     lohi = [ci(r, d) for r, d in zip(E.r, E.df)]; E["lo"] = [a for a, b in lohi]; E["hi"] = [b for a, b in lohi]
     return E
 
+def replicated_note(PL):
+    x = PL[PL.label == "replicated"]
+    if not len(x): return "No target is labelled replicated in any version."
+    return "Targets labelled replicated: " + "; ".join(f"{i} in {v}" for i, v in zip(x.id, x.version)) + ". No other target is labelled replicated in any version."
+
 def build_file2():
     pooled, coh = [], []
     for v, arm, role, desc, pf, cf in VERSIONS:
@@ -215,8 +231,10 @@ def build_file2():
         if cf is None: continue
         e = clr_cohort(cf) if cf.startswith("CLR") else rd(cf)
         e = e.reindex(columns=COH_COLS)
+        lm = re.match(r"results/late_(linda|aldex2)/", cf or "")
         e.insert(0, "calibration", {"CLR_RFI": "none (CLR, RFI arm: no CLR permutations, Amendment 42)",
                                     "CLR_CH4": "W = W_raw / max(1, sd_null); 200 CLR permutations (Amendment 42 addendum)"}.get(cf,
+                                    f"W = W_raw / max(1, sd_null); {_kperm(lm.group(1))} within-design permutations (late, Amendment 44)" if lm else
                                     "W = W_raw / max(1, sd_null); 200 within-design permutations"))
         e.insert(0, "role", role); e.insert(0, "arm", arm); e.insert(0, "version", v); coh.append(e)
     PL = pd.concat(pooled, ignore_index=True); CO = pd.concat(coh, ignore_index=True)
@@ -230,11 +248,11 @@ def build_file2():
                       for v, a, ro, de, pf, cf in VERSIONS])
     notes = pd.DataFrame({"Item": ["Versions", "Primary", "Per-cohort sheet", "Pooled sheet", "Labels", "Untestable targets", "Built by"],
         "Description": [
-        "Every analysis version in results/robustness (script 97) plus the Wallace RFI NRC sensitivity pooling (script 99). See the Versions sheet.",
-        "RFI primary and Methane primary (role = primary). All other versions are sensitivity analyses or superseded and set no label.",
+        "Every analysis version in results/robustness (script 97), the Wallace RFI NRC sensitivity pooling (script 99) and, with role = late, the LinDA and ALDEx2 analyses run after all primary results were seen (Amendment 44, script 106). See the Versions sheet.",
+        "RFI primary and Methane primary (role = primary). All other versions are sensitivity analyses, superseded or late analyses and set no label.",
         "One row per target, cohort and version. W_raw is the ANCOM-BC2 (or CLR) estimate / SE; null_SD_of_W is its SD over 200 within-design phenotype permutations; W_calibrated = W_raw / max(1, null SD); p_permutation is the share of permutations with |W| at least |W_raw| (the RFI + Wallace RFI NRC version, script 99, and the calibrated CLR methane rows use (b + 1) / (n + 1) instead, b = permutations at least as extreme, n = permutations); r is the partial correlation W / sqrt(W^2 + df) with a Fisher-z 95% CI. Versions sharing per-cohort estimates with another version are not repeated.",
         "One row per target and version. Random-effects (REML) pooling of Fisher z over cohorts; k = cohorts pooled; q is Benjamini-Hochberg within each target set; loo_* are the leave-one-cohort-out checks; label is the pre-registered classification (Section 10, Amendment 14).",
-        "No target is labelled replicated in any version.",
+        replicated_note(PL),
         "Targets with k = 0 are listed with label 'untestable' and blank estimates.",
         "scripts/104_additional_files.py, from the files named in the Versions sheet."]})
     f = os.path.join(OD, "Additional_file_2_estimates.xlsx")

@@ -12,7 +12,7 @@ an <- an[an$has_rfi %in% c(TRUE, "True") & an$animal_id %in% colnames(X), ]
 allA <- Sys.getenv("ALBERTA_ALL") == "1"; tag <- if (allA) "_all" else ""; ovf <- file.path(root, "harmonized", "alberta_overlap_448333.txt")
 stopifnot("overlap list missing (Amendment 24)" = file.exists(ovf)); ov <- readLines(ovf); nov <- sum(an$animal_id %in% ov); if (!allA) an <- an[!an$animal_id %in% ov, ]
 an$group <- paste(an$diet, an$sex, an$collection_date, sep="|"); gs <- table(an$group); small <- names(gs)[gs < 5]
-if (!nzchar(Sys.getenv("SHUFFLE_SEED"))) write.table(data.frame(group=names(gs), n=as.integer(gs), excluded=names(gs) %in% small), file.path(out, paste0("management_groups", tag, ".tsv")), sep="\t", quote=FALSE, row.names=FALSE)
+if (!nzchar(Sys.getenv("SHUFFLE_SEED")) && !nzchar(Sys.getenv("LATE"))) write.table(data.frame(group=names(gs), n=as.integer(gs), excluded=names(gs) %in% small), file.path(out, paste0("management_groups", tag, ".tsv")), sep="\t", quote=FALSE, row.names=FALSE)
 an <- an[!an$group %in% small, ]; X <- X[, an$animal_id, drop=FALSE]
 md <- data.frame(group=factor(an$group), breed=factor(an$breed), RFI_z=as.numeric(scale(as.numeric(an$rfi))), row.names=an$animal_id)
 SS <- Sys.getenv("SHUFFLE_SEED"); if (nzchar(SS)) { set.seed(as.integer(SS)); for (lv in levels(md$group)) { i <- which(md$group == lv); md$RFI_z[i] <- md$RFI_z[sample(i)] }
@@ -39,6 +39,8 @@ cov <- data.frame(id=tk$id, target=tk$target, set=tk$set, n_keys=tk$n_keys, n_pr
 cat("targets", nrow(tk), "| matched a 16S feature", sum(ok), "| pass 10% prevalence", sum(cov$pass10, na.rm=TRUE), "| features", nrow(A), "\n"); print(cov, row.names=FALSE)
 if (dry) quit(save="no")
 if (Sys.getenv("CLR") == "1") { source(file.path(root, "scripts", "lib_clr.R")); clr_write(A, feat, tk, md, terms, n, df, cohort=paste0("alberta", tag), rank=rk, prefix=paste0("alberta_", rk, tag), root=root); quit(save="no") }
+if (nzchar(Sys.getenv("LATE"))) { source(file.path(root, "scripts", "lib_late.R")); late_main(A, feat, tk, md, terms, n, df, cohort=paste0("alberta", tag), rank=rk, prefix=paste0("alberta_", rk, tag), root=root,   # Amendment 44
+  perm_by="group", X=X, lin=rd(file.path(root, "results", "16s", "alberta", "genus_lineage_silva.tsv"))); quit(save="no") }
 suppressMessages({library(ANCOMBC); library(TreeSummarizedExperiment)})
 orig <- rownames(A); rownames(A) <- sprintf("F%05d", seq_along(orig)); sf <- rownames(A)[match(feat, orig)]
 tse <- TreeSummarizedExperiment(assays=list(counts=as.matrix(A)), colData=md[, terms, drop=FALSE])

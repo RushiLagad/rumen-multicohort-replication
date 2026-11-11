@@ -43,6 +43,8 @@ m <- A[match(feat, rownames(A)), , drop=FALSE]; prev <- rowMeans(m > 0, na.rm=TR
 cov <- data.frame(id=tk$id, set=tk$set, target=tk$target, rank=tk$target_rank, n_present=npres, feature=feat, prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 cat("targets", nrow(tk), "| matched", sum(!is.na(feat)), "| pass 10% prevalence", sum(cov$pass10, na.rm=TRUE), "| features", nrow(A), "\n"); print(cov[cov$set != "Nelore" | !is.na(cov$feature), ], row.names=FALSE)
 if (Sys.getenv("CLR") == "1") { source(file.path(root, "scripts", "lib_clr.R")); clr_write(A, feat, tk, md, terms, n, df, cohort=paste0(coh, tag), rank=tk$target_rank, prefix=paste0(coh, tag), root=root, m1=TRUE, difford=startsWith(coh, "difford")); quit(save="no") }
+if (nzchar(Sys.getenv("LATE"))) { stopifnot("late analyses use the primary methane fit (real mode, CH4 g/d, all farms)" = mode == "real", !nzchar(tag)); source(file.path(root, "scripts", "lib_late.R"))   # Amendment 44
+  late_main(A, feat, tk, md, terms, n, df, cohort=coh, rank=tk$target_rank, prefix=coh, root=root, perm_by=if (src == "difford") "herd" else "farm", m1=TRUE, difford=startsWith(coh, "difford")); quit(save="no") }
 suppressMessages({library(ANCOMBC); library(TreeSummarizedExperiment)})
 orig <- rownames(A); rownames(A) <- sprintf("F%05d", seq_along(orig)); sf <- rownames(A)[match(feat, orig)]
 tse <- TreeSummarizedExperiment(assays=list(counts=as.matrix(A)), colData=md[, terms, drop=FALSE])
