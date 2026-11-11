@@ -1,0 +1,9 @@
+charolais_mrna family : targets 2  features 631  n 30  df 26 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+   reads prevalence pass10
+   20489          1   TRUE
+ 1061600          1   TRUE
+late analysis, run after all primary results were seen | linda | charolais_mrna_family | animals 30 | features 631 
+linda charolais_mrna_family | permutations within diet x year | seeds 1151:1175 | new fits 25 | seconds 10 

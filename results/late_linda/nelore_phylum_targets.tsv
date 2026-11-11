@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T2	Li	rumen	nelore	phylum	TGT_T2	52	48	0.0234185846162127	0.0580695613509809	0.688529405539226	0.40328502698113	linda	late analysis, run after all primary results were seen	ok
+T3	Li	rumen	nelore	phylum	TGT_T3	52	48	-0.0421474895142269	0.124422565929707	0.736279455441992	-0.338744738137279	linda	late analysis, run after all primary results were seen	ok

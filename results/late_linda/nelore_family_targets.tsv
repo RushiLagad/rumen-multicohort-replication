@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T4	Li	rumen	nelore	family	TGT_T4	52	48	-0.0919841737727145	0.0640589734678856	0.157507774721453	-1.43592956291796	linda	late analysis, run after all primary results were seen	ok
+C2	Canonical	rumen	nelore	family	TGT_C2	52	48	0.311996942012263	0.159154363834146	0.0557740343942674	1.9603417367644	linda	late analysis, run after all primary results were seen	ok

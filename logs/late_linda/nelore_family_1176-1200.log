@@ -1,0 +1,9 @@
+nelore family : targets 2  features 642  n 52  df 48 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+    reads prevalence pass10
+     3656          1   TRUE
+ 19105558          1   TRUE
+late analysis, run after all primary results were seen | linda | nelore_family | animals 52 | features 642 
+linda nelore_family | permutations within diet | seeds 1176:1200 | new fits 25 | seconds 11 

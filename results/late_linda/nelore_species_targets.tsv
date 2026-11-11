@@ -1,0 +1,2 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T6	Li	rumen	nelore	species	TGT_T6	52	48	-0.0749702823192173	0.0663793383419786	0.264332646471347	-1.12942195857662	linda	late analysis, run after all primary results were seen	ok

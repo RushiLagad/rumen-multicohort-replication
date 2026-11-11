@@ -1,0 +1,9 @@
+charolais_mrna species : targets 1  features 12017  n 30  df 26 
+ id                     target set n_keys n_present feature reads prevalence
+ T6 Methanobrevibacter smithii  Li      2         2  TGT_T6  7619          1
+ pass10
+   TRUE
+late analysis, run after all primary results were seen | linda | charolais_mrna_species | animals 30 | features 12016 
+linda charolais_mrna_species | trait term RFI_classhigh_RFI | df 26 | targets ok 1 | seconds 28 
+ id feature  lfc    se    W p_ancom
+ T6  TGT_T6 0.24 0.145 1.65   0.111

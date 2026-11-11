@@ -1,0 +1,74 @@
+alberta genus (sensitivity: all animals) | overlap IDs in analysis set 35 : animals 567 | groups 7 (excluded 1 with <5 animals: 2 animals) | df 557 
+targets 34 | matched a 16S feature 13 | pass 10% prevalence 6 | features 361 
+  id                target       set n_keys n_present feature   reads
+  T5               Blautia        Li      2         1  TGT_T5     322
+ N01      Anaeromyxobacter    Nelore      1         0    <NA>      NA
+ N02          Actinomadura    Nelore      3         0    <NA>      NA
+ N04       Acidaminococcus    Nelore      1         1 TGT_N04    1150
+ N05           Rubrobacter    Nelore      4         0    <NA>      NA
+ N06          Actinoplanes    Nelore      1         0    <NA>      NA
+ N07          Cellulomonas    Nelore      1         0    <NA>      NA
+ N08              Gordonia    Nelore      2         1 TGT_N08       0
+ N09                 Bosea    Nelore      1         1 TGT_N09       4
+ N10 Phascolarctobacterium    Nelore      2         0    <NA>      NA
+ N11             Comamonas    Nelore      4         1 TGT_N11      91
+ N12           Caulobacter    Nelore      1         0    <NA>      NA
+ N13           Eubacterium    Nelore     14         0    <NA>      NA
+ N14                Arabia    Nelore      1         0    <NA>      NA
+ N15           Selenomonas    Nelore      4         1 TGT_N15   52338
+ N16           Sphingobium    Nelore      2         0    <NA>      NA
+ N17          Burkholderia    Nelore      1         0    <NA>      NA
+ N18         Sinorhizobium    Nelore      1         0    <NA>      NA
+ N19            Lysobacter    Nelore      3         1 TGT_N19      11
+ N20        Pseudonocardia    Nelore      1         0    <NA>      NA
+ N21        Brevibacterium    Nelore      1         1 TGT_N21       2
+ N22            Nonomuraea    Nelore      1         0    <NA>      NA
+ N23         Succinivibrio    Nelore      1         1 TGT_N23   81576
+ N24           Marinomonas    Nelore      1         0    <NA>      NA
+ N25            Idiomarina    Nelore      1         0    <NA>      NA
+ N26          Glaesserella    Nelore      1         0    <NA>      NA
+ N27            Aliivibrio    Nelore      1         0    <NA>      NA
+ N28        Photobacterium    Nelore      1         0    <NA>      NA
+ N29          Psychromonas    Nelore      1         0    <NA>      NA
+  C1    Methanobrevibacter Canonical      5         0    <NA>      NA
+  C3           Fibrobacter Canonical      1         1  TGT_C3   16695
+  C4          Ruminococcus Canonical      7         1  TGT_C4  611687
+  C5            Prevotella Canonical      1         1  TGT_C5 3864028
+  C6          Butyrivibrio Canonical      2         1  TGT_C6   40007
+ prevalence pass10
+      0.037  FALSE
+         NA     NA
+         NA     NA
+      0.079  FALSE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.000  FALSE
+      0.002  FALSE
+         NA     NA
+      0.048  FALSE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.866   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.005  FALSE
+         NA     NA
+      0.002  FALSE
+         NA     NA
+      0.637   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+      0.429   TRUE
+      0.998   TRUE
+      0.998   TRUE
+      0.894   TRUE
+late analysis, run after all primary results were seen | linda | alberta_genus_all | animals 567 | features 361 
+linda alberta_genus_all | permutations within group | seeds 1001:1025 | new fits 0 | seconds 0 
