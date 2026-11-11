@@ -134,9 +134,7 @@ def build_file1():
         "scripts/104_additional_files.py",
         "plan/target_keys.tsv; coverage tables printed by scripts 21, 65 and 81 in logs/replication, logs/alberta, logs/methane and logs/wallace_rfi_real.log; fit status from results/replication, results/alberta and results/methane *_targets.tsv."]})
     f = os.path.join(OD, "Additional_file_1_targets.xlsx")
-    with pd.ExcelWriter(f, engine="openpyxl") as w:
-        notes.to_excel(w, "Notes", index=False); T.to_excel(w, "Targets", index=False)
-    style(f, {"Targets": 3}); return f, T
+    write_book(f, [("Notes", notes), ("Targets", T)], {"Targets": 3}); return f, T
 
 # ---------------------------------------------------------------- Additional file 2
 def partial_r(W, df): return W / math.sqrt(W * W + df)
@@ -172,7 +170,7 @@ VERSIONS = [  # (version, arm, role, description, pooled file, per-cohort file o
      "results/methane_pooled_ch4_dmi/classification_primary.tsv", "results/methane_pooled_ch4_dmi/estimates_calibrated.tsv"),
     ("Methane, Wallace per kg DMI, with re-analysis", "Methane", "sensitivity", "As above, Wallace M2 re-analysis included.",
      "results/methane_pooled_ch4_dmi/classification_with_reanalysis.tsv", None),
-    ("Methane CLR", "Methane", "sensitivity", "Second estimator: CLR linear model (Amendment 42); M1 is a linear model in both; pooled without calibration.",
+    ("Methane CLR", "Methane", "sensitivity", "Second estimator: CLR linear model (Amendment 42); M1 is a linear model in both. Pooled file (script 96) uses uncalibrated CLR W; per-cohort rows here are calibrated (addendum; null SD 0.95 to 1.08), which leaves every label unchanged.",
      "results/clr_pooled/classification_methane_clr.tsv", "CLR_CH4"),
 ]
 POOLED_COLS = ["set", "id", "target", "rank", "stratum", "published_dir", "k", "r", "ci_lo", "ci_hi", "p", "q_bh", "family_size",
@@ -185,11 +183,25 @@ def clr_cohort(arm):
              [f"results/clr/alberta_{r}_all_clr_targets.tsv" for r in ("genus", "family")]
     else:
         fs = ["results/clr/difford_bact_clr_targets.tsv", "results/clr/wallace_prokaryotes_clr_targets.tsv"]
-    E = pd.concat([rd(f).assign(table=os.path.basename(f).replace("_clr_targets.tsv", "")) for f in fs]); E = E[E.status == "ok"].copy()
+    E = pd.concat([rd(f).assign(table=os.path.basename(f).replace("_clr_targets.tsv", "")) for f in fs], ignore_index=True); E = E[E.status == "ok"].copy()
+    E["W_raw"] = E["W"]
     if arm == "CLR_CH4":
+        # Amendment 42 addendum: CLR methane W calibrated by its 200 within-herd or within-farm permutations,
+        # W = W_raw / max(1, null SD) as in script 83; p = (b + 1) / (n + 1), the rule behind the CLR p values in the Amendment 42 result.
+        cal = []
+        for tab, g in E.groupby("table"):
+            fs = [f"results/clr/{tab}_seed{s}_clr_targets.tsv" for s in range(1001, 1201)]
+            fs = [f for f in fs if os.path.exists(P(f))]; assert len(fs) == 200, (tab, len(fs))
+            N = pd.concat([rd(f) for f in fs]); N = N[N.status == "ok"]
+            for i, row in g.iterrows():
+                w0 = N.W[N.id == row.id].to_numpy(); assert len(w0) >= 190, (tab, row.id, len(w0))
+                cal.append((i, w0.std(ddof=1), len(w0), float(((abs(w0) >= abs(row.W_raw)).sum() + 1) / (len(w0) + 1))))
+        for i, sd, k, p in cal:
+            E.loc[i, "sd_null"] = sd; E.loc[i, "k_null"] = k; E.loc[i, "p_perm"] = p
+            E.loc[i, "W"] = E.loc[i, "W_raw"] / max(1.0, sd)
         E["cohort"] = E.cohort.str.replace(r"^difford.*", "difford", regex=True).str.replace(r"^wallace.*", "wallace", regex=True)
         E["reanalysis"] = (E.id == "M2") & (E.cohort == "wallace")
-    E["W_raw"] = E["W"]; E["r"] = [partial_r(w, d) for w, d in zip(E.W, E.df)]
+    E["r"] = [partial_r(w, d) for w, d in zip(E.W, E.df)]
     lohi = [ci(r, d) for r, d in zip(E.r, E.df)]; E["lo"] = [a for a, b in lohi]; E["hi"] = [b for a, b in lohi]
     return E
 
@@ -203,7 +215,9 @@ def build_file2():
         if cf is None: continue
         e = clr_cohort(cf) if cf.startswith("CLR") else rd(cf)
         e = e.reindex(columns=COH_COLS)
-        e.insert(0, "calibration", "none (CLR; pooled uncalibrated)" if cf.startswith("CLR") else "W = W_raw / max(1, sd_null); 200 within-design permutations")
+        e.insert(0, "calibration", {"CLR_RFI": "none (CLR, RFI arm: no CLR permutations, Amendment 42)",
+                                    "CLR_CH4": "W = W_raw / max(1, sd_null); 200 CLR permutations (Amendment 42 addendum)"}.get(cf,
+                                    "W = W_raw / max(1, sd_null); 200 within-design permutations"))
         e.insert(0, "role", role); e.insert(0, "arm", arm); e.insert(0, "version", v); coh.append(e)
     PL = pd.concat(pooled, ignore_index=True); CO = pd.concat(coh, ignore_index=True)
     tk = rd("plan/target_keys.tsv").set_index("id")
@@ -218,18 +232,23 @@ def build_file2():
         "Description": [
         "Every analysis version in results/robustness (script 97) plus the Wallace RFI NRC sensitivity pooling (script 99). See the Versions sheet.",
         "RFI primary and Methane primary (role = primary). All other versions are sensitivity analyses or superseded and set no label.",
-        "One row per target, cohort and version. W_raw is the ANCOM-BC2 (or CLR) estimate / SE; null_SD_of_W is its SD over 200 within-design phenotype permutations; W_calibrated = W_raw / max(1, null SD); p_permutation is the share of permutations with |W| at least |W_raw|; r is the partial correlation W / sqrt(W^2 + df) with a Fisher-z 95% CI. Versions sharing per-cohort estimates with another version are not repeated.",
+        "One row per target, cohort and version. W_raw is the ANCOM-BC2 (or CLR) estimate / SE; null_SD_of_W is its SD over 200 within-design phenotype permutations; W_calibrated = W_raw / max(1, null SD); p_permutation is the share of permutations with |W| at least |W_raw| (the RFI + Wallace RFI NRC version, script 99, and the calibrated CLR methane rows use (b + 1) / (n + 1) instead, b = permutations at least as extreme, n = permutations); r is the partial correlation W / sqrt(W^2 + df) with a Fisher-z 95% CI. Versions sharing per-cohort estimates with another version are not repeated.",
         "One row per target and version. Random-effects (REML) pooling of Fisher z over cohorts; k = cohorts pooled; q is Benjamini-Hochberg within each target set; loo_* are the leave-one-cohort-out checks; label is the pre-registered classification (Section 10, Amendment 14).",
         "No target is labelled replicated in any version.",
         "Targets with k = 0 are listed with label 'untestable' and blank estimates.",
         "scripts/104_additional_files.py, from the files named in the Versions sheet."]})
     f = os.path.join(OD, "Additional_file_2_estimates.xlsx")
-    with pd.ExcelWriter(f, engine="openpyxl") as w:
-        notes.to_excel(w, "Notes", index=False); V.to_excel(w, "Versions", index=False)
-        CO.to_excel(w, "Per-cohort estimates", index=False); PL.to_excel(w, "Pooled results", index=False)
-    style(f, {"Per-cohort estimates": 4, "Pooled results": 4}); return f, CO, PL
+    write_book(f, [("Notes", notes), ("Versions", V), ("Per-cohort estimates", CO), ("Pooled results", PL)],
+               {"Per-cohort estimates": 4, "Pooled results": 4}); return f, CO, PL
 
 # ---------------------------------------------------------------- formatting
+def write_book(f, sheets, freeze):
+    """Write to a temporary file and move it into place only when complete, so a failure never leaves a broken workbook."""
+    tmp = f + ".tmp.xlsx"
+    with pd.ExcelWriter(tmp, engine="openpyxl") as w:
+        for name, df in sheets: df.to_excel(w, sheet_name=name, index=False)
+    style(tmp, freeze); os.replace(tmp, f)
+
 def style(f, freeze):
     wb = load_workbook(f); hdr = Font(name="Arial", bold=True, size=10); body = Font(name="Arial", size=10)
     fill = PatternFill("solid", fgColor="E8E6E0")
