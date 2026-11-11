@@ -22,3 +22,4 @@ profiles_gtdb/
 profiles_gtdb_full/
 raw/phenotypes/
 results/methane_pooled_dryrun/
+results/scan_null/
