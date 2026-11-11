@@ -11,6 +11,7 @@ Scripts are numbered in the order they were written, which follows the order of 
 | 50 to 66 | Alberta 16S download, processing and estimates; three-cohort feed efficiency pooling |
 | 70 to 87 | Methane cohorts: read processing, methanogen clade assignment, phenotypes, estimates, pooling |
 | 88 to 100 | Calibration with shuffled phenotypes, searches across all genera, farm-by-farm checks, sequencing depth check, second method, sensitivity analyses, summary tables |
+| 101 to 104 | Manuscript figures (102 Figure 1, 103 Figures 2 to 4) and Additional files 1 and 2 (104, Python) |
 | lib_replication.R | Shared pooling and labelling functions |
 | lib_clr.R | Shared functions for the second method (centred log-ratio with linear models) |
 
