@@ -22,10 +22,14 @@ unit() { set -- $1; t=$1; s=$2; a=""
   env $a LATE=$M LATE_SEEDS=$s $RR $cmd > $L/${t}_${s/:/-}.log 2>&1 || echo "$(date +%T) $t $s FAILED (see $L/${t}_${s/:/-}.log)"; }
 export -f unit
 TABLES="nelore_species nelore_genus charolais_mrna_species charolais_mrna_genus wallace_prokaryotes difford_bact nelore_family nelore_phylum charolais_mrna_family charolais_mrna_phylum alberta_genus alberta_family"
-chunks() { a=$1; b=$2; while [ $a -le $b ]; do e=$((a + 24)); [ $e -gt $b ] && e=$b; for t in $TABLES; do echo "$t $a:$e"; done; a=$((e + 1)); done; }
+chunks() { a=$1; b=$2; shift 2; tl=${*:-$TABLES}; while [ $a -le $b ]; do e=$((a + 24)); [ $e -gt $b ] && e=$b; for t in $tl; do echo "$t $a:$e"; done; a=$((e + 1)); done; }
+# linda() calls vcov() on one multivariate lm, a (features x coefficients)^2 matrix: about 15 to 30 GB for the species tables, so they run on P_SPECIES workers after the rest.
+SPECIES="nelore_species charolais_mrna_species"; NONSP=$(for t in $TABLES; do case $t in *_species) ;; *) echo -n "$t ";; esac; done)
 case $M in
   linda)
-    { for t in $TABLES; do echo "$t real"; done; chunks 1001 1200; } | xargs -P $P -I{} bash -c 'unit "{}"'
+    { for t in $NONSP; do echo "$t real"; done; chunks 1001 1200 $NONSP; } | xargs -P $P -I{} bash -c 'unit "{}"'
+    echo "$(date '+%F %T') non-species tables done; species tables on ${P_SPECIES:-2} workers"
+    { for t in $SPECIES; do echo "$t real"; done; chunks 1001 1200 $SPECIES; } | xargs -P ${P_SPECIES:-2} -I{} bash -c 'unit "{}"'
     K=200;;
   aldex2)
     { for t in $TABLES; do echo "$t real"; echo "$t 1001:1002"; done; } | xargs -P $P -I{} bash -c 'unit "{}"'
