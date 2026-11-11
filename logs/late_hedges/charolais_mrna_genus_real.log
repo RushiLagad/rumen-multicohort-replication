@@ -1,0 +1,119 @@
+charolais_mrna genus : targets 34  features 2859  n 30  df 26 
+  id                target       set n_keys n_present feature     reads
+  T5               Blautia        Li      2         2  TGT_T5    782012
+ N01      Anaeromyxobacter    Nelore      1         1 TGT_N01      1067
+ N02          Actinomadura    Nelore      3         1 TGT_N02       409
+ N04       Acidaminococcus    Nelore      1         1 TGT_N04      5405
+ N05           Rubrobacter    Nelore      4         0    <NA>        NA
+ N06          Actinoplanes    Nelore      1         1 TGT_N06     19022
+ N07          Cellulomonas    Nelore      1         0    <NA>        NA
+ N08              Gordonia    Nelore      2         1 TGT_N08    138896
+ N09                 Bosea    Nelore      1         0    <NA>        NA
+ N10 Phascolarctobacterium    Nelore      2         2 TGT_N10     13078
+ N11             Comamonas    Nelore      4         1 TGT_N11       136
+ N12           Caulobacter    Nelore      1         0    <NA>        NA
+ N13           Eubacterium    Nelore     14        12 TGT_N13    639188
+ N14                Arabia    Nelore      1         0    <NA>        NA
+ N15           Selenomonas    Nelore      4         4 TGT_N15     44338
+ N16           Sphingobium    Nelore      2         0    <NA>        NA
+ N17          Burkholderia    Nelore      1         1 TGT_N17       270
+ N18         Sinorhizobium    Nelore      1         0    <NA>        NA
+ N19            Lysobacter    Nelore      3         1 TGT_N19     68373
+ N20        Pseudonocardia    Nelore      1         1 TGT_N20       417
+ N21        Brevibacterium    Nelore      1         1 TGT_N21      1418
+ N22            Nonomuraea    Nelore      1         1 TGT_N22       584
+ N23         Succinivibrio    Nelore      1         1 TGT_N23     30751
+ N24           Marinomonas    Nelore      1         0    <NA>        NA
+ N25            Idiomarina    Nelore      1         0    <NA>        NA
+ N26          Glaesserella    Nelore      1         0    <NA>        NA
+ N27            Aliivibrio    Nelore      1         0    <NA>        NA
+ N28        Photobacterium    Nelore      1         1 TGT_N28      2796
+ N29          Psychromonas    Nelore      1         0    <NA>        NA
+  C1    Methanobrevibacter Canonical      5         5  TGT_C1   7882986
+  C3           Fibrobacter Canonical      1         1  TGT_C3   5706458
+  C4          Ruminococcus Canonical      7         7  TGT_C4   7955694
+  C5            Prevotella Canonical      1         1  TGT_C5 751433820
+  C6          Butyrivibrio Canonical      2         2  TGT_C6   1986643
+ prevalence pass10
+      1.000   TRUE
+      0.733   TRUE
+      0.600   TRUE
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+      0.267   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      0.433   TRUE
+         NA     NA
+      1.000   TRUE
+      0.567   TRUE
+      0.900   TRUE
+      0.833   TRUE
+      1.000   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+      1.000   TRUE
+         NA     NA
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+      1.000   TRUE
+late analysis, run after all primary results were seen | hedges | charolais_mrna_genus | animals 30 | features 2832 
+Hedges' g, charolais_mrna_genus | high 14 low 16 | J 0.973 | targets 22 | g unadjusted -0.89 to 0.45 | g adjusted -0.85 to 0.46 
+  id                target g_unadjusted g_adjusted     r_clr
+  T5               Blautia    -0.591565   -0.57219 -0.300575
+ N01      Anaeromyxobacter    -0.078052   -0.07636 -0.042018
+ N02          Actinomadura     0.326184    0.32450  0.175941
+ N04       Acidaminococcus    -0.617407   -0.60963 -0.318307
+ N06          Actinoplanes    -0.813166   -0.83947 -0.419674
+ N08              Gordonia    -0.746423   -0.72741 -0.371901
+ N10 Phascolarctobacterium     0.174032    0.17684  0.096939
+ N11             Comamonas     0.451542    0.44362  0.237353
+ N13           Eubacterium    -0.885087   -0.85319 -0.425300
+ N15           Selenomonas    -0.034195   -0.06969 -0.038355
+ N17          Burkholderia    -0.000984   -0.00107 -0.000588
+ N19            Lysobacter    -0.474430   -0.53105 -0.280726
+ N20        Pseudonocardia     0.428867    0.45721  0.244199
+ N21        Brevibacterium     0.133654    0.13000  0.071420
+ N22            Nonomuraea     0.432924    0.44641  0.238761
+ N23         Succinivibrio    -0.160194   -0.20218 -0.110671
+ N28        Photobacterium    -0.068068   -0.06891 -0.037928
+  C1    Methanobrevibacter    -0.592497   -0.61858 -0.322498
+  C3           Fibrobacter    -0.719383   -0.77265 -0.391576
+  C4          Ruminococcus    -0.128737   -0.17417 -0.095491
+  C5            Prevotella    -0.373633   -0.38610 -0.208005
+  C6          Butyrivibrio    -0.003100   -0.00306 -0.001686
+ r_ancombc2_calibrated
+               -0.0271
+                0.1953
+                0.1225
+               -0.1618
+               -0.1164
+               -0.1624
+                0.2115
+                0.1541
+               -0.1179
+                0.1590
+               -0.0250
+               -0.1341
+               -0.1460
+                0.1486
+                0.1826
+                0.0547
+                0.2226
+               -0.0148
+               -0.1616
+                0.0831
+                0.0411
+                0.1373

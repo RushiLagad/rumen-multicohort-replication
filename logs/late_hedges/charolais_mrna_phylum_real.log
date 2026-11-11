@@ -1,0 +1,9 @@
+charolais_mrna phylum : targets 2  features 69  n 30  df 26 
+ id      target set n_keys n_present feature     reads prevalence pass10
+ T2  Firmicutes  Li      9         9  TGT_T2 415645211          1   TRUE
+ T3 Chloroflexi  Li      1         1  TGT_T3    761174          1   TRUE
+late analysis, run after all primary results were seen | hedges | charolais_mrna_phylum | animals 30 | features 61 
+Hedges' g, charolais_mrna_phylum | high 14 low 16 | J 0.973 | targets 2 | g unadjusted -0.39 to -0.29 | g adjusted -0.44 to -0.33 
+ id      target g_unadjusted g_adjusted  r_clr r_ancombc2_calibrated
+ T2  Firmicutes       -0.294     -0.331 -0.180                0.0381
+ T3 Chloroflexi       -0.388     -0.439 -0.235                0.0372

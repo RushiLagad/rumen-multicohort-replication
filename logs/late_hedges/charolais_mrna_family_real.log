@@ -1,0 +1,15 @@
+charolais_mrna family : targets 2  features 631  n 30  df 26 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+   reads prevalence pass10
+   20489          1   TRUE
+ 1061600          1   TRUE
+late analysis, run after all primary results were seen | hedges | charolais_mrna_family | animals 30 | features 631 
+Hedges' g, charolais_mrna_family | high 14 low 16 | J 0.973 | targets 2 | g unadjusted -0.9 to 0.28 | g adjusted -1.2 to 0.49 
+ id                                target g_unadjusted g_adjusted  r_clr
+ T4 unclassified Methanomassiliicoccaceae       -0.895     -1.195 -0.550
+ C2                   Succinivibrionaceae        0.279      0.486  0.259
+ r_ancombc2_calibrated
+                -0.371
+                 0.318

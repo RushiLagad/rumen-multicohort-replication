@@ -1,0 +1,11 @@
+charolais_mrna species : targets 1  features 12017  n 30  df 26 
+ id                     target set n_keys n_present feature reads prevalence
+ T6 Methanobrevibacter smithii  Li      2         2  TGT_T6  7619          1
+ pass10
+   TRUE
+late analysis, run after all primary results were seen | hedges | charolais_mrna_species | animals 30 | features 12016 
+Hedges' g, charolais_mrna_species | high 14 low 16 | J 0.973 | targets 1 | g unadjusted -0.11 to -0.11 | g adjusted -0.11 to -0.11 
+ id                     target g_unadjusted g_adjusted   r_clr
+ T6 Methanobrevibacter smithii       -0.106     -0.107 -0.0586
+ r_ancombc2_calibrated
+                 0.356

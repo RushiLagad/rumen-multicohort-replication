@@ -1,0 +1,2 @@
+id	set	target	rank	feature	n_high	n_low	J	g_unadjusted	t_adjusted	g_adjusted	df	r_clr	r_ancombc2_calibrated	W_ancombc2_calibrated	status	analysis	note
+T6	Li	Methanobrevibacter smithii	species	TGT_T6	14	16	0.972972972972973	-0.105685248508803	-0.299145670287991	-0.1065172918827	26	-0.0585665905303348	0.356134854543219	1.94335551287153	ok	late analysis, run after all primary results were seen	descriptive; extreme-group selection (RFI tails only) inflates g relative to an underlying correlation; positive = higher in high RFI
