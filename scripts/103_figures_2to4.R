@@ -78,11 +78,11 @@ p3 <- ggplot(S, aes(x, y)) +
            label=sprintf("%d shared genera\nSpearman rho = %.2f (p = %.3f)", nrow(S), ct$estimate, ct$p.value)) +
   annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
   labs(title="Genera associated with methane in Wallace show no association in Difford",
-       subtitle="Calibrated W per genus in the two dairy cohorts (methane in g per day). Blue: the 16 genera that kept their sign and\nstrength when each Wallace farm was left out. Diamond: Succinivibrionaceae, reported by Wallace et al. (re-analysis there).",
+       subtitle="Calibrated W per genus in the two dairy cohorts (methane in g per day). Blue: the 16 genera that kept their sign and\nstrength when each Wallace farm was left out.\nDiamond: Succinivibrionaceae, reported by Wallace et al. (re-analysis in that cohort).",
        caption="Sources: results/denovo_scan/*_scan.tsv (per-genus permutation calibration),
 results/wallace_farms/farm_consistency.tsv, results/methane_pooled/estimates_calibrated.tsv.",
        x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) + theme_f
-save2(p3, "fig3_wallace_vs_difford", 6.4, 5.6)
+save2(p3, "fig3_wallace_vs_difford", 7.2, 6.0)
 
 # ---------------- Figure 4
 coh <- function(dirn, lab, cohort, trait) { x <- rd(file.path(root, "results", dirn, "estimates_calibrated.tsv")); x <- x[x$id == "M1" & x$cohort == cohort, ]; stopifnot(nrow(x) == 1)
