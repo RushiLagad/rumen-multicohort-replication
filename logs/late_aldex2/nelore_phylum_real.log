@@ -1,0 +1,10 @@
+nelore phylum : targets 2  features 71  n 52  df 48 
+ id      target set n_keys n_present feature     reads prevalence pass10
+ T2  Firmicutes  Li      9         9  TGT_T2 313372462          1   TRUE
+ T3 Chloroflexi  Li      1         1  TGT_T3   2770114          1   TRUE
+late analysis, run after all primary results were seen | aldex2 | nelore_phylum | animals 52 | features 63 
+ALDEx2 check, aldex.glm t vs per-instance OLS t: max |difference| 6.44e-15 over 63 features
+aldex2 nelore_phylum | trait term RFI_z | df 48 | targets ok 2 | seconds 8 
+ id feature    lfc     se     W p_ancom
+ T2  TGT_T2 0.0761 0.0684 1.113   0.280
+ T3  TGT_T3 0.0153 0.1323 0.116   0.904

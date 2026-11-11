@@ -1,0 +1,13 @@
+alberta family (sensitivity: all animals) | overlap IDs in analysis set 35 : animals 567 | groups 7 (excluded 1 with <5 animals: 2 animals) | df 557 
+targets 2 | matched a 16S feature 1 | pass 10% prevalence 1 | features 129 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         0    <NA>
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+  reads prevalence pass10
+     NA         NA     NA
+ 572397      0.864   TRUE
+late analysis, run after all primary results were seen | aldex2 | alberta_family_all | animals 567 | features 129 
+ALDEx2 check, aldex.glm t vs per-instance OLS t: max |difference| 4.83e-15 over 33 features
+aldex2 alberta_family_all | trait term RFI_z | df 557 | targets ok 1 | seconds 11 
+ id feature     lfc    se      W p_ancom
+ C2  TGT_C2 -0.0317 0.163 -0.195   0.803

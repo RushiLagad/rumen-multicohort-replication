@@ -1,0 +1,13 @@
+charolais_mrna family : targets 2  features 631  n 30  df 26 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+   reads prevalence pass10
+   20489          1   TRUE
+ 1061600          1   TRUE
+late analysis, run after all primary results were seen | aldex2 | charolais_mrna_family | animals 30 | features 631 
+ALDEx2 check, aldex.glm t vs per-instance OLS t: max |difference| 1.03e-14 over 615 features
+aldex2 charolais_mrna_family | trait term RFI_classhigh_RFI | df 26 | targets ok 2 | seconds 83 
+ id feature    lfc    se    W p_ancom
+ T4  TGT_T4 -0.868 0.242 -3.6 0.00145
+ C2  TGT_C2  0.504 0.460  1.1 0.28380

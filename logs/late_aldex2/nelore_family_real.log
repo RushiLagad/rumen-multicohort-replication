@@ -1,0 +1,13 @@
+nelore family : targets 2  features 642  n 52  df 48 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         1  TGT_T4
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+    reads prevalence pass10
+     3656          1   TRUE
+ 19105558          1   TRUE
+late analysis, run after all primary results were seen | aldex2 | nelore_family | animals 52 | features 642 
+ALDEx2 check, aldex.glm t vs per-instance OLS t: max |difference| 5.55e-15 over 638 features
+aldex2 nelore_family | trait term RFI_z | df 48 | targets ok 2 | seconds 88 
+ id feature     lfc     se      W p_ancom
+ T4  TGT_T4 -0.0663 0.0804 -0.828   0.430
+ C2  TGT_C2  0.3406 0.1663  2.049   0.046

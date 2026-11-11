@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T2	Li	rumen	charolais_mrna	phylum	TGT_T2	30	26	-0.331428772796938	0.298490674138847	0.282666207701871	-1.11122781187441	aldex2	late analysis, run after all primary results were seen	ok
+T3	Li	rumen	charolais_mrna	phylum	TGT_T3	30	26	-0.33696913878276	0.235863694890464	0.172728127418355	-1.43099844776453	aldex2	late analysis, run after all primary results were seen	ok

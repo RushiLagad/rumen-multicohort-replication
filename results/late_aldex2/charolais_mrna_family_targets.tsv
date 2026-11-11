@@ -1,0 +1,3 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T4	Li	rumen	charolais_mrna	family	TGT_T4	30	26	-0.868435199647413	0.241509348145805	0.0014464800202914	-3.59801574458304	aldex2	late analysis, run after all primary results were seen	ok
+C2	Canonical	rumen	charolais_mrna	family	TGT_C2	30	26	0.504215180150344	0.460172978825426	0.283795381156233	1.09576475709969	aldex2	late analysis, run after all primary results were seen	ok
