@@ -14,3 +14,11 @@ fastq/
 *.xlsx
 samples_full.xml
 samples.xml
+# working data, never commit (archived separately)
+work/
+processed/
+profiles/
+profiles_gtdb/
+profiles_gtdb_full/
+raw/phenotypes/
+results/methane_pooled_dryrun/

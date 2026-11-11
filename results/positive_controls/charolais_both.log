@@ -1,0 +1,24 @@
+=== profiles_gtdb_full
+charolais_mrna : 30 samples, 2807 genera after prevalence filter
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+            profile         cohort term n_genera n_q05    min_q permanova_R2
+ profiles_gtdb_full charolais_mrna diet     2761   456 1.77e-08        0.106
+ profiles_gtdb_full charolais_mrna year     2761   113 3.66e-06        0.067
+ permanova_p betadisper_p
+       1e-04       0.8231
+       1e-04       0.4973
+POSITIVE CONTROL PASS (>=1 genus at BH q<0.05 for: diet or year )
+=== profiles_gtdb
+charolais_mrna : 30 samples, 6019 genera after prevalence filter
+Loading required package: foreach
+Loading required package: rngtools
+There were 50 or more warnings (use warnings() to see the first 50)
+       profile         cohort term n_genera n_q05    min_q permanova_R2
+ profiles_gtdb charolais_mrna diet     5515   545 1.69e-08        0.093
+ profiles_gtdb charolais_mrna year     5515   135 3.95e-04        0.061
+ permanova_p betadisper_p
+       1e-04       0.5071
+       3e-04       0.0061
+POSITIVE CONTROL PASS (>=1 genus at BH q<0.05 for: diet or year )

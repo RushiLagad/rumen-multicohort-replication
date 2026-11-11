@@ -1,0 +1,12 @@
+rfi_value sd = 1.529 
+nelore : 52 samples, 2887 genera after prevalence filter
+Loading required package: foreach
+Loading required package: rngtools
+Warning message:
+The group variable has < 3 categories 
+The multi-group comparisons (global/pairwise/dunnet/trend) will be deactivated 
+            profile cohort term n_genera n_q05    min_q permanova_R2
+ profiles_gtdb_full nelore diet     2887   637 0.000166         0.04
+ permanova_p betadisper_p
+       0.001       0.3548
+POSITIVE CONTROL PASS (>=1 genus at BH q<0.05 for: diet )
