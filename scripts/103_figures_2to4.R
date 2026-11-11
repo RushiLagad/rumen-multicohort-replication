@@ -104,12 +104,13 @@ p_scatter <- ggplot(S, aes(x, y)) +
   # label area), not only from each other. The M2 label sits at a fixed spot centred just below the diamond: repelled
   # placement had put it on the grey point at about (-4.5, 0).
   lab_layer(data=rbind(data.frame(x=S$x, y=S$y, genus=ifelse(S$robust, S$genus, "")),
-                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus="")), aes(label=genus)) +
+                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus="")), aes(label=genus), box.padding=0.45, point.padding=0.25, force=2, force_pull=0.5, max.iter=50000) +
   geom_text(data=m2, aes(label=genus), vjust=1, nudge_y=-0.2, size=2.3, colour=ink2) +
   annotate("text", x=-Inf, y=Inf, hjust=-0.05, vjust=1.5, size=2.5, colour=ink2,
            label=sprintf("%d shared genera\nSpearman rho = %.2f (p = %.3f)", nrow(S), ct$estimate, ct$p.value)) +
   annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
-  labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) + theme_f
+  labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) +
+  scale_x_continuous(expand=expansion(mult=c(0.04, 0.16))) + theme_f   # room on the right for the crowded positive-W labels
 save2(p_scatter, "fig4_wallace_vs_difford", W170, 5.0)
 
 # ---------------- numbers for the manuscript text
