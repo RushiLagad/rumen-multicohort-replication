@@ -34,8 +34,8 @@ pA <- ggplot(N, aes(lab, fpr)) +
   geom_text(data=sN, aes(lab, top + 0.035, label=paste0("max ", format(maxq, big.mark=","), "\nat q < 0.05")), size=2.25, colour=ink2, lineheight=0.9) +
   annotate("text", x=5.45, y=0.05, label="expected 5%", hjust=1, vjust=-0.6, size=2.25, colour=ink2) +
   scale_y_continuous(labels=function(v) paste0(round(100 * v), "%"), expand=expansion(mult=c(0.02, 0.18))) +
-  labs(title="a  ANCOM-BC2 false positives in 200 shuffles of the phenotype", x=NULL, y="Genera at nominal p < 0.05") +
-  theme_f + theme(panel.grid.major.x=element_blank())
+  labs(title="a  False positives across 200 shuffles", x=NULL, y="Genera at nominal p < 0.05") +
+  theme_f + theme(panel.grid.major.x=element_blank(), axis.text.x=element_text(size=6.6, lineheight=0.9))
 nsd <- function(dir, fmt, tab, method) { fs <- file.path(root, "results", dir, sprintf(fmt, tab, 1001:1200)); fs <- fs[file.exists(fs)]; stopifnot(length(fs) == 200)
   x <- do.call(rbind, lapply(fs, function(f) { d <- rd(f); d[d$status == "ok", c("id", "W")] })); a <- aggregate(W ~ id, x, sd); names(a)[2] <- "sd"; a$table <- tab; a$method <- method; a }
 B <- rbind(nsd("methane_dryrun", "%s_seed%d_targets.tsv", "difford_bact", "ANCOM-BC2"), nsd("methane_dryrun", "%s_seed%d_targets.tsv", "wallace_prokaryotes", "ANCOM-BC2"),
@@ -49,7 +49,7 @@ pB <- ggplot(B, aes(sd, lab)) +
   geom_segment(data=seg, aes(x=lo, xend=hi, y=lab, yend=lab), colour=grid, linewidth=1.3, inherit.aes=FALSE) +
   geom_point(aes(colour=method), size=1.9) +
   scale_colour_manual(values=c("ANCOM-BC2"=blue, "CLR linear model"=orange)) +
-  labs(title="b  Spread of each methane target's null statistic", x="SD of W across 200 shuffles (1 = calibrated)", y=NULL) +
+  labs(title="b  Null spread per methane target", x="SD of W across 200 shuffles (1 = calibrated)", y=NULL) +
   theme_f + theme(panel.grid.major.y=element_blank())
 f2 <- (pA | pB) + plot_layout(widths=c(1.15, 1)) + plot_annotation(
   title="ANCOM-BC2 is miscalibrated on these tables; a CLR linear model is not",
@@ -79,8 +79,9 @@ p3 <- ggplot(S, aes(x, y)) +
   annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
   labs(title="Genera associated with methane in Wallace show no association in Difford",
        subtitle="Calibrated W per genus in the two dairy cohorts (methane in g per day). Blue: the 16 genera that kept their sign and\nstrength when each Wallace farm was left out. Diamond: Succinivibrionaceae, reported by Wallace et al. (re-analysis there).",
-       caption="Sources: results/denovo_scan/*_scan.tsv (per-genus permutation calibration), results/wallace_farms/farm_consistency.tsv, results/methane_pooled/estimates_calibrated.tsv.",
-       x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + theme_f
+       caption="Sources: results/denovo_scan/*_scan.tsv (per-genus permutation calibration),
+results/wallace_farms/farm_consistency.tsv, results/methane_pooled/estimates_calibrated.tsv.",
+       x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) + theme_f
 save2(p3, "fig3_wallace_vs_difford", 6.4, 5.6)
 
 # ---------------- Figure 4
