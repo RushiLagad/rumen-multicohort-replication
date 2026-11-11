@@ -14,7 +14,7 @@ Timing classes:
 - **After the affected results.** Written after results of the analysis it changes, or that motivated it, had been seen.
 - **Record only.** A finding or correction to the record that changes no analysis rule.
 
-Results first became available as follows. Nelore and Charolais RFI estimates, 2 November. Alberta RFI estimates, 3 November. Methane estimates, 6 November. Calibrated RFI estimates, 8 November. The de novo scan, 9 November. Farm, depth, second-estimator and Wallace RFI sensitivities, 10 November.
+Results first became available as follows. Nelore and Charolais RFI estimates, 2 November. Alberta RFI estimates, 3 November. Methane estimates, 6 November. Calibrated RFI estimates, 8 November. The de novo scan, 9 November. Farm, depth, second-estimator and Wallace RFI sensitivities, 10 November. Late analyses (Amendment 44), from 11 November.
 
 # Part 1. Deviation table
 
@@ -61,17 +61,32 @@ Results first became available as follows. Nelore and Charolais RFI estimates, 2
 | 39 | 2026-11-09 | Amendment 24 exclusion found to rest on a spurious ID match; Alberta all-animal analysis (567) becomes primary | After both Alberta versions had been estimated | After the affected results | Primary changed; labels identical under both versions |
 | 40 | 2026-11-10 | Wallace leave-one-farm-out check of the scan signal | Committed before it was run; motivated by the de novo scan result | After the affected results | None (exploratory) |
 | 41 | 2026-11-10 | Depth-adjusted Wallace sensitivity | Committed before it was run; motivated by an observed depth-methane association | After the affected results | None |
-| 42 | 2026-11-10 | Second estimator (CLR linear model) for all targets | Committed before it was run | After the affected results (added after the primary results) | None in RFI; one methane label differs (N38, below) |
+| 42 | 2026-11-10 | Second estimator (CLR linear model) for all targets. Pre-specified in Amendment 14 item 1 ("Sensitivity: t from lm on CLR"), not run at the time, and run late here | Committed before it was run | After the affected results (pre-specified analysis run late, after the primary results) | None in RFI; one methane label differs (N38, below) |
 | 42 addendum | 2026-11-10 | CLR methane estimates calibrated by 200 permutations | Before running; after an uncalibrated CLR label change (N38) was seen | After the affected results | N38 Eubacterium "opposite sign" under calibrated CLR only |
 | 43 | 2026-11-10 | Wallace RFI NRC sensitivity implemented as planned in Amendments 19 and 34 | Before any Wallace RFI estimate | Before the affected analysis | None |
 | M1 source traits | 2026-11-10 | Descriptive note: the M1 source papers used methane yield and daily output | Recorded after the sensitivity results were seen | Record only | None |
+| 44 | 2026-11-11 | Late analyses: LinDA and ALDEx2 (Section 6), Hedges' g for Charolais (Section 9, Amendment 14 item 1) and the Li et al. diversity claims (Section 3.1), all pre-specified and not run at the time; written to results/late_* only; record corrections (items in this file) | Committed before any of it was run | After the affected results (late analysis, run after all primary results were seen) | None by rule; reported whatever they show |
 
-## Pre-specified items with no amendment
+## Pre-specified items not run as planned
 
-| Plan section | Pre-specified in version 1.0 | What was done | Amendment |
+| Plan section | Pre-specified | What was done | Amendment |
 |---|---|---|---|
-| 6, Models | ALDEx2 and LinDA as sensitivity methods beside ANCOM-BC2 | Neither was run. A CLR linear model was added as the second estimator (Amendment 42), which does not refer to them | None |
-| 5, Read processing, item 4 | HUMAnN3 functional profiling of the shotgun layers | Not run; no functional results are reported | None |
+| 6, Models | ALDEx2 and LinDA as sensitivity methods beside ANCOM-BC2 | Not run until now; run late, after all primary results were seen | 44 |
+| 14 item 1 | CLR linear model as a sensitivity estimator ("Sensitivity: t from lm on CLR") | Not run at the time; run late as the second estimator | 42 |
+| 9, Pooling; 14 item 1 | Hedges' g for the Charolais binary contrast | Not run until now; run late, descriptive only | 44 |
+| 3.1, Primary target set | Li et al. diversity claims (bacterial Shannon evenness and Shannon, archaeal Simpson and inverse Simpson), "tested separately" | Not run until now; run late, two-sided | 44 |
+| 5, Read processing, item 4 | HUMAnN3 functional profiling of the shotgun layers | Never run; no functional results are reported, so the Section 1 secondary question (does moving from DNA-based taxonomy to expressed function change the answer) is not addressed | None |
+| 2.3, Cohorts | PRJNA448333 (Li et al.) as a conditional baseline cohort | Dropped: its phenotypes could not be traced to a citable source (Amendments 20, 24, 26, 39) | 20 |
+
+## Departures from Section 12 ("What will not be done")
+
+| Amendment | Section 12 rule concerned | Departure |
+|---|---|---|
+| 19 | "No cohort added or removed after results are seen"; "No target added to any set after results are seen" | Alberta, Difford and Wallace, and the methane targets, were added after the Nelore and Charolais RFI results had been seen |
+| 20 | "No cohort added or removed after results are seen" | PRJNA448333, conditional in Section 2.3, was dropped after the Nelore and Charolais RFI results because its phenotypes could not be traced |
+| 37 | "No change of correction method after seeing results" | Permutation calibration was adopted for the RFI arm after its uncalibrated results (the methane arm was calibrated before any methane fit) |
+| 38 | Fixed target list (Section 3, "will not be extended after results are seen") | An untargeted genus scan across whole tables, outside the fixed targets; exploratory and never merged with the replication labels |
+| 40 | "No subgroup or interaction analysis not named in this document" | Leave-one-farm-out and per-farm fits in Wallace |
 
 Plan version 1.0 is titled for feed efficiency in beef cattle. Methane entered through Amendment 19. Its Section 13 deviation log was left empty, and every deviation is recorded as a dated amendment instead.
 
