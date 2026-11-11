@@ -23,7 +23,7 @@ Results first became available as follows. Nelore and Charolais RFI estimates, 2
 | 1 | 2026-10-29 | Kraken2 Standard (k2_standard_20240605) fixed as the profiling database; 60% median classified-read adequacy test set | Before any profiling | Before any association result | None |
 | 2 | 2026-10-29 | minimap2 replaces bowtie2 for host depletion; host-reference comparison on 8 Nelore samples | Pipeline deviation | Before any association result | None |
 | 3 | 2026-10-29 | ARS-UCD2.0 used as host reference for every cohort; PRJNA987743 found deposited already host-depleted | After the reference comparison | Before any association result | None |
-| 4 | Not stated | Text not present in the plan. Amendment 5 cites it as reporting the classified fractions of the first three Nelore samples | Not stated | Not stated | None known |
+| 4 | Not stated | Text not present in the plan. Amendment 5 states that Amendment 4 reported the classified-read fractions of the first three Nelore samples (17.0, 19.4 and 16.0%), which Amendment 5 supersedes | Not stated | Before any association result (it precedes Amendment 5, 30 October) | None; no analysis rule depends on it |
 | 5 | 2026-10-30 | Adequacy result corrected after a reporting bug (median 16.9%, fails 60%); Standard profile kept as sensitivity; GTDB r207 route chosen | After the adequacy result | Before any association result | Changes the database for the primary profiles |
 | 6 | 2026-10-30 | Contamination screen for the Nelore Table 7 features specified | Pre-specified | Before any association result | None |
 | 7 | 2026-10-30 | Contamination screen result: negative | Result | Record only | None |

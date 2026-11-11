@@ -1,6 +1,6 @@
 # Do published rumen microbiome links replicate in new herds?
 
-A pre-registered, multi-cohort test of whether rumen microbes reported to be associated with feed efficiency or methane emissions in cattle show the same association in independent animals.
+A multi-cohort test, against a dated analysis plan, of whether rumen microbes reported to be associated with feed efficiency or methane emissions in cattle show the same association in independent animals.
 
 Rushikesh R. Lagad, Goswami Lab, Department of Animal Science, University of Arkansas (principal investigator: Dr. Aranyak Goswami). Contact: rlagad@uark.edu
 
