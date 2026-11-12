@@ -1,0 +1,33 @@
+== Amendment 45 item 1: positive controls for transfer (late analysis, run after all primary results were seen; raw ANCOM-BC2 W)
+                                            comparison
+      Difford vs Wallace (16S, SILVA; different herds)
+      Difford vs Wallace (16S, SILVA; different herds)
+      Difford vs Wallace (16S, SILVA; different herds)
+      Difford vs Wallace (16S, SILVA; different herds)
+ Charolais mRNA (GTDB) vs 16S (SILVA), same 30 animals
+ Charolais mRNA (GTDB) vs 16S (SILVA), same 30 animals
+ Charolais mRNA (GTDB) vs 16S (SILVA), same 30 animals
+                                    term n_shared_genera spearman_W p_spearman
+                            days in milk              80      0.211    0.06000
+                           parity 2 vs 1              80     -0.014    0.90100
+                          parity 3+ vs 1              80     -0.226    0.04380
+   methane (reference: the tested trait)              80     -0.298    0.00746
+              diet, grass vs corn silage              46      0.295    0.04710
+                       year 2020 vs 2019              43      0.026    0.86700
+ RFI class (reference: the tested trait)              42     -0.047    0.76500
+ nominal_hits_1 nominal_hits_2 hits_in_both expected_in_both p_overlap
+             23             12            4             3.45     0.472
+              9              5            0             0.56     1.000
+             14             12            4             2.10     0.126
+              4             47            2             2.35     0.812
+             18             22           10             8.61     0.295
+             13             13            5             3.93     0.335
+              2              4            1             0.19     0.184
+ same_sign_in_both expected_same_sign p_sign  pass
+                 4               1.73 0.0625 FALSE
+                 0               0.28     NA FALSE
+                 1               1.05 0.9380 FALSE
+                 0               1.18 1.0000 FALSE
+                 7               4.30 0.1720  TRUE
+                 3               1.97 0.5000 FALSE
+                 0               0.10 1.0000 FALSE
