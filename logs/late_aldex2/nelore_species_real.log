@@ -4,3 +4,7 @@ nelore species : targets 1  features 12108  n 52  df 48
  pass10
    TRUE
 late analysis, run after all primary results were seen | aldex2 | nelore_species | animals 52 | features 12107 
+ALDEx2 check, aldex.glm t vs per-instance OLS t: max |difference| 3.77e-15 over 12099 features
+aldex2 nelore_species | trait term RFI_z | df 48 | targets ok 1 | seconds 1511 
+ id feature     lfc     se      W p_ancom
+ T6  TGT_T6 -0.0627 0.0682 -0.919   0.366

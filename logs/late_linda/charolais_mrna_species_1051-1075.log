@@ -4,3 +4,4 @@ charolais_mrna species : targets 1  features 12017  n 30  df 26
  pass10
    TRUE
 late analysis, run after all primary results were seen | linda | charolais_mrna_species | animals 30 | features 12016 
+linda charolais_mrna_species | permutations within diet x year | seeds 1051:1075 | new fits 25 | seconds 704 

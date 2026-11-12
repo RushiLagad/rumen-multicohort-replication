@@ -1,0 +1,13 @@
+table	targets	permutations	sd_min	sd_median	sd_max
+alberta_family_all	1	200	0.87	0.87	0.87
+alberta_genus_all	6	200	0.81	0.88	1.07
+charolais_mrna_family	2	200	1.06	1.06	1.06
+charolais_mrna_genus	22	200	0.67	0.96	1.05
+charolais_mrna_phylum	2	200	0.91	0.93	0.94
+charolais_mrna_species	1	200	1.06	1.06	1.06
+difford_bact	7	200	0.64	0.82	0.94
+nelore_family	2	200	0.97	1	1.03
+nelore_genus	6	200	0.81	0.96	0.99
+nelore_phylum	2	200	0.95	1.08	1.22
+nelore_species	1	200	1	1	1
+wallace_prokaryotes	8	200	0.58	0.9	1.05

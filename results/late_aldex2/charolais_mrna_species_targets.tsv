@@ -1,0 +1,2 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T6	Li	rumen	charolais_mrna	species	TGT_T6	30	26	-0.185624687596559	0.182198374899416	0.326970769723618	-1.02153875644371	aldex2	late analysis, run after all primary results were seen	ok

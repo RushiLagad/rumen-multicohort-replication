@@ -1,1 +1,7 @@
 2026-11-11 16:52:48 start aldex2 | Amendment 44 commit eed2a71 | Rscript /home/rlagad/.local/share/mamba/envs/rumen-r/bin/Rscript | P 6
+projected wall time for 198 further permutations per table on 6 workers: 0.42 h (+ 0.10 h for the slowest 25-seed chunk)
+rule (Amendment 44 item 4): 200 if under 12 h, else 50 -> K = 200
+seconds per permutation: alberta_family_all 1.5; alberta_genus_all 2.8; charolais_mrna_family 1; charolais_mrna_genus 3; charolais_mrna_phylum 0.1; charolais_mrna_species 8.7; difford_bact 3.7; nelore_family 1.6; nelore_genus 4.4; nelore_phylum 0.3; nelore_species 13.8; wallace_prokaryotes 4.7
+2026-11-11 17:38:22 fits done: real 12 of 12; null files 2400 (expected 2400)
+2026-11-11 17:38:24 aldex2 pooled
+2026-11-11 17:38:24 end aldex2

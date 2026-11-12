@@ -1,0 +1,127 @@
+LINDA | late analysis, run after all primary results were seen | Amendment 44 | 2026-11-11 18:03:24 
+
+== RFI | linda calibrated | labels:
+           
+            not replicated not replicated (direction not stated) untestable
+  Canonical              0                                     6          0
+  Li                     4                                     1          1
+  Nelore                16                                     0         48
+replicated: 0 | labels differing from the calibrated ANCOM-BC2 primary: 0 
+sign agreement with ANCOM-BC2: pooled r 24 of 27 | cohort-level W 40 of 45 | Spearman cohort-level W 0.81 
+  id                                target k r_ancom r_late       ci_late
+  T4 unclassified Methanomassiliicoccaceae 2  -0.256 -0.275    -0.51 to 0
+  C2                   Succinivibrionaceae 3   0.159  0.142 -0.09 to 0.36
+  C6                          Butyrivibrio 3   0.003  0.044 -0.03 to 0.12
+  C1                    Methanobrevibacter 2   0.112  0.045 -0.18 to 0.27
+  C3                           Fibrobacter 3  -0.024 -0.019  -0.1 to 0.06
+  C4                          Ruminococcus 3   0.120  0.083 -0.15 to 0.31
+  C5                            Prevotella 3   0.040  0.005 -0.07 to 0.08
+  T2                            Firmicutes 2   0.036  0.046 -0.18 to 0.27
+  T3                           Chloroflexi 2  -0.012 -0.018 -0.24 to 0.21
+  T5                               Blautia 2   0.059  0.011 -0.22 to 0.24
+  T6            Methanobrevibacter smithii 2   0.097  0.047 -0.37 to 0.45
+ N01                      Anaeromyxobacter 1   0.195 -0.001 -0.37 to 0.37
+ N02                          Actinomadura 1   0.122  0.226 -0.16 to 0.55
+ N04                       Acidaminococcus 1  -0.162 -0.170 -0.51 to 0.22
+ N06                          Actinoplanes 1  -0.116 -0.179 -0.52 to 0.21
+ N08                              Gordonia 1  -0.162 -0.183  -0.52 to 0.2
+ N10                 Phascolarctobacterium 1   0.211  0.194 -0.19 to 0.53
+ N11                             Comamonas 1   0.154  0.260 -0.13 to 0.58
+ N13                           Eubacterium 1  -0.118 -0.190  -0.53 to 0.2
+ N15                           Selenomonas 2   0.118  0.031 -0.05 to 0.11
+ N17                          Burkholderia 1  -0.025  0.053 -0.33 to 0.42
+ N19                            Lysobacter 1  -0.134 -0.139 -0.49 to 0.25
+ N20                        Pseudonocardia 1  -0.146  0.288  -0.09 to 0.6
+ N21                        Brevibacterium 1   0.149  0.115 -0.27 to 0.47
+ N22                            Nonomuraea 1   0.183  0.318 -0.06 to 0.62
+ N23                         Succinivibrio 2   0.059  0.048 -0.03 to 0.13
+ N28                        Photobacterium 1   0.223  0.174 -0.21 to 0.51
+ q_ancom q_late                            label_late
+    0.16   0.28                        not replicated
+    0.53   0.80 not replicated (direction not stated)
+    0.94   0.80 not replicated (direction not stated)
+    0.53   0.84 not replicated (direction not stated)
+    0.66   0.84 not replicated (direction not stated)
+    0.53   0.84 not replicated (direction not stated)
+    0.53   0.91 not replicated (direction not stated)
+    1.00   1.00                        not replicated
+    1.00   1.00 not replicated (direction not stated)
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    0.27   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+    1.00   1.00                        not replicated
+
+== Methane | linda calibrated | labels:
+                  
+                   not replicated not replicated (direction not stated)
+  Methane                       2                                     1
+  MethaneSecondary              1                                     0
+  Nelore                        7                                     0
+                  
+                   untestable
+  Methane                   0
+  MethaneSecondary          2
+  Nelore                   28
+replicated: 0 | labels differing from the calibrated ANCOM-BC2 primary: 0 
+sign agreement with ANCOM-BC2: pooled r 10 of 11 | cohort-level W 10 of 15 | Spearman cohort-level W 0.62 
+  id                                                     target k r_ancom
+  M1 Methanobrevibacter gottschalkii clade vs ruminantium clade 2   0.030
+  M2                                        Succinivibrionaceae 1   0.006
+  M3                                              total archaea 1   0.032
+ N38                                                Eubacterium 1  -0.039
+ N30                                         Pseudobutyrivibrio 2   0.033
+ N32                                                  Roseburia 1  -0.061
+ N37                                                Coprococcus 2  -0.045
+ N39                                               Anaerostipes 1  -0.006
+ N40                                                    Blautia 1  -0.005
+ N42                                                Lachnospira 2  -0.071
+  S1                                                    Sharpea 2  -0.034
+ r_late        ci_late q_ancom q_late                            label_late
+  0.030  -0.02 to 0.08    0.47   0.29                        not replicated
+  0.039  -0.03 to 0.11    0.88   0.29                        not replicated
+  0.049  -0.01 to 0.11    0.47   0.29 not replicated (direction not stated)
+ -0.076 -0.14 to -0.01    1.00   0.56                        not replicated
+  0.078  -0.13 to 0.28    1.00   1.00                        not replicated
+ -0.061  -0.13 to 0.01    1.00   1.00                        not replicated
+  0.042  -0.03 to 0.11    1.00   1.00                        not replicated
+ -0.001  -0.07 to 0.07    1.00   1.00                        not replicated
+ -0.031  -0.09 to 0.03    1.00   1.00                        not replicated
+ -0.042  -0.09 to 0.01    1.00   1.00                        not replicated
+ -0.054  -0.22 to 0.11    0.55   1.00                        not replicated
+methane with re-analysis (Wallace M2 included): replicated 0 
+
+== null SD of W by table (calibration applies where > 1)
+                  table targets permutations sd_min sd_median sd_max
+     alberta_family_all       1          200   0.95      0.95   0.95
+      alberta_genus_all       6          200   0.94      1.05   1.14
+  charolais_mrna_family       2          200   0.89      1.01   1.13
+   charolais_mrna_genus      22          200   0.53      0.83   1.15
+  charolais_mrna_phylum       2          200   0.59      0.63   0.68
+ charolais_mrna_species       1          200   1.10      1.10   1.10
+           difford_bact       7          200   0.97      1.00   1.06
+          nelore_family       2          200   1.01      1.12   1.22
+           nelore_genus       6          200   0.80      1.14   1.37
+          nelore_phylum       2          200   1.11      1.20   1.30
+         nelore_species       1          200   1.05      1.05   1.05
+    wallace_prokaryotes       8          200   0.97      1.05   1.12
+
+ method     arm testable replicated labels_changed pooled_sign_same
+  linda     RFI       27          0              0               24
+  linda Methane       11          0              0               10
+ pooled_sign_of cohort_sign_same cohort_sign_of
+             27               40             45
+             11               10             15

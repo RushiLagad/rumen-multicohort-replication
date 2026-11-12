@@ -1,0 +1,77 @@
+set	target	rank	stratum	published_dir	id	k	r	ci_lo	ci_hi	p	q_bh	family_size	tau2	p_hk	p_fe	concordant	loo_all_sig	loo_nominal	label	analysis
+Li	unnamed RF19 (text: RF16)	16S clade	untestable: no genome-based counterpart	-1	T1	0	NA	NA	NA	1	1	6	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Li	Firmicutes	phylum	replication	-1	T2	2	0.0456964032199932	-0.183165109595784	0.269859444361358	0.698003401015227	1	6	0	0.129738626364422	0.698003401015227	FALSE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Li	Chloroflexi	phylum	replication	NA	T3	2	-0.0175844523889037	-0.243574193032014	0.210216366267839	0.881376560577793	1	6	0	0.637460815188063	0.881376560577793	TRUE	FALSE	FALSE	not replicated (direction not stated)	late analysis, run after all primary results were seen
+Li	unclassified Methanomassiliicoccaceae	family	replication	1	T4	2	-0.274684084079118	-0.508146570242603	-0.00361834093721646	0.0470948399500081	0.282569039700049	6	0.0117541668167186	0.297031116210272	0.0221645882642812	FALSE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Li	Blautia	genus	replication	-1	T5	2	0.0114845459678504	-0.216040420187495	0.237826483645721	0.92236595135099	1	6	0	0.909120923876802	0.92236595135099	FALSE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Li	Methanobrevibacter smithii	species	replication	-1	T6	2	0.046598455743794	-0.369401748374434	0.447039790869158	0.833341754613908	1	6	0.0684746134963844	0.867970072198874	0.997552724606063	FALSE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Nelore	Anaeromyxobacter	genus	replication	-1	N01	1	-0.000803821116932262	-0.373774858098348	0.372390985104321	0.996761005999977	1	64	NA	NA	NA	TRUE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Actinomadura	genus	replication	-1	N02	1	0.225836281722242	-0.16079472015804	0.552378380077702	0.247871579215468	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Sorangium	genus	untestable: no genome-based counterpart	-1	N03	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Acidaminococcus	genus	replication	1	N04	1	-0.170224956966798	-0.510864098463064	0.216614968467973	0.386476707822485	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Rubrobacter	genus	replication	-1	N05	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Actinoplanes	genus	replication	-1	N06	1	-0.178648786210657	-0.517256341439629	0.208318979575754	0.363050005618602	1	64	NA	NA	NA	TRUE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Cellulomonas	genus	replication	-1	N07	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Gordonia	genus	replication	-1	N08	1	-0.182636817837007	-0.520269454600075	0.204371953676057	0.352257800990169	1	64	NA	NA	NA	TRUE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Bosea	genus	replication	-1	N09	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Phascolarctobacterium	genus	replication	1	N10	1	0.193526164114457	-0.193530098785772	0.528454189015035	0.32377731399737	1	64	NA	NA	NA	TRUE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Comamonas	genus	replication	-1	N11	1	0.259959558677418	-0.125273402486565	0.5770742602722	0.181560721068207	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Caulobacter	genus	replication	-1	N12	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Eubacterium	genus	replication	1	N13	1	-0.189562683813484	-0.525482316616474	0.197487265958879	0.333975529941677	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Arabia	genus	replication	-1	N14	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Selenomonas	genus	replication	1	N15	2	0.0306010827755917	-0.0506589647954311	0.11145862535096	0.460613458119413	1	64	0	0.41633803121916	0.460613458119413	TRUE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Nelore	Sphingobium	genus	replication	-1	N16	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Burkholderia	genus	replication	-1	N17	1	0.0526453157691016	-0.326857650315888	0.417527749309394	0.790195742302492	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Sinorhizobium	genus	replication	-1	N18	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Lysobacter	genus	replication	-1	N19	1	-0.138514916233155	-0.486459021148496	0.247350697954452	0.482096238897397	1	64	NA	NA	NA	TRUE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Pseudonocardia	genus	replication	-1	N20	1	0.288427554676276	-0.094863605561888	0.597242895960065	0.136625901145984	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Brevibacterium	genus	replication	-1	N21	1	0.115332169296827	-0.269340263742231	0.468266499597528	0.558943030506339	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Nonomuraea	genus	replication	-1	N22	1	0.317726435190458	-0.0628010252505555	0.617600237233665	0.0994327030086582	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Succinivibrio	genus	cross-site	-1	N23	2	0.0480508262642988	-0.0332129282887494	0.128683416778933	0.246412597498959	1	64	0	0.033376574888821	0.246412597498959	FALSE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Nelore	Marinomonas	genus	cross-site	-1	N24	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Idiomarina	genus	cross-site	-1	N25	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Glaesserella	genus	cross-site	-1	N26	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Aliivibrio	genus	cross-site	-1	N27	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Photobacterium	genus	cross-site	-1	N28	1	0.174020052538037	-0.212884369843737	0.513748595700384	0.375817094925376	1	64	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Psychromonas	genus	cross-site	-1	N29	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Pseudobutyrivibrio	genus	untestable: phenotype not available	1	N30	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Anaerobutyricum	genus	untestable: phenotype not available	1	N31	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Roseburia	genus	untestable: phenotype not available	1	N32	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Novisyntrophococcus	genus	untestable: phenotype not available	1	N33	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Enterocloster	genus	untestable: phenotype not available	1	N34	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Lacrimispora	genus	untestable: phenotype not available	1	N35	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Mediterraneibacter	genus	untestable: phenotype not available	1	N36	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Coprococcus	genus	untestable: phenotype not available	1	N37	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Eubacterium	genus	untestable: phenotype not available	1	N38	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Anaerostipes	genus	untestable: phenotype not available	1	N39	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Blautia	genus	untestable: phenotype not available	1	N40	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Winogradskyella	genus	untestable: phenotype not available	-1	N41	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Lachnospira	genus	untestable: phenotype not available	1	N42	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Wolbachia	genus	untestable: phenotype not available	1	N43	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Microcystis	genus	untestable: phenotype not available	1	N44	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Sporomusa	genus	untestable: phenotype not available	1	N45	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Terribacillus	genus	untestable: phenotype not available	1	N46	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Saccharothrix	genus	untestable: phenotype not available	1	N47	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Thermococcus	genus	untestable: phenotype not available	1	N48	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Sebaldella	genus	untestable: phenotype not available	1	N49	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Thermincola	genus	untestable: phenotype not available	1	N50	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Salicibibacter	genus	untestable: phenotype not available	1	N51	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Frateuria	genus	untestable: phenotype not available	1	N52	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Hypericibacter	genus	untestable: phenotype not available	1	N53	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Carboxydocella	genus	untestable: phenotype not available	1	N54	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Fictibacillus	genus	untestable: phenotype not available	1	N55	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Methanococcus	genus	untestable: phenotype not available	1	N56	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Heliorestis	genus	untestable: phenotype not available	1	N57	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Dehalogenimonas	genus	untestable: phenotype not available	1	N58	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Dictyoglomus	genus	untestable: phenotype not available	1	N59	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Nitrosomonas	genus	untestable: phenotype not available	1	N60	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Cedecea	genus	untestable: phenotype not available	1	N61	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Desulfosediminicola	genus	untestable: phenotype not available	1	N62	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Fervidobacterium	genus	untestable: phenotype not available	1	N63	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Ferrimonas	genus	untestable: phenotype not available	1	N64	0	NA	NA	NA	1	1	64	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Canonical	Methanobrevibacter	genus	replication	NA	C1	2	0.0448276814193017	-0.184006275503452	0.269052143476641	0.703477380382751	0.844172856459301	6	0	0.690957335773574	0.703477380382751	TRUE	FALSE	FALSE	not replicated (direction not stated)	late analysis, run after all primary results were seen
+Canonical	Succinivibrionaceae	family	replication	NA	C2	3	0.141651105748951	-0.0883452190801948	0.357307843711661	0.226652069859869	0.798754937863747	6	0.0262055461652807	0.317468448322629	0.545180106755158	TRUE	FALSE	FALSE	not replicated (direction not stated)	late analysis, run after all primary results were seen
+Canonical	Fibrobacter	genus	replication	NA	C3	3	-0.0189791084084946	-0.0968875783498784	0.0591605245254509	0.634307920502379	0.844172856459301	6	0	0.514485264453637	0.634307920502379	TRUE	FALSE	FALSE	not replicated (direction not stated)	late analysis, run after all primary results were seen
+Canonical	Ruminococcus	genus	replication	NA	C4	3	0.082721724273973	-0.150474712702263	0.307198010469749	0.488393589617756	0.844172856459301	6	0.027286844451145	0.538165153362528	0.775257864307366	TRUE	FALSE	FALSE	not replicated (direction not stated)	late analysis, run after all primary results were seen
+Canonical	Prevotella	genus	replication	NA	C5	3	0.00470650389413699	-0.0733724446820362	0.082728108616936	0.906110824867857	0.906110824867857	6	0	0.54388373483948	0.906110824867857	TRUE	FALSE	FALSE	not replicated (direction not stated)	late analysis, run after all primary results were seen
+Canonical	Butyrivibrio	genus	replication	NA	C6	3	0.0443340183053605	-0.033835058188976	0.121963974281278	0.266251645954582	0.798754937863747	6	0	0.111155919954881	0.266251645954582	TRUE	FALSE	FALSE	not replicated (direction not stated)	late analysis, run after all primary results were seen

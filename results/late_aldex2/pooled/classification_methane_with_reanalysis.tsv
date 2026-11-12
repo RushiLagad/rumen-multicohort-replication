@@ -1,0 +1,42 @@
+set	target	published_dir	id	k	r	ci_lo	ci_hi	p	q_bh	family_size	tau2	p_hk	p_fe	concordant	loo_all_sig	loo_nominal	label	analysis
+Nelore	Pseudobutyrivibrio	1	N30	2	0.0604290242060195	-0.113692644065193	0.230949115068959	0.497249200164911	1	35	0.0147026216185788	0.62033762728518	0.00232200234110153	TRUE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Nelore	Anaerobutyricum	1	N31	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Roseburia	1	N32	1	-0.0479256909712257	-0.119974373199364	0.024625178537333	0.195257525462727	1	35	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Novisyntrophococcus	1	N33	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Enterocloster	1	N34	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Lacrimispora	1	N35	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Mediterraneibacter	1	N36	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Coprococcus	1	N37	2	0.0289483038541982	-0.0189030344398208	0.0766673290426055	0.235708646303175	1	35	3.31156207373416e-05	0.446019980900035	0.227308272169422	TRUE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Nelore	Eubacterium	1	N38	1	-0.0569400442100256	-0.118515907282414	0.00507207871284704	0.0718905535008399	1	35	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Anaerostipes	1	N39	1	-0.00204360220506927	-0.0744979172321418	0.0704321755692787	0.955982122301744	1	35	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Blautia	1	N40	1	-0.0381380821087516	-0.0998961123946423	0.0239126743186767	0.228217962749524	1	35	NA	NA	NA	FALSE	NA	NA	not replicated	late analysis, run after all primary results were seen
+Nelore	Winogradskyella	-1	N41	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Lachnospira	1	N42	2	-0.0450939417008918	-0.0984934193188755	0.0085644806753208	0.0994956098081665	1	35	0.00033569153023026	0.347332789817486	0.0556275859730427	FALSE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Nelore	Wolbachia	1	N43	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Microcystis	1	N44	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Sporomusa	1	N45	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Terribacillus	1	N46	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Saccharothrix	1	N47	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Thermococcus	1	N48	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Sebaldella	1	N49	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Thermincola	1	N50	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Salicibibacter	1	N51	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Frateuria	1	N52	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Hypericibacter	1	N53	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Carboxydocella	1	N54	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Fictibacillus	1	N55	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Methanococcus	1	N56	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Heliorestis	1	N57	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Dehalogenimonas	1	N58	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Dictyoglomus	1	N59	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Nitrosomonas	1	N60	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Cedecea	1	N61	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Desulfosediminicola	1	N62	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Fervidobacterium	1	N63	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Nelore	Ferrimonas	1	N64	0	NA	NA	NA	1	1	35	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+Methane	Methanobrevibacter gottschalkii clade vs ruminantium clade	1	M1	2	0.0297995060299329	-0.0199721473222888	0.0794238258756091	0.240573240791241	0.51175223413352	3	0	0.0389314456971086	0.240573240791241	TRUE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Methane	Succinivibrionaceae	-1	M2	2	-0.0725140358827573	-0.281802819570441	0.143361809758491	0.51175223413352	0.51175223413352	3	0.0233297193129745	0.630340551512974	0.00021770151818622	TRUE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+Methane	total archaea	NA	M3	1	-0.0297572122211542	-0.0915824818575156	0.0322965864386546	0.34719862824668	0.51175223413352	3	NA	NA	NA	TRUE	NA	NA	not replicated (direction not stated)	late analysis, run after all primary results were seen
+MethaneSecondary	Sharpea	-1	S1	2	-0.0381093801124571	-0.155216479263758	0.0800539503110701	0.527774467036012	1	3	0.00611010734666786	0.641460005876899	0.0560964402517232	TRUE	FALSE	FALSE	not replicated	late analysis, run after all primary results were seen
+MethaneSecondary	Kandleria	-1	S2	0	NA	NA	NA	1	1	3	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen
+MethaneSecondary	Megasphaera	-1	S3	0	NA	NA	NA	1	1	3	NA	NA	NA	FALSE	NA	NA	untestable	late analysis, run after all primary results were seen

@@ -70,3 +70,28 @@ charolais_mrna genus : targets 34  features 2859  n 30  df 26
       1.000   TRUE
       1.000   TRUE
 late analysis, run after all primary results were seen | aldex2 | charolais_mrna_genus | animals 30 | features 2832 
+ALDEx2 check, aldex.glm t vs per-instance OLS t: max |difference| 1.09e-14 over 2780 features
+aldex2 charolais_mrna_genus | trait term RFI_classhigh_RFI | df 26 | targets ok 22 | seconds 341 
+  id feature     lfc    se      W p_ancom
+  T5  TGT_T5 -0.4077 0.213 -1.916  0.0668
+ N01 TGT_N01 -0.3232 1.288 -0.258  0.7497
+ N02 TGT_N02  1.0106 1.234  0.834  0.4588
+ N04 TGT_N04 -0.5853 0.308 -1.904  0.0717
+ N06 TGT_N06 -0.4925 0.193 -2.548  0.0183
+ N08 TGT_N08 -0.5550 0.248 -2.238  0.0342
+ N10 TGT_N10  0.0857 0.426  0.201  0.8427
+ N11 TGT_N11  1.3194 1.346  0.995  0.4121
+ N13 TGT_N13 -0.4841 0.190 -2.543  0.0174
+ N15 TGT_N15 -0.1658 0.279 -0.594  0.5593
+ N17 TGT_N17  0.1933 1.260  0.152  0.7632
+ N19 TGT_N19 -0.5602 0.330 -1.699  0.1017
+ N20 TGT_N20  1.4171 1.268  1.123  0.3434
+ N21 TGT_N21  0.2835 0.952  0.296  0.7488
+ N22 TGT_N22  0.8942 0.872  1.048  0.3536
+ N23 TGT_N23 -0.3008 0.344 -0.874  0.3910
+ N28 TGT_N28 -0.1458 0.227 -0.644  0.5442
+  C1  TGT_C1 -0.3934 0.202 -1.943  0.0632
+  C3  TGT_C3 -0.5318 0.229 -2.325  0.0283
+  C4  TGT_C4 -0.2660 0.331 -0.804  0.4287
+  C5  TGT_C5 -0.3432 0.250 -1.373  0.1819
+  C6  TGT_C6 -0.1227 0.408 -0.301  0.7658

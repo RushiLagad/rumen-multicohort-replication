@@ -4,3 +4,7 @@ charolais_mrna species : targets 1  features 12017  n 30  df 26
  pass10
    TRUE
 late analysis, run after all primary results were seen | aldex2 | charolais_mrna_species | animals 30 | features 12016 
+ALDEx2 check, aldex.glm t vs per-instance OLS t: max |difference| 8.9e-15 over 11827 features
+aldex2 charolais_mrna_species | trait term RFI_classhigh_RFI | df 26 | targets ok 1 | seconds 1351 
+ id feature    lfc    se     W p_ancom
+ T6  TGT_T6 -0.186 0.182 -1.02   0.327

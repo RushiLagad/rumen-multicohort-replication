@@ -1,0 +1,2 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T6	Li	rumen	nelore	species	TGT_T6	52	48	-0.06267807226655	0.068224340461889	0.365873566417413	-0.918719887976336	aldex2	late analysis, run after all primary results were seen	ok

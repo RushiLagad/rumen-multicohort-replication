@@ -1,0 +1,43 @@
+difford_bact real  | cows 749 | df 730 | terms: herd + parity + dim + batch + CH4_z 
+targets 38 | matched 9 | pass 10% prevalence 7 | features 358 
+  id              set
+ N30           Nelore
+ N32           Nelore
+ N37           Nelore
+ N39           Nelore
+ N40           Nelore
+ N42           Nelore
+  M1          Methane
+  M2          Methane
+  M3          Methane
+  S1 MethaneSecondary
+  S2 MethaneSecondary
+  S3 MethaneSecondary
+                                                     target        rank
+                                         Pseudobutyrivibrio       genus
+                                                  Roseburia       genus
+                                                Coprococcus       genus
+                                               Anaerostipes       genus
+                                                    Blautia       genus
+                                                Lachnospira       genus
+ Methanobrevibacter gottschalkii clade vs ruminantium clade clade_ratio
+                                        Succinivibrionaceae      family
+                                              total archaea     kingdom
+                                                    Sharpea       genus
+                                                  Kandleria       genus
+                                                Megasphaera       genus
+ n_present            feature prevalence pass10
+         1 Pseudobutyrivibrio      0.975   TRUE
+         1          Roseburia      0.614   TRUE
+         1        Coprococcus      0.355   TRUE
+         1       Anaerostipes      0.218   TRUE
+         1            Blautia      0.057  FALSE
+         1        Lachnospira      0.609   TRUE
+         0               <NA>        NaN     NA
+         6             TGT_M2      0.920   TRUE
+         0               <NA>        NaN     NA
+         1            Sharpea      0.461   TRUE
+         0               <NA>        NaN     NA
+         1        Megasphaera      0.088  FALSE
+late analysis, run after all primary results were seen | aldex2 | difford_bact | animals 749 | features 358 
+aldex2 difford_bact | permutations within herd | seeds 1053:1077 | new fits 25 | seconds 68 

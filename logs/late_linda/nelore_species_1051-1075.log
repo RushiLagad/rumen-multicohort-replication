@@ -4,3 +4,4 @@ nelore species : targets 1  features 12108  n 52  df 48
  pass10
    TRUE
 late analysis, run after all primary results were seen | linda | nelore_species | animals 52 | features 12107 
+linda nelore_species | permutations within diet | seeds 1051:1075 | new fits 25 | seconds 737 

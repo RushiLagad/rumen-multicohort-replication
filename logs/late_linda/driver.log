@@ -1,3 +1,6 @@
 2026-11-11 16:07:16 start linda | Amendment 44 commit eed2a71 | Rscript /home/rlagad/.local/share/mamba/envs/rumen-late/bin/Rscript | P 10
 2026-11-11 16:24:25 start linda | Amendment 44 commit eed2a71 | Rscript /home/rlagad/.local/share/mamba/envs/rumen-late/bin/Rscript | P 10
 2026-11-11 16:27:22 non-species tables done; species tables on 2 workers
+2026-11-11 18:03:23 fits done: real 12 of 12; null files 2400 (expected 2400)
+2026-11-11 18:03:25 linda pooled
+2026-11-11 18:03:25 end linda

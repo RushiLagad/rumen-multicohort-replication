@@ -1,0 +1,7 @@
+id	set	site	cohort	rank	feature	n	df	lfc	se	p_ancom	W	method	analysis	status
+T5	Li	rumen	nelore	genus	TGT_T5	52	48	0.0581246090300403	0.0720796857836106	0.424179688857157	0.806413752106911	aldex2	late analysis, run after all primary results were seen	ok
+C1	Canonical	rumen	nelore	genus	TGT_C1	52	48	0.0727987638049286	0.0642662849982667	0.263079423401579	1.13280527311712	aldex2	late analysis, run after all primary results were seen	ok
+C3	Canonical	rumen	nelore	genus	TGT_C3	52	48	0.0527427426690722	0.212669705234857	0.805196836952987	0.248002074695576	aldex2	late analysis, run after all primary results were seen	ok
+C4	Canonical	rumen	nelore	genus	TGT_C4	52	48	0.265583419097692	0.110074540704151	0.0197131011854572	2.4127723223826	aldex2	late analysis, run after all primary results were seen	ok
+C5	Canonical	rumen	nelore	genus	TGT_C5	52	48	0.0412115285125585	0.0987082196935387	0.678203886473261	0.417516820287599	aldex2	late analysis, run after all primary results were seen	ok
+C6	Canonical	rumen	nelore	genus	TGT_C6	52	48	0.00808003215478963	0.0821169105261396	0.922045679527962	0.0983944666455422	aldex2	late analysis, run after all primary results were seen	ok
