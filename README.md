@@ -4,7 +4,7 @@ A multi-cohort test, against a dated analysis plan, of whether rumen microbes re
 
 Rushikesh R. Lagad, Goswami Lab, Department of Animal Science, University of Arkansas (principal investigator: Dr. Aranyak Goswami). Contact: rlagad@uark.edu
 
-**Status:** submitted to *Microbiome* (Lagad and Goswami), November 2026; not yet peer reviewed. The submitted version is tag `v1.0-submission`, archived on Zenodo with the files that are too large for this repository: https://doi.org/10.5281/zenodo.XXXXXXX
+**Status:** submitted to *Microbiome* (Lagad and Goswami), November 2026; not yet peer reviewed. The submitted version is tag `v1.0-submission`, archived on Zenodo with the files that are too large for this repository: https://doi.org/10.5281/zenodo.24170174
 
 ## The question
 
