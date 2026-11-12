@@ -1,0 +1,10 @@
+table	b_lfc_per_sd	fits	planted	unplanted	power_raw	power_calibrated	power_calibrated_table_sd	fpr_raw	fpr_calibrated	median_est_over_planted	median_r_raw	median_r_calibrated	df	analysis
+wallace_prokaryotes	0.1	20	200	1880	0.835	0.54	0.625	0.259	0.046	0.95	0.11	0.068	998	late analysis, run after all primary results were seen
+wallace_prokaryotes	0.25	20	200	1880	1	0.94	0.995	0.257	0.043	0.99	0.282	0.169	998	late analysis, run after all primary results were seen
+wallace_prokaryotes	0.5	20	200	1880	1	0.995	1	0.267	0.047	1	0.511	0.307	998	late analysis, run after all primary results were seen
+alberta_genus	0.1	20	200	1740	0.605	0.365	0.31	0.236	0.051	1.02	0.111	0.066	520	late analysis, run after all primary results were seen
+alberta_genus	0.25	20	200	1740	0.99	0.885	0.94	0.219	0.04	1.01	0.262	0.167	520	late analysis, run after all primary results were seen
+alberta_genus	0.5	20	200	1740	1	0.995	1	0.223	0.045	1.01	0.473	0.319	520	late analysis, run after all primary results were seen
+nelore_genus	0.1	20	5780	51960	0.518	0.443	0.45	0.055	0.027	1	0.28	0.254	48	late analysis, run after all primary results were seen
+nelore_genus	0.25	20	5780	51960	0.919	0.887	0.904	0.05	0.024	1	0.587	0.542	48	late analysis, run after all primary results were seen
+nelore_genus	0.5	20	5780	51960	0.985	0.976	0.981	0.047	0.022	1	0.823	0.79	48	late analysis, run after all primary results were seen

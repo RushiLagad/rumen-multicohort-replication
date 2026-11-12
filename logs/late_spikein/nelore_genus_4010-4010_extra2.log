@@ -1,0 +1,20 @@
+nelore genus : targets 6  features 2893  n 52  df 48 
+ id             target       set n_keys n_present feature     reads prevalence
+ T5            Blautia        Li      2         2  TGT_T5   1676685          1
+ C1 Methanobrevibacter Canonical      5         5  TGT_C1  19469306          1
+ C3        Fibrobacter Canonical      1         1  TGT_C3  18868374          1
+ C4       Ruminococcus Canonical      7         7  TGT_C4  20811790          1
+ C5         Prevotella Canonical      1         1  TGT_C5 145903785          1
+ C6       Butyrivibrio Canonical      2         2  TGT_C6   5823502          1
+ pass10
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+nelore_genus seed 4010 b 0.1 | planted 289 of 2887 eligible genera | fit 488 s
+nelore_genus seed 4010 b 0.25 | planted 289 of 2887 eligible genera | fit 454 s
+nelore_genus seed 4010 b 0.5 | planted 289 of 2887 eligible genera | fit 468 s

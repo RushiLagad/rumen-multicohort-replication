@@ -1,0 +1,4 @@
+table	null_permutations	genera_with_null	median_null_sd
+wallace_prokaryotes	200	104	1.49
+alberta_genus	200	91	1.65
+nelore_genus	200	2869	1.09

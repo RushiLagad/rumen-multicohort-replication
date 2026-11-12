@@ -1,0 +1,90 @@
+alberta genus (primary: PRJNA448333 ID numbers excluded) | overlap IDs in analysis set 35 : animals 529 | groups 6 (excluded 2 with <5 animals: 5 animals) | df 520 
+targets 34 | matched a 16S feature 13 | pass 10% prevalence 6 | features 361 
+  id                target       set n_keys n_present feature   reads
+  T5               Blautia        Li      2         1  TGT_T5     305
+ N01      Anaeromyxobacter    Nelore      1         0    <NA>      NA
+ N02          Actinomadura    Nelore      3         0    <NA>      NA
+ N04       Acidaminococcus    Nelore      1         1 TGT_N04    1108
+ N05           Rubrobacter    Nelore      4         0    <NA>      NA
+ N06          Actinoplanes    Nelore      1         0    <NA>      NA
+ N07          Cellulomonas    Nelore      1         0    <NA>      NA
+ N08              Gordonia    Nelore      2         1 TGT_N08       0
+ N09                 Bosea    Nelore      1         1 TGT_N09       4
+ N10 Phascolarctobacterium    Nelore      2         0    <NA>      NA
+ N11             Comamonas    Nelore      4         1 TGT_N11      88
+ N12           Caulobacter    Nelore      1         0    <NA>      NA
+ N13           Eubacterium    Nelore     14         0    <NA>      NA
+ N14                Arabia    Nelore      1         0    <NA>      NA
+ N15           Selenomonas    Nelore      4         1 TGT_N15   47994
+ N16           Sphingobium    Nelore      2         0    <NA>      NA
+ N17          Burkholderia    Nelore      1         0    <NA>      NA
+ N18         Sinorhizobium    Nelore      1         0    <NA>      NA
+ N19            Lysobacter    Nelore      3         1 TGT_N19       9
+ N20        Pseudonocardia    Nelore      1         0    <NA>      NA
+ N21        Brevibacterium    Nelore      1         1 TGT_N21       2
+ N22            Nonomuraea    Nelore      1         0    <NA>      NA
+ N23         Succinivibrio    Nelore      1         1 TGT_N23   78247
+ N24           Marinomonas    Nelore      1         0    <NA>      NA
+ N25            Idiomarina    Nelore      1         0    <NA>      NA
+ N26          Glaesserella    Nelore      1         0    <NA>      NA
+ N27            Aliivibrio    Nelore      1         0    <NA>      NA
+ N28        Photobacterium    Nelore      1         0    <NA>      NA
+ N29          Psychromonas    Nelore      1         0    <NA>      NA
+  C1    Methanobrevibacter Canonical      5         0    <NA>      NA
+  C3           Fibrobacter Canonical      1         1  TGT_C3   15876
+  C4          Ruminococcus Canonical      7         1  TGT_C4  557846
+  C5            Prevotella Canonical      1         1  TGT_C5 3602176
+  C6          Butyrivibrio Canonical      2         1  TGT_C6   37831
+ prevalence pass10
+      0.036  FALSE
+         NA     NA
+         NA     NA
+      0.078  FALSE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.000  FALSE
+      0.002  FALSE
+         NA     NA
+      0.049  FALSE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.871   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+      0.004  FALSE
+         NA     NA
+      0.002  FALSE
+         NA     NA
+      0.645   TRUE
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+         NA     NA
+      0.435   TRUE
+      1.000   TRUE
+      0.998   TRUE
+      0.900   TRUE
+Loading required package: foreach
+Loading required package: rngtools
+alberta_genus seed 4006 b 0.1 | planted 10 of 97 eligible genera | fit 22 s
+alberta_genus seed 4006 b 0.25 | planted 10 of 97 eligible genera | fit 20 s
+alberta_genus seed 4006 b 0.5 | planted 10 of 97 eligible genera | fit 19 s
+alberta_genus seed 4007 b 0.1 | planted 10 of 97 eligible genera | fit 20 s
+alberta_genus seed 4007 b 0.25 | planted 10 of 97 eligible genera | fit 21 s
+alberta_genus seed 4007 b 0.5 | planted 10 of 97 eligible genera | fit 20 s
+alberta_genus seed 4008 b 0.1 | planted 10 of 97 eligible genera | fit 21 s
+alberta_genus seed 4008 b 0.25 | planted 10 of 97 eligible genera | fit 21 s
+alberta_genus seed 4008 b 0.5 | planted 10 of 97 eligible genera | fit 20 s
+alberta_genus seed 4009 b 0.1 | planted 10 of 97 eligible genera | fit 21 s
+alberta_genus seed 4009 b 0.25 | planted 10 of 97 eligible genera | fit 21 s
+alberta_genus seed 4009 b 0.5 | planted 10 of 97 eligible genera | fit 21 s
+alberta_genus seed 4010 b 0.1 | planted 10 of 97 eligible genera | fit 22 s
+alberta_genus seed 4010 b 0.25 | planted 10 of 97 eligible genera | fit 20 s
+alberta_genus seed 4010 b 0.5 | planted 10 of 97 eligible genera | fit 21 s
+There were 50 or more warnings (use warnings() to see the first 50)

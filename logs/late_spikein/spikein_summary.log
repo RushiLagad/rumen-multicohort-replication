@@ -1,0 +1,36 @@
+== Amendment 45 item 2: spike-in (late analysis, run after all primary results were seen)
+               table null_permutations genera_with_null median_null_sd
+ wallace_prokaryotes               200              104           1.49
+       alberta_genus               200               91           1.65
+        nelore_genus               200             2869           1.09
+               table b_lfc_per_sd fits planted unplanted power_raw
+ wallace_prokaryotes         0.10   20     200      1880     0.835
+ wallace_prokaryotes         0.25   20     200      1880     1.000
+ wallace_prokaryotes         0.50   20     200      1880     1.000
+       alberta_genus         0.10   20     200      1740     0.605
+       alberta_genus         0.25   20     200      1740     0.990
+       alberta_genus         0.50   20     200      1740     1.000
+        nelore_genus         0.10   20    5780     51960     0.518
+        nelore_genus         0.25   20    5780     51960     0.919
+        nelore_genus         0.50   20    5780     51960     0.985
+ power_calibrated power_calibrated_table_sd fpr_raw fpr_calibrated
+            0.540                     0.625   0.259          0.046
+            0.940                     0.995   0.257          0.043
+            0.995                     1.000   0.267          0.047
+            0.365                     0.310   0.236          0.051
+            0.885                     0.940   0.219          0.040
+            0.995                     1.000   0.223          0.045
+            0.443                     0.450   0.055          0.027
+            0.887                     0.904   0.050          0.024
+            0.976                     0.981   0.047          0.022
+ median_est_over_planted median_r_raw median_r_calibrated  df
+                    0.95        0.110               0.068 998
+                    0.99        0.282               0.169 998
+                    1.00        0.511               0.307 998
+                    1.02        0.111               0.066 520
+                    1.01        0.262               0.167 520
+                    1.01        0.473               0.319 520
+                    1.00        0.280               0.254  48
+                    1.00        0.587               0.542  48
+                    1.00        0.823               0.790  48
+power = share of planted genera with |W| > 1.96 in the planted direction; fpr = share of unplanted genera with |W| > 1.96; median_est_over_planted = ANCOM-BC2 lfc / planted lfc (1 = unbiased)
