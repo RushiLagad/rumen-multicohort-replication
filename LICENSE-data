@@ -1,0 +1,13 @@
+Results, tables, figures and documentation in this repository that were produced for this project
+(results/, logs/, plan/, docs/, harmonized/ as assembled here, and README files) are licensed under the
+Creative Commons Attribution 4.0 International licence (CC BY 4.0).
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Copyright (c) 2026 Rushikesh R. Lagad and Aranyak Goswami
+
+Not covered by this licence: sequence data, phenotype values and other material obtained from public
+archives, published articles and their supplements, including the article figures and supplementary
+files kept as download records in PRJNA987743/metadata/ and PRJEB70895/metadata/. These remain under
+the terms of their original sources; please cite the original studies (see README.md and the analysis plan).
+
+Code (scripts/, env/) is licensed separately under the MIT licence (LICENSE).

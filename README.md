@@ -4,7 +4,7 @@ A multi-cohort test, against a dated analysis plan, of whether rumen microbes re
 
 Rushikesh R. Lagad, Goswami Lab, Department of Animal Science, University of Arkansas (principal investigator: Dr. Aranyak Goswami). Contact: rlagad@uark.edu
 
-**Status:** work in progress, not peer reviewed. The repository is private until publication.
+**Status:** submitted to *Microbiome* (Lagad and Goswami), November 2026; not yet peer reviewed. The submitted version is tag `v1.0-submission`, archived on Zenodo with the files that are too large for this repository: https://doi.org/10.5281/zenodo.XXXXXXX
 
 ## The question
 
@@ -31,14 +31,14 @@ All sequence data and phenotype tables come from public archives and published s
 5. **Pooling across cohorts.** Effects are combined across the independent cohorts, corrected for the number of tests, and an association counts as replicated only if it holds in the pooled result and survives dropping each cohort in turn.
 6. **Every change recorded.** The analysis plan is a dated document; any change to methods is added as a dated entry before the affected analysis is run, including corrections of earlier mistakes.
 
-## Preliminary findings
+## Findings (submitted version)
 
 - **Feed efficiency:** none of the 27 published associations that could be tested replicated. For 17 of them the data rule out an effect as large as typically reported; for the other 10 there were too few animals to say.
 - **Methane:** none of the 11 testable associations replicated, and for all 11 the data rule out even modest effects in the published direction.
-- **Within one herd, not across herds:** clear associations do appear inside a single cohort (in the Wallace dairy cows, consistently across its seven farms), but they are absent from the other large dairy cohort.
-- **Method:** one widely used differential abundance method reported many false positives when the phenotype was shuffled, which is why every result here is calibrated. A second, independent method leads to the same conclusions.
+- **Within one herd, not across herds:** clear associations do appear inside a single cohort (in the Wallace dairy cows, consistently across its seven farms), but they are absent from the other large dairy cohort. Effects of lactation stage and parity did not carry between the two dairy herds either, although both were processed with the same 16S pipeline and SILVA taxonomy.
+- **Method:** one widely used differential abundance method (ANCOM-BC2) reported many false positives when the phenotype was shuffled, which is why every result here is calibrated. In a spike-in, calibration brought its false-positive rate in the large cohorts from about 25% to 5% while still recovering about nine in ten planted effects of a modest size. Three further methods (a CLR linear model, LinDA and ALDEx2) lead to the same conclusions.
 
-These findings are preliminary and may change before publication.
+Analyses run after the primary results had been seen are labelled as late analyses in the plan (Amendments 44 and 45) and change no replication label.
 
 ## Repository layout
 
@@ -56,7 +56,7 @@ These findings are preliminary and may change before publication.
 
 ## Reproducing the analysis
 
-The software environments are in `env/`: analysis in R 4.3.3 with ANCOM-BC2 2.4.0 and metafor 4.8.0, and 16S processing in R 4.5.3 with DADA2 1.38.0. Sequence data are downloaded from the accessions above with the download scripts in `scripts/`. The order of the steps is described in `scripts/README.md`, and the analysis plan states for every step what was decided and when.
+The software environments are in `env/`: analysis in R 4.3.3 with ANCOM-BC2 2.4.0 and metafor 4.8.0, and 16S processing in R 4.5.3 with DADA2 1.38.0. Sequence data are downloaded from the accessions above with the download scripts in `scripts/`. Two inputs are not in this repository because of their size and are on Zenodo with the submitted version: the 600 permutation null fits behind the untargeted genus scan and the spike-in check (`results/scan_null/`, about 470 MB) and the GTDB genus and species count tables for the Nelore and Charolais metagenomes and metatranscriptomes (`profiles_gtdb_full/`); unpack both at the repository root. Read-level intermediates (`processed/`, about 540 GB) are not deposited and are rebuilt from the public reads. The order of the steps is described in `scripts/README.md`, and the analysis plan states for every step what was decided and when.
 
 ## Data sources and credit
 
@@ -64,4 +64,4 @@ This work re-uses data generated and shared by the authors of the studies listed
 
 ## Licence
 
-All rights reserved until publication. A licence will be added when the work is published.
+Code (`scripts/`, `env/`) is released under the MIT licence (`LICENSE`). Results, tables, figures and documentation written for this project are released under CC BY 4.0 (`LICENSE-data`). Data and files from other sources (sequence archives, published supplements, phenotype tables, and the article figures and supplementary files kept as download records in `PRJNA987743/metadata/`) remain under the terms of their original sources; see "Data sources and credit".
