@@ -65,16 +65,16 @@ Results first became available as follows. Nelore and Charolais RFI estimates, 2
 | 42 addendum | 2026-11-10 | CLR methane estimates calibrated by 200 permutations | Before running; after an uncalibrated CLR label change (N38) was seen | After the affected results | N38 Eubacterium "opposite sign" under calibrated CLR only |
 | 43 | 2026-11-10 | Wallace RFI NRC sensitivity implemented as planned in Amendments 19 and 34 | Before any Wallace RFI estimate | Before the affected analysis | None |
 | M1 source traits | 2026-11-10 | Descriptive note: the M1 source papers used methane yield and daily output | Recorded after the sensitivity results were seen | Record only | None |
-| 44 | 2026-11-11 | Late analyses: LinDA and ALDEx2 (Section 6), Hedges' g for Charolais (Section 9, Amendment 14 item 1) and the Li et al. diversity claims (Section 3.1), all pre-specified and not run at the time; written to results/late_* only; record corrections (items in this file) | Committed before any of it was run | After the affected results (late analysis, run after all primary results were seen) | None by rule; reported whatever they show |
+| 44 | 2026-11-11 | Late analyses: LinDA and ALDEx2 (Section 6), Hedges' g for Charolais (Section 9, Amendment 14 item 1) and the Li et al. diversity claims (Section 3.1), all pre-specified and not run at the time; written to results/late_* only; record corrections (items in this file) | Committed before any of it was run | After the affected results (late analysis, run after all primary results were seen) | None: no label differs under LinDA or ALDEx2 (0 replicated in either arm); Hedges' g descriptive; none of the four diversity claims supported |
 
 ## Pre-specified items not run as planned
 
 | Plan section | Pre-specified | What was done | Amendment |
 |---|---|---|---|
-| 6, Models | ALDEx2 and LinDA as sensitivity methods beside ANCOM-BC2 | Not run until now; run late, after all primary results were seen | 44 |
+| 6, Models | ALDEx2 and LinDA as sensitivity methods beside ANCOM-BC2 | Not run at the time; run late, after all primary results were seen; no label changed | 44 |
 | 14 item 1 | CLR linear model as a sensitivity estimator ("Sensitivity: t from lm on CLR") | Not run at the time; run late as the second estimator | 42 |
-| 9, Pooling; 14 item 1 | Hedges' g for the Charolais binary contrast | Not run until now; run late, descriptive only | 44 |
-| 3.1, Primary target set | Li et al. diversity claims (bacterial Shannon evenness and Shannon, archaeal Simpson and inverse Simpson), "tested separately" | Not run until now; run late, two-sided | 44 |
+| 9, Pooling; 14 item 1 | Hedges' g for the Charolais binary contrast | Not run at the time; run late, descriptive only | 44 |
+| 3.1, Primary target set | Li et al. diversity claims (bacterial Shannon evenness and Shannon, archaeal Simpson and inverse Simpson), "tested separately" | Not run at the time; run late, two-sided; none supported | 44 |
 | 5, Read processing, item 4 | HUMAnN3 functional profiling of the shotgun layers | Never run; no functional results are reported, so the Section 1 secondary question (does moving from DNA-based taxonomy to expressed function change the answer) is not addressed | None |
 | 2.3, Cohorts | PRJNA448333 (Li et al.) as a conditional baseline cohort | Dropped: its phenotypes could not be traced to a citable source (Amendments 20, 24, 26, 39) | 20 |
 
