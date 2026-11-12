@@ -14,7 +14,7 @@ Timing classes:
 - **After the affected results.** Written after results of the analysis it changes, or that motivated it, had been seen.
 - **Record only.** A finding or correction to the record that changes no analysis rule.
 
-Results first became available as follows. Nelore and Charolais RFI estimates, 2 November. Alberta RFI estimates, 3 November. Methane estimates, 6 November. Calibrated RFI estimates, 8 November. The de novo scan, 9 November. Farm, depth, second-estimator and Wallace RFI sensitivities, 10 November. Late analyses (Amendment 44), from 11 November.
+Results first became available as follows. Nelore and Charolais RFI estimates, 2 November. Alberta RFI estimates, 3 November. Methane estimates, 6 November. Calibrated RFI estimates, 8 November. The de novo scan, 9 November. Farm, depth, second-estimator and Wallace RFI sensitivities, 10 November. Late analyses (Amendments 44 and 45), from 11 November.
 
 # Part 1. Deviation table
 
@@ -66,6 +66,7 @@ Results first became available as follows. Nelore and Charolais RFI estimates, 2
 | 43 | 2026-11-10 | Wallace RFI NRC sensitivity implemented as planned in Amendments 19 and 34 | Before any Wallace RFI estimate | Before the affected analysis | None |
 | M1 source traits | 2026-11-10 | Descriptive note: the M1 source papers used methane yield and daily output | Recorded after the sensitivity results were seen | Record only | None |
 | 44 | 2026-11-11 | Late analyses: LinDA and ALDEx2 (Section 6), Hedges' g for Charolais (Section 9, Amendment 14 item 1) and the Li et al. diversity claims (Section 3.1), all pre-specified and not run at the time; written to results/late_* only; record corrections (items in this file) | Committed before any of it was run | After the affected results (late analysis, run after all primary results were seen) | None: no label differs under LinDA or ALDEx2 (0 replicated in either arm); Hedges' g descriptive; none of the four diversity claims supported |
+| 45 | 2026-11-11 | Late checks: positive controls for transfer (Difford vs Wallace covariate effects; Charolais diet effect across mRNA/GTDB and 16S/SILVA in the same animals), spike-in of known effects with and without calibration, and target-mapping concordance | Committed before any of it was run | After the affected results (late analysis, run after all primary results were seen; not pre-specified) | None by rule; reported whatever they show |
 
 ## Pre-specified items not run as planned
 
