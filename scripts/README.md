@@ -13,6 +13,7 @@ Scripts are numbered in the order they were written, which follows the order of 
 | 88 to 100 | Calibration with shuffled phenotypes, searches across all genera, farm-by-farm checks, sequencing depth check, second method, sensitivity analyses, summary tables |
 | 101 to 104 | Manuscript figures (102 Figure 1, 103 Figures 2 to 4) and Additional files 1 and 2 (104, Python) |
 | 105 to 107 | Late analyses, run after all primary results were seen (Amendment 44): LinDA and ALDEx2 fits and permutations (105), their pooling (106), Charolais Hedges' g and the Li et al. diversity indices (107) |
+| 108 to 110 | Late checks (Amendment 45): positive controls for transfer (108), target-mapping concordance (109), spike-in summary (110); fits run through 105 |
 | lib_replication.R | Shared pooling and labelling functions |
 | lib_clr.R | Shared functions for the second method (centred log-ratio with linear models) |
 | lib_late.R | Shared functions for the late analyses (Amendment 44), called from 21, 65 and 81 |

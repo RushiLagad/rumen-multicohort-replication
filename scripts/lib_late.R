@@ -5,11 +5,14 @@
 LATE_LABEL <- "late analysis, run after all primary results were seen"
 
 late_main <- function(A, feat, tk, md, terms, n, df, cohort, rank, prefix, root, perm_by, X=NULL, tax=NULL, lin=NULL, m1=FALSE, difford=FALSE) {
-  what <- Sys.getenv("LATE"); stopifnot(what %in% c("linda", "aldex2", "hedges", "diversity"), !nzchar(Sys.getenv("SHUFFLE_SEED")))
-  stopifnot("commit Amendment 44 first" = any(grepl("^\\*\\*Amendment 44 \\(", readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")))))
-  if (startsWith(cohort, "alberta")) stopifnot("Alberta late analyses use all animals (ALBERTA_ALL=1, Amendment 39)" = cohort == "alberta_all")
+  what <- Sys.getenv("LATE"); stopifnot(what %in% c("linda", "aldex2", "hedges", "diversity", "spikein", "mapping"), !nzchar(Sys.getenv("SHUFFLE_SEED")))
+  pl <- readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")); stopifnot("commit Amendment 44 first" = any(grepl("^\\*\\*Amendment 44 \\(", pl)))
+  if (what %in% c("spikein", "mapping")) stopifnot("commit Amendment 45 first" = any(grepl("^\\*\\*Amendment 45 \\(", pl)))
+  if (startsWith(cohort, "alberta") && what != "spikein") stopifnot("Alberta late analyses use all animals (ALBERTA_ALL=1, Amendment 39)" = cohort == "alberta_all")
   A <- as.matrix(A); stopifnot(all(colnames(A) %in% rownames(md))); md <- md[colnames(A), , drop=FALSE]
   od <- file.path(root, "results", paste0("late_", if (what == "hedges") "hedges_g" else what)); dir.create(od, showWarnings=FALSE)
+  if (what == "spikein") return(late_spike(if (is.null(X)) A[!grepl("^TGT_", rownames(A)), , drop=FALSE] else X, md, terms, df, prefix, od, perm_by))
+  if (what == "mapping") return(late_mapping(A, feat, tk, cohort, rank, prefix, od))
   cat(LATE_LABEL, "|", what, "|", prefix, "| animals", ncol(A), "| features", nrow(A), "\n")
   if (what %in% c("linda", "aldex2")) late_da(what, A, feat, tk, md, terms, cohort, rank, prefix, od, perm_by, m1, difford)
   else if (what == "hedges") late_hedges(A, feat, tk, md, terms, cohort, rank, prefix, od, root)
@@ -133,4 +136,38 @@ late_div <- function(X, md, terms, cohort, od, tax, lin) {
   out$note <- "genus counts, all genera, rarefied per domain to the cohort minimum (100 rarefactions, indices averaged); two-sided"
   wr(vals, file.path(od, paste0(cohort, "_diversity_values.tsv"))); wr(out, f)
   print(out[, c("index", "cohort", "genera_present", "depth", "n", "df", "W", "r", "status")], row.names=FALSE, digits=3)
+}
+
+
+# ---------------------------------------------------------------- Amendment 45 item 2: spike-in (planted effects in real tables)
+late_spike <- function(G, md, terms, df, prefix, od, perm_by) {
+  suppressMessages({library(ANCOMBC); library(TreeSummarizedExperiment)})
+  G <- round(as.matrix(G)); G <- G[, rownames(md), drop=FALSE]; elig <- rownames(G)[rowMeans(G > 0) >= 0.10]
+  v <- terms[length(terms)]; stopifnot(is.numeric(md[[v]])); g <- interaction(md[, perm_by, drop=FALSE], drop=TRUE)
+  se <- as.integer(strsplit(Sys.getenv("LATE_SEEDS", "4001:4001"), ":", fixed=TRUE)[[1]]); seeds <- seq(se[1], se[length(se)])
+  bs <- as.numeric(strsplit(Sys.getenv("LATE_B", "0.1,0.25,0.5"), ",", fixed=TRUE)[[1]]); nd <- file.path(od, prefix); dir.create(nd, recursive=TRUE, showWarnings=FALSE)
+  k <- max(5, round(0.10 * length(elig)))
+  for (s in seeds) {
+    mp <- perm_md(md, v, g, s); z <- as.numeric(scale(mp[[v]]))
+    set.seed(s + 1e6); sp <- sample(elig, k); dir <- rep(c(1, -1), length.out=k)   # same planted genera for every effect size of one seed (paired)
+    for (b in bs) { f <- file.path(nd, sprintf("b%s_seed%d.tsv", format(b), s)); if (file.exists(f) && file.size(f) > 0) next
+      G2 <- G; for (i in seq_len(k)) G2[sp[i], ] <- round(G[sp[i], ] * exp(dir[i] * b * z))
+      orig <- rownames(G2); rownames(G2) <- sprintf("F%05d", seq_along(orig))
+      tse <- TreeSummarizedExperiment(assays=list(counts=G2), colData=mp[, terms, drop=FALSE]); t0 <- proc.time()[[3]]
+      fit <- ancombc2(data=tse, assay_name="counts", fix_formula=paste(terms, collapse=" + "), p_adj_method="BH", prv_cut=0.10, group=NULL, struc_zero=FALSE, verbose=FALSE)
+      res <- fit$res; tc <- grep(paste0("^lfc_", v), names(res), value=TRUE); stopifnot(length(tc) == 1); sfx <- sub("^lfc_", "", tc)
+      gen <- orig[match(res$taxon, rownames(G2))]; planted <- dir[match(gen, sp)] * b; planted[is.na(planted)] <- 0
+      out <- data.frame(genus=gen, lfc=res[[tc]], se=res[[paste0("se_", sfx)]], W=res[[tc]] / res[[paste0("se_", sfx)]], df=df, planted_lfc_per_sd=planted, b=b, seed=s, k_planted=k, analysis=LATE_LABEL)
+      wr(out, f); cat(prefix, "seed", s, "b", b, "| planted", k, "of", length(elig), "eligible genera | fit", round(proc.time()[[3]] - t0), "s\n") } }
+}
+
+# ---------------------------------------------------------------- Amendment 45 item 3: per-animal CLR of every target feature (Charolais mRNA vs 16S, same animals)
+late_mapping <- function(A, feat, tk, cohort, rank, prefix, od) {
+  f <- file.path(od, paste0(prefix, "_target_clr.tsv")); if (file.exists(f)) { cat("exists, not overwritten:", f, "\n"); return(invisible()) }
+  A <- as.matrix(A); B <- A[rowMeans(A > 0) >= 0.10, , drop=FALSE]; L <- log(B + 0.5); C <- sweep(L, 2, colMeans(L[!grepl("^TGT_", rownames(L)), , drop=FALSE]))   # CLR as Amendment 42
+  i <- match(feat, rownames(C)); ok <- !is.na(i); prev <- rowMeans(A > 0)[match(feat, rownames(A))]
+  out <- do.call(rbind, lapply(which(ok), function(j) data.frame(id=tk$id[j], target=tk$target[j], rank=rank, cohort=cohort, feature=feat[j], prevalence=round(unname(prev[j]), 3), animal=colnames(C), clr=unname(C[i[j], ]))))
+  st <- data.frame(id=tk$id, target=tk$target, rank=rank, cohort=cohort, feature=feat, prevalence=round(prev, 3), status=ifelse(is.na(feat), "no_feature", ifelse(ok, "ok", "below_10pct")))
+  wr(out, f); wr(st, file.path(od, paste0(prefix, "_target_status.tsv")))
+  cat("mapping", prefix, "| targets with a feature", sum(!is.na(feat)), "| above 10% prevalence", sum(ok), "| animals", ncol(C), "\n")
 }
