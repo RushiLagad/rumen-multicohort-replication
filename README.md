@@ -29,11 +29,11 @@ All sequence data and phenotype tables come from public archives and published s
 3. **A check that each cohort can detect anything at all.** Before a cohort's results are read, the same pipeline must find a strong, expected difference in those animals (for example between diets or farms). All five cohorts pass.
 4. **Calibration.** The phenotype is shuffled within each design group 200 times and the analysis repeated, so every result is judged against what the method produces on data with no real signal.
 5. **Pooling across cohorts.** Effects are combined across the independent cohorts, corrected for the number of tests, and an association counts as replicated only if it holds in the pooled result and survives dropping each cohort in turn.
-6. **Every change recorded.** The analysis plan is a dated document; any change to methods is added as a dated entry before the affected analysis is run, including corrections of earlier mistakes.
+6. **Every change recorded.** The analysis plan is a dated document; any change to methods is added as a dated entry stating whether it came before or after the affected results were seen, including corrections of earlier mistakes.
 
 ## Findings (submitted version)
 
-- **Feed efficiency:** none of the 27 published associations that could be tested replicated. For 17 of them the data rule out an effect as large as typically reported; for the other 10 there were too few animals to say.
+- **Feed efficiency:** none of the 27 published associations that could be tested replicated. For 17 of them the data rule out an effect as large as typically reported; for the other 10 the data were too imprecise to say.
 - **Methane:** none of the 11 testable associations replicated, and for all 11 the data rule out even modest effects in the published direction.
 - **Within one herd, not across herds:** clear associations do appear inside a single cohort (in the Wallace dairy cows, consistently across its seven farms), but they are absent from the other large dairy cohort. Effects of lactation stage and parity did not carry between the two dairy herds either, although both were processed with the same 16S pipeline and SILVA taxonomy.
 - **Method:** one widely used differential abundance method (ANCOM-BC2) reported many false positives when the phenotype was shuffled, which is why every result here is calibrated. In a spike-in, calibration brought its false-positive rate in the large cohorts from about 25% to 5% while still recovering about nine in ten planted effects of a modest size. Three further methods (a CLR linear model, LinDA and ALDEx2) lead to the same conclusions.
