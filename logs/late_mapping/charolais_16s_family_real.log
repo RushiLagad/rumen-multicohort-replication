@@ -1,0 +1,11 @@
+charolais_16s family : targets 2  features 79  n 30  df 26 
+ id                                target       set n_keys n_present feature
+ T4 unclassified Methanomassiliicoccaceae        Li      1         0    <NA>
+ C2                   Succinivibrionaceae Canonical      1         1  TGT_C2
+ reads prevalence pass10
+    NA         NA     NA
+ 61223          1   TRUE
+Error in data.frame(id = tk$id, target = tk$target, rank = rank, cohort = cohort,  : 
+  row names contain missing values
+Calls: late_main -> late_mapping -> data.frame
+Execution halted

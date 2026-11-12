@@ -1,0 +1,8 @@
+2026-11-12 09:48:17 start poscontrol | Amendment 44 commit 7599cdc | Rscript /home/rlagad/.local/share/mamba/envs/rumen-r/bin/Rscript | P 10
+2026-11-12 09:48:17 positive controls done
+2026-11-12 09:48:17 end poscontrol
+2026-11-12 09:48:17 start mapping | Amendment 44 commit 7599cdc | Rscript /home/rlagad/.local/share/mamba/envs/rumen-r/bin/Rscript | P 10
+09:48:19 charolais_16s_family real FAILED (see logs/late_mapping/charolais_16s_family_real.log)
+09:48:19 charolais_16s_phylum real FAILED (see logs/late_mapping/charolais_16s_phylum_real.log)
+2026-11-12 09:48:19 mapping summary done
+2026-11-12 09:48:19 end mapping

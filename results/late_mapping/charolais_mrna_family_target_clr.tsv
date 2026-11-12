@@ -1,0 +1,61 @@
+id	target	rank	cohort	feature	prevalence	animal	clr
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	190827	1.46253749855663
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8365	1.50198158358888
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8368	2.30956968538798
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8443	2.43002624169579
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8506	0.906535469481908
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8507	1.14253350609077
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8513	1.63113679809576
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8574	1.7898313760781
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8716	3.58687111097277
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8852	1.44894465708859
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8912	1.37812029952221
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8916	1.69052711349276
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8919	2.09846265338604
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8921	1.69229221756577
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8945	0.992405061507547
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	8997	1.80850314903308
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9022	1.56191663580782
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9026	2.40893880990703
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9302	1.06503177454158
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9334	2.25001474804567
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9563	1.91025968754718
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9597	0.763838758664904
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9601	1.38586241598953
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9609	1.01825192454183
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9621	1.34159647916566
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9808	1.86684993546785
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9815	0.764188654472981
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9840	1.13542736076597
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9842	1.59800722669932
+T4	unclassified Methanomassiliicoccaceae	family	charolais_mrna	TGT_T4	1	9920	0.606657572020594
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	190827	6.20092936643821
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8365	4.59064707503217
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8368	5.05442751509948
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8443	5.26219613081199
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8506	6.7002244640395
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8507	6.96633659280414
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8513	7.36408751933436
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8574	3.57528219754247
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8716	4.42201946754594
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8852	6.07044879982439
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8912	6.40578876535438
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8916	7.32202487771028
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8919	3.00795203155399
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8921	4.32534323452748
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8945	6.11474019981827
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	8997	4.19994794255785
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9022	5.16636909577654
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9026	3.09175469225448
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9302	6.89696872497892
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9334	4.81735689836381
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9563	2.37090594735827
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9597	6.00194897627688
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9601	7.30678672781306
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9609	6.5977763642728
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9621	6.89574329585389
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9808	3.35678333134722
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9815	3.88517108425056
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9840	6.85144301715739
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9842	4.2171789306951
+C2	Succinivibrionaceae	family	charolais_mrna	TGT_C2	1	9920	6.06278100329526

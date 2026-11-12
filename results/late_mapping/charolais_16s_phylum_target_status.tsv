@@ -1,0 +1,3 @@
+id	target	rank	cohort	feature	prevalence	status
+T2	Firmicutes	phylum	charolais_16s	TGT_T2	1	ok
+T3	Chloroflexi	phylum	charolais_16s	NA	NA	no_feature

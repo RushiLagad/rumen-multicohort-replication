@@ -1,0 +1,72 @@
+charolais_16s genus : targets 34  features 187  n 30  df 26 
+  id                target       set n_keys n_present feature  reads prevalence
+  T5               Blautia        Li      2         1  TGT_T5   2669      0.867
+ N01      Anaeromyxobacter    Nelore      1         0    <NA>     NA         NA
+ N02          Actinomadura    Nelore      3         0    <NA>     NA         NA
+ N04       Acidaminococcus    Nelore      1         0    <NA>     NA         NA
+ N05           Rubrobacter    Nelore      4         0    <NA>     NA         NA
+ N06          Actinoplanes    Nelore      1         0    <NA>     NA         NA
+ N07          Cellulomonas    Nelore      1         0    <NA>     NA         NA
+ N08              Gordonia    Nelore      2         0    <NA>     NA         NA
+ N09                 Bosea    Nelore      1         0    <NA>     NA         NA
+ N10 Phascolarctobacterium    Nelore      2         0    <NA>     NA         NA
+ N11             Comamonas    Nelore      4         1 TGT_N11     11      0.033
+ N12           Caulobacter    Nelore      1         0    <NA>     NA         NA
+ N13           Eubacterium    Nelore     14         1 TGT_N13    281      0.433
+ N14                Arabia    Nelore      1         0    <NA>     NA         NA
+ N15           Selenomonas    Nelore      4         1 TGT_N15   1655      0.600
+ N16           Sphingobium    Nelore      2         0    <NA>     NA         NA
+ N17          Burkholderia    Nelore      1         0    <NA>     NA         NA
+ N18         Sinorhizobium    Nelore      1         0    <NA>     NA         NA
+ N19            Lysobacter    Nelore      3         0    <NA>     NA         NA
+ N20        Pseudonocardia    Nelore      1         0    <NA>     NA         NA
+ N21        Brevibacterium    Nelore      1         1 TGT_N21     56      0.167
+ N22            Nonomuraea    Nelore      1         0    <NA>     NA         NA
+ N23         Succinivibrio    Nelore      1         1 TGT_N23   3111      0.833
+ N24           Marinomonas    Nelore      1         0    <NA>     NA         NA
+ N25            Idiomarina    Nelore      1         0    <NA>     NA         NA
+ N26          Glaesserella    Nelore      1         0    <NA>     NA         NA
+ N27            Aliivibrio    Nelore      1         0    <NA>     NA         NA
+ N28        Photobacterium    Nelore      1         0    <NA>     NA         NA
+ N29          Psychromonas    Nelore      1         0    <NA>     NA         NA
+  C1    Methanobrevibacter Canonical      5         1  TGT_C1  48632      1.000
+  C3           Fibrobacter Canonical      1         1  TGT_C3  89342      1.000
+  C4          Ruminococcus Canonical      7         1  TGT_C4  41674      1.000
+  C5            Prevotella Canonical      1         1  TGT_C5 320034      1.000
+  C6          Butyrivibrio Canonical      2         1  TGT_C6  21546      0.967
+ pass10
+   TRUE
+     NA
+     NA
+     NA
+     NA
+     NA
+     NA
+     NA
+     NA
+     NA
+  FALSE
+     NA
+   TRUE
+     NA
+   TRUE
+     NA
+     NA
+     NA
+     NA
+     NA
+   TRUE
+     NA
+   TRUE
+     NA
+     NA
+     NA
+     NA
+     NA
+     NA
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+   TRUE
+mapping charolais_16s_genus | targets with a feature 11 | above 10% prevalence 10 | animals 30 

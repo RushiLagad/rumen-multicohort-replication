@@ -1,0 +1,83 @@
+id	set	target	rank	keys	key_status	nelore_feature	nelore_status	charolais_mrna_feature	charolais_mrna_status	alberta_feature	alberta_status	difford_bact_feature	difford_bact_status	wallace_prokaryotes_feature	wallace_prokaryotes_status	charolais_same_animal_spearman	analysis
+T1	Li	unnamed RF19 (text: RF16)	16S clade		untestable_by_design	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+T2	Li	Firmicutes	phylum	Firmicutes;Firmicutes_A;Firmicutes_B;Firmicutes_C;Firmicutes_D;Firmicutes_E;Firmicutes_F;Firmicutes_G;Firmicutes_H	mapped	TGT_T2	ok	TGT_T2	ok	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+T3	Li	Chloroflexi	phylum	Chloroflexota	mapped	TGT_T3	ok	TGT_T3	ok	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+T4	Li	unclassified Methanomassiliicoccaceae	family	Methanomassiliicoccaceae	mapped	TGT_T4	ok	TGT_T4	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+T5	Li	Blautia	genus	Blautia;Blautia_A	mapped	TGT_T5	ok	TGT_T5	ok	TGT_T5	filtered	NA	NA	NA	NA	0.239	late analysis, run after all primary results were seen
+T6	Li	Methanobrevibacter smithii	species	Methanobrevibacter_A smithii;Methanobrevibacter_A smithii_A	mapped	TGT_T6	ok	TGT_T6	ok	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N01	Nelore	Anaeromyxobacter	genus	Anaeromyxobacter	mapped	NA	NA	TGT_N01	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N02	Nelore	Actinomadura	genus	Actinomadura_B;Actinomadura_C;Actinomadura_D	mapped	NA	NA	TGT_N02	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N03	Nelore	Sorangium	genus		unmapped	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N04	Nelore	Acidaminococcus	genus	Acidaminococcus	mapped	NA	NA	TGT_N04	ok	TGT_N04	filtered	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N05	Nelore	Rubrobacter	genus	Rubrobacter;Rubrobacter_A;Rubrobacter_B;Rubrobacter_C	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N06	Nelore	Actinoplanes	genus	Actinoplanes	mapped	NA	NA	TGT_N06	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N07	Nelore	Cellulomonas	genus	Cellulomonas	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N08	Nelore	Gordonia	genus	Gordonia;Gordonia_B	mapped	NA	NA	TGT_N08	ok	TGT_N08	filtered	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N09	Nelore	Bosea	genus	Bosea	mapped	NA	NA	NA	no_feature	TGT_N09	filtered	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N10	Nelore	Phascolarctobacterium	genus	Phascolarctobacterium;Phascolarctobacterium_A	mapped	NA	NA	TGT_N10	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N11	Nelore	Comamonas	genus	Comamonas;Comamonas_C;Comamonas_E;Comamonas_F	mapped	NA	NA	TGT_N11	ok	TGT_N11	filtered	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N12	Nelore	Caulobacter	genus	Caulobacter	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N13	Nelore	Eubacterium	genus	Eubacterium;Eubacterium_B;Eubacterium_C;Eubacterium_F;Eubacterium_G;Eubacterium_I;Eubacterium_J;Eubacterium_M;Eubacterium_N;Eubacterium_O;Eubacterium_Q;Eubacterium_R;Eubacterium_S;Eubacterium_T	mapped	NA	NA	TGT_N13	ok	NA	no_feature	NA	NA	NA	NA	-0.016	late analysis, run after all primary results were seen
+N14	Nelore	Arabia	genus	Arabia	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N15	Nelore	Selenomonas	genus	Selenomonas;Selenomonas_A;Selenomonas_B;Selenomonas_C	mapped	NA	NA	TGT_N15	ok	TGT_N15	ok	NA	NA	NA	NA	0.905	late analysis, run after all primary results were seen
+N16	Nelore	Sphingobium	genus	Sphingobium;Sphingobium_A	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N17	Nelore	Burkholderia	genus	Burkholderia	mapped	NA	NA	TGT_N17	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N18	Nelore	Sinorhizobium	genus	Sinorhizobium	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N19	Nelore	Lysobacter	genus	Lysobacter;Lysobacter_A;Lysobacter_B	mapped	NA	NA	TGT_N19	ok	TGT_N19	filtered	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N20	Nelore	Pseudonocardia	genus	Pseudonocardia	mapped	NA	NA	TGT_N20	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N21	Nelore	Brevibacterium	genus	Brevibacterium	mapped	NA	NA	TGT_N21	ok	TGT_N21	filtered	NA	NA	NA	NA	0.237	late analysis, run after all primary results were seen
+N22	Nelore	Nonomuraea	genus	Nonomuraea	mapped	NA	NA	TGT_N22	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N23	Nelore	Succinivibrio	genus	Succinivibrio	mapped	NA	NA	TGT_N23	ok	TGT_N23	ok	NA	NA	NA	NA	0.627	late analysis, run after all primary results were seen
+N24	Nelore	Marinomonas	genus	Marinomonas	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N25	Nelore	Idiomarina	genus	Idiomarina	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N26	Nelore	Glaesserella	genus	Glaesserella	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N27	Nelore	Aliivibrio	genus	Aliivibrio	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N28	Nelore	Photobacterium	genus	Photobacterium	mapped	NA	NA	TGT_N28	ok	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N29	Nelore	Psychromonas	genus	Psychromonas	mapped	NA	NA	NA	no_feature	NA	no_feature	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N30	Nelore	Pseudobutyrivibrio	genus	Pseudobutyrivibrio	mapped	NA	NA	NA	NA	NA	NA	Pseudobutyrivibrio	ok	Pseudobutyrivibrio	ok	NA	late analysis, run after all primary results were seen
+N31	Nelore	Anaerobutyricum	genus	Anaerobutyricum	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N32	Nelore	Roseburia	genus	Roseburia	mapped	NA	NA	NA	NA	NA	NA	Roseburia	ok	Roseburia	filtered	NA	late analysis, run after all primary results were seen
+N33	Nelore	Novisyntrophococcus	genus		unmapped	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N34	Nelore	Enterocloster	genus	Enterocloster	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N35	Nelore	Lacrimispora	genus	Lacrimispora	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N36	Nelore	Mediterraneibacter	genus	Mediterraneibacter;Mediterraneibacter_A	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N37	Nelore	Coprococcus	genus	Coprococcus;Coprococcus_A	mapped	NA	NA	NA	NA	NA	NA	Coprococcus	ok	Coprococcus	ok	NA	late analysis, run after all primary results were seen
+N38	Nelore	Eubacterium	genus	Eubacterium;Eubacterium_B;Eubacterium_C;Eubacterium_F;Eubacterium_G;Eubacterium_I;Eubacterium_J;Eubacterium_M;Eubacterium_N;Eubacterium_O;Eubacterium_Q;Eubacterium_R;Eubacterium_S;Eubacterium_T	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	Eubacterium	ok	NA	late analysis, run after all primary results were seen
+N39	Nelore	Anaerostipes	genus	Anaerostipes	mapped	NA	NA	NA	NA	NA	NA	Anaerostipes	ok	Anaerostipes	filtered	NA	late analysis, run after all primary results were seen
+N40	Nelore	Blautia	genus	Blautia;Blautia_A	mapped	NA	NA	NA	NA	NA	NA	Blautia	filtered	Blautia	ok	NA	late analysis, run after all primary results were seen
+N41	Nelore	Winogradskyella	genus	Winogradskyella	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N42	Nelore	Lachnospira	genus	Lachnospira	mapped	NA	NA	NA	NA	NA	NA	Lachnospira	ok	Lachnospira	ok	NA	late analysis, run after all primary results were seen
+N43	Nelore	Wolbachia	genus	Wolbachia	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N44	Nelore	Microcystis	genus	Microcystis	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N45	Nelore	Sporomusa	genus	Sporomusa	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N46	Nelore	Terribacillus	genus	Terribacillus	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N47	Nelore	Saccharothrix	genus		unmapped	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N48	Nelore	Thermococcus	genus	Thermococcus;Thermococcus_A;Thermococcus_B;Thermococcus_C	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N49	Nelore	Sebaldella	genus	Sebaldella	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N50	Nelore	Thermincola	genus	Thermincola	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N51	Nelore	Salicibibacter	genus	Salicibibacter	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N52	Nelore	Frateuria	genus	Frateuria;Frateuria_A;Frateuria_B	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N53	Nelore	Hypericibacter	genus	Hypericibacter	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N54	Nelore	Carboxydocella	genus	Carboxydocella	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N55	Nelore	Fictibacillus	genus	Fictibacillus;Fictibacillus_A;Fictibacillus_C	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N56	Nelore	Methanococcus	genus	Methanococcus	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N57	Nelore	Heliorestis	genus	Heliorestis	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N58	Nelore	Dehalogenimonas	genus	Dehalogenimonas	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N59	Nelore	Dictyoglomus	genus	Dictyoglomus	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N60	Nelore	Nitrosomonas	genus	Nitrosomonas	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N61	Nelore	Cedecea	genus	Cedecea	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N62	Nelore	Desulfosediminicola	genus		unmapped	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+N63	Nelore	Fervidobacterium	genus	Fervidobacterium;Fervidobacterium_A	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+N64	Nelore	Ferrimonas	genus	Ferrimonas	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+C1	Canonical	Methanobrevibacter	genus	Methanobrevibacter;Methanobrevibacter_A;Methanobrevibacter_B;Methanobrevibacter_C;Methanobrevibacter_D	mapped	TGT_C1	ok	TGT_C1	ok	NA	no_feature	NA	NA	NA	NA	0.239	late analysis, run after all primary results were seen
+C2	Canonical	Succinivibrionaceae	family	Succinivibrionaceae	mapped	TGT_C2	ok	TGT_C2	ok	TGT_C2	ok	NA	NA	NA	NA	NA	late analysis, run after all primary results were seen
+C3	Canonical	Fibrobacter	genus	Fibrobacter	mapped	TGT_C3	ok	TGT_C3	ok	TGT_C3	ok	NA	NA	NA	NA	0.316	late analysis, run after all primary results were seen
+C4	Canonical	Ruminococcus	genus	Ruminococcus;Ruminococcus_B;Ruminococcus_C;Ruminococcus_D;Ruminococcus_E;Ruminococcus_F;Ruminococcus_G	mapped	TGT_C4	ok	TGT_C4	ok	TGT_C4	ok	NA	NA	NA	NA	0.565	late analysis, run after all primary results were seen
+C5	Canonical	Prevotella	genus	Prevotella	mapped	TGT_C5	ok	TGT_C5	ok	TGT_C5	ok	NA	NA	NA	NA	0.198	late analysis, run after all primary results were seen
+C6	Canonical	Butyrivibrio	genus	Butyrivibrio;Butyrivibrio_A	mapped	TGT_C6	ok	TGT_C6	ok	TGT_C6	ok	NA	NA	NA	NA	0.231	late analysis, run after all primary results were seen
+M1	Methane	Methanobrevibacter gottschalkii clade vs ruminantium clade	clade_ratio		special	NA	NA	NA	NA	NA	NA	NA	untestable_here	M1_log_ratio	ok	NA	late analysis, run after all primary results were seen
+M2	Methane	Succinivibrionaceae	family	Succinivibrionaceae	mapped	NA	NA	NA	NA	NA	NA	TGT_M2	ok	TGT_M2	ok	NA	late analysis, run after all primary results were seen
+M3	Methane	total archaea	kingdom	Archaea	mapped	NA	NA	NA	NA	NA	NA	NA	untestable_here	TGT_M3	ok	NA	late analysis, run after all primary results were seen
+S1	MethaneSecondary	Sharpea	genus	Sharpea	mapped	NA	NA	NA	NA	NA	NA	Sharpea	ok	Sharpea	ok	NA	late analysis, run after all primary results were seen
+S2	MethaneSecondary	Kandleria	genus	Kandleria	mapped	NA	NA	NA	NA	NA	NA	NA	no_feature	NA	no_feature	NA	late analysis, run after all primary results were seen
+S3	MethaneSecondary	Megasphaera	genus	Megasphaera	mapped	NA	NA	NA	NA	NA	NA	Megasphaera	filtered	Megasphaera	filtered	NA	late analysis, run after all primary results were seen

@@ -1,0 +1,8 @@
+charolais_16s phylum : targets 2  features 19  n 30  df 26 
+ id      target set n_keys n_present feature  reads prevalence pass10
+ T2  Firmicutes  Li      9         1  TGT_T2 545380          1   TRUE
+ T3 Chloroflexi  Li      1         0    <NA>     NA         NA     NA
+Error in data.frame(id = tk$id, target = tk$target, rank = rank, cohort = cohort,  : 
+  row names contain missing values
+Calls: late_main -> late_mapping -> data.frame
+Execution halted

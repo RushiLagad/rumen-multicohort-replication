@@ -1,0 +1,85 @@
+== Amendment 45 item 3: target mapping (late analysis, run after all primary results were seen)
+nelore               targets with a matched feature  11 | fitted (status ok)  11
+charolais_mrna       targets with a matched feature  27 | fitted (status ok)  27
+alberta              targets with a matched feature  14 | fitted (status ok)   7
+difford_bact         targets with a matched feature   9 | fitted (status ok)   7
+wallace_prokaryotes  targets with a matched feature  12 | fitted (status ok)   9
+Charolais same-animal, targets above 10% in both layers: 12 | median Spearman of CLR across animals 0.24 | range -0.1 to 0.9 | p < 0.05 and positive: 4 
+  id   rank mrna_feature s16_feature animals spearman_clr        p diet_W_mrna
+ N15  genus      TGT_N15     TGT_N15      30        0.905 2.24e-07       -8.51
+  C2 family       TGT_C2      TGT_C2      30        0.803 1.19e-06       -6.97
+ N23  genus      TGT_N23     TGT_N23      30        0.627 2.83e-04       -3.84
+  C4  genus       TGT_C4      TGT_C4      30        0.565 1.38e-03       -4.68
+  C3  genus       TGT_C3      TGT_C3      30        0.316 8.91e-02        0.61
+  T5  genus       TGT_T5      TGT_T5      30        0.239 2.03e-01        1.28
+  C1  genus       TGT_C1      TGT_C1      30        0.239 2.03e-01       -1.00
+ N21  genus      TGT_N21     TGT_N21      30        0.237 2.07e-01        0.31
+  C6  genus       TGT_C6      TGT_C6      30        0.231 2.19e-01        1.71
+  C5  genus       TGT_C5      TGT_C5      30        0.198 2.92e-01       -0.79
+ N13  genus      TGT_N13     TGT_N13      30       -0.016 9.33e-01        1.01
+  T2 phylum       TGT_T2      TGT_T2      30       -0.104 5.83e-01       -1.16
+ N01  genus      TGT_N01        <NA>       0           NA       NA       -0.53
+ N02  genus      TGT_N02        <NA>       0           NA       NA        0.96
+ N04  genus      TGT_N04        <NA>       0           NA       NA        0.24
+ N05  genus         <NA>        <NA>       0           NA       NA          NA
+ N06  genus      TGT_N06        <NA>       0           NA       NA        0.46
+ N07  genus         <NA>        <NA>       0           NA       NA          NA
+ N08  genus      TGT_N08        <NA>       0           NA       NA        1.55
+ N09  genus         <NA>        <NA>       0           NA       NA          NA
+ N10  genus      TGT_N10        <NA>       0           NA       NA       -1.23
+ N11  genus      TGT_N11     TGT_N11       0           NA       NA       -1.23
+ N12  genus         <NA>        <NA>       0           NA       NA          NA
+ N14  genus         <NA>        <NA>       0           NA       NA          NA
+ N16  genus         <NA>        <NA>       0           NA       NA          NA
+ N17  genus      TGT_N17        <NA>       0           NA       NA        2.70
+ N18  genus         <NA>        <NA>       0           NA       NA          NA
+ N19  genus      TGT_N19        <NA>       0           NA       NA        1.18
+ N20  genus      TGT_N20        <NA>       0           NA       NA       -0.07
+ N22  genus      TGT_N22        <NA>       0           NA       NA        2.10
+ N24  genus         <NA>        <NA>       0           NA       NA          NA
+ N25  genus         <NA>        <NA>       0           NA       NA          NA
+ N26  genus         <NA>        <NA>       0           NA       NA          NA
+ N27  genus         <NA>        <NA>       0           NA       NA          NA
+ N28  genus      TGT_N28        <NA>       0           NA       NA        0.01
+ N29  genus         <NA>        <NA>       0           NA       NA          NA
+  T4 family       TGT_T4        <NA>       0           NA       NA        4.53
+  T3 phylum       TGT_T3        <NA>       0           NA       NA        0.49
+ diet_W_16s
+      -8.95
+     -11.84
+      -3.28
+      -4.20
+       0.18
+       3.47
+       0.26
+         NA
+      -1.20
+      -1.43
+       1.63
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA
+         NA

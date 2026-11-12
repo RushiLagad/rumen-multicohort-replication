@@ -1,0 +1,3 @@
+id	target	rank	cohort	feature	prevalence	status
+T4	unclassified Methanomassiliicoccaceae	family	charolais_16s	NA	NA	no_feature
+C2	Succinivibrionaceae	family	charolais_16s	TGT_C2	1	ok
