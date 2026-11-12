@@ -165,7 +165,7 @@ late_spike <- function(G, md, terms, df, prefix, od, perm_by) {
 late_mapping <- function(A, feat, tk, cohort, rank, prefix, od) {
   f <- file.path(od, paste0(prefix, "_target_clr.tsv")); if (file.exists(f)) { cat("exists, not overwritten:", f, "\n"); return(invisible()) }
   A <- as.matrix(A); B <- A[rowMeans(A > 0) >= 0.10, , drop=FALSE]; L <- log(B + 0.5); C <- sweep(L, 2, colMeans(L[!grepl("^TGT_", rownames(L)), , drop=FALSE]))   # CLR as Amendment 42
-  i <- match(feat, rownames(C)); ok <- !is.na(i); prev <- rowMeans(A > 0)[match(feat, rownames(A))]
+  i <- match(feat, rownames(C)); ok <- !is.na(i); prev <- unname(rowMeans(A > 0)[match(feat, rownames(A))])
   out <- do.call(rbind, lapply(which(ok), function(j) data.frame(id=tk$id[j], target=tk$target[j], rank=rank, cohort=cohort, feature=feat[j], prevalence=round(unname(prev[j]), 3), animal=colnames(C), clr=unname(C[i[j], ]))))
   st <- data.frame(id=tk$id, target=tk$target, rank=rank, cohort=cohort, feature=feat, prevalence=round(prev, 3), status=ifelse(is.na(feat), "no_feature", ifelse(ok, "ok", "below_10pct")))
   wr(out, f); wr(st, file.path(od, paste0(prefix, "_target_status.tsv")))
