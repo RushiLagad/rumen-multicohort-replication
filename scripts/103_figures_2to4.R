@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
-# 103: Manuscript Figures 2 to 4, same style as 102. Reads existing outputs only; refits nothing.
-# Run: Rscript scripts/103_figures_2to4.R   (rumen-r env; writes results/figures_manuscript/fig2_calibration,
-# fig3_clade_ratio_trait and fig4_wallace_vs_difford, each .pdf and .png). Figure numbers follow the order the manuscript cites them.
+# 103: Manuscript Figures 3 to 5, same style as 102. Reads existing outputs only; refits nothing.
+# Run: Rscript scripts/103_figures_2to4.R   (rumen-r env; writes results/figures_manuscript/fig3_calibration,
+# fig4_clade_ratio_trait and fig5_wallace_vs_difford, each .pdf and .png). Figure numbers follow the order the manuscript cites them.
 # Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the
-# manuscript figure legends). Panel headers a and b in Figure 2 are kept.
+# manuscript figure legends). Panel headers a and b in Figure 3 are kept.
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); od <- file.path(root, "results", "figures_manuscript"); dir.create(od, showWarnings=FALSE)
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote=""); rc <- function(f) read.csv(f, check.names=FALSE, stringsAsFactors=FALSE)
@@ -20,7 +20,7 @@ tk <- rd(file.path(root, "plan", "target_keys.tsv"))
 repel <- requireNamespace("ggrepel", quietly=TRUE)
 lab_layer <- function(data, ...) if (repel) ggrepel::geom_text_repel(data=data, ..., size=2.3, colour=ink2, min.segment.length=0.2, seed=1, max.overlaps=30) else geom_text(data=data, ..., size=2.3, colour=ink2, vjust=-0.7, check_overlap=TRUE)
 
-# ---------------- Figure 2
+# ---------------- Figure 3
 tabs <- data.frame(table=c("nelore_genus", "charolais_mrna_genus", "alberta_genus", "difford_bact", "wallace_prokaryotes"),
   label=c("Nelore\nshotgun, RFI", "Charolais\nmRNA, RFI", "Alberta\n16S, RFI", "Difford\n16S, CH4", "Wallace\n16S, CH4"),
   dir=c("scan_null", "scan_null", "scan_null", "methane_dryrun", "methane_dryrun"), s0=c(2001, 2001, 2001, 1001, 1001), stringsAsFactors=FALSE)
@@ -60,9 +60,9 @@ pB <- ggplot(B, aes(sd, lab)) +
   # x = 1 (all CLR SDs are 0.94 to 1.08) while the axis runs to about 5. legend.position.inside needs ggplot2 >= 3.5.
   if (packageVersion("ggplot2") >= "3.5.0") theme(legend.position="inside", legend.position.inside=c(0.99, 0.02)) else theme(legend.position=c(0.99, 0.02))
 f2 <- (pA | pB) + plot_layout(widths=c(1.35, 1)) + plot_annotation(theme=theme_f)   # title, subtitle and sources moved to the manuscript legend
-save2(f2, "fig2_calibration", W170, 3.6)
+save2(f2, "fig3_calibration", W170, 3.6)
 
-# ---------------- Figure 3 (clade ratio)
+# ---------------- Figure 4 (clade ratio)
 coh <- function(dirn, lab, cohort, trait) { x <- rd(file.path(root, "results", dirn, "estimates_calibrated.tsv")); x <- x[x$id == "M1" & x$cohort == cohort, ]; stopifnot(nrow(x) == 1)
   data.frame(row=lab, r=x$r, lo=x$lo, hi=x$hi, n=x$n, p=x$p_perm, kind="Single cohort", trait=trait) }
 pool <- function(dirn, lab, trait) { x <- rd(file.path(root, "results", dirn, "classification_primary.tsv")); x <- x[x$id == "M1", ]; stopifnot(nrow(x) == 1)
@@ -83,9 +83,9 @@ p_ratio <- ggplot(M, aes(r, row)) +
   scale_colour_manual(values=c("g per day"=blue, "per kg intake"=orange)) + scale_shape_manual(values=c("Single cohort"=16, "Pooled"=23)) +
   scale_x_continuous(expand=expansion(mult=c(0.05, 0.25))) +
   labs(x="Partial r with methane", y=NULL) + theme_f + theme(panel.grid.major.y=element_blank())
-save2(p_ratio, "fig3_clade_ratio_trait", W170, 2.7)
+save2(p_ratio, "fig4_clade_ratio_trait", W170, 2.7)
 
-# ---------------- Figure 4 (Wallace vs Difford)
+# ---------------- Figure 5 (Wallace vs Difford)
 w <- rd(file.path(root, "results", "denovo_scan", "wallace_prokaryotes_scan.tsv")); d <- rd(file.path(root, "results", "denovo_scan", "difford_bact_scan.tsv"))
 g <- intersect(w$genus, d$genus); S <- data.frame(genus=g, x=w$W_cal[match(g, w$genus)], y=d$W_cal[match(g, d$genus)], xr=w$W[match(g, w$genus)], yr=d$W[match(g, d$genus)])
 S <- S[is.finite(S$x) & is.finite(S$y), ]
@@ -111,10 +111,10 @@ p_scatter <- ggplot(S, aes(x, y)) +
   annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
   labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) +
   scale_x_continuous(expand=expansion(mult=c(0.04, 0.16))) + theme_f   # room on the right for the crowded positive-W labels
-save2(p_scatter, "fig4_wallace_vs_difford", W170, 5.0)
+save2(p_scatter, "fig5_wallace_vs_difford", W170, 5.0)
 
 # ---------------- numbers for the manuscript text
-cat("\n== Figure 2a: per-table false positive rate across shuffles\n"); print(as.data.frame(sN), digits=3, row.names=FALSE)
-cat("== Figure 2b: null SD range, ANCOM-BC2", paste(round(range(B$sd[B$method == "ANCOM-BC2"]), 2), collapse=" to "), "| CLR", paste(round(range(B$sd[B$method == "CLR linear model"]), 2), collapse=" to "), "| targets", nlevels(B$lab), "\n")
-cat("== Figure 4:", nrow(S), "genera; Spearman on calibrated W", round(ct$estimate, 3), "p", signif(ct$p.value, 2), "| on raw W", round(ctr$estimate, 3), "p", signif(ctr$p.value, 2), "| robust plotted", sum(S$robust), "| M2 W Wallace", round(m2$x, 2), "Difford", round(m2$y, 2), "\n")
-cat("== Figure 3\n"); print(M[, c("row", "r", "lo", "hi", "n", "p")], digits=3, row.names=FALSE)
+cat("\n== Figure 3a: per-table false positive rate across shuffles\n"); print(as.data.frame(sN), digits=3, row.names=FALSE)
+cat("== Figure 3b: null SD range, ANCOM-BC2", paste(round(range(B$sd[B$method == "ANCOM-BC2"]), 2), collapse=" to "), "| CLR", paste(round(range(B$sd[B$method == "CLR linear model"]), 2), collapse=" to "), "| targets", nlevels(B$lab), "\n")
+cat("== Figure 5:", nrow(S), "genera; Spearman on calibrated W", round(ct$estimate, 3), "p", signif(ct$p.value, 2), "| on raw W", round(ctr$estimate, 3), "p", signif(ctr$p.value, 2), "| robust plotted", sum(S$robust), "| M2 W Wallace", round(m2$x, 2), "Difford", round(m2$y, 2), "\n")
+cat("== Figure 4\n"); print(M[, c("row", "r", "lo", "hi", "n", "p")], digits=3, row.names=FALSE)

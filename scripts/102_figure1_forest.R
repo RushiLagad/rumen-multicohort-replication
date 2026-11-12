@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
-# 102: Manuscript Figure 1. Pooled r and 95% CI for the 27 feed efficiency and 11 methane targets, oriented to the published
+# 102: Manuscript Figure 2. Pooled r and 95% CI for the 27 feed efficiency and 11 methane targets, oriented to the published
 # direction, with r = 0.15 and r = 0.30 bands shaded. Reads results/power/power_equivalence.tsv (from 93); refits nothing.
-# Run: Rscript scripts/102_figure1_forest.R      (rumen-r env; writes results/figures_manuscript/fig1_forest_pooled.{pdf,png})
+# Run: Rscript scripts/102_figure1_forest.R      (rumen-r env; writes results/figures_manuscript/fig2_forest_pooled.{pdf,png})
 # Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the
 # manuscript figure legend). Panel headers a and b are kept.
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
@@ -65,6 +65,6 @@ f1 <- panel("RFI", "a  Feed efficiency (RFI): 27 targets, three beef cohorts, 64
   plot_layout(heights=c(27, 11)) +
   plot_annotation(theme=theme_f)   # title, subtitle and source moved to the manuscript legend
 W <- 170 / 25.4; H <- 7.9
-ggsave(file.path(od, "fig1_forest_pooled.pdf"), f1, width=W, height=H, device=cairo_pdf)
-ggsave(file.path(od, "fig1_forest_pooled.png"), f1, width=W, height=H, dpi=300, bg=bg)
-cat("wrote", file.path(od, "fig1_forest_pooled.{pdf,png}"), "\n")
+ggsave(file.path(od, "fig2_forest_pooled.pdf"), f1, width=W, height=H, device=cairo_pdf)
+ggsave(file.path(od, "fig2_forest_pooled.png"), f1, width=W, height=H, dpi=300, bg=bg)
+cat("wrote", file.path(od, "fig2_forest_pooled.{pdf,png}"), "\n")
