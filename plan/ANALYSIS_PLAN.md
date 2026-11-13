@@ -997,3 +997,69 @@ Outputs go only to results/late_a47/.
 3. **Fix.** Before it is permuted, the standardized CLR residual is centred within the permutation groups and restandardized; the rest of the corrected generator is unchanged. For cohorts whose groups are model terms this changes nothing (the centring removes means that are already zero). The 46.2 generator stays as the comparison column of generator_check.tsv. The 0.005 tolerance and every other rule are unchanged.
 4. **Record.** The stopped run's files are kept, unchanged, in results/late_a47/intervals_run1_generator_stop/ (generator_check.tsv, projection.txt) and logs/late_a47/run1_generator_stop/, and are committed before the rerun. The rerun writes to results/late_a47/intervals/ as planned. The Wallace RFI NRC dump is reused (it is identical, and the driver does not overwrite a dump).
 5. **Scope.** The Freedman-Lane tests (46.3, 46.4, 47.3) permute the trait residual within the same cells. They keep the cell means of the trait, so they test association within cells. That is a property of those tests as specified, not a generator error, and it is stated where the Charolais permutation results are reported. No other analysis changes.
+
+**Amendment 47 result (2026-11-13; late analysis, run after all primary, late and Amendment 46 results were seen; scripts lib_a47.R, 120 to 124 and the A47 hook in 81; results/late_a47/, manifest results/late_a47/manifest_a47.tsv).** The replication criterion and the Amendment 37 primary labels are unchanged, and no target is replicated in any version.
+1. **Execution.**
+   - The first launch at 1:52 pm (plan f9cb173e, scripts 7e37cc6f) stopped at the 47.1 generator check (addendum 2; files in results/late_a47/intervals_run1_generator_stop/, commit 288a867c).
+   - The rerun ran from 2:05 pm to 2:33 pm under systemd-run (unit late-a47, MemoryMax 64G, MemorySwapMax 0, C 30; plan 08fe47a9, fixed 120 fd736062): 120 done 2:25 pm, 121 2:25 pm, 122 2:33 pm.
+   - Results were committed as e9f91e5d and the manifest (305 rows) as f3b77913. No script was edited while it ran, and no output was overwritten.
+2. **Generator (47.1).**
+   - Corrected generator: largest |population partial r - rho_c| over all tables and targets 0.0026 (tolerance 0.005; MCSE at most 0.0014).
+   - 46.2 generator: Charolais 0.054, Nelore 0.005, Difford 0.003, Alberta 0.001, Wallace 0.001.
+   - Per-cohort coverage of the k = 1 intervals under the corrected generator, averaged over targets, range over rho: Alberta 0.954 to 0.963, Charolais 0.945 to 0.955, Difford 0.949 to 0.958, Nelore 0.947 to 0.957, Wallace 0.951 to 0.960. 46.2 rule (a) restated therefore passes.
+   - Type I error at alpha 0.05: 0.046 to 0.054.
+3. **Validation (47.1).** (13 configurations + 75 pools) x 45 cells = 3,960 tasks at B = 1,000; 586 cells were within 2 MCSE of 0.93 and were extended to 5,000.
+   - **Modified Knapp-Hartung** passes all 135 Check 1 and all 486 Check 2 rule cells (lowest coverage 0.975 and 0.966), so it is validated.
+   - **Comparators, under the same rule:**
+     - HKSJ 115 of 135 and 379 of 486 (lowest 0.858 and 0.841; C3 *Fibrobacter* at rho 0.30, tau 0.10);
+     - REML-Wald 63 and 271 (0.720, 0.730);
+     - fixed effect 58 and 221 (0.441, 0.452).
+   - **Per target:** 17 of the 18 pooled primary targets pass up to their tau_req. C1 *Methanobrevibacter* (tau-hat 0.318) lies beyond the simulated range and is descriptive. All 15 primary leave-one-out pools pass at tau <= 0.10.
+   - **Four-cohort pools:**
+     - 5 of 10 pass at tau <= 0.10. The four-cohort configuration of C2 to C6 covers only 0.902 to 0.906, so those pools are descriptive.
+     - C1 (k = 3) fails at its tau_req of 0.20.
+     - T5, N13, N15 and N23 are validated.
+   - The closed forms match metafor to 4e-15, and HKSJ reproduces the Amendment 46 intervals.
+4. **Intervals and exclusions (modified Knapp-Hartung; pointwise, not adjusted by BH).**
+   - **RFI:** r = 0.30 is excluded for 8 of 27 targets.
+     - Pooled: C5 *Prevotella* (-0.163 to 0.177) and C6 *Butyrivibrio* (-0.120 to 0.219). Both are magnitude exclusions, because neither target has a published direction.
+     - Single cohort (Charolais): N02, N04, N11, N13, N20, N22.
+   - **RFI:** r = 0.15 is excluded for 5 (N04, N11, N13, N20, N22), all single cohort.
+   - **Methane:** r = 0.15 (and 0.30) is excluded for 6 of 11, all single cohort: M2, N32, N39 (Difford) and M3, N38, N40 (Wallace).
+   - **Lost relative to the Amendment 46 HKSJ intervals:**
+     - N15 *Selenomonas* (HKSJ -0.153 to 0.211, modified KH -0.460 to 0.506);
+     - M1, the clade ratio (0.009 to 0.051 becomes -0.285 to 0.339);
+     - C5 and C6 at r = 0.15.
+   - **Intervals excluding 0:** 4, all single cohort: RFI N06 *Actinoplanes* and N13 *Eubacterium* (Charolais); methane N38 *Eubacterium* and N40 *Blautia* (Wallace). No pooled interval excludes 0 (under HKSJ, C6 and M1 did).
+   - Every benchmark exclusion except C5 and C6 therefore rests on a single cohort.
+5. **47.2 labels under the CLR estimand.**
+   - RFI, 27 testable: not replicated 20, not replicated (direction not stated) 7, identical to Amendment 37 and Amendment 42.
+   - Methane, 11 testable: not replicated 9, not replicated (direction not stated) 1, opposite sign 1. The opposite-sign target is N38 *Eubacterium* (Wallace only, r -0.121, q 0.004); its Amendment 37 label is not replicated, and it is opposite sign as under Amendment 42.
+   - With the Freedman-Lane p for k = 1, the labels are identical.
+   - REML-Wald pooling reproduced all 117 Amendment 42 CLR label rows.
+   - One label rests on a configuration that is not validated: C1, not replicated (direction not stated).
+6. **47.3 null scan.** 200 null replicates per table; P(any BH rejection at q < 0.05) with Clopper-Pearson 95% CI and the discovery counts:
+
+   | Table | P(any rejection), 95% CI | Discovery counts (count:replicates) |
+   |---|---|---|
+   | Nelore | 5/200 = 0.025 (0.008 to 0.057) | 0:195; 1:3; 2:1; 313:1 |
+   | Charolais | 5/200 = 0.025 (0.008 to 0.057) | 0:195; 1:3; 5:1; 20:1 |
+   | Alberta | 6/200 = 0.030 (0.011 to 0.064) | 0:194; 1:4; 3:1; 6:1 |
+   | Difford | 8/200 = 0.040 (0.017 to 0.077) | 0:192; 1:7; 4:1 |
+   | Wallace | 9/200 = 0.045 (0.021 to 0.084) | 0:191; 1:4; 2:2; 3:1; 4:1; 9:1 |
+   | Wallace depth-adjusted | 4/200 = 0.020 (0.005 to 0.050) | 0:196; 1:4 |
+
+   No CI contains both 0.05 and 0.10, so no table was extended. When BH rejects under the null it can reject many genera, so a discovery count is not a measure of signal.
+7. **47.4.**
+   - (a) **Four-cohort RFI.** Wallace RFI NRC under CLR has 1,004 cows, df 993 and 10 targets. With four cohorts and modified Knapp-Hartung:
+     - the canonical targets exclude r = 0.30 for 5 of 6 (C2 to C6) and r = 0.15 for 3 (C3, C5, C6), but these are descriptive (configuration coverage 0.902 to 0.906);
+     - C1 is -0.489 to 0.448;
+     - T5, N15 and N23 exclude 0.30 (validated); N13 does not;
+     - 0 targets are replicated.
+
+     The Amendment 43 statement that all six canonical targets exclude r = 0.3 rested on ANCOM-BC2-derived intervals and is replaced by this result.
+   - (b) **Depth adjustment.** Wallace genera at q < 0.05: 60 to 45 under CLR Freedman-Lane, and 28 to 14 under the per-genus ANCOM-BC2 scan.
+8. **47.5 reporting.**
+   - Figure 2 is redrawn with the modified Knapp-Hartung intervals (script 102, which requires the 47.1 validation and stops if a descriptive pooled interval would be drawn as an exclusion).
+   - Additional file 2 gains the A47 sheets (script 104), and its A46 notes now say that the A46 HKSJ intervals are superseded.
+   - The committed Amendment 46 text is supplied for Box as AMENDMENT_46_committed.md.
