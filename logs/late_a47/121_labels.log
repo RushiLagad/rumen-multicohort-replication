@@ -1,0 +1,61 @@
+late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47) | 47.2 and 47.4 | pooling method: mkh (validated in 47.1) 
+== check: REML-Wald pooling against the Amendment 42 CLR labels on file
+     arm targets matched labels_identical max_abs_dr max_abs_dq
+     RFI      76      76               76   7.42e-05   1.99e-05
+ Methane      41      41               41   8.19e-16   2.10e-14
+
+== 47.2 labels under the CLR estimand ( mkh ), beside Amendment 42 and the Amendment 37 primary labels
+     arm                                 label a47 a47_fl_k1 a42_clr
+     RFI                        not replicated  20        20      20
+     RFI not replicated (direction not stated)   7         7       7
+ Methane                        not replicated   9         9       9
+ Methane not replicated (direction not stated)   1         1       1
+ Methane                         opposite sign   1         1       1
+ a37_primary
+          20
+           7
+          10
+           1
+           0
+RFI targets whose 47.2 label differs from Amendment 37: 0 
+Methane targets whose 47.2 label differs from Amendment 37: 1 
+  id      target k      r    q_bh     label_a47 label_a42_clr label_a37_primary
+ N38 Eubacterium 1 -0.121 0.00419 opposite sign opposite sign    not replicated
+
+== 47.4 (a) four-cohort RFI pooling with Wallace RFI NRC (CLR), canonical targets
+ id              target k        r  lo_hksj hi_hksj  lo_mkh hi_mkh lo_wald
+ C1  Methanobrevibacter 3 -0.02646 -0.48926  0.4480 -0.4893  0.448 -0.2197
+ C2 Succinivibrionaceae 4  0.07709 -0.11533  0.2639 -0.1153  0.264 -0.0310
+ C3         Fibrobacter 4  0.00864 -0.12378  0.1408 -0.1238  0.141 -0.0531
+ C4        Ruminococcus 4  0.04127 -0.19483  0.2728 -0.1948  0.273 -0.0843
+ C5          Prevotella 4  0.03351 -0.03218  0.0989 -0.0457  0.112 -0.0153
+ C6        Butyrivibrio 4  0.03179 -0.00124  0.0648 -0.0472  0.110 -0.0169
+ hi_wald    lo_fe  hi_fe r_a43_ancombc2 lo_a43_ancombc2 hi_a43_ancombc2
+  0.1688 -0.08407 0.0359      -0.000412        -0.07467          0.0739
+  0.1834  0.00281 0.0999       0.098209        -0.04890          0.2411
+  0.0703 -0.03362 0.0637      -0.010077        -0.05871          0.0386
+  0.1656 -0.02896 0.0683       0.069030        -0.07234          0.2077
+  0.0821 -0.01514 0.0821       0.038981        -0.00969          0.0875
+  0.0803 -0.01689 0.0803      -0.009080        -0.05771          0.0396
+                           method chosen targets excl_r30 excl_r15
+                             hksj  FALSE       6        5        3
+                              mkh   TRUE       6        5        3
+                             wald  FALSE       6        6        3
+                               fe  FALSE       6        6        6
+ ANCOM-BC2-derived (Amendment 43)  FALSE       6        6       NA
+ excl_r30_3cohort
+                2
+                2
+                3
+                6
+               NA
+four-cohort labels ( mkh ): replicated 0 of 10 targets gaining Wallace
+                                                            estimator
+ CLR OLS, Freedman-Lane permutation, BH within table (Amendment 46.4)
+   ANCOM-BC2, per-genus permutation q (Amendment 41 result, item (c))
+ wallace_q05_unadjusted wallace_q05_depth_adjusted
+                     60                         45
+                     28                         14
+                                     source
+     results/late_a46/scan/scan_summary.tsv
+ plan/ANALYSIS_PLAN.md, Amendment 41 result

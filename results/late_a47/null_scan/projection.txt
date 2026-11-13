@@ -1,0 +1,6 @@
+late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+replicate 1 timed per table (s): nelore_genus 13.8; charolais_mrna_genus 13.4; alberta_genus_all 1.9; difford_bact 2.1; wallace_prokaryotes 2.6; wallace_prokaryotes_depth 2.6
+projected wall time for 200 replicates per table on 30 cores: nelore_genus 0.03 h; charolais_mrna_genus 0.02 h; alberta_genus_all 0.00 h; difford_bact 0.00 h; wallace_prokaryotes 0.00 h; wallace_prokaryotes_depth 0.00 h
+replicates to run (48 h rule): nelore_genus 200; charolais_mrna_genus 200; alberta_genus_all 200; difford_bact 200; wallace_prokaryotes 200; wallace_prokaryotes_depth 200
+projected wall time for the rest, all tables together: 0.07 h
+extension rule (CI from 200 contains both 0.05 and 0.10): no table

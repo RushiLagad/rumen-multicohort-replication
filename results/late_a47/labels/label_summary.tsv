@@ -1,0 +1,6 @@
+arm	label	a47	a47_fl_k1	a42_clr	a37_primary	analysis
+RFI	not replicated	20	20	20	20	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+RFI	not replicated (direction not stated)	7	7	7	7	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+Methane	not replicated	9	9	9	10	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+Methane	not replicated (direction not stated)	1	1	1	1	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+Methane	opposite sign	1	1	1	0	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)

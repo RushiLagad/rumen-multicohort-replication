@@ -1,0 +1,5 @@
+late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+designated procedure: modified Knapp-Hartung (REML, adhoc); validated: yes
+comparators passing the same rule: 
+B = 1000 per cell, 586 cells extended to 5000
+mkh

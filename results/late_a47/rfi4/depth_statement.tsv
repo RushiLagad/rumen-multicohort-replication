@@ -1,0 +1,3 @@
+estimator	wallace_q05_unadjusted	wallace_q05_depth_adjusted	source	analysis
+CLR OLS, Freedman-Lane permutation, BH within table (Amendment 46.4)	60	45	results/late_a46/scan/scan_summary.tsv	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+ANCOM-BC2, per-genus permutation q (Amendment 41 result, item (c))	28	14	plan/ANALYSIS_PLAN.md, Amendment 41 result	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)

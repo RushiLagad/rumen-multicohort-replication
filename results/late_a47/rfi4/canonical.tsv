@@ -1,0 +1,6 @@
+statement	method	chosen	targets	excl_r30	excl_r15	excl_r30_3cohort	analysis
+canonical targets C1 to C6, four cohorts (sensitivity)	hksj	FALSE	6	5	3	2	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+canonical targets C1 to C6, four cohorts (sensitivity)	mkh	TRUE	6	5	3	2	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+canonical targets C1 to C6, four cohorts (sensitivity)	wald	FALSE	6	6	3	3	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+canonical targets C1 to C6, four cohorts (sensitivity)	fe	FALSE	6	6	6	6	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+canonical targets C1 to C6, four cohorts (sensitivity)	ANCOM-BC2-derived (Amendment 43)	FALSE	6	6	NA	NA	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)

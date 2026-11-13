@@ -1,0 +1,5 @@
+method	name	designated	cells_check1	pass_check1	cells_check2	pass_check2	min_coverage_check1	min_coverage_check2	worst_check2	median_width_z_check2	passes_rule	analysis
+hksj	HKSJ	FALSE	135	115	486	379	0.858	0.841	RFI C3 rho 0.30 tau 0.10: 0.841 (B 1000)	0.773568667924638	FALSE	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+mkh	modified Knapp-Hartung	TRUE	135	135	486	486	0.975	0.966	RFI C3 rho 0.20 tau 0.10: 0.966 (B 1000)	1.05428439499291	TRUE	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+wald	REML-Wald	FALSE	135	63	486	271	0.72	0.73	RFI N15 rho 0.15 tau 0.10: 0.730 (B 1000)	0.162626015128322	FALSE	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+fe	fixed effect	FALSE	135	58	486	221	0.441	0.452	Methane N42 rho 0.00 tau 0.10: 0.452 (B 1000)	0.156422155009032	FALSE	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)

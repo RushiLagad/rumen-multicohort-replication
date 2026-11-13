@@ -1,0 +1,3 @@
+arm	targets	matched	labels_identical	max_abs_dr	max_abs_dq	analysis
+RFI	76	76	76	7.41528146907672e-05	1.98965490968428e-05	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+Methane	41	41	41	8.18816585715365e-16	2.09832151654155e-14	late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
