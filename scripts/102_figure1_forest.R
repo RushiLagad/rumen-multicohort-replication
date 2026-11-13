@@ -4,6 +4,8 @@
 # Amendment 46 (46.1, 46.5.7): the exclusion statements rest on the CLR partial correlation with Hartung-Knapp-Sidik-Jonkman intervals
 # (k = 1: the cohort's own interval), whose coverage passed the 46.2 check, so the figure shows that estimand (results/late_a46/effect_size/
 # pooled.tsv, from 112); the ANCOM-BC2-derived intervals that earlier versions of this figure showed are in Additional file 2. Refits nothing.
+# The x axis is truncated at r = +/-0.6 so that narrow intervals stay readable; an interval reaching past the edge ends in an arrow with its true
+# bound printed beside it (full bounds in Additional file 2).
 # Run: Rscript scripts/102_figure1_forest.R      (rumen-r env; writes results/figures_manuscript/fig2_forest_pooled.{pdf,png})
 # Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the manuscript figure legend).
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
@@ -40,7 +42,9 @@ theme_f <- theme_minimal(base_size=8.5) + theme(
   legend.position = "top", legend.justification = "left", legend.title = element_blank(), legend.text = element_text(colour=ink2, size=7.5),
   plot.title = element_text(face="bold", size=10), plot.subtitle = element_text(colour=ink2, size=8), plot.caption = element_text(colour=muted, size=6.5, hjust=0),
   plot.title.position = "plot", plot.caption.position = "plot", plot.background = element_rect(fill=bg, colour=NA))
-XL <- c(-1, 1); xt <- 1.05   # HKSJ intervals with k = 2 reach about +/- 1; text columns sit just right of the panel
+XL <- c(-0.6, 0.6); xt <- 0.63   # truncated axis; text columns sit just right of the panel
+mnum <- function(v) sub("^-", "\u2212", sprintf("%.2f", v))
+d <- d %>% mutate(over_hi = xh > XL[2], over_lo = xl < XL[1], xlp = pmax(xl, XL[1]), xhp = pmin(xh, XL[2]))
 
 panel <- function(a, title, first, last) {
   s <- d %>% filter(arm == a); lv <- s %>% arrange(desc(xh), desc(x)) %>% pull(lab); s$lab <- factor(s$lab, lv); ex <- setNames(s$expr, s$lab)
@@ -48,17 +52,23 @@ panel <- function(a, title, first, last) {
     annotate("rect", xmin=0.15, xmax=0.30, ymin=-Inf, ymax=Inf, fill="#f0efec") +
     annotate("rect", xmin=0.30, xmax=XL[2], ymin=-Inf, ymax=Inf, fill="#e4e2dc") +
     geom_vline(xintercept=0, colour=ink2, linewidth=0.35, linetype="22") +
-    geom_errorbarh(aes(xmin=xl, xmax=xh, colour=verdict), height=0, linewidth=1.1) +
+    geom_errorbarh(aes(xmin=xlp, xmax=xhp, colour=verdict), height=0, linewidth=1.1) +
+    geom_segment(data=filter(s, over_hi), aes(x=XL[2] - 0.04, xend=XL[2], y=lab, yend=lab, colour=verdict), linewidth=1.1,
+                 arrow=arrow(length=unit(3.2, "pt"), type="closed"), show.legend=FALSE) +
+    geom_segment(data=filter(s, over_lo), aes(x=XL[1] + 0.04, xend=XL[1], y=lab, yend=lab, colour=verdict), linewidth=1.1,
+                 arrow=arrow(length=unit(3.2, "pt"), type="closed"), show.legend=FALSE) +
+    geom_text(data=filter(s, over_hi), aes(x=XL[2] - 0.01, label=mnum(xh)), hjust=1, vjust=-0.55, size=2.0, colour=ink2) +
+    geom_text(data=filter(s, over_lo), aes(x=XL[1] + 0.01, label=mnum(xl)), hjust=0, vjust=-0.55, size=2.0, colour=ink2) +
     geom_point(aes(colour=verdict, shape=directional), size=1.9, stroke=0.7, fill=bg) +
     geom_text(aes(x=xt, label=pub), hjust=0, size=2.35, colour=ink2) +
-    geom_text(aes(x=xt + 0.50, label=k), hjust=1, size=2.35, colour=ink2) +
-    { if (first) annotate("text", x=c(xt, xt + 0.50), y=Inf, label=c("Published", "k"), hjust=c(0, 1), vjust=-0.6,
+    geom_text(aes(x=xt + 0.30, label=k), hjust=1, size=2.35, colour=ink2) +
+    { if (first) annotate("text", x=c(xt, xt + 0.30), y=Inf, label=c("Published", "k"), hjust=c(0, 1), vjust=-0.6,
                           size=2.35, fontface="bold", colour=ink2) } +
-    { if (first) annotate("text", x=c(0.225, 0.65), y=Inf, label=c("0.15–\n0.30", "r ≥ 0.30 benchmark"),
+    { if (first) annotate("text", x=c(0.225, 0.45), y=Inf, label=c("0.15–\n0.30", "r ≥ 0.30\nbenchmark"),
                           vjust=-0.25, size=2.3, colour=ink2, lineheight=0.9) } +
     scale_colour_manual(values=vcol, limits=cat_lv, drop=FALSE, labels=sub("in the published", "in\nthe published", sub("inside the", "inside\nthe", cat_lv))) +
     scale_shape_manual(values=c(`TRUE`=16, `FALSE`=21), guide="none") +
-    scale_x_continuous(breaks=seq(-1, 1, 0.5), expand=expansion(0)) +
+    scale_x_continuous(breaks=seq(-0.6, 0.6, 0.3), labels=function(b) sub("^-", "\u2212", format(b)), expand=expansion(0)) +
     scale_y_discrete(labels=function(b) parse(text=ex[b]), expand=expansion(add=c(0.7, if (first) 1.3 else 0.7))) +
     coord_cartesian(xlim=XL, clip="off") +
     labs(title=title, y=NULL, x=if (last) "Pooled CLR partial r, oriented so positive = the published direction" else NULL) +
