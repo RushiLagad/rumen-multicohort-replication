@@ -134,8 +134,17 @@ def build_file1():
         SOURCES_CHECKED + " Per-target citations for M2, M3 and the secondary set are given at set level in the plan.",
         "scripts/104_additional_files.py",
         "plan/target_keys.tsv; coverage tables printed by scripts 21, 65 and 81 in logs/replication, logs/alberta, logs/methane and logs/wallace_rfi_real.log; fit status from results/replication, results/alberta and results/methane *_targets.tsv."]})
+    # Amendment 46 (review items A1, A4; script 118): evidence ledger and overlap audit, added when their outputs exist
+    extra = []
+    for nm, fn in (("Evidence ledger", "evidence_ledger.tsv"), ("Overlap audit", "overlap_audit.tsv")):
+        fp = P("results", "late_a46", "ledger", fn)
+        if os.path.exists(fp): extra.append((nm, pd.read_csv(fp, sep="\t", dtype={"id": str})))
+    if extra:
+        notes = pd.concat([notes, pd.DataFrame({"Item": ["Evidence ledger", "Overlap audit"], "Description": [
+            "One row per testable target (27 RFI, 11 methane): source claim, site, phenotype, published direction, evidence category (matched claim; published claim without direction; candidate taxon; cross-site transfer, fecal claim tested in rumen; cross-phenotype transfer, residual methane claim tested against daily output), independent cohorts k, animals, and the Amendment 46 CLR partial r with its HKSJ (k >= 2) or cohort (k = 1) interval. Late analysis, run after all primary results were seen (Amendment 46; script 118).",
+            "One row per target and cohort: independent test, discovery cohort (not tested), re-analysis (sensitivity pooling only) or possible overlap, with the amendment that sets the rule and whether a primary estimate is affected. Possible overlaps: up to 48 Li et al. discovery animals among the 567 Alberta animals (no Li target has a tested feature in Alberta, so no estimate is affected); Wallace farm SE1 and the M1 source Danielsson et al. 2017 (sensitivity without SE1)."]})], ignore_index=True)
     f = os.path.join(OD, "Additional_file_1_targets.xlsx")
-    write_book(f, [("Notes", notes), ("Targets", T)], {"Targets": 3}); return f, T
+    write_book(f, [("Notes", notes), ("Targets", T)] + extra, {"Targets": 3, "Evidence ledger": 3, "Overlap audit": 3}); return f, T
 
 # ---------------------------------------------------------------- Additional file 2
 def partial_r(W, df): return W / math.sqrt(W * W + df)
