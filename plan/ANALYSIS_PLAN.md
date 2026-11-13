@@ -953,3 +953,36 @@ Scripts:
 - the A47 hook in 81 (Wallace RFI NRC dump only).
 
 Outputs go only to results/late_a47/.
+
+**Amendment 47 addendum (2026-11-13, committed before any part of Amendment 47 was run; no Amendment 47 script had been committed or run).** A review of the committed text (forwarded the same day) asked that the rules be fixed so that the run leaves nothing to choose. The following items replace the corresponding parts of Amendment 47; everything else stands.
+
+1. **One candidate, not a selection.** REML with modified Knapp-Hartung (metafor test = "adhoc") is the designated procedure. HKSJ, REML-Wald and fixed effect are computed beside it as comparators only, and no method is chosen by its results.
+   - Reason: the Amendment 46 output on file already shows that HKSJ (0.856 to 0.900 for the seven targets pooled with Alberta), REML-Wald (0.82 averaged) and fixed effect (0.65) fall short at tau = 0.10. A selection among the four would therefore not have been open, and a fresh-seed confirmation of a selected method becomes unnecessary.
+   - **Validation rule (exact).** A cell passes if c + 2 sqrt(c(1 - c)/B) >= 0.93, where c is the coverage at the final B and failed fits count as not covering. A cell at B = 1,000 with |c - 0.93| < 2 MCSE is extended to B = 5,000, and the same inequality decides it at 5,000. There is no further extension, and no tie-break is needed.
+   - **Validated range.** Modified Knapp-Hartung is validated if it passes every cell with tau <= 0.10, at every rho, in Check 1 (every configuration of the primary pooling) and in Check 2 (each of the 18 primary targets with k >= 2).
+   - **If it is not validated:** every pooled (k >= 2) exclusion and association statement is reported as descriptive. 47.2 is then still computed with modified Knapp-Hartung and labelled descriptive. No other method takes its place.
+2. **Notation.** The grid is set on the correlation scale as rho (0, ±0.10, ±0.15, ±0.20, ±0.30); mu = atanh(rho) is the Fisher-z value that the pooled interval estimates and is scored against.
+   - Methods (i) to (iii) share one REML model: the same point estimate, and different intervals and p values.
+   - The fixed-effect comparator uses different weights, so its point estimate can also differ. "Pooled estimates do not change" in 47.1 refers to (i) to (iii) only.
+3. **Higher heterogeneity.** The grid is extended to tau = 0, 0.05, 0.10, 0.20 and 0.30, giving 45 cells per configuration.
+   - Stored REML estimates of tau reach about 0.25 to 0.32 for some targets with k = 2 (T5, T4, C1), so the validated range alone is not enough for every target.
+   - **Rule, per pooled target:** let tau_req be the smallest grid value >= max(0.10, tau-hat), capped at 0.30. The target's pooled statement under modified Knapp-Hartung stands only if its configuration (Check 1) and the target itself (Check 2) pass every cell with tau <= tau_req. Otherwise the statement is reported as descriptive, with tau-hat and the coverage at which it failed.
+   - A target with tau-hat > 0.30 is marked "heterogeneity beyond the simulated range" and is descriptive.
+   - Validation is described as covering tau up to 0.10 for the procedure, and up to tau_req for each target, never as general.
+4. **Every configuration used in a claim is evaluated.** Check 1 and Check 2 also include, with the same pass criterion and as part of no global rule:
+   - (a) the four-cohort RFI configurations of 47.4;
+   - (b) every leave-one-cohort-out configuration with k >= 2 that 47.2 uses (from the primary and the four-cohort pooling).
+
+   A label or statement that rests on a configuration failing at tau <= 0.10 is marked "configuration not validated".
+
+   47.2 decisions are spelled out as follows:
+   - (i) **One remaining cohort.** A leave-one-out analysis that leaves one cohort uses that cohort's OLS t p and its own interval; at k = 2, each cohort alone must therefore be significant (Amendment 14b, item 5).
+   - (ii) **BH in leave-one-out.** BH is recomputed within each leave-one-out analysis over the same family (Section 8 family size). Targets that do not contain the left-out cohort keep their full pooled p, and untestable targets enter with p = 1.
+   - (iii) **Unavailable targets.** Targets with no estimate, or untestable under Amendment 14, enter every BH family with p = 1.
+   - (iv) **Targets without a published direction.** T3, C1 to C6 and M3 cannot meet criterion 1. Under Amendment 14d it is replaced by sign agreement of the pooled estimate and every leave-one-out estimate, and their labels carry "(direction not stated)". They cannot be "opposite sign". Their exclusions are magnitude exclusions, not contradictions of a published association.
+5. **Null scan.** 200 replicates per table give a diagnostic, not proof of calibration. If, for a table, the Clopper-Pearson 95% CI from 200 replicates contains both 0.05 and 0.10, that table is extended to 1,000 replicates, provided the projected time is within 48 h. The extension uses replicates 201 to 1,000 with the same seeding, and the projection is written before it runs. The extended estimate is then reported with its CI. Otherwise the table stays at 200.
+6. **Workload.** The projection is computed by the scripts from timed fits, not from the handoff's estimate of 12 cells:
+   - 9 rho x 5 tau = 45 cells;
+   - both checks;
+   - every configuration and leave-one-out configuration;
+   - any extension to 5,000 replicates.
