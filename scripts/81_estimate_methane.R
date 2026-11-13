@@ -42,6 +42,8 @@ for (j in seq_len(nrow(tk))) { rk <- tk$target_rank[j]; if (rk == "clade_ratio")
 m <- A[match(feat, rownames(A)), , drop=FALSE]; prev <- rowMeans(m > 0, na.rm=TRUE)
 cov <- data.frame(id=tk$id, set=tk$set, target=tk$target, rank=tk$target_rank, n_present=npres, feature=feat, prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 cat("targets", nrow(tk), "| matched", sum(!is.na(feat)), "| pass 10% prevalence", sum(cov$pass10, na.rm=TRUE), "| features", nrow(A), "\n"); print(cov[cov$set != "Nelore" | !is.na(cov$feature), ], row.names=FALSE)
+if (Sys.getenv("A47") == "1") { stopifnot("Amendment 47 dumps only the Wallace RFI NRC table (real mode, TRAIT=rfi_nrc, all farms)" = mode == "real", tag == "_rfi_nrc", src == "wallace")   # Amendment 47.4
+  source(file.path(root, "scripts", "lib_a46.R")); a46_dump(A, feat, tk, md, terms, df, cohort="wallace", rank=tk$target_rank, prefix=paste0(coh, tag), root=root, perm_by="farm"); quit(save="no") }
 if (Sys.getenv("A46") == "1") { stopifnot("Amendment 46 uses the primary methane fit (real mode, CH4 g/d, all farms; DEPTH=1 for the scan)" = mode == "real", tag %in% c("", "_depth")); source(file.path(root, "scripts", "lib_a46.R"))   # Amendment 46
   a46_dump(A, feat, tk, md, terms, df, cohort=coh, rank=tk$target_rank, prefix=paste0(coh, tag), root=root, perm_by=if (src == "difford") "herd" else "farm",
     m1=if (coh %in% c("difford_arch", "wallace_prokaryotes") && !nzchar(tag)) a46_m1(root, coh, md) else NULL, difford=startsWith(coh, "difford")); quit(save="no") }
