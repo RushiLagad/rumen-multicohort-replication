@@ -3,7 +3,8 @@
 Render to PDF/PNG with: node scripts/111_render_svg.js fig1_study_design.svg out.png out.pdf <height>mm   (height printed below)
 Amendment 46.5.7: redrawn so that every text is at least 8 pt at 170 mm. The canvas is 482 units wide = 170 mm, so 1 unit = 1 pt.
 Text widths are measured with Arial/Liberation Sans advance widths (table below) and every text is checked against the space it is given;
-the script stops if any text would overflow. Panel d describes the Amendment 46 effect-size estimand behind the exclusion statements."""
+the script stops if any text would overflow. Panel d describes the effect-size estimand behind the exclusion statements: the Amendment 46 CLR partial r
+with the modified Knapp-Hartung interval validated in Amendment 47; panel e lists the Amendment 47 interval validation and null-scan calibration."""
 import re, math, json
 
 W = 482
@@ -186,7 +187,7 @@ yy += 3 * (LH + 3) + 5
 yy = text(M + 6, yy, ['Otherwise: single-cohort support, opposite sign,', 'not replicated, or untestable'], size=S_SM, color=INK2, lh=LH, maxw=dw - 12)
 yy += 6
 text(M + 6, yy, 'Effect size and benchmarks', size=S_SM, weight='bold', maxw=dw - 12)
-yy = text(M + 6, yy + LH, ['CLR partial *r* per cohort; Hartung-Knapp (HKSJ)', 'pooled intervals, coverage checked by simulation;',
+yy = text(M + 6, yy + LH, ['CLR partial *r* per cohort; modified Knapp-Hartung', 'pooled intervals, validated by simulation;',
                            'does the 95% interval exclude *r* = 0.15 or 0.30', 'in the published direction?'], size=S_SM, color=INK2, lh=LH, maxw=dw - 12)
 d_end = yy - LH + 6
 def bullets(y0, head, items, filled):
@@ -201,7 +202,7 @@ yy = bullets(py + 13, 'Specified before the affected results',
              ['Wallace without its Swedish farm', 'Methane per kg dry matter intake', 'Wallace as a fourth RFI cohort', 'Alberta without possible discovery animals'], True)
 yy = bullets(yy + 5, 'Run after the primary results',
              ['Sequencing depth as a covariate', 'Second estimator: CLR linear model‡', 'Leave-one-farm-out; untargeted genus scan', 'LinDA and ALDEx2',
-              'Freedman-Lane permutation; spike-in'], False)
+              'Freedman-Lane permutation; spike-in', 'Interval validation; null-scan calibration'], False)
 ph = max(d_end, yy - LH + 6) - py
 rect(M, py, dw, ph, fill='none', stroke=GRID, sw=0.7)
 rect(ex, py, ew, ph, fill='none', stroke=GRID, sw=0.7)

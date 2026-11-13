@@ -147,8 +147,8 @@
 <text x="10.0" y="511.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Otherwise: single-cohort support, opposite sign,</text>
 <text x="10.0" y="521.1" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">not replicated, or untestable</text>
 <text x="10.0" y="536.9" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Effect size and benchmarks</text>
-<text x="10.0" y="546.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">CLR partial <tspan font-style="italic">r</tspan> per cohort; Hartung-Knapp (HKSJ)</text>
-<text x="10.0" y="556.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">pooled intervals, coverage checked by simulation;</text>
+<text x="10.0" y="546.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">CLR partial <tspan font-style="italic">r</tspan> per cohort; modified Knapp-Hartung</text>
+<text x="10.0" y="556.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">pooled intervals, validated by simulation;</text>
 <text x="10.0" y="566.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">does the 95% interval exclude <tspan font-style="italic">r</tspan> = 0.15 or 0.30</text>
 <text x="10.0" y="575.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">in the published direction?</text>
 <text x="252.0" y="454.3" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Specified before the affected results</text>
@@ -171,5 +171,7 @@
 <text x="261.0" y="551.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">LinDA and ALDEx2</text>
 <circle cx="255.0" cy="558.3" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
 <text x="261.0" y="560.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Freedman-Lane permutation; spike-in</text>
+<circle cx="255.0" cy="568.1" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
+<text x="261.0" y="570.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Interval validation; null-scan calibration</text>
 <rect x="4.0" y="441.3" width="233.0" height="140.6" rx="2.5" fill="none" stroke="#d6d4cc" stroke-width="0.7"/>
 <rect x="245.0" y="441.3" width="233.0" height="140.6" rx="2.5" fill="none" stroke="#d6d4cc" stroke-width="0.7"/></svg>
