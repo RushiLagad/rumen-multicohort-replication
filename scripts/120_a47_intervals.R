@@ -3,8 +3,8 @@
 # Validation of the designated pooled-interval procedure, REML with modified Knapp-Hartung (adhoc); HKSJ, REML-Wald and fixed effect beside it as comparators.
 # One REML fit (DL if REML fails, recorded) gives HKSJ, modified KH and REML-Wald in closed form (checked against metafor on the real data); fixed effect uses its own weights.
 # Check 1 (pooling alone): theta_i ~ N(mu, tau^2), z_i ~ N(theta_i, 1/(df_i - 1)), mu = atanh(rho), for every configuration; seeds 4710000 + b.
-# Check 2 (end to end): the 46.2 simulation on the real traits and covariates with the corrected generator (permuted CLR residual residualised on the covariates and
-# rescaled to the length of t_r), verified first over 20,000 permutations per table (seeds 4729000 + unit); seeds 4720000 + b, shared by all tables.
+# Check 2 (end to end): the 46.2 simulation on the real traits and covariates with the corrected generator (CLR residual centred within the permutation groups
+# (addendum 2), permuted, residualised on the covariates and rescaled to the length of t_r), verified first over 20,000 permutations per table (seeds 4729000 + unit); seeds 4720000 + b, shared by all tables.
 # Grid rho in {0, +-0.10, +-0.15, +-0.20, +-0.30}, tau in {0, 0.05, 0.10, 0.20, 0.30} (45 cells); configurations: primary pooling, its leave-one-out pools, four-cohort RFI
 # pooling (47.4) and its leave-one-out pools. B = 1,000; a cell where modified KH lies within 2 MCSE of 0.93 is extended to 5,000 and decided there.
 # Validated: modified KH passes (c + 2 MCSE >= 0.93) every cell with tau <= 0.10 of the primary configurations (Check 1) and the 18 primary targets (Check 2).
@@ -58,13 +58,16 @@ proj <- c(A47_LABEL, sprintf("seconds per pooled fit (with overhead): %.4f", tp)
 writeLines(proj, outs[11]); cat(proj, sep="\n")
 
 # ---------------------------------------------------------------- Check 2 inputs and generator verification
-for (k in seq_along(U)) { u <- U[[k]]; R <- t(qr.resid(qr(u$D$mm), t(u$Y))); U[[k]]$es <- R / apply(R, 1, sd); U[[k]]$tr <- u$D$rx / sd(u$D$rx) }
+# Addendum 2: the residual is centred within the permutation groups before it is permuted (in Charolais the groups, diet x year, are not model terms, so the residual of the
+# additive model keeps cell means that a within-cell permutation carries along, correlated with the trait); es_a46 is the uncentred residual of the 46.2 generator, for comparison
+for (k in seq_along(U)) { u <- U[[k]]; R <- t(qr.resid(qr(u$D$mm), t(u$Y))); U[[k]]$es_a46 <- R / apply(R, 1, sd)
+  Rc <- R - t(apply(R, 1, function(x) ave(x, u$g))); U[[k]]$es <- Rc / apply(Rc, 1, sd); U[[k]]$tr <- u$D$rx / sd(u$D$rx) }
 gen_noise <- function(u, P) { et <- a46_resid(u$es[, P, drop=FALSE], u$D); et / apply(et, 1, sd) }   # corrected: residualised on the covariates, length of t_r
 t0 <- proc.time()[[3]]
 GC <- do.call(rbind, mclapply(seq_along(U), function(k) { u <- U[[k]]; set.seed(4729000 + k); nr <- length(u$ids); T2 <- sum(u$tr^2)
   an <- bn <- ao <- bo <- an2 <- numeric(nr); done <- 0
   while (done < NGEN) { m <- min(500, NGEN - done); PP <- a46_perm_idx(u$g, m)
-    for (p in seq_len(m)) { P <- PP[, p]; Mo <- a46_resid(u$es[, P, drop=FALSE], u$D); en <- Mo / apply(Mo, 1, sd)
+    for (p in seq_len(m)) { P <- PP[, p]; Mo <- a46_resid(u$es_a46[, P, drop=FALSE], u$D); Mn <- a46_resid(u$es[, P, drop=FALSE], u$D); en <- Mn / apply(Mn, 1, sd)
       a1 <- as.vector(en %*% u$tr); an <- an + a1; an2 <- an2 + a1^2; bn <- bn + rowSums(en^2); ao <- ao + as.vector(Mo %*% u$tr); bo <- bo + rowSums(Mo^2) }
     done <- done + m }
   sa <- sqrt(pmax(0, an2 / NGEN - (an / NGEN)^2)); an <- an / NGEN; bn <- bn / NGEN; ao <- ao / NGEN; bo <- bo / NGEN
@@ -171,8 +174,9 @@ PI$tau_hat <- sqrt(PI$tau2); PI$tau_req <- ifelse(PI$k >= 2, sapply(pmax(0.10, P
 PI$beyond_range <- PI$k >= 2 & !is.na(PI$tau_hat) & PI$tau_hat > 0.30
 PI$pool_passes_to_tau_req <- sapply(seq_len(nrow(PI)), function(i) { if (PI$k[i] < 2) return(NA); x <- CV[CV$role == PI$version[i] & CV$id == PI$id[i] & CV$arm == PI$arm[i] & is.na(CV$left_out), ]
   if (is.na(PI$tau_req[i])) return(FALSE); if (PI$tau_req[i] <= 0.10) x$pass_tau010 else if (PI$tau_req[i] <= 0.20) x$pass_tau020 else x$pass_tau030 })
-PI$statement <- ifelse(PI$k < 2, "single cohort (cohort interval)", ifelse(!validated, "descriptive (procedure not validated)", ifelse(PI$beyond_range, "descriptive (heterogeneity beyond the simulated range)",
-  ifelse(PI$pool_passes_to_tau_req, "validated", "descriptive (coverage below 0.93 up to tau_req)"))))
+PI$statement <- ifelse(PI$k < 2, "single cohort (cohort interval)", ifelse(rep(!validated, nrow(PI)), "descriptive (procedure not validated)",   # rep: ifelse with a scalar test returns one value
+  ifelse(PI$beyond_range, "descriptive (heterogeneity beyond the simulated range)", ifelse(PI$pool_passes_to_tau_req %in% TRUE, "validated", "descriptive (coverage below 0.93 up to tau_req)"))))
+stopifnot(length(PI$statement) == nrow(PI), !any(PI$statement == "validated" & PI$beyond_range %in% TRUE))
 PI$designated_method <- CAND; PI$validated_procedure <- validated
 # counts (pointwise), by version, arm, single vs pooled, directional vs magnitude, method and benchmark; for modified KH also counting only statements that stand
 EC <- do.call(rbind, lapply(split(PI, list(PI$version, PI$arm), drop=TRUE), function(x) do.call(rbind, lapply(c("all", "single cohort (k = 1)", "pooled (k >= 2)"), function(kc)
