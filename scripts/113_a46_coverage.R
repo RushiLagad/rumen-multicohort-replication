@@ -6,7 +6,9 @@
 # pooled interval b). Heterogeneity: cohort rho = tanh(atanh(rho) + tau z), z ~ N(0, 1) per target and cohort, tau in {0, 0.05, 0.10}.
 # Usage: 113_a46_coverage.R. Env A46_CORES (default 4); A46_REPS (test runs only). Writes results/late_a46/coverage/ only.
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); sdir <- dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=TRUE)[1]))
-source(file.path(sdir, "lib_a46.R")); suppressMessages(library(parallel)); a46_gate(root); od <- a46_dir(root, "coverage")
+# Output folder coverage_fix1: the first run (results/late_a46/coverage/, kept unchanged) signed every target of a table by the first target's published
+# direction (a46_dir_of with a single arm value), so cohorts of one target could get opposite true rho and the pooled coverage was not valid. Fixed in lib_a46.R.
+source(file.path(sdir, "lib_a46.R")); suppressMessages(library(parallel)); a46_gate(root); od <- a46_dir(root, "coverage_fix1")
 REPS <- as.integer(Sys.getenv("A46_REPS", "1000")); if (REPS != 1000) cat("NOTE: A46_REPS =", REPS, "(test run; the plan fixes 1,000)\n"); CORES <- as.integer(Sys.getenv("A46_CORES", "4"))
 RHO <- c(0, 0.10, 0.20, 0.30); TAU <- c(0, 0.05, 0.10)
 outs <- file.path(od, c("cohort_target.tsv", "cohort_summary.tsv", "pooled_target.tsv", "pooled_summary.tsv", "pass.txt")); a46_fresh(outs)
@@ -16,6 +18,9 @@ for (k in seq_along(U)) { u <- U[[k]]
   U[[k]]$tr <- u$D$rx / sd(u$D$rx); U[[k]]$dir <- { d <- a46_dir_of(tk0, u$ids, u$arm); ifelse(is.na(d), 1, d) }
   U[[k]]$key <- paste(u$ids, u$cohort) }
 keys <- sort(unique(unlist(lapply(U, `[[`, "key"))))
+dd <- do.call(rbind, lapply(U, function(u) data.frame(id=u$ids, arm=u$arm, dir=u$dir))); dd$pub <- a46_dir_of(tk0, dd$id, dd$arm)
+stopifnot("simulated sign must be the published direction (+ where none), the same in every cohort" = all(dd$dir == ifelse(is.na(dd$pub), 1, dd$pub)),
+  all(tapply(dd$dir, paste(dd$arm, dd$id), function(v) length(unique(v)) == 1)))
 one <- function(b) { set.seed(46000 + b); zn <- setNames(rnorm(length(keys)), keys); out <- vector("list", length(U))
   for (k in seq_along(U)) { u <- U[[k]]; P <- a46_perm_idx(u$g, 1)[, 1]; ep <- u$es[, P, drop=FALSE]; df <- u$D$df; res <- list()
     for (tau in TAU) for (rho in RHO) { rs <- u$dir * rho; rc <- tanh(atanh(rs) + tau * zn[u$key])
@@ -25,7 +30,7 @@ one <- function(b) { set.seed(46000 + b); zn <- setNames(rnorm(length(keys)), ke
   do.call(rbind, out) }
 t0 <- proc.time()[[3]]; S <- do.call(rbind, mclapply(seq_len(REPS), one, mc.cores=CORES)); cat("simulation fits done,", round(proc.time()[[3]] - t0), "s;", nrow(S), "estimates\n")
 ci <- a46_ci(S$r, S$df); S$lo <- ci[, "lo"]; S$hi <- ci[, "hi"]; S$cover <- S$lo <= S$rho_c & S$rho_c <= S$hi; S$reject <- abs(r2t(S$r, S$df)) > qt(0.975, S$df)
-saveRDS(S, file.path(root, "work", "a46_coverage_replicates.rds"))
+saveRDS(S, file.path(root, "work", "a46_coverage_fix1_replicates.rds"))
 # ---- per cohort (rule a; tau = 0, where the cohort's rho is rho_s)
 S0 <- S[S$tau == 0, ]
 CT <- do.call(rbind, lapply(split(S0, list(S0$unit, S0$id, S0$rho), drop=TRUE), function(x) data.frame(arm=x$arm[1], unit=x$unit[1], cohort=x$cohort[1], id=x$id[1], df=x$df[1],

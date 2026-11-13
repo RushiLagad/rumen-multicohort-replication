@@ -94,4 +94,5 @@ a46_units <- function(root) {
     if (!is.null(d$m1)) add(paste0(p, "_M1"), "Methane", coh, "M1", matrix(d$m1$y, 1), d$m1$md, d$terms, d$perm_by, "M1 log ratio (lm)") }
   pairs <- do.call(rbind, lapply(U, function(u) data.frame(id=u$ids, cohort=u$cohort, prefix=u$prefix))); stopifnot("a target appears twice for one cohort" = !anyDuplicated(pairs[, 1:2]))
   attr(U, "tk") <- tk0; U }
-a46_dir_of <- function(tk0, id, arm) { j <- match(id, tk0$id); ifelse(arm == "RFI", pR(tk0$direction[j]), pM(tk0$direction[j])) }
+# arm is recycled to the length of id (fix after the first 113 run: with a single arm value, ifelse() returned the first target's direction for every target of a unit)
+a46_dir_of <- function(tk0, id, arm) { j <- match(id, tk0$id); arm <- rep_len(arm, length(id)); ifelse(arm == "RFI", pR(tk0$direction[j]), pM(tk0$direction[j])) }
