@@ -1,0 +1,199 @@
+late analysis, run after all primary results were seen (Amendment 46) 
+46.1 units: 14 | nelore_species (1), nelore_genus (6), nelore_family (2), nelore_phylum (2), charolais_mrna_species (1), charolais_mrna_genus (22), charolais_mrna_family (2), charolais_mrna_phylum (2), alberta_genus_all (6), alberta_family_all (1), difford_bact (7), wallace_prokaryotes (7), wallace_prokaryotes_M1 (1), difford_arch_M1 (1) 
+  nelore_species               n   52 df   48 targets  1 | Freedman-Lane 9999 permutations within diet, seed 461001, 0 s
+  nelore_genus                 n   52 df   48 targets  6 | Freedman-Lane 9999 permutations within diet, seed 461002, 0 s
+  nelore_family                n   52 df   48 targets  2 | Freedman-Lane 9999 permutations within diet, seed 461003, 0 s
+  nelore_phylum                n   52 df   48 targets  2 | Freedman-Lane 9999 permutations within diet, seed 461004, 0 s
+  charolais_mrna_species       n   30 df   26 targets  1 | Freedman-Lane 9999 permutations within diet x year, seed 461005, 0 s
+  charolais_mrna_genus         n   30 df   26 targets 22 | Freedman-Lane 9999 permutations within diet x year, seed 461006, 1 s
+  charolais_mrna_family        n   30 df   26 targets  2 | Freedman-Lane 9999 permutations within diet x year, seed 461007, 0 s
+  charolais_mrna_phylum        n   30 df   26 targets  2 | Freedman-Lane 9999 permutations within diet x year, seed 461008, 0 s
+  alberta_genus_all            n  567 df  557 targets  6 | Freedman-Lane 9999 permutations within group, seed 461009, 2 s
+  alberta_family_all           n  567 df  557 targets  1 | Freedman-Lane 9999 permutations within group, seed 461010, 1 s
+  difford_bact                 n  749 df  730 targets  7 | Freedman-Lane 9999 permutations within herd, seed 461011, 2 s
+  wallace_prokaryotes          n 1009 df  998 targets  7 | Freedman-Lane 9999 permutations within farm, seed 461012, 2 s
+  wallace_prokaryotes_M1       n  853 df  842 targets  1 | Freedman-Lane 9999 permutations within farm, seed 461013, 2 s
+  difford_arch_M1              n  728 df  710 targets  1 | Freedman-Lane 9999 permutations within herd, seed 461014, 1 s
+== check against the second estimator on file (t must equal its W):
+                  table                                   file  n max_abs_dt
+         nelore_species         nelore_species_clr_targets.tsv  1   1.55e-15
+           nelore_genus           nelore_genus_clr_targets.tsv  6   2.15e-14
+          nelore_family          nelore_family_clr_targets.tsv  2   4.44e-15
+          nelore_phylum          nelore_phylum_clr_targets.tsv  2   1.18e-14
+ charolais_mrna_species charolais_mrna_species_clr_targets.tsv  1   1.67e-15
+   charolais_mrna_genus   charolais_mrna_genus_clr_targets.tsv 22   2.53e-14
+  charolais_mrna_family  charolais_mrna_family_clr_targets.tsv  2   1.22e-14
+  charolais_mrna_phylum  charolais_mrna_phylum_clr_targets.tsv  2   8.22e-15
+      alberta_genus_all      alberta_genus_all_clr_targets.tsv  6   5.55e-15
+     alberta_family_all     alberta_family_all_clr_targets.tsv  1   8.05e-16
+           difford_bact           difford_bact_clr_targets.tsv  7   2.38e-14
+    wallace_prokaryotes    wallace_prokaryotes_clr_targets.tsv  7   2.59e-14
+ wallace_prokaryotes_M1        wallace_prokaryotes_targets.tsv  1   8.88e-16
+        difford_arch_M1               difford_arch_targets.tsv  1   4.44e-16
+ df_same
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+    TRUE
+testable targets: RFI 27 (plan: 27) | Methane 11 (plan: 11) | missing from the ANCOM-BC2 equivalence table: 0 
+== 46.5.1: Amendment 37 permutation p values that were 0: 3 | smallest p as (b + 1)/(B + 1): 0.00498 | check b/B equals the old p: TRUE | primary labels affected: 0 (labels are computed from W_cal; p_perm is reported only)
+
+== 46.1 POOLED (HKSJ where k >= 2; cohort interval where k = 1). Exclusion statements are conditional on the 46.2 coverage rule (113).
+     arm  id                                                     target
+ Methane  M1 Methanobrevibacter gottschalkii clade vs ruminantium clade
+ Methane  M2                                        Succinivibrionaceae
+ Methane  S1                                                    Sharpea
+ Methane N30                                         Pseudobutyrivibrio
+ Methane N32                                                  Roseburia
+ Methane N37                                                Coprococcus
+ Methane N38                                                Eubacterium
+ Methane N39                                               Anaerostipes
+ Methane N40                                                    Blautia
+ Methane N42                                                Lachnospira
+ Methane  M3                                              total archaea
+     RFI N01                                           Anaeromyxobacter
+     RFI N02                                               Actinomadura
+     RFI N04                                            Acidaminococcus
+     RFI N06                                               Actinoplanes
+     RFI N08                                                   Gordonia
+     RFI N10                                      Phascolarctobacterium
+     RFI N11                                                  Comamonas
+     RFI N13                                                Eubacterium
+     RFI N15                                                Selenomonas
+     RFI N17                                               Burkholderia
+     RFI N19                                                 Lysobacter
+     RFI N20                                             Pseudonocardia
+     RFI N21                                             Brevibacterium
+     RFI N22                                                 Nonomuraea
+     RFI  T2                                                 Firmicutes
+     RFI  T4                      unclassified Methanomassiliicoccaceae
+     RFI  T5                                                    Blautia
+     RFI  T6                                 Methanobrevibacter smithii
+     RFI N23                                              Succinivibrio
+     RFI N28                                             Photobacterium
+     RFI  C1                                         Methanobrevibacter
+     RFI  C2                                        Succinivibrionaceae
+     RFI  C3                                                Fibrobacter
+     RFI  C4                                               Ruminococcus
+     RFI  C5                                                 Prevotella
+     RFI  C6                                               Butyrivibrio
+     RFI  T3                                                Chloroflexi
+                                          stratum k        r      lo       hi
+                                   directed rumen 2  0.02997  0.0087  0.05119
+                                   directed rumen 1  0.04118 -0.0314  0.11331
+                                   directed rumen 2 -0.07293 -0.8733  0.83391
+ Nelore RME_GC genus, tested against daily output 2  0.07208 -0.8271  0.86763
+ Nelore RME_GC genus, tested against daily output 1 -0.06267 -0.1345  0.00984
+ Nelore RME_GC genus, tested against daily output 2  0.03332 -0.2790  0.33927
+ Nelore RME_GC genus, tested against daily output 1 -0.12135 -0.1820 -0.05981
+ Nelore RME_GC genus, tested against daily output 1 -0.00081 -0.0733  0.07166
+ Nelore RME_GC genus, tested against daily output 1 -0.06246 -0.1240 -0.00047
+ Nelore RME_GC genus, tested against daily output 2 -0.05348 -0.4818  0.39543
+                           no published direction 1 -0.00019 -0.0622  0.06181
+                                   directed rumen 1 -0.04202 -0.4087  0.33634
+                                   directed rumen 1  0.17594 -0.2110  0.51521
+                                   directed rumen 1 -0.31831 -0.6180  0.06216
+                                   directed rumen 1 -0.41967 -0.6854 -0.05524
+                                   directed rumen 1 -0.37190 -0.6542  0.00137
+                                   directed rumen 1  0.09694 -0.2865  0.45362
+                                   directed rumen 1  0.23735 -0.1489  0.56078
+                                   directed rumen 1 -0.42530 -0.6890 -0.06206
+                                   directed rumen 2  0.03010 -0.1532  0.21138
+                                   directed rumen 1 -0.00059 -0.3736  0.37258
+                                   directed rumen 1 -0.28073 -0.5918  0.10316
+                                   directed rumen 1  0.24420 -0.1418  0.56574
+                                   directed rumen 1  0.07142 -0.3099  0.43297
+                                   directed rumen 1  0.23876 -0.1475  0.56180
+                                   directed rumen 2  0.02082 -0.9751  0.97704
+                                   directed rumen 2 -0.34725 -0.9975  0.98958
+                                   directed rumen 2 -0.07035 -0.9931  0.99081
+                                   directed rumen 2 -0.10400 -0.4841  0.30909
+                                     fecal source 2  0.04168 -0.3541  0.42475
+                                     fecal source 1 -0.03793 -0.4053  0.33997
+                           no published direction 2 -0.05923 -0.9974  0.99666
+                           no published direction 3  0.13802 -0.3054  0.53222
+                           no published direction 3 -0.06362 -0.4762  0.37188
+                           no published direction 3  0.06822 -0.4682  0.56787
+                           no published direction 3  0.00721 -0.1335  0.14767
+                           no published direction 3  0.05100  0.0049  0.09685
+                           no published direction 2 -0.07639 -0.9224  0.89598
+  lo_fe    hi_fe     I2    bound excl_r30 excl_r15 r_ancom excl_r30_ancom
+ -0.020  0.07959  0.000  0.05119     TRUE     TRUE  0.0298           TRUE
+ -0.031  0.11331     NA  0.03138     TRUE     TRUE  0.0055           TRUE
+ -0.134 -0.04051 94.094  0.87333    FALSE    FALSE -0.0341           TRUE
+  0.039  0.13294 93.878  0.86763    FALSE    FALSE  0.0328           TRUE
+ -0.135  0.00984     NA  0.00984     TRUE     TRUE -0.0605           TRUE
+ -0.014  0.08066  8.255  0.33927    FALSE    FALSE -0.0450           TRUE
+ -0.182 -0.05981     NA -0.05981     TRUE     TRUE -0.0387           TRUE
+ -0.073  0.07166     NA  0.07166     TRUE     TRUE -0.0063           TRUE
+ -0.124 -0.00047     NA -0.00047     TRUE     TRUE -0.0051           TRUE
+ -0.104 -0.00965 57.122  0.39543    FALSE    FALSE -0.0715           TRUE
+ -0.062  0.06181     NA  0.06218     TRUE     TRUE  0.0317           TRUE
+ -0.409  0.33634     NA  0.40869    FALSE    FALSE  0.1953           TRUE
+ -0.211  0.51521     NA  0.21099     TRUE    FALSE  0.1225           TRUE
+ -0.618  0.06216     NA  0.06216     TRUE     TRUE -0.1618           TRUE
+ -0.685 -0.05524     NA  0.68544    FALSE    FALSE -0.1164          FALSE
+ -0.654  0.00137     NA  0.65421    FALSE    FALSE -0.1624          FALSE
+ -0.287  0.45362     NA  0.45362    FALSE    FALSE  0.2115          FALSE
+ -0.149  0.56078     NA  0.14892     TRUE     TRUE  0.1541           TRUE
+ -0.689 -0.06206     NA -0.06206     TRUE     TRUE -0.1179           TRUE
+ -0.051  0.11096  0.000  0.21138     TRUE    FALSE  0.1180           TRUE
+ -0.374  0.37258     NA  0.37359    FALSE    FALSE -0.0250          FALSE
+ -0.592  0.10316     NA  0.59183    FALSE    FALSE -0.1341          FALSE
+ -0.142  0.56574     NA  0.14180     TRUE     TRUE -0.1460          FALSE
+ -0.310  0.43297     NA  0.30992    FALSE    FALSE  0.1486           TRUE
+ -0.147  0.56180     NA  0.14746     TRUE     TRUE  0.1826           TRUE
+ -0.181  0.27185 50.386  0.97507    FALSE    FALSE  0.0361           TRUE
+ -0.494 -0.07888 72.497  0.98958    FALSE    FALSE -0.2564           TRUE
+ -0.251  0.20290 67.836  0.99306    FALSE    FALSE  0.0589           TRUE
+ -0.323  0.12593  0.000  0.48408    FALSE    FALSE  0.0968          FALSE
+ -0.040  0.12240  0.000  0.35405    FALSE    FALSE  0.0594           TRUE
+ -0.405  0.33997     NA  0.40528    FALSE    FALSE  0.2226           TRUE
+ -0.226  0.22790 76.792  0.99737    FALSE    FALSE  0.1116          FALSE
+ -0.054  0.10219 62.759  0.53222    FALSE    FALSE  0.1593          FALSE
+ -0.106  0.04989 41.471  0.47616    FALSE    FALSE -0.0240           TRUE
+ -0.088  0.06787 70.557  0.56787    FALSE    FALSE  0.1197          FALSE
+ -0.071  0.08523  0.047  0.14767     TRUE     TRUE  0.0399           TRUE
+ -0.027  0.12854  0.000  0.09685     TRUE     TRUE  0.0030           TRUE
+ -0.297  0.15447  3.317  0.92235    FALSE    FALSE -0.0124           TRUE
+
+== exclusion counts
+     arm                                            group targets excl_r30
+ Methane                                              all      11        7
+     RFI                                              all      27        9
+ Methane                                   directed rumen       3        2
+ Methane Nelore RME_GC genus, tested against daily output       7        4
+ Methane                           no published direction       1        1
+     RFI                                   directed rumen      18        7
+     RFI                                     fecal source       2        0
+     RFI                           no published direction       7        2
+ Methane                                       one cohort       6        6
+ Methane                              two or more cohorts       5        1
+     RFI                                       one cohort      14        6
+     RFI                              two or more cohorts      13        3
+ excl_r15 excl_any_pubdir excl_r30_fe excl_r15_fe excl_r30_ancom excl_r15_ancom
+        7               2          11          11             11             11
+        7               1          18          13             17              5
+        2               0           3           3              3              3
+        4               2           7           7              7              7
+        1               0           1           1              1              1
+        5               1          10           7             11              1
+        0               0           1           1              2              1
+        2               0           7           5              4              3
+        6               2           6           6              6              6
+        1               0           5           5              5              5
+        5               1           6           5              8              0
+        2               0          12           8              9              5
+
+== Freedman-Lane p < 0.05 by cohort table (CLR): alberta_family_all=0, alberta_genus_all=0, charolais_mrna_family=1, charolais_mrna_genus=4, charolais_mrna_phylum=0, charolais_mrna_species=0, difford_arch_M1=0, difford_bact=0, nelore_family=1, nelore_genus=1, nelore_phylum=0, nelore_species=0, wallace_prokaryotes=5, wallace_prokaryotes_M1=0 
+smallest Freedman-Lane p: 1e-04 | failed permutation fits: 0 

@@ -1,0 +1,3 @@
+table_a	table_b	shared_genera	spearman_t	pearson_r	same_sign	both_p05_same_sign	note	analysis
+difford_bact	wallace_prokaryotes	80	-0.233614627285513	-0.204429021876392	32	1	descriptive; no p value (genera are not independent)	late analysis, run after all primary results were seen (Amendment 46)
+difford_bact	wallace_prokaryotes_depth	80	-0.26418190342241	-0.222312628615037	31	1	descriptive; no p value (genera are not independent)	late analysis, run after all primary results were seen (Amendment 46)

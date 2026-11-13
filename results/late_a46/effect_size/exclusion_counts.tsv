@@ -1,0 +1,13 @@
+arm	group	targets	excl_r30	excl_r15	excl_any_pubdir	excl_r30_fe	excl_r15_fe	excl_r30_ancom	excl_r15_ancom	analysis
+Methane	all	11	7	7	2	11	11	11	11	late analysis, run after all primary results were seen (Amendment 46)
+RFI	all	27	9	7	1	18	13	17	5	late analysis, run after all primary results were seen (Amendment 46)
+Methane	directed rumen	3	2	2	0	3	3	3	3	late analysis, run after all primary results were seen (Amendment 46)
+Methane	Nelore RME_GC genus, tested against daily output	7	4	4	2	7	7	7	7	late analysis, run after all primary results were seen (Amendment 46)
+Methane	no published direction	1	1	1	0	1	1	1	1	late analysis, run after all primary results were seen (Amendment 46)
+RFI	directed rumen	18	7	5	1	10	7	11	1	late analysis, run after all primary results were seen (Amendment 46)
+RFI	fecal source	2	0	0	0	1	1	2	1	late analysis, run after all primary results were seen (Amendment 46)
+RFI	no published direction	7	2	2	0	7	5	4	3	late analysis, run after all primary results were seen (Amendment 46)
+Methane	one cohort	6	6	6	2	6	6	6	6	late analysis, run after all primary results were seen (Amendment 46)
+Methane	two or more cohorts	5	1	1	0	5	5	5	5	late analysis, run after all primary results were seen (Amendment 46)
+RFI	one cohort	14	6	5	1	6	5	8	0	late analysis, run after all primary results were seen (Amendment 46)
+RFI	two or more cohorts	13	3	2	0	12	8	9	5	late analysis, run after all primary results were seen (Amendment 46)

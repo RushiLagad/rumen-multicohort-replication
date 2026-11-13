@@ -1,0 +1,13 @@
+2026-11-12 19:08:37 start | Amendment 46 commit 7ea2d3b6 | scripts commit f4b1e24c | P 10 | C 4
+2026-11-12 19:08:55 dumps: 14 of 14
+late analysis, run after all primary results were seen (Amendment 46.3)
+seconds per ANCOM-BC2 fit (slowest of two): difford_bact 58; wallace_prokaryotes 49
+projected wall time for the remaining 2 x 198 Freedman-Lane fits on 10 workers: 0.6 h
+rule: 200 permutations only if under 24 h -> run
+2026-11-12 19:10:08 112 done
+2026-11-12 19:19:54 113 done
+2026-11-12 19:23:06 114 done
+2026-11-12 19:45:53 ANCOM-BC2 Freedman-Lane fits done
+2026-11-12 19:45:53 ANCOM-BC2 Freedman-Lane files: 400
+2026-11-12 19:45:54 ANCOM-BC2 summary done
+2026-11-12 19:45:54 end

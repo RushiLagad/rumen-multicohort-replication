@@ -1,0 +1,4 @@
+late analysis, run after all primary results were seen (Amendment 46.3)
+seconds per ANCOM-BC2 fit (slowest of two): difford_bact 58; wallace_prokaryotes 49
+projected wall time for the remaining 2 x 198 Freedman-Lane fits on 10 workers: 0.6 h
+rule: 200 permutations only if under 24 h -> run

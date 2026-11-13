@@ -1,0 +1,73 @@
+wallace_prokaryotes real  | cows 1009 | df 998 | terms: farm + parity + dim + CH4_z 
+targets 38 | matched 11 | pass 10% prevalence 8 | features 453 
+  id              set
+ N30           Nelore
+ N32           Nelore
+ N37           Nelore
+ N38           Nelore
+ N39           Nelore
+ N40           Nelore
+ N42           Nelore
+  M1          Methane
+  M2          Methane
+  M3          Methane
+  S1 MethaneSecondary
+  S2 MethaneSecondary
+  S3 MethaneSecondary
+                                                     target        rank
+                                         Pseudobutyrivibrio       genus
+                                                  Roseburia       genus
+                                                Coprococcus       genus
+                                                Eubacterium       genus
+                                               Anaerostipes       genus
+                                                    Blautia       genus
+                                                Lachnospira       genus
+ Methanobrevibacter gottschalkii clade vs ruminantium clade clade_ratio
+                                        Succinivibrionaceae      family
+                                              total archaea     kingdom
+                                                    Sharpea       genus
+                                                  Kandleria       genus
+                                                Megasphaera       genus
+ n_present            feature prevalence pass10
+         1 Pseudobutyrivibrio      0.862   TRUE
+         1          Roseburia      0.079  FALSE
+         1        Coprococcus      0.590   TRUE
+         1        Eubacterium      0.167   TRUE
+         1       Anaerostipes      0.021  FALSE
+         1            Blautia      0.204   TRUE
+         1        Lachnospira      0.450   TRUE
+         0               <NA>        NaN     NA
+         6             TGT_M2      0.992   TRUE
+         7             TGT_M3      1.000   TRUE
+         1            Sharpea      0.119   TRUE
+         0               <NA>        NaN     NA
+         1        Megasphaera      0.059  FALSE
+late analysis, run after all primary results were seen (Amendment 46) | Freedman-Lane permuted trait, seed 46161 
+Loading required package: foreach
+Loading required package: rngtools
+ANCOM-BC2 kept 106 of 453 features
+M1: cows with >= 100 clade-assigned reads 853 of 1009 
+  id              set            feature     status    n      lfc     se      W
+ N30           Nelore Pseudobutyrivibrio         ok 1009  0.00972 0.0222  0.438
+ N37           Nelore        Coprococcus         ok 1009 -0.03360 0.0245 -1.370
+ N38           Nelore        Eubacterium         ok 1009  0.03324 0.0151  2.194
+ N40           Nelore            Blautia         ok 1009 -0.01533 0.0150 -1.022
+ N42           Nelore        Lachnospira         ok 1009 -0.04938 0.0227 -2.179
+  M1          Methane       M1_log_ratio         ok  853 -0.00893 0.0398 -0.224
+  M2          Methane             TGT_M2         ok 1009  0.00532 0.0331  0.161
+  M3          Methane             TGT_M3         ok 1009  0.02813 0.0306  0.919
+  S1 MethaneSecondary            Sharpea         ok 1009  0.12945 0.0190  6.818
+  S2 MethaneSecondary               <NA> no_feature 1009       NA     NA     NA
+  S3 MethaneSecondary        Megasphaera   filtered 1009       NA     NA     NA
+  p_ancom
+ 6.62e-01
+ 1.71e-01
+ 2.97e-02
+ 3.08e-01
+ 2.98e-02
+ 8.23e-01
+ 8.72e-01
+ 3.58e-01
+ 5.20e-10
+       NA
+       NA

@@ -1,0 +1,17 @@
+difford_arch real  | cows 728 | df 710 | terms: herd + parity + dim + batch + CH4_z 
+targets 38 | matched 1 | pass 10% prevalence 1 | features 8 
+ id              set                                                     target
+ M1          Methane Methanobrevibacter gottschalkii clade vs ruminantium clade
+ M2          Methane                                        Succinivibrionaceae
+ M3          Methane                                              total archaea
+ S1 MethaneSecondary                                                    Sharpea
+ S2 MethaneSecondary                                                  Kandleria
+ S3 MethaneSecondary                                                Megasphaera
+        rank n_present feature prevalence pass10
+ clade_ratio         0    <NA>        NaN     NA
+      family         0    <NA>        NaN     NA
+     kingdom         7  TGT_M3          1   TRUE
+       genus         0    <NA>        NaN     NA
+       genus         0    <NA>        NaN     NA
+       genus         0    <NA>        NaN     NA
+late analysis, run after all primary results were seen (Amendment 46) | dump difford_arch | animals 728 | features 8 | df 710 | design groups herd | M1 cows 728 

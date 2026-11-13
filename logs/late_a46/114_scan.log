@@ -1,0 +1,99 @@
+late analysis, run after all primary results were seen (Amendment 46) | 46.4 scan | tables 6 | null replicates 20 | cores 4 
+scan done, 191 s
+== 46.4 SCAN (CLR OLS, Freedman-Lane permutation p = (b + 1)/(B + 1), BH within table)
+                     table    n  df n_genera permutations smallest_p
+              nelore_genus   52  48     2869        99999      1e-05
+      charolais_mrna_genus   30  26     2758        99999      1e-05
+         alberta_genus_all  567 557       91         9999      1e-04
+              difford_bact  749 730      104         9999      1e-04
+       wallace_prokaryotes 1009 998      104         9999      1e-04
+ wallace_prokaryotes_depth 1009 997      104         9999      1e-04
+ min_attainable_discoveries n_p05 n_q05 n_q10 failed_fits max_mcse
+                          1   124     0     0           0  0.00158
+                          1   229     0     0           0  0.00158
+                          1     6     0     0           0  0.00500
+                          1    11     1     2           0  0.00500
+                          1    62    60    64           0  0.00499
+                          1    49    45    49           0  0.00500
+ null_mean_q05 null_max_q05 null_frac_p05         top_genus top_t top_p_fl
+          0.05            1        0.0505            SIG607  2.92  0.00110
+          0.35            7        0.0509          RUG12931 -4.00  0.00019
+          0.00            0        0.0500 Anaerosporobacter -3.10  0.00180
+          0.15            1        0.0438     Sphaerochaeta -3.40  0.00040
+          0.05            1        0.0543         Dialister -9.19  0.00010
+          0.00            0        0.0380         Dialister -8.36  0.00010
+    top_q minutes
+ 0.810870     0.2
+ 0.372330     0.2
+ 0.163800     0.0
+ 0.041600     0.0
+ 0.000315     0.0
+ 0.000433     0.0
+
+== null check: BH discoveries per Freedman-Lane-permuted trait
+                     table n_q05.mean n_q05.max
+         alberta_genus_all       0.00      0.00
+      charolais_mrna_genus       0.35      7.00
+              difford_bact       0.15      1.00
+              nelore_genus       0.05      1.00
+       wallace_prokaryotes       0.05      1.00
+ wallace_prokaryotes_depth       0.00      0.00
+
+== Wallace vs Difford (descriptive)
+      table_a                   table_b shared_genera spearman_t pearson_r
+ difford_bact       wallace_prokaryotes            80     -0.234    -0.204
+ difford_bact wallace_prokaryotes_depth            80     -0.264    -0.222
+ same_sign both_p05_same_sign
+        32                  1
+        31                  1
+                                                 note
+ descriptive; no p value (genera are not independent)
+ descriptive; no p value (genera are not independent)
+-- nelore_genus top 6
+     genus     t      r    p_fl  q_bh
+    SIG607  2.92  0.388 0.00110 0.811
+   JACQX01 -3.25 -0.424 0.00211 0.811
+  RGIG4928 -3.58 -0.459 0.00225 0.811
+ Garciella  2.74  0.368 0.00246 0.811
+   UBA2231 -3.16 -0.415 0.00267 0.811
+ Tb-RUG-64 -3.09 -0.407 0.00274 0.811
+-- charolais_mrna_genus top 6
+          genus     t      r    p_fl  q_bh
+       RUG12931 -4.00 -0.617 0.00019 0.372
+      JGI-OTU-1 -3.68 -0.585 0.00027 0.372
+ Pelagibacter_A  4.17  0.633 0.00051 0.386
+         SHMX01 -3.66 -0.583 0.00067 0.386
+        Firm-04 -3.43 -0.558 0.00070 0.386
+ Clostridium_AF -3.19 -0.530 0.00103 0.473
+-- alberta_genus_all top 6
+                        genus     t       r   p_fl  q_bh
+            Anaerosporobacter -3.10 -0.1302 0.0018 0.164
+                   Monoglobus  3.16  0.1328 0.0046 0.209
+                    Atopobium -2.61 -0.1101 0.0094 0.285
+ Lachnospiraceae_NK3A20_group -2.36 -0.0995 0.0189 0.430
+                 Anaerovibrio  2.12  0.0896 0.0346 0.531
+                V9D2013_group -2.11 -0.0889 0.0350 0.531
+-- difford_bact top 6
+                   genus     t       r   p_fl   q_bh
+           Sphaerochaeta -3.40 -0.1250 0.0004 0.0416
+ Lachnospiraceae_UCG-006 -3.16 -0.1161 0.0011 0.0572
+     Sediminispirochaeta -2.65 -0.0978 0.0065 0.2253
+        Colidextribacter  2.49  0.0917 0.0141 0.3099
+ Lachnospiraceae_UCG-010  2.40  0.0884 0.0149 0.3099
+         Acidaminococcus  2.30  0.0847 0.0221 0.3313
+-- wallace_prokaryotes top 6
+                       genus     t      r  p_fl     q_bh
+                   Dialister -9.19 -0.279 1e-04 0.000315
+             Syntrophococcus -7.41 -0.228 1e-04 0.000315
+      Prevotellaceae_UCG-001  7.07  0.218 1e-04 0.000315
+                Butyrivibrio  7.05  0.218 1e-04 0.000315
+ Succinivibrionaceae_UCG-002  6.88  0.213 1e-04 0.000315
+ Prevotellaceae_NK3B31_group  6.48  0.201 1e-04 0.000315
+-- wallace_prokaryotes_depth top 6
+                       genus     t      r  p_fl     q_bh
+                   Dialister -8.36 -0.256 1e-04 0.000433
+ Succinivibrionaceae_UCG-002  6.88  0.213 1e-04 0.000433
+                Oribacterium -6.87 -0.213 1e-04 0.000433
+             Syntrophococcus -6.40 -0.199 1e-04 0.000433
+                Prevotella_9 -6.19 -0.192 1e-04 0.000433
+      Prevotellaceae_UCG-001  6.18  0.192 1e-04 0.000433

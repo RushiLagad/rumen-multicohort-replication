@@ -1,0 +1,13 @@
+rho	tau	targets	arms	coverage_hksj_mean	coverage_hksj_min	coverage_fe_mean	coverage_reml_wald_mean	pass_b	below_090	analysis
+0	0	18	Methane+RFI	0.944444444444444	0.918	0.95	0.962166666666667	TRUE	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.1	0	18	Methane+RFI	0.904333333333333	0.763	0.634222222222222	0.8425	FALSE	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.2	0	18	Methane+RFI	0.957444444444444	0.936	0.634388888888889	0.918777777777778	TRUE	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.3	0	18	Methane+RFI	0.964	0.937	0.638388888888889	0.957555555555555	TRUE	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0	0.05	18	Methane+RFI	0.9355	0.897	0.828611111111111	0.891944444444444	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.1	0.05	18	Methane+RFI	0.907888888888889	0.789	0.576388888888889	0.808388888888889	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.2	0.05	18	Methane+RFI	0.953	0.896	0.561388888888889	0.8755	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.3	0.05	18	Methane+RFI	0.962611111111111	0.895	0.564777777777778	0.913666666666667	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0	0.1	18	Methane+RFI	0.920277777777778	0.86	0.653333333333333	0.820666666666667	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.1	0.1	18	Methane+RFI	0.911944444444444	0.822	0.5135	0.793277777777778	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.2	0.1	18	Methane+RFI	0.941777777777778	0.865	0.465166666666667	0.833111111111111	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
+0.3	0.1	18	Methane+RFI	0.957888888888889	0.866	0.466277777777778	0.869333333333333	NA	FALSE	late analysis, run after all primary results were seen (Amendment 46)
