@@ -1,0 +1,82 @@
+late analysis, run after all primary results were seen (Amendment 46) | 46.2 coverage | units 14 | replicates 1000 | cores 4 
+simulation fits done, 23 s; 732000 estimates
+pooled fits done, 537 s; 216000 pooled intervals
+late analysis, run after all primary results were seen (Amendment 46)
+replicates 1000 per table and rho; seeds 46001 to 47000
+rule (a) per-cohort coverage averaged over targets in [0.93, 0.97] at every rho: PASS (20 of 20 cohort x rho cells pass)
+rule (b) pooled HKSJ coverage averaged over the 18 targets with k >= 2 at least 0.93 at every rho (tau = 0): PASS
+46.2 overall: PASS (exclusion statements may use the 46.1 HKSJ intervals)
+tau = 0.10: pooled HKSJ coverage 0.920, 0.921, 0.921, 0.920; at least 0.90 at every rho
+type I error of the per-cohort test at alpha 0.05 (rho = 0), by cohort: difford 0.050; wallace 0.048; alberta_all 0.048; charolais_mrna 0.042; nelore 0.056
+
+== per cohort
+     arm         cohort rho targets coverage_mean coverage_min coverage_max
+ Methane        difford 0.0       8         0.951        0.936        0.961
+ Methane        difford 0.1       8         0.952        0.939        0.960
+ Methane        difford 0.2       8         0.955        0.943        0.963
+ Methane        difford 0.3       8         0.960        0.947        0.967
+ Methane        wallace 0.0       8         0.952        0.946        0.958
+ Methane        wallace 0.1       8         0.953        0.946        0.959
+ Methane        wallace 0.2       8         0.957        0.950        0.963
+ Methane        wallace 0.3       8         0.961        0.957        0.966
+     RFI    alberta_all 0.0       7         0.952        0.931        0.964
+     RFI    alberta_all 0.1       7         0.954        0.937        0.965
+     RFI    alberta_all 0.2       7         0.957        0.940        0.969
+     RFI    alberta_all 0.3       7         0.962        0.946        0.972
+     RFI charolais_mrna 0.0      27         0.957        0.933        0.996
+     RFI charolais_mrna 0.1      27         0.958        0.935        0.996
+     RFI charolais_mrna 0.2      27         0.961        0.941        0.996
+     RFI charolais_mrna 0.3      27         0.966        0.946        0.999
+     RFI         nelore 0.0      11         0.944        0.922        0.984
+     RFI         nelore 0.1      11         0.944        0.922        0.985
+     RFI         nelore 0.2      11         0.947        0.926        0.987
+     RFI         nelore 0.3      11         0.953        0.935        0.987
+ bias_mean type1_mean pass_a
+  1.90e-04     0.0495   TRUE
+  5.13e-04         NA   TRUE
+  8.17e-04         NA   TRUE
+  1.09e-03         NA   TRUE
+ -2.39e-04     0.0476   TRUE
+ -1.93e-04         NA   TRUE
+ -1.36e-04         NA   TRUE
+ -6.49e-05         NA   TRUE
+  3.20e-04     0.0483   TRUE
+  3.21e-04         NA   TRUE
+  3.24e-04         NA   TRUE
+  3.37e-04         NA   TRUE
+ -1.12e-02     0.0424   TRUE
+ -1.07e-02         NA   TRUE
+ -9.82e-03         NA   TRUE
+ -8.80e-03         NA   TRUE
+ -3.56e-03     0.0562   TRUE
+ -3.89e-03         NA   TRUE
+ -4.02e-03         NA   TRUE
+ -3.87e-03         NA   TRUE
+
+== pooled
+ rho  tau targets        arms coverage_hksj_mean coverage_hksj_min
+ 0.0 0.00      18 Methane+RFI              0.944             0.918
+ 0.1 0.00      18 Methane+RFI              0.944             0.916
+ 0.2 0.00      18 Methane+RFI              0.944             0.916
+ 0.3 0.00      18 Methane+RFI              0.944             0.917
+ 0.0 0.05      18 Methane+RFI              0.935             0.897
+ 0.1 0.05      18 Methane+RFI              0.935             0.896
+ 0.2 0.05      18 Methane+RFI              0.935             0.894
+ 0.3 0.05      18 Methane+RFI              0.933             0.893
+ 0.0 0.10      18 Methane+RFI              0.920             0.860
+ 0.1 0.10      18 Methane+RFI              0.921             0.861
+ 0.2 0.10      18 Methane+RFI              0.921             0.860
+ 0.3 0.10      18 Methane+RFI              0.920             0.856
+ coverage_fe_mean coverage_reml_wald_mean pass_b below_090
+            0.950                   0.962   TRUE     FALSE
+            0.951                   0.963   TRUE     FALSE
+            0.954                   0.965   TRUE     FALSE
+            0.959                   0.968   TRUE     FALSE
+            0.829                   0.892     NA     FALSE
+            0.829                   0.892     NA     FALSE
+            0.831                   0.893     NA     FALSE
+            0.837                   0.896     NA     FALSE
+            0.653                   0.821     NA     FALSE
+            0.654                   0.821     NA     FALSE
+            0.655                   0.821     NA     FALSE
+            0.658                   0.821     NA     FALSE

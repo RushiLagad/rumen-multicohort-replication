@@ -1,0 +1,7 @@
+late analysis, run after all primary results were seen (Amendment 46)
+replicates 1000 per table and rho; seeds 46001 to 47000
+rule (a) per-cohort coverage averaged over targets in [0.93, 0.97] at every rho: PASS (20 of 20 cohort x rho cells pass)
+rule (b) pooled HKSJ coverage averaged over the 18 targets with k >= 2 at least 0.93 at every rho (tau = 0): PASS
+46.2 overall: PASS (exclusion statements may use the 46.1 HKSJ intervals)
+tau = 0.10: pooled HKSJ coverage 0.920, 0.921, 0.921, 0.920; at least 0.90 at every rho
+type I error of the per-cohort test at alpha 0.05 (rho = 0), by cohort: difford 0.050; wallace 0.048; alberta_all 0.048; charolais_mrna 0.042; nelore 0.056
