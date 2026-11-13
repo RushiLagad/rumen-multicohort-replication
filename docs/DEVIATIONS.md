@@ -14,7 +14,7 @@ Timing classes:
 - **After the affected results.** Written after results of the analysis it changes, or that motivated it, had been seen.
 - **Record only.** A finding or correction to the record that changes no analysis rule.
 
-Results first became available as follows. Nelore and Charolais RFI estimates, 2 November. Alberta RFI estimates, 3 November. Methane estimates, 6 November. Calibrated RFI estimates, 8 November. The de novo scan, 9 November. Farm, depth, second-estimator and Wallace RFI sensitivities, 10 November. Late analyses (Amendments 44 and 45), from 11 November.
+Results first became available as follows. Nelore and Charolais RFI estimates, 2 November. Alberta RFI estimates, 3 November. Methane estimates, 6 November. Calibrated RFI estimates, 8 November. The de novo scan, 9 November. Farm, depth, second-estimator and Wallace RFI sensitivities, 10 November. Late analyses (Amendments 44 to 46), from 11 November; the Amendment 46 analyses, 12 November.
 
 # Part 1. Deviation table
 
