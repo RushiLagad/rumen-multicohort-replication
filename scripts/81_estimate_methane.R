@@ -42,9 +42,16 @@ for (j in seq_len(nrow(tk))) { rk <- tk$target_rank[j]; if (rk == "clade_ratio")
 m <- A[match(feat, rownames(A)), , drop=FALSE]; prev <- rowMeans(m > 0, na.rm=TRUE)
 cov <- data.frame(id=tk$id, set=tk$set, target=tk$target, rank=tk$target_rank, n_present=npres, feature=feat, prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 cat("targets", nrow(tk), "| matched", sum(!is.na(feat)), "| pass 10% prevalence", sum(cov$pass10, na.rm=TRUE), "| features", nrow(A), "\n"); print(cov[cov$set != "Nelore" | !is.na(cov$feature), ], row.names=FALSE)
+if (Sys.getenv("A46") == "1") { stopifnot("Amendment 46 uses the primary methane fit (real mode, CH4 g/d, all farms; DEPTH=1 for the scan)" = mode == "real", tag %in% c("", "_depth")); source(file.path(root, "scripts", "lib_a46.R"))   # Amendment 46
+  a46_dump(A, feat, tk, md, terms, df, cohort=coh, rank=tk$target_rank, prefix=paste0(coh, tag), root=root, perm_by=if (src == "difford") "herd" else "farm",
+    m1=if (coh %in% c("difford_arch", "wallace_prokaryotes") && !nzchar(tag)) a46_m1(root, coh, md) else NULL, difford=startsWith(coh, "difford")); quit(save="no") }
 if (Sys.getenv("CLR") == "1") { source(file.path(root, "scripts", "lib_clr.R")); clr_write(A, feat, tk, md, terms, n, df, cohort=paste0(coh, tag), rank=tk$target_rank, prefix=paste0(coh, tag), root=root, m1=TRUE, difford=startsWith(coh, "difford")); quit(save="no") }
 if (nzchar(Sys.getenv("LATE"))) { stopifnot("late analyses use the primary methane fit (real mode, CH4 g/d, all farms)" = mode == "real", !nzchar(tag)); source(file.path(root, "scripts", "lib_late.R"))   # Amendment 44
   late_main(A, feat, tk, md, terms, n, df, cohort=coh, rank=tk$target_rank, prefix=coh, root=root, perm_by=if (src == "difford") "herd" else "farm", m1=TRUE, difford=startsWith(coh, "difford")); quit(save="no") }
+FL <- Sys.getenv("A46_FL_SEED"); if (nzchar(FL)) { stopifnot("Amendment 46.3: Freedman-Lane ANCOM-BC2 fits use the primary methane fit" = mode == "real", !nzchar(tag), coh %in% c("difford_bact", "wallace_prokaryotes"))   # Amendment 46.3
+  source(file.path(root, "scripts", "lib_a46.R")); a46_gate(root); md <- a46_fl_md(md, terms, perm_by=if (src == "difford") "herd" else "farm", seed=as.integer(FL))
+  out <- file.path(root, "results", "late_a46", "ancombc2_fl"); dir.create(out, recursive=TRUE, showWarnings=FALSE); tag <- paste0("_fl", FL)
+  if (file.exists(file.path(out, paste0(coh, tag, "_targets.tsv")))) { cat("exists, not overwritten:", coh, tag, "\n"); quit(save="no") }; cat(A46_LABEL, "| Freedman-Lane permuted trait, seed", FL, "\n") }
 suppressMessages({library(ANCOMBC); library(TreeSummarizedExperiment)})
 orig <- rownames(A); rownames(A) <- sprintf("F%05d", seq_along(orig)); sf <- rownames(A)[match(feat, orig)]
 tse <- TreeSummarizedExperiment(assays=list(counts=as.matrix(A)), colData=md[, terms, drop=FALSE])

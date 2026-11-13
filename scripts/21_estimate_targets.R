@@ -61,6 +61,8 @@ cov <- data.frame(id=tk$id, target=tk$target, set=tk$set, n_keys=tk$n_keys, n_pr
   reads=unname(rowSums(m)), prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 print(cov, row.names=FALSE)
 if (dry) quit(save="no")
+if (Sys.getenv("A46") == "1") { source(file.path(root, "scripts", "lib_a46.R")); a46_dump(A, feat, tk, md, terms, df, cohort=coh, rank=rk, prefix=paste0(coh, "_", rk), root=root,   # Amendment 46
+  perm_by=if (coh == "nelore") "diet" else c("diet", "year")); quit(save="no") }
 if (Sys.getenv("CLR") == "1") { source(file.path(root, "scripts", "lib_clr.R")); clr_write(A, feat, tk, md, terms, n, df, cohort=coh, rank=rk, prefix=paste0(coh, "_", rk), root=root); quit(save="no") }
 if (nzchar(Sys.getenv("LATE"))) { source(file.path(root, "scripts", "lib_late.R")); late_main(A, feat, tk, md, terms, n, df, cohort=coh, rank=rk, prefix=paste0(coh, "_", rk), root=root,   # Amendment 44
   perm_by=if (coh == "nelore") "diet" else c("diet", "year"), X=X, tax=tax); quit(save="no") }

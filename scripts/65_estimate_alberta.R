@@ -38,6 +38,8 @@ cov <- data.frame(id=tk$id, target=tk$target, set=tk$set, n_keys=tk$n_keys, n_pr
   reads=unname(rowSums(m)), prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 cat("targets", nrow(tk), "| matched a 16S feature", sum(ok), "| pass 10% prevalence", sum(cov$pass10, na.rm=TRUE), "| features", nrow(A), "\n"); print(cov, row.names=FALSE)
 if (dry) quit(save="no")
+if (Sys.getenv("A46") == "1") { stopifnot("Amendment 46 uses the primary all-animal Alberta table (ALBERTA_ALL=1, Amendment 39)" = allA); source(file.path(root, "scripts", "lib_a46.R"))   # Amendment 46
+  a46_dump(A, feat, tk, md, terms, df, cohort=paste0("alberta", tag), rank=rk, prefix=paste0("alberta_", rk, tag), root=root, perm_by="group"); quit(save="no") }
 if (Sys.getenv("CLR") == "1") { source(file.path(root, "scripts", "lib_clr.R")); clr_write(A, feat, tk, md, terms, n, df, cohort=paste0("alberta", tag), rank=rk, prefix=paste0("alberta_", rk, tag), root=root); quit(save="no") }
 if (nzchar(Sys.getenv("LATE"))) { source(file.path(root, "scripts", "lib_late.R")); late_main(A, feat, tk, md, terms, n, df, cohort=paste0("alberta", tag), rank=rk, prefix=paste0("alberta_", rk, tag), root=root,   # Amendment 44
   perm_by="group", X=X, lin=rd(file.path(root, "results", "16s", "alberta", "genus_lineage_silva.tsv"))); quit(save="no") }
