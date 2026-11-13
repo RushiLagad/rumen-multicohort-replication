@@ -272,7 +272,7 @@ def build_file2():
         "Sheets starting 'A46' are late analyses, run after all primary results were seen (Amendment 46, in response to an external statistical review); they set no label. Source files in results/late_a46/.",
         "Partial correlation of the target's CLR abundance with the trait given the cohort's covariates, by OLS (r = t / sqrt(t^2 + df), Fisher z with SE 1 / sqrt(df - 1)); for Charolais a point-biserial partial correlation (extreme-group design). Pooled by REML with Hartung-Knapp-Sidik-Jonkman intervals (t on k - 1 df), the cohort's own interval where k = 1; fixed-effect and REML-Wald intervals beside it. Benchmarks r = 0.30 and 0.15 in the published direction (both bounds where none). The exclusion statements in the manuscript use this estimand and interval. Per-cohort p_fl: Freedman-Lane permutation, 9,999 permutations, (b + 1)/(B + 1).",
         "Coverage of the intervals by simulation of the CLR outcome with each cohort's real trait and covariates (1,000 replicates per table and rho; rho 0 to 0.30; tau 0 to 0.10). Pass rules: (a) per-cohort coverage averaged over targets 0.93 to 0.97; (b) pooled HKSJ coverage averaged over targets with k >= 2 at least 0.93. Both pass (results/late_a46/coverage_fix1/; the first run in results/late_a46/coverage/ had a sign error and is kept unchanged).",
-        "ANCOM-BC2 on the methane primary targets with 200 Freedman-Lane permutations (trait residualised on the covariates, residuals permuted within herd or farm), p = (b + 1)/(B + 1).",
+        "ANCOM-BC2 on the methane primary targets with 200 Freedman-Lane permutations (trait residualised on the covariates, residuals permuted within herd or farm), p = (b + 1)/(B + 1). The 'A46 Wallace farms' sheets report the leave-one-farm-out genera (Amendment 40) with per-farm estimates and 95% intervals (uncalibrated within-farm ANCOM-BC2 fits), farms fitted, sign agreement and I^2 (script 117).",
         "scripts/104_additional_files.py, from the files named in the Versions sheet."]})
     f = os.path.join(OD, "Additional_file_2_estimates.xlsx")
     A = a46_sheets(); extra = [(k, v) for k, v in A.items() if v is not None]
@@ -300,6 +300,8 @@ def a46_sheets():
         cs.insert(0, "level", "per cohort (rule a)"); ps.insert(0, "level", "pooled HKSJ, targets with k >= 2 (rule b)")
         out["A46 coverage"] = pd.concat([cs, ps], ignore_index=True)
     out["A46 Freedman-Lane ANCOM-BC2"] = opt(f"{A46}/effect_size/ancombc2_fl_methane.tsv")
+    out["A46 Wallace farms, summary"] = opt(f"{A46}/wallace_farms/summary.tsv")          # script 117 (46.5.4)
+    out["A46 Wallace farms, per farm"] = opt(f"{A46}/wallace_farms/per_farm_intervals.tsv")
     return out
 
 # ---------------------------------------------------------------- formatting
