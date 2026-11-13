@@ -24,3 +24,6 @@ raw/phenotypes/
 results/methane_pooled_dryrun/
 results/scan_null/
 zenodo/
+
+# A46 ANCOM-BC2 Freedman-Lane: full per-permutation outputs (63 MB, regenerable from seeds 46101-46300); the committed *_targets.tsv hold the values used
+results/late_a46/ancombc2_fl/*_ancombc2.csv
