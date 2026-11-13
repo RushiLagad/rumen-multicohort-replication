@@ -821,3 +821,135 @@ Exclusions, HKSJ interval for k >= 2 and the cohort's own interval for k = 1 (re
 6. Execution record. Started 7:08 pm on 2026-11-12 under systemd-run (unit late-a46, MemoryMax 64G, MemorySwapMax 0, P 10, C 4); the driver checked that Amendment 46 (7ea2d3b6) and the scripts (f4b1e24c) were committed and unmodified. 14 dumps by 7:08 pm (work/a46_inputs/, not committed; animals and df equal to the primary fits); ANCOM-BC2 timing and decision by 7:10 pm; 112 done 7:10 pm; 113 (first run) 7:19 pm; 114 7:23 pm; ANCOM-BC2 Freedman-Lane fits 7:45 pm (400 files); summary and end 7:45 pm. First-run results and logs committed as 1827bd09. Sign fix 38a44984; 113 rerun under unit late-a46-cov from about 9:23 pm to 9:37 pm (logs/late_a46/113_coverage_fix1.log), committed as 1d9596ad. No script was edited while it ran, and no output was overwritten.
 7. 46.5 reporting (no new fit). Additional files 2 and 3 rebuilt (commit ba17f848): the 17 permutation p values of 0 are now (b + 1)/(B + 1), 282 values converted in all; "pre-registered classification" replaced by "pre-specified classification (the plan was not registered with a third party)"; published direction and stratum filled in for the CLR rows; the Amendment 46 results added as sheets; no label and no row count changed. Additional file 3 is now built by script 116 from docs/DEVIATIONS.md and this plan. Wallace farms (script 117, results/late_a46/wallace_farms/, commit 1d2917c6): of the 29 genera of Amendment 40, all keep their sign in every leave-one-farm-out refit and 17 also stay above the full-data null 95th percentile, but only 4 have the same sign in all seven separately fitted farms (9 in every farm where they could be fitted), median I2 83% (0 to 98), and 4 have a farm with a significant estimate in the opposite direction; the README sentence "consistently across its seven farms" was corrected (commit 80b40462). Figures (46.5.7): taxon names in italics in Figures 2, 3b and 5; Figure 2 gains the k column and the band label "r >= 0.30 benchmark". By decision on 12 November 2026, after this amendment's results had been seen, Figure 2 shows the CLR partial r with HKSJ intervals (k = 1: the cohort's own interval), the estimand on which the exclusion statements rest, instead of the ANCOM-BC2-derived intervals, which stay in Additional file 2; its effective-n column, which described the ANCOM-BC2-derived intervals, is dropped. Figure 4 shows permutation p as (b + 1)/(B + 1) and labels the pooled Difford g per day with Wallace per kg intake row an exploratory comparison of different outcomes; Figure 5 gives the Wallace against Difford correlation without a p value. Figure 1 was redrawn (script 111): every text is at least 8 pt at 170 mm (the script measures each text against its space and stops on any overflow), the cohort cards became a table, panel d now describes the CLR partial r with HKSJ intervals and the coverage check, and panel e lists the Freedman-Lane permutation and the spike-in among the analyses run after the primary results.
 8. Evidence ledger and overlap audit (review items A1 and A4; script 118, results/late_a46/ledger/, sheets in Additional file 1; no new fit). Evidence categories of the testable targets: RFI 18 matched claims (rumen, RFI, published direction), 1 published claim without direction (T3), 6 candidate taxa without a single source claim (C1 to C6) and 2 cross-site transfers (fecal claims N23 and N28 tested in rumen); methane 3 matched claims (M1, M2, S1), 1 claim without direction (M3) and 7 cross-phenotype transfers (Nelore residual methane claims tested against daily output). Overlap audit, per target and cohort: 60 independent tests; 16 Nelore-set targets not tested in their discovery cohort; Wallace M2 re-analysis, sensitivity pooling only; two possible overlaps, Wallace farm SE1 for M1 (sensitivity without SE1 on file) and up to 48 Li et al. discovery animals in Alberta, which affect no estimate because no Li target has a tested feature in the Alberta tables.
+
+**Amendment 47 (2026-11-13, committed before any of it was run; written after all primary, late and Amendment 46 results had been seen): one interval rule chosen by per-target coverage, decision-level labels under the CLR estimand, null-scan calibration, and the sensitivity statements under the CLR estimand.**
+
+**Timing.** Written after every primary, late and Amendment 46 result had been seen, in response to a second external review of the submission draft (13 November 2026). Every output is a late analysis, written only to `results/late_a47/`, with logs in `logs/late_a47/`. Nothing in `results/` is overwritten. One dump is added to `work/a46_inputs/` (never committed) through a new A47 hook in 81. Figure 2 and Additional file 2 are regenerated afterwards (47.5), and git keeps the earlier versions. This text and its rules are committed before any script for it is run. The draft sent from the review chat is reconciled with the committed Amendment 46; the differences are marked "Reconciliation" below.
+
+**Why.** The review found five points, and the files on record confirm each of them:
+1. **Coverage was averaged.** Rule (b) of 46.2 covered the zero-heterogeneity scenario only, averaged over the 18 targets with k >= 2. At tau = 0.10 it required only a caveat, and only if the average fell below 0.90. Per target at tau = 0.10 (results/late_a46/coverage_fix1/pooled_target.tsv), HKSJ coverage was 0.86 to 0.90 for the seven targets pooled with Alberta: C2 0.865 to 0.871, C3 0.860 to 0.865, C4 0.860 to 0.865, C5 0.887 to 0.888, C6 0.856 to 0.861, N15 0.884 to 0.891 and N23 0.900 to 0.901 across rho. At rho = 0.30 it was C5 *Prevotella* 0.888, C6 *Butyrivibrio* 0.856 and N15 *Selenomonas* 0.891, the three multi-cohort RFI targets reported as excluding r = 0.30.
+2. **HKSJ was used inconsistently.** Narrow HKSJ intervals (C6 0.005 to 0.097; M1 0.009 to 0.051; Amendment 46 result, item 1(d)) were accepted for excluding benchmarks but not read as associations.
+3. **The replication labels were never re-derived under the 46.1 estimand.**
+4. **The null check measured the wrong quantity.** Under a complete null, the FDR equals the probability of any rejection. The share of the 20 null replicates with at least one BH discovery (results/late_a46/scan/null_check.tsv) was:
+   - Nelore 1;
+   - Charolais 1 (that replicate had 7 discoveries);
+   - Alberta 0;
+   - Difford 3;
+   - Wallace 1;
+   - Wallace depth-adjusted 0.
+   Twenty replicates are too few to estimate it.
+5. **Two sensitivity statements rest on the ANCOM-BC2 analysis:** the four-cohort canonical exclusions (Amendment 43 result) and the depth-adjusted scan count of 14 (Amendment 41 result, item (c)).
+6. **Reconciliation (found when checking the draft against 113_a46_coverage.R).** The 46.2 generator added the permuted CLR residual to the standardized trait residual without residualizing it on the covariates. The covariate residual of x* then contains a slightly shortened noise vector, so the population partial correlation of x* differs slightly from rho, most in the smallest cohort. 47.1 measures the difference and uses a corrected generator.
+
+**What does not change.** The replication criterion (Section 10, Amendments 14 and 14b) is unchanged, and so are the Amendment 37 primary labels and every Amendment 46 result file. The Amendment 46 HKSJ intervals stay on file; the 47.1 intervals are added beside them.
+
+**47.1 One interval rule, chosen by coverage.**
+*Methods.* For every target tested in two or more cohorts, the CLR per-cohort estimates (Fisher z = atanh(r), v = 1/(df - 1); results/late_a46/effect_size/cohort_estimates.tsv) are pooled with four methods:
+- (i) HKSJ (metafor test = "knha", the current method);
+- (ii) modified Knapp-Hartung (test = "adhoc": the Knapp-Hartung scale factor q is replaced by max(1, q), so the adjusted SE is never below the unadjusted one);
+- (iii) REML-Wald (test = "z");
+- (iv) fixed effect.
+
+Methods (i) to (iii) share one REML fit; DerSimonian-Laird is used if REML fails, and that fallback is recorded. Methods (i) and (ii) use a t on k - 1 df. The intervals are computed in closed form from that fit and checked against metafor's knha, adhoc and z output on the real data; the run stops if any differs by more than 1e-8. HKSJ must also reproduce the Amendment 46 intervals. A fit that fails under both REML and DL counts as a failure: it is recorded and counted as not covering, never replaced. Pooled estimates do not change, and single-cohort targets keep the cohort's own interval.
+
+*Check 1, pooling alone.* For each distinct cohort configuration (the df vector of the cohorts pooled for a target), simulate theta_i ~ N(mu_z, tau^2) and z_i ~ N(theta_i, 1/(df_i - 1)), with mu_z = atanh(mu). Coverage is scored against mu_z (tanh(mu_z) on the r scale), never against the mean of the cohort correlations. This is done for:
+- the configurations of the primary pooling (18 targets: 13 RFI and 5 methane);
+- reported only, the four-cohort RFI configurations of 47.4.
+
+Replicate b uses seed 4710000 + b and draws every configuration and cell in a fixed order.
+
+*Check 2, end to end.* The 46.2 simulation is repeated on each cohort's real trait, covariates and design groups, with one change. The permuted standardized CLR residual is first residualized on the covariates and rescaled to the length of t_r, and only then is x* = rho_c t_r + sqrt(1 - rho_c^2) e formed. The covariate residual of x* is thus a combination of two vectors of equal length, both orthogonal to the covariates, and its population partial correlation is rho_c.
+
+Before the run, a verification is made for every table and target at rho_c = ±0.15 and ±0.30. The population partial correlation is estimated over 20,000 permutations (seed 4729000 + table index) as the mean of <M_Z x*, t_r> divided by the square root of the product of the mean squared lengths. It must lie within 0.005 of rho_c, or the run stops. The same quantity is reported for the 46.2 generator.
+
+Cohort-specific rho_c = tanh(mu_z + tau z_ic), with z_ic ~ N(0, 1) per target, cohort and replicate. One within-group permutation per table and replicate is shared by all cells. Seeds are 4720000 + b, shared by all tables, so that replicate b of every cohort enters pooled interval b. Coverage is scored against mu_z.
+
+*Grid.*
+- mu (r scale): 0, ±0.10, ±0.15, ±0.20 and ±0.30, both signs for every target (the A46 grid had no 0.15 and one sign);
+- tau (Fisher-z scale): 0, 0.05, 0.10 and 0.20;
+- every configuration (Check 1) and every target with k >= 2 (Check 2);
+- B = 1,000 per cell.
+
+In a selection cell (below) where any method's coverage lies within 2 MCSE of 0.93, both checks extend that cell to B = 5,000 (replicates 1,001 to 5,000, same seeding), and that cell is decided at 5,000.
+
+*Outcomes, per target or configuration, cell and method (not averaged).*
+- coverage with MCSE;
+- bias of the pooled estimate (z and r scale);
+- median interval width (z scale);
+- failed fits and DL fallbacks;
+- the false benchmark exclusion rate: for delta = 0.15 and 0.30, in the cells where the true effect reaches delta, the share of replicates in which the interval excludes delta. "Reaches delta" means published direction x mu >= delta for directed targets, and |mu| >= delta, under the magnitude rule, for targets without a direction. Check 1 reports both the positive-direction and the magnitude version for each configuration.
+
+Per-cohort coverage of the k = 1 intervals under the corrected generator is reported as in 46.2.
+
+*Selection rule, fixed now.*
+- **Selection cells:** tau = 0, 0.05 and 0.10, every mu, every configuration of the primary pooling (Check 1) and each of the 18 targets with k >= 2 (Check 2).
+- **Passing a cell:** a method passes a cell if coverage + 2 MCSE >= 0.93, where MCSE = sqrt(c(1 - c)/B) at the final B and failed fits count as not covering. Conservative coverage is acceptable, and its cost in width is reported.
+- **Qualifying:** a method qualifies if it passes every selection cell of both checks.
+- **Choosing:** if several qualify, the one with the smallest median, over the Check 2 selection cells, of the per-cell median z-width is chosen.
+- **If none qualifies:** the multi-cohort exclusions are reported as descriptive only, and 47.2 uses modified Knapp-Hartung, labelled descriptive.
+- **Scope:** the chosen method applies to every target with k >= 2, both for association statements (pooled p, interval excluding 0) and for exclusion statements. Nothing is chosen target by target. tau = 0.20 and the four-cohort configurations are reported but are not part of the rule.
+- **Reconciliation:** the draft limited the rule to configurations "that support a claim". It is applied to every k >= 2 configuration here, because which targets support a claim depends on the method being chosen.
+
+*Exclusion logic, stated in the paper.*
+- Published positive direction: delta is excluded if U < delta.
+- Published negative direction: the interval is oriented first, [L+, U+] = [-U, -L], and delta is excluded if U+ < delta.
+- No published direction: a magnitude of delta is excluded only if L > -delta and U < delta.
+
+This is the a46_bound rule of Amendment 46. Every count is labelled pointwise, because BH does not adjust these claims. Counts are split into single-cohort vs pooled and directional vs magnitude, at delta = 0.30 and 0.15 in both arms; the RFI statements use 0.30 and the methane statements 0.15. Intervals describe the average effect across cohorts, not the effect in any one herd. No prediction-interval claims are made.
+
+*Diagnostic expectation, from the reviewer's reconstruction (not a result).* Under modified Knapp-Hartung:
+- the clade ratio (-0.285 to 0.339) and *Selenomonas* (-0.460 to 0.506) would lose their exclusions;
+- *Butyrivibrio* and *Prevotella* would keep the magnitude exclusion at 0.30 but not at 0.15.
+
+If so, every benchmark exclusion except those two rests on a single cohort, and that is reported as found.
+
+**47.2 Decision-level replication under the CLR estimand (sensitivity).** The per-cohort input is the 46.1 CLR estimates (OLS t and df). Classification follows Amendments 14b and 14d (classify_set in lib_replication.R), with one change: every pooled estimate with k >= 2, including every leave-one-cohort-out pool with k >= 2, uses the p and interval of the 47.1 method. A k = 1 estimate uses the OLS t p, whose type I error at alpha 0.05 was 0.042 to 0.056 in 46.2.
+
+The steps run in order: pooling, BH within each target set with the Section 8 family sizes (untestable targets entering with p = 1), the published-direction check, then leave-one-cohort-out. Target sets, testability and BH families are those of 96_clr_compare.R. Labels use the categories of the primary analysis and are reported target by target beside the Amendment 37 primary label and the Amendment 42 CLR label. A sensitivity column uses the 46.3 Freedman-Lane p in place of the t p for k = 1 estimates.
+
+As a check, the same classification with REML-Wald pooling must reproduce the Amendment 42 CLR labels on file (results/clr_pooled/), or the script stops. The Amendment 37 labels stay the primary, historical analysis.
+
+**47.3 Null-scan calibration at an adequate replicate count.** For each of the six 46.4 tables, there are 200 outer null replicates. Each is a Freedman-Lane-permuted trait (trait residuals permuted within design groups; covariate residual M_Z P r_x), scanned exactly as in 46.4: CLR OLS, the same genera, 99,999 or 9,999 inner Freedman-Lane permutations, and BH within the table.
+
+Seeds are 4730000 + 1000 x (table index) + replicate, with the inner permutations continuing the same stream. Three things are reported per table:
+- the proportion of replicates with at least one BH rejection at q < 0.05 (the FDR under the complete null), with a Clopper-Pearson 95% CI;
+- the distribution of discovery counts, separately;
+- the share of null p values below 0.05.
+
+*Projected run time.* Replicate 1 of every table is timed first, and the projected wall time for 200 is written to results/late_a47/null_scan/projection.txt before the rest runs. If it exceeds 48 h for a table, that table runs the largest replicate count that fits in 48 h on its cores, and the count is written to the same file before it runs. The 20 Amendment 46 replicates are kept and are not pooled with these.
+
+**47.4 Sensitivity statements under the CLR estimand.**
+(a) **Four-cohort RFI pooling.** Wallace RFI NRC is the Amendment 43 table:
+- 1,004 cows;
+- model farm + parity + dim + RFI NRC standardized within farm;
+- 200 within-farm permutations on file.
+
+It is estimated under the 46.1 CLR estimand from a dump made by 81 with A47=1 TRAIT=rfi_nrc. Its df must equal Amendment 43's 993. It is pooled with the three-cohort CLR estimates for the targets it adds to (C1 to C6, T5, N13, N15 and N23, cross-site where they were). The 47.1 method is used, with the other three methods beside it. The script reports:
+- the canonical-target (C1 to C6) exclusions;
+- the other targets;
+- labels as in 47.2;
+- the coverage of the four-cohort configurations from both 47.1 checks.
+
+This is a sensitivity only, as in Amendment 43.
+
+(b) **Depth adjustment, stated by estimator, with no new fit.** Wallace genera at q < 0.05:
+- 60 to 45 under the CLR Freedman-Lane scan (46.4);
+- 28 to 14 under the per-genus ANCOM-BC2 scan (Amendment 41 result, item (c)).
+
+**47.5 Reporting and release (no new fits).**
+- State the 46.2 pass rule exactly as committed, including that it covered the zero-heterogeneity scenario only, and report per-target coverage.
+- Table 2 note: replace "zero to a few genera at q < 0.05" with the 47.3 probability of any rejection under the null.
+- Figure 2 is regenerated with the chosen method's intervals (k = 1: the cohort's own interval). Additional file 2 gains the Amendment 47 sheets.
+- Replace the precursor AMENDMENT_46.md in Box with the committed Amendment 46 text, keeping the precursor, dated, in the archive.
+- Update the README headline counts once the Amendment 47 numbers are final.
+- Tag v1.0.2-submission only after the text, figures, Additional files and cover letter are checked against one manifest.
+
+Scripts:
+- lib_a47.R (shared functions);
+- 120_a47_intervals.R (47.1);
+- 121_a47_labels.R (47.2, 47.4);
+- 122_a47_null_scan.R (47.3);
+- 123_a47_run.sh (driver, under systemd-run with MemoryMax and MemorySwapMax=0);
+- the A47 hook in 81 (Wallace RFI NRC dump only).
+
+Outputs go only to results/late_a47/.
