@@ -18,10 +18,12 @@ theme_f <- theme_minimal(base_size=8.5) + theme(
   plot.title = element_text(face="bold", size=8.5), plot.subtitle = element_text(colour=ink2, size=8), plot.caption = element_text(colour=muted, size=6.5, hjust=0),
   plot.title.position = "plot", plot.caption.position = "plot", plot.background = element_rect(fill=bg, colour=NA))
 W170 <- 170 / 25.4
+mlab <- function(b) sub("^-", "\u2212", format(b, trim=TRUE, drop0trailing=TRUE))   # typographic minus on axes
 save2 <- function(p, name, w, h) { ggsave(file.path(od, paste0(name, ".pdf")), p, width=w, height=h, device=cairo_pdf); ggsave(file.path(od, paste0(name, ".png")), p, width=w, height=h, dpi=300, bg=bg); cat("wrote", name, "\n") }
 tk <- rd(file.path(root, "plan", "target_keys.tsv"))
 repel <- requireNamespace("ggrepel", quietly=TRUE)
-lab_layer <- function(data, ...) if (repel) ggrepel::geom_text_repel(data=transform(data, sa=ifelse(nzchar(genus), 1, 0)), ..., parse=TRUE, size=2.3, colour=ink2, min.segment.length=0.2, seed=1, max.overlaps=30)   # sa: no segment for blank (repel-only) labels else geom_text(data=data, ..., parse=TRUE, size=2.3, colour=ink2, vjust=-0.7, check_overlap=TRUE)
+# sa: no repel segment for blank (repel-only) labels
+lab_layer <- function(data, ...) if (repel) ggrepel::geom_text_repel(data=transform(data, sa=ifelse(nzchar(genus), 1, 0)), ..., parse=TRUE, size=2.3, colour=ink2, min.segment.length=0.2, seed=1, max.overlaps=Inf) else geom_text(data=data, ..., parse=TRUE, size=2.3, colour=ink2, vjust=-0.7, check_overlap=TRUE)
 # plotmath for a taxon name: the Latin part in italics, SILVA placeholder suffixes ("UCG-001", "group") and codes in roman (46.5.7)
 q <- function(x) paste0("'", gsub("'", "\\\\'", x), "'")
 tax_expr <- function(g, suffix="") vapply(seq_along(g), function(i) { x <- g[i]; if (!nzchar(x)) return("")   # empty label: no text and no repel segment
@@ -94,7 +96,7 @@ p_ratio <- ggplot(M, aes(r, row)) +
   geom_point(aes(colour=trait, shape=kind), size=2.4, fill=bg, stroke=0.8) +
   geom_text(aes(label=plab), x=max(M$hi) + 0.03, hjust=0, size=2.35, colour=ink2) +
   scale_colour_manual(values=c("g per day"=blue, "per kg intake"=orange)) + scale_shape_manual(values=c("Single cohort"=16, "Pooled"=23)) +
-  scale_x_continuous(expand=expansion(mult=c(0.05, 0.25))) +
+  scale_x_continuous(expand=expansion(mult=c(0.05, 0.25)), labels=function(b) sub("^-", "\u2212", sprintf("%.2f", b))) +
   labs(x="Partial r with methane", y=NULL) + theme_f + theme(panel.grid.major.y=element_blank())
 save2(p_ratio, "fig4_clade_ratio_trait", W170, 2.7)
 
@@ -116,14 +118,16 @@ p_scatter <- ggplot(S, aes(x, y)) +
   # Robust-genus labels repel from every plotted point (blank labels for the grey points and for the M2 diamond and its
   # label area), not only from each other. The M2 label sits at a fixed spot centred just below the diamond: repelled
   # placement had put it on the grey point at about (-4.5, 0).
+  # blank labels along y = 0 keep the repelled labels off the axis line
   lab_layer(data=rbind(data.frame(x=S$x, y=S$y, genus=tax_expr(ifelse(S$robust, S$genus, ""))),
-                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus="")), aes(label=genus, segment.alpha=sa), box.padding=0.45, point.padding=0.25, force=2, force_pull=0.5, max.iter=50000) +
+                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus=""),
+                       data.frame(x=seq(min(S$x), max(S$x) * 1.15, length.out=80), y=0, genus="")), aes(label=genus, segment.alpha=sa), box.padding=0.5, point.padding=0.45, force=3, force_pull=0.4, max.iter=50000) +
   geom_text(data=transform(m2, genus=tax_expr(genus)), aes(label=genus), parse=TRUE, vjust=1, nudge_y=-0.2, size=2.3, colour=ink2) +
-  annotate("text", x=-Inf, y=Inf, hjust=-0.05, vjust=1.5, size=2.5, colour=ink2,
-           label=sprintf("%d shared genera\nSpearman rho = %.2f (descriptive)", nrow(S), ct$estimate)) +
+  annotate("text", x=min(c(S$x, m2$x)), y=2.85, hjust=0, vjust=1, size=2.5, colour=ink2, lineheight=1.05,   # hjust 0: both lines left-aligned
+           label=sprintf("%d shared genera\nSpearman rho = %s (descriptive)", nrow(S), sub("^-", "\u2212", sprintf("%.2f", ct$estimate)))) +
   annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
-  labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) +
-  scale_x_continuous(expand=expansion(mult=c(0.04, 0.16))) + theme_f   # room on the right for the crowded positive-W labels
+  labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9), labels=mlab) +
+  scale_x_continuous(expand=expansion(mult=c(0.04, 0.16)), labels=mlab) + theme_f   # room on the right for the crowded positive-W labels
 save2(p_scatter, "fig5_wallace_vs_difford", W170, 5.0)
 
 # ---------------- numbers for the manuscript text
