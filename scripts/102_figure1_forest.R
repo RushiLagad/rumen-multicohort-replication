@@ -1,19 +1,23 @@
 #!/usr/bin/env Rscript
 # 102: Manuscript Figure 2. Pooled CLR partial r and 95% interval for the 27 feed efficiency and 11 methane targets, oriented to the published
 # direction, with the r = 0.15 to 0.30 and r >= 0.30 benchmark bands shaded and k (independent cohorts) beside each target.
-# Amendment 46 (46.1, 46.5.7): the exclusion statements rest on the CLR partial correlation with Hartung-Knapp-Sidik-Jonkman intervals
-# (k = 1: the cohort's own interval), whose coverage passed the 46.2 check, so the figure shows that estimand (results/late_a46/effect_size/
-# pooled.tsv, from 112); the ANCOM-BC2-derived intervals that earlier versions of this figure showed are in Additional file 2. Refits nothing.
+# Amendment 47 (47.1, 47.5): the CLR partial correlation (46.1) with REML modified Knapp-Hartung intervals (k = 1: the cohort's own interval), the procedure
+# validated by the 47.1 coverage checks (results/late_a47/intervals/pooled_intervals.tsv, from 120); a pooled interval whose statement is descriptive (47.1 addendum
+# item 3) must not show an exclusion, and the script stops if one would. The Amendment 46 HKSJ and the ANCOM-BC2-derived intervals are in Additional file 2. Refits nothing.
 # The x axis is truncated at r = +/-0.6 so that narrow intervals stay readable; an interval reaching past the edge ends in an arrow with its true
 # bound printed beside it (full bounds in Additional file 2).
 # Run: Rscript scripts/102_figure1_forest.R      (rumen-r env; writes results/figures_manuscript/fig2_forest_pooled.{pdf,png})
 # Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the manuscript figure legend).
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); od <- file.path(root, "results", "figures_manuscript"); dir.create(od, showWarnings=FALSE)
-p <- read.delim(file.path(root, "results", "late_a46", "effect_size", "pooled.tsv"), check.names=FALSE, stringsAsFactors=FALSE, quote="")
-pass <- readLines(file.path(root, "results", "late_a46", "coverage_fix1", "pass.txt"))
-stopifnot("46.2 coverage check must pass before exclusion classes are drawn" = any(grepl("^46.2 overall: PASS", pass)),
+p <- read.delim(file.path(root, "results", "late_a47", "intervals", "pooled_intervals.tsv"), check.names=FALSE, stringsAsFactors=FALSE, quote="")
+p <- p[p$version == "primary", ]; cm <- readLines(file.path(root, "results", "late_a47", "intervals", "chosen_method.txt"))
+stopifnot("47.1 must validate modified Knapp-Hartung before exclusion classes are drawn" = cm[length(cm)] == "mkh", any(grepl("validated: yes", cm, fixed=TRUE)),
           sum(p$arm == "RFI") == 27, sum(p$arm == "Methane") == 11)
+p$lo <- p$lo_mkh; p$hi <- p$hi_mkh; p$excl_r30 <- p$excl_30_mkh; p$excl_r15 <- p$excl_15_mkh
+p$excl_any <- ifelse(is.na(p$published_dir), FALSE, ifelse(p$published_dir > 0, p$hi < 0, p$lo > 0))   # interval wholly against the published direction
+desc <- p$k >= 2 & p$statement != "validated"
+stopifnot("a descriptive pooled interval (47.1) would be drawn as an exclusion" = !any(desc & (p$excl_r30 | p$excl_r15 | p$excl_any)))
 
 ink <- "#0b0b0b"; ink2 <- "#52514e"; muted <- "#898781"; grid <- "#e1e0d9"; bg <- "#fcfcfb"
 cat_lv <- c("Excludes any effect in the published direction", "Excludes r ≥ 0.15",
@@ -34,7 +38,7 @@ d <- p %>% mutate(
   verdict = factor(case_when(excl_any ~ cat_lv[1], excl_r15 ~ cat_lv[2], excl_r30 ~ cat_lv[3], TRUE ~ cat_lv[4]), cat_lv),
   lab = id, expr = mapply(lab_expr, id, target),
   pub = ifelse(directional, sprintf("%s %s", ifelse(published_dir > 0, "higher", "lower"), trait), "not stated"))
-stopifnot(!anyNA(d$verdict), sum(d$arm == "RFI" & d$verdict != cat_lv[4]) == 9, sum(d$arm == "Methane" & d$verdict != cat_lv[4]) == 7)
+stopifnot(!anyNA(d$verdict), sum(d$arm == "RFI" & d$verdict != cat_lv[4]) == 8, sum(d$arm == "Methane" & d$verdict != cat_lv[4]) == 6)   # Amendment 47 result, item 4
 
 theme_f <- theme_minimal(base_size=8.5) + theme(
   text = element_text(colour=ink), axis.text = element_text(colour=ink2), axis.title = element_text(colour=ink2, size=8),
@@ -84,4 +88,4 @@ W <- 170 / 25.4; H <- 7.9
 ggsave(file.path(od, "fig2_forest_pooled.pdf"), f1, width=W, height=H, device=cairo_pdf)
 ggsave(file.path(od, "fig2_forest_pooled.png"), f1, width=W, height=H, dpi=300, bg=bg)
 cat("wrote", file.path(od, "fig2_forest_pooled.{pdf,png}"), "\n")
-cat("== Figure 2 (CLR, HKSJ): classes by arm\n"); print(table(d$arm, d$verdict))
+cat("== Figure 2 (CLR, modified Knapp-Hartung): classes by arm\n"); print(table(d$arm, d$verdict))

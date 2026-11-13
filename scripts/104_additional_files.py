@@ -270,7 +270,7 @@ def build_file2():
                            per_cohort_source=("results/clr/*_clr_targets.tsv" if (cf or "").startswith("CLR") else (cf or "(same per-cohort estimates as the version above it)")))
                       for v, a, ro, de, pf, cf in VERSIONS])
     notes = pd.DataFrame({"Item": ["Versions", "Primary", "Per-cohort sheet", "Pooled sheet", "Labels", "Untestable targets",
-                                   "A46 sheets", "A46 effect size", "A46 coverage", "A46 Freedman-Lane", "Built by"],
+                                   "A46 sheets", "A46 effect size", "A46 coverage", "A46 Freedman-Lane", "A47 sheets", "A47 intervals", "A47 validation", "A47 labels and null scan", "Built by"],
         "Description": [
         "Every analysis version in results/robustness (script 97), the Wallace RFI NRC sensitivity pooling (script 99) and, with role = late, the LinDA and ALDEx2 analyses run after all primary results were seen (Amendment 44, script 106). See the Versions sheet.",
         "RFI primary and Methane primary (role = primary). All other versions are sensitivity analyses, superseded or late analyses and set no label.",
@@ -279,12 +279,16 @@ def build_file2():
         replicated_note(PL),
         "Targets with k = 0 are listed with label 'untestable' and blank estimates.",
         "Sheets starting 'A46' are late analyses, run after all primary results were seen (Amendment 46, in response to an external statistical review); they set no label. Source files in results/late_a46/.",
-        "Partial correlation of the target's CLR abundance with the trait given the cohort's covariates, by OLS (r = t / sqrt(t^2 + df), Fisher z with SE 1 / sqrt(df - 1)); for Charolais a point-biserial partial correlation (extreme-group design). Pooled by REML with Hartung-Knapp-Sidik-Jonkman intervals (t on k - 1 df), the cohort's own interval where k = 1; fixed-effect and REML-Wald intervals beside it. Benchmarks r = 0.30 and 0.15 in the published direction (both bounds where none). The exclusion statements in the manuscript use this estimand and interval. Per-cohort p_fl: Freedman-Lane permutation, 9,999 permutations, (b + 1)/(B + 1).",
-        "Coverage of the intervals by simulation of the CLR outcome with each cohort's real trait and covariates (1,000 replicates per table and rho; rho 0 to 0.30; tau 0 to 0.10). Pass rules: (a) per-cohort coverage averaged over targets 0.93 to 0.97; (b) pooled HKSJ coverage averaged over targets with k >= 2 at least 0.93. Both pass (results/late_a46/coverage_fix1/; the first run in results/late_a46/coverage/ had a sign error and is kept unchanged).",
+        "Partial correlation of the target's CLR abundance with the trait given the cohort's covariates, by OLS (r = t / sqrt(t^2 + df), Fisher z with SE 1 / sqrt(df - 1)); for Charolais a point-biserial partial correlation (extreme-group design). Pooled by REML with Hartung-Knapp-Sidik-Jonkman intervals (t on k - 1 df), the cohort's own interval where k = 1; fixed-effect and REML-Wald intervals beside it. Benchmarks r = 0.30 and 0.15 in the published direction (both bounds where none). The manuscript's exclusion and association statements now use this estimand with the Amendment 47 modified Knapp-Hartung interval (sheet 'A47 intervals'); the HKSJ intervals here are kept as the Amendment 46 record. Per-cohort p_fl: Freedman-Lane permutation, 9,999 permutations, (b + 1)/(B + 1).",
+        "Coverage of the intervals by simulation of the CLR outcome with each cohort's real trait and covariates (1,000 replicates per table and rho; rho 0 to 0.30; tau 0 to 0.10). Pass rules: (a) per-cohort coverage averaged over targets 0.93 to 0.97; (b) pooled HKSJ coverage averaged over targets with k >= 2 at least 0.93. Both pass (results/late_a46/coverage_fix1/; the first run in results/late_a46/coverage/ had a sign error and is kept unchanged). Rule (b) covered tau = 0 only and was averaged over targets, and the Charolais generator was biased by up to 0.05 (Amendment 47 addendum 2); the per-target coverage under heterogeneity and the corrected generator are in the A47 sheets.",
         "ANCOM-BC2 on the methane primary targets with 200 Freedman-Lane permutations (trait residualised on the covariates, residuals permuted within herd or farm), p = (b + 1)/(B + 1). The 'A46 Wallace farms' sheets report the leave-one-farm-out genera (Amendment 40) with per-farm estimates and 95% intervals (uncalibrated within-farm ANCOM-BC2 fits), farms fitted, sign agreement and I^2 (script 117).",
+        "Sheets starting 'A47' are late analyses, run after all primary, late and Amendment 46 results were seen (Amendment 47 and its addenda, in response to a second external review); they set no label. Source files in results/late_a47/; every number the manuscript takes from them is in results/late_a47/manifest_a47.tsv.",
+        "One row per target: the CLR partial r (46.1) pooled by REML with four intervals (modified Knapp-Hartung, the validated procedure; HKSJ; REML-Wald; fixed effect), k = 1 the cohort's own interval; version primary (the Amendment 46 cohorts) and rfi4 (four-cohort RFI with Wallace RFI NRC, sensitivity). excl_30 / excl_15: benchmark excluded (published direction; both bounds where none), pointwise; excl0: interval excludes 0. tau_hat, tau_req and statement: the per-target validated range (Amendment 47 addendum item 3); 'descriptive' statements are not claims.",
+        "Coverage by simulation (Check 1: pooling alone on each cohort configuration; Check 2: end to end on the real traits and covariates with the corrected generator), rho 0 to +-0.30, tau 0 to 0.30, B = 1,000 (5,000 near 0.93). Pass: coverage + 2 MCSE >= 0.93 in every cell with tau <= 0.10. 'A47 validation' gives the result per method, 'A47 coverage, Check 1' and 'A47 coverage, Check 2' every cell, 'A47 configurations' every pool, 'A47 per-cohort coverage' the k = 1 intervals, 'A47 generator check' the population partial correlation of the corrected and the Amendment 46 generators.",
+        "'A47 labels': the replication classification re-derived under the CLR estimand with modified Knapp-Hartung pooling, beside the Amendment 42 CLR and the Amendment 37 primary labels (the primary labels are unchanged). 'A47 null scan': for each scan table, 200 Freedman-Lane null replicates; P(any BH rejection at q < 0.05), the FDR under the complete null, with a Clopper-Pearson 95% CI, and the discovery counts.",
         "scripts/104_additional_files.py, from the files named in the Versions sheet."]})
     f = os.path.join(OD, "Additional_file_2_estimates.xlsx")
-    A = a46_sheets(); extra = [(k, v) for k, v in A.items() if v is not None]
+    A = {**a46_sheets(), **a47_sheets()}; extra = [(k, v) for k, v in A.items() if v is not None]
     write_book(f, [("Notes", notes), ("Versions", V), ("Per-cohort estimates", CO), ("Pooled results", PL)] + extra,
                {"Per-cohort estimates": 4, "Pooled results": 4, "A46 effect size, per cohort": 3, "A46 effect size, pooled": 3}); return f, CO, PL
 
@@ -311,6 +315,28 @@ def a46_sheets():
     out["A46 Freedman-Lane ANCOM-BC2"] = opt(f"{A46}/effect_size/ancombc2_fl_methane.tsv")
     out["A46 Wallace farms, summary"] = opt(f"{A46}/wallace_farms/summary.tsv")          # script 117 (46.5.4)
     out["A46 Wallace farms, per farm"] = opt(f"{A46}/wallace_farms/per_farm_intervals.tsv")
+    return out
+
+# ---------------------------------------------------------------- Amendment 47 (late analysis, run after all primary, late and Amendment 46 results were seen)
+A47 = "results/late_a47"
+def a47_sheets():
+    """Amendment 47 outputs as sheets (the stopped first launch in intervals_run1_generator_stop/ is not shown; it computed no result)."""
+    out = {}
+    def opt(f): return rd(f) if os.path.exists(P(f)) else None
+    out["A47 intervals"] = opt(f"{A47}/intervals/pooled_intervals.tsv")
+    out["A47 exclusion counts"] = opt(f"{A47}/intervals/exclusion_counts.tsv")
+    out["A47 validation"] = opt(f"{A47}/intervals/validation.tsv")
+    out["A47 coverage, Check 1"] = opt(f"{A47}/intervals/check1_cells.tsv")
+    out["A47 coverage, Check 2"] = opt(f"{A47}/intervals/check2_cells.tsv")
+    out["A47 configurations"] = opt(f"{A47}/intervals/configuration_validation.tsv")
+    out["A47 per-cohort coverage"] = opt(f"{A47}/intervals/check2_cohort.tsv")
+    out["A47 generator check"] = opt(f"{A47}/intervals/generator_check.tsv")
+    lr, lm = opt(f"{A47}/labels/labels_rfi.tsv"), opt(f"{A47}/labels/labels_methane.tsv")
+    out["A47 labels"] = pd.concat([lr, lm], ignore_index=True) if lr is not None and lm is not None else None
+    out["A47 four-cohort RFI"] = opt(f"{A47}/rfi4/pooled.tsv")
+    out["A47 four-cohort labels"] = opt(f"{A47}/rfi4/labels.tsv")
+    out["A47 null scan"] = opt(f"{A47}/null_scan/summary.tsv")
+    out["A47 null scan, replicates"] = opt(f"{A47}/null_scan/replicates.tsv")
     return out
 
 # ---------------------------------------------------------------- formatting
