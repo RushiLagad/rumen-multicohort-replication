@@ -1,0 +1,3 @@
+2026-11-13 13:52:25 start | Amendment 47 commit f9cb173e | scripts commit 7e37cc6f | C 30
+2026-11-13 13:52:26 dump done: animals 1004 | features 452 | df 993
+2026-11-13 13:52:46 120 FAILED (see logs/late_a47/120_intervals.log)

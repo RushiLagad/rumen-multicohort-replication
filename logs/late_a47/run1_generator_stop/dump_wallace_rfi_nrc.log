@@ -1,0 +1,39 @@
+wallace_prokaryotes real _rfi_nrc | cows 1004 | df 993 | terms: farm + parity + dim + CH4_z 
+targets 36 | matched 16 | pass 10% prevalence 10 | features 452 
+  id       set                                target   rank n_present
+  T4        Li unclassified Methanomassiliicoccaceae family         0
+  T5        Li                               Blautia  genus         1
+ N04    Nelore                       Acidaminococcus  genus         1
+ N09    Nelore                                 Bosea  genus         1
+ N11    Nelore                             Comamonas  genus         1
+ N12    Nelore                           Caulobacter  genus         1
+ N13    Nelore                           Eubacterium  genus         1
+ N15    Nelore                           Selenomonas  genus         1
+ N20    Nelore                        Pseudonocardia  genus         1
+ N21    Nelore                        Brevibacterium  genus         1
+ N23    Nelore                         Succinivibrio  genus         1
+  C1 Canonical                    Methanobrevibacter  genus         1
+  C2 Canonical                   Succinivibrionaceae family         6
+  C3 Canonical                           Fibrobacter  genus         1
+  C4 Canonical                          Ruminococcus  genus         1
+  C5 Canonical                            Prevotella  genus         1
+  C6 Canonical                          Butyrivibrio  genus         1
+            feature prevalence pass10
+               <NA>        NaN     NA
+            Blautia      0.206   TRUE
+    Acidaminococcus      0.057  FALSE
+              Bosea      0.001  FALSE
+          Comamonas      0.093  FALSE
+        Caulobacter      0.001  FALSE
+        Eubacterium      0.168   TRUE
+        Selenomonas      0.844   TRUE
+     Pseudonocardia      0.001  FALSE
+     Brevibacterium      0.006  FALSE
+      Succinivibrio      0.812   TRUE
+ Methanobrevibacter      1.000   TRUE
+             TGT_C2      0.992   TRUE
+        Fibrobacter      0.979   TRUE
+       Ruminococcus      0.999   TRUE
+         Prevotella      1.000   TRUE
+       Butyrivibrio      0.894   TRUE
+late analysis, run after all primary results were seen (Amendment 46) | dump wallace_prokaryotes_rfi_nrc | animals 1004 | features 452 | df 993 | design groups farm  

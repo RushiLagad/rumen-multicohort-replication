@@ -1,0 +1,11 @@
+late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47) | 47.1 | designated procedure: modified Knapp-Hartung | cores 30 | B 1000 -> 5000 | cells 45 
+Wallace RFI NRC (CLR, 46.1 estimand): n 1004 df 993 targets 10 
+pools with k >= 2: primary 18, primary_loo 15, rfi4 10, rfi4_loo 32 
+distinct cohort configurations: 13 (primary 5 )
+late analysis, run after all primary, late and Amendment 46 results were seen (Amendment 47)
+seconds per pooled fit (with overhead): 0.0033
+pooling tasks: (13 configurations + 75 pools) x 45 cells = 3960, at B = 1000
+projected wall time at B = 1000 on 30 cores: 0.12 h; extension of borderline cells to B = 5000 adds up to 0.48 h if every cell were borderline (typically a small fraction)
+generator check (20000 permutations per table, 18 s): corrected |diff| max 0.0535 (largest MCSE 0.0014); Amendment 46 generator diff -0.0535 to 0.0214 (largest |diff| in charolais_mrna)
+Error: 47.1 generator check failed: population partial correlation of the corrected generator differs from rho_c by more than 0.005
+Execution halted
