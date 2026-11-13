@@ -26,7 +26,9 @@ lab_layer <- function(data, ...) if (repel) ggrepel::geom_text_repel(data=transf
 q <- function(x) paste0("'", gsub("'", "\\\\'", x), "'")
 tax_expr <- function(g, suffix="") vapply(seq_along(g), function(i) { x <- g[i]; if (!nzchar(x)) return("")   # empty label: no text and no repel segment
   pp <- strsplit(sub(" \\((.*)\\)$", "_(\\1)", x), "[_ ]")[[1]]; lat <- grepl("^[A-Z][a-z]+$", pp[1]) && !grepl("^(UCG|CAG|NK|FD|NED)", pp[1])
-  rest <- paste(pp[-1], collapse=" "); e <- if (lat) paste0("italic(", q(pp[1]), ")") else q(pp[1])
+  rest <- paste(pp[-1], collapse=" "); sfx <- suffix[min(i, length(suffix))]
+  if (lat && !nzchar(rest) && startsWith(sfx, ",")) return(paste0("italic(", q(paste0(pp[1], ",")), ")*", q(substring(sfx, 2))))   # comma inside the italic run: no italic-correction gap
+  e <- if (lat) paste0("italic(", q(pp[1]), ")") else q(pp[1])
   if (nzchar(rest)) e <- paste0(e, "*", q(paste0(" ", rest))); if (nzchar(suffix[min(i, length(suffix))])) e <- paste0(e, "*", q(suffix[min(i, length(suffix))])); e }, "")
 
 # ---------------- Figure 3
@@ -44,7 +46,7 @@ pA <- ggplot(N, aes(lab, fpr)) +
   geom_hline(yintercept=0.05, colour=ink2, linetype="22", linewidth=0.35) +
   geom_jitter(width=0.18, height=0, size=0.45, alpha=0.35, colour=blue2) +
   geom_boxplot(width=0.45, outlier.shape=NA, fill=NA, colour=blue, linewidth=0.45) +
-  geom_text(data=sN, aes(lab, top + 0.035, label=paste0("max ", format(maxq, big.mark=","), "\nat q < 0.05")), size=2.25, colour=ink2, lineheight=0.9) +
+  geom_text(data=sN, aes(lab, top + 0.035, label=paste0("max ", trimws(format(maxq, big.mark=",")), "\nat q < 0.05")), size=2.25, colour=ink2, lineheight=0.9) +
   annotate("text", x=5.45, y=0.05, label="expected 5%", hjust=1, vjust=-0.6, size=2.25, colour=ink2) +
   scale_y_continuous(labels=function(v) paste0(round(100 * v), "%"), expand=expansion(mult=c(0.02, 0.18))) +
   labs(title="a  False positives across 200 shuffles", x=NULL, y="Genera at nominal p < 0.05") +
