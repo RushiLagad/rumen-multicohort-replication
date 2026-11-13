@@ -1,0 +1,24 @@
+46.5.1: 282 permutation p converted to (b + 1)/(B + 1); 17 were 0, now none
+wrote /data/rumen_multicohort/results/additional_files/Additional_file_1_targets.xlsx | targets 82
+wrote /data/rumen_multicohort/results/additional_files/Additional_file_2_estimates.xlsx | per-cohort rows 397 | pooled rows 1059
+label                                              not replicated  not replicated (direction not stated)  opposite sign  untestable
+version                                                                                                                            
+Methane ALDEx2 (late)                                          10                                      1              0          30
+Methane CLR                                                     9                                      1              1          30
+Methane LinDA (late)                                           10                                      1              0          30
+Methane primary                                                10                                      1              0          30
+Methane with re-analysis                                       10                                      1              0          30
+Methane, Wallace depth-adjusted                                10                                      1              0          30
+Methane, Wallace depth-adjusted, with re-analysis              10                                      1              0          30
+Methane, Wallace per kg DMI                                    10                                      1              0          30
+Methane, Wallace per kg DMI, with re-analysis                  10                                      1              0          30
+Methane, Wallace without SE1                                   10                                      1              0          30
+Methane, Wallace without SE1, with re-analysis                 10                                      1              0          30
+RFI + Wallace RFI NRC                                          20                                      7              0          49
+RFI ALDEx2 (late)                                              20                                      7              0          49
+RFI CLR                                                        20                                      7              0          49
+RFI LinDA (late)                                               20                                      7              0          49
+RFI primary                                                    20                                      7              0          49
+RFI uncalibrated                                               20                                      7              0          49
+RFI uncalibrated, Alberta 529                                  20                                      7              0          49
+RFI, Alberta 529                                               20                                      7              0          49

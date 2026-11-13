@@ -1,0 +1,11 @@
+Fontconfig warning: using without calling FcInit()
+wrote /data/rumen_multicohort/results/figures_manuscript/fig2_forest_pooled.{pdf,png} 
+== Figure 2 (CLR, modified Knapp-Hartung): classes by arm
+         
+          Excludes any effect in the published direction Excludes r ≥ 0.15
+  Methane                                              2                 4
+  RFI                                                  1                 4
+         
+          Excludes r ≥ 0.30 Not resolved: r = 0.30 inside the interval
+  Methane                 0                                          5
+  RFI                     3                                         19
