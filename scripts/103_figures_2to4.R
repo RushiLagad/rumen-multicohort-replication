@@ -109,25 +109,32 @@ S$robust <- S$genus %in% rob
 e <- rd(file.path(root, "results", "methane_pooled", "estimates_calibrated.tsv"))
 m2 <- data.frame(genus="Succinivibrionaceae (M2)", x=e$W[e$id == "M2" & e$cohort == "wallace"], y=e$W[e$id == "M2" & e$cohort == "difford"]); stopifnot(nrow(m2) == 1)
 ct <- cor.test(S$x, S$y, method="spearman", exact=FALSE); ctr <- cor.test(S$xr, S$yr, method="spearman", exact=FALSE)
+pos <- rbind(   # genus, label x, label y, hjust
+  c("Oribacterium", -8.2, -0.55, 0), c("Prevotella_7", -7.9, 0.62, 0), c("Shuttleworthia", -6.6, 1.35, 0.5), c("Elusimicrobium", -4.2, 1.35, 0.5),
+  c("Prevotella_9", -4.85, 0.41, 1), c("FD2005", -4.6, -0.62, 1), c("NED5E9", -4.1, -1.3, 1), c("Ruminococcus", 3.0, 0.6, 0),
+  c("Prevotellaceae_UCG-004", 5.54, 1.25, 0.5), c("Prevotellaceae_UCG-003", 6.6, 0.75, 0), c("Prevotellaceae_UCG-001", 7.65, 0.13, 0),
+  c("Prevotellaceae_NK3B31_group", 6.35, -0.25, 0), c("Moryella", 7.85, -0.62, 0), c("Butyrivibrio", 5.25, -0.78, 1),
+  c("Christensenellaceae_R-7_group", 6.35, -1.8, 0), c("NK4A214_group", 6.35, -1.45, 0))
+LB <- merge(S[S$robust, c("genus", "x", "y")], data.frame(genus=pos[, 1], lx=as.numeric(pos[, 2]), ly=as.numeric(pos[, 3]), hj=as.numeric(pos[, 4])), all.x=TRUE)
+stopifnot("every robust genus needs a label position" = !anyNA(LB$lx))
+LB$e <- tax_expr(LB$genus)
+LB$sx <- ifelse(LB$hj == 0, LB$lx - 0.12, ifelse(LB$hj == 1, LB$lx + 0.12, LB$lx)); LB$sy <- ifelse(LB$hj == 0.5, LB$ly - sign(LB$ly - LB$y) * 0.1, LB$ly)
 p_scatter <- ggplot(S, aes(x, y)) +
   annotate("rect", xmin=-Inf, xmax=Inf, ymin=-1.96, ymax=1.96, fill="#f0efec") +
   geom_hline(yintercept=0, colour=ink2, linewidth=0.3) + geom_vline(xintercept=0, colour=ink2, linewidth=0.3) +
   geom_point(data=S[!S$robust, ], colour=grey, size=1.4) +
   geom_point(data=S[S$robust, ], colour=blue, size=1.9) +
   geom_point(data=m2, shape=23, fill=orange, colour=ink, size=2.8) +
-  # Robust-genus labels repel from every plotted point (blank labels for the grey points and for the M2 diamond and its
-  # label area), not only from each other. The M2 label sits at a fixed spot centred just below the diamond: repelled
-  # placement had put it on the grey point at about (-4.5, 0).
-  # blank labels along y = 0 keep the repelled labels off the axis line
-  lab_layer(data=rbind(data.frame(x=S$x, y=S$y, genus=tax_expr(ifelse(S$robust, S$genus, ""))),
-                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus=""),
-                       data.frame(x=seq(min(S$x), max(S$x) * 1.15, length.out=80), y=0, genus="")), aes(label=genus, segment.alpha=sa), box.padding=0.5, point.padding=0.45, force=3, force_pull=0.4, max.iter=50000) +
+  # Fixed label positions for the robust genera (repelled placement differed between machines and crossed leader lines).
+  # Each label sits beside its point; a short leader joins them. Positions are in data units and are checked to exist for every robust genus.
+  geom_segment(data=LB, aes(x=x, y=y, xend=sx, yend=sy), colour=ink2, linewidth=0.3) +
+  geom_text(data=LB, aes(x=lx, y=ly, label=e, hjust=hj), parse=TRUE, size=2.3, colour=ink2, vjust=0.5) +
   geom_text(data=transform(m2, genus=tax_expr(genus)), aes(label=genus), parse=TRUE, vjust=1, nudge_y=-0.2, size=2.3, colour=ink2) +
   annotate("text", x=min(c(S$x, m2$x)), y=2.85, hjust=0, vjust=1, size=2.5, colour=ink2, lineheight=1.05,   # hjust 0: both lines left-aligned
            label=sprintf("%d shared genera\nSpearman rho = %s (descriptive)", nrow(S), sub("^-", "\u2212", sprintf("%.2f", ct$estimate)))) +
   annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
   labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9), labels=mlab) +
-  scale_x_continuous(expand=expansion(mult=c(0.04, 0.16)), labels=mlab) + theme_f   # room on the right for the crowded positive-W labels
+  scale_x_continuous(limits=c(-8.7, 11.2), expand=expansion(0), labels=mlab) + theme_f   # room on the right for the crowded positive-W labels
 save2(p_scatter, "fig5_wallace_vs_difford", W170, 5.0)
 
 # ---------------- numbers for the manuscript text
