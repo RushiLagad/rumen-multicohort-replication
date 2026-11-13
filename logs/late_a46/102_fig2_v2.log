@@ -1,0 +1,11 @@
+Fontconfig warning: using without calling FcInit()
+wrote /data/rumen_multicohort/results/figures_manuscript/fig2_forest_pooled.{pdf,png} 
+== Figure 2 (CLR, HKSJ): classes by arm
+         
+          Excludes any effect in the published direction Excludes r ≥ 0.15
+  Methane                                              2                 5
+  RFI                                                  1                 6
+         
+          Excludes r ≥ 0.30 Not resolved: r = 0.30 inside the interval
+  Methane                 0                                          4
+  RFI                     2                                         18
