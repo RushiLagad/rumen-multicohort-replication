@@ -4,6 +4,9 @@
 # fig4_clade_ratio_trait and fig5_wallace_vs_difford, each .pdf and .png). Figure numbers follow the order the manuscript cites them.
 # Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the
 # manuscript figure legends). Panel headers a and b in Figure 3 are kept.
+# Amendment 46.5 (reporting only): taxon names in italics (46.5.7); permutation p as (b + 1)/(B + 1) in Figure 4 (46.5.1); the Figure 4 pooling of
+# Difford g per day with Wallace per kg intake labelled an exploratory comparison of different outcomes (46.5.5); the Figure 5 correlation shown
+# without a p value, because genera are not independent (46.5.4).
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); od <- file.path(root, "results", "figures_manuscript"); dir.create(od, showWarnings=FALSE)
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote=""); rc <- function(f) read.csv(f, check.names=FALSE, stringsAsFactors=FALSE)
@@ -18,7 +21,13 @@ W170 <- 170 / 25.4
 save2 <- function(p, name, w, h) { ggsave(file.path(od, paste0(name, ".pdf")), p, width=w, height=h, device=cairo_pdf); ggsave(file.path(od, paste0(name, ".png")), p, width=w, height=h, dpi=300, bg=bg); cat("wrote", name, "\n") }
 tk <- rd(file.path(root, "plan", "target_keys.tsv"))
 repel <- requireNamespace("ggrepel", quietly=TRUE)
-lab_layer <- function(data, ...) if (repel) ggrepel::geom_text_repel(data=data, ..., size=2.3, colour=ink2, min.segment.length=0.2, seed=1, max.overlaps=30) else geom_text(data=data, ..., size=2.3, colour=ink2, vjust=-0.7, check_overlap=TRUE)
+lab_layer <- function(data, ...) if (repel) ggrepel::geom_text_repel(data=transform(data, sa=ifelse(nzchar(genus), 1, 0)), ..., parse=TRUE, size=2.3, colour=ink2, min.segment.length=0.2, seed=1, max.overlaps=30)   # sa: no segment for blank (repel-only) labels else geom_text(data=data, ..., parse=TRUE, size=2.3, colour=ink2, vjust=-0.7, check_overlap=TRUE)
+# plotmath for a taxon name: the Latin part in italics, SILVA placeholder suffixes ("UCG-001", "group") and codes in roman (46.5.7)
+q <- function(x) paste0("'", gsub("'", "\\\\'", x), "'")
+tax_expr <- function(g, suffix="") vapply(seq_along(g), function(i) { x <- g[i]; if (!nzchar(x)) return("")   # empty label: no text and no repel segment
+  pp <- strsplit(sub(" \\((.*)\\)$", "_(\\1)", x), "[_ ]")[[1]]; lat <- grepl("^[A-Z][a-z]+$", pp[1]) && !grepl("^(UCG|CAG|NK|FD|NED)", pp[1])
+  rest <- paste(pp[-1], collapse=" "); e <- if (lat) paste0("italic(", q(pp[1]), ")") else q(pp[1])
+  if (nzchar(rest)) e <- paste0(e, "*", q(paste0(" ", rest))); if (nzchar(suffix[min(i, length(suffix))])) e <- paste0(e, "*", q(suffix[min(i, length(suffix))])); e }, "")
 
 # ---------------- Figure 3
 tabs <- data.frame(table=c("nelore_genus", "charolais_mrna_genus", "alberta_genus", "difford_bact", "wallace_prokaryotes"),
@@ -46,6 +55,7 @@ B <- rbind(nsd("methane_dryrun", "%s_seed%d_targets.tsv", "difford_bact", "ANCOM
            nsd("clr", "%s_seed%d_clr_targets.tsv", "difford_bact", "CLR linear model"), nsd("clr", "%s_seed%d_clr_targets.tsv", "wallace_prokaryotes", "CLR linear model"))
 B <- B[B$id != "M1", ]; B$key <- paste(B$table, B$id); B <- B[B$key %in% B$key[B$method == "CLR linear model"] & B$key %in% B$key[B$method == "ANCOM-BC2"], ]
 B$lab <- paste0(tk$target[match(B$id, tk$id)], ", ", ifelse(B$table == "difford_bact", "Difford", "Wallace"))
+B$lab_e <- tax_expr(tk$target[match(B$id, tk$id)], paste0(", ", ifelse(B$table == "difford_bact", "Difford", "Wallace")))
 B$lab <- factor(B$lab, B %>% filter(method == "ANCOM-BC2") %>% arrange(sd) %>% pull(lab))
 seg <- B %>% group_by(lab) %>% summarise(lo=min(sd), hi=max(sd), .groups="drop")
 pB <- ggplot(B, aes(sd, lab)) +
@@ -53,6 +63,7 @@ pB <- ggplot(B, aes(sd, lab)) +
   geom_segment(data=seg, aes(x=lo, xend=hi, y=lab, yend=lab), colour=grid, linewidth=1.3, inherit.aes=FALSE) +
   geom_point(aes(colour=method), size=1.9) +
   scale_colour_manual(values=c("ANCOM-BC2"=blue, "CLR linear model"=orange)) +
+  scale_y_discrete(labels=function(b) parse(text=B$lab_e[match(b, B$lab)])) +
   labs(title="b  Null spread per methane target", x="SD of W across 200 shuffles\n(1 = calibrated)", y=NULL) +
   theme_f + theme(panel.grid.major.y=element_blank(), legend.justification=c(1, 0), legend.direction="vertical",
                   legend.background=element_rect(fill=NA, colour=NA)) +
@@ -64,7 +75,7 @@ save2(f2, "fig3_calibration", W170, 3.6)
 
 # ---------------- Figure 4 (clade ratio)
 coh <- function(dirn, lab, cohort, trait) { x <- rd(file.path(root, "results", dirn, "estimates_calibrated.tsv")); x <- x[x$id == "M1" & x$cohort == cohort, ]; stopifnot(nrow(x) == 1)
-  data.frame(row=lab, r=x$r, lo=x$lo, hi=x$hi, n=x$n, p=x$p_perm, kind="Single cohort", trait=trait) }
+  data.frame(row=lab, r=x$r, lo=x$lo, hi=x$hi, n=x$n, p=(round(x$p_perm * x$k_null) + 1) / (x$k_null + 1), kind="Single cohort", trait=trait) }   # (b + 1)/(B + 1)
 pool <- function(dirn, lab, trait) { x <- rd(file.path(root, "results", dirn, "classification_primary.tsv")); x <- x[x$id == "M1", ]; stopifnot(nrow(x) == 1)
   data.frame(row=lab, r=x$r, lo=x$ci_lo, hi=x$ci_hi, n=NA, p=x$p, kind="Pooled", trait=trait) }
 M <- rbind(coh("methane_pooled", "Difford, g per day", "difford", "g per day"),
@@ -73,8 +84,8 @@ M <- rbind(coh("methane_pooled", "Difford, g per day", "difford", "g per day"),
            coh("methane_pooled_depth", "Wallace, depth-adjusted, g per day", "wallace", "g per day"),
            coh("methane_pooled_ch4_dmi", "Wallace, per kg intake", "wallace", "per kg intake"),
            pool("methane_pooled", "Pooled, g per day (primary)", "g per day"),
-           pool("methane_pooled_ch4_dmi", "Pooled, Difford g per day + Wallace per kg intake", "per kg intake"))
-M$row <- factor(M$row, rev(M$row)); M$plab <- ifelse(M$kind == "Pooled", "", ifelse(M$p < 0.005, "p < 0.005", sprintf("p = %.2f", M$p)))
+           pool("methane_pooled_ch4_dmi", "Exploratory: pooled Difford g per day\nwith Wallace per kg intake (different outcomes)", "per kg intake"))
+M$row <- factor(M$row, rev(M$row)); M$plab <- ifelse(M$kind == "Pooled", "", ifelse(M$p < 0.01, sprintf("p = %.3f", M$p), sprintf("p = %.2f", M$p)))
 p_ratio <- ggplot(M, aes(r, row)) +
   geom_vline(xintercept=0, colour=ink2, linetype="22", linewidth=0.35) +
   geom_errorbarh(aes(xmin=lo, xmax=hi, colour=trait), height=0, linewidth=1.1) +
@@ -103,11 +114,11 @@ p_scatter <- ggplot(S, aes(x, y)) +
   # Robust-genus labels repel from every plotted point (blank labels for the grey points and for the M2 diamond and its
   # label area), not only from each other. The M2 label sits at a fixed spot centred just below the diamond: repelled
   # placement had put it on the grey point at about (-4.5, 0).
-  lab_layer(data=rbind(data.frame(x=S$x, y=S$y, genus=ifelse(S$robust, S$genus, "")),
-                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus="")), aes(label=genus), box.padding=0.45, point.padding=0.25, force=2, force_pull=0.5, max.iter=50000) +
-  geom_text(data=m2, aes(label=genus), vjust=1, nudge_y=-0.2, size=2.3, colour=ink2) +
+  lab_layer(data=rbind(data.frame(x=S$x, y=S$y, genus=tax_expr(ifelse(S$robust, S$genus, ""))),
+                       data.frame(x=m2$x + c(0, -1.2, 0, 1.2), y=m2$y + c(0, -0.25, -0.25, -0.25), genus="")), aes(label=genus, segment.alpha=sa), box.padding=0.45, point.padding=0.25, force=2, force_pull=0.5, max.iter=50000) +
+  geom_text(data=transform(m2, genus=tax_expr(genus)), aes(label=genus), parse=TRUE, vjust=1, nudge_y=-0.2, size=2.3, colour=ink2) +
   annotate("text", x=-Inf, y=Inf, hjust=-0.05, vjust=1.5, size=2.5, colour=ink2,
-           label=sprintf("%d shared genera\nSpearman rho = %.2f (p = %.3f)", nrow(S), ct$estimate, ct$p.value)) +
+           label=sprintf("%d shared genera\nSpearman rho = %.2f (descriptive)", nrow(S), ct$estimate)) +
   annotate("text", x=Inf, y=1.96, hjust=1.02, vjust=-0.5, size=2.25, colour=ink2, label="Difford |W| < 1.96") +
   labs(x="Calibrated W, Wallace (1,009 cows, 7 farms)", y="Calibrated W, Difford (749 cows, 6 herds)") + scale_y_continuous(limits=c(min(c(S$y, m2$y, -2)) - 0.3, 2.9)) +
   scale_x_continuous(expand=expansion(mult=c(0.04, 0.16))) + theme_f   # room on the right for the crowded positive-W labels
