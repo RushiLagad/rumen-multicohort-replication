@@ -1,183 +1,175 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="160.2mm" viewBox="0 0 642 605" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs><rect width="642" height="605" fill="white"/><text x="6.0" y="16.0" font-size="13.3" font-weight="bold" fill="#0b0b0b" text-anchor="start">a</text>
-<text x="19.0" y="16.0" font-size="10.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Five public cohorts</text>
-<text x="6.0" y="33.0" font-size="9.2" font-weight="bold" fill="#104281" text-anchor="start">Feed efficiency, beef cattle</text>
-<rect x="6.0" y="39.0" width="124.0" height="96.0" rx="3" fill="#eaf1fb" stroke="#256abf" stroke-width="0.9"/>
-<rect x="6.0" y="39.0" width="3.2" height="96" fill="#256abf"/>
-<text x="15.0" y="52.0" font-size="9.2" font-weight="bold" fill="#0b0b0b" text-anchor="start">Nelore</text>
-<text x="124.0" y="52.0" font-size="9.2" font-weight="bold" fill="#256abf" text-anchor="end">n = 52</text>
-<text x="15.0" y="64.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Brazil</text>
-<text x="15.0" y="74.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJNA987743</text>
-<text x="15.0" y="89.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">Shotgun metagenome</text>
-<text x="15.0" y="100.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">RFI, continuous</text>
-<text x="15.0" y="117.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Design terms:</text>
-<text x="15.0" y="127.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">diet, slaughter batch</text>
-<rect x="136.0" y="39.0" width="124.0" height="96.0" rx="3" fill="#eaf1fb" stroke="#256abf" stroke-width="0.9"/>
-<rect x="136.0" y="39.0" width="3.2" height="96" fill="#256abf"/>
-<text x="145.0" y="52.0" font-size="9.2" font-weight="bold" fill="#0b0b0b" text-anchor="start">Charolais</text>
-<text x="254.0" y="52.0" font-size="9.2" font-weight="bold" fill="#256abf" text-anchor="end">n = 30</text>
-<text x="145.0" y="64.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">France</text>
-<text x="145.0" y="74.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJEB70895</text>
-<text x="145.0" y="89.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">Metatranscriptome</text>
-<text x="145.0" y="100.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">RFI, high vs low class</text>
-<text x="145.0" y="117.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Design terms:</text>
-<text x="145.0" y="127.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">diet, year</text>
-<rect x="266.0" y="39.0" width="124.0" height="96.0" rx="3" fill="#eaf1fb" stroke="#256abf" stroke-width="0.9"/>
-<rect x="266.0" y="39.0" width="3.2" height="96" fill="#256abf"/>
-<text x="275.0" y="52.0" font-size="9.2" font-weight="bold" fill="#0b0b0b" text-anchor="start">Alberta</text>
-<text x="384.0" y="52.0" font-size="9.2" font-weight="bold" fill="#256abf" text-anchor="end">n = 567</text>
-<text x="275.0" y="64.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Canada</text>
-<text x="275.0" y="74.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJNA393057</text>
-<text x="275.0" y="89.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
-<text x="275.0" y="100.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">RFI, continuous</text>
-<text x="275.0" y="117.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Design terms:</text>
-<text x="275.0" y="127.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">management group, breed</text>
-<text x="6.0" y="151.0" font-size="9.2" font-weight="bold" fill="#b8601d" text-anchor="start">Methane, dairy cows</text>
-<rect x="6.0" y="157.0" width="124.0" height="96.0" rx="3" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.9"/>
-<rect x="6.0" y="157.0" width="3.2" height="96" fill="#b8601d"/>
-<text x="15.0" y="170.0" font-size="9.2" font-weight="bold" fill="#0b0b0b" text-anchor="start">Difford</text>
-<text x="124.0" y="170.0" font-size="9.2" font-weight="bold" fill="#b8601d" text-anchor="end">n = 749</text>
-<text x="15.0" y="182.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Denmark</text>
-<text x="15.0" y="192.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJEB28065</text>
-<text x="15.0" y="207.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
-<text x="15.0" y="218.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">CH₄, g per day</text>
-<text x="15.0" y="235.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Design terms:</text>
-<text x="15.0" y="245.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">herd, batch, parity, DIM</text>
-<rect x="136.0" y="157.0" width="124.0" height="96.0" rx="3" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.9"/>
-<rect x="136.0" y="157.0" width="3.2" height="96" fill="#b8601d"/>
-<text x="145.0" y="170.0" font-size="9.2" font-weight="bold" fill="#0b0b0b" text-anchor="start">Wallace</text>
-<text x="254.0" y="170.0" font-size="9.2" font-weight="bold" fill="#b8601d" text-anchor="end">n = 1,009</text>
-<text x="145.0" y="182.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Europe, 7 farms</text>
-<text x="145.0" y="192.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJNA517480</text>
-<text x="145.0" y="207.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
-<text x="145.0" y="218.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">CH₄, g per day</text>
-<text x="145.0" y="235.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Design terms:</text>
-<text x="145.0" y="245.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">farm, parity, DIM</text>
-<text x="272.0" y="171.0" font-size="8.6" font-weight="normal" fill="#52514e" text-anchor="start">About 2,400 animals.</text>
-<text x="272.0" y="193.0" font-size="8.6" font-weight="normal" fill="#52514e" text-anchor="start">All sequence data are</text>
-<text x="272.0" y="204.0" font-size="8.6" font-weight="normal" fill="#52514e" text-anchor="start">public; phenotypes come</text>
-<text x="272.0" y="215.0" font-size="8.6" font-weight="normal" fill="#52514e" text-anchor="start">from the original</text>
-<text x="272.0" y="226.0" font-size="8.6" font-weight="normal" fill="#52514e" text-anchor="start">publications.</text>
-<text x="272.0" y="248.0" font-size="8.6" font-weight="normal" fill="#52514e" text-anchor="start">DIM, days in milk</text>
-<text x="402.0" y="16.0" font-size="13.3" font-weight="bold" fill="#0b0b0b" text-anchor="start">b</text>
-<text x="415.0" y="16.0" font-size="10.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Published targets</text>
-<rect x="402.0" y="39.0" width="234.0" height="68.5" rx="3" fill="white" stroke="#256abf" stroke-width="0.9"/>
-<text x="409.0" y="52.0" font-size="9.2" font-weight="bold" fill="#256abf" text-anchor="start">Feed efficiency: 76 targets</text>
-<rect x="409.0" y="58.0" width="11" height="10" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
-<text x="414.5" y="66.0" font-size="8.0" font-weight="bold" fill="#256abf" text-anchor="middle">T</text>
-<text x="424.0" y="66.0" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Li et al. 2019: 6 taxa</text>
-<rect x="409.0" y="69.5" width="11" height="10" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
-<text x="414.5" y="77.5" font-size="8.0" font-weight="bold" fill="#256abf" text-anchor="middle">N</text>
-<text x="424.0" y="77.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Nelore discovery study: 64 genera</text>
-<rect x="409.0" y="81.0" width="11" height="10" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
-<text x="414.5" y="89.0" font-size="8.0" font-weight="bold" fill="#256abf" text-anchor="middle">C</text>
-<text x="424.0" y="89.0" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Canonical rumen taxa: 6</text>
-<text x="409.0" y="104.5" font-size="8.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">27 testable</text>
-<rect x="402.0" y="114.5" width="234.0" height="91.5" rx="3" fill="white" stroke="#b8601d" stroke-width="0.9"/>
-<text x="409.0" y="127.5" font-size="9.2" font-weight="bold" fill="#b8601d" text-anchor="start">Methane: 6 targets + Nelore genera</text>
-<rect x="409.0" y="133.5" width="11" height="10" rx="1.5" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.6"/>
-<text x="414.5" y="141.5" font-size="8.0" font-weight="bold" fill="#b8601d" text-anchor="middle">M</text>
-<text x="424.0" y="141.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Reported in &gt;1 country: 3</text>
-<text x="424.0" y="153.0" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start"><tspan font-style="italic">M. gottschalkii</tspan> : <tspan font-style="italic">M. ruminantium</tspan></text>
-<text x="424.0" y="164.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">clade ratio; Succinivibrionaceae;</text>
-<text x="424.0" y="176.0" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">total archaea</text>
-<rect x="409.0" y="179.5" width="11" height="10" rx="1.5" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.6"/>
-<text x="414.5" y="187.5" font-size="8.0" font-weight="bold" fill="#b8601d" text-anchor="middle">S</text>
-<text x="424.0" y="187.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Secondary: 3 genera</text>
-<text x="409.0" y="203.0" font-size="8.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">11 testable</text>
-<text x="402.0" y="220.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Testable: mapped feature in at</text>
-<text x="402.0" y="230.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">least 10% of a cohort's animals.</text>
-<text x="402.0" y="240.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">A cohort that reported a target,</text>
-<text x="402.0" y="250.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">or helped choose it, counts as</text>
-<text x="402.0" y="260.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">re-analysis, not replication.</text>
-<text x="6.0" y="279.0" font-size="13.3" font-weight="bold" fill="#0b0b0b" text-anchor="start">c</text>
-<text x="19.0" y="279.0" font-size="10.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Estimation in each cohort, for each target</text>
-<rect x="6.0" y="288.0" width="147.8" height="132.0" rx="3" fill="white" stroke="#52514e" stroke-width="0.8"/>
-<path d="M6.0,304.0 v-13 a3,3 0 0 1 3,-3 h141.8 a3,3 0 0 1 3,3 v13 z" fill="#52514e"/>
-<text x="13.0" y="299.5" font-size="9.2" font-weight="bold" fill="white" text-anchor="start">1  Profiling</text>
-<text x="13.0" y="317.0" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Shotgun, metatranscriptome</text>
-<text x="13.0" y="327.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Host reads removed</text>
-<text x="13.0" y="337.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">(minimap2, ARS-UCD2.0)</text>
-<text x="13.0" y="347.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Kraken 2 + Bracken, GTDB r207</text>
-<text x="13.0" y="357.8" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
-<text x="13.0" y="368.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">cutadapt, DADA2, SILVA 138.1</text>
-<text x="13.0" y="388.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Genus table: genera in</text>
-<text x="13.0" y="398.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">≥10% of animals</text>
-<line x1="155.2" y1="354.0" x2="165.8" y2="354.0" stroke="#52514e" stroke-width="1.1" marker-end="url(#arr)"/>
-<rect x="166.8" y="288.0" width="147.8" height="132.0" rx="3" fill="white" stroke="#52514e" stroke-width="0.8"/>
-<path d="M166.8,304.0 v-13 a3,3 0 0 1 3,-3 h141.8 a3,3 0 0 1 3,3 v13 z" fill="#52514e"/>
-<text x="173.8" y="299.5" font-size="9.2" font-weight="bold" fill="white" text-anchor="start">2  Detection check†</text>
-<text x="173.8" y="317.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Same animals, table and</text>
-<text x="173.8" y="327.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">model, with the design</text>
-<text x="173.8" y="337.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">factor as the tested term</text>
-<text x="173.8" y="357.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Null results count only if</text>
-<text x="173.8" y="368.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">≥1 genus reaches q &lt; 0.05</text>
-<text x="173.8" y="388.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Targets mapped by name;</text>
-<text x="173.8" y="398.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">family targets summed</text>
-<line x1="316.0" y1="354.0" x2="326.5" y2="354.0" stroke="#52514e" stroke-width="1.1" marker-end="url(#arr)"/>
-<rect x="327.5" y="288.0" width="147.8" height="132.0" rx="3" fill="white" stroke="#52514e" stroke-width="0.8"/>
-<path d="M327.5,304.0 v-13 a3,3 0 0 1 3,-3 h141.8 a3,3 0 0 1 3,3 v13 z" fill="#52514e"/>
-<text x="334.5" y="299.5" font-size="9.2" font-weight="bold" fill="white" text-anchor="start">3  ANCOM-BC2</text>
-<text x="334.5" y="317.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">genus ~ design terms + trait</text>
-<text x="334.5" y="337.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start"><tspan font-style="italic">W</tspan> = log fold change / SE</text>
-<text x="334.5" y="357.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Continuous traits z-scored</text>
-<text x="334.5" y="368.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">within cohort, and within</text>
-<text x="334.5" y="378.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">farm for Wallace</text>
-<line x1="476.8" y1="354.0" x2="487.2" y2="354.0" stroke="#52514e" stroke-width="1.1" marker-end="url(#arr)"/>
-<rect x="488.2" y="288.0" width="147.8" height="132.0" rx="3" fill="white" stroke="#52514e" stroke-width="0.8"/>
-<path d="M488.2,304.0 v-13 a3,3 0 0 1 3,-3 h141.8 a3,3 0 0 1 3,3 v13 z" fill="#52514e"/>
-<text x="495.2" y="299.5" font-size="9.2" font-weight="bold" fill="white" text-anchor="start">4  Permutation calibration</text>
-<text x="495.2" y="317.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Trait shuffled 200 times</text>
-<text x="495.2" y="327.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">within design groups</text>
-<text x="495.2" y="388.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start"><tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="72%">cal</tspan> = <tspan font-style="italic">W</tspan> / max(1, SD<tspan baseline-shift="sub" font-size="72%">null</tspan>)</text>
-<text x="495.2" y="398.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start"><tspan font-style="italic">r</tspan> = <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="72%">cal</tspan> / √(<tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="72%">cal</tspan><tspan baseline-shift="super" font-size="72%">2</tspan> + df)</text>
-<text x="495.2" y="408.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">plus permutation <tspan font-style="italic">p</tspan></text>
-<line x1="498.2" y1="374.0" x2="626.0" y2="374.0" stroke="#d6d4cc" stroke-width="0.8"/>
-<path d="M498.2,374.0 L500.4,374.0 L502.5,374.0 L504.6,374.0 L506.8,373.9 L508.9,373.9 L511.0,373.9 L513.2,373.8 L515.3,373.7 L517.4,373.5 L519.5,373.3 L521.7,373.0 L523.8,372.7 L525.9,372.2 L528.1,371.5 L530.2,370.8 L532.3,369.8 L534.4,368.7 L536.6,367.3 L538.7,365.8 L540.8,364.1 L543.0,362.3 L545.1,360.4 L547.2,358.5 L549.4,356.6 L551.5,354.8 L553.6,353.2 L555.7,351.8 L557.9,350.8 L560.0,350.2 L562.1,350.0 L564.3,350.2 L566.4,350.8 L568.5,351.8 L570.6,353.2 L572.8,354.8 L574.9,356.6 L577.0,358.5 L579.2,360.4 L581.3,362.3 L583.4,364.1 L585.5,365.8 L587.7,367.3 L589.8,368.7 L591.9,369.8 L594.1,370.8 L596.2,371.5 L598.3,372.2 L600.5,372.7 L602.6,373.0 L604.7,373.3 L606.8,373.5 L609.0,373.7 L611.1,373.8 L613.2,373.9 L615.4,373.9 L617.5,373.9 L619.6,374.0 L621.7,374.0 L623.9,374.0 L626.0,374.0" fill="none" stroke="#898781" stroke-width="1.2" stroke-dasharray="2.2,1.6"/>
-<path d="M498.2,372.4 L500.4,372.1 L502.5,371.9 L504.6,371.6 L506.8,371.3 L508.9,371.0 L511.0,370.7 L513.2,370.3 L515.3,369.9 L517.4,369.5 L519.5,369.1 L521.7,368.6 L523.8,368.2 L525.9,367.7 L528.1,367.2 L530.2,366.7 L532.3,366.2 L534.4,365.8 L536.6,365.3 L538.7,364.8 L540.8,364.4 L543.0,364.0 L545.1,363.6 L547.2,363.2 L549.4,362.9 L551.5,362.6 L553.6,362.4 L555.7,362.2 L557.9,362.1 L560.0,362.0 L562.1,362.0 L564.3,362.0 L566.4,362.1 L568.5,362.2 L570.6,362.4 L572.8,362.6 L574.9,362.9 L577.0,363.2 L579.2,363.6 L581.3,364.0 L583.4,364.4 L585.5,364.8 L587.7,365.3 L589.8,365.8 L591.9,366.2 L594.1,366.7 L596.2,367.2 L598.3,367.7 L600.5,368.2 L602.6,368.6 L604.7,369.1 L606.8,369.5 L609.0,369.9 L611.1,370.3 L613.2,370.7 L615.4,371.0 L617.5,371.3 L619.6,371.6 L621.7,371.9 L623.9,372.1 L626.0,372.4" fill="none" stroke="#256abf" stroke-width="1.2"/>
-<text x="626.0" y="349.0" font-size="8.0" font-weight="normal" fill="#898781" text-anchor="end">nominal</text>
-<text x="626.0" y="360.0" font-size="8.0" font-weight="normal" fill="#256abf" text-anchor="end">observed</text>
-<text x="6.0" y="446.0" font-size="13.3" font-weight="bold" fill="#0b0b0b" text-anchor="start">d</text>
-<text x="19.0" y="446.0" font-size="10.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Pooling and replication label</text>
-<rect x="6.0" y="455.0" width="330.0" height="142.0" rx="3" fill="white" stroke="#d6d4cc" stroke-width="0.8"/>
-<text x="14.0" y="470.0" font-size="8.6" font-weight="normal" fill="#0b0b0b" text-anchor="start">Fisher <tspan font-style="italic">z</tspan>  →  REML random effects  →  BH within target set</text>
-<rect x="14.0" y="481.0" width="74.0" height="32.0" rx="3" fill="#eaf1fb" stroke="#256abf" stroke-width="0.8"/>
-<text x="51.0" y="494.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="middle">Pooled</text>
-<text x="51.0" y="504.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="middle"><tspan font-style="italic">q</tspan> &lt; 0.05</text>
-<line x1="89.5" y1="497.0" x2="100.0" y2="497.0" stroke="#52514e" stroke-width="1" marker-end="url(#arr)"/>
-<rect x="101.0" y="481.0" width="74.0" height="32.0" rx="3" fill="#eaf1fb" stroke="#256abf" stroke-width="0.8"/>
-<text x="138.0" y="494.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="middle">Same sign as</text>
-<text x="138.0" y="504.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="middle">published</text>
-<line x1="176.5" y1="497.0" x2="187.0" y2="497.0" stroke="#52514e" stroke-width="1" marker-end="url(#arr)"/>
-<rect x="188.0" y="481.0" width="74.0" height="32.0" rx="3" fill="#eaf1fb" stroke="#256abf" stroke-width="0.8"/>
-<text x="225.0" y="494.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="middle">Holds with each</text>
-<text x="225.0" y="504.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="middle">cohort left out</text>
-<line x1="263.5" y1="497.0" x2="274.0" y2="497.0" stroke="#52514e" stroke-width="1" marker-end="url(#arr)"/>
-<rect x="275.0" y="486.0" width="53.0" height="22.0" rx="3" fill="#104281" stroke="#104281" stroke-width="0.8"/>
-<text x="301.5" y="500.0" font-size="8.6" font-weight="bold" fill="white" text-anchor="middle">Replicated</text>
-<text x="14.0" y="528.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Otherwise: single-cohort support, opposite sign,</text>
-<text x="14.0" y="538.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">not replicated, or untestable</text>
-<text x="14.0" y="557.0" font-size="8.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Power and equivalence</text>
-<text x="14.0" y="569.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Effective <tspan font-style="italic">n</tspan>, smallest <tspan font-style="italic">r</tspan> detectable at 80% power, and</text>
-<text x="14.0" y="579.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">whether the 95% CI excludes <tspan font-style="italic">r</tspan> = 0.15 or 0.30 in the</text>
-<text x="14.0" y="589.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">published direction</text>
-<text x="348.0" y="446.0" font-size="13.3" font-weight="bold" fill="#0b0b0b" text-anchor="start">e</text>
-<text x="361.0" y="446.0" font-size="10.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Robustness checks</text>
-<rect x="348.0" y="455.0" width="288.0" height="142.0" rx="3" fill="white" stroke="#d6d4cc" stroke-width="0.8"/>
-<text x="357.0" y="470.0" font-size="8.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Specified before the affected results</text>
-<circle cx="360.0" cy="479.7" r="2.1" fill="#52514e"/>
-<text x="367.0" y="482.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Wallace without its Swedish farm</text>
-<circle cx="360.0" cy="490.1" r="2.1" fill="#52514e"/>
-<text x="367.0" y="492.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Methane per kg dry matter intake</text>
-<circle cx="360.0" cy="500.5" r="2.1" fill="#52514e"/>
-<text x="367.0" y="503.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Wallace as a fourth RFI cohort</text>
-<circle cx="360.0" cy="510.9" r="2.1" fill="#52514e"/>
-<text x="367.0" y="513.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Alberta without possible discovery animals</text>
-<text x="357.0" y="530.1" font-size="8.6" font-weight="bold" fill="#0b0b0b" text-anchor="start">Run after the primary results</text>
-<circle cx="360.0" cy="539.8" r="2.1" fill="white" stroke="#52514e" stroke-width="0.9"/>
-<text x="367.0" y="542.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Sequencing depth as a covariate</text>
-<circle cx="360.0" cy="550.2" r="2.1" fill="white" stroke="#52514e" stroke-width="0.9"/>
-<text x="367.0" y="553.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Second estimator: CLR linear model‡</text>
-<circle cx="360.0" cy="560.6" r="2.1" fill="white" stroke="#52514e" stroke-width="0.9"/>
-<text x="367.0" y="563.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Leave-one-farm-out; untargeted genus scan</text>
-<circle cx="360.0" cy="571.0" r="2.1" fill="white" stroke="#52514e" stroke-width="0.9"/>
-<text x="367.0" y="573.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">LinDA and ALDEx2</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="206.7mm" viewBox="0 0 482 586" font-family="Arial, 'Liberation Sans', Helvetica, sans-serif"><defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker></defs><rect width="482" height="586" fill="white"/><text x="4.0" y="13.0" font-size="12.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">a</text>
+<text x="15.0" y="13.0" font-size="10.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Five public cohorts, about 2,400 animals</text>
+<text x="10.0" y="28.0" font-size="8.0" font-weight="bold" fill="#52514e" text-anchor="start">Cohort</text>
+<text x="52.0" y="28.0" font-size="8.0" font-weight="bold" fill="#52514e" text-anchor="start">n</text>
+<text x="79.0" y="28.0" font-size="8.0" font-weight="bold" fill="#52514e" text-anchor="start">Country</text>
+<text x="142.0" y="28.0" font-size="8.0" font-weight="bold" fill="#52514e" text-anchor="start">Accession</text>
+<text x="203.0" y="28.0" font-size="8.0" font-weight="bold" fill="#52514e" text-anchor="start">Data</text>
+<text x="287.0" y="28.0" font-size="8.0" font-weight="bold" fill="#52514e" text-anchor="start">Trait</text>
+<text x="374.0" y="28.0" font-size="8.0" font-weight="bold" fill="#52514e" text-anchor="start">Design terms</text>
+<line x1="4.0" y1="31.5" x2="478.0" y2="31.5" stroke="#d6d4cc" stroke-width="0.7"/>
+<text x="10.0" y="43.2" font-size="9.0" font-weight="bold" fill="#104281" text-anchor="start">Feed efficiency, beef cattle</text>
+<rect x="4.0" y="46.7" width="474.0" height="36.6" rx="2.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.7"/>
+<rect x="4.0" y="46.7" width="2.8" height="36.6" fill="#256abf"/>
+<text x="10.0" y="55.4" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Nelore</text>
+<text x="52.0" y="55.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">52</text>
+<text x="79.0" y="55.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Brazil</text>
+<text x="142.0" y="55.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJNA987743</text>
+<text x="203.0" y="55.4" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Shotgun metagenome</text>
+<text x="287.0" y="55.4" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">RFI, continuous</text>
+<text x="374.0" y="55.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">diet, slaughter batch</text>
+<text x="10.0" y="66.6" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Charolais</text>
+<text x="52.0" y="66.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">30</text>
+<text x="79.0" y="66.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">France</text>
+<text x="142.0" y="66.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJEB70895</text>
+<text x="203.0" y="66.6" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Metatranscriptome</text>
+<text x="287.0" y="66.6" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">RFI, high vs low class</text>
+<text x="374.0" y="66.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">diet, year</text>
+<text x="10.0" y="77.8" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Alberta</text>
+<text x="52.0" y="77.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">567</text>
+<text x="79.0" y="77.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Canada</text>
+<text x="142.0" y="77.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJNA393057</text>
+<text x="203.0" y="77.8" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
+<text x="287.0" y="77.8" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">RFI, continuous</text>
+<text x="374.0" y="77.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">management group, breed</text>
+<text x="10.0" y="95.0" font-size="9.0" font-weight="bold" fill="#b8601d" text-anchor="start">Methane, dairy cows</text>
+<rect x="4.0" y="98.5" width="474.0" height="25.4" rx="2.5" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.7"/>
+<rect x="4.0" y="98.5" width="2.8" height="25.4" fill="#b8601d"/>
+<text x="10.0" y="107.2" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Difford</text>
+<text x="52.0" y="107.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">749</text>
+<text x="79.0" y="107.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Denmark</text>
+<text x="142.0" y="107.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJEB28065</text>
+<text x="203.0" y="107.2" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
+<text x="287.0" y="107.2" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">CH₄, g per day</text>
+<text x="374.0" y="107.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">herd, batch, parity, DIM</text>
+<text x="10.0" y="118.4" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Wallace</text>
+<text x="52.0" y="118.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">1,009</text>
+<text x="79.0" y="118.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Europe, 7 farms</text>
+<text x="142.0" y="118.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">PRJNA517480</text>
+<text x="203.0" y="118.4" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
+<text x="287.0" y="118.4" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">CH₄, g per day</text>
+<text x="374.0" y="118.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">farm, parity, DIM</text>
+<text x="4.0" y="133.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">All sequence data are public; phenotypes come from the original publications. DIM, days in milk.</text>
+<text x="4.0" y="152.4" font-size="12.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">b</text>
+<text x="15.0" y="152.4" font-size="10.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Published targets</text>
+<rect x="4.0" y="158.4" width="233.0" height="83.7" rx="2.5" fill="white" stroke="#256abf" stroke-width="0.8"/>
+<text x="10.0" y="170.4" font-size="9.0" font-weight="bold" fill="#256abf" text-anchor="start">Feed efficiency: 76 targets</text>
+<rect x="10.0" y="175.2" width="10.5" height="9.4" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
+<text x="15.2" y="182.6" font-size="8.0" font-weight="bold" fill="#256abf" text-anchor="middle">T</text>
+<text x="25.0" y="182.6" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Li et al. 2019: 6 taxa</text>
+<rect x="10.0" y="185.7" width="10.5" height="9.4" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
+<text x="15.2" y="193.1" font-size="8.0" font-weight="bold" fill="#256abf" text-anchor="middle">N</text>
+<text x="25.0" y="193.1" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Nelore discovery study: 64 genera</text>
+<rect x="10.0" y="196.3" width="10.5" height="9.4" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
+<text x="15.2" y="203.7" font-size="8.0" font-weight="bold" fill="#256abf" text-anchor="middle">C</text>
+<text x="25.0" y="203.7" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Canonical rumen taxa: 6</text>
+<text x="10.0" y="238.3" font-size="8.5" font-weight="bold" fill="#0b0b0b" text-anchor="start">27 testable</text>
+<rect x="245.0" y="158.4" width="233.0" height="83.7" rx="2.5" fill="white" stroke="#b8601d" stroke-width="0.8"/>
+<text x="251.0" y="170.4" font-size="9.0" font-weight="bold" fill="#b8601d" text-anchor="start">Methane: 6 targets + Nelore genera</text>
+<rect x="251.0" y="175.2" width="10.5" height="9.4" rx="1.5" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.6"/>
+<text x="256.2" y="182.6" font-size="8.0" font-weight="bold" fill="#b8601d" text-anchor="middle">M</text>
+<text x="266.0" y="182.6" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Reported in more than one country: 3</text>
+<text x="266.0" y="193.1" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start"><tspan font-style="italic">M. gottschalkii</tspan> : <tspan font-style="italic">M. ruminantium</tspan> clade ratio;</text>
+<text x="266.0" y="203.7" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Succinivibrionaceae; total archaea</text>
+<rect x="251.0" y="206.8" width="10.5" height="9.4" rx="1.5" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.6"/>
+<text x="256.2" y="214.2" font-size="8.0" font-weight="bold" fill="#b8601d" text-anchor="middle">S</text>
+<text x="266.0" y="214.2" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Secondary: 3 genera</text>
+<rect x="251.0" y="217.4" width="10.5" height="9.4" rx="1.5" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.6"/>
+<text x="256.2" y="224.8" font-size="8.0" font-weight="bold" fill="#b8601d" text-anchor="middle">N</text>
+<text x="266.0" y="224.8" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Nelore genera reported for residual methane</text>
+<text x="251.0" y="238.3" font-size="8.5" font-weight="bold" fill="#0b0b0b" text-anchor="start">11 testable</text>
+<text x="4.0" y="253.1" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Testable: mapped feature in at least 10% of a cohort's animals. A cohort that reported a target, or helped choose it,</text>
+<text x="4.0" y="262.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">counts as re-analysis, not replication.</text>
+<text x="4.0" y="281.9" font-size="12.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">c</text>
+<text x="15.0" y="281.9" font-size="10.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Estimation in each cohort, for each target</text>
+<rect x="4.0" y="287.9" width="111.8" height="128.5" rx="2.5" fill="white" stroke="#52514e" stroke-width="0.7"/>
+<path d="M4.0,302.9 v-12.5 a2.5,2.5 0 0 1 2.5,-2.5 h106.8 a2.5,2.5 0 0 1 2.5,2.5 v12.5 z" fill="#52514e"/>
+<text x="9.0" y="298.9" font-size="9.0" font-weight="bold" fill="white" text-anchor="start">1  Profiling</text>
+<text x="9.0" y="317.6" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Shotgun and</text>
+<text x="9.0" y="327.8" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">metatranscriptome</text>
+<text x="9.0" y="338.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Host reads removed</text>
+<text x="9.0" y="348.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">(minimap2, ARS-UCD2.0)</text>
+<text x="9.0" y="358.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Kraken 2 + Bracken,</text>
+<text x="9.0" y="368.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">GTDB r207</text>
+<text x="9.0" y="379.0" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">16S rRNA gene</text>
+<text x="9.0" y="389.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">cutadapt, DADA2,</text>
+<text x="9.0" y="399.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">SILVA 138.1</text>
+<text x="9.0" y="409.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Genera in ≥10% of animals</text>
+<line x1="116.5" y1="352.1" x2="124.0" y2="352.1" stroke="#52514e" stroke-width="1.0" marker-end="url(#arr)"/>
+<rect x="124.8" y="287.9" width="111.8" height="128.5" rx="2.5" fill="white" stroke="#52514e" stroke-width="0.7"/>
+<path d="M124.8,302.9 v-12.5 a2.5,2.5 0 0 1 2.5,-2.5 h106.8 a2.5,2.5 0 0 1 2.5,2.5 v12.5 z" fill="#52514e"/>
+<text x="129.8" y="298.9" font-size="9.0" font-weight="bold" fill="white" text-anchor="start">2  Detection check†</text>
+<text x="129.8" y="317.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Same animals, table and</text>
+<text x="129.8" y="327.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">model, with the design</text>
+<text x="129.8" y="338.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">factor as the tested term</text>
+<text x="129.8" y="358.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Null results count only if</text>
+<text x="129.8" y="368.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">≥1 genus reaches q &lt; 0.05</text>
+<text x="129.8" y="389.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Targets mapped by name;</text>
+<text x="129.8" y="399.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">family targets summed</text>
+<line x1="237.3" y1="352.1" x2="244.7" y2="352.1" stroke="#52514e" stroke-width="1.0" marker-end="url(#arr)"/>
+<rect x="245.5" y="287.9" width="111.8" height="128.5" rx="2.5" fill="white" stroke="#52514e" stroke-width="0.7"/>
+<path d="M245.5,302.9 v-12.5 a2.5,2.5 0 0 1 2.5,-2.5 h106.8 a2.5,2.5 0 0 1 2.5,2.5 v12.5 z" fill="#52514e"/>
+<text x="250.5" y="298.9" font-size="9.0" font-weight="bold" fill="white" text-anchor="start">3  ANCOM-BC2</text>
+<text x="250.5" y="317.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">genus ~ design terms + trait</text>
+<text x="250.5" y="338.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start"><tspan font-style="italic">W</tspan> = log fold change / SE</text>
+<text x="250.5" y="358.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Continuous traits z-scored</text>
+<text x="250.5" y="368.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">within cohort, and within</text>
+<text x="250.5" y="379.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">farm for Wallace</text>
+<line x1="358.1" y1="352.1" x2="365.4" y2="352.1" stroke="#52514e" stroke-width="1.0" marker-end="url(#arr)"/>
+<rect x="366.2" y="287.9" width="111.8" height="128.5" rx="2.5" fill="white" stroke="#52514e" stroke-width="0.7"/>
+<path d="M366.2,302.9 v-12.5 a2.5,2.5 0 0 1 2.5,-2.5 h106.8 a2.5,2.5 0 0 1 2.5,2.5 v12.5 z" fill="#52514e"/>
+<text x="371.2" y="298.9" font-size="9.0" font-weight="bold" fill="white" text-anchor="start">4  Calibration</text>
+<text x="371.2" y="317.6" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Permutation null</text>
+<text x="371.2" y="327.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Trait shuffled 200 times</text>
+<text x="371.2" y="338.0" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">within design groups</text>
+<text x="371.2" y="389.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start"><tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="72%">cal</tspan> = <tspan font-style="italic">W</tspan> / max(1, SD<tspan baseline-shift="sub" font-size="72%">null</tspan>)</text>
+<text x="371.2" y="399.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start"><tspan font-style="italic">r</tspan> = <tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="72%">cal</tspan> / √(<tspan font-style="italic">W</tspan><tspan baseline-shift="sub" font-size="72%">cal</tspan><tspan baseline-shift="super" font-size="72%">2</tspan> + df)</text>
+<text x="371.2" y="409.8" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">plus permutation <tspan font-style="italic">p</tspan></text>
+<line x1="373.2" y1="367.3" x2="471.0" y2="367.3" stroke="#d6d4cc" stroke-width="0.7"/>
+<path d="M373.2,367.2 L374.9,367.2 L376.5,367.2 L378.1,367.2 L379.8,367.2 L381.4,367.2 L383.0,367.2 L384.7,367.1 L386.3,367.0 L387.9,366.9 L389.5,366.8 L391.2,366.6 L392.8,366.3 L394.4,366.0 L396.1,365.5 L397.7,365.0 L399.3,364.3 L400.9,363.5 L402.6,362.5 L404.2,361.5 L405.8,360.3 L407.5,359.0 L409.1,357.6 L410.7,356.3 L412.4,354.9 L414.0,353.6 L415.6,352.5 L417.2,351.6 L418.9,350.8 L420.5,350.4 L422.1,350.3 L423.8,350.4 L425.4,350.8 L427.0,351.6 L428.6,352.5 L430.3,353.6 L431.9,354.9 L433.5,356.3 L435.2,357.6 L436.8,359.0 L438.4,360.3 L440.0,361.5 L441.7,362.5 L443.3,363.5 L444.9,364.3 L446.6,365.0 L448.2,365.5 L449.8,366.0 L451.4,366.3 L453.1,366.6 L454.7,366.8 L456.3,366.9 L458.0,367.0 L459.6,367.1 L461.2,367.2 L462.9,367.2 L464.5,367.2 L466.1,367.2 L467.7,367.2 L469.4,367.2 L471.0,367.2" fill="none" stroke="#898781" stroke-width="1.0" stroke-dasharray="2,1.5"/>
+<path d="M373.2,366.1 L374.9,365.9 L376.5,365.8 L378.1,365.6 L379.8,365.4 L381.4,365.1 L383.0,364.9 L384.7,364.6 L386.3,364.4 L387.9,364.1 L389.5,363.8 L391.2,363.4 L392.8,363.1 L394.4,362.8 L396.1,362.4 L397.7,362.1 L399.3,361.8 L400.9,361.4 L402.6,361.1 L404.2,360.8 L405.8,360.4 L407.5,360.2 L409.1,359.9 L410.7,359.6 L412.4,359.4 L414.0,359.2 L415.6,359.0 L417.2,358.9 L418.9,358.8 L420.5,358.8 L422.1,358.8 L423.8,358.8 L425.4,358.8 L427.0,358.9 L428.6,359.0 L430.3,359.2 L431.9,359.4 L433.5,359.6 L435.2,359.9 L436.8,360.2 L438.4,360.4 L440.0,360.8 L441.7,361.1 L443.3,361.4 L444.9,361.8 L446.6,362.1 L448.2,362.4 L449.8,362.8 L451.4,363.1 L453.1,363.4 L454.7,363.8 L456.3,364.1 L458.0,364.4 L459.6,364.6 L461.2,364.9 L462.9,365.1 L464.5,365.4 L466.1,365.6 L467.7,365.8 L469.4,365.9 L471.0,366.1" fill="none" stroke="#256abf" stroke-width="1.0"/>
+<text x="373.2" y="349.8" font-size="8.0" font-weight="normal" fill="#898781" text-anchor="start">nominal</text>
+<text x="373.2" y="358.8" font-size="8.0" font-weight="normal" fill="#256abf" text-anchor="start">observed</text>
+<text x="4.0" y="435.3" font-size="12.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">d</text>
+<text x="15.0" y="435.3" font-size="10.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Pooling, replication label and effect size</text>
+<text x="245.0" y="435.3" font-size="12.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">e</text>
+<text x="256.0" y="435.3" font-size="10.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Robustness checks</text>
+<text x="10.0" y="454.3" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Fisher <tspan font-style="italic">z</tspan>  →  REML random effects  →  BH within set</text>
+<rect x="10.0" y="460.5" width="151.0" height="11.3" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
+<text x="14.0" y="468.1" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Pooled <tspan font-style="italic">q</tspan> &lt; 0.05</text>
+<rect x="10.0" y="473.3" width="151.0" height="11.3" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
+<text x="14.0" y="480.9" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Same sign as published</text>
+<rect x="10.0" y="486.0" width="151.0" height="11.3" rx="1.5" fill="#eaf1fb" stroke="#256abf" stroke-width="0.6"/>
+<text x="14.0" y="493.6" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Holds with each cohort left out</text>
+<line x1="163.0" y1="478.1" x2="171.0" y2="478.1" stroke="#52514e" stroke-width="1.0" marker-end="url(#arr)"/>
+<rect x="173.0" y="470.1" width="58.0" height="16.0" rx="2.5" fill="#104281" stroke="#104281" stroke-width="0.7"/>
+<text x="202.0" y="481.1" font-size="8.5" font-weight="bold" fill="white" text-anchor="middle">Replicated</text>
+<text x="10.0" y="511.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Otherwise: single-cohort support, opposite sign,</text>
+<text x="10.0" y="521.1" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">not replicated, or untestable</text>
+<text x="10.0" y="536.9" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Effect size and benchmarks</text>
+<text x="10.0" y="546.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">CLR partial <tspan font-style="italic">r</tspan> per cohort; Hartung-Knapp (HKSJ)</text>
+<text x="10.0" y="556.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">pooled intervals, coverage checked by simulation;</text>
+<text x="10.0" y="566.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">does the 95% interval exclude <tspan font-style="italic">r</tspan> = 0.15 or 0.30</text>
+<text x="10.0" y="575.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">in the published direction?</text>
+<text x="252.0" y="454.3" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Specified before the affected results</text>
+<circle cx="255.0" cy="463.5" r="1.9" fill="#52514e"/>
+<text x="261.0" y="466.1" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Wallace without its Swedish farm</text>
+<circle cx="255.0" cy="473.3" r="1.9" fill="#52514e"/>
+<text x="261.0" y="475.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Methane per kg dry matter intake</text>
+<circle cx="255.0" cy="483.0" r="1.9" fill="#52514e"/>
+<text x="261.0" y="485.6" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Wallace as a fourth RFI cohort</text>
+<circle cx="255.0" cy="492.8" r="1.9" fill="#52514e"/>
+<text x="261.0" y="495.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Alberta without possible discovery animals</text>
+<text x="252.0" y="510.1" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Run after the primary results</text>
+<circle cx="255.0" cy="519.3" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
+<text x="261.0" y="521.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Sequencing depth as a covariate</text>
+<circle cx="255.0" cy="529.1" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
+<text x="261.0" y="531.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Second estimator: CLR linear model‡</text>
+<circle cx="255.0" cy="538.8" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
+<text x="261.0" y="541.4" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Leave-one-farm-out; untargeted genus scan</text>
+<circle cx="255.0" cy="548.6" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
+<text x="261.0" y="551.2" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">LinDA and ALDEx2</text>
+<circle cx="255.0" cy="558.3" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
+<text x="261.0" y="560.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Freedman-Lane permutation; spike-in</text>
+<rect x="4.0" y="441.3" width="233.0" height="140.6" rx="2.5" fill="none" stroke="#d6d4cc" stroke-width="0.7"/>
+<rect x="245.0" y="441.3" width="233.0" height="140.6" rx="2.5" fill="none" stroke="#d6d4cc" stroke-width="0.7"/></svg>
