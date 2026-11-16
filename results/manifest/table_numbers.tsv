@@ -1,0 +1,102 @@
+repo_commit	section	key	value	description	source	used_in
+bf785079	T1 detection	nelore_diet_q05	637	nelore, diet contrast: genera at BH q < 0.05	results/positive_controls/positive_controls_summary.tsv (profiles_gtdb_full)	Table 1
+bf785079	T1 detection	nelore_diet_genera	2887	nelore, diet contrast: genera tested	results/positive_controls/positive_controls_summary.tsv (profiles_gtdb_full)	Table 1
+bf785079	T1 detection	charolais_mrna_diet_q05	456	charolais_mrna, diet contrast: genera at BH q < 0.05	results/positive_controls/positive_controls_summary.tsv (profiles_gtdb_full)	Table 1
+bf785079	T1 detection	charolais_mrna_diet_genera	2761	charolais_mrna, diet contrast: genera tested	results/positive_controls/positive_controls_summary.tsv (profiles_gtdb_full)	Table 1
+bf785079	T1 detection	charolais_mrna_year_q05	113	charolais_mrna, year contrast: genera at BH q < 0.05	results/positive_controls/positive_controls_summary.tsv (profiles_gtdb_full)	Table 1
+bf785079	T1 detection	charolais_mrna_year_genera	2761	charolais_mrna, year contrast: genera tested	results/positive_controls/positive_controls_summary.tsv (profiles_gtdb_full)	Table 1
+bf785079	T1 detection	alberta_n_animals	529	alberta, diet contrast: n_animals	results/positive_controls/16s/alberta_summary.tsv	Table 1
+bf785079	T1 detection	alberta_n_genera	97	alberta, diet contrast: n_genera	results/positive_controls/16s/alberta_summary.tsv	Table 1
+bf785079	T1 detection	alberta_n_q05	46	alberta, diet contrast: n_q05	results/positive_controls/16s/alberta_summary.tsv	Table 1
+bf785079	T1 detection	alberta_pass	True	alberta: detection check passed	results/positive_controls/16s/alberta_summary.tsv	Table 1; Results
+bf785079	T1 detection	difford_bact_n_animals	749	difford_bact, herd contrast: n_animals	results/positive_controls/16s/difford_bact_summary.tsv	Table 1
+bf785079	T1 detection	difford_bact_n_genera	104	difford_bact, herd contrast: n_genera	results/positive_controls/16s/difford_bact_summary.tsv	Table 1
+bf785079	T1 detection	difford_bact_n_q05	77	difford_bact, herd contrast: n_q05	results/positive_controls/16s/difford_bact_summary.tsv	Table 1
+bf785079	T1 detection	difford_bact_pass	True	difford_bact: detection check passed	results/positive_controls/16s/difford_bact_summary.tsv	Table 1; Results
+bf785079	T1 detection	difford_arch_n_animals	728	difford_arch, herd contrast: n_animals	results/positive_controls/16s/difford_arch_summary.tsv	Table 1
+bf785079	T1 detection	difford_arch_n_genera	3	difford_arch, herd contrast: n_genera	results/positive_controls/16s/difford_arch_summary.tsv	Table 1
+bf785079	T1 detection	difford_arch_n_q05	3	difford_arch, herd contrast: n_q05	results/positive_controls/16s/difford_arch_summary.tsv	Table 1
+bf785079	T1 detection	difford_arch_pass	True	difford_arch: detection check passed	results/positive_controls/16s/difford_arch_summary.tsv	Table 1; Results
+bf785079	T1 detection	wallace_prokaryotes_n_animals	1009	wallace_prokaryotes, farm contrast: n_animals	results/positive_controls/16s/wallace_prokaryotes_summary.tsv	Table 1
+bf785079	T1 detection	wallace_prokaryotes_n_genera	104	wallace_prokaryotes, farm contrast: n_genera	results/positive_controls/16s/wallace_prokaryotes_summary.tsv	Table 1
+bf785079	T1 detection	wallace_prokaryotes_n_q05	48	wallace_prokaryotes, farm contrast: n_q05	results/positive_controls/16s/wallace_prokaryotes_summary.tsv	Table 1
+bf785079	T1 detection	wallace_prokaryotes_pass	True	wallace_prokaryotes: detection check passed	results/positive_controls/16s/wallace_prokaryotes_summary.tsv	Table 1; Results
+bf785079	T2 calibration	nelore_genus_genera	2869	nelore_genus: genera in the scan	results/denovo_scan/scan_summary.tsv: n_genera	Table 2
+bf785079	T2 calibration	nelore_genus_fpr	0.071	nelore_genus: share of genera at nominal p < 0.05 under permutation, mean over 200 shuffles	results/denovo_scan/scan_summary.tsv: null_fpr_p05	Table 2; Abstract (6 to 26%); Results
+bf785079	T2 calibration	nelore_genus_max_q05	679	nelore_genus: most genera at q < 0.05 in one shuffle	results/denovo_scan/scan_summary.tsv: null_max_n_q05	Table 2; Fig. 3a
+bf785079	T2 calibration	nelore_genus_null_sd_W	1.27	nelore_genus: null SD of W	results/denovo_scan/scan_summary.tsv: null_W_sd	Table 2; Results (1.27 to 2.37)
+bf785079	T2 calibration	charolais_mrna_genus_genera	2658	charolais_mrna_genus: genera in the scan	results/denovo_scan/scan_summary.tsv: n_genera	Table 2
+bf785079	T2 calibration	charolais_mrna_genus_fpr	0.064	charolais_mrna_genus: share of genera at nominal p < 0.05 under permutation, mean over 200 shuffles	results/denovo_scan/scan_summary.tsv: null_fpr_p05	Table 2; Abstract (6 to 26%); Results
+bf785079	T2 calibration	charolais_mrna_genus_max_q05	65	charolais_mrna_genus: most genera at q < 0.05 in one shuffle	results/denovo_scan/scan_summary.tsv: null_max_n_q05	Table 2; Fig. 3a
+bf785079	T2 calibration	charolais_mrna_genus_null_sd_W	1.42	charolais_mrna_genus: null SD of W	results/denovo_scan/scan_summary.tsv: null_W_sd	Table 2; Results (1.27 to 2.37)
+bf785079	T2 calibration	alberta_genus_genera	91	alberta_genus: genera in the scan	results/denovo_scan/scan_summary.tsv: n_genera	Table 2
+bf785079	T2 calibration	alberta_genus_fpr	0.25	alberta_genus: share of genera at nominal p < 0.05 under permutation, mean over 200 shuffles	results/denovo_scan/scan_summary.tsv: null_fpr_p05	Table 2; Abstract (6 to 26%); Results
+bf785079	T2 calibration	alberta_genus_max_q05	43	alberta_genus: most genera at q < 0.05 in one shuffle	results/denovo_scan/scan_summary.tsv: null_max_n_q05	Table 2; Fig. 3a
+bf785079	T2 calibration	alberta_genus_null_sd_W	2.14	alberta_genus: null SD of W	results/denovo_scan/scan_summary.tsv: null_W_sd	Table 2; Results (1.27 to 2.37)
+bf785079	T2 calibration	difford_bact_genera	104	difford_bact: genera in the scan	results/denovo_scan/scan_summary.tsv: n_genera	Table 2
+bf785079	T2 calibration	difford_bact_fpr	0.105	difford_bact: share of genera at nominal p < 0.05 under permutation, mean over 200 shuffles	results/denovo_scan/scan_summary.tsv: null_fpr_p05	Table 2; Abstract (6 to 26%); Results
+bf785079	T2 calibration	difford_bact_max_q05	21	difford_bact: most genera at q < 0.05 in one shuffle	results/denovo_scan/scan_summary.tsv: null_max_n_q05	Table 2; Fig. 3a
+bf785079	T2 calibration	difford_bact_null_sd_W	1.31	difford_bact: null SD of W	results/denovo_scan/scan_summary.tsv: null_W_sd	Table 2; Results (1.27 to 2.37)
+bf785079	T2 calibration	wallace_prokaryotes_genera	104	wallace_prokaryotes: genera in the scan	results/denovo_scan/scan_summary.tsv: n_genera	Table 2
+bf785079	T2 calibration	wallace_prokaryotes_fpr	0.258	wallace_prokaryotes: share of genera at nominal p < 0.05 under permutation, mean over 200 shuffles	results/denovo_scan/scan_summary.tsv: null_fpr_p05	Table 2; Abstract (6 to 26%); Results
+bf785079	T2 calibration	wallace_prokaryotes_max_q05	45	wallace_prokaryotes: most genera at q < 0.05 in one shuffle	results/denovo_scan/scan_summary.tsv: null_max_n_q05	Table 2; Fig. 3a
+bf785079	T2 calibration	wallace_prokaryotes_null_sd_W	2.37	wallace_prokaryotes: null SD of W	results/denovo_scan/scan_summary.tsv: null_W_sd	Table 2; Results (1.27 to 2.37)
+bf785079	T2 calibration	null_sd_W_range	1.27 to 2.37	null SD of W across the five tables	results/denovo_scan/scan_summary.tsv	Results
+bf785079	T2 calibration	nelore_genus_fpr_median_pct	3.7	nelore_genus: median share of genera at nominal p < 0.05 across shuffles (%)	results/scan_null/nelore_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (3.7%, 26%, 25%)
+bf785079	T2 calibration	nelore_genus_fpr_max_pct	34.5	nelore_genus: largest share in one shuffle (%)	results/scan_null/nelore_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (35% in Nelore)
+bf785079	T2 calibration	nelore_genus_q05_in_fpr_max_shuffle	678	nelore_genus: genera at q < 0.05 in the shuffle with the largest share	results/scan_null/nelore_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (679 in Nelore)
+bf785079	T2 calibration	charolais_mrna_genus_fpr_median_pct	5.8	charolais_mrna_genus: median share of genera at nominal p < 0.05 across shuffles (%)	results/scan_null/charolais_mrna_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (3.7%, 26%, 25%)
+bf785079	T2 calibration	charolais_mrna_genus_fpr_max_pct	23.4	charolais_mrna_genus: largest share in one shuffle (%)	results/scan_null/charolais_mrna_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (35% in Nelore)
+bf785079	T2 calibration	charolais_mrna_genus_q05_in_fpr_max_shuffle	65	charolais_mrna_genus: genera at q < 0.05 in the shuffle with the largest share	results/scan_null/charolais_mrna_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (679 in Nelore)
+bf785079	T2 calibration	alberta_genus_fpr_median_pct	26.4	alberta_genus: median share of genera at nominal p < 0.05 across shuffles (%)	results/scan_null/alberta_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (3.7%, 26%, 25%)
+bf785079	T2 calibration	alberta_genus_fpr_max_pct	48.4	alberta_genus: largest share in one shuffle (%)	results/scan_null/alberta_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (35% in Nelore)
+bf785079	T2 calibration	alberta_genus_q05_in_fpr_max_shuffle	43	alberta_genus: genera at q < 0.05 in the shuffle with the largest share	results/scan_null/alberta_genus_seed2001..2200_ancombc2.csv (as Fig. 3a)	Results (679 in Nelore)
+bf785079	T2 calibration	difford_bact_fpr_median_pct	9.6	difford_bact: median share of genera at nominal p < 0.05 across shuffles (%)	results/methane_dryrun/difford_bact_seed1001..1200_ancombc2.csv (as Fig. 3a)	Results (3.7%, 26%, 25%)
+bf785079	T2 calibration	difford_bact_fpr_max_pct	26.9	difford_bact: largest share in one shuffle (%)	results/methane_dryrun/difford_bact_seed1001..1200_ancombc2.csv (as Fig. 3a)	Results (35% in Nelore)
+bf785079	T2 calibration	difford_bact_q05_in_fpr_max_shuffle	13	difford_bact: genera at q < 0.05 in the shuffle with the largest share	results/methane_dryrun/difford_bact_seed1001..1200_ancombc2.csv (as Fig. 3a)	Results (679 in Nelore)
+bf785079	T2 calibration	wallace_prokaryotes_fpr_median_pct	25.0	wallace_prokaryotes: median share of genera at nominal p < 0.05 across shuffles (%)	results/methane_dryrun/wallace_prokaryotes_seed1001..1200_ancombc2.csv (as Fig. 3a)	Results (3.7%, 26%, 25%)
+bf785079	T2 calibration	wallace_prokaryotes_fpr_max_pct	52.9	wallace_prokaryotes: largest share in one shuffle (%)	results/methane_dryrun/wallace_prokaryotes_seed1001..1200_ancombc2.csv (as Fig. 3a)	Results (35% in Nelore)
+bf785079	T2 calibration	wallace_prokaryotes_q05_in_fpr_max_shuffle	44	wallace_prokaryotes: genera at q < 0.05 in the shuffle with the largest share	results/methane_dryrun/wallace_prokaryotes_seed1001..1200_ancombc2.csv (as Fig. 3a)	Results (679 in Nelore)
+bf785079	T2 calibration	rfi_target_null_sd_median_range	0.75 to 1.16	median null SD of W of the targeted RFI features, per table	results/replication_rfi3_calibrated/estimates_calibrated_all.tsv: sd_null	Results (0.75 to 1.16)
+bf785079	T2 calibration	sharpea_wallace_W_raw	-9.4	Sharpea, Wallace: raw ANCOM-BC2 W	results/methane_pooled/estimates_calibrated.tsv: W_raw	Results (-9.4)
+bf785079	T2 calibration	sharpea_wallace_null_sd	5.26	Sharpea, Wallace: null SD of W	results/methane_pooled/estimates_calibrated.tsv: sd_null	Results (5.3); Fig. 3b (5.26)
+bf785079	D depth	wallace_median_absW	2.74 to 1.20	Wallace, median |W| across genera, unadjusted to depth-adjusted (raw ANCOM-BC2 W)	results/denovo_scan/wallace_prokaryotes{,_depth}_scan.tsv: W	Results (2.74 to 1.20)
+bf785079	D depth	farm_robust_removed	17 to 13	Wallace farm-robust features, unadjusted to depth-adjusted	results/wallace_farms{,_depth}/farm_consistency.tsv: farm_robust	Results (removed 4 of the 17)
+bf785079	D depth	depth_rho_wallace_pooled	0.155	Spearman rho of log10 library size with the trait: Wallace, methane within farm, pooled	plan/ANALYSIS_PLAN.md, Amendment 41, item 1 (Finding)	Results (0.16; two of the three Italian farms 0.33 and 0.35; 0.05; -0.07)
+bf785079	D depth	depth_rho_wallace_IT1	0.33	Spearman rho of log10 library size with the trait: Wallace farm IT1	plan/ANALYSIS_PLAN.md, Amendment 41, item 1 (Finding)	Results (0.16; two of the three Italian farms 0.33 and 0.35; 0.05; -0.07)
+bf785079	D depth	depth_rho_wallace_IT2	0.35	Spearman rho of log10 library size with the trait: Wallace farm IT2	plan/ANALYSIS_PLAN.md, Amendment 41, item 1 (Finding)	Results (0.16; two of the three Italian farms 0.33 and 0.35; 0.05; -0.07)
+bf785079	D depth	depth_rho_wallace_IT3	0.09	Spearman rho of log10 library size with the trait: Wallace farm IT3	plan/ANALYSIS_PLAN.md, Amendment 41, item 1 (Finding)	Results (0.16; two of the three Italian farms 0.33 and 0.35; 0.05; -0.07)
+bf785079	D depth	depth_rho_difford	0.052	Spearman rho of log10 library size with the trait: Difford, within herd	plan/ANALYSIS_PLAN.md, Amendment 41, item 1 (Finding)	Results (0.16; two of the three Italian farms 0.33 and 0.35; 0.05; -0.07)
+bf785079	D depth	depth_rho_alberta_rfi	-0.072	Spearman rho of log10 library size with the trait: Alberta, RFI within diet	plan/ANALYSIS_PLAN.md, Amendment 41, item 1 (Finding)	Results (0.16; two of the three Italian farms 0.33 and 0.35; 0.05; -0.07)
+bf785079	E estimators	eubacterium_ancombc2_W_raw	-3.5469	Eubacterium, Wallace: raw ANCOM-BC2 W	results/methane/wallace_prokaryotes_targets.tsv: W	Results
+bf785079	E estimators	eubacterium_clr_W_raw	-3.8622	Eubacterium, Wallace: raw CLR W	results/clr/wallace_prokaryotes_clr_targets.tsv: W	Results
+bf785079	E estimators	eubacterium_clr_W_depth	-2.3225	Eubacterium, Wallace: CLR W, depth-adjusted	results/clr/wallace_prokaryotes_depth_clr_targets.tsv: W	Results
+bf785079	E estimators	sharpea_ancombc2_W_raw	-9.3783	Sharpea, Wallace: raw ANCOM-BC2 W	results/methane/wallace_prokaryotes_targets.tsv: W	Results
+bf785079	E estimators	sharpea_ancombc2_W_depth	-0.0769	Sharpea, Wallace: raw ANCOM-BC2 W, depth-adjusted	results/methane/wallace_prokaryotes_depth_targets.tsv: W	Results
+bf785079	E estimators	sharpea_clr_W	-5.4733	Sharpea, Wallace: CLR W	results/clr/wallace_prokaryotes_clr_targets.tsv: W	Results
+bf785079	E estimators	sharpea_clr_W_depth	-3.7131	Sharpea, Wallace: CLR W, depth-adjusted	results/clr/wallace_prokaryotes_depth_clr_targets.tsv: W	Results
+bf785079	E estimators	sharpea_difford_clr_W	0.76	Sharpea, Difford: CLR W	results/clr/difford_bact_clr_targets.tsv: W	Results
+bf785079	E estimators	sharpea_difford_ancombc2_W_cal	-0.1255	Sharpea, Difford: calibrated ANCOM-BC2 W	results/methane_pooled/estimates_calibrated.tsv: W	Results
+bf785079	E estimators	eubacterium_clr_W_calibrated	-3.8	Eubacterium, Wallace: calibrated CLR W (second estimator)	plan/ANALYSIS_PLAN.md, Amendment 42 result	Results
+bf785079	E estimators	clade_ratio_ch4dmi_wallace_W	3.69	clade ratio, Wallace, methane per kg DMI: calibrated W	results/methane_pooled_ch4_dmi/estimates_calibrated.tsv: W	Abstract; Results; Fig. 4
+bf785079	E estimators	clade_ratio_ch4dmi_wallace_r	0.13	clade ratio, Wallace, methane per kg DMI: r	results/methane_pooled_ch4_dmi/estimates_calibrated.tsv: r	Results
+bf785079	L late methods	LinDA_null_sd_range	0.53 to 1.37	LinDA: null SD of W over targets and tables	results/late_linda/pooled/null_sd_by_table.tsv: sd_min, sd_max	Results
+bf785079	L late methods	ALDEx2_null_sd_range	0.58 to 1.22	ALDEx2: null SD of W over targets and tables	results/late_aldex2/pooled/null_sd_by_table.tsv: sd_min, sd_max	Results
+bf785079	L late methods	methane_ancombc2_neff_range	198 to 1,729	methane, primary ANCOM-BC2 pooled intervals: effective n	results/power/power_equivalence.tsv: n_eff	Results (198 to 1,729)
+bf785079	P controls	difford_vs_w_days_in_milk_spearman	0.21 (p 0.06; 80 genera; same-sign hits 4 vs 1.7 expected, p 0.0625; pass False)	Difford vs Wallace (16S, SILVA; different herds): days in milk	results/late_positive_controls/transfer_positive_controls.tsv	Results; Discussion
+bf785079	P controls	difford_vs_w_parity_2_vs_1_spearman	-0.01 (p 0.901; 80 genera; same-sign hits 0 vs 0.3 expected, p NA; pass False)	Difford vs Wallace (16S, SILVA; different herds): parity 2 vs 1	results/late_positive_controls/transfer_positive_controls.tsv	Results; Discussion
+bf785079	P controls	difford_vs_w_parity_3_vs_1_spearman	-0.23 (p 0.0438; 80 genera; same-sign hits 1 vs 1.1 expected, p 0.938; pass False)	Difford vs Wallace (16S, SILVA; different herds): parity 3+ vs 1	results/late_positive_controls/transfer_positive_controls.tsv	Results; Discussion
+bf785079	P controls	difford_vs_w_methane_reference_the_tested_trait_spearman	-0.30 (p 0.00746; 80 genera; same-sign hits 0 vs 1.2 expected, p 1.0; pass False)	Difford vs Wallace (16S, SILVA; different herds): methane (reference: the tested trait)	results/late_positive_controls/transfer_positive_controls.tsv	Results; Discussion
+bf785079	P controls	charolais_mr_diet_grass_vs_corn_silage_spearman	0.29 (p 0.0471; 46 genera; same-sign hits 7 vs 4.3 expected, p 0.172; pass True)	Charolais mRNA (GTDB) vs 16S (SILVA), same 30 animals: diet, grass vs corn silage	results/late_positive_controls/transfer_positive_controls.tsv	Results; Discussion
+bf785079	P controls	charolais_mr_year_2020_vs_2019_spearman	0.03 (p 0.867; 43 genera; same-sign hits 3 vs 2.0 expected, p 0.5; pass False)	Charolais mRNA (GTDB) vs 16S (SILVA), same 30 animals: year 2020 vs 2019	results/late_positive_controls/transfer_positive_controls.tsv	Results; Discussion
+bf785079	P controls	charolais_mr_rfi_class_reference_the_tested_trait_spearman	-0.05 (p 0.765; 42 genera; same-sign hits 0 vs 0.1 expected, p 1.0; pass False)	Charolais mRNA (GTDB) vs 16S (SILVA), same 30 animals: RFI class (reference: the tested trait)	results/late_positive_controls/transfer_positive_controls.tsv	Results; Discussion
+bf785079	P controls	spikein_wallace_prokaryotes_0.1	recovery calibrated 54.0%; fpr raw 25.9%, calibrated 4.6%; est/planted 0.95; median calibrated r 0.068	spike-in wallace_prokaryotes, 0.1 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_wallace_prokaryotes_0.25	recovery calibrated 94.0%; fpr raw 25.7%, calibrated 4.3%; est/planted 0.99; median calibrated r 0.169	spike-in wallace_prokaryotes, 0.25 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_wallace_prokaryotes_0.5	recovery calibrated 99.5%; fpr raw 26.7%, calibrated 4.7%; est/planted 1.00; median calibrated r 0.307	spike-in wallace_prokaryotes, 0.5 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_alberta_genus_0.1	recovery calibrated 36.5%; fpr raw 23.6%, calibrated 5.1%; est/planted 1.02; median calibrated r 0.066	spike-in alberta_genus, 0.1 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_alberta_genus_0.25	recovery calibrated 88.5%; fpr raw 21.9%, calibrated 4.0%; est/planted 1.01; median calibrated r 0.167	spike-in alberta_genus, 0.25 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_alberta_genus_0.5	recovery calibrated 99.5%; fpr raw 22.3%, calibrated 4.5%; est/planted 1.01; median calibrated r 0.319	spike-in alberta_genus, 0.5 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_nelore_genus_0.1	recovery calibrated 44.3%; fpr raw 5.5%, calibrated 2.7%; est/planted 1.00; median calibrated r 0.254	spike-in nelore_genus, 0.1 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_nelore_genus_0.25	recovery calibrated 88.7%; fpr raw 5.0%, calibrated 2.4%; est/planted 1.00; median calibrated r 0.542	spike-in nelore_genus, 0.25 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_nelore_genus_0.5	recovery calibrated 97.6%; fpr raw 4.7%, calibrated 2.2%; est/planted 1.00; median calibrated r 0.790	spike-in nelore_genus, 0.5 natural-log fold change per SD	results/late_spikein/spikein_summary.tsv	Results; Discussion
+bf785079	P controls	spikein_est_over_planted_range	0.95 to 1.02	spike-in: median estimated over planted fold change, range	results/late_spikein/spikein_summary.tsv	Results (0.95 to 1.02)
