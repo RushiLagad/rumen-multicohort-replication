@@ -4,7 +4,7 @@ A multi-cohort test, against a dated analysis plan, of whether rumen microbes re
 
 Rushikesh R. Lagad, Goswami Lab, Department of Animal Science, University of Arkansas (principal investigator: Dr. Aranyak Goswami). Contact: rlagad@uark.edu
 
-**Status:** prepared for submission to *Microbiome* (Lagad and Goswami), November 2026; not yet peer reviewed. The version for submission is tag `v1.0.1-submission`, archived on Zenodo with the files that are too large for this repository: https://doi.org/10.5281/zenodo.24170173 (all versions). The earlier tag `v1.0-submission` (Zenodo 10.5281/zenodo.24170174) lacks the Figure 1 generator and uses earlier figure file names; v1.0.1-submission supersedes it with no change to analyses or results
+**Status:** prepared for submission to *Microbiome* (Lagad and Goswami), November 2026; not yet peer reviewed. The version for submission is tag `v1.0.2-submission`, archived on Zenodo with the files that are too large for this repository: https://doi.org/10.5281/zenodo.24170173 (all versions). It supersedes `v1.0.1-submission` and `v1.0-submission`, which remain on Zenodo as earlier versions. v1.0.2 adds two late analyses written in response to review (Amendments 46 and 47): benchmark exclusions are now stated on a CLR partial correlation scale, with pooled intervals whose coverage was checked by simulation. This lowers the number of benchmark exclusions from those in v1.0.1 and changes no replication label.
 
 ## The question
 
@@ -33,12 +33,13 @@ All sequence data and phenotype tables come from public archives and published s
 
 ## Findings (submitted version)
 
-- **Feed efficiency:** none of the 27 published associations that could be tested replicated. For 17 of them the data rule out an effect as large as typically reported; for the other 10 the data were too imprecise to say.
-- **Methane:** none of the 11 testable associations replicated, and for all 11 the data rule out even modest effects in the published direction.
+- **Feed efficiency:** none of the 27 published associations that could be tested replicated. For 8 of them the 95% interval excludes a correlation of 0.30 (in the published direction, or of either sign where no direction was published); 6 of these 8 rest on the 30 Charolais animals alone, and the other 2 (*Prevotella* and *Butyrivibrio*) come from pooling cohorts. For the other 19 the data are too imprecise to say.
+- **Methane:** none of the 11 testable associations replicated. For 6, each tested in a single dairy herd, the interval excludes even a modest correlation of 0.15 in the published direction; the 5 tested in both dairy herds have intervals too wide to say.
+- **Across cohorts:** no pooled interval excludes zero. The intervals are CLR partial correlations pooled by REML with the modified Knapp-Hartung adjustment; a simulation on each cohort's real traits and covariates showed they keep their stated coverage when between-cohort heterogeneity is small (Amendment 47).
 - **Within one herd, not across herds:** clear associations do appear inside a single cohort (in the Wallace dairy cows: all 29 tested genera keep their sign when any one of its seven farms is left out, but their size varies widely between farms, median I² 83%, and only 4 have the same sign in all seven farms fitted separately), but they are absent from the other large dairy cohort. Effects of lactation stage and parity did not carry between the two dairy herds either, although both were processed with the same 16S pipeline and SILVA taxonomy.
-- **Method:** one widely used differential abundance method (ANCOM-BC2) reported many false positives when the phenotype was shuffled, which is why every result here is calibrated. In a spike-in, calibration brought its false-positive rate in the large cohorts from about 25% to 5% while still recovering about nine in ten planted effects of a modest size. Three further methods (a CLR linear model, LinDA and ALDEx2) lead to the same conclusions.
+- **Method:** one widely used differential abundance method (ANCOM-BC2) reported many false positives when the phenotype was shuffled, which is why every result here is calibrated. In a spike-in, calibration brought its false-positive rate in the large cohorts from about 25% to 5% while still recovering about nine in ten planted effects of a modest size. Three further methods (a CLR linear model, LinDA and ALDEx2) lead to the same conclusions, and re-deriving every label under the CLR model gives 0 replicated targets.
 
-Analyses run after the primary results had been seen are labelled as late analyses in the plan (Amendments 44 and 45) and change no replication label.
+Analyses run after the primary results had been seen are labelled as late analyses in the plan (Amendments 44 to 47), are written to their own `results/late_*` folders, and change no replication label. The numbers reported in the manuscript are listed, each with the result file it comes from, in `results/manifest/headline_numbers.tsv`, `results/manifest/table_numbers.tsv` and `results/late_a47/manifest_a47.tsv`.
 
 ## Repository layout
 
