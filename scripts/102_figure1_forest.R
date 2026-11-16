@@ -6,6 +6,8 @@
 # item 3) must not show an exclusion, and the script stops if one would. The Amendment 46 HKSJ and the ANCOM-BC2-derived intervals are in Additional file 2. Refits nothing.
 # The x axis is truncated at r = +/-0.6 so that narrow intervals stay readable; an interval reaching past the edge ends in an arrow with its true
 # bound printed beside it (full bounds in Additional file 2).
+# Draft 17 (reporting only): x axis titled "CLR partial r (single cohort or pooled)", because 20 of the 38 intervals are a single cohort's; a dagger marks
+# the pooled target whose interval is descriptive (47.1: estimated tau beyond the simulated range; C1 Methanobrevibacter), explained in the legend.
 # Run: Rscript scripts/102_figure1_forest.R      (rumen-r env; writes results/figures_manuscript/fig2_forest_pooled.{pdf,png})
 # Journal export: 170 mm (6.69 in) wide, PNG at 300 dpi, no in-image title, subtitle or source line (these go in the manuscript figure legend).
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
@@ -25,7 +27,8 @@ cat_lv <- c("Excludes any effect in the published direction", "Excludes r ≥ 0.
 vcol <- setNames(c("#104281", "#256abf", "#6da7ec", "#b4b2a9"), cat_lv)   # ordinal blue ramp = strength of exclusion; grey = no conclusion
 # y labels as plotmath: taxon names in italics (46.5.7)
 q <- function(s) paste0("'", gsub("'", "\\\\'", s), "'")
-lab_expr <- function(id, target) {
+lab_expr <- function(id, target, dag=FALSE) {
+  if (dag) return(paste0(lab_expr(id, target), "*", q("\u2020")))
   if (id == "M1") return(paste0(q("M1  "), "*italic(", q("M. gottschalkii"), ")*", q(" : "), "*italic(", q("M. ruminantium"), ")*", q(" clade ratio")))
   if (grepl("^unclassified ", target)) return(paste0(q(paste0(id, "  unclassified ")), "*italic(", q(sub("^unclassified ", "", target)), ")"))
   if (target == "total archaea") return(q(paste0(id, "  total archaea")))
@@ -36,8 +39,9 @@ d <- p %>% mutate(
   directional = !is.na(published_dir), dir = ifelse(directional, published_dir, 1),
   x = r * dir, xl = pmin(lo * dir, hi * dir), xh = pmax(lo * dir, hi * dir),
   verdict = factor(case_when(excl_any ~ cat_lv[1], excl_r15 ~ cat_lv[2], excl_r30 ~ cat_lv[3], TRUE ~ cat_lv[4]), cat_lv),
-  lab = id, expr = mapply(lab_expr, id, target),
+  lab = id, expr = mapply(lab_expr, id, target, k >= 2 & statement != "validated"),
   pub = ifelse(directional, sprintf("%s %s", ifelse(published_dir > 0, "higher", "lower"), trait), "not stated"))
+stopifnot(identical(d$id[d$k >= 2 & d$statement != "validated"], "C1"))   # the one daggered label
 stopifnot(!anyNA(d$verdict), sum(d$arm == "RFI" & d$verdict != cat_lv[4]) == 8, sum(d$arm == "Methane" & d$verdict != cat_lv[4]) == 6)   # Amendment 47 result, item 4
 
 theme_f <- theme_minimal(base_size=8.5) + theme(
@@ -75,7 +79,7 @@ panel <- function(a, title, first, last) {
     scale_x_continuous(breaks=seq(-0.6, 0.6, 0.3), labels=function(b) sub("^-", "\u2212", format(b)), expand=expansion(0)) +
     scale_y_discrete(labels=function(b) parse(text=ex[b]), expand=expansion(add=c(0.7, if (first) 1.3 else 0.7))) +
     coord_cartesian(xlim=XL, clip="off") +
-    labs(title=title, y=NULL, x=if (last) "Pooled CLR partial r, oriented so positive = the published direction" else NULL) +
+    labs(title=title, y=NULL, x=if (last) "CLR partial r (single cohort or pooled), oriented so positive = the published direction" else NULL) +
     theme_f + theme(plot.margin=margin(if (first) 6 else 10, 92, 4, 4), legend.box.spacing=unit(16, "pt"), axis.text.x=if (last) element_text() else element_blank(),
                     plot.title=element_text(size=8.5, face="bold"), legend.position=if (first) "top" else "none") +
     guides(colour=guide_legend(ncol=2, byrow=FALSE))

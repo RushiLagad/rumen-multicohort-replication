@@ -7,6 +7,7 @@
 # Amendment 46.5 (reporting only): taxon names in italics (46.5.7); permutation p as (b + 1)/(B + 1) in Figure 4 (46.5.1); the Figure 4 pooling of
 # Difford g per day with Wallace per kg intake labelled an exploratory comparison of different outcomes (46.5.5); the Figure 5 correlation shown
 # without a p value, because genera are not independent (46.5.4).
+# Draft 17 (reporting only): the Figure 3b axis note reads "1 = nominal" (an SD of 1 is what a test with nominal error would give).
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); od <- file.path(root, "results", "figures_manuscript"); dir.create(od, showWarnings=FALSE)
 rd <- function(f) read.delim(f, check.names=FALSE, stringsAsFactors=FALSE, quote=""); rc <- function(f) read.csv(f, check.names=FALSE, stringsAsFactors=FALSE)
@@ -68,7 +69,7 @@ pB <- ggplot(B, aes(sd, lab)) +
   geom_point(aes(colour=method), size=1.9) +
   scale_colour_manual(values=c("ANCOM-BC2"=blue, "CLR linear model"=orange)) +
   scale_y_discrete(labels=function(b) parse(text=B$lab_e[match(b, B$lab)])) +
-  labs(title="b  Null spread per methane target", x="SD of W across 200 shuffles\n(1 = calibrated)", y=NULL) +
+  labs(title="b  Null spread per methane target", x="SD of W across 200 shuffles\n(1 = nominal)", y=NULL) +
   theme_f + theme(panel.grid.major.y=element_blank(), legend.justification=c(1, 0), legend.direction="vertical",
                   legend.background=element_rect(fill=NA, colour=NA)) +
   # legend in the panel's lower right so the 170 mm width fits: rows are sorted by ANCOM-BC2 null SD, so the bottom rows sit near
