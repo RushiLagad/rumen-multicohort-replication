@@ -1,0 +1,29 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.6 Charolais influence | targets N02, N04, N11, N13, N20, N22, N06, C3 
+== 48.6 summary
+  id           statement r_full bound_full bound_min bound_max refits_holding
+ N02   excludes r = 0.30  0.176     0.2110    0.1784    0.1784             30
+ N04   excludes r = 0.15 -0.318     0.0622    0.0492    0.0492             30
+ N11   excludes r = 0.15  0.237     0.1489    0.1734    0.1734              0
+ N13   excludes r = 0.15 -0.425    -0.0621   -0.0429   -0.0429             30
+ N20   excludes r = 0.15  0.244     0.1418    0.0740    0.0740             30
+ N22   excludes r = 0.15  0.239     0.1475    0.1524    0.1524              0
+ N06 interval excludes 0 -0.420     0.6854    0.7117    0.7117             30
+  C3 interval excludes 0 -0.392     0.6672    0.6920    0.6920             18
+ robust_to_single_animals most_influential_position grid_holds_in_all_cells
+                     TRUE                        24                    TRUE
+                     TRUE                         9                   FALSE
+                    FALSE                         8                   FALSE
+                     TRUE                         9                    TRUE
+                     TRUE                        18                    TRUE
+                    FALSE                        27                   FALSE
+                     TRUE                        18                   FALSE
+                    FALSE                         9                      NA
+ at_threshold
+        FALSE
+        FALSE
+         TRUE
+        FALSE
+         TRUE
+         TRUE
+        FALSE
+        FALSE

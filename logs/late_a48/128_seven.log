@@ -1,0 +1,91 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.1 seven-claim evidence
+Fontconfig warning: using without calling FcInit()
+== 48.1 seven claims
+  id                                                     target   r_mkh lo_mkh
+  T2                                                 Firmicutes  0.0208 -0.975
+  T4                      unclassified Methanomassiliicoccaceae -0.3472 -0.998
+  T5                                                    Blautia -0.0703 -0.993
+  T6                                 Methanobrevibacter smithii -0.1040 -0.922
+ N15                                                Selenomonas  0.0301 -0.460
+  S1                                                    Sharpea -0.0729 -0.873
+  M1 Methanobrevibacter gottschalkii clade vs ruminantium clade  0.0300 -0.285
+ hi_mkh tau_hat   I2                                 pattern_clr
+  0.977   0.176 50.4         D: discordant (cohort signs differ)
+  0.990   0.284 72.5          B: against the published direction
+  0.991   0.254 67.8         D: discordant (cohort signs differ)
+  0.884   0.000  0.0                 E: consistent, inconclusive
+  0.506   0.000  0.0         D: discordant (cohort signs differ)
+  0.834   0.138 94.1               A: support in one cohort only
+  0.339   0.000  0.0 C: bounded (every cohort excludes r = 0.15)
+                            pattern_ancombc2 secondary_Sa_clr
+          B: against the published direction            FALSE
+          B: against the published direction            FALSE
+         D: discordant (cohort signs differ)            FALSE
+         D: discordant (cohort signs differ)            FALSE
+               A: support in one cohort only            FALSE
+ C: bounded (every cohort excludes r = 0.15)             TRUE
+ C: bounded (every cohort excludes r = 0.15)            FALSE
+ secondary_Sa_ancombc2 secondary_Sb_clr secondary_Sb_ancombc2
+                 FALSE            FALSE                 FALSE
+                 FALSE            FALSE                 FALSE
+                 FALSE            FALSE                 FALSE
+                 FALSE            FALSE                 FALSE
+                  TRUE            FALSE                  TRUE
+                 FALSE             TRUE                 FALSE
+                 FALSE            FALSE                 FALSE
+                                                                              reasons_not_replicated
+ pooled q >= 0.05; pooled sign against the published direction; leave-one-cohort-out condition fails
+ pooled q >= 0.05; pooled sign against the published direction; leave-one-cohort-out condition fails
+ pooled q >= 0.05; pooled sign against the published direction; leave-one-cohort-out condition fails
+ pooled q >= 0.05; pooled sign against the published direction; leave-one-cohort-out condition fails
+                                              pooled q >= 0.05; leave-one-cohort-out condition fails
+                                              pooled q >= 0.05; leave-one-cohort-out condition fails
+                                              pooled q >= 0.05; leave-one-cohort-out condition fails
+
+== counts under both S1 classifications
+                classification matched k_ge2 k1 replicated_a37 Sa_clr
+          S1 matched (current)      21     7 14              0      3
+ S1 as phenotype-transfer test      20     6 14              0      2
+ Sa_ancombc2 Sb_clr Sb_ancombc2 Sa_clr_ids Sa_ancombc2_ids
+           1      1           1 S1;N06;N08             N15
+           1      0           1    N06;N08             N15
+
+== concordance
+                                                            set
+                                      seven claims (S1 matched)
+                                      seven claims (S1 matched)
+                               six claims (S1 as transfer test)
+                               six claims (S1 as transfer test)
+ every independent test with a published direction (38 targets)
+ every independent test with a published direction (38 targets)
+            estimator  n same share p_binom
+                  CLR 14    8 0.571   0.791
+ ANCOM-BC2 calibrated 14    8 0.571   0.791
+                  CLR 12    7 0.583   0.774
+ ANCOM-BC2 calibrated 12    6 0.500   1.000
+                  CLR 41   19 0.463   0.755
+ ANCOM-BC2 calibrated 41   17 0.415   0.349
+                                                                                        overlap_note
+ seven claims: published sign under both estimators in 6 of 14 cohort estimates (CLR 8, ANCOM-BC2 8)
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                      note
+ descriptive: estimates are not independent across targets
+ descriptive: estimates are not independent across targets
+ descriptive: estimates are not independent across targets
+ descriptive: estimates are not independent across targets
+ descriptive: estimates are not independent across targets
+ descriptive: estimates are not independent across targets
+
+== S1 against Wallace CH4 per kg DMI
+ id  target  cohort          trait published_dir    n  df  r_clr lo_clr
+ S1 Sharpea wallace CH4 per kg DMI            -1 1007 996 -0.063 -0.125
+    hi_clr p_t_clr r_ancombc2_cal lo_ancombc2_cal hi_ancombc2_cal
+ -0.000935  0.0467        -0.0181         -0.0801           0.044
+ p_perm_ancombc2
+            0.54
+                                                                                                            note
+ source trait type (methane yield); host differs (sheep source, cattle test); k = 1 (Difford has no yield trait)

@@ -1,0 +1,179 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.9 clade ratio | permutations 9999 
+wallace margin 1 reproduces the clade counts on file: TRUE 
+difford margin 1 reproduces the clade counts on file: TRUE 
+== assignment
+  cohort margin share_assigned asvs_assigned asvs
+ wallace      1          1.000            45   45
+ wallace      2          1.000            45   45
+ wallace      3          0.974            42   45
+ difford      1          1.000           238  240
+ difford      2          1.000           238  240
+ difford      3          0.997           217  240
+
+== grid
+                           analysis cell margin pseudo_count min_share testable
+             Wallace CH4 per kg DMI    1      1          0.1       0.7     TRUE
+             Wallace CH4 per kg DMI    2      2          0.1       0.7     TRUE
+             Wallace CH4 per kg DMI    3      3          0.1       0.7     TRUE
+             Wallace CH4 per kg DMI    4      1          0.5       0.7     TRUE
+             Wallace CH4 per kg DMI    5      2          0.5       0.7     TRUE
+             Wallace CH4 per kg DMI    6      3          0.5       0.7     TRUE
+             Wallace CH4 per kg DMI    7      1          1.0       0.7     TRUE
+             Wallace CH4 per kg DMI    8      2          1.0       0.7     TRUE
+             Wallace CH4 per kg DMI    9      3          1.0       0.7     TRUE
+             Wallace CH4 per kg DMI   10      1          0.1       0.8     TRUE
+             Wallace CH4 per kg DMI   11      2          0.1       0.8     TRUE
+             Wallace CH4 per kg DMI   12      3          0.1       0.8     TRUE
+             Wallace CH4 per kg DMI   13      1          0.5       0.8     TRUE
+             Wallace CH4 per kg DMI   14      2          0.5       0.8     TRUE
+             Wallace CH4 per kg DMI   15      3          0.5       0.8     TRUE
+             Wallace CH4 per kg DMI   16      1          1.0       0.8     TRUE
+             Wallace CH4 per kg DMI   17      2          1.0       0.8     TRUE
+             Wallace CH4 per kg DMI   18      3          1.0       0.8     TRUE
+                    Wallace CH4 g/d    1      1          0.1       0.7     TRUE
+                    Wallace CH4 g/d    2      2          0.1       0.7     TRUE
+                    Wallace CH4 g/d    3      3          0.1       0.7     TRUE
+                    Wallace CH4 g/d    4      1          0.5       0.7     TRUE
+                    Wallace CH4 g/d    5      2          0.5       0.7     TRUE
+                    Wallace CH4 g/d    6      3          0.5       0.7     TRUE
+                    Wallace CH4 g/d    7      1          1.0       0.7     TRUE
+                    Wallace CH4 g/d    8      2          1.0       0.7     TRUE
+                    Wallace CH4 g/d    9      3          1.0       0.7     TRUE
+                    Wallace CH4 g/d   10      1          0.1       0.8     TRUE
+                    Wallace CH4 g/d   11      2          0.1       0.8     TRUE
+                    Wallace CH4 g/d   12      3          0.1       0.8     TRUE
+                    Wallace CH4 g/d   13      1          0.5       0.8     TRUE
+                    Wallace CH4 g/d   14      2          0.5       0.8     TRUE
+                    Wallace CH4 g/d   15      3          0.5       0.8     TRUE
+                    Wallace CH4 g/d   16      1          1.0       0.8     TRUE
+                    Wallace CH4 g/d   17      2          1.0       0.8     TRUE
+                    Wallace CH4 g/d   18      3          1.0       0.8     TRUE
+                    Difford CH4 g/d    1      1          0.1       0.7     TRUE
+                    Difford CH4 g/d    2      2          0.1       0.7     TRUE
+                    Difford CH4 g/d    3      3          0.1       0.7     TRUE
+                    Difford CH4 g/d    4      1          0.5       0.7     TRUE
+                    Difford CH4 g/d    5      2          0.5       0.7     TRUE
+                    Difford CH4 g/d    6      3          0.5       0.7     TRUE
+                    Difford CH4 g/d    7      1          1.0       0.7     TRUE
+                    Difford CH4 g/d    8      2          1.0       0.7     TRUE
+                    Difford CH4 g/d    9      3          1.0       0.7     TRUE
+                    Difford CH4 g/d   10      1          0.1       0.8     TRUE
+                    Difford CH4 g/d   11      2          0.1       0.8     TRUE
+                    Difford CH4 g/d   12      3          0.1       0.8     TRUE
+                    Difford CH4 g/d   13      1          0.5       0.8     TRUE
+                    Difford CH4 g/d   14      2          0.5       0.8     TRUE
+                    Difford CH4 g/d   15      3          0.5       0.8     TRUE
+                    Difford CH4 g/d   16      1          1.0       0.8     TRUE
+                    Difford CH4 g/d   17      2          1.0       0.8     TRUE
+                    Difford CH4 g/d   18      3          1.0       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1    1      1          0.1       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    2      2          0.1       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    3      3          0.1       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    4      1          0.5       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    5      2          0.5       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    6      3          0.5       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    7      1          1.0       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    8      2          1.0       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1    9      3          1.0       0.7     TRUE
+ Wallace CH4 per kg DMI without SE1   10      1          0.1       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   11      2          0.1       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   12      3          0.1       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   13      1          0.5       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   14      2          0.5       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   15      3          0.5       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   16      1          1.0       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   17      2          1.0       0.8     TRUE
+ Wallace CH4 per kg DMI without SE1   18      3          1.0       0.8     TRUE
+ cows      r      lo     hi   p_fl
+  852 0.1234  0.0564 0.1894 0.0005
+  852 0.1234  0.0564 0.1894 0.0002
+  852 0.1322  0.0653 0.1980 0.0002
+  852 0.1336  0.0667 0.1993 0.0001
+  852 0.1336  0.0667 0.1993 0.0004
+  852 0.1433  0.0765 0.2088 0.0001
+  852 0.1380  0.0711 0.2036 0.0001
+  852 0.1380  0.0711 0.2036 0.0002
+  852 0.1479  0.0812 0.2133 0.0001
+  852 0.1234  0.0564 0.1894 0.0002
+  852 0.1234  0.0564 0.1894 0.0004
+  852 0.1322  0.0653 0.1980 0.0001
+  852 0.1336  0.0667 0.1993 0.0002
+  852 0.1336  0.0667 0.1993 0.0001
+  852 0.1433  0.0765 0.2088 0.0001
+  852 0.1380  0.0711 0.2036 0.0002
+  852 0.1380  0.0711 0.2036 0.0001
+  852 0.1479  0.0812 0.2133 0.0001
+  853 0.0135 -0.0540 0.0809 0.6955
+  853 0.0135 -0.0540 0.0809 0.6862
+  853 0.0270 -0.0406 0.0943 0.4252
+  853 0.0284 -0.0391 0.0957 0.4002
+  853 0.0284 -0.0391 0.0957 0.3975
+  853 0.0422 -0.0254 0.1093 0.2215
+  853 0.0360 -0.0315 0.1033 0.2860
+  853 0.0360 -0.0315 0.1033 0.2883
+  853 0.0497 -0.0178 0.1168 0.1418
+  853 0.0135 -0.0540 0.0809 0.6935
+  853 0.0135 -0.0540 0.0809 0.6920
+  853 0.0270 -0.0406 0.0943 0.4266
+  853 0.0284 -0.0391 0.0957 0.4065
+  853 0.0284 -0.0391 0.0957 0.4047
+  853 0.0422 -0.0254 0.1093 0.2160
+  853 0.0360 -0.0315 0.1033 0.2865
+  853 0.0360 -0.0315 0.1033 0.2924
+  853 0.0497 -0.0178 0.1168 0.1456
+  728 0.0329 -0.0407 0.1061 0.3694
+  728 0.0329 -0.0407 0.1061 0.3703
+  728 0.0324 -0.0412 0.1056 0.3795
+  728 0.0318 -0.0418 0.1050 0.3917
+  728 0.0318 -0.0418 0.1050 0.3872
+  728 0.0312 -0.0424 0.1044 0.4047
+  728 0.0312 -0.0424 0.1044 0.4018
+  728 0.0312 -0.0424 0.1044 0.4032
+  728 0.0306 -0.0430 0.1038 0.4129
+  728 0.0329 -0.0407 0.1061 0.3717
+  728 0.0329 -0.0407 0.1061 0.3684
+  728 0.0324 -0.0412 0.1056 0.3726
+  728 0.0318 -0.0418 0.1050 0.3941
+  728 0.0318 -0.0418 0.1050 0.3834
+  728 0.0312 -0.0424 0.1044 0.3937
+  728 0.0312 -0.0424 0.1044 0.4118
+  728 0.0312 -0.0424 0.1044 0.3961
+  728 0.0306 -0.0430 0.1038 0.4063
+  762 0.1498  0.0792 0.2188 0.0001
+  762 0.1498  0.0792 0.2188 0.0001
+  762 0.1556  0.0852 0.2246 0.0002
+  762 0.1637  0.0934 0.2324 0.0001
+  762 0.1637  0.0934 0.2324 0.0001
+  762 0.1698  0.0997 0.2384 0.0001
+  762 0.1698  0.0996 0.2383 0.0001
+  762 0.1698  0.0996 0.2383 0.0001
+  762 0.1759  0.1059 0.2443 0.0001
+  762 0.1498  0.0792 0.2188 0.0001
+  762 0.1498  0.0792 0.2188 0.0002
+  762 0.1556  0.0852 0.2246 0.0001
+  762 0.1637  0.0934 0.2324 0.0001
+  762 0.1637  0.0934 0.2324 0.0001
+  762 0.1698  0.0997 0.2384 0.0001
+  762 0.1698  0.0996 0.2383 0.0001
+  762 0.1698  0.0996 0.2383 0.0001
+  762 0.1759  0.1059 0.2443 0.0001
+
+== influence
+               analysis                                         fit cows
+ Wallace CH4 per kg DMI                           OLS, current cell  852
+ Wallace CH4 per kg DMI                  OLS without Cook's D > 4/n  805
+ Wallace CH4 per kg DMI MM regression (robustbase::lmrob, defaults)  852
+ removed max_cooks_d estimate    t        p     r     lo    hi excludes_0
+       0      0.0292    0.153 3.91 9.97e-05 0.134 0.0667 0.199       TRUE
+      47          NA    0.140 4.70 3.02e-06 0.165 0.0962 0.231       TRUE
+       0          NA    0.134 4.06 5.35e-05    NA     NA    NA       TRUE
+
+== reading
+               analysis cells cells_testable cells_interval_excludes_0
+ Wallace CH4 per kg DMI    18             18                        18
+ influence_refits_excluding_0 robust failing_cells
+                            2   TRUE              
+                                                               reading
+ robust within Wallace (still a single-cohort exploratory association)
+                                                                            note
+ an untestable cell (assigned share below the minimum) counts as not excluding 0

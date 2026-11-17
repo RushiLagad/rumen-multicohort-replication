@@ -1,0 +1,206 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.2 ANCOM-BC2 configuration and filtered calibration
+== (a) labels: k = 1 classification p equals 2 pt(-|W_cal|, df) in 20 of 20 rows (max |diff| 2.05e-15 )
+Loading required package: foreach
+Loading required package: rngtools
+== (c) primary Charolais genus fit reproduced: max |dW| = 1.07e-14 over 2780 taxa
+There were 50 or more warnings (use warnings() to see the first 50)
+== (b) null fits, per table
+                table shuffles median_share_p05 median_share_p05_passed
+         nelore_genus      200           0.0368                  0.0223
+ charolais_mrna_genus      200           0.0580                  0.0450
+        alberta_genus      200           0.2637                  0.0879
+         difford_bact      200           0.0962                  0.0673
+  wallace_prokaryotes      200           0.2500                  0.0865
+ max_share_p05_passed median_n_bh max_n_bh median_n_robust max_n_robust
+                0.253         3.0      679               0          591
+                0.116         0.0       60               0           22
+                0.187        14.5       43               0            7
+                0.173         2.0       21               0            3
+                0.183        17.0       45               1           10
+ P_any_bh P_any_robust P_any_robust_hi diff_vs_q_mismatches
+    0.805        0.305          0.3739                    0
+    0.255        0.035          0.0708                    0
+    0.960        0.495          0.5664                    0
+    0.710        0.110          0.1618                    0
+    1.000        0.525          0.5959                    0
+
+== real fits
+                table                                                  file
+         nelore_genus         results/replication/nelore_genus_ancombc2.csv
+ charolais_mrna_genus results/replication/charolais_mrna_genus_ancombc2.csv
+        alberta_genus            results/alberta/alberta_genus_ancombc2.csv
+         difford_bact             results/methane/difford_bact_ancombc2.csv
+  wallace_prokaryotes      results/methane/wallace_prokaryotes_ancombc2.csv
+ n_genera share_p05 share_p05_passed_all share_p05_among_passed share_passed
+     2869    0.0784               0.0418                 0.0437        0.956
+     2658    0.0621               0.0489                 0.0516        0.948
+       91    0.2747               0.0769                 0.1014        0.758
+      104    0.0481               0.0288                 0.0323        0.894
+      104    0.5577               0.2885                 0.6122        0.471
+ n_bh n_robust any_bh any_robust diff_vs_q_mismatch note
+    1        1   TRUE       TRUE                  0     
+    4        1   TRUE       TRUE                  0     
+   20        2   TRUE       TRUE                  0     
+    0        0  FALSE      FALSE                  0     
+   56       29   TRUE       TRUE                  0     
+
+== positive controls
+                                                                     file
+               results/positive_controls/16s/alberta_control_ancombc2.csv
+               results/positive_controls/16s/alberta_control_ancombc2.csv
+               results/positive_controls/16s/alberta_control_ancombc2.csv
+               results/positive_controls/16s/alberta_control_ancombc2.csv
+               results/positive_controls/16s/alberta_control_ancombc2.csv
+               results/positive_controls/16s/alberta_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_arch_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+          results/positive_controls/16s/difford_bact_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+   results/positive_controls/16s/wallace_prokaryotes_control_ancombc2.csv
+ results/positive_controls/profiles_gtdb_full/charolais_mrna_ancombc2.csv
+ results/positive_controls/profiles_gtdb_full/charolais_mrna_ancombc2.csv
+ results/positive_controls/profiles_gtdb_full/charolais_mrna_ancombc2.csv
+         results/positive_controls/profiles_gtdb_full/nelore_ancombc2.csv
+         results/positive_controls/profiles_gtdb_full/nelore_ancombc2.csv
+         results/positive_controls/profiles_gtdb_full/nelore_ancombc2.csv
+       term_column n_taxa n_q05 n_robust note
+        dietDiet_2     97    22       21     
+        dietDiet_3     97    11       10     
+        dietDiet_4     97    29       29     
+         breedCHAR     97     3        3     
+          breedHYB     97    10        9     
+             RFI_z     97    16        2     
+             herd2      3     1        0     
+             herd3      3     1        1     
+             herd4      3     2        2     
+             herd5      3     1        1     
+             herd6      3     0        0     
+           parity2      3     1        1     
+          parity3+      3     0        0     
+               dim      3     0        0     
+             CH4_z      3     1        0     
+             herd2    104    47       41     
+             herd3    104    36       33     
+             herd4    104    44       39     
+             herd5    104    19       18     
+             herd6    104    27       25     
+           parity2    104     6        4     
+          parity3+    104     5        5     
+               dim    104    10        4     
+             CH4_z    104     2        0     
+           farmIT1    104    18       18     
+           farmIT2    104    20       20     
+           farmIT3    104    15       14     
+           farmSE1    104    19       15     
+           farmUK1    104    26       26     
+           farmUK2    104    19       15     
+           parity2    104     2        1     
+          parity3+    104     6        2     
+               dim    104     1        1     
+             CH4_z    104    56       29     
+            dietGS   2761   456      343     
+          year2020   2761   113       68     
+ RFI_classhigh_RFI   2761     4        1     
+   dietBy-products   2887   637      537     
+   batchbatch_1116   2887   967      815     
+             RFI_z   2887     1        1     
+
+== (c) Charolais structural zeros
+ target_feature W_primary W_struc_zero p_primary p_struc_zero q_primary
+         TGT_T5   -0.1382      -0.1383     0.891        0.891         1
+        TGT_N01    1.3559       1.3563     0.192        0.192         1
+        TGT_N02    0.6293       0.6298     0.539        0.539         1
+        TGT_N04   -0.8362      -0.8367     0.411        0.410         1
+        TGT_N06   -0.5974      -0.5980     0.555        0.555         1
+        TGT_N08   -0.8391      -0.8398     0.409        0.409         1
+        TGT_N10    1.1034       1.1036     0.280        0.280         1
+        TGT_N11    0.7954       0.7960     0.471        0.471         1
+        TGT_N13   -0.6054      -0.6061     0.550        0.550         1
+        TGT_N15    0.8214       0.8218     0.419        0.419         1
+        TGT_N17   -0.1786      -0.1787     0.862        0.862         1
+        TGT_N19   -0.6898      -0.6902     0.496        0.496         1
+        TGT_N20   -0.7524      -0.7530     0.465        0.465         1
+        TGT_N21    0.8569       0.8571     0.400        0.400         1
+        TGT_N22    0.9469       0.9478     0.354        0.354         1
+        TGT_N23    0.2794       0.2795     0.782        0.782         1
+        TGT_N28    1.1643       1.1652     0.255        0.255         1
+         TGT_C1   -0.0755      -0.0756     0.940        0.940         1
+         TGT_C3   -0.8351      -0.8359     0.411        0.411         1
+         TGT_C4    0.4254       0.4256     0.674        0.674         1
+         TGT_C5    0.2098       0.2100     0.835        0.835         1
+         TGT_C6    0.7245       0.7247     0.475        0.475         1
+ q_struc_zero flagged_structural_zero primary_reproduced_max_dW taxa_flagged
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+            1                   FALSE                  1.07e-14           63
+ taxa_primary taxa_struc_zero_fit                           note
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+         2780                2760 sensitivity only; sets nothing
+
+== (d) reading
+ tables_meeting tables                    tables_failing
+              3      5 alberta_genus;wallace_prokaryotes
+                                                                                                 reading
+ the inflation statement stands, with the configuration stated and the filtered rates reported beside it

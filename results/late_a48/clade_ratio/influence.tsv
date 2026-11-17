@@ -1,0 +1,4 @@
+analysis	fit	cows	removed	max_cooks_d	estimate	t	p	r	lo	hi	excludes_0
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48)	OLS, current cell	852	0	0.0292231539091038	0.152539606177957	3.91013617557154	9.96746401414336e-05	0.133623135443582	0.0667014425188881	0.199347997697593	TRUE
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48)	OLS without Cook's D > 4/n	805	47	NA	0.139631623397217	4.70305879169852	3.0219368511771e-06	0.164628009319333	0.0962395152667887	0.231469484371057	TRUE
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48)	MM regression (robustbase::lmrob, defaults)	852	0	NA	0.134330786291984	4.06063625384351	5.35099361847397e-05	NA	NA	NA	TRUE

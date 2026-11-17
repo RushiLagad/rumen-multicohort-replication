@@ -1,0 +1,58 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.3 harmonized Wallace vs Difford | permutations 9999 
+shared genera: 61 (Wallace eligible 81 , Difford eligible 87 )
+-- CH4 : rho -0.367 ( -0.574 to -0.113 ), same sign 24 of 61 
+-- CH4, depth-adjusted : rho -0.363 ( -0.566 to -0.124 ), same sign 26 of 61 
+-- days in milk (positive control) : rho 0.211 ( -0.046 to 0.449 ), same sign 37 of 61 
+-- days in milk, depth-adjusted : rho 0.21 ( -0.058 to 0.442 ), same sign 35 of 61 
+Fontconfig warning: using without calling FcInit()
+== agreement
+                         variant                                       subset
+                             CH4                            all shared genera
+                             CH4 16 farm-robust Wallace genera (those shared)
+                             CH4     Wallace A46 scan q < 0.05 (those shared)
+             CH4, depth-adjusted                            all shared genera
+             CH4, depth-adjusted 16 farm-robust Wallace genera (those shared)
+             CH4, depth-adjusted     Wallace A46 scan q < 0.05 (those shared)
+ days in milk (positive control)                            all shared genera
+ days in milk (positive control) 16 farm-robust Wallace genera (those shared)
+ days in milk (positive control)     Wallace A46 scan q < 0.05 (those shared)
+    days in milk, depth-adjusted                            all shared genera
+    days in milk, depth-adjusted 16 farm-robust Wallace genera (those shared)
+    days in milk, depth-adjusted     Wallace A46 scan q < 0.05 (those shared)
+ genera spearman_rho  rho_lo   rho_hi same_sign p_sign_binom median_I2
+     61       -0.367 -0.5738 -0.11257        24       0.1237      83.4
+     14       -0.481 -0.8781  0.12041         4       0.1796      93.0
+     39       -0.250 -0.5381  0.07747        13       0.0533      91.2
+     61       -0.363 -0.5656 -0.12417        26       0.3057      79.0
+     14       -0.574 -0.9329 -0.00219         5       0.4240      93.8
+     39       -0.239 -0.5483  0.08296        13       0.0533      91.2
+     61        0.211 -0.0456  0.44927        37       0.1237      27.0
+     14        0.486 -0.0744  0.81336        11       0.0574      40.5
+     39        0.245 -0.0989  0.55920        25       0.1081      37.5
+     61        0.210 -0.0585  0.44197        35       0.3057      39.1
+     14        0.464 -0.1183  0.80809        11       0.0574      36.4
+     39        0.269 -0.0614  0.57678        25       0.1081      42.4
+ wallace_q05 difford_q05
+          35           0
+          13           0
+          33           0
+          32           0
+          13           0
+          32           0
+           9           5
+           5           1
+           7           5
+          10           6
+           6           1
+           8           6
+
+== reading
+             variant    rho rho_lo rho_hi p_sign
+                 CH4 -0.367 -0.574 -0.113  0.124
+ CH4, depth-adjusted -0.363 -0.566 -0.124  0.306
+                                         reading
+ a negative relationship, reported descriptively
+ a negative relationship, reported descriptively
+                                                                              note
+ the difference is not attributed to biology; Fig. 5 is redrawn from this analysis
+ the difference is not attributed to biology; Fig. 5 is redrawn from this analysis

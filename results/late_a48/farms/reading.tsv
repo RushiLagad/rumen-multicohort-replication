@@ -1,0 +1,3 @@
+estimand	features	estimable_pi	consistent_across_farms	consistent_ids	share_pi_includes_0	reading	analysis
+ANCOM-BC2 lfc (per farm, uncalibrated)	29	28	1	Tyzzerella	0.964285714285714	features whose 95% prediction interval excludes 0 are 'consistent across farms'; the rest keep 'stable to leaving out any farm'	late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48)
+CLR partial r (Fisher z)	29	28	0		1	no feature is consistent across farms; the text keeps 'stable to leaving out any farm' and reports the share of prediction intervals that include 0	late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48)

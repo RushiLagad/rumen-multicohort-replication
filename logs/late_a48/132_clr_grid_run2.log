@@ -1,0 +1,111 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.5 CLR grid | cells 12 | targets reported 23 
+pc0.1 R0 done, 1 s
+reference cell reproduces cohort_estimates.tsv: max |dr| = 4.72e-16 
+pc0.5 R0 done, 0 s
+pc1 R0 done, 0 s
+czm R0 done, 3 s
+pc0.1 R1 done, 0 s
+pc0.5 R1 done, 0 s
+pc1 R1 done, 0 s
+czm R1 done, 3 s
+pc0.1 R2 done, 0 s
+pc0.5 R2 done, 0 s
+pc1 R2 done, 0 s
+czm R2 done, 3 s
+== robustness of the reported statements across 12 cells
+  id k statement_reference cells holds_in_all_cells
+  T2 2        no exclusion    12                 NA
+  T4 2        no exclusion    12                 NA
+  T5 2        no exclusion    12                 NA
+  T6 2        no exclusion    12                 NA
+ N15 2        no exclusion    12                 NA
+  S1 2        no exclusion    12                 NA
+  M1 2        no exclusion    12                 NA
+  C5 3   excludes r = 0.30    12               TRUE
+  C6 3   excludes r = 0.30    12               TRUE
+ N02 1   excludes r = 0.30    12               TRUE
+ N04 1   excludes r = 0.15    12              FALSE
+ N11 1   excludes r = 0.15    12              FALSE
+ N13 1   excludes r = 0.15    12               TRUE
+ N20 1   excludes r = 0.15    12               TRUE
+ N22 1   excludes r = 0.15    12              FALSE
+  M2 1   excludes r = 0.15    12               TRUE
+  M3 1   excludes r = 0.15    12              FALSE
+ N32 1   excludes r = 0.15    12               TRUE
+ N38 1   excludes r = 0.15    12               TRUE
+ N39 1   excludes r = 0.15    12               TRUE
+ N40 1   excludes r = 0.15    12               TRUE
+ N06 1 interval excludes 0    12              FALSE
+  C3 3        no exclusion    12                 NA
+                   failing_cells                      reading    r_min    r_max
+                                                              -0.00983  0.05768
+                                                              -0.36410 -0.30984
+                                                              -0.11289  0.02975
+                                                              -0.16305  0.01705
+                                                               0.01786  0.04041
+                                                              -0.10149 -0.06716
+                                                               0.02997  0.02997
+                                 robust to the transformation  0.00340  0.01798
+                                 robust to the transformation  0.04667  0.06461
+                                 robust to the transformation  0.17324  0.21201
+                 pc0.5 R2;pc1 R2     transformation-sensitive -0.36165 -0.22480
+                   pc1 R0;pc1 R1     transformation-sensitive  0.21670  0.30244
+                                 robust to the transformation -0.44960 -0.29954
+                                 robust to the transformation  0.23902  0.28765
+ pc0.1 R0;czm R0;pc0.1 R1;czm R1     transformation-sensitive  0.22408  0.28228
+                                 robust to the transformation  0.04042  0.04454
+                        pc0.1 R2     transformation-sensitive -0.08892  0.01964
+                                 robust to the transformation -0.06737 -0.05317
+                                 robust to the transformation -0.20391 -0.09577
+                                 robust to the transformation -0.00214  0.00183
+                                 robust to the transformation -0.13550 -0.05064
+ pc0.1 R2;pc0.5 R2;pc1 R2;czm R2     transformation-sensitive -0.45242 -0.27337
+                                                              -0.08742 -0.01687
+ bound_min bound_max
+   0.89364    0.9860
+   0.93854    0.9960
+   0.91641    0.9969
+   0.91386    0.9747
+   0.49677    0.5136
+   0.86163    0.9389
+   0.33878    0.3388
+   0.17362    0.1874
+   0.21499    0.2321
+   0.17491    0.2136
+   0.01322    0.1619
+   0.07963    0.1701
+  -0.09194    0.0828
+   0.09570    0.1472
+   0.10149    0.1626
+   0.02801    0.0321
+   0.06218    0.1501
+   0.00512    0.0194
+  -0.14373   -0.0340
+   0.07034    0.0743
+  -0.07412    0.0114
+   0.58663    0.7063
+   0.20364    0.5685
+                                                                             labels
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                              not replicated (direction not stated)
+                                              not replicated (direction not stated)
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+                                                                     not replicated
+ not replicated (direction not stated);single-cohort support (direction not stated)
+                                                                         untestable
+                                                                         untestable
+                                                                         untestable
+                                                                         untestable
+                                                                     not replicated
+                                              not replicated (direction not stated)

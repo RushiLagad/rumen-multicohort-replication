@@ -1,0 +1,2 @@
+rule	tables_meeting	tables	tables_failing	reading	note	analysis
+median share (p < 0.05 and passed_ss) <= 0.07 in all five tables	3	5	alberta_genus;wallace_prokaryotes	the inflation statement stands, with the configuration stated and the filtered rates reported beside it	the permutation calibration of W used for effect sizes and labels is unchanged; the filter is a decision rule for calling taxa, not a correction of W	late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48)

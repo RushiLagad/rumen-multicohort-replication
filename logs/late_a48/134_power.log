@@ -1,0 +1,110 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.7 power, published effects and attenuation
+== minimum detectable r per cohort
+         cohort    n  df mde_80
+    alberta_all  567 557 0.1183
+ charolais_mrna   30  26 0.5082
+        difford  728 710 0.1048
+        difford  749 730 0.1034
+         nelore   52  48 0.3873
+        wallace 1009 998 0.0885
+        wallace  853 842 0.0963
+
+== pooled configurations of the seven claims
+  id k     dfs mde_fe mkh_expected_halfwidth_r_tau0
+  M1 2 842;710 0.0710                         0.312
+  S1 2 730;998 0.0673                         0.297
+ N15 2  26;557 0.1157                         0.483
+  T2 2   48;26 0.3187                         0.905
+  T4 2   48;26 0.3187                         0.905
+  T5 2   48;26 0.3187                         0.905
+  T6 2   48;26 0.3187                         0.905
+                                                                   note
+ mKH with k = 2 uses a t on 1 df (critical value 12.7): no useful power
+ mKH with k = 2 uses a t on 1 df (critical value 12.7): no useful power
+ mKH with k = 2 uses a t on 1 df (critical value 12.7): no useful power
+ mKH with k = 2 uses a t on 1 df (critical value 12.7): no useful power
+ mKH with k = 2 uses a t on 1 df (critical value 12.7): no useful power
+ mKH with k = 2 uses a t on 1 df (critical value 12.7): no useful power
+ mKH with k = 2 uses a t on 1 df (critical value 12.7): no useful power
+
+== published effects
+              id                       set r_published         cohort     r_clr
+              T2                        Li       0.513         nelore  0.168282
+              T2                        Li       0.513 charolais_mrna -0.179568
+              T3                        Li       0.505         nelore  0.012145
+              T3                        Li       0.505 charolais_mrna -0.235123
+              T4                        Li       0.600         nelore -0.145103
+              T4                        Li       0.600 charolais_mrna -0.549838
+              T5                        Li       0.529         nelore  0.125660
+              T5                        Li       0.529 charolais_mrna -0.300575
+              T6                        Li       0.518         nelore -0.128006
+              T6                        Li       0.518 charolais_mrna -0.058567
+             N01                    Nelore       0.523 charolais_mrna -0.042018
+             N02                    Nelore       0.481 charolais_mrna  0.175941
+             N04                    Nelore       0.447 charolais_mrna -0.318307
+             N06                    Nelore       0.415 charolais_mrna -0.419674
+             N08                    Nelore       0.408 charolais_mrna -0.371901
+             N10                    Nelore       0.391 charolais_mrna  0.096939
+             N11                    Nelore       0.381 charolais_mrna  0.237353
+             N13                    Nelore       0.377 charolais_mrna -0.425300
+             N15                    Nelore       0.370 charolais_mrna -0.038355
+             N15                    Nelore       0.370    alberta_all  0.033174
+             N17                    Nelore       0.361 charolais_mrna -0.000588
+             N19                    Nelore       0.358 charolais_mrna -0.280726
+             N20                    Nelore       0.353 charolais_mrna  0.244199
+             N21                    Nelore       0.350 charolais_mrna  0.071420
+             N22                    Nelore       0.348 charolais_mrna  0.238761
+             N23                    Nelore       0.465 charolais_mrna -0.110671
+             N23                    Nelore       0.465    alberta_all  0.048537
+             N28                    Nelore       0.408 charolais_mrna -0.037928
+             N30                    Nelore       0.468        difford -0.027205
+             N30                    Nelore       0.468        wallace  0.168132
+             N32                    Nelore       0.418        difford -0.062665
+             N37                    Nelore       0.384        difford  0.004274
+             N37                    Nelore       0.384        wallace  0.055095
+             N38                    Nelore       0.383        wallace -0.121351
+             N39                    Nelore       0.380        difford -0.000813
+             N40                    Nelore       0.378        wallace -0.062458
+             N42                    Nelore       0.373        difford -0.013839
+             N42                    Nelore       0.373        wallace -0.088031
+ methane targets Methane, MethaneSecondary          NA           <NA>        NA
+   lo_clr    hi_clr                                       comparison
+ -0.11548  0.426650 published magnitude excluded (interval below it)
+ -0.51795  0.207410          published magnitude inside the interval
+ -0.26711  0.289519                           no published direction
+ -0.55916  0.151226                           no published direction
+ -0.40702  0.138858 published magnitude excluded (interval below it)
+ -0.76582 -0.222371 published magnitude excluded (interval below it)
+ -0.15823  0.390359 published magnitude excluded (interval below it)
+ -0.60573  0.081667          published magnitude inside the interval
+ -0.39238  0.155902 published magnitude excluded (interval below it)
+ -0.42242  0.321542 published magnitude excluded (interval below it)
+ -0.40869  0.336338 published magnitude excluded (interval below it)
+ -0.21099  0.515205 published magnitude excluded (interval below it)
+ -0.61800  0.062158 published magnitude excluded (interval below it)
+ -0.68544 -0.055240          published magnitude inside the interval
+ -0.65421  0.001372          published magnitude inside the interval
+ -0.28651  0.453617          published magnitude inside the interval
+ -0.14892  0.560778 published magnitude excluded (interval below it)
+ -0.68905 -0.062065 published magnitude excluded (interval below it)
+ -0.40563  0.339587 published magnitude excluded (interval below it)
+ -0.04990  0.115787 published magnitude excluded (interval below it)
+ -0.37359  0.372577          published magnitude inside the interval
+ -0.59183  0.103161          published magnitude inside the interval
+ -0.14180  0.565740 published magnitude excluded (interval below it)
+ -0.30992  0.432966 published magnitude excluded (interval below it)
+ -0.14746  0.561800 published magnitude excluded (interval below it)
+ -0.46457  0.273714 published magnitude excluded (interval below it)
+ -0.03453  0.130942 published magnitude excluded (interval below it)
+ -0.40528  0.339965 published magnitude excluded (interval below it)
+ -0.09947  0.045350 published magnitude excluded (interval below it)
+  0.10726  0.227752 published magnitude excluded (interval below it)
+ -0.13452  0.009845 published magnitude excluded (interval below it)
+ -0.06821  0.076716 published magnitude excluded (interval below it)
+ -0.00692  0.116691 published magnitude excluded (interval below it)
+ -0.18198 -0.059807 published magnitude excluded (interval below it)
+ -0.07327  0.071657 published magnitude excluded (interval below it)
+ -0.12397 -0.000465 published magnitude excluded (interval below it)
+ -0.08622  0.058686 published magnitude excluded (interval below it)
+ -0.14921 -0.026180 published magnitude excluded (interval below it)
+       NA        NA                                       untestable

@@ -1,0 +1,2 @@
+id	target	cohort	trait	published_dir	n	df	r_clr	lo_clr	hi_clr	p_t_clr	r_ancombc2_cal	lo_ancombc2_cal	hi_ancombc2_cal	p_perm_ancombc2	note	analysis
+S1	Sharpea	wallace	CH4 per kg DMI	-1	1007	996	-0.0629881169042685	-0.124557578069482	-0.000935440095271572	0.046662785352885	-0.0180841523371942	-0.0800506498694021	0.0440215835448189	0.54	source trait type (methane yield); host differs (sheep source, cattle test); k = 1 (Difford has no yield trait)	late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48)

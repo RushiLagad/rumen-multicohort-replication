@@ -1,0 +1,16 @@
+late analysis, run after all primary, late, Amendment 46 and Amendment 47 results were seen (Amendment 48) | 48.8 mapping confidence
+== classes
+     
+      alberta_all charolais_mrna difford nelore wallace
+  MC1           6             11       6      2       6
+  MC2           0             11       0      4       0
+  MC3           1              4       2      4       2
+  MC4           0              1       0      1       0
+
+== summary
+                        set targets_testable rfi_excl_30 methane_excl_15
+ all targets (Amendment 47)               38           8               6
+  MC1 cohort estimates only               22           7               4
+ replicated cohort_tests                       classes
+          0           61 MC1 31; MC2 15; MC3 13; MC4 2
+          0           31                              
