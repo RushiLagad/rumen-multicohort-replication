@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """140: Figure 1 for draft 18, the 111 schematic with the same content and a compact layout (Amendment 48.11, reconciliation item 13: figure and legend
-to fit 170 x 225 mm). Only spacing changes: line height 1.10 x size (111: 1.22), panel gaps, table row height, box padding. Text sizes, wording and the
-overflow check are as in 111. Writes results/figures_draft18/fig1_study_design.svg (refuses to overwrite). Usage: 140_figure1_compact.py [root]
+to fit 170 x 225 mm). Only spacing changes: line height 1.10 x size (111: 1.22), panel gaps, table row height, box padding. Text sizes and the overflow check
+are as in 111; one wording change for draft 18: panel d reads 'coverage rule met in simulation' (111: 'validated by simulation'). Writes results/figures_draft18/fig1_study_design.svg (refuses to overwrite). Usage: 140_figure1_compact.py [root]
 111 docstring follows.
 Figure 1 (manuscript): study design schematic. Writes fig1_study_design.svg in the current directory.
 Render to PDF/PNG with: node scripts/111_render_svg.js fig1_study_design.svg out.png out.pdf <height>mm   (height printed below)
@@ -191,7 +191,7 @@ yy += 3 * (LH + 3) + 5
 yy = text(M + 6, yy, ['Otherwise: single-cohort support, opposite sign,', 'not replicated, or untestable'], size=S_SM, color=INK2, lh=LH, maxw=dw - 12)
 yy += 6
 text(M + 6, yy, 'Effect size and benchmarks', size=S_SM, weight='bold', maxw=dw - 12)
-yy = text(M + 6, yy + LH, ['CLR partial *r* per cohort; modified Knapp-Hartung', 'pooled intervals, validated by simulation;',
+yy = text(M + 6, yy + LH, ['CLR partial *r* per cohort; modified Knapp-Hartung', 'pooled intervals, coverage rule met in simulation;',
                            'does the 95% interval exclude *r* = 0.15 or 0.30', 'in the published direction?'], size=S_SM, color=INK2, lh=LH, maxw=dw - 12)
 d_end = yy - LH + 6
 def bullets(y0, head, items, filled):

@@ -3,8 +3,10 @@
 and refuses to overwrite; the draft 17 files in results/additional_files/ are left as they are.
 
 Additional file 1: the draft 17 workbook with
-  - 'Evidence ledger' rebuilt from the final Amendment 47 intervals and labels with the 48.8 mapping-confidence column
-    (results/late_a48/ledger/evidence_ledger_a47.tsv, script 141);
+  - 'Evidence ledger' rebuilt from the final Amendment 47 intervals and labels with the 48.8 mapping-confidence column and the 48.11 source
+    audit (results/late_a48/ledger/evidence_ledger_a47_v2.tsv, scripts 141 and 144: S1 a cross-phenotype and cross-host transfer; M1, M2 and S1
+    sources from the audit; "met the Amendment 47 coverage rule" in place of "validated"); 'Source audit' (results/late_a48/source_audit.tsv);
+    the 'Targets' source and published-trait columns of M1, M2 and S1 from the audit;
   - the Amendment 46 ledger kept as 'Ledger A46 (historical)';
   - a 'Mapping confidence' sheet (48.8, one row per target and cohort) and a 'Targets' column giving each cohort's class.
 Additional file 2: the draft 17 workbook plus one sheet per Amendment 48 output (prefix 'A48'); the clade-ratio grid carries the analysis
@@ -33,30 +35,39 @@ COH = {"nelore": "Nelore", "charolais_mrna": "Charolais", "alberta_all": "Albert
 # ---------------------------------------------------------------- Additional file 1
 b1 = pd.read_excel(os.path.join(D17, "Additional_file_1_targets.xlsx"), sheet_name=None, dtype={"ID": str, "id": str})
 assert list(b1) == ["Notes", "Targets", "Evidence ledger", "Overlap audit"], list(b1)
-led = rd(f"{A48}/ledger/evidence_ledger_a47.tsv"); mc = rd(f"{A48}/mapping/mapping_classes.tsv")
+led = rd(f"{A48}/ledger/evidence_ledger_a47_v2.tsv"); mc = rd(f"{A48}/mapping/mapping_classes.tsv"); aud = rd(f"{A48}/source_audit.tsv")
 assert len(led) == 38 and len(mc) == 61
 T = b1["Targets"].copy()
 cls = mc.assign(c=mc.cohort.map(COH)).groupby("id").apply(lambda x: "; ".join(f"{c} {k}" for c, k in zip(x.c, x["class"])), include_groups=False)
 T.insert(T.columns.get_loc("Target") + 1, "Mapping confidence (48.8)", T["ID"].map(cls).fillna(""))
+for i in ("M1", "M2", "S1"):   # 48.11 source audit: the ledger's source and phenotype for these three
+    m = T["ID"] == i; assert m.sum() == 1, i; r = led[led.id == i].iloc[0]
+    T.loc[m, "Source"] = r.source; T.loc[m, "Published trait"] = r.source_phenotype
 M = mc.assign(cohort=mc.cohort.map(COH).fillna(mc.cohort))[["id", "target", "arm", "cohort", "rank", "class", "basis", "charolais_mrna_vs_16s_spearman", "analysis"]]
 n1 = b1["Notes"].copy()
 n1.loc[n1.Item == "Evidence ledger", "Description"] = ("One row per testable target (27 RFI, 11 methane), rebuilt for draft 18 from the final Amendment 47 results (script 141): "
     "source claim, site, phenotype, published direction and evidence category as in Amendment 46; the CLR partial r with the modified Knapp-Hartung interval "
     "(k >= 2) or the cohort's own interval (k = 1), the method, the role (pooled or one independent cohort) and the validation statement ('descriptive' "
     "intervals carry no exclusion statement); exclusion of 0, r = 0.15 and r = 0.30 in the published direction; the Amendment 47 CLR label beside the "
-    "Amendment 37 primary label; and the mapping-confidence class of each cohort (48.8). Late analysis, run after all primary results were seen.")
-n1 = pd.concat([n1, pd.DataFrame({"Item": ["Ledger A46 (historical)", "Mapping confidence", "Mapping confidence (Targets)"], "Description": [
+    "Amendment 37 primary label; the mapping-confidence class of each cohort (48.8); and, for M1, M2 and S1, the source, phenotype and contrast from "
+    "the 48.11 source audit (S1 Sharpea is a cross-phenotype and cross-host transfer: a methane-yield claim in sheep tested against daily output in cows; "
+    "M1 and M2 keep the matched class, flagged because the source contrast was a group or cluster comparison). 'met the Amendment 47 coverage rule' marks "
+    "pooled intervals whose procedure met the coverage rule of Amendment 47. Late analysis, run after all primary results were seen.")
+n1 = pd.concat([n1, pd.DataFrame({"Item": ["Ledger A46 (historical)", "Mapping confidence", "Mapping confidence (Targets)", "Source audit"], "Description": [
     "The Amendment 46 ledger (script 118) as published with draft 17, kept for the record. Its intervals (HKSJ) are superseded by the Amendment 47 "
     "modified Knapp-Hartung intervals in 'Evidence ledger'.",
     "Amendment 48.8: one row per target and independent cohort. MC1, one key with the exact genus name in that cohort's taxonomy; MC2, a GTDB-suffixed "
     "genus or several keys summed; MC3, family or phylum aggregate (and the clade ratio); MC4, species level. Assigned by rule from plan/target_keys.tsv "
     "and results/late_mapping/target_mapping_by_cohort.tsv (script 135). With MC1 estimates only, 5 of the 8 RFI r = 0.30 exclusions and 4 of the 6 "
     "methane r = 0.15 exclusions hold (Amendment 48 result, item 9, as corrected).",
-    "The 'Targets' sheet gains the column 'Mapping confidence (48.8)', the class per independent cohort; blank for untestable targets."]})], ignore_index=True)
-S1 = ["Notes", "Targets", "Evidence ledger", "Ledger A46 (historical)", "Overlap audit", "Mapping confidence"]; assert all(len(n) <= 31 for n in S1)
+    "The 'Targets' sheet gains the column 'Mapping confidence (48.8)', the class per independent cohort; blank for untestable targets.",
+    "Amendment 48.11 source audit of the methane claims (results/late_a48/source_audit.tsv): per source, host and n, contrast, phenotype and units, "
+    "direction and class. Rule: a methane target is a matched claim only if a source independent of the test cohort reports it in cattle for daily "
+    "output with a stated direction. Only S1 changes class; labels, estimates and intervals are unchanged."]})], ignore_index=True)
+S1 = ["Notes", "Targets", "Evidence ledger", "Ledger A46 (historical)", "Overlap audit", "Mapping confidence", "Source audit"]; assert all(len(n) <= 31 for n in S1)
 af104.write_book(OUT[1], [("Notes", n1), ("Targets", T), ("Evidence ledger", led), ("Ledger A46 (historical)", b1["Evidence ledger"]),
-                          ("Overlap audit", b1["Overlap audit"]), ("Mapping confidence", M)],
-                 {"Targets": 4, "Evidence ledger": 3, "Ledger A46 (historical)": 3, "Overlap audit": 3, "Mapping confidence": 2})
+                          ("Overlap audit", b1["Overlap audit"]), ("Mapping confidence", M), ("Source audit", aud)],
+                 {"Targets": 4, "Evidence ledger": 3, "Ledger A46 (historical)": 3, "Overlap audit": 3, "Mapping confidence": 2, "Source audit": 3})
 print("wrote", OUT[1])
 
 # ---------------------------------------------------------------- Additional file 2
@@ -102,7 +113,8 @@ S = [  # (sheet name <= 31 chars, frame, note)
  ("A48 clade ratio assignment", rd(f"{A48}/clade_ratio/assignment.tsv"), "48.9: share of ASVs assigned at each margin."),
 ]
 assert all(len(n) <= 31 for n, _, _ in S), [n for n, _, _ in S if len(n) > 31]
-n2 = pd.concat([b2["Notes"], pd.DataFrame({"Item": ["A48 sheets", "Figure 4, mixed outcomes"] + [n for n, _, _ in S],
+nb = b2["Notes"].copy(); nb["Description"] = nb.Description.str.replace("the validated procedure", "the procedure that met the Amendment 47 coverage rule", regex=False).str.replace("the per-target validated range", "the per-target range over which the coverage rule was met", regex=False)
+n2 = pd.concat([nb, pd.DataFrame({"Item": ["A48 sheets", "Figure 4, mixed outcomes"] + [n for n, _, _ in S],
     "Description": ["Sheets starting 'A48' are late analyses, run after all primary, late, Amendment 46 and Amendment 47 results were seen "
                     "(Amendment 48 and its addenda, in response to the pre-submission and readiness reviews); they set no label. Source files in "
                     "results/late_a48/; every number the manuscript takes from them is in results/late_a48/manifest_a48.tsv.",
