@@ -152,7 +152,7 @@ pa <- ggplot(L, aes(r, row)) +
   scale_colour_manual(values=c("CLR"=blue, "Calibrated ANCOM-BC2"=orange, "Pooled"=ink), labels=c("CLR", "Calibrated ANCOM-BC2", "Pooled, modified Knapp-Hartung")) +
   scale_shape_manual(values=c("CLR"=16, "Calibrated ANCOM-BC2"=17, "Pooled"=23), labels=c("CLR", "Calibrated ANCOM-BC2", "Pooled, modified Knapp-Hartung")) +
   labs(x="Partial r, oriented so positive = the published direction (95% intervals)", y=NULL) +
-  theme_f + theme(panel.grid.major.y=element_blank(), strip.text=element_text(hjust=0, size=7.8, colour=ink), panel.spacing=unit(6, "pt"), axis.text.y=element_text(size=7))
+  theme_f + theme(panel.grid.major.y=element_blank(), strip.text=element_text(hjust=0, size=7.8, colour=ink), panel.spacing=unit(6, "pt"), axis.text.y=element_text(size=7), plot.margin=margin(5.5, 14, 5.5, 5.5))
 save2(pa, "af4_seven_claims", W170, 215 / 25.4)
 
 T4 <- P7 %>% transmute(id, target, arm, published_direction=ifelse(published_dir > 0, "higher", "lower"), k, cohorts=gsub(";", ", ", sapply(strsplit(cohorts, ";"), function(v) paste(COH[v], collapse=";"))),
