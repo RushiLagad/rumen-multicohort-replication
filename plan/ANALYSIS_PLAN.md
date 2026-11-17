@@ -1063,3 +1063,206 @@ Outputs go only to results/late_a47/.
    - Figure 2 is redrawn with the modified Knapp-Hartung intervals (script 102, which requires the 47.1 validation and stops if a descriptive pooled interval would be drawn as an exclusion).
    - Additional file 2 gains the A47 sheets (script 104), and its A46 notes now say that the A46 HKSJ intervals are superseded.
    - The committed Amendment 46 text is supplied for Box as AMENDMENT_46_committed.md.
+
+**Amendment 48 (2026-11-17, committed before any of it was run; written after all primary, late, Amendment 46 and Amendment 47 results had been seen): seven-claim evidence, ANCOM-BC2 configuration and filtered calibration, harmonized dairy comparison, farm random effects, transformation and influence sensitivity, power and attenuation, mapping confidence, clade-ratio robustness, and an analysis classification table.**
+
+**Timing.** Written after every result in Amendments 15 to 47 had been seen, in response to a pre-submission review by the corresponding author (A. Goswami, 16 November 2026; assessment in Box, 07_Revision_A46). Every output is a late analysis, written only to `results/late_a48/`, with logs in `logs/late_a48/`. Nothing in `results/` is overwritten. Dumps that the existing hooks in 21, 65 and 81 write to `work/` are never committed. This text and its rules are committed before any script for it is run. Scripts are numbered from 128. Every result is reported whatever it shows. No analysis in this amendment is repeated with different settings to change a result; any further change needs a new amendment.
+
+**Why.** The review asked whether the replication result reflects real disagreement between populations or a lack of precision, and whether the methodological criticism of ANCOM-BC2 depends on our configuration. Points it raised that the files confirm:
+1. Only 7 of the 21 matched claims were testable in two or more independent cohorts (T2, T4, T5, T6, N15, S1, M1), and their evidence is reported only through pooled labels.
+2. The ANCOM-BC2 false-positive proportions in Table 2 count raw nominal p < 0.05 per genus. ANCOMBC 2.4.0 ran its pseudo-count sensitivity analysis by default (pseudo_sens = TRUE), but the passed_ss filter that the package recommends before calling a taxon differential was not applied.
+3. The Wallace vs Difford comparison (Fig. 5) uses each cohort's own feature space and CLR reference, with no per-genus uncertainty.
+4. The Wallace farm analysis gives leave-one-farm-out stability and per-farm estimates, but no random-effects summary or prediction interval.
+5. The CLR estimand fixes the pseudo-count at 0.5 and one reference. Six benchmark exclusions rest on 30 Charolais animals, and three are within 0.01 of r = 0.15.
+6. Power is reported as detection of design contrasts and planted effects, not as the smallest effect each cohort could detect, and not against the published effects where those exist.
+
+**What does not change.** The replication criterion (Section 10, Amendments 14 and 14b), the Amendment 37 primary labels, the Amendment 47 CLR labels, the designated modified Knapp-Hartung (mKH) interval procedure and every existing result file. Nothing here sets or changes a replication label. Secondary criteria (48.1) are reported beside the labels and are never called replication.
+
+**48.1 Seven-claim evidence table.**
+
+*Scope.* The matched claims with k_independent >= 2 in the evidence ledger: RFI T2, T4, T5, T6, N15; methane S1, M1. Script 128.
+
+*Per cohort.* n, df; CLR partial r with 95% Fisher interval, parametric p and the Freedman-Lane p already on file (results/late_a46/effect_size/cohort_estimates.tsv); calibrated ANCOM-BC2 W, r with 95% interval and permutation p (Amendment 37 files; for M1 the calibrated linear model of the log ratio); the minimum detectable r at 80% power, two-sided alpha 0.05, tanh(2.8016 / sqrt(df - 1)).
+
+*Pooled.* mKH r and interval, tau-hat, I-squared and Cochran's Q p (CLR); the Amendment 37 pooled r, q and label; fixed-effect r and p, labelled as a comparator.
+
+*Reason for no replicated label.* Coded from the Section 10 conditions, all that apply: pooled q >= 0.05; pooled sign against the published direction; leave-one-cohort-out condition fails.
+
+*Pattern (CLR, fixed now; first rule that applies).*
+- A. Support in one cohort only: at least one cohort interval excludes 0 in the published direction and at least one does not.
+- B. Against the published direction: every cohort estimate has the sign opposite to the published direction.
+- C. Bounded: every cohort interval excludes r = 0.15 in the published direction.
+- D. Discordant: cohort estimates differ in sign.
+- E. Consistent, inconclusive: every other case.
+
+The same pattern is computed under calibrated ANCOM-BC2 and reported beside it. Disagreement between the two estimators is reported per claim.
+
+*Secondary criteria, reported only.*
+- S-a, nominal single-cohort support: at least one independent cohort with p < 0.05 in the published direction (Freedman-Lane p for CLR, permutation p for calibrated ANCOM-BC2), and a pooled estimate in the published direction.
+- S-b, fixed-effect support: fixed-effect pooled p < 0.05 in the published direction.
+
+Each is applied per estimator and reported as "nominal support under a secondary criterion", never as replication.
+
+*Directional concordance.* The share of cohort estimates with the published sign, with an exact binomial test against 0.5, per estimator, for the seven claims. The same is computed for every independent target-cohort test with a published direction across all 38 targets.
+
+*Outputs.* `results/late_a48/seven/seven_claims.tsv`, `concordance.tsv`; forest plot `fig_seven_claims.pdf` (per-cohort CLR and ANCOM-BC2 intervals, mKH pooled, r = 0.15 and 0.30 marked, oriented to the published direction).
+
+**48.2 ANCOM-BC2 configuration and filtered calibration.**
+
+*(a) Audit.* For scripts 20, 21, 65, 81 and 90, print the full ancombc2() call as executed, with every argument resolved to its value (defaults included), and the ANCOMBC version from sessionInfo. Write `results/late_a48/ancombc2/config.tsv`. Check that the labels and pooled q values use the parametric p of the calibrated W and not the 200-permutation p, and record which. Script 129.
+
+*(b) Filtered null.* For each of the five primary tables (Nelore genus, Charolais mRNA genus, Alberta all-animal genus, Difford bacterial, Wallace prokaryotic), first check whether at least 20 saved within-design permutation fits kept the full ANCOM-BC2 result with the passed_ss column for the trait term. If they did, use the saved fits. If not, run 50 new within-design permutations per table (seeds 4801001 to 4801050, the Amendment 37 design groups) with the primary call unchanged, keeping the full result. Per shuffle, record:
+- the share of genera with p < 0.05 (as Table 2);
+- the share with p < 0.05 and passed_ss TRUE;
+- the number with BH q < 0.05;
+- the number with diff_robust TRUE (q < 0.05 and passed_ss).
+
+Per table, report the median and range of each over shuffles, P(any q < 0.05) and P(any diff_robust) with Clopper-Pearson 95% intervals, and how many saved or new fits were used.
+
+*(c) Structural zeros, Charolais only.* The binary RFI class is the one trait for which structural-zero detection is defined. Refit the real Charolais genus table with group = RFI_class and struc_zero = TRUE, other arguments as the primary call. Report the taxa flagged as structural zeros and any change in the target estimates. This is a sensitivity analysis only and sets nothing.
+
+*(d) Reading, fixed now.*
+- If the median filtered rate (p < 0.05 and passed_ss) is at most 0.07 in all five tables, the paper says the inflation concerns unfiltered nominal p values. It then reports the filtered rates beside Table 2, and replaces "poorly calibrated" and "miscalibrated" (Background, Results heading, Fig. 3 title, Conclusions) by a statement of what was inflated under which settings.
+- Otherwise, the inflation statement stands, with the configuration stated and the filtered rates reported beside it.
+
+In both cases, the permutation calibration of W used for the effect sizes and labels is unchanged. The filter is a decision rule for calling taxa, not a correction of W.
+
+**48.3 Harmonized Wallace vs Difford comparison.**
+
+*Feature set.* SILVA 138.1 genus names cleaned as in Amendment 17 item 5. A genus enters if it is present in at least 10% of animals and has a mean relative abundance of at least 1e-4 in each cohort separately. CLR is computed within each cohort on this shared set only, so both cohorts use the same reference, with pseudo-count 0.5. Script 130.
+
+*Model.* Each cohort's primary methane model (Difford: herd, parity, days in milk, sequencing batch; Wallace: farm, parity, days in milk), CH4 g/d z-scored as in the primary analysis. OLS t for the trait gives the partial r with a 95% Fisher interval. Freedman-Lane p uses 9,999 permutations within herd or farm (seeds 4830001 onward).
+
+*Agreement.*
+- Spearman rho of r between cohorts, with a 95% bootstrap interval (2,000 resamples of genera, seed 4839001; descriptive, since genera are not independent);
+- Pearson correlation of Fisher z;
+- sign agreement with an exact binomial test against 0.5;
+- per-genus Cochran's Q and I-squared, and the share of genera with I-squared > 50%;
+- the same restricted to the 16 farm-robust Wallace genera and to the Wallace genera with q < 0.05 in the Amendment 46 scan.
+
+*Depth.* All of the above repeated with log library size added in both cohorts.
+
+*Positive control on the same pipeline.* The same harmonized comparison applied to the days-in-milk term, the one covariate common to both models. It shows whether this comparison can detect shared structure when it exists.
+
+*Not harmonizable.* Primer set, read length (Difford analysed on forward reads), breed composition, production system and methane measurement method. These are tabulated from the source papers in `not_harmonized.tsv` and are not modelled.
+
+*Reading, fixed now.*
+- If the rho interval includes 0 and the sign-agreement p is above 0.05, the paper reports no detectable agreement.
+- If the rho interval lies below 0, the paper reports a negative relationship, descriptively.
+
+In neither case is the difference attributed to biology. Fig. 5 is redrawn as an effect-vs-effect plot with interval bars from this analysis.
+
+**48.4 Wallace farm random effects.**
+
+*Inputs.* The per-farm estimates behind the Additional file 2 sheet "A46 Wallace farms, per farm" (29 features, up to 7 farms; uncalibrated, model-based). The same features are also refitted per farm with the CLR OLS estimand (farm-specific model: parity, days in milk, CH4 z). Script 131.
+
+*Method.* Per feature and estimand, using metafor:
+- REML random effects (DerSimonian-Laird if REML fails, recorded);
+- mKH 95% interval;
+- tau-squared, I-squared, Q p;
+- 95% prediction interval (t on k - 2 df, for k >= 3);
+- leave-one-farm-out with metafor leave1out, and farms with |studentized residual| > 2.
+
+Each is reported beside the pooled-regression W, the leave-one-farm-out stability flag and the per-farm sign counts.
+
+*Reading, fixed now.* A feature is called consistent across farms only if its 95% prediction interval excludes 0. Otherwise the text keeps "stable to leaving out any farm", and reports the share of features whose prediction interval includes 0.
+
+**48.5 CLR transformation sensitivity.**
+
+*Grid.*
+- Zero handling: pseudo-counts 0.1, 0.5 (current) and 1, and multiplicative replacement (zCompositions::cmultRepl, method CZM).
+- References: R0, the current one (all features except summed target features); R1, all features including the target; R2, a core reference, the geometric mean of genera present in at least 90% of that cohort's animals, excluding the target.
+
+That gives 12 cells; the cell with pseudo-count 0.5 and R0 must reproduce the Amendment 46 estimates to 1e-8, or the run stops. Script 132.
+
+*Scope.* The seven claims of 48.1 (all their cohorts, with mKH pooling); the 14 targets whose interval excludes a benchmark (RFI C5, C6, N02, N04, N11, N13, N20, N22; methane M2, M3, N32, N38, N39, N40); and the two Charolais intervals excluding 0 (N06, N13).
+
+*Reported per cell.* r, interval, pooled interval where k >= 2, exclusion status for r = 0.15 and 0.30, interval excluding 0, CLR label under the Amendment 47 rules. Every change from R0 at pseudo-count 0.5 is listed.
+
+*Reading, fixed now.* An exclusion is called robust to the transformation only if it holds in all 12 cells. Otherwise it is reported as transformation-sensitive, with the cells where it fails.
+
+**48.6 Charolais influence.**
+
+*Scope.* The six Charolais benchmark exclusions (N02, N04, N11, N13, N20, N22) and the two Charolais intervals excluding 0 (N06, N13). Script 133.
+
+*Method.*
+- Leave-one-animal-out: 30 refits of the CLR OLS model (diet, year, RFI class; df 25), reporting the minimum and maximum of r and of the interval bound in the published direction, the number of refits in which the exclusion holds, and the most influential animal by DFBETAS for the RFI-class term.
+- The 48.5 grid applied to these targets is reported beside it.
+
+*Reading, fixed now.* An exclusion is called robust to single animals only if it holds in all 30 refits. The three exclusions with bounds of 0.142 to 0.149 are described as at the threshold whatever the result.
+
+**48.7 Power, published effects and attenuation (arithmetic, no fits).**
+
+*Minimum detectable r.* At 80% power, per cohort (from df) and per pooled configuration (fixed effect from summed df - 1, and the expected mKH half-width at tau = 0 from the Amendment 47 Check 1 output). Script 134.
+
+*Published effects.*
+- Nelore set: r of about t / sqrt(t^2 + df), from the Supplementary Table 7 coefficient and SE. df comes from the source model if recoverable; otherwise 48 is used, flagged as approximate.
+- Li et al. set: extreme-group point-biserial r from the reported p with a two-sample t on 14 df (8 vs 8). This is flagged as inflated by extreme-group selection and comparable only with the Charolais design.
+- Methane sources: no convertible effect; stated as such.
+
+Each published r is compared with each independent cohort's interval: is the published magnitude inside the interval, excluded, or untestable.
+
+*Attenuation.* Observed r = true r × sqrt(trait reliability × feature reliability), with each reliability in {0.5, 0.7, 0.9}. For each cohort's minimum detectable r and each benchmark exclusion bound, the corresponding true r is reported. The Charolais GTDB vs SILVA agreement (Amendment 45) is cited as an empirical lower bound for feature reliability only.
+
+**48.8 Mapping confidence.**
+
+*Classes.* Per target and cohort, assigned by rule from plan/target_keys.tsv and the coverage logs. Script 135.
+- MC1: one key, exact genus name in that cohort's taxonomy.
+- MC2: GTDB-suffixed genus, or several keys summed.
+- MC3: family or phylum aggregate.
+- MC4: species level.
+
+*Re-tabulation.* Labels (Amendment 47 rules) and benchmark exclusions are recomputed using only MC1 cohort estimates, re-pooling with mKH where k >= 2 remains. No model is refitted. Additional file 1 gains a mapping-confidence column.
+
+**48.9 Clade-ratio robustness.**
+
+*Grid.*
+- Assignment margin: at least 1 (current), 2 or 3 mismatches.
+- Pseudo-count: 0.1, 0.5 (current) or 1.
+- Minimum assigned share: 70% (current) or 80%.
+
+The traits are Wallace CH4 per kg DMI and CH4 g/d, and Difford CH4 g/d. Script 136.
+
+*Per cell.* The linear model t and r with a 95% interval, and a Freedman-Lane p (9,999 permutations within farm or herd).
+
+*Influence, Wallace CH4 per kg DMI.*
+- Cook's distance, and a refit without animals with D > 4/n;
+- MM regression (robustbase::lmrob, default settings), with its t;
+- the existing analysis without SE1, carried into the grid.
+
+*Reading, fixed now.* The yield association is described as robust within Wallace only if its interval excludes 0 in every cell and in both influence refits. In all cases it remains a single-cohort exploratory association.
+
+**48.10 Analysis classification table.**
+
+Every analysis in the paper is classed in one table for Additional file 3 (`docs/ANALYSIS_CLASSES.md`), with the amendment and its timing relative to the affected results:
+- confirmatory: plan version 1.0, or an amendment committed before the affected results were seen;
+- planned sensitivity: named as a sensitivity before the results;
+- post hoc: written after the affected results.
+
+**48.11 Reporting.**
+
+- New main-text Table 4 from 48.1.
+- New Additional file 4: the 48.1 forest plot (PDF).
+- Fig. 5 redrawn from 48.3.
+- Additional file 2 gains A48 sheets (script 104 extended).
+- `results/late_a48/manifest_a48.tsv` gets one row per number cited in draft 18 (file, column, row key, value, rounding). check13.py and check_tables.py are extended to it.
+
+The manuscript reports every 48.x result whatever it shows, including results that weaken a current statement.
+
+**Reconciliation with the code (server, 2026-11-17, before commit; no Amendment 48 script had been written or run).** The draft from the review chat was checked against the scripts and files. Nothing below changes a reading fixed above.
+1. *Seen before commit.* While mapping the files for this amendment, the server chat read the trait-term columns of three saved null fits per table (seeds 2001 to 2003 or 1001 to 1003) to find whether `passed_ss` had been kept. In those 15 fits, BH discoveries fell from 0 to 24 per fit unfiltered to 0 or 1 with `diff` and `passed_ss`. The 48.2 reading was fixed in the review chat without this preview and is not changed.
+2. *48.2(a).* The calls cannot be re-executed as they ran, so the audit reconstructs each one from the code, with every argument not set there resolved from `formals(ANCOMBC::ancombc2)` of the installed version. The target fits (21, 65, 81, 90) use `group = NULL, struc_zero = FALSE`; the positive-control fits (20) use `group` = the control term and `struc_zero = TRUE`. The audit reports both.
+3. *48.2(b).* Every saved null fit kept `diff_` and `passed_ss_` for the trait term (200 per table: `results/scan_null/` for Nelore, Charolais mRNA and Alberta, seeds 2001 to 2200; `results/methane_dryrun/` for Difford and Wallace, seeds 1001 to 1200). All 200 per table are used, with the genus filter of Figure 3a (103, 126). No new permutation is run, and seeds 4801001 to 4801050 are not used.
+4. *48.2(c).* The Charolais refit uses the Amendment 46 dump `charolais_mrna_genus` (the count table and design of the primary call). It first refits the primary call and must reproduce the trait-term W of `results/replication/charolais_mrna_genus_ancombc2.csv` to 1e-6 for every taxon, or it stops. It then refits with `group = "RFI_class", struc_zero = TRUE`.
+5. *48.3.* The 16 farm-robust genera are the `farm_robust` rows of `results/wallace_farms/farm_consistency.tsv` other than `TGT_M2` (Succinivibrionaceae). Days in milk is `dim` in both models. The genus names of the two dumps are the cleaned SILVA names already used by 114.
+6. *48.5 and 48.6 scope.* The Charolais intervals that exclude 0 are N06, N13, C3 and T4. T4 is in 48.1, and C3 (no published direction) is added to 48.5 and 48.6 beside N06 and N13 (scope only). For the labels in 48.5, all 38 targets are refitted in each cell, because the Benjamini-Hochberg families need every target; only the listed targets are reported. M1 is a log ratio, not a CLR feature, so 48.5 leaves it unchanged (its pseudo-count is in 48.9). Multiplicative replacement is applied to the count matrix after the 10% prevalence filter, with samples as rows, and no feature is deleted (`z.warning = 1`, `z.delete = FALSE`).
+7. *48.6.* Each leave-one-animal-out refit recomputes the whole CLR pipeline on the remaining 29 animals: prevalence filter, zero handling, reference, covariate residuals and r. DFBETAS comes from the OLS fit of the full-data CLR value on diet, year and RFI class.
+8. *48.7.* The Li et al. values are the `qval` column of `plan/target_keys.tsv`, which holds the p values as the source reports them. The Nelore coefficients and SEs are its `coef` and `stderr` columns.
+9. *48.8.* The cohort features and their status come from `results/late_mapping/target_mapping_by_cohort.tsv` (Amendment 45).
+10. *48.9.* Wallace CH4 per kg DMI needs a new dump. An A48 hook in 81 (`A48=1 TRAIT=ch4_dmi`, real mode, all farms) writes `work/a46_inputs/wallace_prokaryotes_ch4_dmi.rds` with the design of the Amendment 34 fit. Clade counts at each margin are rebuilt from `results/16s/<cohort>/m1_asv_clades.tsv` and the DADA2 tables `results/16s/<cohort>/dada2.rds`. Margin 1 must reproduce `profiles_16s/<cohort>/<cohort>_m1_counts.tsv` exactly, or the run stops. A cohort whose assigned share falls below the minimum in a cell is reported as untestable in that cell. "Without SE1" drops farm SE1 from the Wallace design, as Amendment 32 item 2.
+11. *Scripts and run.* The scripts are 128 to 136 as numbered above, with `lib_a48.R` (gate on this heading, output helpers, and copies of the 47.2 classification functions from 121), `137_a48_run.sh` (driver: `systemd-run --user` with MemoryMax and MemorySwapMax = 0, log directories created first) and `138_a48_manifest.py`. Every script refuses to start if any of its outputs exists, and none runs on shuffled data. Figure 5, Additional files 1 to 4 and the classification table (48.10, 48.11) are produced after the results are recorded, by 102, 103 and 104 extended for A48.
+12. *Classification of S1 and M2 (readiness review, 17 November 2026, received before commit).* The review questions whether S1 *Sharpea* is a matched claim: the cited sheep study concerns methane yield (g CH4 per kg DMI) and community types, while the primary cattle test is daily output. The source-level check of S1 and M2 (exact source, table or figure, units, host, contrast and direction) is done in the review chat and recorded in a separate entry before 48.1 is reported. 48.1 does not wait for it. Every count in 48.1 (matched claims, claims with k >= 2, the secondary criteria and concordance) is reported twice: with S1 as a matched claim (the current classification) and with S1 as a phenotype-transfer test. The same is done for M2 if its check changes its category. 48.1 also adds S1's CLR estimate against Wallace CH4 per kg DMI, the source's trait type (host still different), from the 48.9 dump. It sits beside the calibrated ANCOM-BC2 value already on file (`results/methane_pooled_ch4_dmi/estimates_calibrated.tsv`). Difford has no yield trait, so that test has k = 1. No label changes.
+13. *Reporting additions (48.11), from the same review; no new analysis.*
+   - Additional file 1's evidence ledger is rebuilt from the final Amendment 47 intervals and flags (method, role, validation statement), with the Amendment 46 values kept in a separate sheet marked historical.
+   - Figure 4 shows the final CLR mKH interval for M1, and its pooled rows that combine different outcomes move to the supplement.
+   - Figures 1 and 2 are re-laid out to fit 170 x 225 mm with their legends.
