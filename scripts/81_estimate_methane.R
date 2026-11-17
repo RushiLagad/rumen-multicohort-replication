@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 # Amendments 19, 28, 32, 34, 35, 36: methane target estimates for one 16S cohort table.
 # Usage: 81_estimate_methane.R <difford_bact|difford_arch|wallace_prokaryotes|wallace_bacteria|wallace_archaea> <shuffle|real>
-# Env: NO_SE1=1 (Wallace without farm SE1, Amendment 32 item 2); TRAIT=ch4_dmi (Wallace sensitivity trait, Amendment 34). No phenotype value is printed.
+# Env: NO_SE1=1 (Wallace without farm SE1, Amendment 32 item 2); TRAIT=ch4_dmi (Wallace sensitivity trait, Amendment 34); A48=1 with TRAIT=ch4_dmi dumps that table (Amendment 48). No phenotype value is printed.
 a <- commandArgs(TRUE); coh <- a[1]; mode <- a[2]; stopifnot(length(a) == 2, mode %in% c("shuffle", "real"))
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); SEED <- as.integer(Sys.getenv("SEED", "20261105")); set.seed(SEED)
 plan <- readLines(file.path(root, "plan", "ANALYSIS_PLAN.md")); stopifnot("commit Amendment 36 first" = any(grepl("^\\*\\*Amendment 36 \\(", plan)))
@@ -42,6 +42,8 @@ for (j in seq_len(nrow(tk))) { rk <- tk$target_rank[j]; if (rk == "clade_ratio")
 m <- A[match(feat, rownames(A)), , drop=FALSE]; prev <- rowMeans(m > 0, na.rm=TRUE)
 cov <- data.frame(id=tk$id, set=tk$set, target=tk$target, rank=tk$target_rank, n_present=npres, feature=feat, prevalence=round(unname(prev), 3), pass10=unname(prev) >= 0.10)
 cat("targets", nrow(tk), "| matched", sum(!is.na(feat)), "| pass 10% prevalence", sum(cov$pass10, na.rm=TRUE), "| features", nrow(A), "\n"); print(cov[cov$set != "Nelore" | !is.na(cov$feature), ], row.names=FALSE)
+if (Sys.getenv("A48") == "1") { stopifnot("Amendment 48 dumps only the Wallace CH4 per kg DMI table (real mode, TRAIT=ch4_dmi, all farms)" = mode == "real", tag == "_ch4_dmi", src == "wallace")   # Amendment 48.1 and 48.9
+  source(file.path(root, "scripts", "lib_a46.R")); a46_dump(A, feat, tk, md, terms, df, cohort="wallace", rank=tk$target_rank, prefix=paste0(coh, tag), root=root, perm_by="farm", m1=a46_m1(root, coh, md)); quit(save="no") }
 if (Sys.getenv("A47") == "1") { stopifnot("Amendment 47 dumps only the Wallace RFI NRC table (real mode, TRAIT=rfi_nrc, all farms)" = mode == "real", tag == "_rfi_nrc", src == "wallace")   # Amendment 47.4
   source(file.path(root, "scripts", "lib_a46.R")); a46_dump(A, feat, tk, md, terms, df, cohort="wallace", rank=tk$target_rank, prefix=paste0(coh, tag), root=root, perm_by="farm"); quit(save="no") }
 if (Sys.getenv("A46") == "1") { stopifnot("Amendment 46 uses the primary methane fit (real mode, CH4 g/d, all farms; DEPTH=1 for the scan)" = mode == "real", tag %in% c("", "_depth")); source(file.path(root, "scripts", "lib_a46.R"))   # Amendment 46
