@@ -172,6 +172,6 @@
 <circle cx="255.0" cy="478.7" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
 <text x="261.0" y="481.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Freedman-Lane permutation; spike-in</text>
 <circle cx="255.0" cy="487.5" r="1.9" fill="white" stroke="#52514e" stroke-width="0.8"/>
-<text x="261.0" y="490.1" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Interval validation; null-scan calibration</text>
+<text x="261.0" y="490.1" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">Interval coverage check; null-scan calibration</text>
 <rect x="4.0" y="371.3" width="233.0" height="131.0" rx="2.5" fill="none" stroke="#d6d4cc" stroke-width="0.7"/>
 <rect x="245.0" y="371.3" width="233.0" height="131.0" rx="2.5" fill="none" stroke="#d6d4cc" stroke-width="0.7"/></svg>
