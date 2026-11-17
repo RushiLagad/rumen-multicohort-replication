@@ -5,6 +5,8 @@
 # in the published direction; refits in which the exclusion holds; the most influential animal by DFBETAS for the RFI-class term (full-data OLS of the target's CLR value
 # on diet, year and RFI class), by position, never by identifier. The 48.5 grid for these targets is reported beside it (after 132). Reading as 48.6.
 # Usage: 133_a48_charolais.R (after 132). Writes results/late_a48/charolais/ only.
+# Run 1 (scripts 76df4d9e) passed a scalar direction to the per-row bound and exclusion functions, so every refit carried the first refit's bound and 0.15/0.30 flags;
+# its files are kept in results/late_a48/charolais_run1_scalar_direction_bug/. r, CI, excl_0 and DFBETAS were unaffected.
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); sdir <- dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=TRUE)[1]))
 source(file.path(sdir, "lib_a46.R")); source(file.path(sdir, "lib_a47.R")); source(file.path(sdir, "lib_a48.R")); a48_gate(root)
 od <- a48_dir(root, "charolais"); outs <- file.path(od, c("loao.tsv", "summary.tsv")); a48_fresh(outs)
@@ -19,7 +21,8 @@ for (id in TG) { e <- ce[ce$id == id, ]; d <- a46_load(root, e$table); f <- d$fe
     D <- a46_design(md[keep, , drop=FALSE], d$terms); r <- unname(a46_r(a46_resid(C[f, , drop=FALSE], D), D$rx)); ci <- a46_ci(r, D$df); c(r=r, lo=unname(ci[1, "lo"]), hi=unname(ci[1, "hi"]), df=D$df) }
   full <- one(rep(TRUE, n)); stopifnot("full-data r differs from cohort_estimates.tsv" = abs(full[["r"]] - e$r) < 1e-8)
   L <- do.call(rbind, lapply(seq_len(n), function(j) { o <- one(seq_len(n) != j); data.frame(id=id, left_out_position=j, r=o[["r"]], lo=o[["lo"]], hi=o[["hi"]], df=o[["df"]]) }))
-  L$bound <- a46_bound(L$lo, L$hi, dr); L$excl_15 <- a47_excl(L$lo, L$hi, dr, 0.15); L$excl_30 <- a47_excl(L$lo, L$hi, dr, 0.30); L$excl_0 <- L$lo > 0 | L$hi < 0
+  dv <- rep(dr, nrow(L))   # a46_bound and a47_excl take the direction per row (ifelse on is.na(dir)); a scalar recycled the first refit (run 1, fixed)
+  L$bound <- a46_bound(L$lo, L$hi, dv); L$excl_15 <- a47_excl(L$lo, L$hi, dv, 0.15); L$excl_30 <- a47_excl(L$lo, L$hi, dv, 0.30); L$excl_0 <- L$lo > 0 | L$hi < 0
   # DFBETAS for the RFI-class term, full-data OLS of the target's CLR value
   C <- a46_clr(d$A[, rownames(md), drop=FALSE]); mm <- model.matrix(reformulate(d$terms), droplevels(md)); y <- as.vector(C[f, ]); fit <- lm(y ~ mm - 1)
   jb <- grep("RFI", colnames(mm)); db <- dfbetas(fit)[, jb]; L$dfbetas_rfi_class <- db
