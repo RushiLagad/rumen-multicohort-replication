@@ -5,6 +5,7 @@
 # Shotgun cohorts use the GTDB keys; 16S cohorts the keys present among the cohort's SILVA genus names (results/16s/<cohort>/genus_lineage_silva.tsv), as 65 and 81 map them.
 # Labels (47.2 rules, parametric p) and benchmark exclusions recomputed from the MC1 cohort estimates only, re-pooled with mKH where k >= 2 remains.
 # Usage: 135_a48_mapping.R. Writes results/late_a48/mapping/ only.
+# Run 1 (scripts 76df4d9e) merged labels by id alone (see 132); labels are now merged by arm and id. Run-1 files: results/late_a48/mapping_run1_label_merge_bug/.
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); sdir <- dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=TRUE)[1]))
 source(file.path(sdir, "lib_a46.R")); source(file.path(sdir, "lib_a47.R")); source(file.path(sdir, "lib_a48.R")); a48_gate(root)
 od <- a48_dir(root, "mapping"); outs <- file.path(od, c("mapping_classes.tsv", "mc1_pooled.tsv", "summary.tsv")); a48_fresh(outs)
@@ -27,8 +28,8 @@ MC <- do.call(rbind, lapply(seq_len(nrow(PI)), function(i) { p <- PI[i, ]; do.ca
 # re-tabulation on MC1 cohort estimates only
 key <- paste(MC$id, MC$cohort); est <- ce[paste(ce$id, ce$cohort) %in% key[MC$class %in% "MC1"], ]; est$W <- est$t
 lab <- a48_labels(root, est); po <- a48_pool_targets(est, dirs)
-lab1 <- lab[!duplicated(lab$id) & lab$label != "untestable", c("id", "label")]; po <- merge(po, lab1, by="id", all.x=TRUE)
-full <- PI[, c("id", "k", "excl_15_mkh", "excl_30_mkh")]; names(full) <- c("id", "k_full", "excl_15_full", "excl_30_full"); po <- merge(full, po, by="id", all.x=TRUE)
+lab1 <- lab[, c("arm", "id", "label")]; stopifnot(!anyDuplicated(lab1[, c("arm", "id")])); po <- merge(po, lab1, by=c("arm", "id"), all.x=TRUE)
+full <- PI[, c("arm", "id", "k", "excl_15_mkh", "excl_30_mkh")]; names(full) <- c("arm", "id", "k_full", "excl_15_full", "excl_30_full"); po <- merge(full, po, by=c("arm", "id"), all.x=TRUE)
 po$k[is.na(po$k)] <- 0
 SU <- data.frame(set=c("all targets (Amendment 47)", "MC1 cohort estimates only"),
   targets_testable=c(nrow(PI), sum(po$k > 0)), rfi_excl_30=c(sum(PI$arm == "RFI" & PI$excl_30_mkh), sum(po$id %in% PI$id[PI$arm == "RFI"] & po$excl_30 %in% TRUE)),

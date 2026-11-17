@@ -80,10 +80,10 @@ a48_labels <- function(root, est, method="mkh", kp="t") {
     tg <- data.frame(id=d$id, dir=pM(d$direction), testable=d$status %in% c("mapped", "special")); cbind(arm="Methane", set=st, target=d$target, published_dir=tg$dir, classify_with(tg, EM[EM$id %in% d$id, ], method, kp)) }))
   rbind(R, M) }
 # pooled mKH interval and benchmark exclusions per target from per-cohort estimates (47.1 rule; k = 1 keeps the cohort interval)
-a48_pool_targets <- function(est, dirs) do.call(rbind, lapply(split(est, est$id), function(e) { e <- e[is.finite(e$r), ]; k <- nrow(e); id <- e$id[1]; dr <- dirs[[id]] %||% NA
+a48_pool_targets <- function(est, dirs) do.call(rbind, lapply(split(est, paste(est$arm, est$id)), function(e) { e <- e[is.finite(e$r), ]; k <- nrow(e); id <- e$id[1]; arm <- e$arm[1]; dr <- dirs[[id]] %||% NA
   if (k == 0) return(NULL)
   if (k == 1) { lo <- e$lo; hi <- e$hi; r <- e$r; tau2 <- NA } else { P <- a47_pool(atanh(e$r), 1 / (e$df - 1)); r <- tanh(P[["mu"]]); lo <- tanh(P[["lo_mkh"]]); hi <- tanh(P[["hi_mkh"]]); tau2 <- P[["tau2"]] }
-  data.frame(id=id, k=k, cohorts=paste(e$cohort, collapse=";"), r=r, lo=lo, hi=hi, tau2=tau2, published_dir=dr, excl_0=lo > 0 | hi < 0,
+  data.frame(arm=arm, id=id, k=k, cohorts=paste(e$cohort, collapse=";"), r=r, lo=lo, hi=hi, tau2=tau2, published_dir=dr, excl_0=lo > 0 | hi < 0,
     excl_15=a47_excl(lo, hi, dr, 0.15), excl_30=a47_excl(lo, hi, dr, 0.30), bound=a46_bound(lo, hi, dr)) }))
 a48_dirs <- function(root) { tk0 <- rd(file.path(root, "plan", "target_keys.tsv")); m <- tk0$set %in% c("Methane", "MethaneSecondary") | (tk0$set == "Nelore" & tk0$phenotype == "RME_GC")
   d <- ifelse(m, pM(tk0$direction), pR(tk0$direction)); setNames(as.list(d), paste0(tk0$id)) }

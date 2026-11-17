@@ -5,6 +5,8 @@
 # as 46.1; M1 (a log ratio) unchanged. Cell (pseudo-count 0.5, R0) must reproduce results/late_a46/effect_size/cohort_estimates.tsv to 1e-8, or the run stops.
 # Per cell: per-cohort r and CI, mKH pooling (k >= 2), exclusion of 0.15, 0.30 and 0, CLR label (47.2 rules, parametric p; all 38 targets refitted for the BH families).
 # Usage: 132_a48_clr_grid.R. Writes results/late_a48/clr_grid/ only.
+# Run 1 (scripts 76df4d9e) merged labels by id alone, so the four Nelore targets tested against methane (N32, N38, N39, N40) took their RFI-family row (untestable);
+# labels are now merged by arm and id, and the reference cell must reproduce the Amendment 47 labels. Run-1 files: results/late_a48/clr_grid_run1_label_merge_bug/.
 root <- Sys.getenv("RUMEN_ROOT", "/data/rumen_multicohort"); sdir <- dirname(sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value=TRUE)[1]))
 source(file.path(sdir, "lib_a46.R")); source(file.path(sdir, "lib_a47.R")); source(file.path(sdir, "lib_a48.R")); a48_gate(root)
 od <- a48_dir(root, "clr_grid"); outs <- file.path(od, c("cohort_cells.tsv", "pooled_cells.tsv", "changes.tsv", "robustness.tsv")); a48_fresh(outs)
@@ -13,6 +15,7 @@ GRID <- A48_GRID; if (Sys.getenv("A48_TEST_NO_CZM") == "1") { GRID <- GRID[GRID$
 SCOPE <- unique(c(a48_seven, "C5", "C6", "N02", "N04", "N11", "N13", "N20", "N22", "M2", "M3", "N32", "N38", "N39", "N40", "N06", "C3"))
 cat(A48_LABEL, "| 48.5 CLR grid | cells", nrow(GRID), "| targets reported", length(SCOPE), "\n")
 dirs <- a48_dirs(root); ce <- rd(file.path(root, "results", "late_a46", "effect_size", "cohort_estimates.tsv"))
+l47 <- rbind(rd(file.path(root, "results", "late_a47", "labels", "labels_rfi.tsv")), rd(file.path(root, "results", "late_a47", "labels", "labels_methane.tsv")))
 CO <- list(); PO <- list()
 for (i in seq_len(nrow(GRID))) { z <- GRID$zero[i]; rf <- GRID$ref[i]; cell <- paste(z, rf); t0 <- proc.time()[[3]]
   U <- a48_units(root, clrfun=function(A) a48_clr_cell(A, z, rf)); est <- a48_est(U)
@@ -20,17 +23,20 @@ for (i in seq_len(nrow(GRID))) { z <- GRID$zero[i]; rf <- GRID$ref[i]; cell <- p
     dr <- max(abs(ce$r - est$r[j])); cat("reference cell reproduces cohort_estimates.tsv: max |dr| =", signif(dr, 3), "\n")
     if (dr > 1e-8) stop("48.5: cell (pseudo-count 0.5, R0) does not reproduce the Amendment 46 estimates (max |dr| ", signif(dr, 3), ")") }
   lab <- a48_labels(root, est); po <- a48_pool_targets(est, dirs)
-  lab1 <- lab[!duplicated(lab$id), c("id", "label", "q_bh")]; po <- merge(po, lab1, by="id", all.x=TRUE)
+  if (z == "pc0.5" && rf == "R0") { m <- merge(lab[, c("arm", "set", "id", "label")], l47[, c("arm", "set", "id", "label_a47")], by=c("arm", "set", "id"), all=TRUE)
+    nd <- sum(is.na(m$label) | is.na(m$label_a47) | m$label != m$label_a47); cat("reference cell reproduces the Amendment 47 labels:", nrow(m) - nd, "of", nrow(m), "\n")
+    if (nd > 0) stop("48.5: the reference cell does not reproduce the Amendment 47 labels (", nd, " differ)") }
+  lab1 <- lab[, c("arm", "id", "label", "q_bh")]; stopifnot("arm and id do not identify a label" = !anyDuplicated(lab1[, c("arm", "id")])); po <- merge(po, lab1, by=c("arm", "id"), all.x=TRUE)
   CO[[i]] <- cbind(cell=cell, zero=z, ref=rf, est[est$id %in% SCOPE, c("arm", "id", "cohort", "table", "n", "df", "r", "lo", "hi", "p_t", "n_ref")])
   PO[[i]] <- cbind(cell=cell, zero=z, ref=rf, po[po$id %in% SCOPE, ]); cat(cell, "done,", round(proc.time()[[3]] - t0), "s\n") }
 CO <- do.call(rbind, CO); PO <- do.call(rbind, PO)
-ref <- PO[PO$cell == "pc0.5 R0", ]; j <- match(PO$id, ref$id)
+ref <- PO[PO$cell == "pc0.5 R0", ]; j <- match(paste(PO$arm, PO$id), paste(ref$arm, ref$id))
 PO$sign_changed <- sign(PO$r) != sign(ref$r[j]); PO$excl15_changed <- PO$excl_15 != ref$excl_15[j]; PO$excl30_changed <- PO$excl_30 != ref$excl_30[j]
 PO$excl0_changed <- PO$excl_0 != ref$excl_0[j]; PO$label_changed <- PO$label != ref$label[j]
-CH <- PO[PO$sign_changed | PO$excl15_changed | PO$excl30_changed | PO$excl0_changed | PO$label_changed, c("cell", "id", "k", "r", "lo", "hi", "excl_0", "excl_15", "excl_30", "label",
+CH <- PO[PO$sign_changed | PO$excl15_changed | PO$excl30_changed | PO$excl0_changed | PO$label_changed, c("cell", "arm", "id", "k", "r", "lo", "hi", "excl_0", "excl_15", "excl_30", "label",
   "sign_changed", "excl15_changed", "excl30_changed", "excl0_changed", "label_changed")]
 if (!nrow(CH)) CH <- data.frame(cell=NA, id=NA, note="no sign, exclusion or label differs from the reference cell in any cell")
-RB <- do.call(rbind, lapply(SCOPE, function(id) { x <- PO[PO$id == id, ]; r0 <- ref[ref$id == id, ]; if (!nrow(r0)) return(NULL)
+RB <- do.call(rbind, lapply(SCOPE, function(id) { x <- PO[PO$id == id, ]; r0 <- ref[ref$id == id, ]; if (!nrow(r0)) return(NULL); stopifnot(nrow(r0) == 1)
   st <- if (isTRUE(r0$excl_30) || isTRUE(r0$excl_15)) { d <- if (isTRUE(r0$excl_15)) "excl_15" else "excl_30"; c(statement=paste("excludes", if (d == "excl_15") "r = 0.15" else "r = 0.30"), col=d) } else
     if (isTRUE(r0$excl_0)) c(statement="interval excludes 0", col="excl_0") else c(statement="no exclusion", col=NA)
   holds <- if (is.na(st[["col"]])) NA else all(x[[st[["col"]]]] %in% TRUE); fails <- if (is.na(st[["col"]])) "" else paste(x$cell[!(x[[st[["col"]]]] %in% TRUE)], collapse=";")
