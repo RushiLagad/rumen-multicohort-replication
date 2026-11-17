@@ -1391,3 +1391,9 @@ The manuscript reports every 48.x result whatever it shows, including results th
     - The Fig. 1 and 2 layout.
     - Additional files 1 to 3, including the rebuilt ledger, the A48 sheets and `docs/ANALYSIS_CLASSES.md`.
     - The S1 and M2 source check (reconciliation item 12) stays with the review chat. Item 2 gives both counts, so neither depends on its outcome.
+
+**Correction to the Amendment 48 result (2026-11-17, found the same day while building the Additional file 1 ledger; no analysis rerun, no result file changed).** Item 9 misread `mapping/summary.tsv`, whose MC1 row counts every exclusion present when only MC1 estimates are used, including exclusions that appear only because a pool loses cohorts. From `mapping/mc1_pooled.tsv`:
+   - RFI r = 0.30 exclusions: 5 of the 8 hold with MC1 estimates only (C5, C6, N04, N20, N22). N02, N11 and N13 have no MC1 estimate in Charolais (MC2, summed GTDB keys).
+   - Two further targets exclude r = 0.30 only when reduced to their single MC1 cohort, Alberta: C4 (-0.119 to 0.046) and N15 (-0.050 to 0.116). These are not benchmark exclusions of the paper.
+   - Methane r = 0.15 exclusions: 4 of 6, as stated (M2 and M3 have no MC1 estimate).
+   - The summary file's counts (RFI 7, methane 4) are unchanged and are counts of the MC1 re-tabulation, not of exclusions retained. Deviations row 48 is corrected to match.
