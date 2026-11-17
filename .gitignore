@@ -12,6 +12,9 @@ fastq/
 *.zip
 *.XLSX
 *.xlsx
+# except the manuscript's Additional files (built by 104 and 142)
+!results/additional_files/*.xlsx
+!results/additional_files_draft18/*.xlsx
 samples_full.xml
 samples.xml
 # working data, never commit (archived separately)
