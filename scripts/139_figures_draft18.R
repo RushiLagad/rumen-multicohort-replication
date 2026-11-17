@@ -7,8 +7,10 @@
 #                        (results/late_a47/intervals/pooled_intervals.tsv, version primary); the pooled row combining Difford g per day with Wallace
 #                        per kg intake (different outcomes) is removed from the main figure and stays in Additional file 2 (48.11).
 #   fig5_dairy_effects   Fig. 5, redrawn from 48.3 (results/late_a48/dairy/genera.tsv): Wallace vs Difford CLR partial r with 95% intervals on the
-#                        harmonized genus set; a, CH4; b, days in milk (the positive control on the same pipeline). rho is descriptive.
-#   af4_seven_claims     Additional file 4: the 48.1 forest plot (per-cohort CLR and calibrated ANCOM-BC2, mKH pooled), house style.
+#                        harmonized genus set; a, CH4; b, days in milk (the positive control on the same pipeline). rho is descriptive; draft 19 shows
+#                        no bootstrap interval (the genus bootstrap does not preserve dependence through shared animals and the CLR reference).
+#   af4_seven_claims     Additional file 4: the 48.1 forest plot (per-cohort CLR and calibrated ANCOM-BC2, mKH pooled), house style; patterns in
+#                        the words of Table 4 (draft 19).
 #   table4_seven_claims.tsv  Table 4 data from 48.1.
 # Run: Rscript scripts/139_figures_draft18.R   (rumen-r env). 170 mm wide, PNG at 300 dpi, no in-image title or source line.
 suppressMessages({ library(ggplot2); library(dplyr); library(patchwork) })
@@ -117,7 +119,7 @@ gp <- function(v, title, pos_lab) { s <- G[G$variant == v, ]; a <- A[A$variant =
     geom_point(aes(colour=grp), size=1.3) +
     scale_colour_manual(values=c("Farm-robust in Wallace"=blue, "Other shared genera"=grey)) +
     scale_x_continuous(limits=lim, labels=mlab) + scale_y_continuous(limits=lim, labels=mlab) + theme(aspect.ratio=1) +
-    labs(title=title, subtitle=sprintf("%d shared genera; same sign in %d of %d\nSpearman rho %s, descriptive\n(bootstrap 95%% CI %s to %s)", nrow(s), a$same_sign, nrow(s), mnum(a$spearman_rho), mnum(a$rho_lo), mnum(a$rho_hi)),
+    labs(title=title, subtitle=sprintf("%d shared genera; same sign in %d of %d\nSpearman rho = %s, descriptive", nrow(s), a$same_sign, nrow(s), mnum(a$spearman_rho)),
       x=sprintf("CLR partial r with %s, Wallace (95%% CI)", pos_lab), y=sprintf("CLR partial r with %s, Difford (95%% CI)", pos_lab)) + theme_f + theme(plot.subtitle=element_text(colour=ink2, size=7.3, lineheight=1.05), aspect.ratio=1) }
 f5 <- (gp("CH4", "a  Methane (g per day)", "CH4") | gp("days in milk (positive control)", "b  Days in milk (positive control, same pipeline)", "days in milk")) +
   plot_layout(guides="collect") & theme(legend.position="top")
@@ -132,7 +134,8 @@ long <- rbind(
 long <- long %>% mutate(xl=pmin(lo * dir, hi * dir), xh=pmax(lo * dir, hi * dir))
 pool <- P7 %>% transmute(id, cohort="Pooled (modified Knapp-Hartung, CLR)", est="Pooled", r=r_mkh * published_dir, xl=pmin(lo_mkh * published_dir, hi_mkh * published_dir), xh=pmax(lo_mkh * published_dir, hi_mkh * published_dir))
 L <- bind_rows(long %>% select(id, cohort, est, r, xl, xh), pool)
-pat <- setNames(sprintf("CLR %s; ANCOM-BC2 %s", substr(P7$pattern_clr, 1, 1), substr(P7$pattern_ancombc2, 1, 1)), P7$id)
+PATW <- c(A="one cohort", B="against", C="bounded", D="discordant", E="inconclusive")   # the words of Table 4 (draft 19: no letter codes)
+pat <- setNames(sprintf("CLR %s; ANCOM-BC2 %s", PATW[substr(P7$pattern_clr, 1, 1)], PATW[substr(P7$pattern_ancombc2, 1, 1)]), P7$id)
 tgt <- setNames(P7$target, P7$id)
 L$claim <- factor(L$id, ord)
 L$row <- ifelse(L$est == "Pooled", "Pooled, modified Knapp-Hartung (CLR)", paste0(L$cohort, ", ", ifelse(L$est == "CLR", "CLR", "ANCOM-BC2")))
@@ -140,7 +143,7 @@ L$est <- factor(L$est, c("CLR", "Calibrated ANCOM-BC2", "Pooled"))
 L <- L %>% mutate(co=match(cohort, c("Nelore", "Charolais", "Alberta", "Difford", "Wallace", "Pooled (modified Knapp-Hartung, CLR)"))) %>% arrange(claim, co, est)
 lv <- c(as.vector(t(outer(c("Nelore", "Charolais", "Alberta", "Difford", "Wallace"), c("CLR", "ANCOM-BC2"), paste, sep=", "))), "Pooled, modified Knapp-Hartung (CLR)")
 stopifnot(all(L$row %in% lv)); L$row <- factor(L$row, rev(lv))
-strip_lab <- function(ids) sapply(ids, function(i) paste0(lab_expr(i, tgt[[i]], sep="  "), "*", q(paste0("      pattern: ", pat[[i]]))))
+strip_lab <- function(ids) sapply(ids, function(i) paste0(lab_expr(i, tgt[[i]], sep="  "), "*", q(paste0("   pattern: ", pat[[i]]))))
 L$claim_e <- factor(strip_lab(as.character(L$claim)), strip_lab(ord))
 stopifnot(all(table(L$claim) == 5))
 pa <- ggplot(L, aes(r, row)) +
@@ -152,7 +155,7 @@ pa <- ggplot(L, aes(r, row)) +
   scale_colour_manual(values=c("CLR"=blue, "Calibrated ANCOM-BC2"=orange, "Pooled"=ink), labels=c("CLR", "Calibrated ANCOM-BC2", "Pooled, modified Knapp-Hartung")) +
   scale_shape_manual(values=c("CLR"=16, "Calibrated ANCOM-BC2"=17, "Pooled"=23), labels=c("CLR", "Calibrated ANCOM-BC2", "Pooled, modified Knapp-Hartung")) +
   labs(x="Partial r, oriented so positive = the published direction (95% intervals)", y=NULL) +
-  theme_f + theme(panel.grid.major.y=element_blank(), strip.text=element_text(hjust=0, size=7.8, colour=ink), panel.spacing=unit(6, "pt"), axis.text.y=element_text(size=7), plot.margin=margin(5.5, 14, 5.5, 5.5))
+  theme_f + theme(panel.grid.major.y=element_blank(), strip.text=element_text(hjust=0, size=7.4, colour=ink), panel.spacing=unit(6, "pt"), axis.text.y=element_text(size=7), plot.margin=margin(5.5, 14, 5.5, 5.5))
 save2(pa, "af4_seven_claims", W170, 215 / 25.4)
 
 T4 <- P7 %>% transmute(id, target, arm, published_direction=ifelse(published_dir > 0, "higher", "lower"), k, cohorts=gsub(";", ", ", sapply(strsplit(cohorts, ";"), function(v) paste(COH[v], collapse=";"))),

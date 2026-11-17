@@ -76,11 +76,24 @@ assert "Notes" in b2 and "Pooled results" in b2 and not any(k.startswith("A48") 
 g = rd(f"{A48}/clade_ratio/grid.tsv"); g["analysis_no"] = (g.seed - 4890000) // 100
 assert ((g.seed - 4890000) % 100 == g.cell).all()
 g.insert(1, "clade_ratio_analysis", g.analysis_no.map({1: "Wallace CH4 per kg DMI", 2: "Wallace CH4 g/d", 3: "Difford CH4 g/d", 4: "Wallace CH4 per kg DMI without SE1"}))
+# draft 19 (wording; no number changes): descriptive-only labels, hypothetical attenuation scenarios, source-verified dairy table
+DESC = "descriptive only; estimates not independent"
+ag = rd(f"{A48}/dairy/agreement.tsv")
+ag["bootstrap"] = ag.bootstrap.str.replace(r"^(\d+) genus resamples, seed (\d+)$", r"genus resampling (\1 resamples, seed \2); descriptive only; does not preserve dependence through shared animals and CLR reference", regex=True)
+assert ag.bootstrap.str.contains("does not preserve dependence").all()
+ag = ag.rename(columns={"rho_lo": "rho_lo (genus resampling; descriptive only)", "rho_hi": "rho_hi (genus resampling; descriptive only)", "p_sign_binom": f"p_sign_binom ({DESC})"})
+cc = rd(f"{A48}/seven/concordance.tsv").rename(columns={"p_binom": f"p_binom ({DESC})"})
+at = rd(f"{A48}/power/attenuation.tsv")
+at["note"] = ("hypothetical reliability scenarios: true r = observed r / sqrt(trait x feature reliability), capped at 1; reliabilities 0.5, 0.7, 0.9 are "
+              "assumed values, not estimates; the Charolais GTDB vs SILVA correlation (Amendment 45) is not a measure of feature reliability")
+pe = rd(f"{A48}/power/published_effects.tsv")
+pe.insert(len(pe.columns) - 1, "use", "not on the CLR scale (Li et al.: extreme-group r from a p value; Nelore: coefficient/SE with an assumed df); not compared with the CLR intervals in the manuscript")
+nh = rd(f"{A48}/dairy/not_harmonized_sources.tsv")
 S = [  # (sheet name <= 31 chars, frame, note)
  ("A48 seven claims, per cohort", rd(f"{A48}/seven/seven_claims.tsv"), "48.1: per cohort n, df, CLR partial r with 95% Fisher interval, parametric and Freedman-Lane p; calibrated ANCOM-BC2 W, r, interval and permutation p (b/B as stored; the manuscript reports (b + 1)/(B + 1)); minimum detectable r at 80% power."),
  ("A48 seven claims, pooled", rd(f"{A48}/seven/seven_pooled.tsv"), "48.1: mKH pooled CLR r and interval, tau-hat, I-squared, Q p; fixed-effect comparator; Amendment 37 pooled r, q and label; Amendment 47 label; reasons for no replicated label; pattern codes A to E per estimator; secondary criteria S-a and S-b (reported only, never replication)."),
  ("A48 seven claims, secondary", rd(f"{A48}/seven/secondary_matched.tsv"), "48.1: secondary criteria for every matched claim (k = 1 and k >= 2)."),
- ("A48 concordance", rd(f"{A48}/seven/concordance.tsv"), "48.1: share of cohort estimates with the published sign, exact binomial test against 0.5; descriptive (estimates are not independent across targets)."),
+ ("A48 concordance", cc, "48.1: share of cohort estimates with the published sign. The binomial p is descriptive only: the estimates are not independent across targets (draft 19 reports the sign counts only)."),
  ("A48 counts", rd(f"{A48}/seven/counts_by_classification.tsv"), "48.1: matched claims and secondary-criterion counts with S1 as a matched claim and as a phenotype-transfer test."),
  ("A48 S1 against yield", rd(f"{A48}/seven/s1_yield.tsv"), "48.1: S1 Sharpea against Wallace CH4 per kg DMI (k = 1)."),
  ("A48 ANCOM-BC2 configuration", rd(f"{A48}/ancombc2/config.tsv"), "48.2(a): every ancombc2() argument as executed, defaults resolved from the installed ANCOMBC version."),
@@ -92,21 +105,21 @@ S = [  # (sheet name <= 31 chars, frame, note)
  ("A48 Charolais structural zeros", rd(f"{A48}/ancombc2/charolais_struc_zero.tsv"), "48.2(c): Charolais refit with group = RFI_class, struc_zero = TRUE; sensitivity only, sets nothing."),
  ("A48 ANCOM-BC2 reading", rd(f"{A48}/ancombc2/reading.tsv"), "48.2(d): the pre-fixed reading."),
  ("A48 dairy genera", rd(f"{A48}/dairy/genera.tsv"), "48.3: harmonized shared genera, CLR partial r with 95% interval per cohort, Freedman-Lane p (9,999 within herd or farm), Q and I-squared; CH4, depth-adjusted and days-in-milk variants."),
- ("A48 dairy agreement", rd(f"{A48}/dairy/agreement.tsv"), "48.3: Spearman rho with bootstrap interval (descriptive), Pearson r of Fisher z, sign agreement, I-squared; per variant and subset."),
- ("A48 dairy not harmonized", rd(f"{A48}/dairy/not_harmonized.tsv"), "48.3: differences between the cohorts that cannot be harmonized, from the source papers."),
+ ("A48 dairy agreement", ag, "48.3: Spearman rho (descriptive), Pearson r of Fisher z, sign agreement, I-squared; per variant and subset. The rho interval comes from resampling genera and the sign p from a binomial test: both are descriptive only, because genus estimates share animals and the CLR reference (draft 19 reports rho and the sign counts only)."),
+ ("A48 dairy not harmonized", nh, "48.3: differences between the cohorts that cannot be harmonized (breed, production system and diet, methane method, rumen sampling, primers and read length), from the Materials and Methods of Difford et al. 2018 and Wallace et al. 2019 (results/late_a48/dairy/not_harmonized_sources.tsv, script 144); tabulated, not modelled."),
  ("A48 farm random effects", rd(f"{A48}/farms/random_effects.tsv"), "48.4: REML random effects over Wallace farms per feature and estimand, mKH interval, 95% prediction interval, leave-one-farm-out."),
  ("A48 farm leave-one-out", rd(f"{A48}/farms/leave_one_farm_out.tsv"), "48.4: metafor leave1out per feature and estimand."),
  ("A48 farms, per farm CLR", rd(f"{A48}/farms/per_farm_clr.tsv"), "48.4: per-farm CLR partial r behind the random effects."),
- ("A48 CLR grid, robustness", rd(f"{A48}/clr_grid/robustness.tsv"), "48.5: per target, whether its reference statement holds in all 12 cells (zero handling x reference) and the cells where it fails."),
+ ("A48 CLR grid, robustness", rd(f"{A48}/clr_grid/robustness.tsv"), "48.5: per target, whether its reference statement holds in all 12 cells (zero handling x reference) and the cells where it fails. The statement is the strongest one in the reference cell: r = 0.15 for N04, N11, N13, N20, N22 and the methane targets, r = 0.30 for C5, C6 and N02. Every Charolais r = 0.30 exclusion holds in all 12 cells (results/manifest/draft19_numbers.tsv); the failures listed concern r = 0.15 or zero."),
  ("A48 CLR grid, changes", rd(f"{A48}/clr_grid/changes.tsv"), "48.5: every change from the reference cell (pseudo-count 0.5, R0)."),
  ("A48 CLR grid, pooled", rd(f"{A48}/clr_grid/pooled_cells.tsv"), "48.5: pooled estimates per cell."),
  ("A48 CLR grid, per cohort", rd(f"{A48}/clr_grid/cohort_cells.tsv"), "48.5: cohort estimates per cell (the Charolais intervals excluding 0 are read from here)."),
- ("A48 Charolais influence", rd(f"{A48}/charolais/summary.tsv"), "48.6: 30 leave-one-animal-out refits of the whole CLR pipeline; refits in which the statement holds; DFBETAS; the 48.5 grid beside it."),
+ ("A48 Charolais influence", rd(f"{A48}/charolais/summary.tsv"), "48.6: 30 leave-one-animal-out refits of the whole CLR pipeline; refits in which the reference statement (r = 0.15 except N02, r = 0.30) holds; DFBETAS; the 48.5 grid beside it. All six Charolais exclusions hold at r = 0.30 in 30 of 30 refits (results/manifest/draft19_numbers.tsv); the failures listed concern r = 0.15 or zero."),
  ("A48 Charolais refits", rd(f"{A48}/charolais/loao.tsv"), "48.6: every refit."),
  ("A48 MDE, per cohort", rd(f"{A48}/power/mde_cohort.tsv"), "48.7: minimum detectable r at 80% power, two-sided alpha 0.05, per cohort and table."),
  ("A48 MDE, pooled", rd(f"{A48}/power/mde_pooled.tsv"), "48.7: fixed-effect minimum detectable r and expected mKH half-width at tau = 0 per pooled configuration."),
- ("A48 published effects", rd(f"{A48}/power/published_effects.tsv"), "48.7: published effects converted to r (Li et al. extreme-group values flagged as inflated) against each cohort's interval."),
- ("A48 attenuation", rd(f"{A48}/power/attenuation.tsv"), "48.7: observed r = true r x sqrt(trait x feature reliability), reliabilities 0.5, 0.7, 0.9."),
+ ("A48 published effects", pe, "48.7: published effects converted to r (Li et al. extreme-group values; Nelore coefficient/SE with an assumed df) beside each cohort's interval. These conversions are not on the CLR scale, so the comparison is not used in the manuscript (draft 19)."),
+ ("A48 attenuation", at, "48.7: hypothetical reliability scenarios: observed r = true r x sqrt(trait x feature reliability) with assumed reliabilities 0.5, 0.7 and 0.9. No reliability is estimated; the Charolais GTDB vs SILVA correlation is not a reliability estimate."),
  ("A48 mapping, MC1 only", rd(f"{A48}/mapping/mc1_pooled.tsv"), "48.8: labels and exclusions with MC1 cohort estimates only (no refit). excl_*_full: the statement with all cohorts."),
  ("A48 clade ratio grid", g.drop(columns=["analysis_no"]), "48.9: 18 cells (assignment margin x pseudo-count x minimum assigned share) x 4 analyses; clade_ratio_analysis decoded from the seed (seed = 4890000 + 100 x analysis + cell)."),
  ("A48 clade ratio influence", rd(f"{A48}/clade_ratio/influence.tsv"), "48.9: Wallace CH4 per kg DMI, current cell: Cook's distance refit and MM regression."),
