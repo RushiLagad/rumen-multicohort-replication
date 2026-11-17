@@ -11,7 +11,7 @@ Classes (Amendment 48.10):
 Results first became available as follows (from `docs/DEVIATIONS.md`): Nelore and Charolais RFI estimates, 2 November 2026; Alberta RFI, 3 November; methane, 6 November; calibrated RFI, 8 November; de novo scan, 9 November; farm, depth, second-estimator and Wallace RFI sensitivities, 10 November; late analyses (Amendments 44 to 46) from 11 November; Amendment 47 on 13 November; Amendment 48 on 17 November.
 
 | # | Analysis | Where reported | Amendment(s) | Committed | Relative to the affected results | Class |
-|---|---|---|---|---|---|---|
+|-|------------|------|------|----|-------|------|
 | 1 | Read processing, profiling databases, host depletion, genus tables | Methods; Table 1 | Plan 1.0; 1, 2, 3, 5, 8, 9, 11, 21, 28 to 31, 33 | 29 Oct to 5 Nov | Before any association result in the cohort concerned | Confirmatory |
 | 2 | Target sets, key table and mapping rules | Methods; Fig. 1b; Additional file 1 | Plan 1.0 (Section 3); 10, 12, 19 (methane targets), 36 | 1 to 5 Nov | Before any association result for the targets concerned | Confirmatory |
 | 3 | Detection checks (positive controls in each primary table) | Results; Table 1 | 13 | 2 Nov | Before any positive control or association test | Confirmatory |
