@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """140: Figure 1 for draft 18, the 111 schematic with the same content and a compact layout (Amendment 48.11, reconciliation item 13: figure and legend
 to fit 170 x 225 mm). Only spacing changes: line height 1.10 x size (111: 1.22), panel gaps, table row height, box padding. Text sizes and the overflow check
-are as in 111; one wording change for draft 18: panel d reads 'coverage rule met in simulation' (111: 'validated by simulation'). Writes results/figures_draft18/fig1_study_design.svg (refuses to overwrite). Usage: 140_figure1_compact.py [root]
+are as in 111; wording changes for draft 18: panel d reads 'coverage rule met in simulation' (111: 'validated by simulation') and panel e 'Interval coverage check' (111: 'Interval validation'). Writes results/figures_draft18/fig1_study_design.svg (refuses to overwrite). Usage: 140_figure1_compact.py [root]
 111 docstring follows.
 Figure 1 (manuscript): study design schematic. Writes fig1_study_design.svg in the current directory.
 Render to PDF/PNG with: node scripts/111_render_svg.js fig1_study_design.svg out.png out.pdf <height>mm   (height printed below)
@@ -206,7 +206,7 @@ yy = bullets(py + 13, 'Specified before the affected results',
              ['Wallace without its Swedish farm', 'Methane per kg dry matter intake', 'Wallace as a fourth RFI cohort', 'Alberta without possible discovery animals'], True)
 yy = bullets(yy + 5, 'Run after the primary results',
              ['Sequencing depth as a covariate', 'Second estimator: CLR linear model‡', 'Leave-one-farm-out; untargeted genus scan', 'LinDA and ALDEx2',
-              'Freedman-Lane permutation; spike-in', 'Interval validation; null-scan calibration'], False)
+              'Freedman-Lane permutation; spike-in', 'Interval coverage check; null-scan calibration'], False)
 ph = max(d_end, yy - LH + 6) - py
 rect(M, py, dw, ph, fill='none', stroke=GRID, sw=0.7)
 rect(ex, py, ew, ph, fill='none', stroke=GRID, sw=0.7)
