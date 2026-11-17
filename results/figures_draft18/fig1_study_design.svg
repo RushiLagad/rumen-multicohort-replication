@@ -148,7 +148,7 @@
 <text x="10.0" y="446.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">not replicated, or untestable</text>
 <text x="10.0" y="461.1" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Effect size and benchmarks</text>
 <text x="10.0" y="469.9" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">CLR partial <tspan font-style="italic">r</tspan> per cohort; modified Knapp-Hartung</text>
-<text x="10.0" y="478.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">pooled intervals, validated by simulation;</text>
+<text x="10.0" y="478.7" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">pooled intervals, coverage rule met in simulation;</text>
 <text x="10.0" y="487.5" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">does the 95% interval exclude <tspan font-style="italic">r</tspan> = 0.15 or 0.30</text>
 <text x="10.0" y="496.3" font-size="8.0" font-weight="normal" fill="#52514e" text-anchor="start">in the published direction?</text>
 <text x="252.0" y="384.3" font-size="8.0" font-weight="bold" fill="#0b0b0b" text-anchor="start">Specified before the affected results</text>
