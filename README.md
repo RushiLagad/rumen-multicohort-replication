@@ -1,10 +1,10 @@
-# Do published rumen microbiome links replicate in new herds?
+# Cross-cohort assessment of published rumen microbiome associations with feed efficiency and methane in cattle
 
 A multi-cohort test, against a dated analysis plan, of whether rumen microbes reported to be associated with feed efficiency or methane emissions in cattle show the same association in independent animals.
 
 Rushikesh R. Lagad, Goswami Lab, Department of Animal Science, University of Arkansas (principal investigator: Dr. Aranyak Goswami). Contact: rlagad@uark.edu
 
-**Status:** prepared for submission to *Microbiome* (Lagad and Goswami), November 2026; not yet peer reviewed. The latest archived version is tag `v1.0.2-submission`, on Zenodo with the files that are too large for this repository: https://doi.org/10.5281/zenodo.24170173 (all versions). The manuscript has since been revised (draft 18) with a further late analysis written in response to review (Amendment 48): claims testable in two cohorts, ANCOM-BC2 configuration and filtered calibration, a dairy comparison on a common feature set, robustness of the exclusions to the CLR transformation, single animals and mapping confidence, and a source audit of the methane claims. It changes no replication label. The draft 18 figures and Additional files are in `results/figures_draft18/` and `results/additional_files_draft18/`; the version for submission will be archived when draft 18 is approved.
+**Status:** prepared for submission to *Microbiome* (Lagad and Goswami), November 2026; not yet peer reviewed. The version for submission is tag `v1.0.3-submission`, archived on Zenodo with the files that are too large for this repository: https://doi.org/10.5281/zenodo.24327001 (this version; all versions: https://doi.org/10.5281/zenodo.24170173). It supersedes `v1.0.2-submission`, `v1.0.1-submission` and `v1.0-submission`, which remain on Zenodo as earlier versions. v1.0.3 adds a further late analysis written in response to review (Amendment 48): claims testable in two cohorts, ANCOM-BC2 configuration and filtered calibration, a dairy comparison on a common feature set, robustness of the exclusions to the CLR transformation, single animals and mapping confidence, and a source audit of the methane claims. It changes no replication label. The manuscript figures and Additional files are in `results/figures_draft18/` and `results/additional_files_draft18/`.
 
 ## The question
 
