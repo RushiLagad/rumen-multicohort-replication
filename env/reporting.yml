@@ -1,0 +1,17 @@
+# Python reporting environment: number manifests (scripts 119, 124, 126, 127, 138, 141, 143 to 146), Additional files (104, 116, 142) and the
+# Figure 1 render (140 writes the SVG; rsvg-convert -d 300 -p 300 -b white makes the PNG and PDF).
+# Versions are those that produced the committed outputs: Python, pandas, numpy and openpyxl from the server's base environment
+# (mambaforge, 18 Nov 2026), pandoc 3.7.0.2, and rsvg-convert 2.58.0 (the renderer used for Figure 1).
+# pillow and poppler (pdftotext) are used only by the reproduction check (scripts/147_compare.py) to compare images and PDF text.
+name: reporting
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.11
+  - pandas=3.0.3
+  - numpy=2.4.6
+  - openpyxl=3.1.5
+  - pandoc=3.7.0.2
+  - librsvg=2.58.0
+  - pillow
+  - poppler
