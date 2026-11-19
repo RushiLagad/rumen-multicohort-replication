@@ -1,4 +1,4 @@
-name: /home/rlagad/.local/share/mamba/envs/cutadapt
+name: cutadapt
 channels:
   - conda-forge
   - bioconda

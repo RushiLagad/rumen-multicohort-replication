@@ -1,4 +1,4 @@
-name: /home/rlagad/.local/share/mamba/envs/rumen-r
+name: rumen-r
 channels:
   - conda-forge
   - bioconda
