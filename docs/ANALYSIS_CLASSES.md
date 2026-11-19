@@ -8,7 +8,7 @@ Classes (Amendment 48.10):
 - **Planned sensitivity.** Named as a sensitivity analysis before the affected results were seen. "Run late" marks one that was named in advance but run only after all primary results had been seen (Amendments 42 and 44).
 - **Post hoc.** Written after the affected results had been seen, whether or not it was committed before it was run.
 
-Rescaled W (Amendment 37): each ANCOM-BC2 W is divided by the SD of its within-design permutation null when that SD exceeds 1, which corrects the spread of the null, not its shape. Labels use the normal-theory p of the rescaled W; the empirical permutation p is reported beside it (Additional file 2).
+Rescaled W (Amendment 37): each ANCOM-BC2 W is divided by the SD of its within-design permutation null when that SD exceeds 1, which corrects the spread of the null, not its shape. Labels use parametric p values of the rescaled W: the Student-t p on the residual df for a target in one cohort, including a leave-one-cohort-out analysis reduced to one cohort, and a REML random-effects z test on Fisher z for a target in two or more cohorts. Neither is an empirical permutation p; the empirical permutation p is reported beside them (Additional file 2).
 
 Results first became available as follows (from `docs/DEVIATIONS.md`): Nelore and Charolais RFI estimates, 2 November 2026; Alberta RFI, 3 November; methane, 6 November; rescaled RFI, 8 November; de novo scan, 9 November; farm, depth, second-estimator and Wallace RFI sensitivities, 10 November; late analyses (Amendments 44 to 46) from 11 November; Amendment 47 on 13 November; Amendment 48 on 17 November.
 

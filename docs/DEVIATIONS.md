@@ -16,7 +16,7 @@ Timing classes:
 
 Results first became available as follows. Nelore and Charolais RFI estimates, 2 November. Alberta RFI estimates, 3 November. Methane estimates, 6 November. Rescaled RFI estimates (see Rescaled W, below), 8 November. The de novo scan, 9 November. Farm, depth, second-estimator and Wallace RFI sensitivities, 10 November. Late analyses (Amendments 44 to 46), from 11 November; the Amendment 46 analyses, 12 November.
 
-**Rescaled W.** From Amendment 37, each ANCOM-BC2 W is divided by the SD of its within-design permutation null when that SD exceeds 1 (200 permutations per estimate). This corrects the spread of the null, not its shape. Labels use the normal-theory p of the rescaled W; the empirical permutation p, (b + 1)/(B + 1), is reported beside it (Additional file 2). The amendment text in Part 2 calls this step calibration.
+**Rescaled W.** From Amendment 37, each ANCOM-BC2 W is divided by the SD of its within-design permutation null when that SD exceeds 1 (200 permutations per estimate). This corrects the spread of the null, not its shape. Labels use parametric p values of the rescaled W: the Student-t p on the residual df for a target in one cohort, including a leave-one-cohort-out analysis reduced to one cohort, and a REML random-effects z test on Fisher z for a target in two or more cohorts. Neither is an empirical permutation p; the empirical permutation p, (b + 1)/(B + 1), is reported beside them (Additional file 2). The amendment text in Part 2 calls this step calibration.
 
 # Part 1. Deviation table
 
