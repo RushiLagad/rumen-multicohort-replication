@@ -1,0 +1,14 @@
+item	value	detail	analysis
+seven claims: cohort estimates	14		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+seven claims: agree at 0.05	13		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+seven claims: disagree at 0.05	1	T6 charolais_mrna (parametric 0.052, empirical 0.030, W against the published direction)	reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+seven claims: empirical p < 0.05 in the published direction	1	N15 alberta_all (empirical 0.005, parametric 0.006)	reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+seven claims: empirical p < 0.05 in the published direction in both cohorts	0		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+all primary target-cohort tests (61; the M2 Wallace reanalysis excluded)	61		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+all primary tests: disagree at 0.05	2	T6 charolais_mrna (parametric 0.052, empirical 0.030, W against); N37 wallace (parametric 0.041, empirical 0.055, W against)	reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+all primary tests: disagreements in the published direction	0		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+all primary tests: parametric p < 0.05	6		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+all primary tests: empirical p < 0.05	6		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+all primary tests: empirical p < 0.05 in the published direction	1	N15 alberta_all	reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+all primary tests: without a published direction	20		reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
+B per estimate	198: 1; 200: 61	number of within-design permutations stored per estimate	reporting only (draft 20): computed from the stored Amendment 37 permutation results; no new fit or permutation
