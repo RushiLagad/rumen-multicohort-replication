@@ -139,11 +139,11 @@ def report(work):
          f"1. Fresh clone of {run['url']} (branch master) at commit `{run['commit']}` into a new folder ({run['work']}/repo).",
          f"2. The four data archives downloaded from the published Zenodo record {run['record']} (https://zenodo.org/records/{run['record']}), MD5 checked against the record ({run['archives']}), and unpacked at the clone root.",
          "3. Two new conda environments built only from the clone's environment files: `env/rumen-r.yml` (R analysis and figures) and `env/reporting.yml` (Python reporting, pandoc, rsvg-convert).",
-         "4. From the committed results, regenerated and compared with the committed files: the number manifests behind Tables 1 to 5 (scripts 126, 143, 145, 146), Figures 1 to 5 (140 and rsvg-convert, 139, 103) and Additional files 1 to 4 (142).",
+         "4. From the committed results, regenerated and compared with the committed files: the number manifests behind Tables 1 to 5 (scripts 126, 127, 143, 145, 146), Figures 1 to 5 (140 and rsvg-convert, 139, 103) and Additional files 1 to 4 (142).",
          "5. End to end from the processed inputs (genus and species count tables, harmonized per-animal phenotypes): the Amendment 46 model-input dumps (21, 65, 81), the per-cohort CLR partial correlations with 9,999 Freedman-Lane permutations (112), and the 48.1 seven-claim table with its Table 4 patterns (128), compared with the archived outputs.",
          "6. The permutation-null SD, number of permutations and b/B behind every rescaled W in the manuscript, recomputed from the stored null fits.", "",
          "## Machine and software", "",
-         "| Item | Value |", "|---|---|"] + [f"| {k} | {v} |" for k, v in run["machine"].items()] + [f"| {k} | {v} |" for k, v in run["software"].items()] + ["",
+         "| Item | Value |", "|---|---|"] + [f"| {k} | {v} |" for k, v in run["machine"].items()] + [f"| {k} | {v.replace(' | ', '; ')} |" for k, v in run["software"].items()] + ["",
          "## Commands", "", "```", *run["commands"], "```", "",
          "## Steps", "", "| Step | Exit code | Seconds |", "|---|---|---|"] + [f"| {r.step} | {r.rc} | {r.seconds} |" for r in S.itertuples()] + ["",
          "## Comparisons", "",
@@ -155,7 +155,8 @@ def report(work):
     if pbad: L += ["", "| Table | id | B file / recomputed | SD file / recomputed | b/B file / recomputed |", "|---|---|---|---|---|"] + [
         f"| {r.table} | {r.id} | {r.B_file} / {r.B_recomputed} | {r.sd_file:.6g} / {r.sd_recomputed:.6g} | {r.p_file:.4g} / {r.p_recomputed:.4g} |" for r in Pm[~Pm.match].itertuples()]
     L += ["", "## Not covered", "",
-          "Read processing and taxonomic profiling (quality control, host removal, Kraken2 and Bracken against the GTDB r207 database, DADA2 against SILVA 138.1) were not rerun: they start from about 540 GB of reads and the Kraken2 database, which are not deposited. Their per-sample reports and logs are in the deposit (`read_qc_and_classification.tar.gz`), and the count tables they produced are the processed inputs used in step 5. ANCOM-BC2 model fits and their 200-permutation nulls were not refitted; step 6 recomputes every rescaled W and permutation p from the stored null fits instead.", ""]
+          "Read processing and taxonomic profiling (quality control, host removal, Kraken2 and Bracken against the GTDB r207 database, DADA2 against SILVA 138.1) were not rerun: they start from about 540 GB of reads and the Kraken2 database, which are not deposited. Their per-sample reports and logs are in the deposit (`read_qc_and_classification.tar.gz`), and the count tables they produced are the processed inputs used in step 5. ANCOM-BC2 model fits and their 200-permutation nulls were not refitted; step 6 recomputes every rescaled W and permutation p from the stored null fits instead.", "",
+          "Environments are built new from the environment files; if the environment manager links packages from a local package cache, the check does not show that every pinned package can still be downloaded.", ""]
     open(os.path.join(work, "REPRODUCTION_CHECK.md"), "w").write("\n".join(L) + "\n")
     print(verdict)
 
