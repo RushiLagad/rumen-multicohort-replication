@@ -6,7 +6,7 @@
   147_compare.py report WORK                              write WORK/REPRODUCTION_CHECK.md from the rows and the run record
 
 File comparison by type: .tsv numerically (strings exact, numbers to 1e-9; the 'commit' column of the manifests, which records the clone's HEAD,
-is ignored); .png pixel by pixel; .pdf by extracted text (pdftotext; the files embed creation times); .xlsx cell by cell; .docx by plain text
+and is named commit or repo_commit, is ignored); .png pixel by pixel; .pdf by extracted text (pdftotext; the files embed creation times); .xlsx cell by cell; .docx by plain text
 (pandoc); anything else byte by byte. A byte-identical file is always reported as identical.
 """
 import os, sys, glob, hashlib, json, math, subprocess, datetime
@@ -24,7 +24,7 @@ def md5(f):
 def cmp_tsv(a, b):
     import pandas as pd
     x = pd.read_csv(a, sep="\t", dtype=str, keep_default_na=False); y = pd.read_csv(b, sep="\t", dtype=str, keep_default_na=False)
-    ign = [c for c in ("commit",) if c in x.columns and c in y.columns]
+    ign = [c for c in ("commit", "repo_commit") if c in x.columns and c in y.columns]
     x = x.drop(columns=ign); y = y.drop(columns=ign)
     if list(x.columns) != list(y.columns): return "differs", f"columns differ: {sorted(set(x.columns) ^ set(y.columns))}"
     if x.shape != y.shape: return "differs", f"shape {x.shape} vs {y.shape}"
@@ -39,7 +39,7 @@ def cmp_tsv(a, b):
                 if d > worst: worst, where = d, f"{c} row {i + 1}: {u} vs {v}"
             except ValueError:
                 nstr += 1; where = where or f"{c} row {i + 1}: '{u[:40]}' vs '{v[:40]}'"
-    note = " (commit column ignored)" if ign else ""
+    note = f" ({ign[0]} column ignored)" if ign else ""
     if nstr: return "differs", f"{nstr} text cells differ; e.g. {where}"
     if worst == 0: return "identical content", f"all cells equal{note}"
     if worst <= TOL: return "numerically identical", f"max abs difference {worst:.2e} <= {TOL:g}{note}"
@@ -147,7 +147,7 @@ def report(work):
          "## Commands", "", "```", *run["commands"], "```", "",
          "## Steps", "", "| Step | Exit code | Seconds |", "|---|---|---|"] + [f"| {r.step} | {r.rc} | {r.seconds} |" for r in S.itertuples()] + ["",
          "## Comparisons", "",
-         "Status: identical = byte-identical; identical content = same pixels (PNG), same extracted text (PDF, DOCX; these files embed creation times), same cell values (XLSX) or same table values (TSV); numerically identical = numbers agree to 1e-9. The `commit` column of the manifests records the clone's HEAD and is not compared.", ""]
+         "Status: identical = byte-identical; identical content = same pixels (PNG), same extracted text (PDF, DOCX; these files embed creation times), same cell values (XLSX) or same table values (TSV); numerically identical = numbers agree to 1e-9. The `commit` or `repo_commit` column of the manifests records the clone's HEAD and is not compared.", ""]
     for g, x in C.groupby("group", sort=False):
         L += [f"### {g}", "", "| File | Status | Detail |", "|---|---|---|"] + [f"| `{r.file}` | {r.status} | {r.detail.replace('|', '/')} |" for r in x.itertuples()] + [""]
     L += ["### Permutation nulls behind the rescaled W", "",
