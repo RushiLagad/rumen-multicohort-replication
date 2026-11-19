@@ -17,6 +17,9 @@ Additional file 4: the 48.1 forest plot (results/figures_draft18/af4_seven_claim
 Draft 20 (reporting only, no new fit): the 'A48 seven claims, per cohort' sheet carries the parametric p of the rescaled W (used by the labels), the
   empirical permutation p (b + 1)/(B + 1) and their agreement at 0.05, from results/late_p_compare/seven_claims_p.tsv (script 146); the stored b/B
   column is renamed 'p_perm_ancombc2_b_over_B (as stored)'. Run 146 first.
+Draft 21 (reporting only): the same sheet adds the Student-t p of the rescaled W on the residual df (p_t_ancombc2, the p the labels use for a
+  target in one cohort) and its agreement with the empirical p; notes 48.2(a) and 48.2(b) corrected; the Amendment 46 and 47 notes mark the
+  amendments' review wording as historical.
 Usage: 142_additional_files_draft18.py [root]   (needs pandoc >= 2.11, openpyxl; imports write_book from scripts/104_additional_files.py)
 """
 import os, re, sys, shutil, subprocess, tempfile, zipfile, importlib.util
@@ -96,24 +99,30 @@ nh = rd(f"{A48}/dairy/not_harmonized_sources.tsv")
 pcf = P("results", "late_p_compare", "seven_claims_p.tsv")
 if not os.path.exists(pcf): sys.exit(f"missing {pcf}: run scripts/146_p_compare.py first")
 s7 = rd(f"{A48}/seven/seven_claims.tsv"); pc = pd.read_csv(pcf, sep="\t", dtype={"id": str})
-s7 = s7.merge(pc[["id", "cohort", "B", "p_param_ancombc2", "p_perm_emp_ancombc2", "agree_at_0.05"]], on=["id", "cohort"], how="left", validate="1:1")
+s7 = s7.merge(pc[["id", "cohort", "B", "p_param_ancombc2", "p_perm_emp_ancombc2", "agree_at_0.05", "p_t_ancombc2", "agree_t_at_0.05"]], on=["id", "cohort"], how="left", validate="1:1")
 assert len(s7) == 14 and s7.p_param_ancombc2.notna().all() and (s7.p_perm_ancombc2 * s7.B).sub((s7.p_perm_ancombc2 * s7.B).round()).abs().max() < 1e-9
 s7 = s7.rename(columns={"p_perm_ancombc2": "p_perm_ancombc2_b_over_B (as stored)", "B": "B_permutations"})
-k = list(s7.columns).index("p_perm_ancombc2_b_over_B (as stored)"); new = ["B_permutations", "p_perm_emp_ancombc2", "p_param_ancombc2", "agree_at_0.05"]
+k = list(s7.columns).index("p_perm_ancombc2_b_over_B (as stored)"); new = ["B_permutations", "p_perm_emp_ancombc2", "p_param_ancombc2", "agree_at_0.05", "p_t_ancombc2", "agree_t_at_0.05"]
 s7 = s7[[c for c in s7.columns[:k + 1] if c not in new] + new + [c for c in s7.columns[k + 1:] if c not in new]]
-assert int(s7["agree_at_0.05"].sum()) == 13
-P48 = ("48.1: p_param_ancombc2 is the normal-theory p of the W rescaled by its permutation-null SD (used by the labels); it corrects the spread of the null "
-       "but not its shape. p_perm_emp_ancombc2 is the empirical permutation p, (b + 1)/(B + 1). Draft 20 reports their agreement for the seven claims (13 of 14 at 0.05).")
+assert int(s7["agree_at_0.05"].sum()) == 13 and int(s7["agree_t_at_0.05"].sum()) == 12
+P48 = ("48.1: W_ancombc2_cal is W rescaled by its permutation-null SD when that exceeds 1; the rescaling corrects the spread of the null but not its shape. "
+       "p_t_ancombc2 is the Student-t p of the rescaled W on the residual df, which is the p the labels use for a target in one cohort; p_param_ancombc2 is the "
+       "normal-tail p of the same W (reported in draft 20). p_perm_emp_ancombc2 is the empirical permutation p, (b + 1)/(B + 1). The Student-t and empirical p "
+       "agree at 0.05 in 12 of 14 cohort estimates of the seven claims (T4 and T6 in Charolais differ, both against the published direction); the normal-tail "
+       "and empirical p agree in 13 of 14.")
 S = [  # (sheet name <= 31 chars, frame, note)
- ("A48 seven claims, per cohort", s7, "48.1: per cohort n, df, CLR partial r with 95% Fisher interval, parametric and Freedman-Lane p; ANCOM-BC2 W rescaled by its permutation-null SD when that exceeds 1 (W_ancombc2_cal), r and interval; the stored permutation share b/B, the empirical permutation p (b + 1)/(B + 1), the normal-theory p of the rescaled W and their agreement at 0.05 (draft 20, script 146; results/late_p_compare/); minimum detectable r at 80% power."),
+ ("A48 seven claims, per cohort", s7, "48.1: per cohort n, df, CLR partial r with 95% Fisher interval, parametric and Freedman-Lane p; ANCOM-BC2 W rescaled by its permutation-null SD when that exceeds 1 (W_ancombc2_cal), r and interval; the stored permutation share b/B, the empirical permutation p (b + 1)/(B + 1), the normal-tail p (draft 20) and the Student-t p on the residual df (draft 21) of the rescaled W, each with its agreement with the empirical p at 0.05 (script 146; results/late_p_compare/); minimum detectable r at 80% power."),
  ("A48 seven claims, pooled", rd(f"{A48}/seven/seven_pooled.tsv"), "48.1: mKH pooled CLR r and interval, tau-hat, I-squared, Q p; fixed-effect comparator; Amendment 37 pooled r, q and label; Amendment 47 label; reasons for no replicated label; pattern codes A to E per estimator; secondary criteria S-a and S-b (reported only, never replication)."),
  ("A48 seven claims, secondary", rd(f"{A48}/seven/secondary_matched.tsv"), "48.1: secondary criteria for every matched claim (k = 1 and k >= 2)."),
  ("A48 concordance", cc, "48.1: share of cohort estimates with the published sign. The binomial p is descriptive only: the estimates are not independent across targets (draft 19 reports the sign counts only)."),
  ("A48 counts", rd(f"{A48}/seven/counts_by_classification.tsv"), "48.1: matched claims and secondary-criterion counts with S1 as a matched claim and as a phenotype-transfer test."),
  ("A48 S1 against yield", rd(f"{A48}/seven/s1_yield.tsv"), "48.1: S1 Sharpea against Wallace CH4 per kg DMI (k = 1)."),
  ("A48 ANCOM-BC2 configuration", rd(f"{A48}/ancombc2/config.tsv"), "48.2(a): every ancombc2() argument as executed, defaults resolved from the installed ANCOMBC version."),
- ("A48 ANCOM-BC2 label p check", rd(f"{A48}/ancombc2/label_p_check.tsv"), "48.2(a): labels use the normal-theory p of the rescaled W (W divided by its permutation-null SD when that exceeds 1), not the 200-permutation p."),
- ("A48 ANCOM-BC2 filtered null", rd(f"{A48}/ancombc2/null_summary.tsv"), "48.2(b): 200 saved within-design permutation fits per table; share with p < 0.05 unfiltered and with passed_ss; BH and diff_robust counts; P(any) with Clopper-Pearson 95% intervals."),
+ ("A48 ANCOM-BC2 label p check", rd(f"{A48}/ancombc2/label_p_check.tsv"), "48.2(a): labels use parametric p values of the rescaled W: the Student-t p on the residual df for a target in one cohort, including a leave-one-cohort-out analysis reduced to one cohort, and a REML random-effects z test on Fisher z for a target in two or more cohorts. Neither is an empirical permutation p."),
+ ("A48 ANCOM-BC2 filtered null", rd(f"{A48}/ancombc2/null_summary.tsv"), "48.2(b): 200 saved within-design permutation fits per table; share with p < 0.05 unfiltered and with passed_ss; BH and diff_robust counts; P(any) with Clopper-Pearson 95% intervals. "
+ "The BH counts here are ANCOM-BC2's own diff_ calls, counted over the genera (target features excluded), but the package applied its internal BH across all features, "
+ "including the added target features (TGT_). Table 2 and Fig. 3a (script 103) instead apply BH to the p values of the genera only, after the TGT_ rows are removed. "
+ "The two families differ, so the counts can differ: the most genera at q < 0.05 in one shuffle is 65 for Charolais in Table 2 and 60 here; the other four tables agree."),
  ("A48 ANCOM-BC2 null, per shuffle", rd(f"{A48}/ancombc2/null_per_shuffle.tsv"), "48.2(b): the per-shuffle values behind the summary."),
  ("A48 ANCOM-BC2 real fits", rd(f"{A48}/ancombc2/real_fits.tsv"), "48.2(b): the same quantities in the real fits."),
  ("A48 ANCOM-BC2 positive controls", rd(f"{A48}/ancombc2/positive_controls.tsv"), "48.2(b): BH and diff_robust counts for the positive-control terms."),
@@ -142,6 +151,10 @@ S = [  # (sheet name <= 31 chars, frame, note)
 ]
 assert all(len(n) <= 31 for n, _, _ in S), [n for n, _, _ in S if len(n) > 31]
 nb = b2["Notes"].copy(); nb["Description"] = nb.Description.str.replace("the validated procedure", "the procedure that met the Amendment 47 coverage rule", regex=False).str.replace("the per-target validated range", "the per-target range over which the coverage rule was met", regex=False)
+HIST = " (historical wording from the committed amendment; these were internal pre-submission assessments of the draft, see Additional file 3)"
+for a in ("in response to an external statistical review", "in response to a second external review"):
+    assert nb.Description.str.contains(a, regex=False).sum() == 1, a
+    nb["Description"] = nb.Description.str.replace(a, a + HIST, regex=False)
 n2 = pd.concat([nb, pd.DataFrame({"Item": ["A48 sheets", "Figure 4, mixed outcomes", "A48 seven claims, p values"] + [n for n, _, _ in S],
     "Description": ["Sheets starting 'A48' are late analyses, run after all primary, late, Amendment 46 and Amendment 47 results were seen "
                     "(Amendment 48 and its addenda, in response to pre-submission assessments of the draft); they set no label. Source files in "

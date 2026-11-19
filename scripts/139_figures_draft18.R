@@ -34,7 +34,7 @@ mlab <- function(b) sub("^-", "−", format(b, trim=TRUE, drop0trailing=TRUE))
 q <- function(s) paste0("'", gsub("'", "\\\\'", s), "'")
 COH <- c(nelore="Nelore", charolais_mrna="Charolais", alberta_all="Alberta", difford="Difford", wallace="Wallace")
 lab_expr <- function(id, target, dag=FALSE, sep="  ") {
-  if (dag) return(paste0(lab_expr(id, target, sep=sep), "*", q("†")))
+  if (dag) return(paste0(lab_expr(id, target, sep=sep), "*", q("† ")))   # trailing space keeps the dagger off the axis arrowhead (draft 21)
   if (id == "M1") return(paste0(q(paste0("M1", sep)), "*italic(", q("M. gottschalkii"), ")*", q(" : "), "*italic(", q("M. ruminantium"), ")*", q(" clade ratio")))
   if (grepl("^unclassified ", target)) return(paste0(q(paste0(id, sep, "unclassified ")), "*italic(", q(sub("^unclassified ", "", target)), ")"))
   if (target == "total archaea") return(q(paste0(id, sep, "total archaea")))
