@@ -1,12 +1,12 @@
 # Reproduction check (clean environment)
 
-Draft 20, item 3, requested by Dr. Goswami. Run 2026-11-18 18:34 by scripts/147_reproduction_check.sh; reporting only (no new analysis, and nothing in the working repository was changed).
+Draft 20, item 3, requested by Dr. Goswami. Run 2026-11-19 17:45 by scripts/147_reproduction_check.sh; reporting only (no new analysis, and nothing in the working repository was changed).
 
 **Result: PASS: every regenerated output matches the committed file.**
 
 ## What was done
 
-1. Fresh clone of git@github.com:RushiLagad/rumen-multicohort-replication.git (branch master) at commit `42c59476` into a new folder (/data/repro_v104/repo).
+1. Fresh clone of git@github.com:RushiLagad/rumen-multicohort-replication.git (branch master) at commit `3ed405cf` into a new folder (/data/repro_v104/repo).
 2. The four data archives downloaded from the published Zenodo record 24327001 (https://zenodo.org/records/24327001), MD5 checked against the record (read_qc_and_classification.tar.gz, scan_null.tar.gz, profiles_gtdb_full_counts.tar.gz, late_a46_ancombc2_fl.tar.gz), and unpacked at the clone root.
 3. Two new conda environments built only from the clone's environment files: `env/rumen-r.yml` (R analysis and figures) and `env/reporting.yml` (Python reporting, pandoc, rsvg-convert).
 4. From the committed results, regenerated and compared with the committed files: the number manifests behind Tables 1 to 5 (scripts 126, 127, 143, 145, 146), Figures 1 to 5 (140 and rsvg-convert, 139, 103) and Additional files 1 to 4 (142).
@@ -67,22 +67,22 @@ A48_OUT='/data/repro_v104/out/late_a48' RUMEN_ROOT='/data/repro_v104/repo' '/dat
 
 | Step | Exit code | Seconds |
 |---|---|---|
-| clone | 0 | 10 |
-| env_rumen_r | 0 | 12 |
+| clone | 0 | 11 |
+| env_rumen_r | 0 | 19 |
 | env_reporting | 0 | 5 |
-| zenodo_download | 0 | 183 |
-| unpack | 0 | 3 |
-| manifest_126 | 0 | 5 |
+| zenodo_download | 0 | 304 |
+| unpack | 0 | 2 |
+| manifest_126 | 0 | 6 |
 | manifest_127 | 0 | 2 |
 | manifest_143 | 0 | 0 |
 | manifest_145 | 0 | 0 |
-| p_compare_146 | 0 | 1 |
-| figure1_140 | 0 | 0 |
+| p_compare_146 | 0 | 0 |
+| figure1_140 | 0 | 1 |
 | figures_139 | 0 | 3 |
-| figures_103 | 0 | 22 |
+| figures_103 | 0 | 23 |
 | additional_files_142 | 0 | 16 |
-| dumps_a46 | 0 | 64 |
-| clr_estimates_112 | 0 | 13 |
+| dumps_a46 | 0 | 65 |
+| clr_estimates_112 | 0 | 14 |
 | seven_claims_128 | 0 | 2 |
 | permutation_nulls | 0 | 2 |
 
@@ -99,6 +99,7 @@ Status: identical = byte-identical; identical content = same pixels (PNG), same 
 | `results/manifest/draft18_numbers.tsv` | identical content | all cells equal (repo_commit column ignored) |
 | `results/manifest/draft19_numbers.tsv` | identical content | all cells equal (repo_commit column ignored) |
 | `results/manifest/draft20_numbers.tsv` | identical content | all cells equal (commit column ignored) |
+| `results/manifest/draft21_numbers.tsv` | identical content | all cells equal (commit column ignored) |
 | `results/late_p_compare/seven_claims_p.tsv` | identical | byte-identical |
 | `results/late_p_compare/all_targets_p.tsv` | identical | byte-identical |
 | `results/late_p_compare/summary.tsv` | identical | byte-identical |
@@ -127,8 +128,8 @@ Status: identical = byte-identical; identical content = same pixels (PNG), same 
 | File | Status | Detail |
 |---|---|---|
 | `results/additional_files_draft18/Additional_file_1_targets.xlsx` | identical content | 7 sheets, 6646 cells equal |
-| `results/additional_files_draft18/Additional_file_2_estimates.xlsx` | identical content | 58 sheets, 545924 cells equal |
-| `results/additional_files_draft18/Additional_file_3_analysis_plan.docx` | identical content | extracted text equal (42187 words) |
+| `results/additional_files_draft18/Additional_file_2_estimates.xlsx` | identical content | 58 sheets, 545954 cells equal |
+| `results/additional_files_draft18/Additional_file_3_analysis_plan.docx` | identical content | extracted text equal (42933 words) |
 | `results/additional_files_draft18/Additional_file_4_seven_claims.pdf` | identical content | extracted text equal (169 words) |
 
 ### End to end from the processed inputs: per-cohort CLR estimates (112) and the 48.1 seven claims with Table 4 patterns (128)
@@ -156,5 +157,5 @@ Status: identical = byte-identical; identical content = same pixels (PNG), same 
 
 Read processing and taxonomic profiling (quality control, host removal, Kraken2 and Bracken against the GTDB r207 database, DADA2 against SILVA 138.1) were not rerun: they start from about 540 GB of reads and the Kraken2 database, which are not deposited. Their per-sample reports and logs are in the deposit (`read_qc_and_classification.tar.gz`), and the count tables they produced are the processed inputs used in step 5. ANCOM-BC2 model fits and their 200-permutation nulls were not refitted; step 6 recomputes every rescaled W and permutation p from the stored null fits instead.
 
-The check ran on the analysis machine. Both environments were built new, in new folders, from the clone's environment files, but mamba linked the packages from its local package cache instead of downloading them, so the check does not show that every pinned package can still be downloaded from conda-forge and bioconda. Notes added when the report was committed: the two software rows above had their separators changed from "|" to ";" so that the table renders, and script 127 was added to the list in step 4 (it ran; see Commands).
+Environments are built new from the environment files; if the environment manager links packages from a local package cache, the check does not show that every pinned package can still be downloaded.
 
