@@ -120,7 +120,7 @@ h1 = tset(M, y0, BLUE, BLUE_P, 'Feed efficiency: 76 targets',
           [('T', 'Li et al. 2019: 6 taxa'), ('N', 'Nelore discovery study: 64 genera'), ('C', 'Canonical rumen taxa: 6'), ('', ''), ('', '')],
           '27 testable')
 h2 = tset(M + bw + 8, y0, ORNG, ORNG_P, 'Methane: 6 targets + Nelore genera',
-          [('M', 'Reported in more than one country: 3'), ('', '*M. gottschalkii* : *M. ruminantium* clade ratio;'), ('', 'Succinivibrionaceae; total archaea'),
+          [('M', 'Reported in more than one country: 3'), ('', '*M. gottschalkii* : *M. ruminantium* clade ratio;'), ('', '*Succinivibrionaceae*; total archaea'),
            ('S', 'Secondary: 3 genera'), ('N', 'Nelore genera reported for residual methane')],
           '11 testable')
 y = max(h1, h2) + 9

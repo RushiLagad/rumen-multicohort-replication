@@ -52,13 +52,14 @@ step unpack "for a in '$WORK'/dl/*.tar.gz; do tar -xzf \"\$a\" -C '$R' || exit 1
 
 # ---- 3. reporting outputs regenerated from results/ and compared
 aside results/manifest/table_numbers.tsv results/manifest/draft17_numbers.tsv results/manifest/draft18_numbers.tsv results/manifest/draft19_numbers.tsv \
-      results/manifest/draft20_numbers.tsv results/manifest/draft21_numbers.tsv results/late_p_compare results/figures_draft18 results/figures_manuscript results/additional_files_draft18
+      results/manifest/draft20_numbers.tsv results/manifest/draft21_numbers.tsv results/late_p_compare results/sample_map results/figures_draft18 results/figures_manuscript results/additional_files_draft18
 mkdir -p "$R/results/figures_draft18"; cp "$WORK/archived/results/figures_draft18/README.md" "$R/results/figures_draft18/"
 step manifest_126 "RUMEN_ROOT='$R' '$PY' scripts/126_manifest_tables.py"
 step manifest_127 "RUMEN_ROOT='$R' '$PY' scripts/127_manifest_draft17.py"
 step manifest_143 "'$PY' scripts/143_manifest_draft18.py '$R'"
 step manifest_145 "'$PY' scripts/145_manifest_draft19.py '$R'"
 step p_compare_146 "'$PY' scripts/146_p_compare.py '$R'"
+step sample_map_148 "'$PY' scripts/148_sample_map.py '$R'"
 step figure1_140 "'$PY' scripts/140_figure1_compact.py '$R' && cd results/figures_draft18 && rsvg-convert -d 300 -p 300 -b white -f png -o fig1_study_design.png fig1_study_design.svg && rsvg-convert -b white -f pdf -o fig1_study_design.pdf fig1_study_design.svg"
 step figures_139 "RUMEN_ROOT='$R' '$RR' scripts/139_figures_draft18.R"
 step figures_103 "RUMEN_ROOT='$R' '$RR' scripts/103_figures_2to4.R"
@@ -66,6 +67,7 @@ step additional_files_142 "'$PY' scripts/142_additional_files_draft18.py '$R'"
 G="Tables 1 to 5: number manifests (each script stops if a printed value differs from its result file)"
 for f in table_numbers draft17_numbers draft18_numbers draft19_numbers draft20_numbers draft21_numbers; do cmpa results/manifest/$f.tsv "$G"; done
 for f in seven_claims_p all_targets_p summary; do cmpa results/late_p_compare/$f.tsv "$G"; done
+for f in sample_map summary; do cmpa results/sample_map/$f.tsv "Sample map: deposit run to BioSample, animal and count-table column (148)"; done
 G="Figures 1 to 5 and Table 4 data"
 for f in fig1_study_design.svg fig1_study_design.png fig1_study_design.pdf fig2_forest_pooled.png fig2_forest_pooled.pdf fig4_clade_ratio.png fig4_clade_ratio.pdf \
          fig5_dairy_effects.png fig5_dairy_effects.pdf af4_seven_claims.png af4_seven_claims.pdf table4_seven_claims.tsv; do cmpa results/figures_draft18/$f "$G"; done

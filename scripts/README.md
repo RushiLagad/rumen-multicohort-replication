@@ -22,6 +22,7 @@ Scripts are numbered in the order they were written, which follows the order of 
 | 139 to 145 | Draft 18 and 19 reporting: Figures 2, 4, 5 and Additional file 4 (139), Figure 1 (140), evidence ledger (141), Additional files 1 to 4 (142), draft 18 numbers (143), methane source audit (144), draft 19 numbers (145) |
 | 146 | Draft 20 reporting: normal-theory p of the rescaled W beside the empirical permutation p, and draft 20 numbers |
 | 147 | Clean-environment reproduction check (docs/REPRODUCTION_CHECK.md) |
+| 148 | Sample map: every deposit run to its BioSample, animal and count-table column, with the reason when a run was not analysed (results/sample_map/) |
 | lib_replication.R | Shared pooling and labelling functions |
 | lib_clr.R | Shared functions for the second method (centred log-ratio with linear models) |
 | lib_late.R | Shared functions for the late analyses (Amendment 44), called from 21, 65 and 81 |

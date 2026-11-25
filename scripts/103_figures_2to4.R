@@ -36,7 +36,7 @@ tax_expr <- function(g, suffix="") vapply(seq_along(g), function(i) { x <- g[i];
 
 # ---------------- Figure 3
 tabs <- data.frame(table=c("nelore_genus", "charolais_mrna_genus", "alberta_genus", "difford_bact", "wallace_prokaryotes"),
-  label=c("Nelore\nshotgun, RFI", "Charolais\nmRNA, RFI", "Alberta\n16S, RFI", "Difford\n16S, CH4", "Wallace\n16S, CH4"),
+  label=c("Nelore\nshotgun\nRFI", "Charolais\nmRNA\nRFI", "Alberta\n16S rRNA\ngene, RFI", "Difford\n16S rRNA\ngene, CH4", "Wallace\n16S rRNA\ngene, CH4"),   # "16S rRNA gene" (journal style, draft 21)
   dir=c("scan_null", "scan_null", "scan_null", "methane_dryrun", "methane_dryrun"), s0=c(2001, 2001, 2001, 1001, 1001), stringsAsFactors=FALSE)
 N <- do.call(rbind, lapply(seq_len(nrow(tabs)), function(i) { t <- tabs[i, ]
   fs <- file.path(root, "results", t$dir, sprintf("%s_seed%d_ancombc2.csv", t$table, t$s0:(t$s0 + 199))); fs <- fs[file.exists(fs)]; stopifnot(length(fs) == 200)
