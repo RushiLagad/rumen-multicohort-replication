@@ -20,6 +20,7 @@ What the submitted version contains, where each part lives, and what is not depo
 | Genus lineages used to build family and phylum tables | Repository, `results/replication/genus_lineage.tsv` (GTDB) and `results/16s/*/genus_lineage_silva.tsv` (SILVA) |
 | Per-animal design and phenotype tables, run tables and the Alberta overlap list | Repository, `harmonized/` |
 | Published targets and their mapping keys | Repository, `plan/target_keys.tsv` |
+| Sample map: every run in the five deposits, with its BioSample, the animal ID used in the phenotype tables, the count table and column it enters, and the reason when it was not analysed | Repository, `results/sample_map/sample_map.tsv` (script 148); `summary.tsv` gives the identifier each count table uses |
 | Read-processing record: fastp reports, host-removal logs, read accounting, Kraken 2 reports and Bracken outputs for the two shotgun cohorts | Zenodo, `read_qc_and_classification.tar.gz` |
 
 **Raw inputs (public; not deposited).** Exact access:
@@ -33,6 +34,8 @@ What the submitted version contains, where each part lives, and what is not depo
 | Host reference ARS-UCD2.0, Kraken 2 Standard index | Public downloads | `scripts/06a_fetch_refs.sh` |
 | Kraken 2 GTDB r207 databases (capped and full resolution) | Struo2 GTDB release 207 library and taxdump | Built by `scripts/10_build_gtdb_db.sh`, `10b_renumber_taxids.py`, `10c_bracken_build.sh` and `13_twopass_db.sh`; details in `docs/DATABASES.md` |
 | SILVA 138.1 reference for DADA2 | SILVA 138.1 nr | `scripts/31_silva_trainset.sh` |
+
+**Sample identifiers in the count tables.** Nelore and Charolais: the SRA or ENA run accession with the suffix `_clean` (the two runs of Charolais animal 8574 are separate columns, summed into one animal profile before modelling). Alberta: the SRA run accession. Difford: the animal ID of the authors' phenotype table (Difford et al. 2018, S4), with all runs of that animal's BioSample summed. Wallace: the deposit's sample alias (BREED_FARM_Sn), with the two sequencing rounds summed. `results/sample_map/sample_map.tsv` links each of these to the deposit run and BioSample accessions.
 
 ## 3. Software environments
 
