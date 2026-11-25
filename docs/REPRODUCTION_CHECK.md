@@ -1,12 +1,12 @@
 # Reproduction check (clean environment)
 
-Draft 20, item 3, requested by Dr. Goswami. Run 2026-11-19 17:45 by scripts/147_reproduction_check.sh; reporting only (no new analysis, and nothing in the working repository was changed).
+Draft 20, item 3, requested by Dr. Goswami. Run 2026-11-25 15:55 by scripts/147_reproduction_check.sh; reporting only (no new analysis, and nothing in the working repository was changed).
 
 **Result: PASS: every regenerated output matches the committed file.**
 
 ## What was done
 
-1. Fresh clone of git@github.com:RushiLagad/rumen-multicohort-replication.git (branch master) at commit `3ed405cf` into a new folder (/data/repro_v104/repo).
+1. Fresh clone of git@github.com:RushiLagad/rumen-multicohort-replication.git (branch master) at commit `6f9654e6` into a new folder (/data/repro_v104/repo).
 2. The four data archives downloaded from the published Zenodo record 24327001 (https://zenodo.org/records/24327001), MD5 checked against the record (read_qc_and_classification.tar.gz, scan_null.tar.gz, profiles_gtdb_full_counts.tar.gz, late_a46_ancombc2_fl.tar.gz), and unpacked at the clone root.
 3. Two new conda environments built only from the clone's environment files: `env/rumen-r.yml` (R analysis and figures) and `env/reporting.yml` (Python reporting, pandoc, rsvg-convert).
 4. From the committed results, regenerated and compared with the committed files: the number manifests behind Tables 1 to 5 (scripts 126, 127, 143, 145, 146), Figures 1 to 5 (140 and rsvg-convert, 139, 103) and Additional files 1 to 4 (142).
@@ -53,6 +53,7 @@ RUMEN_ROOT='/data/repro_v104/repo' '/data/repro_v104/envs/reporting/bin/python' 
 '/data/repro_v104/envs/reporting/bin/python' scripts/143_manifest_draft18.py '/data/repro_v104/repo'
 '/data/repro_v104/envs/reporting/bin/python' scripts/145_manifest_draft19.py '/data/repro_v104/repo'
 '/data/repro_v104/envs/reporting/bin/python' scripts/146_p_compare.py '/data/repro_v104/repo'
+'/data/repro_v104/envs/reporting/bin/python' scripts/148_sample_map.py '/data/repro_v104/repo'
 '/data/repro_v104/envs/reporting/bin/python' scripts/140_figure1_compact.py '/data/repro_v104/repo' && cd results/figures_draft18 && rsvg-convert -d 300 -p 300 -b white -f png -o fig1_study_design.png fig1_study_design.svg && rsvg-convert -b white -f pdf -o fig1_study_design.pdf fig1_study_design.svg
 RUMEN_ROOT='/data/repro_v104/repo' '/data/repro_v104/envs/rumen-r/bin/Rscript' scripts/139_figures_draft18.R
 RUMEN_ROOT='/data/repro_v104/repo' '/data/repro_v104/envs/rumen-r/bin/Rscript' scripts/103_figures_2to4.R
@@ -67,23 +68,24 @@ A48_OUT='/data/repro_v104/out/late_a48' RUMEN_ROOT='/data/repro_v104/repo' '/dat
 
 | Step | Exit code | Seconds |
 |---|---|---|
-| clone | 0 | 11 |
-| env_rumen_r | 0 | 19 |
-| env_reporting | 0 | 5 |
-| zenodo_download | 0 | 304 |
+| clone | 0 | 7 |
+| env_rumen_r | 0 | 21 |
+| env_reporting | 0 | 6 |
+| zenodo_download | 0 | 328 |
 | unpack | 0 | 2 |
 | manifest_126 | 0 | 6 |
 | manifest_127 | 0 | 2 |
 | manifest_143 | 0 | 0 |
 | manifest_145 | 0 | 0 |
 | p_compare_146 | 0 | 0 |
-| figure1_140 | 0 | 1 |
+| sample_map_148 | 0 | 11 |
+| figure1_140 | 0 | 0 |
 | figures_139 | 0 | 3 |
-| figures_103 | 0 | 23 |
+| figures_103 | 0 | 24 |
 | additional_files_142 | 0 | 16 |
 | dumps_a46 | 0 | 65 |
 | clr_estimates_112 | 0 | 14 |
-| seven_claims_128 | 0 | 2 |
+| seven_claims_128 | 0 | 1 |
 | permutation_nulls | 0 | 2 |
 
 ## Comparisons
@@ -104,12 +106,19 @@ Status: identical = byte-identical; identical content = same pixels (PNG), same 
 | `results/late_p_compare/all_targets_p.tsv` | identical | byte-identical |
 | `results/late_p_compare/summary.tsv` | identical | byte-identical |
 
+### Sample map: deposit run to BioSample, animal and count-table column (148)
+
+| File | Status | Detail |
+|---|---|---|
+| `results/sample_map/sample_map.tsv` | identical | byte-identical |
+| `results/sample_map/summary.tsv` | identical | byte-identical |
+
 ### Figures 1 to 5 and Table 4 data
 
 | File | Status | Detail |
 |---|---|---|
 | `results/figures_draft18/fig1_study_design.svg` | identical | byte-identical |
-| `results/figures_draft18/fig1_study_design.png` | identical content | all 2008 x 2110 pixels equal |
+| `results/figures_draft18/fig1_study_design.png` | identical | byte-identical |
 | `results/figures_draft18/fig1_study_design.pdf` | identical content | extracted text equal (450 words) |
 | `results/figures_draft18/fig2_forest_pooled.png` | identical | byte-identical |
 | `results/figures_draft18/fig2_forest_pooled.pdf` | identical content | extracted text equal (292 words) |
@@ -121,7 +130,7 @@ Status: identical = byte-identical; identical content = same pixels (PNG), same 
 | `results/figures_draft18/af4_seven_claims.pdf` | identical content | extracted text equal (169 words) |
 | `results/figures_draft18/table4_seven_claims.tsv` | identical | byte-identical |
 | `results/figures_manuscript/fig3_calibration.png` | identical content | all 2007 x 1080 pixels equal |
-| `results/figures_manuscript/fig3_calibration.pdf` | identical content | extracted text equal (118 words) |
+| `results/figures_manuscript/fig3_calibration.pdf` | identical content | extracted text equal (124 words) |
 
 ### Additional files 1 to 4
 
@@ -129,7 +138,7 @@ Status: identical = byte-identical; identical content = same pixels (PNG), same 
 |---|---|---|
 | `results/additional_files_draft18/Additional_file_1_targets.xlsx` | identical content | 7 sheets, 6646 cells equal |
 | `results/additional_files_draft18/Additional_file_2_estimates.xlsx` | identical content | 58 sheets, 545954 cells equal |
-| `results/additional_files_draft18/Additional_file_3_analysis_plan.docx` | identical content | extracted text equal (42933 words) |
+| `results/additional_files_draft18/Additional_file_3_analysis_plan.docx` | identical content | extracted text equal (43067 words) |
 | `results/additional_files_draft18/Additional_file_4_seven_claims.pdf` | identical content | extracted text equal (169 words) |
 
 ### End to end from the processed inputs: per-cohort CLR estimates (112) and the 48.1 seven claims with Table 4 patterns (128)
