@@ -1,0 +1,15 @@
+count_table	column_identifier	columns	analysed_runs	animals	biosamples
+profiles_gtdb_full/nelore/nelore_genus_counts.tsv	run accession + _clean	52	52	52	52
+profiles_gtdb_full/charolais_mrna/charolais_mrna_genus_counts.tsv	run accession + _clean	31	31	30	30
+profiles_16s/charolais_16s/charolais_16s_genus_counts.tsv	run accession	30	30	30	30
+profiles_16s/alberta/alberta_genus_counts.tsv	run accession	703	703	703	703
+profiles_16s/difford_bact/difford_bact_genus_counts.tsv	animal ID (Difford S4)	749	893	749	749
+profiles_16s/difford_arch/difford_arch_genus_counts.tsv	animal ID (Difford S4)	728	775	728	728
+profiles_16s/wallace_prokaryotes/wallace_prokaryotes_genus_counts.tsv	deposit sample alias	1012	2022	1012	1012
+profiles_16s/wallace_bacteria/wallace_bacteria_genus_counts.tsv	deposit sample alias	1012	1920	1012	1012
+profiles_16s/wallace_archaea/wallace_archaea_genus_counts.tsv	deposit sample alias	1012	2019	1012	1012
+Nelore: all deposit runs			52 of 104	52	104
+Charolais: all deposit runs			61 of 64	30	63
+Alberta: all deposit runs			703 of 706	703	706
+Difford: all deposit runs			1668 of 2317	750	1922
+Wallace: all deposit runs			5961 of 10003	1012	1012

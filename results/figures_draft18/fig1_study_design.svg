@@ -70,7 +70,7 @@
 <text x="256.2" y="161.0" font-size="8.0" font-weight="bold" fill="#b8601d" text-anchor="middle">M</text>
 <text x="266.0" y="161.0" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Reported in more than one country: 3</text>
 <text x="266.0" y="170.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start"><tspan font-style="italic">M. gottschalkii</tspan> : <tspan font-style="italic">M. ruminantium</tspan> clade ratio;</text>
-<text x="266.0" y="180.0" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Succinivibrionaceae; total archaea</text>
+<text x="266.0" y="180.0" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start"><tspan font-style="italic">Succinivibrionaceae</tspan>; total archaea</text>
 <rect x="251.0" y="182.1" width="10.5" height="9.4" rx="1.5" fill="#fbf0e6" stroke="#b8601d" stroke-width="0.6"/>
 <text x="256.2" y="189.5" font-size="8.0" font-weight="bold" fill="#b8601d" text-anchor="middle">S</text>
 <text x="266.0" y="189.5" font-size="8.0" font-weight="normal" fill="#0b0b0b" text-anchor="start">Secondary: 3 genera</text>
